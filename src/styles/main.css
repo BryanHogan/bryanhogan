@@ -166,7 +166,7 @@ section {
 }
 .hero-image picture {
 }
-img {
+.img-hero {
     max-width: 100%;
     
     border-radius: var(--border-radius-standard);

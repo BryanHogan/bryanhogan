@@ -1,10 +1,14 @@
 ---
+import "../styles/main.css"
+
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import "../styles/main.css"
+import HeaderNavigationOld from "../components/HeaderNavigationOld.astro"
+import HeaderNavigation from "../components/HeaderNavigation.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+    <HeaderNavigation />
     <div class="hero-container">
         <div class="hero-main-content">
             <div class="hero-description">
