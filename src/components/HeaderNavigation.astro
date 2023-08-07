@@ -4,102 +4,144 @@ import "../styles/main.css";
 const svgStyle = "";
 const heightHeader = "40px";
 const marginIconToScreenBorder = "20px";
+
+interface headerItem {
+  name: string;
+  imagePath: string;
+  mobileViewShowTopLeft: boolean;
+  mobileViewInDropdown: boolean;
+  desktopViewShowTopLeft: boolean;
+  deskViewInDropdown: boolean;
+}
+interface test {
+  testName: string;
+}
+
+const test: test = {
+  testName: "Hello",
+};
 ---
 
 <nav class="header-container">
-  <ul class="menu-header">
-    <li>
-      <a href=""
-        ><img
-          src="../../public/BryanHoganTurtleLogo.png"
-          style="height: 25px;"
-        /></a
-      >
-    </li>
-    <li class="dropdown">
-      <img src="../../Polygon.svg" onclick="" />
-      <ul class="dropdown-menu">
-        <div class="styling-line"></div>
-        <li><a href=""><img src="../../Medium.svg" /></a></li>
-        <li>
-          <a href=""><img src="../../LinkedIn.svg" /></a>
-        </li>
-        <li>
-          <a href=""><img src="../../Instagram.svg" /></a>
-        </li>
-        <li><a href=""><img src="../../Twitch.svg" /></a></li>
-        <li><a href=""><span>Blog</span></a></li>
-      </ul>
-    </li>
+  <ul>
+    
+      <li class="header-icons-desktop">
+        <a href=""
+          ><img
+            src="../../public/BryanHoganTurtleLogo.png"
+            style="height: 25px;"
+          /></a
+        >
+      </li>
+      <li class="dropdown">
+        <img src="../../Polygon.svg" onclick="" class="dropdown-icon" />
+        <ul class="dropdown-menu">
+          <div class="styling-line"></div>
+          <li><a href=""><img src="../../Medium.svg" /></a></li>
+          <li>
+            <a href=""><img src="../../LinkedIn.svg" /></a>
+          </li>
+          <li>
+            <a href=""><img src="../../Instagram.svg" /></a>
+          </li>
+          <li><a href=""><img src="../../Twitch.svg" /></a></li>
+          <li><a href=""><span>Blog</span></a></li>
+          <li><a href=""><span>News</span></a></li>
+        </ul>
+      </li>
+    
   </ul>
-</nav>
 
-<style define:vars={{ heightHeader, marginIconToScreenBorder }}>
-  .header-container {
-    position: fixed;
-    width: 100%;
-    height: var(--heightHeader);
-    border: 1px solid red;
-    background-color: var(--color-main-dark);
-
-    > ul {
-      display: grid;
-      height: 100%;
-      place-items: center;
-      list-style: none;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-  .dropdown {
-    grid-column: 3;
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: var(--marginIconToScreenBorder);
-    > img {
-      z-index: 2;
-      position: relative;
-      cursor: pointer;
-    }
-    &:hover .dropdown-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  <style define:vars={{ heightHeader, marginIconToScreenBorder }}>
+    .header-container {
+      position: fixed;
+      width: 100%;
+      height: var(--heightHeader);
+      border: 1px solid red;
       background-color: var(--color-main-dark);
-      padding-top: var(--heightHeader);
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      z-index: 1;
-    }
-  }
-  .dropdown-menu {
-    list-style: none;
-    display: none;
-    padding: 5px 10px;
-    border-radius: 0px 0px 0px 15px;
-    font-size: 2rem;
 
-    & li {
-      padding: 20px;
-      border-bottom: 1px solid var(--color-main-bright);
-      min-width: 85px;
-      min-height: 89px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      > ul {
+        display: grid;
+        height: 100%;
+        place-items: center;
+        list-style: none;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
-    & li:last-child {
-      border-bottom: 0px;
-    }
-    & li a img, & li a span {
-      height: 45px;
-      width: 45px;
+    @media only screen and (min-width: 636px) {
+      .header-container ul li {
+        display: flex;
+        justify-content: center;
+        padding: 0px 5px;
+      }
+      .header-icons-desktop {
+        grid-column: 1;
+        grid-row: 1;
+        background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+      }
     }
 
-  }
-  .styling-line {
-    border-bottom: 1px solid white;
-    width: 100%;
-  }
-</style>
+    @media only screen and (max-width: 636px) {
+      .dropdown {
+        grid-column: 3;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: var(--marginIconToScreenBorder);
+        .dropdown-icon {
+          z-index: 2;
+          position: relative;
+          cursor: pointer;
+        }
+        &:hover .dropdown-menu {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: var(--color-main-dark);
+          padding-top: var(--heightHeader);
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          z-index: 1;
+        }
+      }
+      .dropdown-menu {
+        list-style: none;
+        display: none;
+        padding: 5px 10px;
+        border-radius: 0px 0px 0px 15px;
+        font-size: 1.6rem;
+
+        & li {
+          padding: 20px;
+          border-bottom: 1px solid var(--color-main-bright);
+          min-width: 85px;
+          min-height: 89px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & li:last-child {
+          border-bottom: 0px;
+        }
+        & li a img,
+        & li a span {
+          height: 45px;
+          width: 45px;
+        }
+      }
+      .styling-line {
+        border-bottom: 1px solid white;
+        width: 100%;
+      }
+      .dropdown-icon {
+        z-index: 2;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+  </style>
+</nav>
