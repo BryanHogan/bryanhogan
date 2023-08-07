@@ -1,0 +1,174 @@
+:root {
+    --color-main-dark: #202124;
+    --color-main-dark-brighter: #414141;
+    /* main 60 */
+    --color-main-bright: #e8ecf0;
+    /* sub 30 */
+    --color-main-accent: #5E39C7;
+    --color-main-accent-darker: #454052;
+    /* sub 10 */
+
+    --section-spacing: 6rem;
+    --border-radius-standard: 1em;
+}
+
+/* Table Of Contents
+    1 - Global Styles
+    2 - Typography
+    3 - Layout
+        3.1 - Standard Flex
+        3.2 - Standard Grid
+        3.3
+    4 - Buttons
+    5 - Hero
+
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+body {
+    color: var(--color-main-bright);
+    background-color: var(--color-main-dark);
+    font-size: 1rem;
+    min-width: 280px;
+}
+
+/*  ====================
+    2 - Typography
+    ==================== */
+h1, h2, h3 {
+    padding: 1rem;
+}
+h1 {
+    font-size: 3.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/*  ====================
+    3 - Layout
+    Make a section element and inside that place main content or side content.
+    ==================== */
+section {
+    padding-top: var(--section-spacing);
+    padding-bottom: var(--section-spacing);
+}
+.standard-text {
+    max-width: 650px;
+    text-align: justify;
+    width: 60%;
+}
+
+/*
+    3.1 - Standard Section Flex
+*/
+
+.standard-flex-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.standard-flex-section-main-content {
+    width: 100%;
+    background-color: rgb(59, 59, 34);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*
+    3.2 - Stanard Section Grid
+
+    How To Use:
+    - standard-grid-section-container
+        - standard-grid-section-main-header
+        - standard-grid-section-main-content
+        - standard-grid-section-side-content
+
+*/
+.standard-grid-section-container {
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
+	place-items: center;
+	gap: 1.6%;
+}
+.standard-grid-section-main-header-content {
+    grid-column: 3 / 6;
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+}
+.standard-grid-section-main-content {
+    grid-column: 3 / 6;
+    grid-row: 2;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	max-width: 650px;
+	width: 100%;
+}
+.standard-grid-section-side-content {
+    grid-column: 6 / 8;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+/* Grid column 1 / 2 AND make first child have extra top margin? .name > :first-child */
+
+/*  ====================
+    5 - Hero
+    ==================== */
+.hero-container {
+    display: grid;
+    min-height: 550px;
+    grid-template: 1fr 4fr 4fr 1fr / 1fr 4fr 4fr 4fr 1fr;
+    place-items: center;
+    background-color: #8FB8CD;
+    background-image: linear-gradient(140deg, #A994D3, #8CA3CF, #8FB8CD, #32CCDF); /* animate this */
+}
+.hero-main-content {
+    grid-column: 2 / 5;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.hero-description {
+    border: 1px solid var(--color-main-bright);
+    border-radius: 1em;
+    width: 60%;
+    height: 50%;
+    min-width: 280px;
+    max-width: 440px;
+    background-color: hsl(0, 0%, 25%, 0.05);
+}
+.hero-image {
+    margin-left: 5%;
+    min-width: 190px;
+}
+.hero-image picture {
+}
+img {
+    max-width: 100%;
+    
+    border-radius: var(--border-radius-standard);
+    border: 1px solid var(--color-main-bright);
+}
