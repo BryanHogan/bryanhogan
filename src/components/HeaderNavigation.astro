@@ -2,6 +2,7 @@
 import "../styles/main.css";
 
 const svgStyle = "height: 25px";
+const marginIconToScreenBorder = "20px";
 ---
 
 <nav class="header-container">
@@ -30,11 +31,13 @@ const svgStyle = "height: 25px";
   </ul>
 </nav>
 
-<style>
+<style define:vars={{marginIconToScreenBorder}}>
   .header-container {
+    position: fixed;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border: 1px solid red;
+    background-color: var(--color-main-dark);
 
     > ul {
       display: grid;
@@ -49,11 +52,10 @@ const svgStyle = "height: 25px";
     display: flex;
     flex-direction: row;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: var(--marginIconToScreenBorder);
     > img {
       z-index: 2;
       position: relative;
-      /* z-index is only is for elements which are positioned */
       cursor: pointer;
     }
     &:hover .dropdown-menu {
