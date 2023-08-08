@@ -92,11 +92,16 @@ const paddingNavigationalItems = "5px 10px"
       right: 0px;
       padding: 5px 10px;
       display: none;
+      border-radius: 0px 0px 0px 15px;
       & li {
         border-bottom: 1px solid var(--color-main-bright);
         padding: 20px;
       }
-      & li a {
+      & li:first-child {
+        border-top: 1px solid var(--color-main-bright);
+      }
+      & li:last-child {
+        border-bottom: 0px;
       }
       & li a img,
       & li a span {
