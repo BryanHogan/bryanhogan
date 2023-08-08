@@ -30,14 +30,71 @@ const { title } = Astro.props;
     --color-main-accent: #5e39c7;
     --color-main-accent-darker: #454052;
     /* sub 10 */
+
+    --section-spacing: 6rem;
+    --border-radius-standard: 1em;
   }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #b1b6c4;
-    background-size: 224px;
+
+  /* Table Of Contents
+    1 - Global Styles
+    2 - Typography
+    3 - Layout
+        3.1 - Standard Flex
+        3.2 - Standard Grid
+        3.3
+    4 - Buttons
+    5 - Hero
+
+*/
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Helvetica", "Arial", sans-serif;
   }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+
+  body {
+    color: var(--color-main-bright);
+    background-color: var(--color-main-dark);
+    font-size: 1rem;
+    min-width: 280px;
+  }
+
+  /*  ====================
+    2 - Typography
+    ==================== */
+  h1,
+  h2,
+  h3 {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 3.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  /*  ====================
+    3 - Layout
+    Make a section element and inside that place main content or side content.
+    ==================== */
+  section {
+    padding-top: var(--section-spacing);
+    padding-bottom: var(--section-spacing);
+  }
+  .standard-text {
+    max-width: 650px;
+    text-align: justify;
+    width: 60%;
   }
 </style>

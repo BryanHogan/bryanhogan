@@ -1,0 +1,65 @@
+---
+const heightHeader = "40px";
+const marginIconToScreenBorder = "20px";
+---
+
+<nav>
+  <ul class="header-container list">
+    <li class="logo">
+      <a href="#"
+        ><img src="../../public/BryanHoganTurtleLogo.png" alt="Logo" /></a
+      >
+    </li>
+    <li class="dropdown list">
+      <img src="../../Polygon.svg" alt="Dropdown Icon" class="dropdown-icon" />
+      <ul class="dropdown-menu list">
+        <li><a href="#">Blog</a></li>
+        <li class="last-left-side-element"><a href="#">News</a></li>
+        <li><a href="#"><img src="../../Medium.svg" alt="Medium" /></a></li>
+        <li><a href="#"><img src="../../LinkedIn.svg" alt="LinkedIn" /></a></li>
+        <li>
+          <a href="#"><img src="../../Instagram.svg" alt="Instagram" /></a>
+        </li>
+        <li><a href="#"><img src="../../Twitch.svg" alt="Twitch" /></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<style define:vars={{ heightHeader, marginIconToScreenBorder }}>
+  nav {
+    width: 100%;
+    height: var(--heightHeader);
+  }
+  .header-container {
+    position: fixed;
+    height: var(--heightHeader);
+    max-height: var(--heightHeader);
+    background-color: var(--color-main-dark);
+    width: 100%;
+  }
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    & li {
+    }
+    & li a {
+      padding: 5px;
+    }
+    & a img {
+      max-height: 25px;
+      width: 18px;
+    }
+  }
+  @media only screen and (min-width: 636px) {
+    .last-left-side-element {
+      margin-right: auto;
+    }
+    .dropdown-icon {
+        display: none;
+    }
+  }
+</style>
