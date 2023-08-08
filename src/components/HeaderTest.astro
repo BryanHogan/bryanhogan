@@ -44,8 +44,6 @@ const marginIconToScreenBorder = "20px";
     align-items: center;
     list-style: none;
     width: 100%;
-    & li {
-    }
     & li a {
       padding: 5px;
     }
@@ -59,7 +57,28 @@ const marginIconToScreenBorder = "20px";
       margin-right: auto;
     }
     .dropdown-icon {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 636px) {
+    .dropdown {
+        &:hover .dropdown-menu {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 5px 10px;
         display: none;
+        & li {
+            border-bottom: 1px solid var(--color-main-bright);
+        }
+    }
+    .dropdown-icon {
+        margin-left: auto;
     }
   }
 </style>
