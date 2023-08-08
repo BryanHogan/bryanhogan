@@ -41,9 +41,9 @@ const marginIconToScreenBorder = "20px";
   .list {
     display: flex;
     flex-direction: row;
-    align-items: center;
     list-style: none;
-    width: 100%;
+    align-items: center;
+
     & li a {
       padding: 5px;
     }
@@ -59,26 +59,44 @@ const marginIconToScreenBorder = "20px";
     .dropdown-icon {
       display: none;
     }
+    .dropdown-menu {
+      align-items: center;
+      width: 100%;
+    }
+    .header-container .dropdown {
+      
+      width: 100%;
+    }
   }
   @media only screen and (max-width: 636px) {
     .dropdown {
-        &:hover .dropdown-menu {
-            display: flex;
-            flex-direction: column;
-        }
+      &:hover .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-main-dark);
+        padding-top: var(--heightHeader);
+        z-index: 1;
+      }
     }
     .dropdown-menu {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        padding: 5px 10px;
-        display: none;
-        & li {
-            border-bottom: 1px solid var(--color-main-bright);
-        }
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      padding: 5px 10px;
+      display: none;
+      & li {
+        border-bottom: 1px solid var(--color-main-bright);
+      }
     }
     .dropdown-icon {
-        margin-left: auto;
+      z-index: 2;
+      position: relative;
+      cursor: pointer;
+    }
+    .logo {
+      margin-right: auto;
+      width: 100%;
     }
   }
 </style>
