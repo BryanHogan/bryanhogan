@@ -1,14 +1,14 @@
 ---
 const heightHeader = "40px";
 const marginIconToScreenBorder = "0px";
-const paddingNavigationalItems = "5px 10px"
+const paddingNavigationalItems = "8px 10px";
 ---
 
 <nav>
   <ul class="header-container list">
     <li class="logo">
       <a href="#"
-        ><img src="../../public/BryanHoganTurtleLogo.svg" alt="Logo" /></a
+        ><img src="../../public/Bryan-Hogan-Turtle-Logo.svg" alt="Bryan Hogan's Logo" /></a
       >
     </li>
     <li class="dropdown list">
@@ -16,18 +16,24 @@ const paddingNavigationalItems = "5px 10px"
       <ul class="dropdown-menu list">
         <li><a href="#">Blog</a></li>
         <li class="last-left-side-element"><a href="#">News</a></li>
-        <li><a href="#"><img src="../../Medium.svg" alt="Medium" /></a></li>
-        <li><a href="#"><img src="../../LinkedIn.svg" alt="LinkedIn" /></a></li>
+        <li><a href="#"><img src="../../Medium-Logo.svg" alt="Medium Logo" /></a></li>
+        <li><a href="#"><img src="../../LinkedIn-Logo.svg" alt="LinkedIn Logo" /></a></li>
         <li>
-          <a href="#"><img src="../../Instagram.svg" alt="Instagram" /></a>
+          <a href="#"><img src="../../Instagram-Logo.svg" alt="Instagram Logo" /></a>
         </li>
-        <li><a href="#"><img src="../../Twitch.svg" alt="Twitch" /></a></li>
+        <li><a href="#"><img src="../../Twitch-Logo.svg" alt="Twitch Logo" /></a></li>
       </ul>
     </li>
   </ul>
 </nav>
 
-<style define:vars={{ heightHeader, marginIconToScreenBorder, paddingNavigationalItems}}>
+<style
+  define:vars={{
+    heightHeader,
+    marginIconToScreenBorder,
+    paddingNavigationalItems,
+  }}
+>
   nav {
     width: 100%;
     height: var(--heightHeader);
@@ -49,18 +55,21 @@ const paddingNavigationalItems = "5px 10px"
       padding: var(--paddingNavigationalItems);
       display: flex;
       align-items: center;
+      color: var(--color-main-bright);
+      transition: all 200ms ease-in-out;
     }
     & a img {
       height: 18px;
       width: 18px;
     }
     & .logo a {
-        margin-left: var(--marginIconToScreenBorder);
+      margin-left: var(--marginIconToScreenBorder);
+      width: min-content;
     }
     & a:hover {
-      background-color: var(--color-main-dark-brighter);
-      filter: brightness(0) saturate(100%);
-      filter: invert(8%) sepia(100%) saturate(6481%) hue-rotate(246deg) brightness(102%) contrast(143%);
+      transform: scale(1.1);
+      //filter: brightness(0) saturate(100%);
+      //filter: invert(71%) sepia(12%) saturate(1466%) hue-rotate(211deg) brightness(300%) contrast(89%);
     }
     & .logo img {
       width: 25px;
@@ -102,7 +111,10 @@ const paddingNavigationalItems = "5px 10px"
       border-radius: 0px 0px 0px 15px;
       & li {
         border-bottom: 1px solid var(--color-main-bright);
-        padding: 20px;
+        padding: 10px 20px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
       }
       & li:first-child {
         border-top: 1px solid var(--color-main-bright);
