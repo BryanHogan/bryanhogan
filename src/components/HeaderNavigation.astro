@@ -21,8 +21,8 @@ const test: test = {
   testName: "Hello",
 };
 ---
-<div class="non-floating">
-</div>
+
+<div class="non-floating"></div>
 <nav class="header-container">
   <ul>
     <li>
@@ -53,11 +53,11 @@ const test: test = {
 </nav>
 
 <style define:vars={{ heightHeader, marginIconToScreenBorder }}>
-.non-floating {
-  width: 100%;
-  background-color: var(--color-main-dark);
-  height: var(--heightHeader);
-}
+  .non-floating {
+    width: 100%;
+    background-color: var(--color-main-dark);
+    height: var(--heightHeader);
+  }
   .header-container {
     position: fixed;
     width: 100%;
@@ -81,8 +81,6 @@ const test: test = {
         height: 100%;
         padding: 3px 10px;
       }
-      & a {
-      }
       .dropdown {
         width: 100%;
       }
@@ -95,6 +93,11 @@ const test: test = {
     }
     .last-element-left-side {
       margin-right: auto;
+    }
+    .header-container ul li a {
+      padding: 20px;
+      background-color: red;
+      color: green;
     }
   }
 
