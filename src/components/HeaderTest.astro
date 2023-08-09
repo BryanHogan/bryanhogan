@@ -47,13 +47,20 @@ const paddingNavigationalItems = "5px 10px"
 
     & li a {
       padding: var(--paddingNavigationalItems);
+      display: flex;
+      align-items: center;
     }
     & a img {
-      max-height: 25px;
+      height: 18px;
       width: 18px;
     }
     & .logo a {
         margin-left: var(--marginIconToScreenBorder);
+    }
+    & a:hover {
+      background-color: var(--color-main-dark-brighter);
+      filter: brightness(0) saturate(100%);
+      filter: invert(8%) sepia(100%) saturate(6481%) hue-rotate(246deg) brightness(102%) contrast(143%);
     }
     & .logo img {
       width: 25px;
@@ -105,9 +112,8 @@ const paddingNavigationalItems = "5px 10px"
       }
       & li a img,
       & li a span {
-        height: 45px;
-        width: 45px;
-        max-width: 60px;
+        height: 25px;
+        width: 25px;
       }
     }
     .dropdown-icon {
