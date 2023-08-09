@@ -8,7 +8,10 @@ const paddingNavigationalItems = "8px 10px";
   <ul class="header-container list">
     <li class="logo">
       <a href="#"
-        ><img src="../../public/Bryan-Hogan-Turtle-Logo.svg" alt="Bryan Hogan's Logo" /></a
+        ><img
+          src="../../public/Bryan-Hogan-Turtle-Logo.svg"
+          alt="Bryan Hogan's Logo"
+        /></a
       >
     </li>
     <li class="dropdown list">
@@ -16,12 +19,22 @@ const paddingNavigationalItems = "8px 10px";
       <ul class="dropdown-menu list">
         <li><a href="#">Blog</a></li>
         <li class="last-left-side-element"><a href="#">News</a></li>
-        <li><a href="#"><img src="../../Medium-Logo.svg" alt="Medium Logo" /></a></li>
-        <li><a href="#"><img src="../../LinkedIn-Logo.svg" alt="LinkedIn Logo" /></a></li>
         <li>
-          <a href="#"><img src="../../Instagram-Logo.svg" alt="Instagram Logo" /></a>
+          <a href="#"><img src="../../Medium-Logo.svg" alt="Medium Logo" /></a>
         </li>
-        <li><a href="#"><img src="../../Twitch-Logo.svg" alt="Twitch Logo" /></a></li>
+        <li>
+          <a href="#"
+            ><img src="../../LinkedIn-Logo.svg" alt="LinkedIn Logo" /></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../../Instagram-Logo.svg" alt="Instagram Logo" /></a
+          >
+        </li>
+        <li>
+          <a href="#"><img src="../../Twitch-Logo.svg" alt="Twitch Logo" /></a>
+        </li>
       </ul>
     </li>
   </ul>
@@ -55,8 +68,9 @@ const paddingNavigationalItems = "8px 10px";
       padding: var(--paddingNavigationalItems);
       display: flex;
       align-items: center;
+      transform: scale(1.05);
       color: var(--color-main-bright);
-      transition: all 200ms ease-in-out;
+      transition: transform 800ms ease-in-out;
     }
     & a img {
       height: 18px;
@@ -67,13 +81,42 @@ const paddingNavigationalItems = "8px 10px";
       width: min-content;
     }
     & a:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
+      transition: transform 200ms ease-in-out;
+
       //filter: brightness(0) saturate(100%);
       //filter: invert(71%) sepia(12%) saturate(1466%) hue-rotate(211deg) brightness(300%) contrast(89%);
     }
     & .logo img {
       width: 25px;
       height: 25px;
+    }
+  }
+  @keyframes test {
+    0% {
+      opacity: 0;
+    }
+    25% {
+    }
+    75% {
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes vanish {
+    0% {
+      opacity: 1;
+      display: flex;
+    }
+    25% {
+    }
+    75% {
+      display: flex;
+    }
+    100% {
+      display: none;
+      opacity: 0.1;
     }
   }
   @media only screen and (min-width: 636px) {
@@ -100,6 +143,18 @@ const paddingNavigationalItems = "8px 10px";
         background-color: var(--color-main-dark);
         padding-top: var(--heightHeader);
         z-index: 1;
+        opacity: 1;
+      }
+      &:not(:hover) .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-main-dark);
+        padding-top: var(--heightHeader);
+        z-index: 1;
+        opacity: 0;
+        animation: vanish 2000ms 1;
+        -webkit-animation: vanish 2000ms 1;
       }
     }
     .dropdown-menu {
@@ -109,6 +164,9 @@ const paddingNavigationalItems = "8px 10px";
       padding: 5px 10px;
       display: none;
       border-radius: 0px 0px 0px 15px;
+      transition: all 200ms ease-in-out;
+      animation: test 2000ms 1;
+      -webkit-animation: test 2000ms 1;
       & li {
         border-bottom: 1px solid var(--color-main-bright);
         padding: 10px 20px;

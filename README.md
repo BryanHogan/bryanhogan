@@ -13,3 +13,4 @@ To Do's For Me
     - Add animation for mobile view (look at yt for reference)
     - Adjust a span (include styling for them in global styles)
     - Needs: Links, remove links for portfolio page (use props), 
+    - onclick
