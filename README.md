@@ -8,7 +8,10 @@ A landing page is planned.
 Add contact information & socials.
 
 To Do's For Me
+
+
 - Hero
+    - Make white text #fff for better readability
     - Make image of me turn to show a different picture after delay
     - Background animation element as an outer edge which could be prettier (make it not go that far right?) | try out different svgs + filter options (maybe use shadow instead?)
 
