@@ -25,8 +25,6 @@ const { text } = Astro.props;
     color: var(--color-main-bright);
     background-color: var(--color-main-dark);
     border: 1px solid var(--color-main-accent);
-    &.inset {
-    }
   }
   .bright {
     color: var(--color-main-dark);
@@ -55,7 +53,7 @@ const { text } = Astro.props;
     padding: 10px;
   }
   .large {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     width: 200px;
     margin: 30px 40px;
     padding: 30px 30px;
@@ -86,11 +84,11 @@ const { text } = Astro.props;
     }
   }
   .grow {
-    transition: all 200ms linear;
+    transition: transform 200ms linear;
     &:hover {
       opacity: 0.8;
-      transition: all 100ms linear;
-      transform: scale(1.05);
+      transition: transform 100ms linear;
+      transform: scale(1.1) translate3d( 0, 0, 0) perspective(1px);
     }
   }
 </style>
