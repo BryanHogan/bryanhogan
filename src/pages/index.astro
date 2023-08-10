@@ -1,20 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
   <div class="hero-container">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="128"
-      height="128"
-      viewBox="0 0 128 128"
-      fill="none"
-    >
-      <circle cx="64" cy="64" r="64" fill="#8FB8CD"></circle>
-    </svg>
     <div class="first-main-content-group">
       <img src="../../bryan_large.png" style="height: 340px; width: auto" />
       <div class="text-element">
@@ -23,15 +15,16 @@ import Header from "../components/Header.astro";
       </div>
     </div>
     <div class="second-main-content-group">
-      <h2>Where Do You Want To Go?</h2>
-      <h2>Where Do You Want To Go?</h2>
-      <h2>Where Do You Want To Go?</h2>
-      <h2>Where Do You Want To Go?</h2>
-      <h2>Where Do You Want To Go?</h2>
-      <h2>Where Do You Want To Go?</h2>
+      <nav class="navigation-main">
+        <Button text="Blog" link="./#" buttonStyle="transparent-bright large inset-dark-shadow" />
+
+        <Button text="Test" link="./#" buttonStyle="transparent-bright large inset-dark-shadow" />
+        <Button text="Test" link="./#" buttonStyle="bright small inset-dark-shadow" />
+        <Button text="Another One" link="./#" buttonStyle="bright large grow" />
+      </nav>
     </div>
   </div>
-  <p>hello</p>
+  <Button text="Test" buttonStyle="bright large inset-bright-shadow" />
 </Layout>
 
 <style>
@@ -46,11 +39,6 @@ import Header from "../components/Header.astro";
       #8fb8cd,
       #32ccdf
     );
-    background-size: 110%;
-    animation: bg-animation 2s infinite alternate;
-    overflow: hidden;
-    position: relative;
-    z-index: -1;
   }
   .first-main-content-group {
     display: flex;
@@ -59,53 +47,13 @@ import Header from "../components/Header.astro";
     flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    min-height: 550px;
+    min-height: 500px;
   }
   .second-main-content-group {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    & h2 {
-      background-image: linear-gradient(
-        320deg,
-        #af81cd,
-        #767fd1,
-        #8fb8cd,
-        #32ccdf
-      );
-      background-clip: text;
-      color: transparent;
-      background-size: 200%;
-      animation: bg-animation 2s infinite alternate;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-  }
-  svg {
-    position: absolute;
-    bottom: 150px;
-    left: 150px;
-    animation: circle-animation 3s infinite alternate;
-    z-index: -1;
-    filter: blur(60px);
-  }
-  @keyframes circle-animation {
-    0% {
-      bottom: 70%;
-      left: 10%;
-    }
-    100% {
-      bottom: 30%;
-      left: 90%;
-    }
-  }
-  @keyframes bg-animation {
-    0% {
-      background-position: right;
-    }
-    100% {
-      background-position: left;
-    }
   }
   img {
     margin: 40px;
@@ -128,6 +76,30 @@ import Header from "../components/Header.astro";
       border-radius: 0.9375rem 0.9375rem 0.9375rem 0rem;
       font-size: 1.8rem;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .navigation-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.6%;
+    max-width: 1050px;
+    width: 100%;
+    & a {
+      color: var(--color-main-bright);
+      font-size: 1.1rem;
+      width: 200px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 1rem;
+      border: 2px solid var(--color-main-bright);
+      border-radius: 15px;
+      background-color: #20212410;
     }
   }
 </style>
