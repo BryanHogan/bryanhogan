@@ -2,29 +2,56 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
+import HeroMainContent from "../components/HeroMainContent.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
   <div class="hero-container">
-    <div class="first-main-content-group">
-      <img src="../../bryan_large.png" style="height: 340px; width: auto" />
-      <div class="text-element">
-        <h1>Hello, I'm<br />Bryan Hogan.</h1>
-        <p>Enthusiast In Development, Design And More.</p>
-      </div>
-    </div>
+    <HeroMainContent />
     <div class="second-main-content-group">
       <nav class="navigation-main">
-        <Button text="Blog" link="./#" buttonStyle="transparent-bright large inset-dark-shadow" />
-
-        <Button text="Test" link="./#" buttonStyle="transparent-bright large grow" />
-        <Button text="Test" link="./#" buttonStyle="bright small grow" />
-        <Button text="Another One" link="./#" buttonStyle="transparent-bright-border small grow" />
+        <Button
+          text="Blog"
+          link="./#"
+          buttonStyle="transparent-bright large inset-dark-shadow"
+        />
+        <Button
+          text="Mailing"
+          link="./#"
+          buttonStyle="transparent-bright large inset-dark-shadow"
+        />
+        <Button
+          text="Portfolio"
+          link="./#"
+          buttonStyle="transparent-bright large inset-dark-shadow"
+        />
       </nav>
     </div>
   </div>
+
   <Button text="Test" buttonStyle="dark small grow" />
+  <Button
+    text="Blog"
+    link="./#"
+    buttonStyle="transparent-bright large inset-bright-shadow"
+  />
+  <Button
+    text="Test"
+    link="./#"
+    buttonStyle="transparent-bright-border large inset-bright-shadow"
+  />
+  <Button
+    text="Test"
+    link="./#"
+    buttonStyle="transparent-bright-border small inset-bright-shadow"
+  />
+  <Button
+    text="Another One"
+    link="./#"
+    buttonStyle="transparent-bright-border small inset-bright-shadow"
+  />
+  <section></section>
 </Layout>
 
 <style>
@@ -40,44 +67,15 @@ import Button from "../components/Button.astro";
       #32ccdf
     );
   }
-  .first-main-content-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    min-height: 500px;
-  }
+  
   .second-main-content-group {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  img {
-    margin: 40px;
-    border-radius: 15px;
-    border: 2px solid var(--color-main-bright);
-    border-radius: 2.1875rem 2.1875rem 0rem 2.1875rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  h1 {
-    margin: 40px 0px;
-    padding: 0px 30px;
-  }
-  .text-element {
-    margin: 0px;
-    max-width: 450px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    p {
-      border: 2px solid var(--color-main-accent);
-      padding: 15px 30px;
-      border-radius: 0.9375rem 0.9375rem 0.9375rem 0rem;
-      font-size: 1.8rem;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    }
-  }
+
+
   .navigation-main {
     display: flex;
     flex-direction: row;
