@@ -2,13 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
-import HeroMainContent from "../components/HeroMainContent.astro";
+import HeroMainContentStandard from "../components/HeroMainContentStandard.astro";
+import Hero from "../layouts/Hero.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
-  <div class="hero-container">
-    <HeroMainContent />
+  <Hero>
+    <HeroMainContentStandard />
     <div class="second-main-content-group">
       <nav class="navigation-main">
         <Button
@@ -28,7 +29,7 @@ import HeroMainContent from "../components/HeroMainContent.astro";
         />
       </nav>
     </div>
-  </div>
+  </Hero>
 
   <Button text="Test" buttonStyle="dark small grow" />
   <Button
@@ -55,26 +56,12 @@ import HeroMainContent from "../components/HeroMainContent.astro";
 </Layout>
 
 <style>
-  .hero-container {
-    width: 100%;
-    min-height: 550px;
-    background-color: #767fd1;
-    background-image: linear-gradient(
-      140deg,
-      #af81cd,
-      #767fd1,
-      #8fb8cd,
-      #32ccdf
-    );
-  }
-  
   .second-main-content-group {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-
 
   .navigation-main {
     display: flex;
