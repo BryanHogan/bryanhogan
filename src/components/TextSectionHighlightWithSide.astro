@@ -3,8 +3,8 @@ const moveTopAmount = 20 + "px";
 import Button from "./Button.astro";
 ---
 
-<section class="">
-  <hgroup class="text-section">
+<section class="common-section">
+  <hgroup class="text-section main-content">
     <h2 class="text-align-center">About Me</h2>
     <div class="text-section text-align-justify">
       <p>
@@ -20,7 +20,7 @@ import Button from "./Button.astro";
       <p>Currently living in Seoul.</p>
     </div>
   </hgroup>
-  <aside>
+  <aside class="side-content">
     <nav>
       <Button
         text="Projects"
@@ -41,16 +41,6 @@ import Button from "./Button.astro";
   </aside>
 </section>
 <style define:vars={{ moveTopAmount }}>
-  section {
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-  }
-  hgroup {
-    grid-column: 2 / 3;
-  }
-  aside {
-    grid-column: 2 / 3;
-  }
   nav {
     display: flex;
     justify-content: center;
@@ -59,10 +49,9 @@ import Button from "./Button.astro";
   }
   @media only screen and (min-width: 699px) {
     section {
-      grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
       gap: 1.6%;
     }
-    hgroup {
+    .main-content {
       grid-column: 3 / 4;
       grid-row: 1;
       margin-inline: auto;
@@ -72,7 +61,7 @@ import Button from "./Button.astro";
       margin-top: var(--moveTopAmount);
       box-shadow: var(--box-shadow-bright-small);
     }
-    aside {
+    .side-content {
       grid-column: 4 / 6;
       grid-row: 1;
       justify-self: center;
