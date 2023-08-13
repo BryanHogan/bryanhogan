@@ -1,9 +1,10 @@
 ---
-const { headerText } = Astro.props;
+const { headerText, additionalClasses } = Astro.props;
 const moveTopAmount = 20 + "px";
+var hgroupClass = "text-section main-content " + { additionalClasses };
 ---
 
-<hgroup class="text-section main-content">
+<hgroup class={hgroupClass}>
   <h2 class="text-align-center">{headerText}</h2>
   <div class="text-section text-align-justify">
     <slot />
@@ -11,6 +12,24 @@ const moveTopAmount = 20 + "px";
 </hgroup>
 
 <style define:vars={{ moveTopAmount }}>
+  .force-border { not working oh my why
+    margin-inline: auto;
+    border: 1px solid var(--color-main-accent);
+    border-radius: 15px 15px 0px 15px;
+    padding: 0px 50px 50px 50px;
+    margin-top: var(--moveTopAmount);
+    box-shadow: var(--box-shadow-bright-small);
+    width: fit-content;
+  }
+  & h2 {
+    position: relative;
+    bottom: var(--moveTopAmount);
+    background-color: var(--color-main-dark);
+    width: 80%;
+    margin-inline: auto;
+    padding-inline: 10px;
+  }
+
   @media only screen and (min-width: 699px) {
     .main-content {
       margin-inline: auto;
