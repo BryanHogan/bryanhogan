@@ -40,6 +40,8 @@ const { title } = Astro.props;
     --border-radius-standard: 1em;
 
     --section-padding: 4em;
+
+    --text-standard-width: 650px;
   }
 
    {
@@ -107,14 +109,16 @@ const { title } = Astro.props;
     font-size: 1.6rem;
   }
 
+  .text-standard-width {
+    max-width: 650px;
+  }
+
+  .text-align-justify {
+    text-align: justify;
+  }
   .text-align-center {
     text-align: center;
   }
-  .standard-text {
-    max-width: 650px;
-    text-align: justify;
-  }
-
    {
     /*  ====================
     4 - Utility

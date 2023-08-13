@@ -1,0 +1,50 @@
+---
+const moveTopAmount = "20px";
+---
+
+<section>
+  <hgroup>
+    <h2>About </h2>
+    <div class="text-section">
+      <p>
+        I am Bryan Hogan and currently working on completing my Bachelor of
+        Science in the study Code & Context at TH Köln. Code & Context is an
+        interdisciplinary course ranging from Coding & Design to
+        Entrepreneurship.
+      </p>
+      <p>
+        Furthermore, I am currently involved in other projects and, through
+        experiences, I improve my skills and abilities everyday.
+      </p>
+      <p>Currently living in Seoul.</p>
+    </div>
+  </hgroup>
+</section>
+<style define:vars={{moveTopAmount}}>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+  }
+  hgroup {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    margin-inline: auto;
+    border: 2px solid var(--color-main-accent);
+    border-radius: 15px 15px 0px 15px;
+    padding: 0px 30px var(--moveTopAmount) 30px;
+    margin-top: var(--moveTopAmount);
+    
+  }
+  .text-section > p {
+    max-width: var(--text-standard-width);
+  }
+  h2 {
+    text-align: center;
+    position: relative;
+    bottom: var(--moveTopAmount);
+    background-color: var(--color-main-dark);
+    width: 80%;
+    margin-inline: auto;
+    padding-inline: 10px;
+  }
+</style>
