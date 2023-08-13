@@ -107,14 +107,19 @@ const { title } = Astro.props;
     }
     &.side-content {
       grid-column: 2 / 3;
-      margin-top: var(--small-gap);
-    }
-    @media only screen and (min-width: 699px) {
-      p {
-        background-color: red;
-      }
     }
   }
+  @media only screen and (min-width: 699px) {
+      .common-section {
+        grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+      }
+      &.main-content {
+      grid-column: 3 / 4;
+    }
+    &.side-content {
+      grid-column: 4 / 6;
+    }
+    }
 
    {
     /*  ====================
