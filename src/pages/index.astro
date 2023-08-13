@@ -6,6 +6,8 @@ import FocusedContentGroup from "../components/FocusedContentGroup.astro";
 import HeroLayout from "../layouts/HeroLayout.astro";
 import CommonSectionWithSide from "../components/CommonSectionWithSide.astro";
 import TextElementBorderTopOpen from "../components/TextElementBorderTopOpen.astro";
+import FullWidthSectionLayout from "../layouts/FullWidthSectionLayout.astro";
+import Card from "../components/Card.astro"
 ---
 
 <Layout title="Welcome to Astro.">
@@ -14,9 +16,9 @@ import TextElementBorderTopOpen from "../components/TextElementBorderTopOpen.ast
     <FocusedContentGroup />
   </HeroLayout>
   <CommonSectionWithSide />
-  <FullWidthSection>
+  <FullWidthSectionLayout>
     <Card />
-  </FullWidthSection>
+  </FullWidthSectionLayout>
 </Layout>
 
 <style>
