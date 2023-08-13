@@ -3,47 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
 import HeroMainContentStandard from "../components/HeroMainContentStandard.astro";
-import Hero from "../layouts/Hero.astro";
-import TextIntro from "../components/TextIntro.astro";
+import HeroLayout from "../layouts/HeroLayout.astro";
+import TextSectionHighlightWithSide from "../components/TextSectionHighlightWithSide.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
-  <Hero>
+  <HeroLayout>
     <HeroMainContentStandard />
     
-  </Hero>
-  <TextIntro />
-  <section class="text-section standard-text">
-    <h2>About Me</h2>
-    <p>
-      I am Bryan Hogan and currently working on completing my Bachelor of
-      Science in the study Code & Context at TH Köln. Code & Context is an
-      interdisciplinary course ranging from Coding & Design to Entrepreneurship.
-      Furthermore, I am currently involved in other projects and, through
-      experiences, I improve my skills and abilities everyday.
-    </p>
-    <p>Currently living in Seoul.</p>
-    <h3>Additional Information</h3>
-    <p>Short example text so I can fill this up.</p>
-    <h2>New Topic</h2>
-    <p>
-      sign to Entrepreneurship. Furthermore, I am currently involved in other
-      projects and, through experiences, I improve my skills and abilities
-      everyday.
-    </p>
-  </section>
-  <section>
-    <h2>About</h2>
-    <p>
-      I am Bryan Hogan and currently working on completing my Bachelor of
-      Science in the study Code & Context at TH Köln. Code & Context is an
-      interdisciplinary course ranging from Coding & Design to Entrepreneurship.
-      Furthermore, I am currently involved in other projects and, through
-      experiences, I improve my skills and abilities everyday.
-    </p>
-    <p>Currently living in Seoul.</p>
-  </section>
+  </HeroLayout>
+  <TextSectionHighlightWithSide />
+
 </Layout>
 
 <style>

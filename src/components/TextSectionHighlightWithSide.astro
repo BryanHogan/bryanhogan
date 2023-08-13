@@ -3,7 +3,7 @@ const moveTopAmount = 20 + "px";
 import Button from "./Button.astro";
 ---
 
-<section>
+<section class="">
   <hgroup class="text-section">
     <h2 class="text-align-center">About Me</h2>
     <div class="text-section text-align-justify">
@@ -47,10 +47,8 @@ import Button from "./Button.astro";
   }
   hgroup {
     grid-column: 2 / 3;
-    grid-row: 1;
   }
   aside {
-    grid-row: 2;
     grid-column: 2 / 3;
     margin-top: var(--small-gap);
   }
