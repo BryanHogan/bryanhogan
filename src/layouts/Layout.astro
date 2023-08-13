@@ -46,6 +46,9 @@ const { title } = Astro.props;
     --section-padding: 4em;
 
     --text-standard-width: 650px;
+
+    --small-gap: 30px;
+    --large-gap: 60px;
   }
 
    {
@@ -86,18 +89,23 @@ const { title } = Astro.props;
   }
 
    {
-/*  ====================
+    /*  ====================
       2 - Layout
     ==================== */
-   
   }
 
   section {
     padding: var(--section-padding) 0;
   }
+  .common-section {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    &.main-content {
+    }
+  }
 
    {
-/*  ====================
+    /*  ====================
       3 - Typography
     ==================== */
   }
@@ -112,14 +120,14 @@ const { title } = Astro.props;
   h3 {
     font-size: 1.6rem;
   }
-.strong-accent {
-  color: var(--color-main-accent);
-  font-weight: normal;
-}
+  .strong-accent {
+    color: var(--color-main-accent);
+    font-weight: normal;
+  }
+
   .text-standard-width {
     max-width: 650px;
   }
-
   .text-align-justify {
     text-align: justify;
   }
@@ -127,12 +135,17 @@ const { title } = Astro.props;
     text-align: center;
   }
    {
-/*  ====================
+    /*  ====================
     4 - Utility
     ==================== */
   }
 
-  .text-section > *:not(:first-child) {
-    margin-block-start: 1.5em;
+  .text-section {
+    & > *:not(:first-child) {
+      margin-block-start: 1.5em;
+    }
+    & > p {
+      max-width: 650px;
+    }
   }
 </style>
