@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
-import HeroMainContentStandard from "../components/HeroMainContentStandard.astro";
+import FocusedContentGroup from "../components/FocusedContentGroup.astro";
 import HeroLayout from "../layouts/HeroLayout.astro";
 import CommonSectionWithSide from "../components/CommonSectionWithSide.astro";
 import TextElementBorderTopOpen from "../components/TextElementBorderTopOpen.astro";
@@ -11,9 +11,12 @@ import TextElementBorderTopOpen from "../components/TextElementBorderTopOpen.ast
 <Layout title="Welcome to Astro.">
   <Header />
   <HeroLayout>
-    <HeroMainContentStandard />
+    <FocusedContentGroup />
   </HeroLayout>
   <CommonSectionWithSide />
+  <FullWidthSection>
+    <Card />
+  </FullWidthSection>
 </Layout>
 
 <style>
