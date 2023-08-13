@@ -47,8 +47,9 @@ const { title } = Astro.props;
 
     --text-standard-width: 650px;
 
-    --small-gap: 30px;
-    --large-gap: 60px;
+    --small-gap: 2em;
+    --medium-gap: 4em;
+    --large-gap: 8em;
   }
 
    {
@@ -76,6 +77,7 @@ const { title } = Astro.props;
   html:focus-within {
     scroll-behavior: smooth;
   }
+
   img,
   picture {
     max-width: 100%;
@@ -106,11 +108,12 @@ const { title } = Astro.props;
 
    {
     /*  ====================
-      3 - Typography
+      3 - Typography (700, 400)
     ==================== */
   }
   h1 {
     font-size: 3.4rem;
+    font-weight: 700;
   }
 
   h2 {
@@ -119,6 +122,9 @@ const { title } = Astro.props;
 
   h3 {
     font-size: 1.6rem;
+  }
+  p {
+    font-weight: 400;
   }
   .strong-accent {
     color: var(--color-main-accent);
