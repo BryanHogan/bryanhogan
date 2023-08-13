@@ -1,10 +1,11 @@
 ---
-const moveTopAmount = "20px";
+const moveTopAmount = 20 + "px";
+import Button from "./Button.astro";
 ---
 
 <section>
   <hgroup>
-    <h2>About </h2>
+    <h2>About</h2>
     <div class="text-section">
       <p>
         I am Bryan Hogan and currently working on completing my Bachelor of
@@ -19,21 +20,59 @@ const moveTopAmount = "20px";
       <p>Currently living in Seoul.</p>
     </div>
   </hgroup>
+  <aside>
+    <nav>
+      <Button
+        text="Projects"
+        link="./#"
+        buttonStyle="transparent-bright small grow"
+      />
+      <Button
+        text="Skills"
+        link="./#"
+        buttonStyle="transparent-bright small grow"
+      />
+      <Button
+        text="Contact"
+        link="./#"
+        buttonStyle="transparent-bright small grow"
+      />
+    </nav>
+  </aside>
 </section>
-<style define:vars={{moveTopAmount}}>
+<style define:vars={{ moveTopAmount }}>
   section {
     display: grid;
     grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+    gap: 1.6%;
   }
   hgroup {
     grid-column: 3 / 4;
     grid-row: 1;
     margin-inline: auto;
-    border: 2px solid var(--color-main-accent);
+    border: 1px solid var(--color-main-accent);
     border-radius: 15px 15px 0px 15px;
-    padding: 0px 30px var(--moveTopAmount) 30px;
+    padding: 0px 50px 50px 50px;
     margin-top: var(--moveTopAmount);
-    
+    box-shadow: var(--box-shadow-bright-small);
+     {
+      /*box-shadow: 4px 4px 8px 0px var(--color-main-accent);*/
+    }
+  }
+  aside {
+    grid-column: 4 / 6;
+    justify-self: center;
+    margin-top: var(--moveTopAmount);
+    height: calc(100% - var(--moveTopAmount));
+    & nav {
+      border: 1px solid var(--color-main-accent);
+      box-shadow: var(--box-shadow-bright-small);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border-radius: 15px 15px 15px 0px;
+      height: 100%;
+    }
   }
   .text-section > p {
     max-width: var(--text-standard-width);

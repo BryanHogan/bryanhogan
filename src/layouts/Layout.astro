@@ -36,6 +36,10 @@ const { title } = Astro.props;
     --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     --text-shadow-inset: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
+    --shadow-bright: var(--color-main-accent);
+    --box-shadow-bright-medium: 0px 4px 8px 0px var(--shadow-bright);
+    --box-shadow-bright-small: 0px 2px 4px 0px var(--shadow-bright);
+
     --section-spacing: 6rem;
     --border-radius-standard: 1em;
 
@@ -82,10 +86,10 @@ const { title } = Astro.props;
   }
 
    {
-    /*  ====================
-    2 - Layout
-    
-   */
+/*  ====================
+      2 - Layout
+    ==================== */
+   
   }
 
   section {
@@ -93,8 +97,8 @@ const { title } = Astro.props;
   }
 
    {
-    /*  ====================
-    3 - Typography
+/*  ====================
+      3 - Typography
     ==================== */
   }
   h1 {
@@ -102,13 +106,16 @@ const { title } = Astro.props;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   h3 {
     font-size: 1.6rem;
   }
-
+.strong-accent {
+  color: var(--color-main-accent);
+  font-weight: normal;
+}
   .text-standard-width {
     max-width: 650px;
   }
@@ -120,7 +127,7 @@ const { title } = Astro.props;
     text-align: center;
   }
    {
-    /*  ====================
+/*  ====================
     4 - Utility
     ==================== */
   }

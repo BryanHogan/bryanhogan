@@ -9,8 +9,14 @@ Add contact information & socials.
 
 To Do's For Me
 
-- Fonts
-    - 
+- General
+    -  Images    
+      - Sub-folder for images: images/...
+      - Large image previews? AMP?
+      - Add licensing informtion
+      - Lazy loading?
+    - Structured Data
+    
 - Hero
     - Make white text #fff for better readability
     - Make image of me turn to show a different picture after delay
