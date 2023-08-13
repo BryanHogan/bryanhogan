@@ -9,7 +9,8 @@ Add contact information & socials.
 
 To Do's For Me
 
-
+- Fonts
+    - 
 - Hero
     - Make white text #fff for better readability
     - Make image of me turn to show a different picture after delay

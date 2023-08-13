@@ -24,13 +24,12 @@ const { title } = Astro.props;
   :root {
     --color-main-dark: #202124;
     --color-main-dark-brighter: #414141;
-    /* main 60 */
+
     --color-main-bright: #e8ecf0;
-    /* sub 30 */
-    --color-main-accent: #8FB8CD;
-    --color-side-accent: #A594D3;
-    /* sub 10 */
-    
+
+    --color-main-accent: #8fb8cd;
+    --color-side-accent: #a594d3;
+
     --shadow-black: rgba(0, 0, 0, 0.25);
     --box-shadow-large: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
     --box-shadow-medium: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -39,26 +38,40 @@ const { title } = Astro.props;
 
     --section-spacing: 6rem;
     --border-radius-standard: 1em;
+
+    --section-padding: 4em;
   }
 
-  /* Table Of Contents
+   {
+    /* Table Of Contents
+    0 - CSS Reset
     1 - Global Styles
-    2 - Typography
-    3 - Layout
-        3.1 - Standard Flex
-        3.2 - Standard Grid
-        3.3
-    4 - Buttons
-    5 - Hero
-
+    2 - Layout
+    3 - Typography
+    4 - Utilty
 */
-  * {
+  }
+  *,
+  *::before,
+  *::after {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: "Helvetica", "Arial", sans-serif;
   }
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
 
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
   body {
     color: var(--color-main-bright);
     background-color: var(--color-main-dark);
@@ -66,13 +79,21 @@ const { title } = Astro.props;
     min-width: 280px;
   }
 
-  /*  ====================
-    2 - Typography
+   {
+    /*  ====================
+    2 - Layout
+    
+   */
+  }
+
+  section {
+    padding: var(--section-padding) 0;
+  }
+
+   {
+    /*  ====================
+    3 - Typography
     ==================== */
-  h1,
-  h2,
-  h3 {
-    padding: 1rem;
   }
   h1 {
     font-size: 3.4rem;
@@ -92,12 +113,15 @@ const { title } = Astro.props;
   .standard-text {
     max-width: 650px;
     text-align: justify;
-    width: 60%;
   }
-  
-  /*  ====================
-    3 - Buttons
-    ==================== */
-    
 
+   {
+    /*  ====================
+    4 - Utility
+    ==================== */
+  }
+
+  .text-section > *:not(:first-child) {
+    margin-block-start: 1.5em;
+  }
 </style>
