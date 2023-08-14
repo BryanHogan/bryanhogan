@@ -1,10 +1,18 @@
 ---
 import TextElementBorderTopOpen from "../layouts/TextElementBorderTopOpen.astro";
 const moveTopAmount = 15 + "px";
+{ /*
 const headerText = "title";
 const descriptionText =
   ["Studying about Code & Design to be able to make our Start-Uy use valuable skills instead of being stuck inuseless theory. From helping people who take medicine regularly tobuilding profitable SAAS products for restaurants that want to utiliseSocial Media with real-world interaction", "second text area is here"];
 const listPoints = ["Official Website", "Another Thing"];
+*/ }
+interface Props {
+  headerText: string,
+  descriptionText: Array<string>,
+  listPoints: Array<string>
+}
+const {headerText, descriptionText, listPoints} = Astro.props;
 ---
 
 <hgroup class="card-container">
