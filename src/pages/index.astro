@@ -137,15 +137,22 @@ import Card from "../components/Card.astro";
       <p class="location-container text-shadow">
         <s>Germany, Cologne</s><br />South Korea, Seoul
       </p>
-      <p class="text-shadow mail-adress"><strong>BryanHogan@gmx.net</strong></p>
+      <a
+        href="mailto:BryanHogan@gmx.net"
+        class="text-shadow mail-adress"
+        style="color: var(--color-main-bright);"
+        ><strong>BryanHogan@gmx.net</strong></a
+      >
     </contact>
   </section>
 </Layout>
 
 <style>
   contact {
+    color: var(--color-main-bright);
     & p {
       padding: 10px;
+      text-decoration: dotted;
     }
     & .location-container::before {
       content: url(../icons/Map-Pin-Icon.svg);

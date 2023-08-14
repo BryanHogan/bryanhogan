@@ -35,6 +35,7 @@ To Do's For Me
     - Current Card gallery (portfolio projects) is not properly contained on the grid vertically
     - Skills link to page with id: Explanation of tool, explanation of hwo I use it
     - Remove component heroLayout
+    - Projects headers overlap with header
 Style references:
 - https://obsidian.md/
 - https://baldbeardedbuilder.com/
