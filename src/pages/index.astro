@@ -72,26 +72,134 @@ import Card from "../components/Card.astro";
   <section>
     <h2 class="text-align-center">Skills</h2>
     <ul class="skills-list">
-      <li><img src="../logos/Davinci-Resolve-Logo.svg"></li>
-      <li><img src="../logos/Affinity-Logo.svg"></li>
-      <li><img src="../logos/Aseprite-Logo.svg"></li>
-      <li><img src="../logos/Figma-Logo.svg"></li>
-      <li><img src="../logos/HTML-Logo.svg"></li>
-      <li><img src="../logos/CSS-Logo.svg"></li>
-      <li><img src="../logos/Typescript-Logo.svg"></li>
-      <li><img src="../logos/Astro-Logo.svg"></li>
-      <li><img src="../logos/Postcss-Logo.svg"></li>
-      <li><img src="../logos/Git-Logo.svg"></li>
-      <li><img src="../logos/Github-Logo.svg"></li>
-      <li><img src="../logos/Java-Logo.svg"></li>
-      <li><img src="../logos/Obsidian-Logo.svg"></li>
-      <li><img src="../logos/Notion-Logo.svg"></li>
-      <li><img src="../logos/Google-Sheets-Logo.svg"></li>
+      <li>
+        <img
+          src="../logos/Davinci-Resolve-Logo.svg"
+          alt="Light only logo of Davinci Resolve"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Affinity-Logo.svg"
+          alt="Light only logo of Affinity"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Aseprite-Logo.svg"
+          alt="Light only logo of Aseprite"
+        />
+      </li>
+      <li>
+        <img src="../logos/Figma-Logo.svg" alt="Light only logo of Figma" />
+      </li>
+      <li>
+        <img src="../logos/HTML-Logo.svg" alt="Light only logo of HTML 5" />
+      </li>
+      <li><img src="../logos/CSS-Logo.svg" alt="Light only logo of CSS" /></li>
+      <li>
+        <img
+          src="../logos/Typescript-Logo.svg"
+          alt="Light only logo of Typescript"
+        />
+      </li>
+      <li>
+        <img src="../logos/Astro-Logo.svg" alt="Light only logo of Astro" />
+      </li>
+      <li><img src="../logos/Postcss-Logo.svg" /></li>
+      <li><img src="../logos/Git-Logo.svg" /></li>
+      <li><img src="../logos/Github-Logo.svg" /></li>
+      <li><img src="../logos/Java-Logo.svg" /></li>
+      <li><img src="../logos/Obsidian-Logo.svg" /></li>
+      <li><img src="../logos/Notion-Logo.svg" /></li>
+      <li><img src="../logos/Google-Sheets-Logo.svg" /></li>
     </ul>
+  </section>
+  <section
+    class="gradient-background-darker text-section text-align-center contact-section"
+    id="contact"
+  >
+    <h2 class="text-shadow">Contact</h2>
+    <div class="form-container">
+      <p class="text-shadow"><em>Reach out to me here</em></p>
+      <form action="https://formspree.io/f/xyyovedd" method="POST">
+        <label>
+          <input type="email" name="email" placeholder="Your email" required />
+        </label>
+        <label>
+          <textarea name="message" placeholder="Your message" required
+          ></textarea>
+        </label>
+        <button class="button-white" type="submit">Send</button>
+      </form>
+    </div>
+    <contact>
+      <p class="location-container">
+        <strong class="text-shadow"
+          ><s>Germany, Cologne</s><br />South Korea, Seoul</strong>
+      </p>
+      <p>Contact@BryanHogan.com</p>
+    </contact>
   </section>
 </Layout>
 
 <style>
+  contact .location-container::before {
+    content: url(../logos/Map-Pin.svg);
+    position: absolute;
+    transform: translateX(-40px);
+  }
+  #contact {
+    & .form-container {
+      margin-inline: 15px;
+    }
+    & form {
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+      padding: 60px 20px;
+      background-color: #2021241f;
+      border: 1px solid var(--color-main-accent);
+      max-width: 550px;
+      margin-inline: auto;
+      border-radius: 1em;
+    }
+    & label {
+      padding-block: 1em;
+    }
+    & input,
+    textarea {
+      width: 80%;
+      border: 2px solid var(--color-main-bright);
+      border-radius: 5px;
+      padding: 4px;
+    }
+    & input {
+      font-size: 1.2rem;
+    }
+    & textarea {
+      height: 90px;
+    }
+    & button {
+      color: var(--color-main-dark);
+      background-color: #fff;
+      border: 2px solid var(--color-main-accent);
+      border-radius: 10px;
+      box-shadow: var(--box-shadow-medium);
+      width: 30%;
+      font-size: 1rem;
+      padding: 10px;
+      margin-inline: auto;
+      transition: all 200ms linear;
+      box-shadow: var(--box-shadow-large),
+        inset 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+      &:hover {
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25),
+          inset var(--box-shadow-large);
+        text-shadow: var(--text-shadow-inset);
+      }
+    }
+  }
   .skills-list {
     list-style: none;
     display: flex;
@@ -116,7 +224,7 @@ import Card from "../components/Card.astro";
       transition: opacity 100ms;
     }
     & li:hover img {
-      opacity: 1.0;
+      opacity: 1;
     }
   }
   .second-main-content-group {
@@ -156,5 +264,10 @@ import Card from "../components/Card.astro";
     flex-wrap: wrap;
   }
   @media only screen and (min-width: 699px) {
+  }
+  @media only screen and (max-width: 699px) {
+    .skills-list {
+      max-width: 100%;
+    }
   }
 </style>

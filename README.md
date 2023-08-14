@@ -32,8 +32,9 @@ To Do's For Me
     - Smooth fade out not working for Firefox (How's Safari looking?)
 
 - Will have to fix
-    -  Current Card gallery (portfolio projects) is not properly contained on the grid vertically
-    - 
+    - Current Card gallery (portfolio projects) is not properly contained on the grid vertically
+    - Skills link to page with id: Explanation of tool, explanation of hwo I use it
+    - Remove component heroLayout
 Style references:
 - https://obsidian.md/
 - https://baldbeardedbuilder.com/
