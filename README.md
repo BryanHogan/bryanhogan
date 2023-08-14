@@ -16,6 +16,8 @@ To Do's For Me
       - Add licensing informtion
       - Lazy loading?
     - Structured Data
+    - Design
+
     
 - Hero
     - Make white text #fff for better readability
@@ -28,3 +30,7 @@ To Do's For Me
     - Change icons/links displayed based on props -> Allow different views for blog & portfolio
     - Color - Change base color & different color on hover?
     - Smooth fade out not working for Firefox (How's Safari looking?)
+
+Style references:
+- https://obsidian.md/
+- https://baldbeardedbuilder.com/

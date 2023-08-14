@@ -32,7 +32,7 @@ import Card from "../components/Card.astro";
         headerText="AI"
         descriptionText={[
           "Created an artificial intelligence trained to recognise numbers and able to adjust its recognition. It's able to learn letters and numbers. Made with TensorFlow and trained with MNIST data.",
-          "Group project by: Timo Küsters, Matthias Zens and Bryan Hogan within a course held by Prof. Christian Faubel."
+          "Group project by: Timo Küsters, Matthias Zens and Bryan Hogan within a course held by Prof. Christian Faubel.",
         ]}
         listPoints={["See The Project Here"]}
       />
@@ -40,7 +40,7 @@ import Card from "../components/Card.astro";
         headerText="Volt"
         descriptionText={[
           "During the last German federal election in 2021 I did Social Media management for Volt's top candidates.",
-          "Volt is a pro-European party found in all EU member states and more."
+          "Volt is a pro-European party found in all EU member states and more.",
         ]}
         listPoints={["Volt's Official Website"]}
       />
@@ -48,7 +48,7 @@ import Card from "../components/Card.astro";
         headerText="Hanyang"
         descriptionText={[
           "Went abroad to South Korea to study at Hanyang University erica campus for the spring semester of 2023.",
-          "My courses included UX Design where we worked together with the government of Ansan, Sports Physiology, Game Design, Visual Communication, Korean Language."
+          "My courses included UX Design where we worked together with the government of Ansan, Sports Physiology, Game Design, Visual Communication and Korean Language.",
         ]}
         listPoints={["Hanyang University's Official Website"]}
       />
@@ -56,7 +56,7 @@ import Card from "../components/Card.astro";
         headerText="University of Seoul"
         descriptionText={[
           "Currently studying at University of Seoul for fall semester 2023.",
-          "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management. "
+          "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management. ",
         ]}
         listPoints={["University of Seoul's Official Website"]}
       />
@@ -69,9 +69,47 @@ import Card from "../components/Card.astro";
       />
     </div>
   </section>
+  <section>
+    <h2 class="text-align-center">Skills</h2>
+    <ul class="skills-list">
+      <li><img src="../logos/Davinci-Resolve-Logo.svg"></li>
+      <li><img src="../logos/Affinity-Logo.svg"></li>
+      <li><img src="../logos/Aseprite-Logo.svg"></li>
+      <li><img src="../logos/Figma-Logo.svg"></li>
+      <li><img src="../logos/HTML-Logo.svg"></li>
+      <li><img src="../logos/CSS-Logo.svg"></li>
+      <li><img src="../logos/Typescript-Logo.svg"></li>
+      <li><img src="../logos/Astro-Logo.svg"></li>
+      <li><img src="../logos/Postcss-Logo.svg"></li>
+      <li><img src="../logos/Git-Logo.svg"></li>
+      <li><img src="../logos/Github-Logo.svg"></li>
+      <li><img src="../logos/Java-Logo.svg"></li>
+      <li><img src="../logos/Obsidian-Logo.svg"></li>
+      <li><img src="../logos/Notion-Logo.svg"></li>
+      <li><img src="../logos/Google-Sheets-Logo.svg"></li>
+    </ul>
+  </section>
 </Layout>
 
 <style>
+  .skills-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin-inline: auto;
+    & li {
+      padding: 20px;
+      border: 1px solid red;
+      display: flex;
+      align-items: center;
+    }
+    & img {
+      min-width: 60px;
+    }
+  }
   .second-main-content-group {
     display: flex;
     justify-content: center;
@@ -106,7 +144,11 @@ import Card from "../components/Card.astro";
   .card-gallery {
     display: grid;
     gap: 3%;
-    row-gap: 9%;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  }
+  @media only screen and (min-width: 699px) {
+    .card-gallery {
+      row-gap: 9%;
+    }
   }
 </style>
