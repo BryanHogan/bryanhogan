@@ -133,7 +133,7 @@ import Card from "../components/Card.astro";
         <button class="button-white" type="submit">Send</button>
       </form>
     </div>
-    <contact>
+    <address>
       <p class="location-container text-shadow">
         <s>Germany, Cologne</s><br />South Korea, Seoul
       </p>
@@ -143,12 +143,12 @@ import Card from "../components/Card.astro";
         style="color: var(--color-main-bright);"
         ><strong>BryanHogan@gmx.net</strong></a
       >
-    </contact>
+    </address>
   </section>
 </Layout>
 
 <style>
-  contact {
+  #contact address {
     color: var(--color-main-bright);
     & p {
       padding: 10px;
@@ -175,7 +175,7 @@ import Card from "../components/Card.astro";
       margin: 30px;
       padding: 60px 20px;
       background-color: #2021241f;
-      border: 1px solid var(--color-main-accent);
+      box-shadow: var(--box-shadow-medium);
       max-width: 550px;
       margin-inline: auto;
       border-radius: 1em;
@@ -189,6 +189,7 @@ import Card from "../components/Card.astro";
       border: 2px solid var(--color-main-bright);
       border-radius: 5px;
       padding: 4px;
+      box-shadow: var(--box-shadow-medium);
     }
     & input {
       font-size: 1.2rem;
@@ -199,7 +200,7 @@ import Card from "../components/Card.astro";
     & button {
       color: var(--color-main-dark);
       background-color: #fff;
-      border: 2px solid var(--color-main-accent);
+      border: 0px;
       border-radius: 10px;
       box-shadow: var(--box-shadow-medium);
       width: 30%;
