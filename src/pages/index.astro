@@ -7,7 +7,7 @@ import HeroLayout from "../layouts/HeroLayout.astro";
 import CommonSectionWithSide from "../components/CommonSectionWithSide.astro";
 import TextElementBorderTopOpen from "../layouts/TextElementBorderTopOpen.astro";
 import FullWidthSectionLayout from "../layouts/FullWidthSectionLayout.astro";
-import Card from "../components/Card.astro"
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -17,7 +17,10 @@ import Card from "../components/Card.astro"
   </HeroLayout>
   <CommonSectionWithSide />
   <FullWidthSectionLayout>
-    <Card />
+    <div class="card-gallery">
+      <Card />
+      <Card />
+    </div>
   </FullWidthSectionLayout>
 </Layout>
 
@@ -52,5 +55,9 @@ import Card from "../components/Card.astro"
       border-radius: 15px;
       background-color: #20212410;
     }
+  }
+  .card-gallery {
+    display: grid;
+    gap: 4%;
   }
 </style>
