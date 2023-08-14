@@ -17,6 +17,7 @@ import Card from "../components/Card.astro";
   </HeroLayout>
   <CommonSectionWithSide />
   <FullWidthSectionLayout>
+    <h2 class="text-align-center" style="margin-bottom: var(--small-gap);">Projects</h2>
     <div class="card-gallery">
       <Card />
       <Card />
@@ -58,6 +59,8 @@ import Card from "../components/Card.astro";
   }
   .card-gallery {
     display: grid;
-    gap: 4%;
+    gap: 3%;
+    row-gap: 9%;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   }
 </style>
