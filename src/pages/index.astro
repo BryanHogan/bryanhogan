@@ -6,7 +6,6 @@ import FocusedContentGroup from "../components/FocusedContentGroup.astro";
 import HeroLayout from "../layouts/HeroLayout.astro";
 import CommonSectionWithSide from "../components/CommonSectionWithSide.astro";
 import TextElementBorderTopOpen from "../layouts/TextElementBorderTopOpen.astro";
-import FullWidthSectionLayout from "../layouts/FullWidthSectionLayout.astro";
 import Card from "../components/Card.astro";
 ---
 
@@ -16,13 +15,60 @@ import Card from "../components/Card.astro";
     <FocusedContentGroup />
   </HeroLayout>
   <CommonSectionWithSide />
-  <FullWidthSectionLayout>
-    <h2 class="text-align-center" style="margin-bottom: var(--small-gap);">Projects</h2>
+  <section>
+    <h2 class="text-align-center" style="margin-bottom: var(--small-gap);">
+      Projects
+    </h2>
     <div class="card-gallery">
-      <Card headerText="title" descriptionText={["example"]} listPoints={["example"]}/>
-      
+      <Card
+        headerText="Code & Context"
+        descriptionText={[
+          "Engaged in studying Code & Design to skillfully craft valuable artifacts and establish thriving businesses.",
+          "Actively learning through hands-on experiences and exploring diverse fields. From helping people who take medicine regularly to creating SaaS solutions where we blend social media and real-world interaction for restaurants.",
+        ]}
+        listPoints={["CoCo's Official Website"]}
+      />
+      <Card
+        headerText="AI"
+        descriptionText={[
+          "Created an artificial intelligence trained to recognise numbers and able to adjust its recognition. It's able to learn letters and numbers. Made with TensorFlow and trained with MNIST data.",
+          "Group project by: Timo Küsters, Matthias Zens and Bryan Hogan within a course held by Prof. Christian Faubel."
+        ]}
+        listPoints={["See The Project Here"]}
+      />
+      <Card
+        headerText="Volt"
+        descriptionText={[
+          "During the last German federal election in 2021 I did Social Media management for Volt's top candidates.",
+          "Volt is a pro-European party found in all EU member states and more."
+        ]}
+        listPoints={["Volt's Official Website"]}
+      />
+      <Card
+        headerText="Hanyang"
+        descriptionText={[
+          "Went abroad to South Korea to study at Hanyang University erica campus for the spring semester of 2023.",
+          "My courses included UX Design where we worked together with the government of Ansan, Sports Physiology, Game Design, Visual Communication, Korean Language."
+        ]}
+        listPoints={["Hanyang University's Official Website"]}
+      />
+      <Card
+        headerText="University of Seoul"
+        descriptionText={[
+          "Currently studying at University of Seoul for fall semester 2023.",
+          "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management. "
+        ]}
+        listPoints={["University of Seoul's Official Website"]}
+      />
+      <Card
+        headerText="Online Marketing At Handon"
+        descriptionText={[
+          "Worked at Handon dressed to sell GmbH, where I handled online marketing and various smaller technical tasks.",
+        ]}
+        listPoints={["Handon's Official Website"]}
+      />
     </div>
-  </FullWidthSectionLayout>
+  </section>
 </Layout>
 
 <style>
