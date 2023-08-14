@@ -36,6 +36,8 @@ To Do's For Me
     - Skills link to page with id: Explanation of tool, explanation of hwo I use it
     - Remove component heroLayout
     - Projects headers overlap with header
+    - Give skills section max with so & put valuable skills at end and front incae of weird line breaks -> put valuable infront and reverse order for mobile
+    - Change up color scheme, more grey for less relevant text & Purple as accent
 Style references:
 - https://obsidian.md/
 - https://baldbeardedbuilder.com/
