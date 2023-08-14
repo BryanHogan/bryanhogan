@@ -31,6 +31,9 @@ To Do's For Me
     - Color - Change base color & different color on hover?
     - Smooth fade out not working for Firefox (How's Safari looking?)
 
+- Will have to fix
+    -  Current Card gallery (portfolio projects) is not properly contained on the grid vertically
+    - 
 Style references:
 - https://obsidian.md/
 - https://baldbeardedbuilder.com/

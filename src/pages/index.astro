@@ -101,13 +101,22 @@ import Card from "../components/Card.astro";
     max-width: 80%;
     margin-inline: auto;
     & li {
-      padding: 20px;
-      border: 1px solid red;
+      height: 80px;
+      width: 80px;
+      background-color: var(--color-main-dark-brighter);
+      border-radius: 1em;
       display: flex;
       align-items: center;
+      justify-content: center;
+      margin: 20px;
     }
     & img {
-      min-width: 60px;
+      min-width: 40px;
+      opacity: 0.8;
+      transition: opacity 100ms;
+    }
+    & li:hover img {
+      opacity: 1.0;
     }
   }
   .second-main-content-group {
@@ -144,11 +153,13 @@ import Card from "../components/Card.astro";
   .card-gallery {
     display: grid;
     gap: 3%;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-bottom: var(--large-gap);
   }
   @media only screen and (min-width: 699px) {
     .card-gallery {
       row-gap: 9%;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     }
   }
 </style>
