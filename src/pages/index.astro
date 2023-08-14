@@ -134,20 +134,29 @@ import Card from "../components/Card.astro";
       </form>
     </div>
     <contact>
-      <p class="location-container">
-        <strong class="text-shadow"
-          ><s>Germany, Cologne</s><br />South Korea, Seoul</strong>
+      <p class="location-container text-shadow">
+        <s>Germany, Cologne</s><br />South Korea, Seoul
       </p>
-      <p>Contact@BryanHogan.com</p>
+      <p class="text-shadow mail-adress"><strong>BryanHogan@gmx.net</strong></p>
     </contact>
   </section>
 </Layout>
 
 <style>
-  contact .location-container::before {
-    content: url(../logos/Map-Pin.svg);
-    position: absolute;
-    transform: translateX(-40px);
+  contact {
+    & p {
+      padding: 10px;
+    }
+    & .location-container::before {
+      content: url(../icons/Map-Pin-Icon.svg);
+      position: absolute;
+      transform: translateX(-40px);
+    }
+    & .mail-adress::before {
+      content: url(../icons/Mail-Icon.svg);
+      position: absolute;
+      transform: translateX(-40px);
+    }
   }
   #contact {
     & .form-container {
