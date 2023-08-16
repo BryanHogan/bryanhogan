@@ -21,21 +21,48 @@ import CardOld from "../components/CardOld.astro";
     </h2>
     <div class="project-cards-container">
       <div class="card">
-        <h3>Code & Context</h3>
+        <h3 class="text-align-center">Code & Context</h3>
         <img src="../logos/CoCo-Logo.svg" />
         <p>
-          Here is some text. Here is some text. Here is some text. Here is some
-          text. Here is some text.
+          {/* Text that is always shown */}
         </p>
         <div class="accordion">
           <input type="checkbox" name="collapse" id="handle1" />
           <div class="collapsable">
             <p>
+              Here is some text. Here is some text. Here is some text. Here is
+              some text. Here is some text. This text can be hidden. Or it can
+              also be shown. This text can be hidden. Or it can also be shown.
               This text can be hidden. Or it can also be shown. This text can be
-              hidden. Or it can also be shown.
+              hidden. Or it can also be shown. This text can be hidden. Or it
+              can also be shown. This text can be hidden. Or it can also be
+              shown.
             </p>
           </div>
           <label for="handle1"><div class="collapse-line"></div></label>
+        </div>
+        <Button link="." text="CoCo's Website" buttonStyle="transparent-bright small grow color-accent"/>
+      </div>
+      <div class="card">
+        <h3 class="text-align-center">Hanyang University</h3>
+        <img src="../logos/CoCo-Logo.svg" />
+        <p>
+          {/* Text that is always shown */}
+        </p>
+        <div class="accordion">
+          <input type="checkbox" name="collapse" id="handle2" />
+          <div class="collapsable">
+            <p>
+              Here is some text. Here is some text. Here is some text. Here is
+              some text. Here is some text. This text can be hidden. Or it can
+              also be shown. This text can be hidden. Or it can also be shown.
+              This text can be hidden. Or it can also be shown. This text can be
+              hidden. Or it can also be shown. This text can be hidden. Or it
+              can also be shown. This text can be hidden. Or it can also be
+              shown.
+            </p>
+          </div>
+          <label for="handle2"><div class="collapse-line"></div></label>
         </div>
       </div>
     </div>
@@ -121,12 +148,32 @@ import CardOld from "../components/CardOld.astro";
 </Layout>
 
 <style>
-  .projects-card-container {
+  .project-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .card {
     min-width: 260px;
-    max-width: 380px;
+    max-width: 450px;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    & p {
+      max-width: 320px;
+      text-align: justify;
+      margin-inline: 50px;
+    }
+    & h3 {
+      margin: 50px 10px;
+    }
+    & img,
+    picture {
+      max-width: 120px;
+      margin-bottom: 40px;
+    }
   }
   .accordion {
     & > input[name="collapse"] {
@@ -134,10 +181,9 @@ import CardOld from "../components/CardOld.astro";
     }
     & .collapsable {
       overflow: hidden;
-      max-height: 100px;
+      max-height: 50px;
       transition: all 0.4s;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-      width: 100px;
     }
     & label {
       cursor: pointer;
