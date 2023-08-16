@@ -5,6 +5,7 @@ const { text } = Astro.props;
 // Color Styles: dark, bright, transparent-bright, transparent-bright-border
 // Size Styles: large, small
 // Animation Style: inset-dark-shadow, inset-bright-shadow, grow
+// #### Optional Additional ####: color-accent
 ---
 
 <a href={link} class={buttonStyle}>{text}</a>
@@ -22,7 +23,7 @@ const { text } = Astro.props;
     /* =========== Color Styles =========== */
   }
   .dark {
-    color: var(--color-main-bright);
+    color: var(--color-main-accent);
     background-color: var(--color-main-dark);
     border: 2px solid var(--color-main-accent);
   }
@@ -90,5 +91,11 @@ const { text } = Astro.props;
       transition: transform 100ms linear;
       transform: scale(1.1) translate3d( 0, 0, 0) perspective(1px);
     }
+  }
+  {
+    /* =========== Additional =========== */
+  }
+  .color-accent {
+    color: var(--color-main-accent)
   }
 </style>
