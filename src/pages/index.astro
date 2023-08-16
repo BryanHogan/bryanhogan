@@ -130,9 +130,10 @@ import CardOld from "../components/CardOld.astro";
     & .collapsable {
       background: #fff;
       overflow: hidden;
-      height: 0px;
-      transition: 0.5s;
+      max-height: 0px;
+      transition: all .4s;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+      width: 100px;
     }
     & label {
       cursor: pointer;
@@ -143,9 +144,9 @@ import CardOld from "../components/CardOld.astro";
       }
     }
     & input[name="collapse"]:checked ~ .collapsable {
-      height: 600px;
-      transition: height 0.5s;
-      
+      height: auto;
+      max-height: 400px;
+      transition: all 1s; 
     }
   }
 
