@@ -125,6 +125,12 @@ import CardOld from "../components/CardOld.astro";
   </section>
 
   <style>
+    .projects-card-container {
+    }
+    .card {
+      min-width: 260px;
+      max-width: 380px;
+    }
     .accordion {
       & > input[name="collapse"] {
         display: none;
@@ -148,13 +154,13 @@ import CardOld from "../components/CardOld.astro";
         transition: all 1s;
       }
       & .collapse-line {
-        height: 10px;
+        height: 5px;
         background-color: var(--color-main-bright);
       }
       & label::before {
         content: url(../icons/Arrow-Circle-Icon.svg);
         position: absolute;
-        right:0px;
+        right: 0px;
         transform: rotate(0deg);
         transition: 400ms;
       }
