@@ -37,18 +37,24 @@ import CardOld from "../components/CardOld.astro";
               interaction for restaurants.
             </p>
           </div>
-          <label for="handle1"><div class="collapse-line-container"><div class="collapse-line"></div></div></label>
+          <label for="handle1"
+            ><div class="collapse-line-container">
+              <div class="collapse-line"></div>
+            </div></label
+          >
         </div>
-        <Button
-          link="."
-          text="CoCo's Website"
-          buttonStyle="transparent-bright small grow color-accent"
-        />
-        <Button
-          link="."
-          text="CoCo's Website"
-          buttonStyle="transparent-bright small grow color-accent"
-        />
+        <div class="button-area">
+          <Button
+            link="."
+            text="CoCo's Website"
+            buttonStyle="transparent-bright small grow color-accent"
+          />
+          <Button
+            link="."
+            text="CoCo's Website"
+            buttonStyle="transparent-bright small grow color-accent"
+          />
+        </div>
       </div>
       <div class="card">
         <h3 class="text-align-center">Hanyang University</h3>
@@ -69,7 +75,11 @@ import CardOld from "../components/CardOld.astro";
               shown.
             </p>
           </div>
-          <label for="handle2"><div class="collapse-line-container"><div class="collapse-line"></div></div></label>
+          <label for="handle2"
+            ><div class="collapse-line-container">
+              <div class="collapse-line"></div>
+            </div></label
+          >
         </div>
       </div>
     </div>
@@ -168,6 +178,7 @@ import CardOld from "../components/CardOld.astro";
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: var(--large-gap);
     & p {
       max-width: 320px;
       text-align: justify;
@@ -181,6 +192,13 @@ import CardOld from "../components/CardOld.astro";
       max-width: 120px;
       margin-bottom: 40px;
     }
+  }
+  .button-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   .accordion {
     & > input[name="collapse"] {
@@ -212,10 +230,12 @@ import CardOld from "../components/CardOld.astro";
       height: 2px;
       transition: all 500ms;
       background-color: var(--color-main-bright);
+      box-shadow: var(--box-shadow-bright-medium);
     }
     & input[name="collapse"]:checked ~ label .collapse-line {
       height: 2px;
       background-color: transparent;
+      box-shadow: 0px 0px 0px transparent;
     }
     & label::before {
       content: url(../icons/Arrow-Circle-Icon.svg);
