@@ -58,7 +58,7 @@ import CardOld from "../components/CardOld.astro";
       </div>
       <div class="card">
         <h3 class="text-align-center">Hanyang University</h3>
-        <img src="../logos/CoCo-Logo.svg" />
+        <img src="../logos/Hanyang-Logo.svg" />
         <p>
           {/* Text that is always shown */}
         </p>
@@ -211,8 +211,8 @@ import CardOld from "../components/CardOld.astro";
     }
     & label {
       cursor: pointer;
-      &:hover {
-        background-color: aqua;
+      &:hover::before {
+        filter:drop-shadow(50px);
       }
     }
     & input[name="collapse"]:checked ~ .collapsable {
