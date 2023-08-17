@@ -1,0 +1,133 @@
+---
+import Button from "./Button.astro";
+interface Props {
+  headerText: string;
+  imagesrc: string;
+  introText: string;
+  collapseTexts: Array<string>;
+  buttonTexts: Array<string>;
+  buttonLinks: Array<string>;
+  formID: string;
+}
+const {
+  headerText,
+  imagesrc,
+  introText,
+  collapseTexts,
+  buttonTexts,
+  buttonLinks,
+  formID,
+} = Astro.props;
+---
+
+<div class="card">
+  <h3 class="text-align-center">{headerText}</h3>
+  <img src={imagesrc} />
+  <p style="margin-bottom: 10px;">
+    {introText}
+  </p>
+  <div class="accordion">
+    <input type="checkbox" name="collapse" id={formID} />
+    <div class="collapsable text-section">
+        {collapseTexts.map((text) => <p>{text}</p>)}
+    </div>
+    <label for={formID}
+      ><div class="collapse-line-container">
+        <div class="collapse-line"></div>
+      </div></label
+    >
+  </div>
+  <div class="button-area">
+    {buttonTexts.map((text, index) => <Button
+      link={buttonLinks[index]}
+      text={text}
+      target="_blank"
+      buttonStyle="transparent-bright small grow color-accent"
+      
+    />)}
+
+  </div>
+</div>
+
+<style>
+  .card {
+    min-width: 260px;
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: var(--large-gap);
+    & p {
+      max-width: 320px;
+      text-align: justify;
+      margin-inline: 60px;
+    }
+    & h3 {
+      margin: 50px 10px;
+    }
+    & img,
+    picture {
+      max-width: 120px;
+      margin-bottom: 40px;
+    }
+  }
+  .button-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .accordion {
+    & > input[name="collapse"] {
+      display: none;
+    }
+    & .collapsable {
+      overflow: hidden;
+      max-height: 0px;
+      transition: all 0.4s;
+    }
+    & label {
+      cursor: pointer;
+      &:hover::before {
+        filter: drop-shadow(50px);
+      }
+    }
+    & input[name="collapse"]:checked ~ .collapsable {
+      height: auto;
+      max-height: 400px;
+      transition: all 1s;
+    }
+    & .collapse-line-container {
+      margin-inline: 40px;
+    }
+    & .collapse-line {
+      max-width: 340px;
+      margin-bottom: 30px;
+      margin-inline: auto;
+      height: 2px;
+      transition: all 500ms;
+      background-color: var(--color-main-bright);
+      box-shadow: var(--box-shadow-bright-medium);
+    }
+    & input[name="collapse"]:checked ~ label .collapse-line {
+      height: 2px;
+      background-color: transparent;
+      box-shadow: 0px 0px 0px transparent;
+    }
+    & label::before {
+      content: url(../icons/Arrow-Circle-Icon.svg);
+      position: absolute;
+      transform: translateY(-20px) rotate(0deg);
+      transition: 400ms;
+      padding: 10px;
+    }
+    & input[name="collapse"]:checked ~ label::before {
+      content: url(../icons/Arrow-Circle-Icon.svg);
+      transform: translateY(-30px) rotate(180deg);
+      transform-origin: center;
+    }
+  }
+</style>

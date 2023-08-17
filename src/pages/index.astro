@@ -7,6 +7,7 @@ import HeroLayout from "../layouts/HeroLayout.astro";
 import CommonSectionWithSide from "../components/CommonSectionWithSide.astro";
 import TextElementBorderTopOpen from "../layouts/TextElementBorderTopOpen.astro";
 import CardOld from "../components/CardOld.astro";
+import CardA from "../components/CardA.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -56,6 +57,14 @@ import CardOld from "../components/CardOld.astro";
           />
         </div>
       </div>
+      <CardA
+        headerText="Code & Context"
+        imagesrc="../logos/CoCo-Logo.svg"
+        introText="Engaged in studying Code & Design to skillfully craft valuable artifacts and establish thriving businesses."
+        collapseTexts={["Actively learning through hands-on experiences and exploring diverse fields. From helping people who take medicine regularly to creating SaaS solutions where we blend social media and real-world interaction for restaurants.", "Last sentence"]}
+        buttonTexts={["CoCo's Website", "Github Study"]}
+        buttonLinks={["https://coco.study/", ""]} formID="handle3"
+      />
       <div class="card">
         <h3 class="text-align-center">Hanyang University</h3>
         <img src="../logos/Hanyang-Logo.svg" />
@@ -212,7 +221,7 @@ import CardOld from "../components/CardOld.astro";
     & label {
       cursor: pointer;
       &:hover::before {
-        filter:drop-shadow(50px);
+        filter: drop-shadow(50px);
       }
     }
     & input[name="collapse"]:checked ~ .collapsable {
