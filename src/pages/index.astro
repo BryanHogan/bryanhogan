@@ -21,76 +21,104 @@ import CardA from "../components/CardA.astro";
       Projects
     </h2>
     <div class="project-cards-container">
-      <div class="card">
-        <h3 class="text-align-center">Code & Context</h3>
-        <img src="../logos/CoCo-Logo.svg" />
-        <p style="margin-bottom: 10px;">
-          Engaged in studying Code & Design to skillfully craft valuable
-          artifacts and establish thriving businesses.
-        </p>
-        <div class="accordion">
-          <input type="checkbox" name="collapse" id="handle1" />
-          <div class="collapsable text-section">
-            <p>
-              Actively learning through hands-on experiences and exploring
-              diverse fields. From helping people who take medicine regularly to
-              creating SaaS solutions where we blend social media and real-world
-              interaction for restaurants.
-            </p>
-          </div>
-          <label for="handle1"
-            ><div class="collapse-line-container">
-              <div class="collapse-line"></div>
-            </div></label
-          >
-        </div>
-        <div class="button-area">
-          <Button
-            link="."
-            text="CoCo's Website"
-            buttonStyle="transparent-bright small grow color-accent"
-          />
-          <Button
-            link="."
-            text="CoCo's Website"
-            buttonStyle="transparent-bright small grow color-accent"
-          />
-        </div>
-      </div>
       <CardA
         headerText="Code & Context"
         imagesrc="../logos/CoCo-Logo.svg"
         introText="Engaged in studying Code & Design to skillfully craft valuable artifacts and establish thriving businesses."
-        collapseTexts={["Actively learning through hands-on experiences and exploring diverse fields. From helping people who take medicine regularly to creating SaaS solutions where we blend social media and real-world interaction for restaurants.", "Last sentence"]}
-        buttonTexts={["CoCo's Website", "Github Study"]}
-        buttonLinks={["https://coco.study/", ""]} formID="handle3"
+        collapseTexts={[
+          "Actively learning through hands-on experiences and exploring diverse fields. From helping people who take medicine regularly to creating SaaS solutions where we blend social media and real-world interaction for restaurants.",
+          "The learning environment was excellent, offering freedom for various projects and using the latest concepts. It has strong feedback systems and was established recently in 2019.",
+        ]}
+        buttonTexts={["CoCo's Website", "TH Köln Page"]}
+        buttonLinks={[
+          "https://coco.study/",
+          "https://www.th-koeln.de/studium/code--context-bachelor_62103.php",
+        ]}
+        formID="handle1"
       />
-      <div class="card">
-        <h3 class="text-align-center">Hanyang University</h3>
-        <img src="../logos/Hanyang-Logo.svg" />
-        <p>
-          {/* Text that is always shown */}
-        </p>
-        <div class="accordion">
-          <input type="checkbox" name="collapse" id="handle2" />
-          <div class="collapsable">
-            <p>
-              Here is some text. Here is some text. Here is some text. Here is
-              some text. Here is some text. This text can be hidden. Or it can
-              also be shown. This text can be hidden. Or it can also be shown.
-              This text can be hidden. Or it can also be shown. This text can be
-              hidden. Or it can also be shown. This text can be hidden. Or it
-              can also be shown. This text can be hidden. Or it can also be
-              shown.
-            </p>
-          </div>
-          <label for="handle2"
-            ><div class="collapse-line-container">
-              <div class="collapse-line"></div>
-            </div></label
-          >
-        </div>
-      </div>
+      <CardA
+        headerText="Hanyang University"
+        imagesrc="../logos/Hanyang-Logo.svg"
+        introText="Went abroad to South Korea to study at Hanyang University erica campus for the spring semester of 2023."
+        collapseTexts={[
+          "Hanyang is ranked among the top 25 universities in Asia.",
+          "This experience not only allowed me to immerse myself in the Korean way of life but also provided a platform for me to grow and learn.",
+          "My courses included UX Design where we worked together with the government of Ansan, Sports Physiology, Game Design, Visual Communication and Korean Language.",
+        ]}
+        buttonTexts={["Hanyang's Website"]}
+        buttonLinks={["https://www.hanyang.ac.kr/"]}
+        formID="handle2"
+      />
+      <CardA
+        headerText="Volt"
+        imagesrc="../logos/Volt-Logo.svg"
+        introText="During the last German federal election in 2021 I did Social Media management for Volt's top candidates."
+        collapseTexts={[
+          "Volt is a pro-European party found in all EU member states and more.",
+          "As a part of our strategy, I made content for Instagram, Twitter, and Facebook. I also took care of organising how we worked and communicated, as well as worked together with other teams. Our environment demanded quick adaptation and fast responses to the ever-changing news and social media cycles.",
+          "I also had the opportunity to participate in events and campaigns and took photos and videos for our channels.",
+        ]}
+        buttonTexts={[
+          "Volt Europa Website",
+          "Volt Germany Website",
+          "Volt Deutschland Website",
+        ]}
+        buttonLinks={[
+          "https://www.volteuropa.org/",
+          "https://www.voltgermany.org/",
+          "https://www.voltdeutschland.org/",
+        ]}
+        formID="handle3"
+      />
+      <CardA
+        headerText="Applied AI"
+        imagesrc="../icons/AI-Icon.svg"
+        introText="Created an artificial intelligence trained to recognise numbers and able to adjust its recognition."
+        collapseTexts={[
+          "It is able to learn letters and numbers. Made with TensorFlow and trained with MNIST data.",
+          "Group project by: Timo Küsters, Matthias Zens and Bryan Hogan within a course held by Prof. Christian Faubel."
+        ]}
+        buttonTexts={[
+          "See It Here"
+        ]}
+        buttonLinks={[
+          "https://bryanhogan.github.io/projects/AAI/index.html"
+        ]}
+        formID="handle4"
+      />
+      <CardA
+        headerText="University of Seoul"
+        imagesrc="../logos/University-of-Seoul-Logo.svg"
+        introText="Currently studying at University of Seoul for fall semester 2023."
+        collapseTexts={[
+          "Continuing my stay in Korea and exploring a new university.",
+          "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management."
+        ]}
+        buttonTexts={[
+          "University of Seoul's Website",
+          "UoS English Website"
+        ]}
+        buttonLinks={[
+          "https://www.uos.ac.kr/",
+          "https://english.uos.ac.kr/"
+        ]}
+        formID="handle5"
+      />
+      <CardA
+        headerText="Handon"
+        imagesrc="../icons/Hotel-Icon.svg"
+        introText="Worked at Handon dressed to sell GbmH where I was responsible for Online Marketing and technical tasks."
+        collapseTexts={[
+          "Part of my work included coordinating the creation of a new shop website as well as managing the current main shop."
+        ]}
+        buttonTexts={[
+          "Handon's Website"
+        ]}
+        buttonLinks={[
+          "https://www.handon.de/"
+        ]}
+        formID="handle6"
+      />
     </div>
   </section>
   <section>

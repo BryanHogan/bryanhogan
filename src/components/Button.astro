@@ -1,14 +1,21 @@
 ---
+interface Props {
+  buttonStyle: string;
+  link: string;
+  text: string;
+  targetText?: string;
+}
 const { buttonStyle } = Astro.props;
 const { link } = Astro.props;
 const { text } = Astro.props;
+const { targetText } = Astro.props;
 // Color Styles: dark, bright, transparent-bright, transparent-bright-border
 // Size Styles: large, small
 // Animation Style: inset-dark-shadow, inset-bright-shadow, grow
 // #### Optional Additional ####: color-accent
 ---
 
-<a href={link} class={buttonStyle}>{text}</a>
+<a href={link} class={buttonStyle} target={targetText}>{text}</a>
 
 <style>
   a {

@@ -22,14 +22,16 @@ const {
 
 <div class="card">
   <h3 class="text-align-center">{headerText}</h3>
-  <img src={imagesrc} />
+  <div class="image-container">
+    <img src={imagesrc} />
+  </div>
   <p style="margin-bottom: 10px;">
     {introText}
   </p>
   <div class="accordion">
     <input type="checkbox" name="collapse" id={formID} />
     <div class="collapsable text-section">
-        {collapseTexts.map((text) => <p>{text}</p>)}
+      {collapseTexts.map((text) => <p>{text}</p>)}
     </div>
     <label for={formID}
       ><div class="collapse-line-container">
@@ -38,14 +40,16 @@ const {
     >
   </div>
   <div class="button-area">
-    {buttonTexts.map((text, index) => <Button
-      link={buttonLinks[index]}
-      text={text}
-      target="_blank"
-      buttonStyle="transparent-bright small grow color-accent"
-      
-    />)}
-
+    {
+      buttonTexts.map((text, index) => (
+        <Button
+          link={buttonLinks[index]}
+          text={text}
+          targetText="_blank"
+          buttonStyle="transparent-bright small grow color-accent"
+        />
+      ))
+    }
   </div>
 </div>
 
@@ -67,10 +71,15 @@ const {
     & h3 {
       margin: 50px 10px;
     }
+    & .image-container {
+      height: 110px;
+      margin-bottom: 40px;
+    }
     & img,
     picture {
-      max-width: 120px;
-      margin-bottom: 40px;
+      max-width: 180px;
+      
+      height: 100%;
     }
   }
   .button-area {
@@ -86,7 +95,7 @@ const {
     }
     & .collapsable {
       overflow: hidden;
-      max-height: 0px;
+      max-height: 7px;
       transition: all 0.4s;
     }
     & label {
