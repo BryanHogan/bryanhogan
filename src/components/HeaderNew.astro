@@ -48,10 +48,11 @@
       transition: all 200ms;
       filter: brightness(0) saturate(100%) invert(57%) sepia(6%) saturate(183%)
         hue-rotate(169deg) brightness(92%) contrast(92%);
+        transform: scale(1.001);
       &:hover {
         filter: brightness(0) saturate(100%) invert(86%) sepia(2%)
           saturate(892%) hue-rotate(187deg) brightness(114%) contrast(88%);
-        transform: scale(1.1);
+          transform: scale(1.1) translate3d( 0, 0, 0) perspective(1px);
       }
     }
   }
