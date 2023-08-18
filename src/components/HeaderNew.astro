@@ -4,12 +4,12 @@
 <header>
   <nav>
     <ul class="header-container">
-      <li>
+      <li style="width: 100%;">
         <ul class="container-priority-items">
           <li>
             <a href="#"><img src="../logos/Bryan-Hogan-Light-Logo.svg" /></a>
           </li>
-          <li><a href="#">Blog</a></li>
+          <li class="last-item-left-side"><a href="#">Blog</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -26,21 +26,29 @@
 </header>
 
 <style>
-    header {
-        
-    }
+  header {
+    position: fixed;
+    background-color: var(--color-main-dark);
+    z-index: 4;
+    width: 100%;
+  }
   .header-container {
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items: center;height: 40px;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    & li {
+    }
   }
   img {
-    height: 25px;
+    height: 20px;
     width: 100%;
-    max-width: 35px;
+    min-width: 30px;
   }
-  .dropdown, .container-priority-items {
+  .dropdown,
+  .container-priority-items {
     height: 100%;
   }
   .container-dropdown-items,
@@ -51,7 +59,22 @@
     flex-direction: row;
     align-items: center;
   }
-  @media only screen and (max-width: 699px) {
+  .last-item-left-side {
+    margin-right: auto;
+  }
+  .last-item-right-side {
+    margin-left: auto;
+  }
+  .container-dropdown-items li,
+  .container-priority-items li {
+    padding: 5px 7px;
+    & a {
+    }
+  }
+  @media only screen and (min-width: 699px) {
+    .menu-icon {
+      display: none;
+    }
   }
   @media only screen and (max-width: 699px) {
     .dropdown {
@@ -66,10 +89,9 @@
       }
     }
     .menu-icon {
-        margin-right: 20px;
-        padding-inline: 10px;
-        max-width: 45px;
-
+      margin-right: 20px;
+      padding-inline: 10px;
+      max-width: 45px;
     }
     .container-dropdown-items {
       position: absolute;
