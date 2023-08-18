@@ -17,7 +17,7 @@ import TextSectionWithSide from "../components/TextSectionWithSide.astro";
   </HeroLayout>
   <TextSectionWithSide />
   <section>
-    <h2 class="text-align-center" style="margin-bottom: var(--small-gap);">
+    <h2 class="text-align-center">
       Projects
     </h2>
     <div class="project-cards-container">
@@ -206,31 +206,9 @@ import TextSectionWithSide from "../components/TextSectionWithSide.astro";
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    row-gap: var(--large-gap);
     margin-inline: auto;
     max-width: 1250px;
-  }
-  .card {
-    min-width: 260px;
-    max-width: 450px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: var(--large-gap);
-    & p {
-      max-width: 320px;
-      text-align: justify;
-      margin-inline: 60px;
-    }
-    & h3 {
-      margin: 50px 10px;
-    }
-    & img,
-    picture {
-      max-width: 120px;
-      margin-bottom: 40px;
-    }
   }
   .button-area {
     display: flex;
