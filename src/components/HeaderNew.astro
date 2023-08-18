@@ -41,6 +41,18 @@
     width: 100%;
     & li a {
       color: var(--color-main-bright);
+      text-decoration: none;
+    }
+    & .container-dropdown-items li,
+    .container-priority-items li {
+      transition: all 200ms;
+      filter: brightness(0) saturate(100%) invert(57%) sepia(6%) saturate(183%)
+        hue-rotate(169deg) brightness(92%) contrast(92%);
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(86%) sepia(2%)
+          saturate(892%) hue-rotate(187deg) brightness(114%) contrast(88%);
+        transform: scale(1.1);
+      }
     }
   }
   img {

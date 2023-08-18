@@ -39,3 +39,4 @@ To Do's For Me
 Style references:
 - https://obsidian.md/
 - https://baldbeardedbuilder.com/
+- https://www.kevinpowell.co/
