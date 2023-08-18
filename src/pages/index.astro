@@ -1,17 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import HeaderNew from "../components/HeaderNew.astro";
 import Button from "../components/Button.astro";
 import FocusedContentGroup from "../components/FocusedContentGroup.astro";
 import HeroLayout from "../layouts/HeroLayout.astro";
-import TextElementBorderTopOpen from "../layouts/TextElementBorderTopOpen.astro";
 import CardA from "../components/CardA.astro";
 import TextSectionWithSide from "../components/TextSectionWithSide.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header />
+  <HeaderNew />
   <main>
     <HeroLayout>
       <FocusedContentGroup />
@@ -445,7 +444,6 @@ import Footer from "../components/Footer.astro";
       width: 40px;
       height: 100%;
       max-height: 60px;
-      opacity: 0.8;
       transition: opacity 100ms;
     }
     & li:hover img {
