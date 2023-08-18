@@ -44,7 +44,7 @@ import Button from "./Button.astro";
     margin-top: var(--small-gap);
     gap: 3%;
     & h2 {
-      grid-column: 2 /3;
+      grid-column: 1 /4;
     }
     & div {
       grid-column: 2 /3;
@@ -62,9 +62,9 @@ import Button from "./Button.astro";
     flex-wrap: wrap;
     justify-content: center;
   }
-  @media only screen and (min-width: 699px) {
+  @media only screen and (min-width: 999px) {
     section {
-      grid-template-columns: 1fr minmax(0, 650px) 1fr;
+      grid-template-columns: minmax(100px, 1fr) minmax(0, 650px) minmax(100px, 1fr);
       & div {
         margin-inline: 0px;
       }
