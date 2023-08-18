@@ -3,6 +3,9 @@ import Button from "./Button.astro";
 interface Props {
   headerText: string;
   imagesrc: string;
+  imageBaseWidth?: any;
+  imageBaseHeight?: any;
+  imagealt?: string;
   introText: string;
   collapseTexts: Array<string>;
   buttonTexts: Array<string>;
@@ -12,6 +15,9 @@ interface Props {
 const {
   headerText,
   imagesrc,
+  imageBaseWidth,
+  imageBaseHeight,
+  imagealt,
   introText,
   collapseTexts,
   buttonTexts,
@@ -23,7 +29,7 @@ const {
 <div class="card">
   <h3 class="text-align-center">{headerText}</h3>
   <div class="image-container">
-    <img src={imagesrc} />
+    <img src={imagesrc} width={imageBaseWidth} height={imageBaseHeight} alt={imagealt} loading="lazy" decoding="async"/>
   </div>
   <p style="margin-bottom: 10px;">
     {introText}

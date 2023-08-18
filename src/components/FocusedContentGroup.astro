@@ -6,7 +6,11 @@
     <h1>Hello, I'm<br />Bryan Hogan.</h1>
     <p>Enthusiast In Development, Design And More.</p>
   </div>
-  <img src="../../bryan_large.png" style="height: auto; width: 270px" />
+  <picture>
+    <source type="image/avif" srcset="../images/Bryan-Hogan-350w.avif 1000w, ../images/Bryan-Hogan-700w.avif 2000w">
+    <source type="image/webp" srcset="../images/Bryan-Hogan-350w.webp 1000w, ../images/Bryan-Hogan-700w.webp 2000w">
+    <img src="../images/Bryan-Hogan-350w.png" width="350" height="350" alt="Bryan Hogan blue business shirt" decoding="async"/>
+  </picture>
 </div>
 
 <style>
@@ -22,8 +26,9 @@
       font-size: 2.3rem;
     }
   }
-  img,
-  picture {
+  img{
+    height: auto;
+    width: 270px;
     border: 2px solid var(--color-main-bright);
     box-shadow: var(--box-shadow-medium);
   }
