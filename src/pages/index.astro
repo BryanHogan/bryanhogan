@@ -8,6 +8,7 @@ import CommonSectionWithSide from "../components/CommonSectionWithSide.astro";
 import TextElementBorderTopOpen from "../layouts/TextElementBorderTopOpen.astro";
 import CardOld from "../components/CardOld.astro";
 import CardA from "../components/CardA.astro";
+import TextSectionWithSideNew from "../components/TextSectionWithSideNew.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,6 +17,7 @@ import CardA from "../components/CardA.astro";
     <FocusedContentGroup />
   </HeroLayout>
   <CommonSectionWithSide />
+  <TextSectionWithSideNew />
   <section>
     <h2 class="text-align-center" style="margin-bottom: var(--small-gap);">
       Projects
@@ -204,8 +206,10 @@ import CardA from "../components/CardA.astro";
 <style>
   .project-cards-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin-inline: auto;
+    max-width: 1250px;
   }
   .card {
     min-width: 260px;
