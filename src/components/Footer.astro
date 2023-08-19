@@ -6,18 +6,21 @@
     <p>This website was built by Bryan Hogan.</p>
     <p>I used basic HTML and CSS with Astro and PostCSS.</p>
   </div>
+  <div>
+    <p class="text-align-center">© 2023 Bryan Hogan</p>
+  </div>
 </footer>
 
 <style>
   footer {
     display: grid;
-    grid-template-columns: minmax(200px, 25%);
+    grid-template-columns: minmax(200px, 1fr )minmax(200px, 1fr) minmax(200px, 1fr);
     column-gap: 5%;
     margin-inline: 10%;
     margin-bottom: 40px;
   }
   footer * {
-    opacity: 0.8;
-    font-size: 0.7rem;
+    color: var(--color-main-dark-50);
+    font-size: 0.8rem;
   }
 </style>

@@ -1,0 +1,491 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
+import FocusedContentGroup from "../components/FocusedContentGroup.astro";
+import HeroLayout from "../layouts/HeroLayout.astro";
+import CardA from "../components/CardA.astro";
+import TextSectionWithSide from "../components/TextSectionWithSide.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Bryan Hogan's Portfolio">
+  <Header mode="Professional" />
+  <main>
+    <HeroLayout>
+      <FocusedContentGroup />
+    </HeroLayout>
+    <TextSectionWithSide />
+    <section>
+      <h2 class="text-align-center accent-underline-adjust-width">Projects</h2>
+      <div class="project-cards-container">
+        <CardA
+          headerText="Code & Context"
+          imagesrc="../logos/CoCo-Logo.svg"
+          imageBaseWidth="109"
+          imageBaseHeight="38"
+          imagealt="Code & Context B.Sc. bright white logo"
+          introText="Engaged in studying Code & Design to skillfully craft valuable artifacts and establish thriving businesses."
+          collapseTexts={[
+            "Actively learning through hands-on experiences and exploring diverse fields. From helping people who take medicine regularly to creating SaaS solutions where we blend social media and real-world interaction for restaurants.",
+            "The learning environment was excellent, offering freedom for various projects and using the latest concepts. It has strong feedback systems and was established recently in 2019.",
+          ]}
+          buttonTexts={["CoCo's Website", "TH Köln Page"]}
+          buttonLinks={[
+            "https://coco.study/",
+            "https://www.th-koeln.de/studium/code--context-bachelor_62103.php",
+          ]}
+          formID="handle1"
+        />
+        <CardA
+          headerText="Hanyang University"
+          imagesrc="../logos/Hanyang-Logo.svg"
+          imageBaseWidth="83"
+          imageBaseHeight="86"
+          imagealt="Hanyang University bright white lion logo"
+          introText="Went abroad to South Korea to study at Hanyang University erica campus for the spring semester of 2023."
+          collapseTexts={[
+            "Hanyang is ranked among the top 25 universities in Asia.",
+            "This experience not only allowed me to immerse myself in the Korean way of life but also provided a platform for me to grow and learn.",
+            "My courses included UX Design where we worked together with the government of Ansan, Sports Physiology, Game Design, Visual Communication and Korean Language.",
+          ]}
+          buttonTexts={["Hanyang's Website"]}
+          buttonLinks={["https://www.hanyang.ac.kr/"]}
+          formID="handle2"
+        />
+        <CardA
+          headerText="Volt"
+          imagesrc="../logos/Volt-Logo.svg"
+          imageBaseWidth="76"
+          imageBaseHeight="75"
+          imagealt="Volt political party bright white minimalist european stars logo"
+          introText="During the last German federal election in 2021 I did Social Media management for Volt's top candidates."
+          collapseTexts={[
+            "Volt is a pro-European party found in all EU member states and more.",
+            "As a part of our strategy, I made content for Instagram, Twitter, and Facebook. I also took care of organising how we worked and communicated, as well as worked together with other teams. Our environment demanded quick adaptation and fast responses to the ever-changing news and social media cycles.",
+            "I also had the opportunity to participate in events and campaigns and took photos and videos for our channels.",
+          ]}
+          buttonTexts={[
+            "Volt Europa Website",
+            "Volt Germany Website",
+            "Volt Deutschland Website",
+          ]}
+          buttonLinks={[
+            "https://www.volteuropa.org/",
+            "https://www.voltgermany.org/",
+            "https://www.voltdeutschland.org/",
+          ]}
+          formID="handle3"
+        />
+        <CardA
+          headerText="Applied AI"
+          imagesrc="../icons/AI-Icon.svg"
+          imageBaseWidth="70"
+          imageBaseHeight="76"
+          imagealt="Half brain half half circuit white minimalist icon"
+          introText="Created an artificial intelligence trained to recognise numbers and able to adjust its recognition."
+          collapseTexts={[
+            "It is able to learn letters and numbers. Made with TensorFlow and trained with MNIST data.",
+            "Group project by: Timo Küsters, Matthias Zens and Bryan Hogan within a course held by Prof. Christian Faubel.",
+          ]}
+          buttonTexts={["See It Here"]}
+          buttonLinks={["https://bryanhogan.github.io/projects/AAI/index.html"]}
+          formID="handle4"
+        />
+        <CardA
+          headerText="University of Seoul"
+          imagesrc="../logos/University-of-Seoul-Logo.svg"
+          imageBaseWidth="108"
+          imageBaseHeight="101"
+          imagealt="University of Seoul eagle icon simple white color logo"
+          introText="Currently studying at University of Seoul for fall semester 2023."
+          collapseTexts={[
+            "Continuing my stay in Korea and exploring a new university.",
+            "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management.",
+          ]}
+          buttonTexts={["University of Seoul's Website", "UoS English Website"]}
+          buttonLinks={["https://www.uos.ac.kr/", "https://english.uos.ac.kr/"]}
+          formID="handle5"
+        />
+        <CardA
+          headerText="Handon"
+          imagesrc="../icons/Hotel-Icon.svg"
+          imageBaseWidth="62"
+          imageBaseHeight="77"
+          imagealt="Simple hotel bright white color hotel icon"
+          introText="Worked at Handon dressed to sell GbmH where I was responsible for Online Marketing and technical tasks."
+          collapseTexts={[
+            "Part of my work included coordinating the creation of a new shop website as well as managing the current main shop.",
+          ]}
+          buttonTexts={["Handon's Website"]}
+          buttonLinks={["https://www.handon.de/"]}
+          formID="handle6"
+        />
+      </div>
+    </section>
+    <section>
+      <h2 class="text-align-center accent-underline-adjust-width">Skills</h2>
+      <ul class="skills-list">
+        <li>
+          <img
+            src="../logos/Davinci-Resolve-Logo.svg"
+            alt="Light only logo of Davinci Resolve"
+            width="24"
+            height="23"
+            style="height: 100%; "
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Affinity-Logo.svg"
+            alt="Light only logo of Affinity"
+            width="24"
+            height="23"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Aseprite-Logo.svg"
+            alt="Light only logo of Aseprite"
+            width="24"
+            height="25"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Figma-Logo.svg"
+            alt="Light minimalist white color only Figma logo"
+            width="18"
+            height="25"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/HTML-Logo.svg"
+            alt="Light minimalist HTML5 logo"
+            width="22"
+            height="25"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/CSS-Logo.svg"
+            alt="Light minimalist CSS logo"
+            width="22"
+            height="25"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Typescript-Logo.svg"
+            alt="Light minimalist TypeScript logo"
+            width="24"
+            height="25"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Astro-Logo.svg"
+            alt="Light minimalist Astro logo"
+            width="26"
+            height="33"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Postcss-Logo.svg"
+            alt="Light color PostCSS logo"
+            width="96"
+            height="100"
+            
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Git-Logo.svg"
+            alt="Light minimalist Git logo"
+            width="32"
+            height="33"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Github-Logo.svg"
+            alt="Light minimalist Github logo"
+            width="32"
+            height="31"
+          />
+        </li>
+        <li>
+          <img src="../logos/Java-Logo.svg" alt="Light minimalist Java logo" width="20"
+          height="27"/>
+        </li>
+        <li>
+          <img
+            src="../logos/Obsidian-Logo.svg"
+            alt="Light minimalist Obsidian logo"
+            width="20"
+            height="25"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Notion-Logo.svg"
+            alt="Light minimalist Notion logo"
+            width="24"
+            height="25"
+          />
+        </li>
+        <li>
+          <img
+            src="../logos/Google-Sheets-Logo.svg"
+            alt="Light minimalist Google Sheets logo"
+            width="18"
+            height="25"
+          />
+        </li>
+      </ul>
+    </section>
+    <section
+      class="gradient-background-darker text-section text-align-center contact-section"
+      id="contact"
+    >
+      <h2 class="text-shadow">Contact</h2>
+      <div class="form-container">
+        <p class="text-shadow"><em>Reach out to me here</em></p>
+        <form action="https://formspree.io/f/xyyovedd" method="POST">
+          <label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+          </label>
+          <label>
+            <textarea name="message" placeholder="Your message" required
+            ></textarea>
+          </label>
+          <button class="button-white" type="submit">Send</button>
+        </form>
+      </div>
+      <address>
+        <p class="location-container text-shadow">
+          <s>Germany, Cologne</s><br />South Korea, Seoul
+        </p>
+        <a
+          href="mailto:BryanHogan@gmx.net"
+          class="text-shadow mail-adress"
+          style="color: var(--color-main-bright);"
+          ><strong>BryanHogan@gmx.net</strong></a
+        >
+      </address>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .project-cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: var(--large-gap);
+    margin-inline: auto;
+    max-width: 1250px;
+  }
+  .button-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .accordion {
+    & > input[name="collapse"] {
+      display: none;
+    }
+    & .collapsable {
+      overflow: hidden;
+      max-height: 0px;
+      transition: all 0.4s;
+    }
+    & label {
+      cursor: pointer;
+      &:hover::before {
+        filter: drop-shadow(50px);
+      }
+    }
+    & input[name="collapse"]:checked ~ .collapsable {
+      height: auto;
+      max-height: 400px;
+      transition: all 1s;
+    }
+    & .collapse-line-container {
+      margin-inline: 40px;
+    }
+    & .collapse-line {
+      max-width: 340px;
+      margin-bottom: 30px;
+      margin-inline: auto;
+      height: 2px;
+      transition: all 500ms;
+      background-color: var(--color-main-bright);
+      box-shadow: var(--box-shadow-bright-medium);
+    }
+    & input[name="collapse"]:checked ~ label .collapse-line {
+      height: 2px;
+      background-color: transparent;
+      box-shadow: 0px 0px 0px transparent;
+    }
+    & label::before {
+      content: url(../icons/Arrow-Circle-Icon.svg);
+      position: absolute;
+      transform: translateY(-20px) rotate(0deg);
+      transition: 400ms;
+      padding: 10px;
+    }
+    & input[name="collapse"]:checked ~ label::before {
+      content: url(../icons/Arrow-Circle-Icon.svg);
+      transform: translateY(-30px) rotate(180deg);
+      transform-origin: center;
+    }
+  }
+
+  #contact address {
+    color: var(--color-main-bright);
+    & p {
+      padding: 10px;
+      text-decoration: dotted;
+    }
+    & .location-container::before {
+      content: url(../icons/Map-Pin-Icon.svg);
+      position: absolute;
+      transform: translateX(-40px);
+    }
+    & .mail-adress::before {
+      content: url(../icons/Mail-Icon.svg);
+      position: absolute;
+      transform: translateX(-40px);
+    }
+  }
+  #contact {
+    padding-bottom: 300px;
+    & .form-container {
+      margin-inline: 15px;
+    }
+    & form {
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+      padding: 60px 20px;
+      background-color: #2021241f;
+      box-shadow: var(--box-shadow-medium);
+      max-width: 550px;
+      margin-inline: auto;
+      border-radius: 1em;
+    }
+    & label {
+      padding-block: 1em;
+    }
+    & input,
+    textarea {
+      width: 80%;
+      border: 2px solid var(--color-main-bright);
+      border-radius: 5px;
+      padding: 4px;
+      box-shadow: var(--box-shadow-medium);
+    }
+    & input {
+      font-size: 1.2rem;
+    }
+    & textarea {
+      height: 90px;
+    }
+    & button {
+      color: var(--color-main-dark);
+      background-color: #fff;
+      border: 0px;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow-medium);
+      width: 30%;
+      font-size: 1rem;
+      padding: 10px;
+      margin-inline: auto;
+      transition: all 200ms linear;
+      box-shadow: var(--box-shadow-large),
+        inset 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+      &:hover {
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25),
+          inset var(--box-shadow-large);
+        text-shadow: var(--text-shadow-inset);
+      }
+    }
+  }
+  .skills-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin-inline: auto;
+    & li {
+      height: 80px;
+      width: 80px;
+      background-color: var(--color-main-dark-brighter);
+      border-radius: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+    & img {
+      width: 40px;
+      height: 100%;
+      max-height: 60px;
+      transition: opacity 100ms;
+    }
+    & li:hover img {
+      opacity: 1;
+    }
+  }
+  .second-main-content-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .navigation-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.6%;
+    max-width: 1050px;
+    width: 100%;
+    & a {
+      color: var(--color-main-bright);
+      font-size: 1.1rem;
+      width: 200px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 1rem;
+      border: 2px solid var(--color-main-bright);
+      border-radius: 15px;
+      background-color: #20212410;
+    }
+  }
+  @media only screen and (min-width: 699px) {
+  }
+  @media only screen and (max-width: 699px) {
+    .skills-list {
+      max-width: 100%;
+    }
+  }
+</style>
