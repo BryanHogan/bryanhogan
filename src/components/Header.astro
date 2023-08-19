@@ -1,200 +1,476 @@
 ---
-const heightHeader = "40px";
-const marginIconToScreenBorder = "0px";
-const paddingNavigationalItems = "8px 10px";
+interface Props {
+  mode: string;
+}
+const { mode } = Astro.props;
+{
+  /* Modes: All, Home, Blog, Professional */
+}
+const logoHome = {
+  href: "/",
+  src: "../logos/Bryan-Hogan-Light-Logo.svg",
+  alt: "Bryan Hogan's minimalist 1bit pixelart turtle logo soft white color only",
+  width: "16",
+  height: "16",
+  title: "Home Page",
+  target: "",
+};
+const mail = {
+  href: "/",
+  src: "../icons/Bird-Icon.svg",
+  alt: "Simple bird icon simple soft white color only",
+  width: "24",
+  height: "24",
+  title: "Join The Mail Newsletter",
+  target: "",
+};
+const medium = {
+  href: "https://medium.com/@bryanhoganme",
+  src: "../logos/Medium-Logo.svg",
+  alt: "Medium logo simple white soft color only",
+  width: "18",
+  height: "10",
+  title: "Medium",
+  target: "_blank",
+};
+const linkedin = {
+  href: "https://www.linkedin.com/in/bryanhoganme",
+  src: "../logos/LinkedIn-Logo.svg",
+  alt: "LinkedIn logo simple soft white color only",
+  width: "12",
+  height: "12",
+  title: "LinkedIn",
+  target: "_blank",
+};
+const instagram = {
+  href: "https://www.instagram.com/bryanhoganme/",
+  src: "../logos/Instagram-Logo.svg",
+  alt: "Instagram logo simple soft white color only",
+  width: "12",
+  height: "12",
+  title: "Instagram",
+  target: "_blank",
+};
+const youtube = {
+  href: "/",
+  src: "../logos/Youtube-Logo.svg",
+  alt: "Youtube logo simple soft white color only",
+  width: "15",
+  height: "10",
+  title: "Youtube",
+  target: "_blank",
+};
+const twitch = {
+  href: "https://www.twitch.tv/bluebeku",
+  src: "../logos/Twitch-Logo.svg",
+  alt: "Twitch logo simple soft white color only",
+  width: "12",
+  height: "13",
+  title: "Twitch",
+  target: "_blank",
+};
+const github = {
+  href: "https://github.com/BryanHogan/",
+  src: "../logos/Github-Logo.svg",
+  alt: "Github logo simple soft white color only",
+  width: "32",
+  height: "31",
+  title: "Github",
+  target: "_blank",
+};
 ---
 
-<nav>
-  <ul class="header-container list">
-    <li class="logo">
-      <a href="#"
-        ><img
-          src="../../Bryan-Hogan-Turtle-Logo.svg"
-          alt="Bryan Hogan's Logo"
-        /></a
-      >
-    </li>
-    <li class="dropdown list">
-      <img src="../../Polygon.svg" alt="Dropdown Icon" class="dropdown-icon" style="height: 28px; width: 33px" onclick=""/>
-      <ul class="dropdown-menu list">
-        <li><a href="#">Blog</a></li>
-        <li class="last-left-side-element"><a href="#">News</a></li>
-        <li>
-          <a href="#"><img src="../../Medium-Logo.svg" alt="Medium Logo" /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../../LinkedIn-Logo.svg" alt="LinkedIn Logo" /></a
-          >
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../../Instagram-Logo.svg" alt="Instagram Logo" /></a
-          >
-        </li>
-        <li>
-          <a href="#"><img src="../../Twitch-Logo.svg" alt="Twitch Logo" /></a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<header>
+  <nav>
+    {
+      mode == "All" && (
+        <ul class="header-container">
+          <li style="width: 100%;">
+            <ul class="container-priority-items">
+              <li>
+                <a href={logoHome.href} target={logoHome.target}>
+                  <img
+                    src={logoHome.src}
+                    alt={logoHome.alt}
+                    width={logoHome.width}
+                    height={logoHome.height}
+                    title={logoHome.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <img
+              src="../icons/Menu-Icon.svg"
+              class="menu-icon"
+              alt="Menu bar icon simple soft white color only"
+              width="18"
+              height="14"
+            />
+            <ul class="container-dropdown-items">
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              <li>
+                <a href={mail.href} target={mail.target}>
+                  <img
+                    src={mail.src}
+                    alt={mail.alt}
+                    width={mail.width}
+                    height={mail.height}
+                    title={mail.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={medium.href} target={medium.target}>
+                  <img
+                    src={medium.src}
+                    alt={medium.alt}
+                    width={medium.width}
+                    height={medium.height}
+                    title={medium.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={linkedin.href} target={linkedin.target}>
+                  <img
+                    src={linkedin.src}
+                    alt={linkedin.alt}
+                    width={linkedin.width}
+                    height={linkedin.height}
+                    title={linkedin.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={instagram.href} target={instagram.target}>
+                  <img
+                    src={instagram.src}
+                    alt={instagram.alt}
+                    width={instagram.width}
+                    height={instagram.height}
+                    title={instagram.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={youtube.href} target={youtube.target}>
+                  <img
+                    src={youtube.src}
+                    alt={youtube.alt}
+                    width={youtube.width}
+                    height={youtube.height}
+                    title={youtube.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={twitch.href} target={twitch.target}>
+                  <img
+                    src={twitch.src}
+                    alt={twitch.alt}
+                    width={twitch.width}
+                    height={twitch.height}
+                    title={twitch.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={github.href} target={github.target}>
+                  <img
+                    src={github.src}
+                    alt={github.alt}
+                    width={github.width}
+                    height={github.height}
+                    title={github.title}
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      )
+    }
+    {
+      mode == "Home" && (
+        <ul class="header-container">
+          <li style="width: 100%;">
+            <ul class="container-priority-items">
+              <li>
+                <a href={logoHome.href} target={logoHome.target}>
+                  <img
+                    src={logoHome.src}
+                    alt={logoHome.alt}
+                    width={logoHome.width}
+                    height={logoHome.height}
+                    title={logoHome.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href={mail.href} target={mail.target}>
+                  <img
+                    src={mail.src}
+                    alt={mail.alt}
+                    width={mail.width}
+                    height={mail.height}
+                    title={mail.title}
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <img
+              src="../icons/Menu-Icon.svg"
+              class="menu-icon"
+              alt="Menu bar icon simple soft white color only"
+              width="18"
+              height="14"
+            />
+            <ul class="container-dropdown-items">
+              <li>
+                <a href={instagram.href} target={instagram.target}>
+                  <img
+                    src={instagram.src}
+                    alt={instagram.alt}
+                    width={instagram.width}
+                    height={instagram.height}
+                    title={instagram.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={linkedin.href} target={linkedin.target}>
+                  <img
+                    src={linkedin.src}
+                    alt={linkedin.alt}
+                    width={linkedin.width}
+                    height={linkedin.height}
+                    title={linkedin.title}
+                  />
+                </a>
+              </li>
 
-<style
-  define:vars={{
-    heightHeader,
-    marginIconToScreenBorder,
-    paddingNavigationalItems,
-  }}
->
-  nav {
+              <li>
+                <a href={github.href} target={github.target}>
+                  <img
+                    src={github.src}
+                    alt={github.alt}
+                    width={github.width}
+                    height={github.height}
+                    title={github.title}
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      )
+    }
+    {
+      mode == "Professional" && (
+        <ul class="header-container">
+          <li style="width: 100%;">
+            <ul class="container-priority-items">
+              <li>
+                <a href={logoHome.href} target={logoHome.target}>
+                  <img
+                    src={logoHome.src}
+                    alt={logoHome.alt}
+                    width={logoHome.width}
+                    height={logoHome.height}
+                    title={logoHome.title}
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <img
+              src="../icons/Menu-Icon.svg"
+              class="menu-icon"
+              alt="Menu bar icon simple soft white color only"
+              width="18"
+              height="14"
+            />
+            <ul class="container-dropdown-items">
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              <li>
+                <a href={linkedin.href} target={linkedin.target}>
+                  <img
+                    src={linkedin.src}
+                    alt={linkedin.alt}
+                    width={linkedin.width}
+                    height={linkedin.height}
+                    title={linkedin.title}
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href={github.href} target={github.target}>
+                  <img
+                    src={github.src}
+                    alt={github.alt}
+                    width={github.width}
+                    height={github.height}
+                    title={github.title}
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      )
+    }
+  </nav>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    background-color: var(--color-main-dark);
+    z-index: 4;
     width: 100%;
-    height: var(--heightHeader);
   }
   .header-container {
-    position: fixed;
-    height: var(--heightHeader);
-    max-height: var(--heightHeader);
-    background-color: var(--color-main-dark);
-    width: 100%;
-  }
-  .list {
+    list-style: none;
     display: flex;
     flex-direction: row;
-    list-style: none;
     align-items: center;
-
+    height: 50px;
+    width: 100%;
     & li a {
-      padding: var(--paddingNavigationalItems);
-      display: flex;
-      align-items: center;
-      transform: scale(1.05);
       color: var(--color-main-bright);
-      transition: transform 800ms ease-in-out;
+      text-decoration: none;
     }
-    & a img{
-      height: 18px;
-      width: 18px;
-      
-    }
-    & .logo a {
-      margin-left: var(--marginIconToScreenBorder);
-      width: min-content;
-    }
-    & a:hover {
-      transform: scale(1.2);
-      transition: transform 200ms ease-in-out;
-
-      //filter: brightness(0) saturate(100%);
-      //filter: invert(71%) sepia(12%) saturate(1466%) hue-rotate(211deg) brightness(300%) contrast(89%);
-    }
-    & .logo img {
-      width: 25px;
-      height: 25px;
+    & .container-dropdown-items li,
+    .container-priority-items li {
+      transition: all 300ms;
+      filter: brightness(0) saturate(100%) invert(57%) sepia(6%) saturate(183%)
+        hue-rotate(169deg) brightness(92%) contrast(92%);
+      transform: scale(1.001);
+      &:hover {
+        transition: all 200ms;
+        filter: brightness(0) saturate(100%) invert(86%) sepia(2%)
+          saturate(892%) hue-rotate(187deg) brightness(114%) contrast(88%);
+        transform: scale(1.1) translate3d(0, 0, 0) perspective(1px);
+      }
     }
   }
-  @keyframes show {
-    0% {
-      opacity: 0;
-    }
-    25% {
-    }
-    75% {
-    }
-    100% {
-      opacity: 1;
-    }
+  img {
+    height: 20px;
+    width: 100%;
+    min-width: 30px;
   }
-  @keyframes vanish {
-    0% {
-      opacity: 1;
-      display: flex;
-    }
-    25% {
-    }
-    75% {
-    }
-    100% {
-      display: none;
-      opacity: 0;
+  .dropdown,
+  .container-priority-items {
+    height: 100%;
+  }
+  .container-dropdown-items,
+  .container-priority-items,
+  .dropdown {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .last-item-left-side {
+    margin-right: auto;
+  }
+  .last-item-right-side {
+    margin-left: auto;
+  }
+  .container-dropdown-items li,
+  .container-priority-items li {
+    padding: 5px 7px;
+    & a {
     }
   }
   @media only screen and (min-width: 699px) {
-    .last-left-side-element {
-      margin-right: auto;
-    }
-    .dropdown-icon {
+    .menu-icon {
       display: none;
-    }
-    .dropdown-menu {
-      align-items: center;
-      width: 100%;
-    }
-    .header-container .dropdown {
-      width: 100%;
     }
   }
   @media only screen and (max-width: 699px) {
     .dropdown {
-      &:hover .dropdown-menu {
+      margin-left: auto;
+      z-index: 5;
+      &:hover .container-dropdown-items {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--color-main-dark);
-        padding-top: var(--heightHeader);
-        z-index: 10;
-        opacity: 1;
       }
-      &:not(:hover) .dropdown-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--color-main-dark);
-        padding-top: var(--heightHeader);
-        z-index: 10;
-        opacity: 0;
+      &:not(:hover) .container-dropdown-items {
         display: none;
-        animation: vanish 300ms 1 ease-out;
+        animation: fade-out 300ms 1 ease-out;
       }
     }
-    .dropdown-menu {
+    .menu-icon {
+      margin-right: 20px;
+      padding-inline: 10px;
+      max-width: 45px;
+    }
+    .container-dropdown-items {
       position: absolute;
-      top: 0px;
+      top: 40px;
       right: 0px;
-      padding: 5px 10px;
       display: none;
+      background-color: var(--color-main-dark);
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 20px;
       border-radius: 0px 0px 0px 15px;
       transition: all 200ms ease-in-out;
-      animation: show 200ms 1;
+      animation: fade-in 200ms 1;
       & li {
-        border-bottom: 1px solid var(--color-main-bright);
-        padding: 10px 20px;
-        width: 100px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        width: 50px;
+        border-bottom: 1px solid var(--color-main-bright);
       }
       & li:first-child {
         border-top: 1px solid var(--color-main-bright);
       }
-      & li:last-child {
-        border-bottom: 0px;
-      }
-      & li a img,
-      & li a span {
-        height: 25px;
-        width: 25px;
-      }
     }
-    .dropdown-icon {
-      z-index: 15;
-      position: relative;
-      cursor: pointer;
-      margin-right: var(--marginIconToScreenBorder);
-      padding: var(--paddingNavigationalItems);
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
     }
-    .logo {
-      margin-right: auto;
-      width: 100%;
+    25% {
+    }
+    75% {
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      display: flex;
+    }
+    25% {
+    }
+    75% {
+      display: flex;
+    }
+    100% {
+      display: none;
+      opacity: 0;
     }
   }
 </style>
