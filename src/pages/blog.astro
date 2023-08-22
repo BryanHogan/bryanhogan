@@ -2,28 +2,55 @@
 const pageTtitle = "Blog Page";
 
 const newsletterReminder = true;
-const allPosts = await Astro.glob('../pages/blog/*.md');
+var allPosts = await Astro.glob("../pages/blog/*.md");
+allPosts = allPosts.sort((a, b) => {
+  let dateA = a.frontmatter && a.frontmatter.pubDate ? new Date(a.frontmatter.pubDate) : new Date(0);
+  let dateB = b.frontmatter && b.frontmatter.pubDate ? new Date(b.frontmatter.pubDate) : new Date(0);
+  return dateB.getTime() - dateA.getTime();
+});
 
-import Header from "../components/Header.astro"
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTtitle}</title>
-  </head>
+<Layout
+  title="Bryan's Blog"
+  headerMode="Home"
+  metaDescription="Bryan Hogan's Blog. All about learning, creating and finding balance."
+>
+  <div class="gradient-background text-shadow intro-section text-align-center">
+    <h1>Bryan's Blog</h1>
+    <p>About learning, creating and finding balance.</p>
+    <Button
+        link="/mail"
+        text="Join The Newsletter"
+        targetText=""
+        buttonStyle="transparent-bright small inset-dark-shadow"
+      />
+  </div>
+  <ul>
+    {
+      allPosts.map((post) => (
+        <li>
+          <a href={post.url}>{post.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
 
-  <body>
-    <h1>{pageTtitle}</h1>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-
-    <h2>My Astro Learning Blog</h2>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-        {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-    </ul>
-    {newsletterReminder && <p>I have newsletter going containing more info about my posts, exclusive content and more that mails you like every 2 months.</p>}
-  </body>
-</html>
+<style>
+  .intro-section {
+    min-height: 410px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & h1 {
+      margin: 30px;
+      margin-top: 50px;
+    }
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+</style>
