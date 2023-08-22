@@ -8,279 +8,278 @@ import TextSectionWithSide from "../components/TextSectionWithSide.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Bryan Hogan's Portfolio" metaDescription="Bryan Hogan's site. Including blog, newsletter, portfolio and more." headerMode="Professional">
-  <main>
-    <section class="gradient-background">
-      <FocusedContentGroup />
-    </section>
-    <TextSectionWithSide />
-    <section>
-      <h2 class="text-align-center accent-underline-adjust-width">Projects</h2>
-      <div class="project-cards-container">
-        <CardA
-          headerText="Code & Context"
-          imagesrc="../logos/CoCo-Logo.svg"
-          imageBaseWidth="109"
-          imageBaseHeight="38"
-          imagealt="Code & Context B.Sc. bright white logo"
-          introText="Engaged in studying Code & Design to skillfully craft valuable artifacts and establish thriving businesses."
-          collapseTexts={[
-            "Actively learning through hands-on experiences and exploring diverse fields. From helping people who take medicine regularly to creating SaaS solutions where we blend social media and real-world interaction for restaurants.",
-            "The learning environment was excellent, offering freedom for various projects and using the latest concepts. It has strong feedback systems and was established recently in 2019.",
-          ]}
-          buttonTexts={["CoCo's Website", "TH Köln Page"]}
-          buttonLinks={[
-            "https://coco.study/",
-            "https://www.th-koeln.de/studium/code--context-bachelor_62103.php",
-          ]}
-          formID="handle1"
+<Layout
+  title="Bryan Hogan's Portfolio"
+  metaDescription="Bryan Hogan's portfolio. Code & Context B.Sc. student. Hanyang University and University of Seoul."
+  headerMode="Professional"
+>
+  <section class="gradient-background">
+    <FocusedContentGroup />
+  </section>
+  <TextSectionWithSide />
+  <section>
+    <h2 class="text-align-center accent-underline-adjust-width">Projects</h2>
+    <div class="project-cards-container">
+      <CardA
+        headerText="Code & Context"
+        imagesrc="../logos/CoCo-Logo.svg"
+        imageBaseWidth="109"
+        imageBaseHeight="38"
+        imagealt="Code & Context B.Sc. bright white logo"
+        introText="Engaged in studying Code & Design to skillfully craft valuable artifacts and establish thriving businesses."
+        collapseTexts={[
+          "Actively learning through hands-on experiences and exploring diverse fields. From helping people who take medicine regularly to creating SaaS solutions where we blend social media and real-world interaction for restaurants.",
+          "The learning environment was excellent, offering freedom for various projects and using the latest concepts. It has strong feedback systems and was established recently in 2019.",
+        ]}
+        buttonTexts={["CoCo's Website", "TH Köln Page"]}
+        buttonLinks={[
+          "https://coco.study/",
+          "https://www.th-koeln.de/studium/code--context-bachelor_62103.php",
+        ]}
+        formID="handle1"
+      />
+      <CardA
+        headerText="Hanyang University"
+        imagesrc="../logos/Hanyang-Logo.svg"
+        imageBaseWidth="83"
+        imageBaseHeight="86"
+        imagealt="Hanyang University bright white lion logo"
+        introText="Went abroad to South Korea to study at Hanyang University erica campus for the spring semester of 2023."
+        collapseTexts={[
+          "Hanyang is ranked among the top 25 universities in Asia.",
+          "This experience not only allowed me to immerse myself in the Korean way of life but also provided a platform for me to grow and learn.",
+          "My courses included UX Design where we worked together with the government of Ansan, Sports Physiology, Game Design, Visual Communication and Korean Language.",
+        ]}
+        buttonTexts={["Hanyang's Website"]}
+        buttonLinks={["https://www.hanyang.ac.kr/"]}
+        formID="handle2"
+      />
+      <CardA
+        headerText="Volt"
+        imagesrc="../logos/Volt-Logo.svg"
+        imageBaseWidth="76"
+        imageBaseHeight="75"
+        imagealt="Volt political party bright white minimalist european stars logo"
+        introText="During the last German federal election in 2021 I did Social Media management for Volt's top candidates."
+        collapseTexts={[
+          "Volt is a pro-European party found in all EU member states and more.",
+          "As a part of our strategy, I made content for Instagram, Twitter, and Facebook. I also took care of organising how we worked and communicated, as well as worked together with other teams. Our environment demanded quick adaptation and fast responses to the ever-changing news and social media cycles.",
+          "I also had the opportunity to participate in events and campaigns and took photos and videos for our channels.",
+        ]}
+        buttonTexts={[
+          "Volt Europa Website",
+          "Volt Germany Website",
+          "Volt Deutschland Website",
+        ]}
+        buttonLinks={[
+          "https://www.volteuropa.org/",
+          "https://www.voltgermany.org/",
+          "https://www.voltdeutschland.org/",
+        ]}
+        formID="handle3"
+      />
+      <CardA
+        headerText="Applied AI"
+        imagesrc="../icons/AI-Icon.svg"
+        imageBaseWidth="70"
+        imageBaseHeight="76"
+        imagealt="Half brain half half circuit white minimalist icon"
+        introText="Created an artificial intelligence trained to recognise numbers and able to adjust its recognition."
+        collapseTexts={[
+          "It is able to learn letters and numbers. Made with TensorFlow and trained with MNIST data.",
+          "Group project by: Timo Küsters, Matthias Zens and Bryan Hogan within a course held by Prof. Christian Faubel.",
+        ]}
+        buttonTexts={["See It Here"]}
+        buttonLinks={["https://bryanhogan.github.io/projects/AAI/index.html"]}
+        formID="handle4"
+      />
+      <CardA
+        headerText="University of Seoul"
+        imagesrc="../logos/University-of-Seoul-Logo.svg"
+        imageBaseWidth="108"
+        imageBaseHeight="101"
+        imagealt="University of Seoul eagle icon simple white color logo"
+        introText="Currently studying at University of Seoul for fall semester 2023."
+        collapseTexts={[
+          "Continuing my stay in Korea and exploring a new university.",
+          "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management.",
+        ]}
+        buttonTexts={["University of Seoul's Website", "UoS English Website"]}
+        buttonLinks={["https://www.uos.ac.kr/", "https://english.uos.ac.kr/"]}
+        formID="handle5"
+      />
+      <CardA
+        headerText="Handon"
+        imagesrc="../icons/Hotel-Icon.svg"
+        imageBaseWidth="62"
+        imageBaseHeight="77"
+        imagealt="Simple hotel bright white color hotel icon"
+        introText="Worked at Handon dressed to sell GbmH where I was responsible for Online Marketing and technical tasks."
+        collapseTexts={[
+          "Part of my work included coordinating the creation of a new shop website as well as managing the current main shop.",
+        ]}
+        buttonTexts={["Handon's Website"]}
+        buttonLinks={["https://www.handon.de/"]}
+        formID="handle6"
+      />
+    </div>
+  </section>
+  <section>
+    <h2 class="text-align-center accent-underline-adjust-width">Skills</h2>
+    <ul class="skills-list">
+      <li>
+        <img
+          src="../logos/Davinci-Resolve-Logo.svg"
+          alt="Light only logo of Davinci Resolve"
+          width="24"
+          height="23"
+          style="height: 100%; "
         />
-        <CardA
-          headerText="Hanyang University"
-          imagesrc="../logos/Hanyang-Logo.svg"
-          imageBaseWidth="83"
-          imageBaseHeight="86"
-          imagealt="Hanyang University bright white lion logo"
-          introText="Went abroad to South Korea to study at Hanyang University erica campus for the spring semester of 2023."
-          collapseTexts={[
-            "Hanyang is ranked among the top 25 universities in Asia.",
-            "This experience not only allowed me to immerse myself in the Korean way of life but also provided a platform for me to grow and learn.",
-            "My courses included UX Design where we worked together with the government of Ansan, Sports Physiology, Game Design, Visual Communication and Korean Language.",
-          ]}
-          buttonTexts={["Hanyang's Website"]}
-          buttonLinks={["https://www.hanyang.ac.kr/"]}
-          formID="handle2"
+      </li>
+      <li>
+        <img
+          src="../logos/Affinity-Logo.svg"
+          alt="Light only logo of Affinity"
+          width="24"
+          height="23"
         />
-        <CardA
-          headerText="Volt"
-          imagesrc="../logos/Volt-Logo.svg"
-          imageBaseWidth="76"
-          imageBaseHeight="75"
-          imagealt="Volt political party bright white minimalist european stars logo"
-          introText="During the last German federal election in 2021 I did Social Media management for Volt's top candidates."
-          collapseTexts={[
-            "Volt is a pro-European party found in all EU member states and more.",
-            "As a part of our strategy, I made content for Instagram, Twitter, and Facebook. I also took care of organising how we worked and communicated, as well as worked together with other teams. Our environment demanded quick adaptation and fast responses to the ever-changing news and social media cycles.",
-            "I also had the opportunity to participate in events and campaigns and took photos and videos for our channels.",
-          ]}
-          buttonTexts={[
-            "Volt Europa Website",
-            "Volt Germany Website",
-            "Volt Deutschland Website",
-          ]}
-          buttonLinks={[
-            "https://www.volteuropa.org/",
-            "https://www.voltgermany.org/",
-            "https://www.voltdeutschland.org/",
-          ]}
-          formID="handle3"
+      </li>
+      <li>
+        <img
+          src="../logos/Aseprite-Logo.svg"
+          alt="Light only logo of Aseprite"
+          width="24"
+          height="25"
         />
-        <CardA
-          headerText="Applied AI"
-          imagesrc="../icons/AI-Icon.svg"
-          imageBaseWidth="70"
-          imageBaseHeight="76"
-          imagealt="Half brain half half circuit white minimalist icon"
-          introText="Created an artificial intelligence trained to recognise numbers and able to adjust its recognition."
-          collapseTexts={[
-            "It is able to learn letters and numbers. Made with TensorFlow and trained with MNIST data.",
-            "Group project by: Timo Küsters, Matthias Zens and Bryan Hogan within a course held by Prof. Christian Faubel.",
-          ]}
-          buttonTexts={["See It Here"]}
-          buttonLinks={["https://bryanhogan.github.io/projects/AAI/index.html"]}
-          formID="handle4"
+      </li>
+      <li>
+        <img
+          src="../logos/Figma-Logo.svg"
+          alt="Light minimalist white color only Figma logo"
+          width="18"
+          height="25"
         />
-        <CardA
-          headerText="University of Seoul"
-          imagesrc="../logos/University-of-Seoul-Logo.svg"
-          imageBaseWidth="108"
-          imageBaseHeight="101"
-          imagealt="University of Seoul eagle icon simple white color logo"
-          introText="Currently studying at University of Seoul for fall semester 2023."
-          collapseTexts={[
-            "Continuing my stay in Korea and exploring a new university.",
-            "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management.",
-          ]}
-          buttonTexts={["University of Seoul's Website", "UoS English Website"]}
-          buttonLinks={["https://www.uos.ac.kr/", "https://english.uos.ac.kr/"]}
-          formID="handle5"
+      </li>
+      <li>
+        <img
+          src="../logos/HTML-Logo.svg"
+          alt="Light minimalist HTML5 logo"
+          width="22"
+          height="25"
         />
-        <CardA
-          headerText="Handon"
-          imagesrc="../icons/Hotel-Icon.svg"
-          imageBaseWidth="62"
-          imageBaseHeight="77"
-          imagealt="Simple hotel bright white color hotel icon"
-          introText="Worked at Handon dressed to sell GbmH where I was responsible for Online Marketing and technical tasks."
-          collapseTexts={[
-            "Part of my work included coordinating the creation of a new shop website as well as managing the current main shop.",
-          ]}
-          buttonTexts={["Handon's Website"]}
-          buttonLinks={["https://www.handon.de/"]}
-          formID="handle6"
+      </li>
+      <li>
+        <img
+          src="../logos/CSS-Logo.svg"
+          alt="Light minimalist CSS logo"
+          width="22"
+          height="25"
         />
-      </div>
-    </section>
-    <section>
-      <h2 class="text-align-center accent-underline-adjust-width">Skills</h2>
-      <ul class="skills-list">
-        <li>
-          <img
-            src="../logos/Davinci-Resolve-Logo.svg"
-            alt="Light only logo of Davinci Resolve"
-            width="24"
-            height="23"
-            style="height: 100%; "
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Affinity-Logo.svg"
-            alt="Light only logo of Affinity"
-            width="24"
-            height="23"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Aseprite-Logo.svg"
-            alt="Light only logo of Aseprite"
-            width="24"
-            height="25"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Figma-Logo.svg"
-            alt="Light minimalist white color only Figma logo"
-            width="18"
-            height="25"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/HTML-Logo.svg"
-            alt="Light minimalist HTML5 logo"
-            width="22"
-            height="25"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/CSS-Logo.svg"
-            alt="Light minimalist CSS logo"
-            width="22"
-            height="25"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Typescript-Logo.svg"
-            alt="Light minimalist TypeScript logo"
-            width="24"
-            height="25"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Astro-Logo.svg"
-            alt="Light minimalist Astro logo"
-            width="26"
-            height="33"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Postcss-Logo.svg"
-            alt="Light color PostCSS logo"
-            width="96"
-            height="100"
-            
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Git-Logo.svg"
-            alt="Light minimalist Git logo"
-            width="32"
-            height="33"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Github-Logo.svg"
-            alt="Light minimalist Github logo"
-            width="32"
-            height="31"
-          />
-        </li>
-        <li>
-          <img src="../logos/Java-Logo.svg" alt="Light minimalist Java logo" width="20"
-          height="27"/>
-        </li>
-        <li>
-          <img
-            src="../logos/Obsidian-Logo.svg"
-            alt="Light minimalist Obsidian logo"
-            width="20"
-            height="25"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Notion-Logo.svg"
-            alt="Light minimalist Notion logo"
-            width="24"
-            height="25"
-          />
-        </li>
-        <li>
-          <img
-            src="../logos/Google-Sheets-Logo.svg"
-            alt="Light minimalist Google Sheets logo"
-            width="18"
-            height="25"
-          />
-        </li>
-      </ul>
-    </section>
-    <section
-      class="gradient-background-darker text-section text-align-center contact-section"
-      id="contact"
-    >
-      <h2 class="text-shadow">Contact</h2>
-      <div class="form-container">
-        <p class="text-shadow"><em>Reach out to me here</em></p>
-        <form action="https://formspree.io/f/xyyovedd" method="POST">
-          <label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your email"
-              required
-            />
-          </label>
-          <label>
-            <textarea name="message" placeholder="Your message" required
-            ></textarea>
-          </label>
-          <button class="button-white" type="submit">Send</button>
-        </form>
-      </div>
-      <address>
-        <p class="location-container text-shadow">
-          <s>Germany, Cologne</s><br />South Korea, Seoul
-        </p>
-        <a
-          href="mailto:BryanHogan@gmx.net"
-          class="text-shadow mail-adress"
-          style="color: var(--color-main-bright);"
-          ><strong>BryanHogan@gmx.net</strong></a
-        >
-      </address>
-    </section>
-  </main>
-  <Footer />
+      </li>
+      <li>
+        <img
+          src="../logos/Typescript-Logo.svg"
+          alt="Light minimalist TypeScript logo"
+          width="24"
+          height="25"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Astro-Logo.svg"
+          alt="Light minimalist Astro logo"
+          width="26"
+          height="33"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Postcss-Logo.svg"
+          alt="Light color PostCSS logo"
+          width="96"
+          height="100"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Git-Logo.svg"
+          alt="Light minimalist Git logo"
+          width="32"
+          height="33"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Github-Logo.svg"
+          alt="Light minimalist Github logo"
+          width="32"
+          height="31"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Java-Logo.svg"
+          alt="Light minimalist Java logo"
+          width="20"
+          height="27"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Obsidian-Logo.svg"
+          alt="Light minimalist Obsidian logo"
+          width="20"
+          height="25"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Notion-Logo.svg"
+          alt="Light minimalist Notion logo"
+          width="24"
+          height="25"
+        />
+      </li>
+      <li>
+        <img
+          src="../logos/Google-Sheets-Logo.svg"
+          alt="Light minimalist Google Sheets logo"
+          width="18"
+          height="25"
+        />
+      </li>
+    </ul>
+  </section>
+  <section
+    class="gradient-background-darker text-section text-align-center contact-section"
+    id="contact"
+  >
+    <h2 class="text-shadow">Contact</h2>
+    <div class="form-container">
+      <p class="text-shadow"><em>Reach out to me here</em></p>
+      <form action="https://formspree.io/f/xyyovedd" method="POST">
+        <label>
+          <input type="email" name="email" placeholder="Your email" required />
+        </label>
+        <label>
+          <textarea name="message" placeholder="Your message" required
+          ></textarea>
+        </label>
+        <button class="button-white" type="submit">Send</button>
+      </form>
+    </div>
+    <address>
+      <p class="location-container text-shadow">
+        <s>Germany, Cologne</s><br />South Korea, Seoul
+      </p>
+      <a
+        href="mailto:BryanHogan@gmx.net"
+        class="text-shadow mail-adress"
+        style="color: var(--color-main-bright);"
+        ><strong>BryanHogan@gmx.net</strong></a
+      >
+    </address>
+  </section>
 </Layout>
 
 <style>
