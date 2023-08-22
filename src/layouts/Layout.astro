@@ -2,9 +2,12 @@
 interface Props {
   title: string;
   metaDescription: string;
+  headerMode: string;
 }
+const { title, metaDescription, headerMode } = Astro.props;
 
-const { title, metaDescription } = Astro.props;
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!DOCTYPE html>
@@ -13,10 +16,7 @@ const { title, metaDescription } = Astro.props;
     <meta charset="UTF-8" />
     <meta http-equiv="content-Type" content="text/html; utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content={metaDescription}
-    />
+    <meta name="description" content={metaDescription} />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -32,10 +32,16 @@ const { title, metaDescription } = Astro.props;
     <meta http-equiv="Reply-to" content="Bryan@BryanHogan.com" />
     <title>{title}</title>
   </head>
+
   <body>
-    <slot />
+    <Header mode={headerMode} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
+
 <style is:global>
   :root {
     --color-main-dark: #202124;

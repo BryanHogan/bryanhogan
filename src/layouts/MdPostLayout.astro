@@ -3,7 +3,7 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={frontmatter.title} metaDescription={frontmatter.description} headerMode="Blog">
   <h1>{frontmatter.title}</h1>
   <p>Written by {frontmatter.author}</p>
   <slot />
