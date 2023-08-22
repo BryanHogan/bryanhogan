@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroLayout from "../layouts/HeroLayout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
@@ -9,7 +8,7 @@ import Footer from "../components/Footer.astro";
 <Layout title="Bryan Hogan">
     <main>
   <Header mode="Home" />
-  <HeroLayout>
+  <section class="gradient-background">
     <div class="button-group">
       <!-- <Button
         link=""
@@ -30,7 +29,7 @@ import Footer from "../components/Footer.astro";
         buttonStyle="transparent-bright large inset-dark-shadow"
       /> -->
     </div>
-  </HeroLayout>
+  </section>
 </main>
 <Footer />
 </Layout>
