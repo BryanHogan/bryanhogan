@@ -10,8 +10,12 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta http-equiv="content-Type" content="text/html; utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Bryan Hogan's site, including blog, newsletter, portfolio and more."
+    />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -19,6 +23,13 @@ const { title } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="keywords" content="bryan, hogan, blog, portfolio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Bryan Hogan" />
+    <meta name="publisher" content="Bryan Hogan" />
+    <meta name="copyright" content="Bryan Shawn Hogan" />
+    <meta http-equiv="Reply-to" content="Bryan@BryanHogan.com" />
   </head>
   <body>
     <slot />
@@ -29,7 +40,7 @@ const { title } = Astro.props;
     --color-main-dark: #202124;
     --color-main-dark-brighter: #23262d;
     --color-main-dark-50: #84878a;
-    --color-main-dark-30: #ACAFB3;
+    --color-main-dark-30: #acafb3;
 
     --color-main-bright: #e8ecf0;
 
