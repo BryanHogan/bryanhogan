@@ -20,8 +20,8 @@ const { coverURL, coverALT, coverWidth, coverHeight, title, tag, length, postURL
     <img class="post-cover-symbol" src={coverURL} alt={coverALT} width={coverWidth} height={coverHeight}/>
     <h2>{title}</h2>
     <div class="information-area">
-      <div><img src="/icons/Map-Pin-Icon.svg" /><p>{tag}</p></div>
-      <div><img src="/icons/Map-Pin-Icon.svg" /><p>{length}</p></div>
+      <div><img src="/icons/Tag-Icon.svg" alt="Minimal bright tag icon" width="17" height="17"/><p>{tag}</p></div>
+      <div><img src="/icons/Timer-Icon.svg" alt="Minimal bright timer icon" width="14" height="17"/><p>{length}</p></div>
     </div>
   </div>
   <p>{description}</p>
@@ -66,6 +66,10 @@ const { coverURL, coverALT, coverWidth, coverHeight, title, tag, length, postURL
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      & img {
+        width: 100%;
+        height: 20px;
+      }
       & div {
         padding: 10px 15px;
         display: flex;
