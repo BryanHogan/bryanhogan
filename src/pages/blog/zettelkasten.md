@@ -3,10 +3,12 @@ layout: ../../layouts/MdPostLayout.astro
 title: Zettelkasten
 author: Bryan Hogan
 description: "One system for life-long note taking. Take smart notes bottom-up."
-image:
+coverImage:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "Thumbnail of Astro rays."
+mainIcon: "/icons/AI_Icon.svg"
 pubDate: 2022-07-15
+lastUpdate: 2022-07-15
 tags: ["learning", "productivity", "tool"]
 
 ---

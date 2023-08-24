@@ -1,0 +1,56 @@
+---
+---
+
+<a href="#" class="card-container">
+  <div class="gradient-background gradient-area">
+    <img src="/icons/Map-Pin-Icon.svg" />
+    <div class="information-area">
+      <div><img src="/icons/Map-Pin-Icon.svg" /><p>Health</p></div>
+      <div><img src="/icons/Map-Pin-Icon.svg" /><p>Long</p></div>
+    </div>
+  </div>
+  <p>This is the title of the card. It can contain some words.</p>
+  <h2>Head</h2>
+</a>
+
+<style>
+  .card-container {
+    color: var(--color-main-bright);
+    text-decoration: none;
+    & > P {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      max-width: 400px;
+      padding-inline: 10px;
+    }
+  }
+  .gradient-area {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 225px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    & img {
+      margin-inline: auto;
+      margin-block: auto;
+    }
+    & .information-area {
+      background-color: var(--color-main-dark-transparent);
+      border-radius: 0px 0px 1em 1em;
+      margin-top: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      & div {
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: row;
+        & * {
+          padding-inline: 5px;
+        }
+      }
+    }
+  }
+</style>

@@ -4,14 +4,22 @@ const pageTtitle = "Blog Page";
 const newsletterReminder = true;
 var allPosts = await Astro.glob("../pages/blog/*.md");
 allPosts = allPosts.sort((a, b) => {
-  let dateA = a.frontmatter && a.frontmatter.pubDate ? new Date(a.frontmatter.pubDate) : new Date(0);
-  let dateB = b.frontmatter && b.frontmatter.pubDate ? new Date(b.frontmatter.pubDate) : new Date(0);
+  let dateA =
+    a.frontmatter && a.frontmatter.pubDate
+      ? new Date(a.frontmatter.pubDate)
+      : new Date(0);
+  let dateB =
+    b.frontmatter && b.frontmatter.pubDate
+      ? new Date(b.frontmatter.pubDate)
+      : new Date(0);
   return dateB.getTime() - dateA.getTime();
 });
 
 import Button from "../components/Button.astro";
+import CardB from "../components/CardB.astro";
 import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout
   title="Bryan's Blog"
   headerMode="Home"
@@ -21,24 +29,28 @@ import Layout from "../layouts/Layout.astro";
     <h1>Bryan's Blog</h1>
     <p>About learning, creating and finding balance.</p>
     <Button
-        link="/mail"
-        text="Join The Newsletter"
-        targetText=""
-        buttonStyle="transparent-bright small inset-dark-shadow"
-      />
+      link="/mail"
+      text="Join The Newsletter"
+      targetText=""
+      buttonStyle="transparent-bright small inset-dark-shadow"
+    />
   </div>
-  <ul>
+  <ul class="posts-container">
     {
       allPosts.map((post) => (
-        <li>
+        <li class="post">
           <a href={post.url}>{post.frontmatter.title}</a>
         </li>
       ))
     }
+    <li>
+      <CardB />
+    </li>
   </ul>
 </Layout>
 
 <style>
+  
   .intro-section {
     min-height: 410px;
     display: flex;
@@ -52,5 +64,18 @@ import Layout from "../layouts/Layout.astro";
     & p {
       margin-bottom: 20px;
     }
+  }
+  .posts-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .post {
+    min-width: 400px;
+    min-height: 225px;
+    background-color: red;
+    margin: 20px;
   }
 </style>
