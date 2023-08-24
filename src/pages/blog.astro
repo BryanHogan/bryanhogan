@@ -40,17 +40,14 @@ import Layout from "../layouts/Layout.astro";
       allPosts.map((post) => (
         <li class="post">
           <a href={post.url}>{post.frontmatter.title}</a>
+          <CardB title={post.frontmatter.title} ahref={post.url} icon={post.frontmatter.mainIcon} tag={post.frontmatter.tags[0]} length={post.frontmatter.length}/>
         </li>
       ))
     }
-    <li>
-      <CardB />
-    </li>
   </ul>
 </Layout>
 
 <style>
-  
   .intro-section {
     min-height: 410px;
     display: flex;
@@ -71,11 +68,12 @@ import Layout from "../layouts/Layout.astro";
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    & li {
+      max-width: 400px;
+      width: 80%;
+      margin: 20px;
+    }
   }
-  .post {
-    min-width: 400px;
-    min-height: 225px;
-    background-color: red;
-    margin: 20px;
+  @media only screen and (max-width: 699px) {
   }
 </style>
