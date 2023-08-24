@@ -39,8 +39,18 @@ import Layout from "../layouts/Layout.astro";
     {
       allPosts.map((post) => (
         <li class="post">
-          <a href={post.url}>{post.frontmatter.title}</a>
-          <CardB title={post.frontmatter.title} ahref={post.url} icon={post.frontmatter.mainIcon} tag={post.frontmatter.tags[0]} length={post.frontmatter.length}/>
+          <CardB
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            ahref={post.url}
+            coverURL={post.frontmatter.coverImage.url}
+            coverALT={post.frontmatter.coverImage.alt}
+            coverWidth={post.frontmatter.coverImage.width}
+            coverHeight={post.frontmatter.coverImage.height}
+            tag={post.frontmatter.tags[0]}
+            length={post.frontmatter.length}
+            postURL={post.url}
+          />
         </li>
       ))
     }
@@ -67,11 +77,12 @@ import Layout from "../layouts/Layout.astro";
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    list-style: none;
     & li {
       max-width: 400px;
       width: 80%;
-      margin: 20px;
+      margin: 40px;
     }
   }
   @media only screen and (max-width: 699px) {
