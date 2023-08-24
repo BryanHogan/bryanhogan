@@ -31,10 +31,12 @@ const { coverURL, coverALT, coverWidth, coverHeight, title, tag, length, postURL
   .post-cover-symbol {
     max-height: 75px;
     width: 75px;
+    margin-top: 30px;
   }
   .card-container {
     color: var(--color-main-bright);
     text-decoration: none;
+    padding: 300px;
     & > P {
       margin-top: 20px;
       font-size: 1.4rem;
@@ -45,18 +47,17 @@ const { coverURL, coverALT, coverWidth, coverHeight, title, tag, length, postURL
       font-size: 1.6rem;
       text-align: center;
       text-shadow: var(--text-shadow);
-      margin: 0px;
+      margin: 15px 5px;
     }
   }
   .gradient-area {
     width: 100%;
-    height: 225px;
+    min-height: 225px;
     display: flex;
     flex-direction: column;
     border-radius: 1em;
     & img {
       margin-inline: auto;
-      margin-block: auto;
     }
     & .information-area {
       background-color: var(--color-main-dark-transparent);
