@@ -78,6 +78,15 @@ const github = {
   title: "Github",
   target: "_blank",
 };
+const substack = {
+  href: "https://bryanhogan.substack.com/",
+  src: "../logos/Substack-Logo.svg",
+  alt: "Substack logo simple soft white color only",
+  width: "22",
+  height: "24",
+  title: "Substack",
+  target: "_blank",
+}
 ---
 
 <header>
@@ -134,6 +143,17 @@ const github = {
                     width={medium.width}
                     height={medium.height}
                     title={medium.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={substack.href} target={substack.target}>
+                  <img
+                    src={substack.src}
+                    alt={substack.alt}
+                    width={substack.width}
+                    height={substack.height}
+                    title={substack.title}
                   />
                 </a>
               </li>
@@ -227,6 +247,9 @@ const github = {
                   />
                 </a>
               </li>
+              <li>
+                <a href="/portfolio">Portfolio</a>
+                </li>
             </ul>
           </li>
           <li class="dropdown">
@@ -246,6 +269,28 @@ const github = {
                     width={instagram.width}
                     height={instagram.height}
                     title={instagram.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={medium.href} target={medium.target}>
+                  <img
+                    src={medium.src}
+                    alt={medium.alt}
+                    width={medium.width}
+                    height={medium.height}
+                    title={medium.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={substack.href} target={substack.target}>
+                  <img
+                    src={substack.src}
+                    alt={substack.alt}
+                    width={substack.width}
+                    height={substack.height}
+                    title={substack.title}
                   />
                 </a>
               </li>
@@ -327,6 +372,85 @@ const github = {
                     width={github.width}
                     height={github.height}
                     title={github.title}
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      )
+    }
+    {
+      mode == "Blog" && (
+        <ul class="header-container">
+          <li style="width: 100%;">
+            <ul class="container-priority-items">
+              <li>
+                <a href={logoHome.href} target={logoHome.target}>
+                  <img
+                    src={logoHome.src}
+                    alt={logoHome.alt}
+                    width={logoHome.width}
+                    height={logoHome.height}
+                    title={logoHome.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/blog">Blog</a>
+              </li>
+              <li>
+                <a href={mail.href} target={mail.target}>
+                  <img
+                    src={mail.src}
+                    alt={mail.alt}
+                    width={mail.width}
+                    height={mail.height}
+                    title={mail.title}
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <img
+              src="../icons/Menu-Icon.svg"
+              class="menu-icon"
+              alt="Menu bar icon simple soft white color only"
+              width="18"
+              height="14"
+            />
+            <ul class="container-dropdown-items">
+              <li>
+                <a href={instagram.href} target={instagram.target}>
+                  <img
+                    src={instagram.src}
+                    alt={instagram.alt}
+                    width={instagram.width}
+                    height={instagram.height}
+                    title={instagram.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={medium.href} target={medium.target}>
+                  <img
+                    src={medium.src}
+                    alt={medium.alt}
+                    width={medium.width}
+                    height={medium.height}
+                    title={medium.title}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href={substack.href} target={substack.target}>
+                  <img
+                    src={substack.src}
+                    alt={substack.alt}
+                    width={substack.width}
+                    height={substack.height}
+                    title={substack.title}
                   />
                 </a>
               </li>
