@@ -3,8 +3,60 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title} metaDescription={frontmatter.description} headerMode="Blog">
-  <h1>{frontmatter.title}</h1>
-  <p>Written by {frontmatter.author}</p>
-  <slot />
+<Layout
+  title={frontmatter.title}
+  metaDescription={frontmatter.description}
+  headerMode="Home"
+>
+  <div class="gradient-background">
+    <img
+      src={frontmatter.coverImage.url}
+      alt={frontmatter.coverImage.alt}
+      width={frontmatter.coverImage.width}
+      height={frontmatter.coverImage.height}
+    />
+  </div>
+  <div class="common">
+    <section class="main text-section">
+      <h1 class="text-align-center">{frontmatter.title}</h1>
+      <p>Written by {frontmatter.author}</p>
+      <slot />
+    </section>
+  </div>
 </Layout>
+
+<style>
+  h1 {
+    text-wrap: balance;
+  }
+  .gradient-background {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & img {
+      height: 120px;
+      width: auto;
+    }
+  }
+  .common {
+    display: grid;
+    grid-template-columns: 1fr 1fr 8fr 1fr 1fr;
+    & .main {
+      grid-column: 3 / 4;
+      max-width: 650px;
+      width: 80%;
+      margin-inline: auto;
+      text-align: start;
+    }
+  }
+  @media only screen and (max-width: 699px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+</style>
