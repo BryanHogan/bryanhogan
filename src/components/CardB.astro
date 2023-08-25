@@ -11,21 +11,54 @@ interface Props {
   length: string;
   postURL: string;
 }
-const { coverURL, coverALT, coverWidth, coverHeight, title, tag, length, postURL, description } =
-  Astro.props;
+const {
+  coverURL,
+  coverALT,
+  coverWidth,
+  coverHeight,
+  title,
+  tag,
+  length,
+  postURL,
+  description,
+} = Astro.props;
 ---
 
-<a href={postURL} class="card-container">
-  <div class="gradient-background gradient-area">
-    <img class="post-cover-symbol" src={coverURL} alt={coverALT} width={coverWidth} height={coverHeight}/>
-    <h2>{title}</h2>
-    <div class="information-area">
-      <div><img src="/icons/Tag-Icon.svg" alt="Minimal bright tag icon" width="17" height="17"/><p>{tag}</p></div>
-      <div><img src="/icons/Timer-Icon.svg" alt="Minimal bright timer icon" width="14" height="17"/><p>{length}</p></div>
+<div class="card-container">
+  <a href={postURL}>
+    <div class="gradient-background gradient-area">
+      <img
+        class="post-cover-symbol"
+        src={coverURL}
+        alt={coverALT}
+        width={coverWidth}
+        height={coverHeight}
+      />
+      <h2>{title}</h2>
+      <div class="information-area">
+        <div>
+          <img
+            src="/icons/Tag-Icon.svg"
+            alt="Minimal bright tag icon"
+            width="17"
+            height="17"
+          /><p>{tag}</p>
+        </div>
+        <div>
+          <img
+            src="/icons/Timer-Icon.svg"
+            alt="Minimal bright timer icon"
+            width="14"
+            height="17"
+          /><p>{length}</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <p>{description}</p>
-</a>
+  </a>
+  <a href={postURL} class="description-text">
+    <p>{description}</p>
+  </a>
+</div>
 
 <style>
   .post-cover-symbol {
@@ -34,14 +67,15 @@ const { coverURL, coverALT, coverWidth, coverHeight, title, tag, length, postURL
     margin-top: 30px;
   }
   .card-container {
-    color: var(--color-main-bright);
-    text-decoration: none;
-    padding: 300px;
-    & > P {
+    & a {
+      text-decoration: none;
+      color: var(--color-main-bright);
+    }
+    & .description-text p {
       margin-top: 20px;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       max-width: 400px;
-      padding-inline: 10px;
+      padding-inline: 5px;
     }
     & h2 {
       font-size: 1.6rem;
