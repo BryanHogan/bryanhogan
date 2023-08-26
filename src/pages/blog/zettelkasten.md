@@ -13,4 +13,4 @@ lastUpdate: 2022-07-15
 tags: ["learning", "productivity", "tool"]
 length: Medium
 ---
-This is a text about Zettelkasten. An amazing system for life-long note taking.
+This is a text about Zettelkasten. An amazing system for life-long note taking. a
