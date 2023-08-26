@@ -8,34 +8,40 @@ import Footer from "../components/Footer.astro";
 <Layout title="Bryan Hogan" metaDescription="Bryan Hogan's site. Including blog, newsletter, portfolio and more." headerMode="Home">
   <section class="gradient-background">
     <div class="button-group">
-      <!-- <Button
-        link=""
+      <Button
+        link="/blog"
         text="Blog"
         targetText=""
         buttonStyle="transparent-bright large inset-dark-shadow"
-      /> -->
+      />
       <Button
-        link="./portfolio"
+        link="/mail"
+        text="Newsletter"
+        targetText=""
+        buttonStyle="transparent-bright large inset-dark-shadow"
+      />
+      <Button
+        link="/portfolio"
         text="Portfolio"
         targetText=""
         buttonStyle="transparent-bright large inset-dark-shadow"
       />
-      <!-- <Button
-        link="./portfolio"
-        text="Newsletter"
-        targetText=""
-        buttonStyle="transparent-bright large inset-dark-shadow"
-      /> -->
     </div>
   </section>
 </Layout>
 
 <style>
     .button-group {
-        height: 80vh;
+        height: 70vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+    @media only screen and (min-width: 1050px) {
+      .button-group {
+        flex-direction: row;
+      }
     }
 </style>
