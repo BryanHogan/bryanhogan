@@ -1,6 +1,25 @@
 ---
 import NewsletterCallout from "../components/NewsletterCallout.astro";
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<NewsletterCallout />
+<Layout
+    title="Mail Connect"
+    headerMode="Blog"
+    metaDescription="Join my mail list to receive updates on my blog posts."
+>
+    <section class="gradient-background">
+        <div class="dark-back">
+            <NewsletterCallout />
+        </div>
+    </section>
+</Layout>
+<style>
+.dark-back {
+    background-color: var(--color-main-dark-transparent);
+    border-radius: 1em;
+    margin-inline: auto;
+    max-width: 380px;
+    width: 90%;
+}
+</style>
