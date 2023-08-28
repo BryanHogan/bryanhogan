@@ -62,14 +62,14 @@ const {
 <style>
   .card {
     min-width: 260px;
-    max-width: 450px;
+    max-width: 500px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     & p {
-      max-width: 320px;
+      max-width: 380px;
       text-align: justify;
       margin-inline: 60px;
     }
@@ -100,7 +100,7 @@ const {
     }
     & .collapsable {
       overflow: hidden;
-      max-height: 7px;
+      max-height: 14px;
       transition: all 0.4s;
     }
     & label {
@@ -111,14 +111,14 @@ const {
     }
     & input[name="collapse"]:checked ~ .collapsable {
       height: auto;
-      max-height: 400px;
+      max-height: 550px;
       transition: all 1s;
     }
     & .collapse-line-container {
       margin-inline: 40px;
     }
     & .collapse-line {
-      max-width: 340px;
+      max-width: 410px;
       margin-bottom: 30px;
       margin-inline: auto;
       height: 2px;
