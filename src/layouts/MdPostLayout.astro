@@ -1,6 +1,8 @@
 ---
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
+const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString();
+const formattedLastUpdate = new Date(frontmatter.lastUpdate).toLocaleDateString();
 ---
 
 <Layout
@@ -19,13 +21,32 @@ const { frontmatter } = Astro.props;
   <div class="blog">
     <h1 class="text-align-center">{frontmatter.title}</h1>
     <section class="main text-section">
-      <p>Written by {frontmatter.author}</p>
       <slot />
+      <div class="infos">
+        <p>Written by {frontmatter.author}</p>
+        <p>Published: {formattedPubDate}</p>
+        <p>Last update: {formattedLastUpdate}</p>
+      </div>
     </section>
   </div>
 </Layout>
 
 <style>
+  .infos {
+    border-top: 1px solid var(--color-main-bright);
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    & p {
+    font-size: 0.9rem;
+    margin: 0px;
+    padding: 0px;
+    }
+  }
   h1 {
     text-wrap: balance;
     max-width: 1250px;
@@ -43,6 +64,9 @@ const { frontmatter } = Astro.props;
     }
   }
   @media only screen and (max-width: 699px) {
+    .infos {
+      flex-direction: column;
+    }
     h1 {
       font-size: 2.8rem;
     }
