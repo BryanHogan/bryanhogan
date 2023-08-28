@@ -217,17 +217,13 @@ import Footer from "../components/Footer.astro";
     width: fit-content;
     margin-inline: auto;
   }
-/*  ====================
+  /*  ====================
     5 - Blog Relatd
     ==================== */
-.blog-text {
-  & pre {
-    width: 70vw;
-    max-width: 650px;
+  .blog-text {
   }
-}
-.blog {
-  display: grid;
+  .blog {
+    display: grid;
     grid-template-columns: 1fr 12fr 1fr;
     & h1 {
       grid-column: 2 / 3;
@@ -239,6 +235,10 @@ import Footer from "../components/Footer.astro";
       width: 90%;
       margin-inline: auto;
       text-align: start;
+      & pre {
+        width: 70vw;
+        max-width: 650px;
+      }
     }
-}
+  }
 </style>
