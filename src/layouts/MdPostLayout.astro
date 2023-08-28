@@ -16,7 +16,7 @@ const { frontmatter } = Astro.props;
       height={frontmatter.coverImage.height}
     />
   </div>
-  <div class="common">
+  <div class="blog">
     <h1 class="text-align-center">{frontmatter.title}</h1>
     <section class="main text-section blog-text">
       <p>Written by {frontmatter.author}</p>
@@ -40,21 +40,6 @@ const { frontmatter } = Astro.props;
     & img {
       height: 120px;
       width: auto;
-    }
-  }
-  .common {
-    display: grid;
-    grid-template-columns: 1fr 12fr 1fr;
-    & h1 {
-      grid-column: 2 / 3;
-      margin-top: 1em;
-    }
-    & .main {
-      grid-column: 2 / 3;
-      max-width: 650px;
-      width: 90%;
-      margin-inline: auto;
-      text-align: start;
     }
   }
   @media only screen and (max-width: 699px) {

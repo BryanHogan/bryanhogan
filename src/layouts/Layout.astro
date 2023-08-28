@@ -226,4 +226,19 @@ import Footer from "../components/Footer.astro";
     max-width: 650px;
   }
 }
+.blog {
+  display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    & h1 {
+      grid-column: 2 / 3;
+      margin-top: 1em;
+    }
+    & .main {
+      grid-column: 2 / 3;
+      max-width: 650px;
+      width: 90%;
+      margin-inline: auto;
+      text-align: start;
+    }
+}
 </style>
