@@ -10,13 +10,14 @@
 >
   <div>
     <div data-element="header">
-      <h2>Join the Newsletter</h2>
+      <h2>Join the Mail List</h2>
     </div>
     <div data-element="subheader">
       <p>Subscribe to get my latest content by email.</p>
-    </div><ul data-element="errors" data-group="alert"></ul>
-    <div data-element="fields" data-stacked="false">
-      <div class="formkit-field">
+    </div>
+    <div class="changing-content">
+      <ul data-element="errors" data-group="alert"></ul>
+      <div data-element="fields" data-stacked="false" class="data-fields">
         <input
           name="email_address"
           aria-label="Email Address"
@@ -24,18 +25,80 @@
           required=""
           type="email"
         />
+        <button data-element="submit">
+          <span class="">Subscribe</span>
+        </button>
       </div>
-      <button data-element="submit">
-        <span class="">Subscribe</span>
-      </button>
     </div>
   </div>
 </form>
 <style>
-  * {
+  form {
+    margin: 30px;
+    padding: 60px 20px;
+    box-shadow: var(--box-shadow-medium);
+    max-width: 550px;
     margin-inline: auto;
-    text-align: center;
-    
+    border-radius: 1em;
+    & h2 {
+      font-size: 3.8rem;
+      margin: 0px;
+      margin-inline: auto;
+      text-align: center;
+      text-shadow: var(--text-shadow);
+    }
+    & .changing-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: var(--text-shadow);
+    }
+    & p {
+      text-align: center;
+      text-shadow: var(--text-shadow);
+      margin-top: 20px;
+    }
+    & .data-fields {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 2em;
+      & p {
+        margin-inline: auto;
+      }
+    }
+    & input {
+      width: 80%;
+      border: 2px solid var(--color-main-bright);
+      border-radius: 5px;
+      padding: 4px;
+      box-shadow: var(--box-shadow-medium);
+      margin-inline: auto;
+    }
+    & button {
+      margin-top: 1em;
+      color: var(--color-main-dark);
+      background-color: #fff;
+      border: 0px;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow-medium);
+      width: 30%;
+      min-width: fit-content;
+      font-size: 1rem;
+      padding: 10px;
+      margin-inline: auto;
+      transition: all 200ms linear;
+      box-shadow: var(--box-shadow-large),
+        inset 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+      &:hover {
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25),
+          inset var(--box-shadow-large);
+        text-shadow: var(--text-shadow-inset);
+      }
+    }
   }
 </style>
 {
