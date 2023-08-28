@@ -10,6 +10,8 @@ To Do's For Me
     - Structured Data
     - Logo Icon: Cut empty space
     - Layout layout have to seperate area: 1. header 2. body
+    - Use stro sitemap integration
+    - Use Astro Image integration (+ sharp)
 
 - Header
     - Smooth fade out not working for Firefox (How's Safari looking?)
