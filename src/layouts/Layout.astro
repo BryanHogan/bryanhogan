@@ -126,26 +126,7 @@ import Footer from "../components/Footer.astro";
     padding: var(--section-padding) 0;
     margin-bottom: var(--section-margin-bottom);
   }
-  .common-section {
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    & .main-content {
-      grid-column: 2 / 3;
-    }
-    & .side-content {
-      grid-column: 2 / 3;
-    }
-  }
   @media only screen and (min-width: 699px) {
-    .common-section {
-      grid-template-columns: 1fr 1fr 8fr 1fr 1fr;
-    }
-    & .main-content {
-      grid-column: 3 / 4;
-    }
-    & .side-content {
-      grid-column: 4 / 5;
-    }
   }
 
    {
