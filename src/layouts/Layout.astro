@@ -238,6 +238,17 @@ import Footer from "../components/Footer.astro";
     }
     & h2 {
       word-break: break-word;
+      margin-bottom: 0px;
+    }
+    & .highlight-header {
+      grid-column: 1 / 4;
+      max-width: none;
+      width: 100%;
+      background-image: var(--gradient-background);
+      text-align: center;
+    }
+    & p {
+      text-align: start;
     }
     & > * {
       grid-column: 2 / 3;
@@ -252,12 +263,9 @@ import Footer from "../components/Footer.astro";
         padding-bottom: 10px;
       }
     }
-    & p {
-      text-align: start;
-    }
   }
   @media only screen and (max-width: 699px) {
-    .blog {
+    h2 {
       text-align: center;
     }
   }
