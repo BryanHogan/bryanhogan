@@ -240,6 +240,9 @@ import Footer from "../components/Footer.astro";
       grid-column: 2 / 3;
       margin-top: 1em;
     }
+    & h2 {
+      word-break: break-word;
+    }
     & .highlight-header {
     }
     & .main {
@@ -252,9 +255,14 @@ import Footer from "../components/Footer.astro";
         width: 70vw;
         max-width: 650px;
       }
+      & li {
+        padding-bottom: 10px;
+      }
     }
-    & li {
-      padding-bottom: 10px;
+  }
+  @media only screen and (max-width: 699px) {
+    .blog {
+      text-align: center;
     }
   }
 </style>
