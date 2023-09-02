@@ -2,7 +2,9 @@
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString();
-const formattedLastUpdate = new Date(frontmatter.lastUpdate).toLocaleDateString();
+const formattedLastUpdate = new Date(
+  frontmatter.lastUpdate
+).toLocaleDateString();
 import Button from "../components/Button.astro";
 ---
 
@@ -19,20 +21,21 @@ import Button from "../components/Button.astro";
       height={frontmatter.coverImage.height}
     />
   </div>
-  <article class="blog">
+  <article class="blog text-section">
     <h1 class="text-align-center">{frontmatter.title}</h1>
-    <section class="main text-section">
-      <slot />
-      <div class="infos">
-        <p>Written by {frontmatter.author}</p>
-        <p>Published: {formattedPubDate}</p>
-        <p>Last update: {formattedLastUpdate}</p>
-      </div>
-    </section>
+    <slot />
+    <div class="infos">
+      <p>Written by {frontmatter.author}</p>
+      <p>Published: {formattedPubDate}</p>
+      <p>Last update: {formattedLastUpdate}</p>
+    </div>
   </article>
 </Layout>
 
 <style>
+  p {
+    text-align: start;
+  }
   .infos {
     border-top: 1px solid var(--color-main-bright);
     padding-top: 10px;
@@ -43,15 +46,18 @@ import Button from "../components/Button.astro";
     justify-content: space-around;
     width: 100%;
     & p {
-    font-size: 0.9rem;
-    margin: 0px;
-    padding: 0px;
+      font-size: 0.9rem;
+      margin: 0px;
+      padding: 0px;
     }
   }
   h1 {
     text-wrap: balance;
     max-width: 1250px;
     margin-inline: auto;
+    grid-column: 2 / 3;
+    margin-top: 1em;
+    text-align: center;
   }
   .gradient-background {
     height: 300px;

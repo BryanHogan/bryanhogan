@@ -229,26 +229,21 @@ import Footer from "../components/Footer.astro";
     margin-inline: auto;
   }
   /*  ====================
-    5 - Blog Relatd
+    5 - Blog Related
     ==================== */
-  .blog-text {
-  }
   .blog {
     display: grid;
     grid-template-columns: 1fr 12fr 1fr;
     & h1 {
-      grid-column: 2 / 3;
-      margin-top: 1em;
     }
     & h2 {
       word-break: break-word;
     }
-    & .main {
+    & > * {
       grid-column: 2 / 3;
       max-width: 700px;
       width: 90%;
       margin-inline: auto;
-      text-align: start;
       & pre {
         width: 70vw;
         max-width: 650px;
@@ -256,6 +251,9 @@ import Footer from "../components/Footer.astro";
       & li:not(:last-child) {
         padding-bottom: 10px;
       }
+    }
+    & p {
+      text-align: start;
     }
   }
   @media only screen and (max-width: 699px) {
