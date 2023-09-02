@@ -180,7 +180,7 @@ The answer is truly ingenious. The flock will first line up in a row. With the e
 In doing so, they provide full panoramic threat detection for the entire group, maximizing the total number of brain halves that can sleep within the flock. At some point, the two end-guards will stand up, rotate 180 degrees, and sit back down, allowing the other side of their respective brains to enter deep sleep.</q></small>
 
 
-<h2 class="highlight-header">My Thoughts On "Why We Sleep" By Matthew Walker</h2>
+<div class="highlight-header"><h2>My Thoughts On "Why We Sleep" By Matthew Walker</h2></div>
 
 Most of the content for this post here has been inspired from "Why We Sleep" by Matthew Walker.
 Is Why We Sleep Worth Reading?

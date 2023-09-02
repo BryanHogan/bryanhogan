@@ -245,7 +245,13 @@ import Footer from "../components/Footer.astro";
       max-width: none;
       width: 100%;
       background-image: var(--gradient-background);
-      text-align: center;
+      & h2 {
+        text-align: center;
+        text-shadow: var(--text-shadow);
+        padding-block: 1em;
+        max-width: 850px;
+        margin-inline: auto;
+      }
     }
     & p {
       text-align: start;
