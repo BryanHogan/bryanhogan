@@ -9,7 +9,7 @@ coverImage:
     width: 84
     height: 103
 pubDate: 2022-07-15
-lastUpdate: 2023-08-24
+lastUpdate: 2023-09-02
 tags: ["health", "learning", "book","productivity"]
 length: Long
 ---
