@@ -183,7 +183,7 @@ In doing so, they provide full panoramic threat detection for the entire group, 
 <div class="highlight-header"><h2>My Thoughts On "Why We Sleep" By Matthew Walker</h2></div>
 
 Most of the content for this post here has been inspired from "Why We Sleep" by Matthew Walker.
-Is Why We Sleep Worth Reading?
+## Is Why We Sleep Worth Reading?
 
 I personally enjoyed reading "Why We Sleep". The book is filled with valuable and entertaining insight and gave me an perspective I haven't had before on sleep.
 
@@ -211,7 +211,7 @@ Many people seem to believe that they need 8 hours of sleep each night after rea
 Of course it seems like a common piece of advice to not take everything at face value but there are enough people that treat it as some sort of gospel, so be aware.
 
 To conclude I definitely recommend Why We Sleep. It discuses a relevant area of our lives that isn't talked about enough.
-How Has Why We Sleep Helped Me?
+## How Has Why We Sleep Helped Me?
 
 Why We Sleep has gave me and amazing overview and sleep and made me dive deeper into more concepts. It also made me more vary on fact checking books, even when written by a popular expert on a certain topic.
 
@@ -219,21 +219,16 @@ To conclude I would also like to share a technique that helps me fall asleep qui
 
 I have forgotten the original source of where I had found it for the first time but here they explain it well, they call it the "body scan" technique.
 
-    Body Scan
-    Body scans are a type of meditation that feature a slow, focused attention to different parts of the body. Once you’re lying comfortably in bed, try these steps for a relaxing body scan:
-    
-    1. Start by taking a few deep breaths, perhaps trying diaphragmatic or 4-7-8 breathing, to get your body into a relaxed state.
-    
-    2. Bring your attention to your feet, noticing any sensations in your toes and if you’re holding any tension in this part of the body.
-    
-    3. If you notice discomfort here, acknowledge it and try to let go of any thoughts of stories you have. Visualize the tension leaving the body through the breath.
-    
-    4. When you’re ready, move your focus to your calf muscles, repeating the process of noticing sensations, letting go of thoughts or stories, and visualizing the tension leaving through your breath.
-    
-    5. Methodically move your attention to each part of your body, one-by one, moving from your feet to your forehead until you’ve scanned your entire body.
+Body Scan
+Body scans are a type of meditation that feature a slow, focused attention to different parts of the body. Once you’re lying comfortably in bed, try these steps for a relaxing body scan:
+
+1. Start by taking a few deep breaths, perhaps trying diaphragmatic or 4-7-8 breathing, to get your body into a relaxed state.
+2. Bring your attention to your feet, noticing any sensations in your toes and if you’re holding any tension in this part of the body.
+3. If you notice discomfort here, acknowledge it and try to let go of any thoughts of stories you have. Visualize the tension leaving the body through the breath.
+4. When you’re ready, move your focus to your calf muscles, repeating the process of noticing sensations, letting go of thoughts or stories, and visualizing the tension leaving through your breath.
+5. Methodically move your attention to each part of your body, one-by one, moving from your feet to your forehead until you’ve scanned your entire body.
 
 Sources
-
-    Why We Sleep by Matthew Walker
-    Matthew Walker's "Why We Sleep" Is Riddled with Scientific and Factual Errors (2022) - https://guzey.com/books/why-we-sleep/
-    Relaxation Exercises To Help Fall Asleep - https://www.sleepfoundation.org/sleep-hygiene/relaxation-exercises-to-help-fall-asleep
+- Why We Sleep by Matthew Walker
+- Matthew Walker's "Why We Sleep" Is Riddled with Scientific and Factual Errors (2022) - https://guzey.com/books/why-we-sleep/
+- Relaxation Exercises To Help Fall Asleep - https://www.sleepfoundation.org/sleep-hygiene/relaxation-exercises-to-help-fall-asleep

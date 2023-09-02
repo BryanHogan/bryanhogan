@@ -248,13 +248,16 @@ import Footer from "../components/Footer.astro";
       & h2 {
         text-align: center;
         text-shadow: var(--text-shadow);
-        padding-block: 1em;
+        padding-block: 2em;
         max-width: 850px;
         margin-inline: auto;
       }
     }
     & p {
       text-align: start;
+    }
+    & a {
+      word-break: break-word;
     }
     & > * {
       grid-column: 2 / 3;
