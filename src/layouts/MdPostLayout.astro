@@ -3,6 +3,7 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString();
 const formattedLastUpdate = new Date(frontmatter.lastUpdate).toLocaleDateString();
+import Button from "../components/Button.astro";
 ---
 
 <Layout

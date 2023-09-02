@@ -17,7 +17,7 @@ We spend 1/3rd of our life sleeping. But why do we sleep? Do we live in a sleep 
 
 (toc)
 
-# Why Everyone Needs To Sleep
+## Why Everyone Needs To Sleep
 
 Everyone sleeps. But why?
 
@@ -35,21 +35,22 @@ Lack of sleep is also linked to worse self-control, a more abusive nature of beh
 It is also scientifically proven that missing sleep makes you less attractive and impacts reproductive systems in various ways.
 Men experiencing sleep loss will have significantly lower testosterone virility which also leads to feeling tired more often and having trouble concentrating. Women experience a drop in follicular-releasing hormones, have a higher chance of abnormal menstrual cycles and issues of sub-fertility reducing the ability to get pregnant.
 
-# Common Misconceptions About Sleep
+## Common Misconceptions About Sleep
 
-    - When you're sleep deprived, you don't know how sleep deprived you are.
-    You can't sleep back any missed sleep.
-    Missing sleep makes you take longer for any task, even just dressing yourself.
-    Teenagers become tired later in the day due to changes in their circadian rhythm.
-    There are "night owls" and "morning larks". The peaks and lows in the rhythm of every person are different. These are heavily influenced by their chronotype.
-    Older adults still need just as much sleep as younger adults. Lack of sleep in older adults is associated with an increased risk of poor health.
-    Taking sleeping pills does not guarantee natural sleep. Sleeping pills have numerous downsides (insomnia, poor quality sleep, health risks) and the benefits are minimal at best. CBT-I therapy for insomnia is a great behavioral alternative.
+- **When you're sleep deprived, you don't know how sleep deprived you are.**
+- **You can't sleep back any missed sleep.**
+- **Missing sleep makes you take longer for any task**, even just dressing yourself.
+-** Teenagers become tired later in the day** due to changes in their circadian rhythm.
+- **There are "night owls" and "morning larks".** The peaks and lows in the rhythm of every person are different. These are heavily influenced by their chronotype.
+- **Older adults still need just as much sleep as younger adults.** Lack of sleep in older adults is associated with an increased risk of poor health.
+- **Taking sleeping pills does not guarantee natural sleep.** Sleeping pills have numerous downsides (insomnia, poor quality sleep, health risks) and the benefits are minimal at best. CBT-I therapy for insomnia is a great behavioural alternative.
 
-How Sleeping Works
+## How Sleeping Works
 
 Mainly two factors regulate wakefulness and sleep, the circadian rhythm and sleep pressure (also called sleep drive).
-Circadian Rhythm & Sleep Pressure(Sleep drive)
-Circadian Rhythm
+Circadian Rhythm & Sleep Pressure(Sleep drive).
+
+### Circadian Rhythm
 
 Circadian rhythm is your inner 24-hour rhythm. It not only controls when you are awake or asleep, but it also includes your preferred time for drinking, mood, emotions, metabolic rate and release of different hormones.
 
@@ -72,9 +73,10 @@ Often mentioned on the topic of sleep is melatonin but it is also frequently mis
 Melatonin commences the event of sleep. It has little influence on generating sleep itself. Its main task is signaling the begin of night-time throughout the organism. Rise of melatonin in the body begins begins soon after dusk.
 
 Once sleep is under way it slowly decreases in concentration across the night. As sunlight enters the eyes the next morning, even through closed lids, the release of melatonin is stopped.
-Sleep Pressure
 
-Sleep pressure is the second of two factors determining wake and sleep.
+### Sleep Pressure
+
+**Sleep pressure** is the second of two factors determining wake and sleep.
 
 How is sleep pressure formed?
 
@@ -92,7 +94,8 @@ the urge to sleep
 As illustrated in the image, the bigger the difference between the circadian rhythm (Process-C) and the sleep pressure by adenosine (Process-S) the greater the urge to sleep. During the morning the difference is minimal, meaning there is a strong urge to be awake and alert. In the night (around 23:00 in the example above) the urge is the greatest.
 
 In the example above we assume the person goes to sleep at 23:00 and has 8 hours of sleep.
-Did we always sleep like this?
+
+### Did we always sleep like this?
 
 Humans used to sleep in a biphasic pattern. Now most people in developed nations sleep in a monophasic pattern.
 
@@ -103,7 +106,8 @@ The origin of biphasic sleep is not cultural, it is deeply biological. The true 
 Often we can feel the remains of this as we experience some drowsiness during mid-afternoon, just after the high-degree wakefulness that is the early-afternoon.
 
 Biphasic sleep is still practised by cultures throughout the world. In small enclaves of Greece where siestas still remain intact such as the island of Ikaria man are much more likely to reach the age of ninety compared to American males. The book states it to be nearly four times as likely but there are no statistics to back these claims (more on that later).
-Sleep Stages
+
+## Sleep Stages
 
 There are two main types of sleep, REM sleep (rapid eye movement) and NREM (non–rapid eye movement) sleep. During a night of sleep we experience both stages of sleep multiple times in a somewhat repeating cycle.
 
@@ -116,36 +120,35 @@ NREM sleep can be further divided into 4 stages. The deeper into the stages the 
 architecture of sleep
 
 REM sleep is vital for processing information. Which is why sacrificing sleep to study is a lost battle, as new insights are not actually kept in the brain due to missed sleep.
-How To Sleep Better
+
+## How To Sleep Better
 
 There are multiple things you can do to improve your sleep. The National Institute of Health offers 12 key tips for better sleep:
 
-    Stick to a schedule
-    Go to bed and wake up at the same time each day. Having an alarm clock for when you want to go to sleep might be very helpful.
-    Exercise
-    Try to exercise at least 30 minutes on most days but not later than 2 or 3 hours before sleep.
-    Avoid caffeine and nicotine
-    Coffee, colas, certain teas and chocolate all contain caffeine. Can take up to 8 hours before the effect wears off. A cup of coffee in the afternoon can already make it harder for you to fall asleep.
-    Nicotine is another stimulant that causes light sleep. It also causes smoker to wake up too early in the morning due to nicotine withdrawal.
-    Avoid alcoholic drinks before bed
-    Alcohol robs you of REM sleep causing it to have a strong negative effect on memory formation. REM sleep is important for memory integration and association. It can also cause impairment of breathing at night. Overall is causes lighter sleep and worse sleep quality.
-    Avoid large meals and beverages just before sleeping
-    They can cause indigestion and you might have to interrupt your sleep to go to the bathroom.
-    If possible, avoid medicine that delay or disrupt sleep
-    Many medications disrupt sleep patterns. When you have trouble sleeping ask your health care provider if it is possible to take the sleep disrupting medicine during times of the day that is not right before bedtime.
-    No naps after 15:00
-    Late afternoon naps can make it harder to fall asleep at night.
-    Relax before bed
-    Have time for unwinding. Maybe have a bedtime ritual with an relaxing activity.
-    Take a hot bath before bed
-    The drop in body temperature can help you feel sleepy. The bath can also help you relax.
-    Have a bedroom that is dark, cold and gadget free
-    Get rid of anything that might distract from sleep such as noise, light or an uncomfortable bed. Gadgets such as a TV in the bedroom can also be a distraction and rob you from sleep. A comfortable mattress and pillow also contribute to better sleep. Turn clock's faces out of view so you don't worry about the time when trying to sleep.
-    Keep the bedroom cold, around 18/19°C.
-    Have the right sunlight exposure
-    Daylight is key to regulating daily sleep patters. If possible wake up with the sun or use very bright lights in the morning. It is also recommended to get sunlight exposure in the morning and turn down lights before bedtime.
+1.  **Stick to a schedule**<br/>
+   Go to bed and wake up at the same time each day. Having an alarm clock for when you want to go to sleep might be very helpful.
+2.  **Exercise**<br/>
+   Try to exercise at least 30 minutes on most days but not later than 2 or 3 hours before sleep.
+3. **Avoid caffeine and nicotine**<br/>
+   Coffee, colas, certain teas and chocolate all contain caffeine. Can take up to 8 hours before the effect wears off. A cup of coffee in the afternoon can already make it harder for you to fall asleep. Nicotine is another stimulant that causes light sleep. It also causes smoker to wake up too early in the morning due to nicotine withdrawal.
+4. **Avoid alcoholic drinks before bed**<br/>
+   Alcohol robs you of REM sleep causing it to have a strong negative effect on memory formation. REM sleep is important for memory integration and association. It can also cause impairment of breathing at night. Overall is causes lighter sleep and worse sleep quality.
+5. **Avoid large meals and beverages just before sleeping**<br/>
+   They can cause indigestion and you might have to interrupt your sleep to go to the bathroom.
+6. **If possible, avoid medicine that delay or disrupt sleep**<br/>
+   Many medications disrupt sleep patterns. When you have trouble sleeping ask your health care provider if it is possible to take the sleep disrupting medicine during times of the day that is not right before bedtime.
+7. **No naps after 15:00**<br/>
+   Late afternoon naps can make it harder to fall asleep at night.
+8. **Relax before bed**<br/>
+   Have time for unwinding. Maybe have a bedtime ritual with an relaxing activity.
+9. **Take a hot bath before bed**<br/>
+   The drop in body temperature can help you feel sleepy. The bath can also help you relax.
+10. **Have a bedroom that is dark, cold and gadget free**<br/>
+    Get rid of anything that might distract from sleep such as noise, light or an uncomfortable bed. Gadgets such as a TV in the bedroom can also be a distraction and rob you from sleep. A comfortable mattress and pillow also contribute to better sleep. Turn clock's faces out of view so you don't worry about the time when trying to sleep.<br/>Keep the bedroom cold, around 18/19°C.
+11. **Have the right sunlight exposure**<br/>
+    Daylight is key to regulating daily sleep patters. If possible wake up with the sun or use very bright lights in the morning. It is also recommended to get sunlight exposure in the morning and turn down lights before bedtime.<br/>
     Andrew Huberman from the Huberman Lab podcast is often quoted in his daily routine to get morning sunlight:" 2-10 minutes of sunlight exposure while walking for optic flow" is what he recommends.
-    Don't lie awake in bed
+12. **Don't lie awake in bed**<br/>
     If you stay in bed awake for more than 20 minutes or find yourself feeling anxious, get up and do something relaxing until you feel sleepy.
 
 There are more ways to improve your sleep that have not been listed here obviously. Remember to give yourself enough sleep opportunity. To sleep 8 hours you need more than 8 hours of sleep opportunity. Even more than 8h30 maybe.
@@ -160,23 +163,23 @@ A keen eye might have noticed that the National Institute of Health does not adv
 
 Around 8 hours of sleep are a good benchmark for many. How much sleep each person wants and needs is highly individual.
 There are many people that need less or more. Give yourself enough sleep opportunity and don't force yourself to sleep more than "needed", if you feel refreshed and wake after 7 1/2 hours of sleep then continue doing so if that works for you. But if you need more than 8 hours of sleep also give yourself the opportunity to do so. If you feel chronically tired even after trying to improve sleep hygiene consult a doctor.
-Quotes
+
+## Quotes
 
 While reading the book I found valuable and entertaining passages I would like to share.
-Important Quotes
 
-    "With our rich new scientific understanding of sleep, we no longer have to ask why sleep is good for us. Instead, we can't help but wonder if there are biological functions that don't conducive to good sleep. So far, thousands of studies have shown otherwise." claim."
-    "The overnight work of REM sleep, which normally assimilates complex memory knowledge, had been interfered with by the alcohol. More surprising, perhaps, was the realization that the brain is not done processing that knowledge after the first night of sleep. Memories remain perilously vulnerable to any disruption of sleep (including that from alcohol) even up to three nights after learning, despite two full nights of natural sleep prior."
+<small><q>With our rich new scientific understanding of sleep, we no longer have to ask why sleep is good for us. Instead, we can't help but wonder if there are biological functions that don't conducive to good sleep. So far, thousands of studies have shown otherwise.</q></small>
 
-Entertaining Quotes
+<small><q>The overnight work of REM sleep, which normally assimilates complex memory knowledge, had been interfered with by the alcohol. More surprising, perhaps, was the realization that the brain is not done processing that knowledge after the first night of sleep. Memories remain perilously vulnerable to any disruption of sleep (including that from alcohol) even up to three nights after learning, despite two full nights of natural sleep prior.</q></small>
 
-    "But my favorite is the shredder. At night, you slide paper bills (e.g. $20) in front of the clock. When the alarm goes off in the morning, you have less time to wake up. Turn off the alarm before it starts shredding your money."
-    "Things get even more interesting when birds group together. In some species, many of the birds in a flock will sleep with both halves of the brain at the same time.
-    How do they remain safe from threat?
-    The answer is truly ingenious. The flock will first line up in a row. With the exception of the birds at each end of the line, the rest of the group will allow both halves of the brain to indulge in sleep. Those at the far left and right ends of the row aren’t so lucky. They will enter deep sleep with just one half of the brain (opposing in each), leaving the corresponding left and right eye of each bird wide open.
-    In doing so, they provide full panoramic threat detection for the entire group, maximizing the total number of brain halves that can sleep within the flock. At some point, the two end-guards will stand up, rotate 180 degrees, and sit back down, allowing the other side of their respective brains to enter deep sleep."
+<small><q>But my favorite is the shredder. At night, you slide paper bills (e.g. $20) in front of the clock. When the alarm goes off in the morning, you have less time to wake up. Turn off the alarm before it starts shredding your money.</q></small>
 
-My Thoughts On "Why We Sleep" By Matthew Walker
+<small><q>Things get even more interesting when birds group together. In some species, many of the birds in a flock will sleep with both halves of the brain at the same time.
+How do they remain safe from threat?
+The answer is truly ingenious. The flock will first line up in a row. With the exception of the birds at each end of the line, the rest of the group will allow both halves of the brain to indulge in sleep. Those at the far left and right ends of the row aren’t so lucky. They will enter deep sleep with just one half of the brain (opposing in each), leaving the corresponding left and right eye of each bird wide open.
+In doing so, they provide full panoramic threat detection for the entire group, maximizing the total number of brain halves that can sleep within the flock. At some point, the two end-guards will stand up, rotate 180 degrees, and sit back down, allowing the other side of their respective brains to enter deep sleep.</q></small>
+
+<h2 class="highlight-header gradient-background">My Thoughts On "Why We Sleep" By Matthew Walker<h2>
 
 Most of the content for this post here has been inspired from "Why We Sleep" by Matthew Walker.
 Is Why We Sleep Worth Reading?
