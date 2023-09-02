@@ -179,7 +179,10 @@ How do they remain safe from threat?
 The answer is truly ingenious. The flock will first line up in a row. With the exception of the birds at each end of the line, the rest of the group will allow both halves of the brain to indulge in sleep. Those at the far left and right ends of the row aren’t so lucky. They will enter deep sleep with just one half of the brain (opposing in each), leaving the corresponding left and right eye of each bird wide open.
 In doing so, they provide full panoramic threat detection for the entire group, maximizing the total number of brain halves that can sleep within the flock. At some point, the two end-guards will stand up, rotate 180 degrees, and sit back down, allowing the other side of their respective brains to enter deep sleep.</q></small>
 
-<h2 class="highlight-header">My Thoughts On "Why We Sleep" By Matthew Walker<h2>
+</section>
+
+<section>
+<h2 class="highlight-header gradient-background">My Thoughts On "Why We Sleep" By Matthew Walker<h2>
 
 Most of the content for this post here has been inspired from "Why We Sleep" by Matthew Walker.
 Is Why We Sleep Worth Reading?

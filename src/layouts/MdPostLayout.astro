@@ -19,7 +19,7 @@ import Button from "../components/Button.astro";
       height={frontmatter.coverImage.height}
     />
   </div>
-  <div class="blog">
+  <article class="blog">
     <h1 class="text-align-center">{frontmatter.title}</h1>
     <section class="main text-section">
       <slot />
@@ -29,7 +29,7 @@ import Button from "../components/Button.astro";
         <p>Last update: {formattedLastUpdate}</p>
       </div>
     </section>
-  </div>
+  </article>
 </Layout>
 
 <style>
