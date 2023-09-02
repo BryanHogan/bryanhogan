@@ -13,11 +13,13 @@ lastUpdate: 2023-08-24
 tags: ["health", "learning", "book","productivity"]
 length: Long
 ---
-Why Everyone Needs To Sleep
+We spend 1/3rd of our life sleeping. But why do we sleep? Do we live in a sleep loss epidemic?
+
+(toc)
+
+# Why Everyone Needs To Sleep
 
 Everyone sleeps. But why?
-
-<h2 id="headst"> Testing </h2>
 
 Sleep has been shown to be a basic need for nearly all species on Earth. Almost all animals sleep.
 
@@ -32,9 +34,10 @@ Lack of sleep is also linked to worse self-control, a more abusive nature of beh
 
 It is also scientifically proven that missing sleep makes you less attractive and impacts reproductive systems in various ways.
 Men experiencing sleep loss will have significantly lower testosterone virility which also leads to feeling tired more often and having trouble concentrating. Women experience a drop in follicular-releasing hormones, have a higher chance of abnormal menstrual cycles and issues of sub-fertility reducing the ability to get pregnant.
-Common Misconceptions About Sleep
 
-    When you're sleep deprived, you don't know how sleep deprived you are.
+# Common Misconceptions About Sleep
+
+    - When you're sleep deprived, you don't know how sleep deprived you are.
     You can't sleep back any missed sleep.
     Missing sleep makes you take longer for any task, even just dressing yourself.
     Teenagers become tired later in the day due to changes in their circadian rhythm.
@@ -214,15 +217,15 @@ I have forgotten the original source of where I had found it for the first time 
 
     Body Scan
     Body scans are a type of meditation that feature a slow, focused attention to different parts of the body. Once you’re lying comfortably in bed, try these steps for a relaxing body scan:
-
+    
     1. Start by taking a few deep breaths, perhaps trying diaphragmatic or 4-7-8 breathing, to get your body into a relaxed state.
-
+    
     2. Bring your attention to your feet, noticing any sensations in your toes and if you’re holding any tension in this part of the body.
-
+    
     3. If you notice discomfort here, acknowledge it and try to let go of any thoughts of stories you have. Visualize the tension leaving the body through the breath.
-
+    
     4. When you’re ready, move your focus to your calf muscles, repeating the process of noticing sensations, letting go of thoughts or stories, and visualizing the tension leaving through your breath.
-
+    
     5. Methodically move your attention to each part of your body, one-by one, moving from your feet to your forehead until you’ve scanned your entire body.
 
 Sources
