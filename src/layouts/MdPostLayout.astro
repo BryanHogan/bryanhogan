@@ -6,6 +6,7 @@ const formattedLastUpdate = new Date(
   frontmatter.lastUpdate
 ).toLocaleDateString();
 import Button from "../components/Button.astro";
+import NewsletterCallout from "../components/NewsletterCallout.astro";
 ---
 
 <Layout
@@ -30,6 +31,7 @@ import Button from "../components/Button.astro";
       <p>Last update: {formattedLastUpdate}</p>
     </div>
   </article>
+  <NewsletterCallout/>
 </Layout>
 
 <style>

@@ -40,7 +40,7 @@ Men experiencing sleep loss will have significantly lower testosterone virility 
 - **When you're sleep deprived, you don't know how sleep deprived you are.**
 - **You can't sleep back any missed sleep.**
 - **Missing sleep makes you take longer for any task**, even just dressing yourself.
--** Teenagers become tired later in the day** due to changes in their circadian rhythm.
+- **Teenagers become tired later in the day** due to changes in their circadian rhythm.
 - **There are "night owls" and "morning larks".** The peaks and lows in the rhythm of every person are different. These are heavily influenced by their chronotype.
 - **Older adults still need just as much sleep as younger adults.** Lack of sleep in older adults is associated with an increased risk of poor health.
 - **Taking sleeping pills does not guarantee natural sleep.** Sleeping pills have numerous downsides (insomnia, poor quality sleep, health risks) and the benefits are minimal at best. CBT-I therapy for insomnia is a great behavioural alternative.
