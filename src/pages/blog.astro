@@ -45,6 +45,7 @@ import Layout from "../layouts/Layout.astro";
             description={post.frontmatter.description}
             ahref={post.url}
             coverURL={post.frontmatter.coverImage.url}
+            transition:name={post.frontmatter.coverImage.url}
             coverALT={post.frontmatter.coverImage.alt}
             coverWidth={post.frontmatter.coverImage.width}
             coverHeight={post.frontmatter.coverImage.height}
