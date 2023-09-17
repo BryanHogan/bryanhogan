@@ -20,6 +20,7 @@ We spend 1/3rd of our life sleeping. But why do we sleep? Do we live in a sleep 
 ## Why Everyone Needs To Sleep
 
 Everyone sleeps. But why?
+<Image src={coverImage.url} alt="test image" />
 
 Sleep has been shown to be a basic need for nearly all species on Earth. Almost all animals sleep.
 
@@ -49,6 +50,8 @@ Men experiencing sleep loss will have significantly lower testosterone virility 
 
 Mainly two factors regulate wakefulness and sleep, the circadian rhythm and sleep pressure (also called sleep drive).
 Circadian Rhythm & Sleep Pressure(Sleep drive).
+
+
 
 ### Circadian Rhythm
 
