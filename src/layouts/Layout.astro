@@ -3,8 +3,9 @@ interface Props {
   title: string;
   metaDescription: string;
   headerMode: string;
+  ogtype: string;
 }
-const { title, metaDescription, headerMode } = Astro.props;
+const { title, metaDescription, headerMode, ogtype } = Astro.props;
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
