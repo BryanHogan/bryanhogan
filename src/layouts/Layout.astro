@@ -9,7 +9,7 @@ const { title, metaDescription, headerMode, ogtype } = Astro.props;
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import previewImage from "../../public/images/Bryan-Hogan-Preview.jpg"
+import previewImage from "../../public/images/Bryan-Hogan-Preview.jpg";
 ---
 
 <!DOCTYPE html>
@@ -19,6 +19,11 @@ import previewImage from "../../public/images/Bryan-Hogan-Preview.jpg"
     <meta http-equiv="content-Type" content="text/html; utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={metaDescription} />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/logos/Bryan-Hogan-Gradient-Logo-Af-Ex.ico"
+    />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -38,7 +43,7 @@ import previewImage from "../../public/images/Bryan-Hogan-Preview.jpg"
     <meta property="og:type" content="website" />
     <meta property="og:url" content="bryanhogan.com" />
     <meta property="og:description" content={metaDescription} />
-    <meta property="og:image" content="/images/Bryan-Hogan-Preview.jpg"/>
+    <meta property="og:image" content="/images/Bryan-Hogan-Preview.jpg" />
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
