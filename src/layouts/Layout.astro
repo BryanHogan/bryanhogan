@@ -9,6 +9,7 @@ const { title, metaDescription, headerMode, ogtype } = Astro.props;
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
@@ -46,6 +47,7 @@ import Footer from "../components/Footer.astro";
       property="og:image:alt"
       content="Bold prominent BryanHogan.com text in the middle with small round picture of Bryan Hogan smiling above"
     />
+    <ViewTransitions />
   </head>
 
   <body>
