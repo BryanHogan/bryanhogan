@@ -12,6 +12,7 @@ To Do's For Me
     - Layout layout have to seperate area: 1. header 2. body
     - Use stro sitemap integration
     - Use Astro Image integration (+ sharp)
+    - Favicon stuff (good icons for phone home shortcuts)
 
 - Header
     - Smooth fade out not working for Firefox (How's Safari looking?)

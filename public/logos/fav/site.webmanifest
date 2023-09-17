@@ -1,0 +1,6 @@
+{
+    "icons": [
+      { "src": "./Bryan-Hogan-Logo-Gradient-192x.png", "type": "image/png", "sizes": "192x192" },
+      { "src": "./Bryan-Hogan-Logo-Gradient-512x.png", "type": "image/png", "sizes": "512x512" }
+    ]
+  }
