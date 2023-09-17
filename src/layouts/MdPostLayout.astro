@@ -5,8 +5,9 @@ const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString();
 const formattedLastUpdate = new Date(
   frontmatter.lastUpdate
 ).toLocaleDateString();
-import Button from "../components/Button.astro";
 import NewsletterCallout from "../components/NewsletterCallout.astro";
+import testimage from "../assets/blog/why-we-sleep/Why-We-Sleep-Body-Temperature-Rhythm.png"
+import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -26,6 +27,7 @@ import NewsletterCallout from "../components/NewsletterCallout.astro";
   </div>
   <article class="blog text-section">
     <h1 class="text-align-center">{frontmatter.title}</h1>
+    <Image src={testimage} alt="test image" />
     <slot />
     <div class="infos">
       <p>Written by {frontmatter.author}</p>
