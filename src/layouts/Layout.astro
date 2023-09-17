@@ -277,6 +277,11 @@ import { ViewTransitions } from "astro:transitions";
       word-break: break-word;
       color: var(--color-main-accent);
     }
+    & img {
+      object-fit:scale-down;
+      width: 100%;
+      height: auto;
+    }
     & > * {
       grid-column: 2 / 3;
       max-width: 700px;
