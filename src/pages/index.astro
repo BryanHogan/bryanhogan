@@ -4,25 +4,25 @@ import Button from "../components/Button.astro";
 ---
 
 <Layout title="Bryan Hogan" metaDescription="Bryan Hogan's site. Bryan's Blog, newsletter, portfolio and more." headerMode="Home" ogtype="website">
-  <section class="gradient-background">
+  <section class="">
     <div class="button-group">
       <Button
         link="/blog"
         text="Blog"
         targetText=""
-        buttonStyle="transparent-bright large inset-dark-shadow"
+        buttonStyle="bright large grow"
       />
       <Button
         link="/follow"
         text="Follow"
         targetText=""
-        buttonStyle="transparent-bright large inset-dark-shadow"
+        buttonStyle="bright large grow"
       />
       <Button
         link="/portfolio"
         text="Portfolio"
         targetText=""
-        buttonStyle="transparent-bright large inset-dark-shadow"
+        buttonStyle="bright large grow"
       />
     </div>
   </section>
@@ -30,7 +30,7 @@ import Button from "../components/Button.astro";
 
 <style>
     .button-group {
-        height: 70vh;
+        height: 50vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
