@@ -20,7 +20,12 @@ We spend 1/3rd of our life sleeping. But why do we sleep? Do we live in a sleep 
 ## Why Everyone Needs To Sleep
 
 Everyone sleeps. But why?
-<Image src={coverImage.url} alt="test image" />
+![test 1](/images/Bryan-Hogan-Preview.png)
+```´´´![test 1](../../assets/test.png)´´´```
+
+
+
+3
 
 Sleep has been shown to be a basic need for nearly all species on Earth. Almost all animals sleep.
 
