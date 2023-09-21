@@ -4,6 +4,7 @@ This site includes my blog and portfolio.
 To Do's For Me
 
 - General
+  - add RSS icon & link
     -  Images
       - Large image previews? AMP?
       - Add licensing informtion
