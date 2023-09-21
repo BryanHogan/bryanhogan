@@ -5,7 +5,7 @@ interface Props {
   headerMode: string;
   ogtype: string;
 }
-const { title, metaDescription, headerMode, ogtype } = Astro.props;
+const { title, metaDescription, headerMode, ogtype = "website"} = Astro.props;
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
