@@ -94,12 +94,18 @@ import { ViewTransitions } from "astro:transitions";
     --medium-gap: 4em;
     --large-gap: 8em;
 
-    --gradient-background: linear-gradient(
+    --gradient-backgrounda-brighter: linear-gradient(
       140deg,
       #af81cd,
       #767fd1,
       #8fb8cd,
       #32ccdf
+    );
+    --gradient-background: linear-gradient(
+      140deg,
+      #af81cd,
+      #767fd1,
+      #8fb8cd
     );
   }
 
@@ -225,13 +231,7 @@ import { ViewTransitions } from "astro:transitions";
   }
   .gradient-background {
     background-color: #767fd1;
-    background-image: linear-gradient(
-      140deg,
-      #af81cd,
-      #767fd1,
-      #8fb8cd,
-      #32ccdf
-    );
+    background-image: var(--gradient-background);
   }
   .gradient-background-darker {
     background-color: #767fd1;
