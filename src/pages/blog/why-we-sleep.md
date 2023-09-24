@@ -21,7 +21,7 @@ We spend 1/3rd of our life sleeping. But why do we sleep? Do we live in a sleep 
 
 Everyone sleeps. But why?
 ![test 1](/images/Bryan-Hogan-Preview.png)
-```´´´![test 1](../../assets/test.png)´´´```
+![test 1](../../assets/test.png)
 
 
 
