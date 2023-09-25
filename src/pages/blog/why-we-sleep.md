@@ -20,12 +20,6 @@ We spend 1/3rd of our life sleeping. But why do we sleep? Do we live in a sleep 
 ## Why Everyone Needs To Sleep
 
 Everyone sleeps. But why?
-![test 1](/images/Bryan-Hogan-Preview.png)
-![test 1](../../assets/test.png)
-
-
-
-3
 
 Sleep has been shown to be a basic need for nearly all species on Earth. Almost all animals sleep.
 
@@ -70,7 +64,7 @@ Solar light systematically resets an inaccurate internal timer. Daylight is the 
 All signals that the brain uses for this purpose are called "Zeitgeber".
 
 Circadian rhythms even determine body temperature.
-body temperature throughout a day
+k
 
 Although every human has a 24-hour pattern, the highs and lows are different for each. An important role in this is their chronotype.
 
@@ -97,7 +91,7 @@ Caffeine has a half-life of about five to seven hours, the amount of time it tak
 The "jolt" of caffeine does wear off as it removed from your system by an enzyme in your liver. How effective it is is different from person to person. Generally the older we are the longer it takes for caffeine to clear and the more sensitive we are to its sleep-disrupting influence.
 
 While sleeping the brain starts removing the adenosine. After about 8 hours of sleep in an healthy adult the adenosine purge is complete.
-the urge to sleep
+urge to sleep--
 
 As illustrated in the image, the bigger the difference between the circadian rhythm (Process-C) and the sleep pressure by adenosine (Process-S) the greater the urge to sleep. During the morning the difference is minimal, meaning there is a strong urge to be awake and alert. In the night (around 23:00 in the example above) the urge is the greatest.
 
@@ -125,7 +119,7 @@ A key function of NREM sleep which predominates early in the night is to remove 
 REM sleep in contrast, the dreaming stage, prevails in strengthening connections.
 
 NREM sleep can be further divided into 4 stages. The deeper into the stages the deeper the sleep is and the further brain activity slows down.
-architecture of sleep
+architecture of sleep--
 
 REM sleep is vital for processing information. Which is why sacrificing sleep to study is a lost battle, as new insights are not actually kept in the brain due to missed sleep.
 
