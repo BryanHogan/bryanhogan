@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Page not found"
+    metaDescription="This page is empty."
+    headerMode="Home"
+    ogtype="404"
+>
+    <div class="content-container">
+        <h1>The Page You Requested Could Not Be Found<br />404</h1>
+        <p>Sorry.</p>
+    </div>
+</Layout>
+<style>
+    .content-container {
+        text-align: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 80vh;
+    }
+</style>
