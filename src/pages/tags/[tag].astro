@@ -20,7 +20,7 @@ const filteredPosts = posts.filter((post) => post.frontmatter.tags?.includes(tag
 
 ---
 
-<Layout title={tag} metaDescription="About this tag" headerMode="Home">
+<Layout title={tag} metaDescription="About this tag" headerMode="Home" ogtype="website">
   <p>Posts tagged with {tag}</p>
   <ul>
     {filteredPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
