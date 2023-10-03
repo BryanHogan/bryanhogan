@@ -50,7 +50,7 @@ Men experiencing sleep loss will have significantly lower testosterone virility 
 Mainly two factors regulate wakefulness and sleep, the circadian rhythm and sleep pressure (also called sleep drive).
 Circadian Rhythm & Sleep Pressure(Sleep drive).
 
-
+![Text saying: "Circadian Rhythm & Sleep Pressure"](../../assets/blog/Why-We-Sleep-Circadian-Rhythm-And-Sleep-Pressure.png)
 
 ### Circadian Rhythm
 
@@ -64,7 +64,7 @@ Solar light systematically resets an inaccurate internal timer. Daylight is the 
 All signals that the brain uses for this purpose are called "Zeitgeber".
 
 Circadian rhythms even determine body temperature.
-k
+![Body temperature throughout the day.](../../assets/blog/Why-We-Sleep-Body-Temperature-Rhythm.png)
 
 Although every human has a 24-hour pattern, the highs and lows are different for each. An important role in this is their chronotype.
 
@@ -91,7 +91,8 @@ Caffeine has a half-life of about five to seven hours, the amount of time it tak
 The "jolt" of caffeine does wear off as it removed from your system by an enzyme in your liver. How effective it is is different from person to person. Generally the older we are the longer it takes for caffeine to clear and the more sensitive we are to its sleep-disrupting influence.
 
 While sleeping the brain starts removing the adenosine. After about 8 hours of sleep in an healthy adult the adenosine purge is complete.
-urge to sleep--
+![The urge to sleep.](../../assets/blog/Why-We-Sleep-The-Urge-To-Sleep.png)
+
 
 As illustrated in the image, the bigger the difference between the circadian rhythm (Process-C) and the sleep pressure by adenosine (Process-S) the greater the urge to sleep. During the morning the difference is minimal, meaning there is a strong urge to be awake and alert. In the night (around 23:00 in the example above) the urge is the greatest.
 
@@ -119,7 +120,8 @@ A key function of NREM sleep which predominates early in the night is to remove 
 REM sleep in contrast, the dreaming stage, prevails in strengthening connections.
 
 NREM sleep can be further divided into 4 stages. The deeper into the stages the deeper the sleep is and the further brain activity slows down.
-architecture of sleep--
+![Architecture of sleep.](../../assets/blog/Why-We-Sleep-Architecture-Of-Sleep.png)
+
 
 REM sleep is vital for processing information. Which is why sacrificing sleep to study is a lost battle, as new insights are not actually kept in the brain due to missed sleep.
 
