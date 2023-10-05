@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "new-age.md",
+                "file": "why-we-sleep.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "new-age.md",
+                "file": "why-we-sleep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "new-age.md",
+                "file": "why-we-sleep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "new-age.md"
+                "file": "why-we-sleep.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "196874a994cca15a",
   "lastOpenFiles": [
-    "zettelkasten.md",
     "new-age.md",
+    "zettelkasten.md",
     "why-we-sleep.md"
   ]
 }

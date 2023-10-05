@@ -248,7 +248,7 @@ import { ViewTransitions } from "astro:transitions";
   /*  ====================
     5 - Blog Related
     ==================== */
-  .blog {
+    .blog {
     display: grid;
     grid-template-columns: 1fr 16fr 1fr;
     & h1 {
@@ -293,6 +293,15 @@ import { ViewTransitions } from "astro:transitions";
       }
       & li:not(:last-child) {
         padding-bottom: 10px;
+      }
+    }
+    .toc {
+      & li {
+        padding: 0px;
+        font-size: 1rem;
+      }
+      & ul li, ol li {
+        margin-left: 2em;
       }
     }
   }
