@@ -3,7 +3,7 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString();
 const formattedLastUpdate = new Date(
-  frontmatter.lastUpdate
+  frontmatter.lastUpdate,
 ).toLocaleDateString();
 import NewsletterCallout from "../components/NewsletterCallout.astro";
 ---
@@ -23,6 +23,24 @@ import NewsletterCallout from "../components/NewsletterCallout.astro";
       transition:name={frontmatter.coverImage.url}
     />
   </div>
+  <div class="second-menu-section">
+    <ul>
+      <li>
+        <button onclick="
+        history.back()
+        " class="">
+          <img
+            class="arrow-back"
+            src="../icons/Arrow-Left-Icon.svg"
+            alt="Arrow pointing left indicating its usage to be clickable to go to the previous page."
+            height="16"
+            width="16"
+            title="Go Back"
+          />
+        </button>
+      </li>
+    </ul>
+  </div>
   <article class="blog text-section">
     <h1 class="text-align-center">{frontmatter.title}</h1>
     <slot />
@@ -32,12 +50,37 @@ import NewsletterCallout from "../components/NewsletterCallout.astro";
       <p>Last update: {formattedLastUpdate}</p>
     </div>
   </article>
-  <NewsletterCallout/>
+  <NewsletterCallout />
 </Layout>
 
 <style>
   p {
     text-align: start;
+  }
+  .second-menu-section {
+    display: flex;
+    flex-direction: row;
+    & li {
+      padding: 1em;
+      padding-bottom: 0;
+    }
+    & button {
+      background-color: var(--color-main-dark);
+      border: none;
+    }
+  }
+  .arrow-back {
+    transition: all 300ms;
+    filter: brightness(0) saturate(100%) invert(57%) sepia(6%) saturate(183%)
+      hue-rotate(169deg) brightness(92%) contrast(92%);
+    &:hover {
+      transition: all 200ms;
+      filter: brightness(0) saturate(100%) invert(86%) sepia(2%) saturate(892%)
+        hue-rotate(187deg) brightness(114%) contrast(88%);
+    }
+    & img {
+      height: 0.8em;
+    }
   }
   .infos {
     border-top: 1px solid var(--color-main-bright);
@@ -63,7 +106,8 @@ import NewsletterCallout from "../components/NewsletterCallout.astro";
     text-align: center;
   }
   .gradient-background {
-    height: 300px;
+    min-height: 250px;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
