@@ -202,32 +202,31 @@ Why? Was knowing the harsh reality of knowing that missing too much sleep will r
 
 Early on in the book you will learn that the World Health Organization has declared a sleep loss epidemic throughout industrialized nations, that is wrong. They never did.
 
-Negative percentages are using wrongly multiple times throughout the book. Reducing a positive number by a 100% bring it down to 0.  But according to Walker, residents who are limited to no more than a 16h shift, with at least an 8h rest opportunity before the next shift, make a negative number of mistakes. Walker even made this mistake in academic paper of his.
+Negative percentages are used wrongly multiple times throughout the book. Reducing a positive number by a 100% brings it down to 0.  But according to Walker, residents who are limited to no more than a 16h shift, with at least an 8h rest opportunity before the next shift, make a negative number of mistakes. Walker even made this mistake in academic paper of his.
 
 These two mistakes are just examples of many more that can be found.
 
-Many people seem to believe that they need 8 hours of sleep each night after reading the book, even if they lived well before by sleeping less. This leads to some people experiencing sleep anxiety as they can't seem to get these 8 hours. By experiencing that anxiety they become unable to sleep at all and ultimately have to seek sleep therapy where they have to unlearn untruthful facts of the book to sleep normal again
-Of course it seems like a common piece of advice to not take everything at face value but there are enough people that treat it as some sort of gospel, so be aware.
+Many people seem to believe that they need 8 hours of sleep each night after reading the book, even if they lived well before by sleeping less. This leads to some people experiencing sleep anxiety as they can't seem to get these 8 hours. By experiencing that anxiety they become unable to sleep at all and ultimately have to seek sleep therapy where they have to unlearn untruthful facts of the book to sleep normal again.
+Don't take everything at face value, this is true with this book and any other. There are enough people that treat it as some sort of gospel, so be aware.
 
 To conclude I definitely recommend Why We Sleep. It discuses a relevant area of our lives that isn't talked about enough.
 ## How Has Why We Sleep Helped Me?
 
-Why We Sleep has gave me and amazing overview and sleep and made me dive deeper into more concepts. It also made me more vary on fact checking books, even when written by a popular expert on a certain topic.
+Why We Sleep gave me a good overview of how sleep works and made me dive deeper into the concepts of sleep. It also made me more vary on fact checking books, even when written by a popular expert on a certain topic.
 
-To conclude I would also like to share a technique that helps me fall asleep quickly other than following the rules and practices mentioned previously.
+To conclude I would also like to share a technique that helps me fall asleep quickly other than just following the rules and practices mentioned previously.
 
 I have forgotten the original source of where I had found it for the first time but here they explain it well, they call it the "body scan" technique.
 
-Body Scan
 Body scans are a type of meditation that feature a slow, focused attention to different parts of the body. Once you’re lying comfortably in bed, try these steps for a relaxing body scan:
 
-1. Start by taking a few deep breaths, perhaps trying diaphragmatic or 4-7-8 breathing, to get your body into a relaxed state.
+1. Start by taking a few deep breaths, to get your body into a  state of relaxation.
 2. Bring your attention to your feet, noticing any sensations in your toes and if you’re holding any tension in this part of the body.
-3. If you notice discomfort here, acknowledge it and try to let go of any thoughts of stories you have. Visualize the tension leaving the body through the breath.
-4. When you’re ready, move your focus to your calf muscles, repeating the process of noticing sensations, letting go of thoughts or stories, and visualizing the tension leaving through your breath.
+3. If you notice discomfort here, acknowledge it and try to let go of any thoughts you have. Visualize the tension leaving the body through the breath.
+4. When you feel ready, shift your focus to your calf muscles, repeating the process of observing sensations, releasing thoughts, and visualizing tension leaving with each breath.
 5. Methodically move your attention to each part of your body, one-by one, moving from your feet to your forehead until you’ve scanned your entire body.
 
-Sources
+**Sources**
 - Why We Sleep by Matthew Walker
 - Matthew Walker's "Why We Sleep" Is Riddled with Scientific and Factual Errors (2022) - https://guzey.com/books/why-we-sleep/
 - Relaxation Exercises To Help Fall Asleep - https://www.sleepfoundation.org/sleep-hygiene/relaxation-exercises-to-help-fall-asleep
