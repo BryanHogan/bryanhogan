@@ -51,7 +51,7 @@ Mainly two factors regulate wakefulness and sleep, the circadian rhythm and slee
 Circadian Rhythm & Sleep Pressure(Sleep drive).
 
 ![Text saying: "Circadian Rhythm & Sleep Pressure"](../../assets/blog/Why-We-Sleep-Circadian-Rhythm-And-Sleep-Pressure.png)
-
+s
 ### Circadian Rhythm
 
 Circadian rhythm is your inner 24-hour rhythm. It not only controls when you are awake or asleep, but it also includes your preferred time for drinking, mood, emotions, metabolic rate and release of different hormones.
@@ -177,11 +177,6 @@ While reading the book I found valuable and entertaining passages I would like t
 <small><q>The overnight work of REM sleep, which normally assimilates complex memory knowledge, had been interfered with by the alcohol. More surprising, perhaps, was the realization that the brain is not done processing that knowledge after the first night of sleep. Memories remain perilously vulnerable to any disruption of sleep (including that from alcohol) even up to three nights after learning, despite two full nights of natural sleep prior.</q></small>
 
 <small><q>But my favorite is the shredder. At night, you slide paper bills (e.g. $20) in front of the clock. When the alarm goes off in the morning, you have less time to wake up. Turn off the alarm before it starts shredding your money.</q></small>
-
-<small><q>Things get even more interesting when birds group together. In some species, many of the birds in a flock will sleep with both halves of the brain at the same time.
-How do they remain safe from threat?
-The answer is truly ingenious. The flock will first line up in a row. With the exception of the birds at each end of the line, the rest of the group will allow both halves of the brain to indulge in sleep. Those at the far left and right ends of the row aren’t so lucky. They will enter deep sleep with just one half of the brain (opposing in each), leaving the corresponding left and right eye of each bird wide open.
-In doing so, they provide full panoramic threat detection for the entire group, maximizing the total number of brain halves that can sleep within the flock. At some point, the two end-guards will stand up, rotate 180 degrees, and sit back down, allowing the other side of their respective brains to enter deep sleep.</q></small>
 
 
 <div class="highlight-header"><h2>My Thoughts On "Why We Sleep" By Matthew Walker</h2></div>
