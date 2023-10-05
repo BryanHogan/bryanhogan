@@ -232,7 +232,7 @@ Why We Sleep gave me a good overview of how sleep works and made me dive deeper 
 
 To conclude I would also like to share a technique that helps me fall asleep quickly other than just following the rules and practices mentioned previously.
 
-I have forgotten the original source of where I had found it for the first time but here they explain it well, they call it the "body scan" technique.
+I have forgotten the original source of where I had found it for the first time but another page I found explains it well, they call it the "body scan" technique.
 
 Body scans are a type of meditation that feature a slow, focused attention to different parts of the body. Once you’re lying comfortably in bed, try these steps for a relaxing body scan:
 
