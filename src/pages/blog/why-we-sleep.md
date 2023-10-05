@@ -51,7 +51,7 @@ Mainly two factors regulate wakefulness and sleep, the circadian rhythm and slee
 Circadian Rhythm & Sleep Pressure(Sleep drive).
 
 ![Text saying: "Circadian Rhythm & Sleep Pressure"](../../assets/blog/Why-We-Sleep-Circadian-Rhythm-And-Sleep-Pressure.png)
-s
+
 ### Circadian Rhythm
 
 Circadian rhythm is your inner 24-hour rhythm. It not only controls when you are awake or asleep, but it also includes your preferred time for drinking, mood, emotions, metabolic rate and release of different hormones.
