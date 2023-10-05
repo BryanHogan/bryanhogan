@@ -4,6 +4,7 @@ This site includes my blog and portfolio.
 To Do's For Me
 
 - General
+  - make blog post image smaller on mobile & blog overview hero also smaller
   - add RSS icon & link
     -  Images
       - Large image previews? AMP?
