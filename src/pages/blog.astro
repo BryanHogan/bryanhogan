@@ -36,6 +36,7 @@ import Layout from "../layouts/Layout.astro";
       buttonStyle="transparent-bright small inset-dark-shadow"
     />
   </div>
+  <div class="sub-nav-section"><a href="#">Compact View</a> <a href="/tags">Tag Overview</a></div>
   <ul class="posts-container">
     {
       allPosts.map((post) => (
@@ -60,6 +61,16 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+  .sub-nav-section {
+    display: flex;
+    justify-content: center;
+    & a {
+      color: var(--color-main-dark-30);
+      font-size: 0.8rem;
+      padding-top: 10px;
+      padding-inline: 15px;
+    }
+  }
   .intro-section {
     min-height: 300px;
     height: 45vh;
@@ -82,12 +93,17 @@ import Layout from "../layouts/Layout.astro";
     justify-content: center;
     align-items: flex-start;
     list-style: none;
+    max-width: 2200px;
     & li {
       max-width: 400px;
-      width: 80%;
-      margin: 40px;
+      width: 90%;
+      margin: 10px;
+      margin-block: 40px;
     }
   }
-  @media only screen and (max-width: 699px) {
+  @media only screen and (min-width: 699px) {
+    .posts-container li {
+      margin-inline: 30px;
+    }
   }
 </style>
