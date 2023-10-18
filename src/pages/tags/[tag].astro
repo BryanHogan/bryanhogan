@@ -34,9 +34,7 @@ export async function getStaticPaths() {
       {
         posts.map((post) => (
           <li>
-          <a href={post.url}>
-            {post.frontmatter.title}
-          </a>
+            <a href={post.url}>{post.frontmatter.title}</a>
           </li>
         ))
       }
@@ -49,6 +47,9 @@ export async function getStaticPaths() {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  li {
+    margin-inline: 2em;
   }
   a {
     color: var(--color-main-accent);
