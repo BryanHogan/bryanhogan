@@ -5,14 +5,35 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const pageTitle = "Tag Index";
 ---
 
-<Layout title={pageTitle} metaDescription="Overview of all my topics I write about. See all tags, the tag index." headerMode="Home" ogtype="website">
-  <div>
-    {
-      tags.map((tag) => (
-        <p>
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
+<Layout
+  title={pageTitle}
+  metaDescription="Overview of all my topics I write about. See all tags, the tag index."
+  headerMode="Home"
+  ogtype="website"
+>
+  <div class="main-area">
+    <h1 class="text-align-center">Tag Index</h1>
+    <ul class="list">
+      {
+        tags.map((tag) => (
+          <li>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </Layout>
+<style>
+  .main-area {
+    height: 80vh;
+  }
+  .list {
+    width: max-content;
+    margin-inline: auto;
+  }
+  h1 {
+    margin-top: 1em;
+  }
+  
+</style>
