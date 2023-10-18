@@ -6,21 +6,24 @@ const { posts } = Astro.props;
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../blog/*.md");
 
-  return [
-    { params: { tag: "productivity" }, props: { posts: allPosts } },
-    { params: { tag: "learning" }, props: { posts: allPosts } },
-    { params: { tag: "book" }, props: { posts: allPosts } },
-    { params: { tag: "tool" }, props: { posts: allPosts } },
-    { params: { tag: "health" }, props: { posts: allPosts } },
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
   ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.frontmatter.tags.includes(tag),
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
 }
-const filteredPosts = posts.filter((post) =>
-  post.frontmatter.tags?.includes(tag),
-);
 ---
 
 <Layout
-  title={tag}
+  title={"Tag " + tag}
   metaDescription="About this tag"
   headerMode="Home"
   ogtype="website"
@@ -29,9 +32,11 @@ const filteredPosts = posts.filter((post) =>
     <h1>Posts tagged with {tag}</h1>
     <ul>
       {
-        filteredPosts.map((post) => (
+        posts.map((post) => (
           <li>
-            <a href={post.url}>{post.frontmatter.title}</a>
+          <a href={post.url}>
+            {post.frontmatter.title}
+          </a>
           </li>
         ))
       }
@@ -49,7 +54,7 @@ const filteredPosts = posts.filter((post) =>
     color: var(--color-main-accent);
   }
   h1 {
-    font-size: 2.0rem;
+    font-size: 2rem;
     padding: 1.4em;
   }
 </style>
