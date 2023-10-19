@@ -23,13 +23,12 @@ import Layout from "../layouts/Layout.astro";
   metaDescription="Bryan Hogan's Blog. All about learning, creating and finding balance."
   ogtype="website"
 >
-<h1 class="text-align-center">
-  Blog Posts
-</h1>
+  <h1 class="text-align-center">Blog Posts</h1>
   <ul class="posts-container">
     {
       allPosts.map((post) => (
         <li class="post">
+          <div class="post-image-area">
             <img
               class="post-cover-symbol"
               src={post.frontmatter.coverImage.url}
@@ -38,6 +37,7 @@ import Layout from "../layouts/Layout.astro";
               height={post.frontmatter.coverImage.height}
               transition:name={post.frontmatter.coverImage.url}
             />
+          </div>
           <p>
             <a href={post.url}>{post.frontmatter.title}</a> -
             {new Date(post.frontmatter.pubDate).toLocaleDateString()}
@@ -65,10 +65,12 @@ import Layout from "../layouts/Layout.astro";
     & > * {
       padding: 10px;
     }
-    img {
-      width: 80px;
-      height: auto;
-      max-height: 120px;
+    .post-image-area {
+      & img {
+        width: 60px;
+        height: auto;
+        max-height: 120px;
+      }
     }
   }
 </style>
