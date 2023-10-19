@@ -1,0 +1,74 @@
+---
+var allPosts = await Astro.glob("../pages/blog/*.md");
+allPosts = allPosts.sort((a, b) => {
+  let dateA =
+    a.frontmatter && a.frontmatter.pubDate
+      ? new Date(a.frontmatter.pubDate)
+      : new Date(0);
+  let dateB =
+    b.frontmatter && b.frontmatter.pubDate
+      ? new Date(b.frontmatter.pubDate)
+      : new Date(0);
+  return dateB.getTime() - dateA.getTime();
+});
+
+import Button from "../components/Button.astro";
+import CardB from "../components/CardB.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Bryan's Blog"
+  headerMode="Blog"
+  metaDescription="Bryan Hogan's Blog. All about learning, creating and finding balance."
+  ogtype="website"
+>
+<h1 class="text-align-center">
+  Blog Posts
+</h1>
+  <ul class="posts-container">
+    {
+      allPosts.map((post) => (
+        <li class="post">
+            <img
+              class="post-cover-symbol"
+              src={post.frontmatter.coverImage.url}
+              alt={post.frontmatter.coverImage.alt}
+              width={post.frontmatter.coverImage.width}
+              height={post.frontmatter.coverImage.height}
+              transition:name={post.frontmatter.coverImage.url}
+            />
+          <p>
+            <a href={post.url}>{post.frontmatter.title}</a> -
+            {new Date(post.frontmatter.pubDate).toLocaleDateString()}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
+
+<style>
+  h1 {
+    margin-top: 1em;
+  }
+  .posts-container {
+    list-style: none;
+    margin-inline: auto;
+  }
+  .post {
+    margin-inline: 1em;
+    display: grid;
+    grid-template-columns: 80px minmax(auto, 500px);
+    max-width: 600px;
+    margin-inline: auto;
+    & > * {
+      padding: 10px;
+    }
+    img {
+      width: 80px;
+      height: auto;
+      max-height: 120px;
+    }
+  }
+</style>
