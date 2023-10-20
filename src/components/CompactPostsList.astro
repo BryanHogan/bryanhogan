@@ -1,0 +1,51 @@
+---
+var { posts } = Astro.props;
+
+import CardB from "./CardB.astro";
+---
+
+<ul class="posts-container">
+    {
+        posts.map((post) => (
+            <li class="post">
+                <div class="post-image-area">
+                    <img
+                        class="post-cover-symbol"
+                        src={post.frontmatter.coverImage.url}
+                        alt={post.frontmatter.coverImage.alt}
+                        width={post.frontmatter.coverImage.width}
+                        height={post.frontmatter.coverImage.height}
+                        transition:name={post.frontmatter.coverImage.url}
+                    />
+                </div>
+                <p>
+                    <a href={post.url}>{post.frontmatter.title}</a> -
+                    {new Date(post.frontmatter.pubDate).toLocaleDateString()}
+                </p>
+            </li>
+        ))
+    }
+</ul>
+<style>
+    .posts-container {
+        list-style: none;
+        margin-inline: auto;
+    }
+    .post {
+        margin-inline: 1em;
+        display: grid;
+        grid-template-columns: 80px minmax(auto, 500px);
+        max-width: 600px;
+        margin-inline: auto;
+        & > * {
+            padding: 10px;
+        }
+        .post-image-area {
+            & img {
+                width: 60px;
+                height: auto;
+                max-height: 120px;
+            }
+        }
+    }
+</style>
