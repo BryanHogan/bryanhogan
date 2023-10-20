@@ -36,7 +36,13 @@ import Layout from "../layouts/Layout.astro";
       buttonStyle="transparent-bright small inset-dark-shadow"
     />
   </div>
-  <div class="sub-nav-section"><a href="/blog-compact">Compact View</a> <a href="/tags">Tag Overview</a></div>
+  <div class="sub-nav-section">
+    <a href="/About">About</a>
+    <a href="/blog-compact">Compact View</a>
+    <a href="/tags">Tag Overview</a>
+    <a href="/rss.xml"><img src="../icons/RSS-Icon.svg" height="18" width="18" alt="RSS Icon" title="See RSS Feed"></a>
+
+  </div>
   <ul class="posts-container">
     {
       allPosts.map((post) => (
@@ -64,11 +70,26 @@ import Layout from "../layouts/Layout.astro";
   .sub-nav-section {
     display: flex;
     justify-content: center;
+    max-width: 550px;
+    margin-inline: auto;
     & a {
       color: var(--color-main-dark-30);
       font-size: 0.8rem;
       padding-top: 10px;
-      padding-inline: 15px;
+      padding-inline: 3%;
+      text-decoration: none;
+      transition: all 300ms;
+      filter: brightness(0) saturate(100%) invert(57%) sepia(6%) saturate(183%)
+        hue-rotate(169deg) brightness(92%) contrast(92%);
+      &:hover {
+        transition: all 200ms;
+        filter: brightness(0) saturate(100%) invert(86%) sepia(2%)
+          saturate(892%) hue-rotate(187deg) brightness(114%) contrast(88%);
+      }
+      & img {
+        height: 80%;
+        width: auto;
+      }
     }
   }
   .intro-section {
