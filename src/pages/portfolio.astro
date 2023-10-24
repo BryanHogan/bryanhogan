@@ -15,7 +15,32 @@ import Footer from "../components/Footer.astro";
   ogtype="website"
 >
   <section class="gradient-background" id="about">
-    <FocusedContentGroup />
+    <div class="portfolio-intro">
+      <div class="text-portfolio-intro">
+        <h1>Hello, I'm<br />Bryan Hogan.</h1>
+        <p>
+          Combining interdisciplinary fields. From development & design to
+          marketing and more.
+        </p>
+      </div>
+      <picture>
+        <source
+          type="image/avif"
+          srcset="../images/Bryan-Hogan-350w.avif 1000w, ../images/Bryan-Hogan-700w.avif 2000w"
+        />
+        <source
+          type="image/webp"
+          srcset="../images/Bryan-Hogan-350w.webp 1000w, ../images/Bryan-Hogan-700w.webp 2000w"
+        />
+        <img
+          src="../images/Bryan-Hogan-350w.png"
+          width="350"
+          height="524"
+          alt="Bryan Hogan blue business shirt"
+          decoding="async"
+        />
+      </picture>
+    </div>
   </section>
   <TextSectionWithSide />
   <section id="projects">
@@ -103,7 +128,7 @@ import Footer from "../components/Footer.astro";
         introText="Currently studying at University of Seoul for fall semester 2023."
         collapseTexts={[
           "Continuing my stay in Korea and exploring a new university.",
-          "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup, Global Business, Special Issues in Entrepreneurship & Innovation and Global Marketing Management.",
+          "Courses include business and Korean language related topics. For the business side I am engaged in classes such as Global Startup and Special Issues in Entrepreneurship & Innovation.",
         ]}
         buttonTexts={["University of Seoul's Website", "UoS English Website"]}
         buttonLinks={["https://www.uos.ac.kr/", "https://english.uos.ac.kr/"]}
@@ -284,6 +309,31 @@ import Footer from "../components/Footer.astro";
 </Layout>
 
 <style>
+  .portfolio-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    picture {
+      & img {
+        max-width: 300px;
+        height: auto;
+        margin: 1em auto;
+        border-radius: 1rem;
+        border: 2px solid var(--color-main-bright);
+        box-shadow: var(--box-shadow-medium);
+      }
+    }
+    & .text-portfolio-intro {
+      margin-inline: 2em;
+      text-shadow: var(--text-shadow);
+      & p {
+        max-width: 530px;
+        font-size: 1.3rem;
+        margin-top: 1em;
+      }
+    }
+  }
   .project-cards-container {
     display: flex;
     justify-content: space-around;
@@ -411,10 +461,12 @@ import Footer from "../components/Footer.astro";
       padding: 10px;
       margin-inline: auto;
       transition: all 200ms linear;
-      box-shadow: var(--box-shadow-large),
+      box-shadow:
+        var(--box-shadow-large),
         inset 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
       &:hover {
-        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25),
+        box-shadow:
+          0px 0px 0px 0px rgba(0, 0, 0, 0.25),
           inset var(--box-shadow-large);
         text-shadow: var(--text-shadow-inset);
       }
@@ -480,10 +532,28 @@ import Footer from "../components/Footer.astro";
     }
   }
   @media only screen and (min-width: 699px) {
+    .portfolio-intro {
+      flex-direction: row-reverse;
+      picture {
+        & img {
+          max-width: 250px;
+          margin: 1em;
+        }
+      }
+    }
   }
   @media only screen and (max-width: 699px) {
     .skills-list {
       max-width: 100%;
+    }
+
+    .portfolio-intro {
+      picture {
+        width: 100%;
+        & img {
+          width: 90%;
+        }
+      }
     }
   }
 </style>
