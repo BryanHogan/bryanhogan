@@ -4,6 +4,7 @@ This site includes my blog and portfolio.
 To Do's For Me
 
 - General
+    - replace author part at the end of posts: if @bh replace with component linking to about
     - add RSS icon & link
     -  Images
       - Large image previews? AMP?

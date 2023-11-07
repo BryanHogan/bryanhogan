@@ -2,10 +2,10 @@
 layout: ../../layouts/MdPostLayout.astro
 title: What Is Code & Context? The Best Field Of Study?
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: Code & Context shows how studying should be done. Combining Computer Science, Design and Entrepreneurship.
+description: Code & Context shows how studying should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship.
 coverImage:
     url: /post-covers/What-Is-Code-And-Context-Cover.svg
-    alt: Minimalistic dipiction of the book Why We Sleep with moon symbol
+    alt: Code and Context B.Sc. Logo
     width: 100
     height: 35
 pubDate: 2023-11-07
@@ -13,7 +13,7 @@ lastUpdate: 2023-11-07
 tags: ["learning", "productivity", "design", "development"]
 length: Medium
 ---
-Code & Context shows how studying should be done. Combining Computer Science, Design and Entrepreneurship. With modern approaches to learning.
+Code & Context shows how studying should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship. With modern approaches to learning.
 
 **Table of Contents**
 <ol class="toc">
@@ -52,7 +52,7 @@ At CoCo each course you have is 2 weeks long, 2 weeks of only that course. Only 
 A few times courses also intervened into each other, so it was 4 weeks of "two" courses.
 
 Then there are also Community And Reflection courses (C&R). C&R are somewhat similar to AG's in German high schools or extracurricular activities in most institutions.
-Most C&Rs are every second week on Friday afternoon for the whole semester. Topics change every semester ([See an example here](https://www.instagram.com/p/CcUvPDZuQXu/)) They are more relaxed and you don't get a grade, only a pass or not passed. It is also possible to self-initiate these. 
+Most C&Rs are every second week on Friday afternoon for the whole semester. Topics change every semester ([See an example here](https://www.instagram.com/p/CcUvPDZuQXu/)). They are more relaxed and you don't get a grade, only a pass or not passed. It is also possible to self-initiate these. 
 
 There are also projects which play a big part in CoCo. At the end of every semester you have a project, their length increases with each semester, from 2 weeks in the first semester to 8 weeks in the fifth. Also, the freedom you have in each project increases. The first one got forced on us but with the last one we tried to create our own startup from a service we were creating. We were very free in how we worked and approached this, only held back by formalities of university and additional assignments.
 The topics of these projects change every semester and can be self-initiated later on.

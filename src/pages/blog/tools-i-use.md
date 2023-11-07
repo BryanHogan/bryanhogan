@@ -1,32 +1,62 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: Tools I Use
-author: Bryan Hogan
+title: Tools I Use As A Developer, Designer And Editor
+author: Bryan@BryanHogan.com (Bryan Hogan)
 description: There are many programs I use as someone working in the fields of Design, Development, Media and Management.
 coverImage:
     url: /post-covers/Tools-Cover.svg
-    alt: Simple drafting compass icon
+    alt: Drafting compass simple icon
     width: 20
     height: 20
-pubDate: 2022-12-19
-lastUpdate: 2023-10-05
-tags: ["tools","productivity"]
+pubDate: 2023-11-07
+lastUpdate: 2023-11-07
+tags: ["tools", "productivity", "design", "development"]
 length: Short
 ---
-This text is outdated (except few parts of the frontmatter)
 
-This page is all about which digital tools, programs, applications and services I use, highly value and recommend.
+This page is all about which digital tools, programs, applications and services I use and value for my work in Design, Development and Editing. There are many amazing options out there and I want to give a concise list of tools I recommend. Most of the tools here are free.
 
-There's so many amazing digital programs out there but it's hard to find the best ones when there are so many options. On this page I want to give a quick overview of what I like to use and why they are great.
-Most of the tools I use are free.
+**Table of Contents**
+<ol class="toc">
+    <li>⭐ <a href="#development">Development</a></li>
+    <ul>
+        <li><a href="#visual-studio-code">Visual Studio Code</a>,
+        <a href="#intellij">IntelliJ</a>,
+        <a href="#git--github">Git & Github</a></li>
+    </ul>
+    <li>⭐ <a href="#media--design">Media & Design</a></li>
+    <ul>
+        <li><a href="#figma">Figma</a>,
+        <a href="#davinci-resolve">DaVinci Resolve</a>,
+        <a href="#affinity-suite">Affinity Suite</a>,
+        <a href="#aseprite">Aseprite</a></li>
+    </ul>
+    <li>⭐ <a href="#management">Management</a></li>
+    <ul>
+        <li><a href="#obsidian">Obsidian</a>,
+        <a href="#notion">Notion</a>,
+        <a href="#trello">Trello</a>,
+        <a href="#google-sheets">Google Sheets</a>,
+        <a href="#google-calendar">Google Calendar</a>,
+        <a href="#zotero">Zotero</a></li>
+    </ul>
+    <li>⭐ <a href="#management">General & Miscellaneous</a></li>
+    <ul>
+        <li><a href="#anki">Anki</a>,
+        <a href="#syncthing">Syncthing</a>,
+        <a href="#google-chrome--mozilla-firefox">Google Chrome & Mozilla Firefox</a>,
+        <a href="#ai-and-llm">AI And LLM</a></li>
+    </ul>
+</ol>
+
 ## Development
-I have an interest in developing and building modern products and services. For that I need some things. I have used these tools during my Code & Context study (link), on my web development journey (link) and other projects.
+There are some things you should use to code. I have used these tools during my [Code & Context](../blog/what-is-coco) study, on my web development journey and other projects.
+
 ### Visual Studio Code
 Visual Studio Code (VS Code) is a free code editor from Microsoft widely used by developers for writing and debugging code.
 This IDE is more lightweight but is widely used by developers. I use it regularly to work on my websites.
 VSC has a great library of community made extension. Noteworthy for me is "Live Server" and common extensions for languages and frameworks I use such as "Astro" or "ESLint".
 
-More on how I create website ==here==.
 ### IntelliJ
 IntelliJ is an integrated development environment (IDE) developed by JetBrains, designed for Java and various other programming languages. It is also free.
 I use it for my projects that are focussed in Java.
@@ -35,12 +65,7 @@ Git is a tool used by developers to track and manage changes in their code, allo
 
 I have most of my projects on Github and it is the main platform I use for this. I also tried Gitlab and both seem good but somehow I stuck to Github.
 
-## Media
-- DaVinci Resolve: For video editing.
-- Figma: For visual designs. Create graphics quickly.
-- Affinity Suite: Photo editing, designing and text heavy based layouts.
-- Aseprite: Image editing focussed on pixel art.
-
+## Media & Design
 For work, part of my studies, creating online content, web development and other personal projects I use images, videos and audio. So of course I also have some preference and insight on what tools to use.
 ### Figma
 Figma is the quickest way to create simple images and graphics. In more detail: It is a web-based design and prototyping tool that enables teams to collaborate in real-time on user interface (UI) and user experience (UX) design projects. It has become the go to tool for visual designers everywhere.
@@ -53,7 +78,7 @@ I used it for:
 - CV (atleast the prettier version)
 - Game concepts, basic art and mockups
 
-Sadly it has been bought by Adobe so it is probably only a matter of time until it will be ruined, but for now it's still a great tool.
+Sadly it has been bought by Adobe so its bright future has been dimmed quite a lot.
 ### DaVinci Resolve
 DaVinci Resolve is a video editor combining color correction, visual effects, motion graphics and audio editing. Great for editing any videos even on a professional level.
 
@@ -66,13 +91,14 @@ Has a one time cost. It is probably going to fall behind in functionality soon t
 A basic image editor optimised for pixel art and animations. And that is also what I use it for.
 
 Has a small one time cost.
+
 ## Management
 ### Obsidian
 My go to tool for writing. Contains most things I write, from blog posts and other documents to my Zettelkasten and diary. It's fast to use and reliable.
 
 It's open-source, markdown based, secure as you own all your data and has a great library of user made plugins, themes and content.
 
-Great for building knowledge management systems such as the Zettelkasten system. See more on what Zettelkasten is and how to use it ==here==.
+Great for building knowledge management systems such as the Zettelkasten system. See more on what Zettelkasten is and how to use it (Not published yet, but you can join my mailing-list to get notified).
 
 I backup my data using Git & Github and synchronise my files between my desktop pc, laptop and phone using Syncthing. More on Syncthing ==down below==.
 
@@ -91,7 +117,7 @@ I use Trello for my To-Do list.
 
 It would normally be described as: A visual project management and collaboration tool that uses boards, lists, and cards to help teams or individuals organize tasks and projects.
 
-But I only use it for my own To Do's. Made a few columns with the highest priority one being on the left. Then I add new things to the respective column. From time to time I remove leftovers or move cards to a column further to the right when their priority has decreased.
+But I mostly use it for my own To Do's. Made a few columns with the highest priority one being on the left. Then I add new things to the respective column. From time to time I remove leftovers or move cards to a column further to the right when their priority has decreased.
 
 ### Google Sheets
 My spreadsheet application of preference. Use it for managing my finances and developing/managing games. Have gotten used to how the programming language works.
@@ -104,7 +130,9 @@ Good enough that I haven't found enough reason to change it yet.
 ### Zotero
 Zotero is a reference management software. It's great to build a library of references and bookmarks of valuable educational and academic content.
 Often used by researchers and academic to collect, organize, cite and share research materials. It is free and open-source.
+
 ## General & Miscellaneous
+
 ### Anki
 The most common flashcard application out there. I use it to learn Korean. Great at what it does.
 
