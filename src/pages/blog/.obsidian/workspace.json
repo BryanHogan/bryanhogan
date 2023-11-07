@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "what-is-coco.md",
+                "file": "tools-i-use.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "what-is-coco.md",
+                "file": "tools-i-use.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "what-is-coco.md",
+                "file": "tools-i-use.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "what-is-coco.md"
+                "file": "tools-i-use.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "196874a994cca15a",
   "lastOpenFiles": [
+    "what-is-coco.md",
     "why-we-sleep.md",
     "tools-i-use.md",
     "what-is-coco copy.md",

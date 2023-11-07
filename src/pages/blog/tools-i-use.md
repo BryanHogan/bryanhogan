@@ -55,11 +55,11 @@ There are some things you should use to code. I have used these tools during my 
 ### Visual Studio Code
 Visual Studio Code (VS Code) is a free code editor from Microsoft widely used by developers for writing and debugging code.
 This IDE is more lightweight but is widely used by developers. I use it regularly to work on my websites.
-VSC has a great library of community made extension. Noteworthy for me is "Live Server" and common extensions for languages and frameworks I use such as "Astro" or "ESLint".
+VSC has a great library of community made extensions. Noteworthy for me is "Live Server" and common extensions for languages and frameworks I use such as "Astro" or "ESLint".
 
 ### IntelliJ
 IntelliJ is an integrated development environment (IDE) developed by JetBrains, designed for Java and various other programming languages. It is also free.
-I use it for my projects that are focussed in Java.
+I use it for my projects that are focused in Java.
 ### Git & Github
 Git is a tool used by developers to track and manage changes in their code, allowing collaboration and version history. It's like a time machine for code, letting anyone see past versions and merge changes from different contributors.
 
@@ -84,11 +84,11 @@ DaVinci Resolve is a video editor combining color correction, visual effects, mo
 
 Used it as part of my work to create content for Instagram or for my university projects and Youtube videos.
 ### Affinity Suite
-The Affinity suite consists of Affinity Photo, Affinity Designer and Affinity Publisher. Great software for photo editing like Photoshop without the predatory practises and bloat. I use Affinity Designer and Publisher for designs that require more work and details like editorial pages.
+The Affinity suite consists of Affinity Photo, Affinity Designer and Affinity Publisher. Great software for photo editing like Photoshop without the predatory practices and bloat. I use Affinity Designer and Publisher for designs that require more work and details like editorial pages.
 
 Has a one time cost. It is probably going to fall behind in functionality soon though as it is not working enough on integrating AI capabilities which will be mandatory in the future.
 ### Aseprite
-A basic image editor optimised for pixel art and animations. And that is also what I use it for.
+A basic image editor optimized for pixel art and animations. And that is also what I use it for.
 
 Has a small one time cost.
 
@@ -100,10 +100,10 @@ It's open-source, markdown based, secure as you own all your data and has a grea
 
 Great for building knowledge management systems such as the Zettelkasten system. See more on what Zettelkasten is and how to use it (Not published yet, but you can join my mailing-list to get notified).
 
-I backup my data using Git & Github and synchronise my files between my desktop pc, laptop and phone using Syncthing. More on Syncthing ==down below==.
+I backup my data using Git & Github and synchronise my files between my desktop pc, laptop and phone using Syncthing. More on Syncthing down below.
 
 ### Notion
-I use it for quick notes. It's great for note-taking and organising. A lot of short notes I take during my university lectures land here.
+I use it for quick notes. It's great for note-taking and organizing. A lot of short notes I take during my university lectures land here.
 
 Everything is easily shared between multiple devices, collaboration is easy and there are many built in functionalities. Great to plan something together like a trip or cooking.
 
