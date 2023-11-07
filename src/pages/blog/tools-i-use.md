@@ -68,17 +68,17 @@ I have most of my projects on Github and it is the main platform I use for this.
 ## Media & Design
 For work, part of my studies, creating online content, web development and other personal projects I use images, videos and audio. So of course I also have some preference and insight on what tools to use.
 ### Figma
-Figma is the quickest way to create simple images and graphics. In more detail: It is a web-based design and prototyping tool that enables teams to collaborate in real-time on user interface (UI) and user experience (UX) design projects. It has become the go to tool for visual designers everywhere.
+Figma is the quickest way to create simple images and graphics. In more detail: It is a web-based design and prototyping tool that enables teams to collaborate in real-time on user interface (UI) and user experience (UX) design projects. It has become the go-to tool for visual designers everywhere.
 
 I used it for:
 - Social Media (SNS) content such as Instagram posts, Youtube thumbnails and similar
 - Icons
 - Website mockups
 - Simple information graphics like for blog posts
-- CV (atleast the prettier version)
+- CV (at least the prettier version)
 - Game concepts, basic art and mockups
 
-Sadly it has been bought by Adobe so its bright future has been dimmed quite a lot.
+Sadly it has been bought by Adobe, so its bright future has been dimmed quite a lot.
 ### DaVinci Resolve
 DaVinci Resolve is a video editor combining color correction, visual effects, motion graphics and audio editing. Great for editing any videos even on a professional level.
 
@@ -94,13 +94,13 @@ Has a small one time cost.
 
 ## Management
 ### Obsidian
-My go to tool for writing. Contains most things I write, from blog posts and other documents to my Zettelkasten and diary. It's fast to use and reliable.
+My go-to tool for writing. Contains most things I write, from blog posts and other documents to my Zettelkasten and diary. It's fast to use and reliable.
 
 It's open-source, markdown based, secure as you own all your data and has a great library of user made plugins, themes and content.
 
 Great for building knowledge management systems such as the Zettelkasten system. See more on what Zettelkasten is and how to use it (Not published yet, but you can join my mailing-list to get notified).
 
-I backup my data using Git & Github and synchronise my files between my desktop pc, laptop and phone using Syncthing. More on Syncthing down below.
+I back up my data using Git & Github and synchronize my files between my desktop pc, laptop and phone using Syncthing. More on Syncthing down below.
 
 ### Notion
 I use it for quick notes. It's great for note-taking and organizing. A lot of short notes I take during my university lectures land here.
@@ -108,16 +108,16 @@ I use it for quick notes. It's great for note-taking and organizing. A lot of sh
 Everything is easily shared between multiple devices, collaboration is easy and there are many built in functionalities. Great to plan something together like a trip or cooking.
 
 Although hype and its steep growth has led it to be used for much more things than it is good at. Marketed as a all-in-one thing when it really shouldn't be.
-No good way to secure and backup your data. No version history. You don't own anything you write. Data privacy itself is very problematic with this tool, so much data on you is collected and used. Everything is also send to American servers.
+No good way to secure and backup your data. No version history. You don't own anything you write. Data privacy itself is very problematic with this tool, so much data on you is collected and used. Everything is also sent to American servers.
 Last time I used it extensively for a university project lost hours of progress in writing due to synchronization problem (a bug that has existed for years) when working together on a document with multiple people.
-Also a lot of functions are locked behind a monthly subscription only paywall.
+Also, a lot of functions are locked behind a monthly subscription only paywall.
 
 ### Trello
 I use Trello for my To-Do list.
 
 It would normally be described as: A visual project management and collaboration tool that uses boards, lists, and cards to help teams or individuals organize tasks and projects.
 
-But I mostly use it for my own To Do's. Made a few columns with the highest priority one being on the left. Then I add new things to the respective column. From time to time I remove leftovers or move cards to a column further to the right when their priority has decreased.
+But I mostly use it for my own To-Do's. Made a few columns with the highest priority one being on the left. Then I add new things to the respective column. From time to time I remove leftovers or move cards to a column further to the right when their priority has decreased.
 
 ### Google Sheets
 My spreadsheet application of preference. Use it for managing my finances and developing/managing games. Have gotten used to how the programming language works.
@@ -137,8 +137,8 @@ Often used by researchers and academic to collect, organize, cite and share rese
 The most common flashcard application out there. I use it to learn Korean. Great at what it does.
 
 ### Syncthing
-A tool to synchronise files between multiple devices. I use Syncthing to synchronise my Obsidian vaults between my desktop, laptop and phone.
-It's a open-source tool and free to use.
+A tool to synchronize files between multiple devices. I use Syncthing to synchronize my Obsidian vaults between my desktop, laptop and phone.
+It's an open-source tool and free to use.
 
 ### Google Chrome & Mozilla Firefox
 My two go to browsers are Mozilla Firefox and Google Chrome.
@@ -146,7 +146,7 @@ My two go to browsers are Mozilla Firefox and Google Chrome.
 Firefox is the more ethical option and made by the nonprofit Mozilla Foundation protecting our open web, web integrity and following the web standards. It's also faster, uses less resources and has better privacy.
 
 I also used Google Chrome, as it has been my browser of choice since I was young. But they are following unethical practices, put up resistance against the open web and the potential disallowance of ad-blockers might make them unusable in the future.
-But most website are optimised for Chrome, they are generally faster with implementing new capabilities and the translator feature is also great.
+But most website are optimized for Chrome, they are generally faster with implementing new capabilities and the translator feature is also great.
 
 ### AI And LLM
 There's a lot happening in the AI & LLM space and it's also quickly changing. But I don't see any of the new capabilities of LLMs such as ChatGPT or image generating AIs going anywhere. But in the future I see them more integrated into other tools directly.
