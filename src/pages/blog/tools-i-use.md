@@ -8,8 +8,8 @@ coverImage:
     alt: Drafting compass simple icon
     width: 20
     height: 20
-pubDate: 2023-11-07
-lastUpdate: 2023-11-07
+pubDate: 2023-11-08
+lastUpdate: 2023-11-08
 tags: ["tools", "productivity", "design", "development"]
 length: Short
 ---
