@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "why-we-sleep.md",
+                "file": "what-is-coco.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "358c04ae3afc1fb9",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "why-we-sleep.md",
+                "file": "what-is-coco.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "why-we-sleep.md",
+                "file": "what-is-coco.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "why-we-sleep.md"
+                "file": "what-is-coco.md"
               }
             }
           }
@@ -148,10 +149,10 @@
   },
   "active": "196874a994cca15a",
   "lastOpenFiles": [
+    "why-we-sleep.md",
     "tools-i-use.md",
     "what-is-coco copy.md",
     "about.md",
-    "why-we-sleep.md",
     "new-age.md",
     "zettelkasten.md"
   ]
