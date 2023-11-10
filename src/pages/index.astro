@@ -14,6 +14,18 @@ import Button from "../components/Button.astro";
     <div class="header-picture-section">
       <h1>Hi, I'm<br />Bryan Hogan.</h1>
       <picture>
+        <source
+          type="image/avif"
+          srcset="../images/Bryan-Hogan-Smiling.avif"
+        />
+        <source
+          type="image/webp"
+          srcset="../images/Bryan-Hogan-Smiling.webp"
+        />
+        <source
+          type="image/jpg"
+          srcset="../images/Bryan-Hogan-Smiling.jpg"
+        />
         <img
           src="../images/Bryan-Hogan-Smiling.png"
           width="363"
