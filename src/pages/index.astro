@@ -9,7 +9,7 @@ import Button from "../components/Button.astro";
   headerMode="Home"
   ogtype="website"
   >
-  <section>
+  <section class="intro">
   <div class="intro-section">
     <div class="header-picture-section">
       <h1>Hi, I'm<br />Bryan Hogan.</h1>
@@ -49,6 +49,12 @@ import Button from "../components/Button.astro";
 </Layout>
 
 <style>
+  .intro {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   section {
     padding: 0px;
     margin: 0px;
