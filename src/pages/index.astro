@@ -3,8 +3,28 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Bryan Hogan" metaDescription="Bryan Hogan's site. Bryan's Blog, newsletter, portfolio and more." headerMode="Home" ogtype="website">
-  <section class="">
+<Layout
+  title="Bryan Hogan"
+  metaDescription="Bryan Hogan's site. Bryan's Blog, newsletter, portfolio and more."
+  headerMode="Home"
+  ogtype="website"
+  >
+  <section>
+  <div class="intro-section">
+    <div class="header-picture-section">
+      <h1>Hi, I'm<br />Bryan Hogan.</h1>
+      <picture>
+        <img
+          src="../images/Bryan-Hogan-Smiling.png"
+          width="363"
+          height="359"
+          alt="Bryan Hogan smiling"
+          decoding="async"
+        />
+      </picture>
+    </div>
+    <p>On this page you can find my blog, mail newsletter and portfolio.</p>
+  </div>
     <div class="button-group">
       <Button
         link="/blog"
@@ -29,17 +49,49 @@ import Button from "../components/Button.astro";
 </Layout>
 
 <style>
-    .button-group {
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+  .intro-section {
+    min-height: 40vh;
+    max-width: 550px;
+    margin-inline: auto;
+    padding-inline: 1em;
+    padding-top: 2em;
+    & img {
+      height: auto;
+      width: 130px;
+      margin: 0.2em;
     }
-    @media only screen and (min-width: 1050px) {
-      .button-group {
-        flex-direction: row;
+  }
+  .header-picture-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  img {
+    height: auto;
+    width: 130px;
+    margin: 1em;
+  }
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @media only screen and (max-width: 699px) {
+    .intro-section {
+      & img {
+        margin-inline: auto;
       }
     }
+  }
+  @media only screen and (min-width: 700px) {
+    .button-group {
+      flex-direction: row;
+    }
+    .intro-section {
+    }
+    .header-picture-section {
+      flex-direction: row;
+    }
+  }
 </style>
