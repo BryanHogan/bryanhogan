@@ -31,8 +31,7 @@ import Button from "../components/Button.astro";
         />
       </picture>
     </div>
-    <p>On this page you can find my <a href="./blog">blog</a>, <a href="./follow">mail newsletter</a> and <a href="./portfolio">portfolio</a>.</p>
-  </div>
+    <p>On this page you can find my blog, portfolio and more.</p>
     <div class="button-group">
       <Button
         link="/blog"
@@ -53,10 +52,14 @@ import Button from "../components/Button.astro";
         buttonStyle="bright large grow"
       />
     </div>
+  </div>
   </section>
 </Layout>
 
 <style>
+  h1 {
+    padding-bottom: 0.25em;
+  }
   .intro {
     min-height: 90vh;
     display: flex;
@@ -69,7 +72,7 @@ import Button from "../components/Button.astro";
   }
   .intro-section {
     min-height: 40vh;
-    max-width: 550px;
+    max-width: 650px;
     margin-inline: auto;
     padding-inline: 1em;
     padding-top: 2em;
@@ -83,22 +86,20 @@ import Button from "../components/Button.astro";
     display: flex;
     flex-direction: column-reverse;
   }
-  img {
-    height: auto;
-    width: 130px;
-    margin: 1em;
-  }
+  
   .button-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 20px;
   }
   @media only screen and (max-width: 699px) {
     .intro-section {
       & img {
         margin-inline: auto;
+        padding-bottom: 1em;
       }
     }
   }
@@ -112,4 +113,4 @@ import Button from "../components/Button.astro";
       flex-direction: row;
     }
   }
-</style>
+  </style>
