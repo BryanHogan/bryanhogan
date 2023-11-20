@@ -8,51 +8,51 @@ import Button from "../components/Button.astro";
   metaDescription="Bryan Hogan's site. Bryan's Blog, newsletter, portfolio and more."
   headerMode="Home"
   ogtype="website"
-  >
+>
   <section class="intro">
-  <div class="intro-section">
-    <div class="header-picture-section">
-      <h1>Hi, I'm<br />Bryan Hogan.</h1>
-      <picture>
-        <source
-          type="image/avif"
-          srcset="../images/Bryan-Hogan-Smiling.avif"
+    <div class="intro-section">
+      <div class="header-picture-section">
+        <h1>Hi, I'm<br />Bryan Hogan.</h1>
+        <picture>
+          <source
+            type="image/avif"
+            srcset="../images/Bryan-Hogan-Smiling.avif"
+          />
+          <source
+            type="image/webp"
+            srcset="../images/Bryan-Hogan-Smiling.webp"
+          />
+          <img
+            src="../images/Bryan-Hogan-Smiling.png"
+            width="363"
+            height="359"
+            alt="Bryan Hogan smiling"
+            decoding="async"
+          />
+        </picture>
+      </div>
+      <p>On this page you can find my blog, portfolio and more.</p>
+      <div class="button-group">
+        <Button
+          link="/blog"
+          text="Blog"
+          targetText=""
+          buttonStyle="gradient large grow"
         />
-        <source
-          type="image/webp"
-          srcset="../images/Bryan-Hogan-Smiling.webp"
+        <Button
+          link="/follow"
+          text="Follow"
+          targetText=""
+          buttonStyle="bright large grow"
         />
-        <img
-          src="../images/Bryan-Hogan-Smiling.png"
-          width="363"
-          height="359"
-          alt="Bryan Hogan smiling"
-          decoding="async"
+        <Button
+          link="/portfolio"
+          text="Portfolio"
+          targetText=""
+          buttonStyle="bright large grow"
         />
-      </picture>
+      </div>
     </div>
-    <p>On this page you can find my blog, portfolio and more.</p>
-    <div class="button-group">
-      <Button
-        link="/blog"
-        text="Blog"
-        targetText=""
-        buttonStyle="gradient large grow"
-      />
-      <Button
-        link="/follow"
-        text="Follow"
-        targetText=""
-        buttonStyle="bright large grow"
-      />
-      <Button
-        link="/portfolio"
-        text="Portfolio"
-        targetText=""
-        buttonStyle="bright large grow"
-      />
-    </div>
-  </div>
   </section>
 </Layout>
 
@@ -86,7 +86,7 @@ import Button from "../components/Button.astro";
     display: flex;
     flex-direction: column-reverse;
   }
-  
+
   .button-group {
     display: flex;
     flex-direction: row;
@@ -102,15 +102,15 @@ import Button from "../components/Button.astro";
         padding-bottom: 1em;
       }
     }
+    .button-group {
+      justify-content: space-around;
+    }
   }
   @media only screen and (min-width: 700px) {
-    .button-group {
-      flex-direction: row;
-    }
     .intro-section {
     }
     .header-picture-section {
       flex-direction: row;
     }
   }
-  </style>
+</style>
