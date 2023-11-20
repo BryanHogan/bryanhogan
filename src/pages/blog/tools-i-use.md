@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
-title: Tools I Use As A Developer, Designer And Editor
+title: Tools I Use
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: There are many programs I use as someone working in the fields of Design, Development, Media and Management.
+description: There are many programs I use for my studies and work in the fields of development, design and marketing.
 coverImage:
     url: /post-covers/Tools-Cover.svg
     alt: Drafting compass simple icon
