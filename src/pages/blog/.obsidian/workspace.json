@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools-i-use.md",
+                "file": "hanyang-erica-exchange.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "358c04ae3afc1fb9",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tools-i-use.md",
+                "file": "hanyang-erica-exchange.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tools-i-use.md",
+                "file": "hanyang-erica-exchange.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tools-i-use.md"
+                "file": "hanyang-erica-exchange.md"
               }
             }
           }
@@ -149,9 +148,9 @@
   },
   "active": "196874a994cca15a",
   "lastOpenFiles": [
+    "tools-i-use.md",
     "what-is-coco.md",
     "why-we-sleep.md",
-    "tools-i-use.md",
     "what-is-coco copy.md",
     "about.md",
     "new-age.md",
