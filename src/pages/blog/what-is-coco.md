@@ -10,7 +10,7 @@ coverImage:
     height: 35
 pubDate: 2023-11-07
 lastUpdate: 2023-11-07
-tags: ["learning", "productivity", "design", "development"]
+tags: ["learning", "productivity", "design", "development", "university"]
 length: Medium
 ---
 Code & Context shows how studying should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship with a modern approach to learning.
