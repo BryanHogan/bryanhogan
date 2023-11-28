@@ -170,10 +170,11 @@ I can recommend to anyone going to Hanyang erica to life in the on-campus dormit
 
 ## Conclusion
 Overall my experience in South Korea was great. The location of the Hanyang erica campus is not optimal to explore Korea though. The classes were academically not the most useful, but I did enjoy them sometimes. Overall I enjoyed my stay at the university a lot.
-Having a roommate for 4 months was a new experience for me also. Now I know that I like to have my own sleeping room but living close to lots of friends is great. And I did have my own room to sleep in at the next university where I did a exchange semester, which was at University of Seoul (서을시립대) where I stayed after my stay at Hanyang erica.
+
+I also learned that I prefer to have my own room to sleep in. And that is what I had at my next exchange semester I did in South Korea. I went to University of Seoul right after my semester at Hanyang erica.
 
 If you liked this post you might also enjoy my post about the exchange semester at University of Seoul I did for winter 2023 here (not published yet). Or my post focussing more on the different between Korea and the western world here (not published yet).
 
-You can join my mailing list if you would like to get notified about new posts, I appreciate every single new member.
+You can [join my mailing list](../follow) if you would like to get notified about new posts, I appreciate every single new member.
 
 
