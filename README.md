@@ -13,6 +13,7 @@ I am at the end of my Code & Context B.Sc. studies at TH Köln.
 
 I am also at the end of my second exchange semester in South Korea.
 - Read more about my semester at Hanyang University erica [here](https://bryanhogan.com/blog/hanyang-erica-exchange).
+- My second semester I did at University of Seoul.
 
 # 📪 Contact
 Reach out to me via [LinkedIn](https://www.linkedin.com/in/bryanhoganme/) or send a mail to Bryan@BryanHogan.com
