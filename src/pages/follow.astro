@@ -1,4 +1,5 @@
 ---
+import ButtondownSignupForm from "../components/ButtondownSignupForm.astro";
 import NewsletterCallout from "../components/NewsletterCallout.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -10,13 +11,8 @@ import Layout from "../layouts/Layout.astro";
     ogtype="website"
 >
     <section class="gradient-background">
-        <NewsletterCallout />
         <div class="dark-back">
-            <iframe
-        src="https://bryanhogan.substack.com/embed"
-        width="480"
-        height="320"
-        style="border:1px solid #EEE; background:white;"></iframe>
+            <ButtondownSignupForm />
         </div>
     </section>
     
