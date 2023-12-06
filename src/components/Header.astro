@@ -3,7 +3,15 @@ interface Props {
   mode: string;
 }
 
-import {instagram, linkedin, youtube, twitch, github, substack, medium} from "./socials.ts"
+import {
+  instagram,
+  linkedin,
+  youtube,
+  twitch,
+  github,
+  substack,
+  medium,
+} from "./socials.ts";
 import SocialRefAnchorElement from "./SocialRefAnchorElement.astro";
 
 const { mode } = Astro.props;
@@ -77,54 +85,22 @@ const follow = {
                 </a>
               </li>
               <li>
-                <SocialRefAnchorElement social={medium}/>
+                <SocialRefAnchorElement social={medium} />
               </li>
               <li>
-                <SocialRefAnchorElement social={linkedin}/>
+                <SocialRefAnchorElement social={linkedin} />
               </li>
               <li>
-                <a href={instagram.url} target="_blank">
-                  <img
-                    src={instagram.logo.url}
-                    alt={instagram.logo.alt}
-                    width={instagram.logo.width}
-                    height={instagram.logo.height}
-                    title={instagram.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={instagram} />
               </li>
               <li>
-                <a href={youtube.url} target="_blank">
-                  <img
-                    src={youtube.logo.url}
-                    alt={youtube.logo.alt}
-                    width={youtube.logo.width}
-                    height={youtube.logo.height}
-                    title={youtube.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={youtube} />
               </li>
               <li>
-                <a href={twitch.url} target="_blank">
-                  <img
-                    src={twitch.logo.url}
-                    alt={twitch.logo.alt}
-                    width={twitch.logo.width}
-                    height={twitch.logo.height}
-                    title={twitch.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={twitch} />
               </li>
               <li>
-                <a href={github.url} target="_blank">
-                  <img
-                    src={github.logo.url}
-                    alt={github.logo.alt}
-                    width={github.logo.width}
-                    height={github.logo.height}
-                    title={github.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={github}/>
               </li>
             </ul>
           </li>
@@ -163,7 +139,7 @@ const follow = {
               </li>
               <li>
                 <a href="/portfolio">Portfolio</a>
-                </li>
+              </li>
             </ul>
           </li>
           <li class="dropdown">
@@ -176,49 +152,17 @@ const follow = {
             />
             <ul class="container-dropdown-items">
               <li>
-                <a href={instagram.url} target="_blank">
-                  <img
-                    src={instagram.logo.url}
-                    alt={instagram.logo.alt}
-                    width={instagram.logo.width}
-                    height={instagram.logo.height}
-                    title={instagram.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={instagram}/>
               </li>
               <li>
-                <a href={medium.url} target="_blank">
-                  <img
-                    src={medium.logo.url}
-                    alt={medium.logo.alt}
-                    width={medium.logo.width}
-                    height={medium.logo.height}
-                    title={medium.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={medium}/>
               </li>
               <li>
-                <a href={linkedin.url} target="_blank">
-                  <img
-                    src={linkedin.logo.url}
-                    alt={linkedin.logo.alt}
-                    width={linkedin.logo.width}
-                    height={linkedin.logo.height}
-                    title={linkedin.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={linkedin}/>
               </li>
 
               <li>
-                <a href={github.url} target="_blank">
-                  <img
-                    src={github.logo.url}
-                    alt={github.logo.alt}
-                    width={github.logo.width}
-                    height={github.logo.height}
-                    title={github.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={github}/>
               </li>
             </ul>
           </li>
@@ -256,27 +200,10 @@ const follow = {
                 <a href="#contact">Contact</a>
               </li>
               <li>
-                <a href={linkedin.url} target="_blank">
-                  <img
-                    src={linkedin.logo.url}
-                    alt={linkedin.logo.alt}
-                    width={linkedin.logo.width}
-                    height={linkedin.logo.height}
-                    title={linkedin.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={linkedin}/>
               </li>
-
               <li>
-                <a href={github.url} target="_blank">
-                  <img
-                    src={github.logo.url}
-                    alt={github.logo.alt}
-                    width={github.logo.width}
-                    height={github.logo.height}
-                    title={github.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={github}/>
               </li>
             </ul>
           </li>
@@ -325,26 +252,10 @@ const follow = {
             />
             <ul class="container-dropdown-items">
               <li>
-                <a href={instagram.url} target="_blank">
-                  <img
-                    src={instagram.logo.url}
-                    alt={instagram.logo.alt}
-                    width={instagram.logo.width}
-                    height={instagram.logo.height}
-                    title={instagram.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={instagram}/>
               </li>
               <li>
-                <a href={medium.url} target="_blank">
-                  <img
-                    src={medium.logo.url}
-                    alt={medium.logo.alt}
-                    width={medium.logo.width}
-                    height={medium.logo.height}
-                    title={medium.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={medium}/>
               </li>
             </ul>
           </li>
