@@ -5,10 +5,8 @@ interface Props {
   text: string;
   targetText?: string;
 }
-const { buttonStyle } = Astro.props;
-const { link } = Astro.props;
-const { text } = Astro.props;
-const { targetText } = Astro.props;
+
+const { buttonStyle, link, text, targetText } = Astro.props;
 // Color Styles: dark, bright, transparent-bright, transparent-bright-border
 // Size Styles: large, small
 // Animation Style: inset-dark-shadow, inset-bright-shadow, grow

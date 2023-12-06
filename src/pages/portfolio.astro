@@ -1,11 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Button from "../components/Button.astro";
-import FocusedContentGroup from "../components/rare/FocusedContentGroup.astro";
 import CardA from "../components/CardA.astro";
-import TextSectionWithSide from "../components/TextSectionWithSide.astro";
-import Footer from "../components/Footer.astro";
+import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
+import Test from "../components/TextSectionWithSide.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout
@@ -42,7 +40,45 @@ import Footer from "../components/Footer.astro";
       </picture>
     </div>
   </section>
-  <TextSectionWithSide />
+  <TextSectionWithSide>
+    <h2
+      class="text-align-center accent-underline-adjust-width"
+      id="about"
+      slot="h2-title"
+    >
+      About Me
+    </h2>
+    <p>
+      I am Bryan Hogan and currently working on completing my Bachelor of
+      Science in the study Code & Context at TH Köln. Code & Context is an
+      interdisciplinary field of study ranging from coding & design to
+      entrepreneurship.
+    </p>
+    <p>
+      You can find me actively involved in the fields of development, design,
+      media, marketing, and management. My expertise lies in crafting fast
+      user-friendly websites and building strong brand identities.
+    </p>
+    <p>Currently living in Seoul.</p>
+    <nav slot="aside-content">
+      <Button
+        text="Projects"
+        link="#projects"
+        buttonStyle="transparent-bright small grow color-accent"
+      />
+      <Button
+        text="Skills"
+        link="#skills"
+        buttonStyle="transparent-bright small grow color-accent"
+      />
+      <Button
+        text="Contact"
+        link="#contact"
+        buttonStyle="transparent-bright small grow color-accent"
+      />
+    </nav>
+  </TextSectionWithSide>
+  <Test />
   <section id="projects">
     <h2 class="text-align-center accent-underline-adjust-width">Projects</h2>
     <div class="project-cards-container">
@@ -274,9 +310,13 @@ import Footer from "../components/Footer.astro";
         />
       </li>
     </ul>
-    <p class="text-align-center" style="margin-top: 2em">You can also <a href="./documents/Resume-Bryan-Hogan-EN.pdf">download my resume</a>.</p>
+    <p class="text-align-center" style="margin-top: 2em">
+      You can also <a href="./documents/Resume-Bryan-Hogan-EN.pdf"
+        >download my resume</a
+      >.
+    </p>
   </section>
-    <section
+  <section
     class="gradient-background-darker text-section text-align-center contact-section"
     id="contact"
   >
