@@ -5,7 +5,7 @@ const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString();
 const formattedLastUpdate = new Date(
   frontmatter.lastUpdate,
 ).toLocaleDateString();
-import NewsletterCallout from "../components/NewsletterCallout.astro";
+import ButtondownSignupForm from "../components/ButtondownSignupForm.astro";
 ---
 
 <Layout
@@ -50,7 +50,7 @@ import NewsletterCallout from "../components/NewsletterCallout.astro";
       <p>Last update: {formattedLastUpdate}</p>
     </div>
   </article>
-  <NewsletterCallout />
+  <ButtondownSignupForm />
 </Layout>
 
 <style>
