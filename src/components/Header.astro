@@ -3,7 +3,7 @@ interface Props {
   mode: string;
 }
 
-import {SocialMediaProfile, instagramp} from "./socials.ts"
+import {SocialMediaProfile, instagram, linkedin, youtube, twitch, github, substack, medium} from "./socials.ts"
 
 const { mode } = Astro.props;
 {
@@ -27,69 +27,6 @@ const follow = {
   title: "Join The Mail Newsletter",
   target: "_self",
 };
-const medium = {
-  href: "https://medium.com/@bryanhoganme",
-  src: "/logos/Medium-Logo.svg",
-  alt: "Medium logo simple white soft color only",
-  width: "18",
-  height: "10",
-  title: "Medium",
-  target: "_blank",
-};
-const linkedin = {
-  href: "https://www.linkedin.com/in/bryanhoganme",
-  src: "/logos/LinkedIn-Logo.svg",
-  alt: "LinkedIn logo simple soft white color only",
-  width: "12",
-  height: "12",
-  title: "LinkedIn",
-  target: "_blank",
-};
-const instagram = {
-  href: instagramp.url,
-  src: "/logos/Instagram-Logo.svg",
-  alt: "Instagram logo simple soft white color only",
-  width: "12",
-  height: "12",
-  title: "Instagram",
-  target: "_blank",
-};
-const youtube = {
-  href: "/",
-  src: "/logos/Youtube-Logo.svg",
-  alt: "Youtube logo simple soft white color only",
-  width: "15",
-  height: "10",
-  title: "Youtube",
-  target: "_blank",
-};
-const twitch = {
-  href: "https://www.twitch.tv/bluebeku",
-  src: "/logos/Twitch-Logo.svg",
-  alt: "Twitch logo simple soft white color only",
-  width: "12",
-  height: "13",
-  title: "Twitch",
-  target: "_blank",
-};
-const github = {
-  href: "https://github.com/BryanHogan/",
-  src: "/logos/Github-Logo.svg",
-  alt: "Github logo simple soft white color only",
-  width: "32",
-  height: "31",
-  title: "Github",
-  target: "_blank",
-};
-const substack = {
-  href: "https://bryanhogan.substack.com/",
-  src: "/logos/Substack-Logo.svg",
-  alt: "Substack logo simple soft white color only",
-  width: "22",
-  height: "24",
-  title: "Substack",
-  target: "_blank",
-}
 ---
 
 <header>
@@ -139,68 +76,68 @@ const substack = {
                 </a>
               </li>
               <li>
-                <a href={medium.href} target={medium.target}>
+                <a href={medium.url} target="_blank">
                   <img
-                    src={medium.src}
-                    alt={medium.alt}
-                    width={medium.width}
-                    height={medium.height}
-                    title={medium.title}
+                    src={medium.logo.url}
+                    alt={medium.logo.alt}
+                    width={medium.logo.width}
+                    height={medium.logo.height}
+                    title={medium.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={linkedin.href} target={linkedin.target}>
+                <a href={linkedin.url} target="_blank">
                   <img
-                    src={linkedin.src}
-                    alt={linkedin.alt}
-                    width={linkedin.width}
-                    height={linkedin.height}
-                    title={linkedin.title}
+                    src={linkedin.logo.url}
+                    alt={linkedin.logo.alt}
+                    width={linkedin.logo.width}
+                    height={linkedin.logo.height}
+                    title={linkedin.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={instagram.href} target={instagram.target}>
+                <a href={instagram.url} target="_blank">
                   <img
-                    src={instagram.src}
-                    alt={instagram.alt}
-                    width={instagram.width}
-                    height={instagram.height}
-                    title={instagram.title}
+                    src={instagram.logo.url}
+                    alt={instagram.logo.alt}
+                    width={instagram.logo.width}
+                    height={instagram.logo.height}
+                    title={instagram.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={youtube.href} target={youtube.target}>
+                <a href={youtube.url} target="_blank">
                   <img
-                    src={youtube.src}
-                    alt={youtube.alt}
-                    width={youtube.width}
-                    height={youtube.height}
-                    title={youtube.title}
+                    src={youtube.logo.url}
+                    alt={youtube.logo.alt}
+                    width={youtube.logo.width}
+                    height={youtube.logo.height}
+                    title={youtube.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={twitch.href} target={twitch.target}>
+                <a href={twitch.url} target="_blank">
                   <img
-                    src={twitch.src}
-                    alt={twitch.alt}
-                    width={twitch.width}
-                    height={twitch.height}
-                    title={twitch.title}
+                    src={twitch.logo.url}
+                    alt={twitch.logo.alt}
+                    width={twitch.logo.width}
+                    height={twitch.logo.height}
+                    title={twitch.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={github.href} target={github.target}>
+                <a href={github.url} target="_blank">
                   <img
-                    src={github.src}
-                    alt={github.alt}
-                    width={github.width}
-                    height={github.height}
-                    title={github.title}
+                    src={github.logo.url}
+                    alt={github.logo.alt}
+                    width={github.logo.width}
+                    height={github.logo.height}
+                    title={github.name}
                   />
                 </a>
               </li>
@@ -254,47 +191,47 @@ const substack = {
             />
             <ul class="container-dropdown-items">
               <li>
-                <a href={instagram.href} target={instagram.target}>
+                <a href={instagram.url} target="_blank">
                   <img
-                    src={instagram.src}
-                    alt={instagram.alt}
-                    width={instagram.width}
-                    height={instagram.height}
-                    title={instagram.title}
+                    src={instagram.logo.url}
+                    alt={instagram.logo.alt}
+                    width={instagram.logo.width}
+                    height={instagram.logo.height}
+                    title={instagram.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={medium.href} target={medium.target}>
+                <a href={medium.url} target="_blank">
                   <img
-                    src={medium.src}
-                    alt={medium.alt}
-                    width={medium.width}
-                    height={medium.height}
-                    title={medium.title}
+                    src={medium.logo.url}
+                    alt={medium.logo.alt}
+                    width={medium.logo.width}
+                    height={medium.logo.height}
+                    title={medium.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={linkedin.href} target={linkedin.target}>
+                <a href={linkedin.url} target="_blank">
                   <img
-                    src={linkedin.src}
-                    alt={linkedin.alt}
-                    width={linkedin.width}
-                    height={linkedin.height}
-                    title={linkedin.title}
+                    src={linkedin.logo.url}
+                    alt={linkedin.logo.alt}
+                    width={linkedin.logo.width}
+                    height={linkedin.logo.height}
+                    title={linkedin.name}
                   />
                 </a>
               </li>
 
               <li>
-                <a href={github.href} target={github.target}>
+                <a href={github.url} target="_blank">
                   <img
-                    src={github.src}
-                    alt={github.alt}
-                    width={github.width}
-                    height={github.height}
-                    title={github.title}
+                    src={github.logo.url}
+                    alt={github.logo.alt}
+                    width={github.logo.width}
+                    height={github.logo.height}
+                    title={github.name}
                   />
                 </a>
               </li>
@@ -334,25 +271,25 @@ const substack = {
                 <a href="#contact">Contact</a>
               </li>
               <li>
-                <a href={linkedin.href} target={linkedin.target}>
+                <a href={linkedin.url} target="_blank">
                   <img
-                    src={linkedin.src}
-                    alt={linkedin.alt}
-                    width={linkedin.width}
-                    height={linkedin.height}
-                    title={linkedin.title}
+                    src={linkedin.logo.url}
+                    alt={linkedin.logo.alt}
+                    width={linkedin.logo.width}
+                    height={linkedin.logo.height}
+                    title={linkedin.name}
                   />
                 </a>
               </li>
 
               <li>
-                <a href={github.href} target={github.target}>
+                <a href={github.url} target="_blank">
                   <img
-                    src={github.src}
-                    alt={github.alt}
-                    width={github.width}
-                    height={github.height}
-                    title={github.title}
+                    src={github.logo.url}
+                    alt={github.logo.alt}
+                    width={github.logo.width}
+                    height={github.logo.height}
+                    title={github.name}
                   />
                 </a>
               </li>
@@ -403,24 +340,24 @@ const substack = {
             />
             <ul class="container-dropdown-items">
               <li>
-                <a href={instagram.href} target={instagram.target}>
+                <a href={instagram.url} target="_blank">
                   <img
-                    src={instagram.src}
-                    alt={instagram.alt}
-                    width={instagram.width}
-                    height={instagram.height}
-                    title={instagram.title}
+                    src={instagram.logo.url}
+                    alt={instagram.logo.alt}
+                    width={instagram.logo.width}
+                    height={instagram.logo.height}
+                    title={instagram.name}
                   />
                 </a>
               </li>
               <li>
-                <a href={medium.href} target={medium.target}>
+                <a href={medium.url} target="_blank">
                   <img
-                    src={medium.src}
-                    alt={medium.alt}
-                    width={medium.width}
-                    height={medium.height}
-                    title={medium.title}
+                    src={medium.logo.url}
+                    alt={medium.logo.alt}
+                    width={medium.logo.width}
+                    height={medium.logo.height}
+                    title={medium.name}
                   />
                 </a>
               </li>
