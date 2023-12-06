@@ -1,0 +1,19 @@
+---
+import { SocialMediaProfile } from "./socials";
+
+interface Props {
+    social: SocialMediaProfile;
+}
+
+const { social } = Astro.props;
+---
+
+<a href={social.url} target="_blank">
+    <img
+        src={social.logo.url}
+        alt={social.logo.alt}
+        width={social.logo.width}
+        height={social.logo.height}
+        title={social.name}
+    />
+</a>

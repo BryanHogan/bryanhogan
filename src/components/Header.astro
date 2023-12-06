@@ -3,7 +3,8 @@ interface Props {
   mode: string;
 }
 
-import {SocialMediaProfile, instagram, linkedin, youtube, twitch, github, substack, medium} from "./socials.ts"
+import {instagram, linkedin, youtube, twitch, github, substack, medium} from "./socials.ts"
+import SocialRefAnchorElement from "./SocialRefAnchorElement.astro";
 
 const { mode } = Astro.props;
 {
@@ -76,26 +77,10 @@ const follow = {
                 </a>
               </li>
               <li>
-                <a href={medium.url} target="_blank">
-                  <img
-                    src={medium.logo.url}
-                    alt={medium.logo.alt}
-                    width={medium.logo.width}
-                    height={medium.logo.height}
-                    title={medium.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={medium}/>
               </li>
               <li>
-                <a href={linkedin.url} target="_blank">
-                  <img
-                    src={linkedin.logo.url}
-                    alt={linkedin.logo.alt}
-                    width={linkedin.logo.width}
-                    height={linkedin.logo.height}
-                    title={linkedin.name}
-                  />
-                </a>
+                <SocialRefAnchorElement social={linkedin}/>
               </li>
               <li>
                 <a href={instagram.url} target="_blank">
