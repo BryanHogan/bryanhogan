@@ -81,3 +81,5 @@ export const medium: SocialMediaProfile = {
         alt: "Medium logo simple soft white color only"
     }
 }
+
+// To add: Reddit, Hackernews, X, Mastodon, Lemmy, BlueSky, Nebula, Threads, 
