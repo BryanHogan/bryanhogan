@@ -2,6 +2,9 @@
 interface Props {
   mode: string;
 }
+
+import {SocialMediaProfile, instagramp} from "./socials.ts"
+
 const { mode } = Astro.props;
 {
   /* Modes: All, Home, Blog, Professional */
@@ -43,7 +46,7 @@ const linkedin = {
   target: "_blank",
 };
 const instagram = {
-  href: "https://www.instagram.com/bryanhoganme/",
+  href: instagramp.url,
   src: "/logos/Instagram-Logo.svg",
   alt: "Instagram logo simple soft white color only",
   width: "12",

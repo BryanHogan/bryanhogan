@@ -1,8 +1,9 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "allowJs": true
+    "target": "es2015",
+    "module": "es2015",
+    "allowJs": true,
+    "verbatimModuleSyntax": false
   }
 }
