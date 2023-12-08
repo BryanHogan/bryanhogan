@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
+import Button from "../components/Button.astro";
+import { instagram, linkedin } from "../components/socials";
 ---
 
 <Layout
@@ -8,10 +11,90 @@ import Layout from "../layouts/Layout.astro";
     headerMode="Home"
     ogtype="website"
 >
-    <p>This page is currently being build.</p>
-    <section>
-        <h1 class="text-align-center">About Me</h1>
-        <p>Text here</p>
+    <section class="gradient-background">
+        <div class="text-section text-align-center text-shadow">
+            <h1>About</h1>
+            <p class="text-align-center" style="margin-inline: auto;">
+                About me, Bryan Hogan, and my blog.
+            </p>
+        </div>
     </section>
+    <TextSectionWithSide>
+        <h2
+            class="text-align-center accent-underline-adjust-width"
+            id="about-me"
+            slot="h2-title"
+        >
+            About Me
+        </h2>
+        <p>
+            Hello 👋 I am Bryan Hogan. Soon a <a href="./blog/what-is-coco"
+                >Code & Context</a
+            > B.Sc. graduate, a interdisciplinary study combining computer
+            science, design and entrepreneurship. See a more professional
+            introduction of me in my <a href="./portfolio">portfolio</a>.
+        </p>
+        <p>Hopefully you can find some great posts on my blog, more on that down below.</p>
+        <nav slot="aside-content">
+            <Button
+                text="Instagram"
+                link={instagram.url}
+                buttonStyle="transparent-bright small grow color-accent"
+                targetText="_blank"
+            />
+            <Button
+                text="LinkedIn"
+                link={linkedin.url}
+                buttonStyle="transparent-bright small grow color-accent"
+                targetText="_blank"
+            />
+        </nav>
+    </TextSectionWithSide>
+    <TextSectionWithSide>
+        <h2
+            class="text-align-center accent-underline-adjust-width"
+            id="about-blog"
+            slot="h2-title"
+        >
+            About My Blog
+        </h2>
+        <p>
+            In my blog "Bryan's Blog" I delve into topics that captivate my
+            heart, all with the aim to also help you. From health-related
+            insight such as understanding sleep, to boosting productivity and
+            acquiring valuable skills. I want to share my journey and learn
+            alongside others.
+        </p>
+        <p><strong>What I Value & How I Think:</strong></p>
+        <ul>
+            <li>🌱 - Building a great future for yourself and others.</li>
+            <li>❤️ - To life happily in the future you need to be healthy.</li>
+            <li>
+                ⏳ - To achieve ambitious goals some things need to be improved,
+                productivity can sometimes help with that.
+            </li>
+            <li>
+                📣 - There's already amazing content out there, and that I want
+                to share.
+            </li>
+            <li>
+                ⚙️ - Modern thinking and building requires some technology. I
+                also just love building web apps.
+            </li>
+        </ul>
+        <p><strong>My favorite tags:</strong></p>
+        <ul>
+            <li><a href="./tags/learning">Learning</a> - About language learning, acquiring skills, educational content and getting better at learning itself.</li>
+            <li><a href="./tags/korea">Korea</a> - I studied one year abroad in South Korea. It was fascinating to see how Korea is different compared to Germany. I also made some great memories.</li>
+            <li><a href="./tags/development">Development</a> - About developing web apps and more. Started creating artifacts in Code & Context and have loved it ever since.</li>
+        </ul>
+        <nav slot="aside-content">
+            <Button
+                text="Start Reading"
+                link="./blog"
+                buttonStyle="transparent-bright small grow color-accent"
+            />
+        </nav>
+    </TextSectionWithSide>
 </Layout>
 <style></style>
