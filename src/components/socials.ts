@@ -15,7 +15,7 @@ export const instagram: SocialMediaProfile = {
     name: "Instagram",
     url: "https://instagram.com/bryanhoganme",
     logo: {
-        url: "./logos/Instagram-Logo.svg",
+        url: "/logos/Instagram-Logo.svg",
         width: 12,
         height: 12,
         alt: "Instagram logo simple soft white color only"
@@ -25,7 +25,7 @@ export const linkedin: SocialMediaProfile = {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/bryanhoganme",
     logo: {
-        url: "./logos/LinkedIn-Logo.svg",
+        url: "/logos/LinkedIn-Logo.svg",
         width: 12,
         height: 12,
         alt: "LinkedIn logo simple soft white color only"
@@ -35,7 +35,7 @@ export const youtube: SocialMediaProfile = {
     name: "YouTube",
     url: "/",
     logo: {
-        url: "./logos/Youtube-Logo.svg",
+        url: "/logos/Youtube-Logo.svg",
         width: 15,
         height: 10,
         alt: "YouTube logo simple soft white color only"
@@ -45,7 +45,7 @@ export const twitch: SocialMediaProfile = {
     name: "Twitch",
     url: "https://www.twitch.tv/bekublue",
     logo: {
-        url: "./logos/Twitch-Logo.svg",
+        url: "/logos/Twitch-Logo.svg",
         width: 12,
         height: 13,
         alt: "Twitch logo simple soft white color only"
@@ -55,7 +55,7 @@ export const github: SocialMediaProfile = {
     name: "Github",
     url: "https://github.com/BryanHogan/",
     logo: {
-        url: "./logos/Github-Logo.svg",
+        url: "/logos/Github-Logo.svg",
         width: 32,
         height: 31,
         alt: "Github logo simple soft white color only"
@@ -65,7 +65,7 @@ export const substack: SocialMediaProfile = {
     name: "Substack",
     url: "https://bryanhogan.substack.com/",
     logo: {
-        url: "./logos/Substack-Logo.svg",
+        url: "/logos/Substack-Logo.svg",
         width: 22,
         height: 24,
         alt: "Substack logo simple soft white color only"
@@ -75,7 +75,7 @@ export const medium: SocialMediaProfile = {
     name: "Medium",
     url: "https://medium.com/@bryanhoganme",
     logo: {
-        url: "./logos/Medium-Logo.svg",
+        url: "/logos/Medium-Logo.svg",
         width: 18,
         height: 10,
         alt: "Medium logo simple soft white color only"
