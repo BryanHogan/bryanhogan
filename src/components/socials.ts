@@ -81,5 +81,25 @@ export const medium: SocialMediaProfile = {
         alt: "Medium logo simple soft white color only"
     }
 }
+export const threads: SocialMediaProfile = {
+    name: "Threads",
+    url: "https://www.threads.net/@bryanhoganme",
+    logo: {
+        url: "/logos/Threads-Logo.svg",
+        width: 22,
+        height: 24,
+        alt: "Threads logo simple soft white color only"
+    }
+}
+export const mastodon: SocialMediaProfile = {
+    name: "Mastodon",
+    url: "https://mastodon.social/@BryanHogan",
+    logo: {
+        url: "/logos/Mastodon-Logo.svg",
+        width: 23,
+        height: 24,
+        alt: "Mastodon logo simple soft white color only"
+    }
+}
 
 // To add: Reddit, Hackernews, X, Mastodon, Lemmy, BlueSky, Nebula, Threads, 
