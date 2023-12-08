@@ -11,12 +11,18 @@ import {
   github,
   substack,
   medium,
+  threads,
+mastodon,
 } from "./socials.ts";
 import SocialRefAnchorElement from "./SocialRefAnchorElement.astro";
 
 const { mode } = Astro.props;
 {
-  /* Modes: All, Home, Blog, Professional */
+  /* Modes: All, Home, Blog, Professional
+  Home: About, Now, , Instagram, LinkedIn, Github, Threads, Mastodon, 
+  Blog: Everything of All, minus: - LinkedIn,  - Github
+  Pro: LinkedIn, Github 
+  */
 }
 const logoHome = {
   href: "/",
@@ -100,7 +106,7 @@ const follow = {
                 <SocialRefAnchorElement social={twitch} />
               </li>
               <li>
-                <SocialRefAnchorElement social={github}/>
+                <SocialRefAnchorElement social={github} />
               </li>
             </ul>
           </li>
@@ -152,17 +158,25 @@ const follow = {
             />
             <ul class="container-dropdown-items">
               <li>
-                <SocialRefAnchorElement social={instagram}/>
+                <a href="/about">About</a>
               </li>
               <li>
-                <SocialRefAnchorElement social={medium}/>
+                <a href="/now">Now</a>
               </li>
               <li>
-                <SocialRefAnchorElement social={linkedin}/>
+                <SocialRefAnchorElement social={instagram} />
               </li>
-
               <li>
-                <SocialRefAnchorElement social={github}/>
+                <SocialRefAnchorElement social={linkedin} />
+              </li>
+              <li>
+                <SocialRefAnchorElement social={github} />
+              </li>
+              <li>
+                <SocialRefAnchorElement social={threads} />
+              </li>
+              <li>
+                <SocialRefAnchorElement social={mastodon} />
               </li>
             </ul>
           </li>
@@ -200,10 +214,10 @@ const follow = {
                 <a href="#contact">Contact</a>
               </li>
               <li>
-                <SocialRefAnchorElement social={linkedin}/>
+                <SocialRefAnchorElement social={linkedin} />
               </li>
               <li>
-                <SocialRefAnchorElement social={github}/>
+                <SocialRefAnchorElement social={github} />
               </li>
             </ul>
           </li>
@@ -252,10 +266,19 @@ const follow = {
             />
             <ul class="container-dropdown-items">
               <li>
-                <SocialRefAnchorElement social={instagram}/>
+                <a href="/about">About</a>
               </li>
               <li>
-                <SocialRefAnchorElement social={medium}/>
+                <a href="/now">Now</a>
+              </li>
+              <li>
+                <SocialRefAnchorElement social={instagram} />
+              </li>
+              <li>
+                <SocialRefAnchorElement social={threads} />
+              </li>
+              <li>
+                <SocialRefAnchorElement social={mastodon} />
               </li>
             </ul>
           </li>
