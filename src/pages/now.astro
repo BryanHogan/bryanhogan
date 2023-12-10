@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
+import Button from "../components/Button.astro";
+import { instagram, linkedin } from "../components/socials";
+---
+
+<Layout
+    title="Now - Bryan Hogan"
+    metaDescription="About BryanHogan.com & Bryan Hogan."
+    headerMode="Home"
+    ogtype="website"
+>
+    <div class="gradient-background small-intro-section" style="">
+        <div class="text-section text-align-center text-shadow">
+            <h1>Now</h1>
+            <p class="text-align-center" style="margin-inline: auto;">
+                Last updated on 10th December,<br />from my room on the
+                University of Seoul campus.
+            </p>
+        </div>
+    </div>
+    <TextSectionWithSide>
+        <h2
+            class="text-align-center accent-underline-adjust-width"
+            id="doing-now"
+            slot="h2-title"
+        >
+            What am I doing now?
+        </h2>
+        <ul>
+            <li>
+                <strong>Semester at University of Seoul (서울시립대)</strong>.
+                Studying abroad in South Korea, now in my last month of the
+                semester.
+            </li>
+            <li><strong>Developing BryanHogan.com.</strong> Creating my own page from the ground up using html and css within the Astro framework.</li>
+            <li><strong>Blog.</strong> Writing more content for my blog.</li>
+        </ul>
+        <nav slot="aside-content">
+            <Button
+                text="Blog"
+                link="/blog"
+                buttonStyle="transparent-bright small grow color-accent"
+            />
+        </nav>
+    </TextSectionWithSide>
+</Layout>
+<style></style>
