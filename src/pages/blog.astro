@@ -2,7 +2,7 @@
 const pageTtitle = "Blog Page";
 
 const newsletterReminder = true;
-var allPosts = await Astro.glob("../pages/blog/*.md");
+export var allPosts = await Astro.glob("../pages/blog/*.md");
 allPosts = allPosts.sort((a, b) => {
   let dateA =
     a.frontmatter && a.frontmatter.pubDate
@@ -14,6 +14,7 @@ allPosts = allPosts.sort((a, b) => {
       : new Date(0);
   return dateB.getTime() - dateA.getTime();
 });
+
 
 import Button from "../components/Button.astro";
 import CardB from "../components/CardB.astro";

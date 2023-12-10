@@ -1,16 +1,5 @@
 ---
-var allPosts = await Astro.glob("../pages/blog/*.md");
-allPosts = allPosts.sort((a, b) => {
-  let dateA =
-    a.frontmatter && a.frontmatter.pubDate
-      ? new Date(a.frontmatter.pubDate)
-      : new Date(0);
-  let dateB =
-    b.frontmatter && b.frontmatter.pubDate
-      ? new Date(b.frontmatter.pubDate)
-      : new Date(0);
-  return dateB.getTime() - dateA.getTime();
-});
+import { allPosts } from "./blog.astro";
 import CompactPostsList from "../components/CompactPostsList.astro";
 import Layout from "../layouts/Layout.astro";
 ---
