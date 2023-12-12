@@ -8,6 +8,14 @@ interface Props {
 }
 
 const { post } = Astro.props;
+
+import { getCollection } from "astro:content";
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const indexOfPost = allPosts.findIndex(
+  (posts) => post.data.title === posts.data.title,
+);
 ---
 
 <Layout
@@ -25,6 +33,9 @@ const { post } = Astro.props;
       transition:name={post.data.coverImage.url}
     />
   </div>
+  <p>{indexOfPost} Hiiiiiiiiiiii</p>
+  {allPosts[indexOfPost + 1] ? <a href={`/blog/${allPosts[indexOfPost + 1].slug}/`}>{allPosts[indexOfPost + 1].data.title}</a> : null}
+  {allPosts[indexOfPost - 1] ? <a href={`/blog/${allPosts[indexOfPost - 1].slug}/`}>{allPosts[indexOfPost - 1].data.title}</a> : null}
   <div class="second-menu-section">
     <ul>
       <li>
@@ -52,7 +63,9 @@ const { post } = Astro.props;
         <p>Published: {new Date(post.data.pubDate).toLocaleDateString()}</p>
       </time>
       <time datetime={post.data.lastUpdate.toISOString()}>
-        <p>Last Update: {new Date(post.data.lastUpdate).toLocaleDateString()}</p>
+        <p>
+          Last Update: {new Date(post.data.lastUpdate).toLocaleDateString()}
+        </p>
       </time>
     </div>
   </article>
