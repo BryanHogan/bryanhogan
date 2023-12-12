@@ -51,7 +51,9 @@ const { post } = Astro.props;
       <time datetime={post.data.pubDate.toISOString()}>
         <p>Published: {new Date(post.data.pubDate).toLocaleDateString()}</p>
       </time>
-      <p>Last update: {new Date(post.data.pubDate).toLocaleDateString()}</p>
+      <time datetime={post.data.lastUpdate.toISOString()}>
+        <p>Last Update: {new Date(post.data.lastUpdate).toLocaleDateString()}</p>
+      </time>
     </div>
   </article>
   <ButtondownSignupForm />
