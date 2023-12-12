@@ -2,24 +2,14 @@
 const pageTtitle = "Blog Page";
 
 const newsletterReminder = true;
-export var allPosts = await Astro.glob("../pages/blog/*.md");
-allPosts = allPosts.sort((a, b) => {
-  let dateA =
-    a.frontmatter && a.frontmatter.pubDate
-      ? new Date(a.frontmatter.pubDate)
-      : new Date(0);
-  let dateB =
-    b.frontmatter && b.frontmatter.pubDate
-      ? new Date(b.frontmatter.pubDate)
-      : new Date(0);
-  return dateB.getTime() - dateA.getTime();
-});
-
 
 import Button from "../components/Button.astro";
 import CardB from "../components/CardB.astro";
 import Layout from "../layouts/Layout.astro";
 import CompactPostsList from "../components/CompactPostsList.astro"
+import { getCollection } from "astro:content";
+
+const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <Layout
@@ -50,17 +40,17 @@ import CompactPostsList from "../components/CompactPostsList.astro"
       allPosts.map((post) => (
         <li class="post">
           <CardB
-            title={post.frontmatter.title}
-            description={post.frontmatter.description}
-            ahref={post.url}
-            coverURL={post.frontmatter.coverImage.url}
-            transition:name={post.frontmatter.coverImage.url}
-            coverALT={post.frontmatter.coverImage.alt}
-            coverWidth={post.frontmatter.coverImage.width}
-            coverHeight={post.frontmatter.coverImage.height}
-            tag={post.frontmatter.tags[0]}
-            length={post.frontmatter.length}
-            postURL={post.url}
+            title={post.data.title}
+            description={post.data.description}
+            ahref={`/blog/${post.slug}/`}
+            coverURL={post.data.coverImage.url}
+            transition:name={post.data.coverImage.url}
+            coverALT={post.data.coverImage.alt}
+            coverWidth={post.data.coverImage.width}
+            coverHeight={post.data.coverImage.height}
+            tag={post.data.tags[0]}
+            length={post.data.length}
+            postURL={`/blog/${post.slug}/`}
           />
         </li>
       ))

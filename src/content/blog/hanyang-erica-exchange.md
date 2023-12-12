@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MdPostLayout.astro
 title: Exchange Semester At Hanyang University ERICA
 author: Bryan@BryanHogan.com (Bryan Hogan)
 description: What is it like to go abroad to South Korea to do an exchange semester at Hanyang University ERICA campus? (Summer 2023)

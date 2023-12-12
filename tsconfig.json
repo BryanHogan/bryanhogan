@@ -4,6 +4,7 @@
     "target": "es2015",
     "module": "ESNext",
     "allowJs": true,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "strictNullChecks": true
   }
 }

@@ -1,7 +1,11 @@
 ---
-import { allPosts } from "./blog.astro";
 import CompactPostsList from "../components/CompactPostsList.astro";
 import Layout from "../layouts/Layout.astro";
+
+import { getCollection } from "astro:content";
+
+const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
 ---
 
 <Layout

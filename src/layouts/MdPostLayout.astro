@@ -1,26 +1,29 @@
 ---
 import Layout from "./Layout.astro";
-const { frontmatter } = Astro.props;
-const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString();
-const formattedLastUpdate = new Date(
-  frontmatter.lastUpdate,
-).toLocaleDateString();
 import ButtondownSignupForm from "../components/ButtondownSignupForm.astro";
+
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+
 ---
 
 <Layout
-  title={frontmatter.title}
-  metaDescription={frontmatter.description}
+  title={post.data.title}
+  metaDescription={post.data.description}
   headerMode="Blog"
   ogtype="article"
 >
   <div class="gradient-background">
     <img
-      src={frontmatter.coverImage.url}
-      alt={frontmatter.coverImage.alt}
-      width={frontmatter.coverImage.width}
-      height={frontmatter.coverImage.height}
-      transition:name={frontmatter.coverImage.url}
+      src={post.data.coverImage.url}
+      alt={post.data.coverImage.alt}
+      width={post.data.coverImage.width}
+      height={post.data.coverImage.height}
+      transition:name={post.data.coverImage.url}
     />
   </div>
   <div class="second-menu-section">
@@ -42,12 +45,12 @@ import ButtondownSignupForm from "../components/ButtondownSignupForm.astro";
     </ul>
   </div>
   <article class="blog text-section">
-    <h1 class="text-align-center">{frontmatter.title}</h1>
+    <h1 class="text-align-center">{post.data.title}</h1>
     <slot />
     <div class="infos">
-      <p>Written by {frontmatter.author}</p>
-      <p>Published: {formattedPubDate}</p>
-      <p>Last update: {formattedLastUpdate}</p>
+      <p>Written by {post.data.author}</p>
+      <p>Published: {post.data.pubDate.toString().slice(0,10)}</p>
+      <p>Last update: {post.data.lastUpdate.toString().slice(0,10)}</p>
     </div>
   </article>
   <ButtondownSignupForm />

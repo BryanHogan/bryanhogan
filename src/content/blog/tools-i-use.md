@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MdPostLayout.astro
 title: Tools I Use
 author: Bryan@BryanHogan.com (Bryan Hogan)
 description: There are many programs I use for my studies and work in the fields of development, design and marketing.

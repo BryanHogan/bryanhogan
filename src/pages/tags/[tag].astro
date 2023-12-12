@@ -1,19 +1,19 @@
 ---
 import CompactPostsList from "../../components/CompactPostsList.astro";
 import Layout from "../../layouts/Layout.astro";
-const { tag } = Astro.params;
-const { posts } = Astro.props;
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob("../blog/*.md");
-
+  const allPosts = await getCollection("blog");
   const uniqueTags = [
-    ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
   ];
 
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) =>
-      post.frontmatter.tags.includes(tag),
+      post.data.tags.includes(tag),
     );
     return {
       params: { tag },
@@ -21,6 +21,8 @@ export async function getStaticPaths() {
     };
   });
 }
+const { tag } = Astro.params;
+const { posts } = Astro.props;
 ---
 
 <Layout
@@ -33,6 +35,7 @@ export async function getStaticPaths() {
     <h1>Posts tagged with {tag}</h1>
     <CompactPostsList posts={posts} />
   </div>
+</Layout>
   <style>
     .main-area {
       height: 80vh;

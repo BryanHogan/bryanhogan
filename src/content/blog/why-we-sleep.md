@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MdPostLayout.astro
 title: Why We Sleep - Summary, Review & Thoughts
 author: Bryan@BryanHogan.com (Bryan Hogan)
 description: We spend 1/3rd of our life sleeping. But why do we sleep? We don't live in a sleep loss epidemic?

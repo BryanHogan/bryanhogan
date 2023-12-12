@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MdPostLayout.astro
 title: What Is Code & Context? The Best Field Of Study?
 author: Bryan@BryanHogan.com (Bryan Hogan)
 description: Code & Context shows how studying should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship.
