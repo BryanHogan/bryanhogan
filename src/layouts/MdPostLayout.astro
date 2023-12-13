@@ -55,7 +55,7 @@ const indexOfPost = allPosts.findIndex(
     <h1 class="text-align-center">{post.data.title}</h1>
     <slot />
     <div class="infos">
-      <p>Written by {post.data.author}</p>
+      <p>Written by {post.data.author === "Bryan@BryanHogan.com (Bryan Hogan)" ? (<a href="/about">Bryan Hogan</a>) : post.data.author}</p>
       <time datetime={post.data.pubDate.toISOString()}>
         <p>Published: {new Date(post.data.pubDate).toLocaleDateString()}</p>
       </time>
