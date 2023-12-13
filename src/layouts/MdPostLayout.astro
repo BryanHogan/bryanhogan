@@ -6,10 +6,10 @@ import type { CollectionEntry } from "astro:content";
 interface Props {
   post: CollectionEntry<"blog">;
 }
+import { getCollection } from "astro:content";
 
 const { post } = Astro.props;
 
-import { getCollection } from "astro:content";
 const allPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
@@ -33,9 +33,6 @@ const indexOfPost = allPosts.findIndex(
       transition:name={post.data.coverImage.url}
     />
   </div>
-  <p>{indexOfPost} Hiiiiiiiiiiii</p>
-  {allPosts[indexOfPost + 1] ? <a href={`/blog/${allPosts[indexOfPost + 1].slug}/`}>{allPosts[indexOfPost + 1].data.title}</a> : null}
-  {allPosts[indexOfPost - 1] ? <a href={`/blog/${allPosts[indexOfPost - 1].slug}/`}>{allPosts[indexOfPost - 1].data.title}</a> : null}
   <div class="second-menu-section">
     <ul>
       <li>
@@ -70,9 +67,50 @@ const indexOfPost = allPosts.findIndex(
     </div>
   </article>
   <ButtondownSignupForm />
+  <div class="next-prev-post-section">
+    {
+      allPosts[indexOfPost - 1] ? (
+        <div>
+          <p>Next Post:</p>
+          <a href={`/blog/${allPosts[indexOfPost - 1].slug}/`}>
+            {allPosts[indexOfPost - 1].data.title}
+          </a>
+        </div>
+      ) : null
+    }
+
+    {
+      allPosts[indexOfPost + 1] ? (
+        <div style="margin-left: auto;">
+          <p>Previous Post:</p>
+          <a href={`/blog/${allPosts[indexOfPost + 1].slug}/`}>
+            {allPosts[indexOfPost + 1].data.title}
+          </a>
+        </div>
+      ) : null
+    }
+  </div>
 </Layout>
 
 <style>
+  .next-prev-post-section {
+    max-width: 700px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    margin-top: 2em;
+
+    & > * {
+      max-width: 45%;
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--color-main-bright);
+      border-radius: 1em;
+    }
+  }
   p {
     text-align: start;
   }
