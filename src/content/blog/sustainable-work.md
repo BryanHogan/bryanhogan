@@ -22,14 +22,14 @@ Both passion and motivation are highly interlinked.
 
 But this passion, this interest, is fleeting. It is human nature that interests change over time.
 
-So this is one of the reasons why choosing a career only on interest is sub-optimal but there are more:
-1. When deciding on a career, you are deciding on a proxy messurement of that career. This can be highly misinformed, especially after school.
-2. Things that have been recently experiences naturally land higher on the passion scale.
+So this is one of the reasons why choosing a career only on interest is suboptimal but there are more:
+1. When deciding on a career, you are deciding on a proxy measurement of that career. This can be highly misinformed, especially after school.
+2. Things that have been recently experienced naturally land higher on the passion scale.
 
 I want to note here, that the strengths you have are not just the things that you are good at, it is also the things that energise you, instead of depleting you.
 
 ## Purpose
-Making a career decision based on purpose makes it much more likely that you will find long-term satisfaction in that area than a decision purely based on passion. It starts to get even better when you combine these though, primarly choosing field based on purpose and then filtering with passion.
+Making a career decision based on purpose makes it much more likely that you will find long-term satisfaction in that area than a decision purely based on passion. It starts to get even better when you combine these though, primarily choosing fields based on purpose and then filtering with passion.
 
 What is something that aligns with your core believes and values?
 
@@ -38,7 +38,7 @@ What are things that make you be you? Can you live these things out in your care
 
 When passion, purpose and personality align you have a great chance of finding a meaningful and fulfilling career.
 
-*(On a side note: Don't be obsessed with something mediocore or a shiny new object, like a title, making your parents proud or having status or power.)*
+*(On a side note: Don't be obsessed with something mediocre or a shiny new object, like a title, making your parents proud or having status or power.)*
 
 
 ## How do you find out what these 3 P's are?
@@ -54,11 +54,11 @@ These three questions can also help you get closer to your values:
 2. If you are designing your perfect day, what sort of work are you doing?
 3. Where do you like to work, what culture and atmosphere are you looking for?
 
-To find out more about yourself you need to test yourself. Have a experimental mindset, both in career and life. Test out things and see which aspect you enjoy and which you don't. That is the best way to **gain experience**.
-Stop thinking of your career as a ladder and that the only way is up, the only destination is not becomming more senior.
-It also great to keep asking questions and have conversations. Be open to other people. Find out what they are doing, stay career curious.
+To find out more about yourself you need to test yourself. Have an experimental mindset, both in career and life. Test out things and see which aspect you enjoy and which you don't. That is the best way to **gain experience**.
+Stop thinking of your career as a ladder and that the only way is up, the only destination is not becoming more senior.
+It's also great to keep asking questions and have conversations. Be open to other people. Find out what they are doing, stay career curious.
 
-Also, let people help you (networking doesn't need to be overly professional). Finding a mentor early on your career can be very useful. Make the request not by asking them to be a mentor, but instead by stating: Your interest (be specific, example: Interest in growth & impact -> investing), Why them, Timeframe (~30 minutes).
+Also, let people help you (networking doesn't need to be overly professional). Finding a mentor early on in your career can be very useful. Make the request not by asking them to be a mentor, but instead by stating: Your interest (be specific, example: Interest in growth & impact -> investing), Why them, Timeframe (~30 minutes).
 
 
 **Reflect** on your past experiences. By reflecting we find out what kind of person we are and what makes us happy.
@@ -71,7 +71,7 @@ Something to remember: No one has full confidence. Everyone has doubts. Everyone
 What makes you stay at a workplace? How to prevent burnout?
 
 ## 6 Areas Of Fitting Work
-How well a certain work fits to you can be evaluated by looking at 6 areas: Workload, Control, Reward, Community, Fairness and Values. If all areas have a high fit to you, the motivation of working at that job is high.
+How well a certain work fits you can be evaluated by looking at 6 areas: Workload, Control, Reward, Community, Fairness and Values. If all areas have a high fit to you, the motivation of working at that job is high.
 
 - **Workload** - Do you feel your workload is too much, too complex, too urgent or too stressful?
 - **Control** - Are you experiencing problems in authority or influence, the sense of control over what you can do is limited or undermined?
@@ -89,7 +89,7 @@ These strategies generally involve this step by step action process:
 
 Be detailed in defining the problem, narrow it down to manageable portions.
 
-Then set clear objectives, don't be vague. Define your prefered alternative that these objectives should bring you to.
+Then set clear objectives, don't be vague. Define your preferred alternative that these objectives should bring you to.
 
 Take action. Plans are nothing without action.
 
@@ -103,17 +103,17 @@ Psychological safety refers to a shared belief within a team or organization tha
 How to have a psychological safe environment?
 1. Solit criticism
 2. Give praise
-3. Give critisicm
+3. Give criticism
 4. Gauge your feedback
 
 Make time for feedback. Ask open questions about how you can improve and what others think. If you agree with feedback, take action on that. If you disagree, look for common ground and give voice to that, then explain where you see things differently.
 
-Give praise, and also make time for opportunities of feedback for others. Always remember to gauge how the receiption to your feedback is. Your intentions don't matter, the impact does.
+Give praise, and also make time for opportunities of feedback for others. Always remember to gauge how the reception to your feedback is. Your intentions don't matter, the impact does.
 
 For my study at Code & Context we'd often do a Keep-Drop-Try feedback session at the end or in the middle of the 2-week classes. The positive impact of this was amazing and I can't ever see myself going back to somewhere that does not foster a feedback-culture.
-Everyone has some thoughts on how a process can be improved, some little things that are would grow into huge problems if no one would ever mention them, or just agreeing on what the path ahead should be, feedback (Keep-Drop-Try) finds a solution for this. More on how we used ==Keep-Drop-Try at Code & Context==.
+Everyone has some thoughts on how a process can be improved, some little things that would grow into huge problems if no one would ever mention them, or just agreeing on what the path ahead should be, feedback (Keep-Drop-Try) finds a solution for this. More on how we used [Keep-Drop-Try at Code & Context](/blog/what-is-coco).
 
-I want to give you special thanks for reading this far. I send every post by mail and love every reply I get on there. Sign up here.
+I want to give you special thanks for reading this far. I send every post by mail and love every reply I get on there. Sign up [here](/follow).
 
 **Sources:**
 - Don't Choose Careers Based on Passion by Justin Sung- https://youtu.be/E4Pp4VMRZKI
