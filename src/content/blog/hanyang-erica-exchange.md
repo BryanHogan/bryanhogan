@@ -123,8 +123,8 @@ I took the following courses:
 
 Passing most of my courses was quite easy and I did not have to spend a lot of time outside of class to work on them. But there are courses that are harder and require you to spend a lot of time on the class even outside of it.
 
-I didn't enjoy the way the classes were taught I don't think they are efficient to learn something. It reminded me a lot of my high schools classes as we were only doing theory without any relevant learning and practice and had no feedback culture.
-The communication in class is very one-sided, the professor talks and decides without giving freedom to the students or regard to their opinion.
+I didn't enjoy the way the classes were taught. I don't think they are efficient to learn something. It reminded me a lot of my high schools classes as we were only doing theory without any relevant learning and practice and had no feedback culture.
+The communication in class was very one-sided, the professor talks and decides without giving freedom to the students or regard to their opinion.
 It felt impossible to acquire skills from the class, I'd forget everything after it was over. The exams were also done in an old-fashioned way, relying a lot on memorization and sometimes asking for the most random information.
 The classes I had in Code & Context were better in every way but that is an unfair comparison as they would also stand out from classes everywhere else. For me, learning something by myself or at Code & Context would have been way more efficient than with a class I had there.
 The classes were good to make friends though.
@@ -132,7 +132,7 @@ The classes were good to make friends though.
 ### The Campus
 
 My first impression of it wasn't the best but I did grow to like it more. Especially once the semester began the huge campus was more filled with life and people.
-On campus are:
+On campus you can find:
 - multiple cafeterias
 - cafes
 - restaurants
