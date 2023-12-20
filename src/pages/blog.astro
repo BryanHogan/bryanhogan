@@ -50,6 +50,8 @@ const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.get
             coverHeight={post.data.coverImage.height}
             tag={post.data.tags[0]}
             length={post.data.length}
+            pubDate={post.data.pubDate}
+            lastUpdate={post.data.lastUpdate}
             postURL={`/blog/${post.slug}/`}
           />
         </li>
