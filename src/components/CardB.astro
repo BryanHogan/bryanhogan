@@ -31,32 +31,14 @@ const {
 <div class="card-container">
   <a href={postURL}>
     <div class="gradient-background gradient-area">
-      <div class="first-row-container">
-        <img
-          class="post-cover-symbol"
-          src={coverURL}
-          alt={coverALT}
-          width={coverWidth}
-          height={coverHeight}
-          transition:name={coverURL}
-        />
-        <div class="lastUpdateDate" title="Last Update">
-          <img
-            class="round-arrow-icon"
-            src="/icons/Round-Arrow-Icon.svg"
-            alt="Round arrow indicating date of last update"
-            width="20"
-            height="20"
-          />
-          <p class="date-text">
-            <small>
-              <time datetime={pubDate.toISOString()}>
-                {new Date(pubDate).toLocaleDateString()}
-              </time>
-            </small>
-          </p>
-        </div>
-      </div>
+      <img
+        class="post-cover-symbol"
+        src={coverURL}
+        alt={coverALT}
+        width={coverWidth}
+        height={coverHeight}
+        transition:name={coverURL}
+      />
       <h2>{title}</h2>
       <div class="information-area">
         <div>
@@ -66,6 +48,19 @@ const {
             width="17"
             height="17"
           /><p>{tag}</p>
+        </div>
+        <div>
+          <img
+            src="/icons/Round-Arrow-Icon.svg"
+            alt="Round arrow indicating date of last update"
+            width="20"
+            height="20"
+          />
+          <p>
+            <time datetime={pubDate.toISOString()}>
+              {new Date(pubDate).toLocaleDateString()}
+            </time>
+          </p>
         </div>
         <div>
           <img
@@ -84,33 +79,6 @@ const {
 </div>
 
 <style>
-  .first-row-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    & > img {
-      grid-column: 1 / 4;
-      grid-row: 1;
-    }
-    & > .lastUpdateDate {
-      grid-column: 3 / 4;
-      grid-row: 1;
-      opacity: 0.9;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      height: min-content;
-      padding-top: 5px;
-      padding-right: 20px;
-      & .round-arrow-icon {
-        width: 0.8em;
-        height: auto;
-        margin-right: 5px;
-        margin-top: 2px;
-      }
-    }
-  }
-  .date-text {
-  }
   .post-cover-symbol {
     max-height: 75px;
     width: 75px;
@@ -150,12 +118,14 @@ const {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 15px;
       & img {
         width: 100%;
         height: 20px;
       }
       & div {
-        padding: 10px 15px;
+        
         display: flex;
         flex-direction: row;
         align-items: center;
