@@ -101,5 +101,15 @@ export const mastodon: SocialMediaProfile = {
         alt: "Mastodon logo simple soft white color only"
     }
 }
+export const bluesky: SocialMediaProfile = {
+    name: "BlueSky",
+    url: "https://bsky.app/profile/bryanhogan.com",
+    logo: {
+        url: "/logos/BlueSky-Logo.svg",
+        width: 24,
+        height: 22,
+        alt: "BlueSky logo soft grey color"
+    }
+}
 
 // To add: Reddit, Hackernews, X, Mastodon, Lemmy, BlueSky, Nebula, Threads, 

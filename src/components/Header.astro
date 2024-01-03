@@ -12,7 +12,8 @@ import {
   substack,
   medium,
   threads,
-mastodon,
+  mastodon,
+  bluesky,
 } from "./socials.ts";
 import SocialRefAnchorElement from "./SocialRefAnchorElement.astro";
 
@@ -178,6 +179,9 @@ const follow = {
               <li>
                 <SocialRefAnchorElement social={mastodon} />
               </li>
+              <li>
+                <SocialRefAnchorElement social={bluesky} />
+              </li>
             </ul>
           </li>
         </ul>
@@ -279,6 +283,9 @@ const follow = {
               </li>
               <li>
                 <SocialRefAnchorElement social={mastodon} />
+              </li>
+              <li>
+                <SocialRefAnchorElement social={bluesky} />
               </li>
             </ul>
           </li>
