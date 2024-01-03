@@ -1,0 +1,50 @@
+---
+import Button from "./Button.astro";
+
+const {} = Astro.props;
+---
+
+<div class="card-container">
+    <div class="title-row">
+        <h3>Back To Germany</h3>
+        <time><p>17/6/2025</p></time>
+    </div>
+    <p>
+        It's time to go back to go back to Germany for me. Write a thesis, start
+        work and make some nice pancakes.
+    </p>
+    <div class="buttons-container">
+    <Button
+        link="."
+        text="Button text"
+        targetText="_blank"
+        buttonStyle="transparent-bright small grow color-accent"
+    />
+</div>
+</div>
+
+<style>
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-container {
+        max-width: 400px;
+        margin: 20px;
+    }
+    .title-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        & h3 {
+            font-size: 1.2em;
+        }
+        & time {
+            margin-left: auto;
+        }
+    }
+</style>
