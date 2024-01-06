@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import CardLU from "../components/CardLU.astro";
+import { CardLUButton } from "../components/CardLU.astro";
+import { LifeUpdates } from "../life-updates";
 ---
 
 <Layout
@@ -58,12 +60,24 @@ import CardLU from "../components/CardLU.astro";
   <section>
     <h2 class="text-align-center">Life Updates</h2>
     <ul class="life-updates-container">
-      <li><CardLU /></li>
-      <li><CardLU /></li>
-      <li><CardLU /></li>
-      <li><CardLU /></li>
-      <li><CardLU /></li>
-      <li class="special"></li>
+      {LifeUpdates.map((lifeUpdate) => (
+        <li>
+          <CardLU
+            title={lifeUpdate.title}
+            date={lifeUpdate.date}
+            text={lifeUpdate.description}
+            cardButtons={lifeUpdate.cardButtons}
+          />
+        </li>
+      ))}
+      <li>
+      <li class="special">
+        <p>
+          Sharing updates on my life. The <a href="/about">About</a> and <a
+            href="/now">Now</a
+          > pages are also definitely worth checking out.
+        </p>
+      </li>
     </ul>
   </section>
 </Layout>
@@ -72,12 +86,18 @@ import CardLU from "../components/CardLU.astro";
   .life-updates-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     justify-items: center;
     list-style: none;
     max-width: 1350px;
     width: 80%;
     margin-inline: auto;
+    & .special {
+      grid-row: 1;
+      height: min-content;
+      & p {
+      }
+    }
   }
   h1 {
     padding-bottom: 0.25em;
@@ -119,6 +139,9 @@ import CardLU from "../components/CardLU.astro";
   @media only screen and (max-width: 699px) {
     .life-updates-container {
       grid-template-columns: 1fr;
+      & .special {
+        margin-block: 1em;
+      }
     }
     .intro-section {
       & img {
@@ -133,14 +156,16 @@ import CardLU from "../components/CardLU.astro";
   @media only screen and (min-width: 700px) {
     .life-updates-container {
       & .special {
-      grid-column: 2 / 4;
-      grid-row: 1 / 2;
-      width: 100%;
-      height: 100%;
-      border: 1px solid white;
-      border-radius: 1em;
-      margin: 20px;
-    }
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        border-radius: 1em;
+        & p {
+          padding: 20px;
+        }
+      }
     }
     .life-updates-container {
       gap: 2.4em 1.2em;

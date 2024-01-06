@@ -1,26 +1,44 @@
 ---
 import Button from "./Button.astro";
 
-const {} = Astro.props;
+export interface CardLUButton {
+    buttonText: string;
+    buttonLink: string;
+    buttonTarget: string;
+}
+
+interface Props {
+    title: string;
+    date: Date;
+    text: string;
+    cardButtons: Array<CardLUButton>;
+}
+
+const { title, date, text, cardButtons } = Astro.props;
 ---
 
 <div class="card-container">
     <div class="title-row">
-        <h3>Back To Germany</h3>
-        <time><p>17/6/2025</p></time>
+        <h3>{title}</h3>
+        <time datetime={new Date(date).toISOString()}>
+            <p>
+                {new Date(date).toLocaleDateString()}
+            </p>
+        </time>
     </div>
-    <p>
-        It's time to go back to go back to Germany for me. Write a thesis, start
-        work and make some nice pancakes.
-    </p>
+    <p>{text}</p>
     <div class="buttons-container">
-    <Button
-        link="."
-        text="Button text"
-        targetText="_blank"
-        buttonStyle="transparent-bright small grow color-accent"
-    />
-</div>
+        {
+            cardButtons.map((button) => (
+                <Button
+                    link={button.buttonLink}
+                    text={button.buttonText}
+                    targetText={button.buttonTarget}
+                    buttonStyle="transparent-bright small grow color-accent"
+                />
+            ))
+        }
+    </div>
 </div>
 
 <style>
@@ -33,6 +51,7 @@ const {} = Astro.props;
     .card-container {
         max-width: 400px;
         margin: 20px;
+        min-width: 90%;
     }
     .title-row {
         display: flex;
@@ -45,6 +64,7 @@ const {} = Astro.props;
         }
         & time {
             margin-left: auto;
+            padding-left: 1em;
         }
     }
 </style>
