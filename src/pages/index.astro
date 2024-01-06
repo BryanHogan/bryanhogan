@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import CardLU from "../components/CardLU.astro";
-import { CardLUButton } from "../components/CardLU.astro";
 import { LifeUpdates } from "../life-updates";
 ---
 
@@ -103,10 +102,11 @@ import { LifeUpdates } from "../life-updates";
     padding-bottom: 0.25em;
   }
   .intro {
-    min-height: 90vh;
+    min-height: 86vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 2em;
   }
   section {
     padding: 0px;
@@ -135,6 +135,7 @@ import { LifeUpdates } from "../life-updates";
     align-items: center;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 4em;
   }
   @media only screen and (max-width: 699px) {
     .life-updates-container {
