@@ -12,6 +12,13 @@ export interface CardLUButton {
 
 export const LifeUpdates: LifeUpdate[] = [
   {
+    title: "Starting as a Software Developer",
+    date: new Date("2024-01-31"),
+    description: "Starting my job as a Software Developer.",
+    cardButtons: [
+    ]
+  },
+  {
     title: "New Years in Seoul",
     date: new Date("2024-01-01"),
     description: "Celebrating the start of the new year in Seoul.",
