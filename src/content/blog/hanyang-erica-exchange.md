@@ -28,7 +28,7 @@ What is it like to go to South Korea and visit Hanyang University erica as a stu
     </ul>
     <li>💸 <a href="#costs">Costs</a></li>
     <li>🤔 <a href="#hanyang--hanyang-erica---seoul-or-ansan">Hanyang & Hanyang erica - Seoul or Ansan?</a></li>
-    <li>👍 <a href="#conclusion">Conclusion</a></li>
+    <li>👍 <a href="#would-i-do-it-again">Would I Do It Again?</a></li>
 </ol>
 
 As part of my studies on Code & Context at TH Köln I was able to do an additional optional semester in which I chose to go abroad. I will talk about my time in Korea from February 2nd 2023 to x which was the last day for me on the erica campus.
@@ -165,7 +165,7 @@ If you want to look up how long it takes to go from place A to B use Naver Maps 
 
 I can recommend to anyone going to Hanyang erica to live in the on-campus dormitory. It was great to live together with so many friends and head out from the dormitory together.
 
-## Conclusion
+## Would I Do It Again?
 Overall my experience in South Korea was great. The location of the Hanyang erica campus is not optimal to explore Korea though. The classes were academically not the most useful, but I did enjoy them sometimes. Overall, I enjoyed my stay at the university a lot.
 
 I also learned that I prefer to have my own room to sleep in. And that is what I had at my next exchange semester I did in South Korea. I went to the University of Seoul right after my semester at Hanyang erica.
