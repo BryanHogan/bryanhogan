@@ -16,6 +16,18 @@ Choosing a career is a complex process. What kind of work direction you go into 
 
 So how to choose something? There are 3 main building blocks that can help you find direction, the 3 P's are: Purpose, Passion and Personality.
 
+**Table of Contents**
+<ol class="toc">
+    <li>❤️ <a href="#passion">Passion</a></li>
+    <li>🎯 <a href="#purpose">Purpose</a></li>
+    <li>🎭 <a href="#personality">Personality</a></li>
+    <li>🔎 <a href="#how-do-you-find-out-what-these-3-ps-are">How Do You Find Out What These 3 P's Are?</a></li>
+    ---
+    <li>🌱 <a href="#how-to-make-it-sustainable">How To Make It Sustainable</a></li>
+    <li>🎲 <a href="#6-areas-of-fitting-work">6 Areas Of Fitting Work</a></li>
+    <li>🦺 <a href="#psychological-safety">Psychological Safety</a></li>
+</ol>
+
 ## Passion
 Passion is a way of saying you have a strong interest in something. Commonly the better you get at something the more interested you are in it and the stronger the passion becomes.
 Both passion and motivation are highly interlinked.
