@@ -1,7 +1,7 @@
 ---
 title: Tools I Use
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: There are many programs I use for my studies and work in the fields of development, design and marketing.
+description: What do I use for my study and work, fields that are a mix of development and design.
 coverImage:
     url: /post-covers/Tools-Cover.svg
     alt: Drafting compass simple icon
