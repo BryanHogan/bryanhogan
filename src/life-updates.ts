@@ -12,10 +12,33 @@ export interface CardLUButton {
 
 export const LifeUpdates: LifeUpdate[] = [
   {
-    title: "Starting as a Software Developer",
-    date: new Date("2024-01-31"),
-    description: "Starting my job as a Software Developer.",
+    title: "Started My Personal Mail Newsletter",
+    date: new Date("2024-02-02"),
+    description: "Sharing life updates, content that has helped me and content that I have made.",
     cardButtons: [
+      {
+        buttonText: "Receive Bryan's Briefing",
+        buttonLink: "/follow",
+        buttonTarget: "_self",
+      },
+    ]
+  },
+  {
+    title: "Starting as a Software Developer",
+    date: new Date("2024-02-01"),
+    description: "Starting my job as a Software Developer.",
+    cardButtons: []
+  },
+  {
+    title: "Back In Germany",
+    date: new Date("2024-01-27"),
+    description: "Back in Germany after a year abroad in South Korea as an exchange student.",
+    cardButtons: [
+      {
+        buttonText: "Instagram Highlights",
+        buttonLink: "https://www.instagram.com/bryanhoganme/",
+        buttonTarget: "_blank",
+      },
     ]
   },
   {
@@ -25,7 +48,7 @@ export const LifeUpdates: LifeUpdate[] = [
     cardButtons: [
       {
         buttonText: "Instagram Highlight",
-        buttonLink: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDE0MDk4NTExMDg1NTUw?igsh=eHJkNzMxNG1oODA3",
+        buttonLink: "https://www.instagram.com/stories/highlights/18014098511085550/",
         buttonTarget: "_blank",
       },
     ]
