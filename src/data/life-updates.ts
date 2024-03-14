@@ -12,6 +12,18 @@ export interface CardLUButton {
 
 export const LifeUpdates: LifeUpdate[] = [
   {
+    title: "Bryan's Briefing February Edition",
+    date: new Date("2024-03-13"),
+    description: "Published the second edition of my monthly newsletter, February 2024 - Bryan's Briefing.",
+    cardButtons: [
+      {
+        buttonText: "Read It",
+        buttonLink: "https://buttondown.email/BryanHogan/archive/february-2024-bryans-briefing/",
+        buttonTarget: "_blank",
+      },
+    ]
+  },
+  {
     title: "Started My Personal Mail Newsletter",
     date: new Date("2024-02-02"),
     description: "Sharing life updates, content that has helped me and content that I have made.",
