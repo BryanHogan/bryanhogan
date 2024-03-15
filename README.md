@@ -11,7 +11,7 @@ I combine interdisciplary fields. Worked in online marketing & social media mana
 I am at the end of my Code & Context B.Sc. studies at TH Köln.
 - If you want to know more what Code & Context is check out my post [here](https://bryanhogan.com/blog/what-is-coco).
 
-I have also recently finished my year abroad studying in South Kora.
+I have also recently finished my year abroad studying in South Korea.
 - Read more about my semester at Hanyang University erica [here](https://bryanhogan.com/blog/hanyang-erica-exchange).
 - My second semester I did at University of Seoul.
 
