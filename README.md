@@ -1,11 +1,11 @@
 # Hello, I'm Bryan Hogan 👋
-I am almost a Code & Context graduate. A study based in Cologne, Germany, that combines computer science, design and business/entrepreneurship.
+I am almost a Code & Context graduate. A study based in Cologne, Germany, that combines computer science, design and business/entrepreneurship. It's all about how to create a product / service, how to design, optimise and find the right fit for it and then building a sustainable company / start-up around it.
 
 - Check out my page [BryanHogan.com](https://bryanhogan.com) to learn more about me.
 - You can also find my portfolio [here](https://bryanhogan.com/portfolio).
 - I also got a [blog](https://bryanhogan.com/blog).
 
-I combine interdisciplary fields. Worked in online marketing & social media management.
+Worked in online marketing & social media management before, now working as a Software Developer.
 
 # 🧭 Current Endeavors
 I am at the end of my Code & Context B.Sc. studies at TH Köln.
