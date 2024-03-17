@@ -17,3 +17,9 @@ I am also at the end of my second exchange semester in South Korea.
 
 # 📪 Contact
 Reach out to me via [LinkedIn](https://www.linkedin.com/in/bryanhoganme/) or send a mail to Bryan@BryanHogan.com
+
+<table>
+    <tr>
+    <td align="center" width="200"><pre><a href="https://github.com/BryanHogan"><img src="https://avatars.githubusercontent.com/u/93101097?v=4" width="200" alt="Bryan Hogan Github Avatar" /><br><sub>Bryan Hogan</sub></a><br>@BryanHogan</pre></td>
+    </tr>
+</table>
