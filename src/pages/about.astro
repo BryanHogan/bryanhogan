@@ -3,6 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
 import { instagram, linkedin } from "../data/socials.ts";
+import { getCollection } from "astro:content";
+const allPosts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 ---
 
 <Layout
@@ -28,18 +32,41 @@ import { instagram, linkedin } from "../data/socials.ts";
             About Me
         </h2>
         <p>
-            Hello 👋 I am Bryan Hogan. Soon a <a href="./blog/what-is-coco"
+            I'm Bryan Hogan, a (Web) Developer, Digital Creator and Blogger.<br
+            />
+            Soon to be graduate in <a href="/blog/what-is-coco"
                 >Code & Context</a
-            > B.Sc. graduate, an interdisciplinary study that combines computer
-            science, design and entrepreneurship.<br />With a passion for
-            building websites I started with BryanHogan.com during my stay in
-            South Korea in 2023 and have been writing for my blog ever since.
-            See my
-            <a href="./portfolio">portfolio page</a> for a more career focussed
-            introduction or the <a href="./now">Now page</a> on my current
-            endeavours.
+            >, a modern interdisciplinary B.Sc. study in Cologne that combines
+            the fields of computer science, design and entrepreneurship.<br />
         </p>
-        <p>More on my blog down below.</p>
+        <p>
+            I have recently spent a year abroad in South Korea, studying at
+            different universities. At the beginning of my stay abroad I also
+            started with <a href="/blog">BryanHogan.com/blog</a>, a place for me
+            to share all the things I would have loved to know about before I
+            knew about them.<br />Check out my latest post titled: "<a
+                href={`/blog/${allPosts[0].slug}/`}>{allPosts[0].data.title}</a
+            >". More on my blog down below.
+        </p>
+        <p>
+            I also run a <a href="/follow">monthly newsletter</a> called "Bryan's
+            Briefing" since the beginning of 2024 in which I share what I'm up to,
+            cool insights I've recently had and other amazing content I came across.
+        </p>
+        <p>
+            Like described on my <a href="/now">Now page</a>, I'm currently
+            working on ToLearnKorean.com and <a
+                href="https://webdev.bryanhogan.com/"
+                target="_blank">WebDev.BryanHogan.com</a
+            > in addition to working as a Software Developer at DGS (smaller company
+            in Germany) and writing my bachelor thesis about (something that will
+            be decided soon).
+        </p>
+        <p>
+            I've got a more career focussed introduction of myself on my <a
+                href="/portfolio">portfolio page</a
+            >.
+        </p>
         <nav slot="aside-content">
             <Button
                 text="Instagram"
@@ -64,11 +91,11 @@ import { instagram, linkedin } from "../data/socials.ts";
             About My Blog
         </h2>
         <p>
-            In my blog "Bryan's Blog" I delve into topics that captivate my
-            heart, all with the aim to also help you. From health-related
-            insight such as understanding sleep, to boosting productivity and
-            acquiring valuable skills. I want to share my journey and learn
-            alongside others.
+            In my blog "Bryan's Blog" I delve into topics that interest me, all
+            with the aim to also help you. From health-related topics such as
+            understanding sleep, to sharing cultural insights and achieving
+            personal goals. I want to share my journey and learn alongside
+            others.
         </p>
         <p><strong>What I Value & How I Think:</strong></p>
         <ul>
@@ -79,30 +106,30 @@ import { instagram, linkedin } from "../data/socials.ts";
                 productivity can sometimes help with that.
             </li>
             <li>
-                📣 - There's already amazing content out there, and that I want
-                to share.
+                📣 - There's already amazing content out there, and I'm eager to
+                share it.
             </li>
             <li>
                 ⚙️ - Modern thinking and building requires some technology. I
-                also just love building web apps.
+                also just love building digital experiences.
             </li>
         </ul>
         <p><strong>My favorite tags:</strong></p>
         <ul>
             <li>
-                <a href="./tags/learning">Learning</a> - About language
-                learning, acquiring skills, educational content and getting
-                better at learning itself.
+                <a href="./tags/learning">Learning</a> - About language learning,
+                acquiring skills, educational content and getting better at learning
+                itself.
             </li>
             <li>
-                <a href="./tags/korea">Korea</a> - I studied one year abroad in
-                South Korea. It was fascinating to see how Korea is different
-                compared to Germany. I also made some great memories.
+                <a href="./tags/korea">Korea</a> - I studied one year abroad in South
+                Korea. It was fascinating to see how Korea is different compared
+                to Germany. I also made some great memories.
             </li>
             <li>
-                <a href="./tags/development">Development</a> - About developing
-                in the web and more. Started creating artifacts in Code &
-                Context and have loved it ever since.
+                <a href="./tags/development">Development</a> - About developing in
+                the web and more. Started creating artifacts in Code & Context and
+                have loved it ever since.
             </li>
         </ul>
         <nav slot="aside-content">

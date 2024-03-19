@@ -38,6 +38,7 @@ Code & Context is a Bachelor of Science program at TH Cologne (TH Köln) which c
 
 Students of CoCo (Code & Context) learn how to create modern and impactful products, services and other artifacts. 
 CoCo covers many disciplines, from various fields in design to creating a startup company and building all kinds of products in a modern environment.
+The study is all about creating innovative products & services to combat real world problems, developing these artifacts with a deep understanding of technology and coding skills, to also designing and finding the right fit to then ultimately build a sustainable start-up/company around it.
 
 This B.Sc. study is conducted fully in German, with some parts in English. It takes 6 semesters to complete, or 7 if you do an additional optional semester.
 
