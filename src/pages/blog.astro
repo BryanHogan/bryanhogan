@@ -6,7 +6,6 @@ const newsletterReminder = true;
 import Button from "../components/Button.astro";
 import CardB from "../components/CardB.astro";
 import Layout from "../layouts/Layout.astro";
-import CompactPostsList from "../components/CompactPostsList.astro"
 import { getCollection } from "astro:content";
 
 const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -14,7 +13,7 @@ const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.get
 
 <Layout
   title="Bryan's Blog"
-  headerMode="Blog"
+  headerMode="Reduced"
   metaDescription="Bryan Hogan's Blog. All about learning, creating and finding balance."
   ogtype="website"
 >
