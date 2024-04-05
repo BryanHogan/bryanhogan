@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import CardLU from "../components/CardLU.astro";
 import { LifeUpdates } from "../data/life-updates.ts";
+import { Image } from "astro:assets";
+import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
 ---
 
 <Layout
@@ -15,23 +17,13 @@ import { LifeUpdates } from "../data/life-updates.ts";
     <div class="intro-section">
       <div class="header-picture-section">
         <h1>Hi, I'm<br />Bryan Hogan.</h1>
-        <picture>
-          <source
-            type="image/avif"
-            srcset="../images/Bryan-Hogan-Smiling.avif"
-          />
-          <source
-            type="image/webp"
-            srcset="../images/Bryan-Hogan-Smiling.webp"
-          />
-          <img
-            src="../images/Bryan-Hogan-Smiling.png"
-            width="363"
-            height="359"
-            alt="Bryan Hogan smiling"
-            decoding="async"
-          />
-        </picture>
+        <Image
+          class="image"
+          src={BryanHoganImage}
+          alt="Bryan Hogan thumbs up"
+          width={237}
+          height={240}
+        />
       </div>
       <p>On this page you can find my blog, portfolio and more.</p>
       <div class="button-group">
@@ -59,23 +51,26 @@ import { LifeUpdates } from "../data/life-updates.ts";
   <section>
     <h2 class="text-align-center">Life Updates</h2>
     <ul class="life-updates-container">
-      {LifeUpdates.map((lifeUpdate) => (
-        <li>
-          <CardLU
-            title={lifeUpdate.title}
-            date={lifeUpdate.date}
-            text={lifeUpdate.description}
-            cardButtons={lifeUpdate.cardButtons}
-          />
-        </li>
-      ))}
+      {
+        LifeUpdates.map((lifeUpdate) => (
+          <li>
+            <CardLU
+              title={lifeUpdate.title}
+              date={lifeUpdate.date}
+              text={lifeUpdate.description}
+              cardButtons={lifeUpdate.cardButtons}
+            />
+          </li>
+        ))
+      }
       <li>
-      <li class="special">
-        <p>
-          Sharing updates on my life. The <a href="/about">About</a> and <a
-            href="/now">Now</a
-          > pages are also definitely worth checking out.
-        </p>
+        <li class="special">
+          <p>
+            Sharing updates on my life. The <a href="/about">About</a> and <a
+              href="/now">Now</a
+            > pages are also definitely worth checking out.
+          </p>
+        </li>
       </li>
     </ul>
   </section>
@@ -102,7 +97,7 @@ import { LifeUpdates } from "../data/life-updates.ts";
     padding-bottom: 0.25em;
   }
   .intro {
-    min-height: 86vh;
+    min-height: 75svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,14 +108,15 @@ import { LifeUpdates } from "../data/life-updates.ts";
     margin: 0px;
   }
   .intro-section {
-    min-height: 40vh;
+    min-height: 40svh;
     max-width: 650px;
     margin-inline: auto;
     padding-inline: 1em;
-    & img {
-      height: auto;
+    & .image {
+      height: 100%;
       width: 130px;
       margin: 0.2em;
+      border-radius: 2rem;
     }
   }
   .header-picture-section {
@@ -145,7 +141,7 @@ import { LifeUpdates } from "../data/life-updates.ts";
       }
     }
     .intro-section {
-      & img {
+      & .image {
         margin-inline: auto;
         padding-bottom: 1em;
       }
