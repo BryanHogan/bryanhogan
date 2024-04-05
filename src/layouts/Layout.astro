@@ -28,15 +28,15 @@ import { ViewTransitions } from "astro:transitions";
     <meta name="generator" content={Astro.generator} />
     <meta name="keywords" content="bryan, hogan, blog, portfolio" />
     <meta name="robots" content="index, follow" />
-    <html lang="en">
     <meta name="author" content="Bryan Hogan" />
     <meta name="publisher" content="Bryan Hogan" />
     <meta name="copyright" content="Bryan Hogan" />
     <title>{title}</title>
 
     <meta property="og:title" content={title} />
+    <meta property="og:site_name" content="Bryan Hogan" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="bryanhogan.com" />
+    <meta property="og:url" content={Astro.url} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:image" content="/images/Bryan-Hogan-Preview.png" />
     <meta property="og:image:type" content="image/png" />
