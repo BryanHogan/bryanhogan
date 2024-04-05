@@ -183,8 +183,6 @@ const { mode } = Astro.props;
         height: var(--navbar-height);
         
     }
-    .logo-icon {
-    }
     a {
         text-decoration: none;
         color: var(--color-main-dark-50);
@@ -242,7 +240,7 @@ const { mode } = Astro.props;
         .dropdown-container .dropdown-menu {
             display: none;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: start;
             top: 0px;
             right: 0px;
             position: absolute;
@@ -256,6 +254,9 @@ const { mode } = Astro.props;
         }
         .dropdown-container:hover .dropdown-menu {
             display: flex;
+        }
+        .dropdown-container:hover .dropdown-menu li a svg {
+            margin-inline: auto;
         }
         .dropdown-container:not(:hover) .dropdown-menu {
             animation: fade-out 200ms 1 ease-out;
