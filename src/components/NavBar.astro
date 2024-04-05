@@ -1,0 +1,304 @@
+---
+import { Icons } from "./Icons.ts";
+import socials, { instagram } from "../data/socials";
+const { mode } = Astro.props;
+---
+
+<header>
+    <nav>
+        {
+            mode === "All" || mode === "Reduced" ? (
+                <div class="nav-container">
+                    <ul class="container-priority-items">
+                        <li>
+                            <a href="/" title="To Landing Page">
+                                <svg
+                                    class="logo-icon"
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 16 16"
+                                    fill="currentColor"
+                                    set:html={Icons["logo"]}
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/follow">Follow</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown-container">
+                        <svg
+                            class="dropdown-menu-icon"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            set:html={Icons["bars"]}
+                        />
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/about">About</a>
+                            </li>
+                            <li>
+                                <a href="/now">Now</a>
+                            </li>
+                            <li>
+                                <a
+                                    href={socials.instagram.href}
+                                    target="_blank"
+                                >
+                                    <svg
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        set:html={Icons[socials.instagram.icon]}
+                                    />
+                                </a>
+                            </li>
+                            {mode != "Reduced" && (
+                                <li>
+                                    <a
+                                        href={socials.linkedin.href}
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            set:html={
+                                                Icons[socials.linkedin.icon]
+                                            }
+                                        />
+                                    </a>
+                                </li>
+                            )}
+                            <li>
+                                <a href={socials.github.href} target="_blank">
+                                    <svg
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        set:html={Icons[socials.github.icon]}
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href={socials.threads.href} target="_blank">
+                                    <svg
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        set:html={Icons[socials.threads.icon]}
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href={socials.mastodon.href} target="_blank">
+                                    <svg
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        set:html={Icons[socials.mastodon.icon]}
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            ) : (
+            <div class="nav-container">
+                    <ul class="container-priority-items">
+                        <li>
+                            <a href="/" title="To Landing Page">
+                                <svg
+                                    class="logo-icon"
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 16 16"
+                                    fill="currentColor"
+                                    set:html={Icons["logo"]}
+                                />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="dropdown-container">
+                        <svg
+                            class="dropdown-menu-icon"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            set:html={Icons["bars"]}
+                        />
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/about">About</a>
+                            </li>
+                                <li>
+                                    <a
+                                        href={socials.linkedin.href}
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            set:html={
+                                                Icons[socials.linkedin.icon]
+                                            }
+                                        />
+                                    </a>
+                                </li>
+                            <li>
+                                <a href={socials.github.href} target="_blank">
+                                    <svg
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        set:html={Icons[socials.github.icon]}
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            )
+        }
+    </nav>
+</header>
+
+<style>
+    nav {
+        width: 100%;
+        height: var(--navbar-height);
+        
+    }
+    .logo-icon {
+    }
+    a {
+        text-decoration: none;
+        color: var(--color-main-dark-50);
+        transition: all 200ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        & img {
+            max-height: 40px;
+            width: 35px;
+        }
+    }
+    .nav-container {
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        z-index: 5;
+        /*background-color: hsla(225, 6%, 13%, 0.37);*/
+        background-color: var(--color-main-dark);
+        background-color: color-mix(
+            in srgb,
+            var(--color-main-dark) 95%,
+            transparent
+        );
+        backdrop-filter: blur(0.15rem);
+        & ul,
+        .dropdown-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px 18px;
+        }
+    }
+    .container-priority-items {
+        margin-right: auto;
+        margin-left: 10px;
+    }
+    li {
+        transition: all 300ms;
+        transform: scale(1.001);
+        font-size: 1.125rem;
+    }
+    li:hover {
+        transition: all 200ms;
+        transform: scale(1.1) translate3d(0, 0, 0) perspective(1px);
+        & a {
+            color: var(--color-side-1);
+        }
+    }
+
+    @media only screen and (max-width: 699px) {
+        .dropdown-container .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            padding-top: 50px; /* This should equal the total Navbar height */
+            background-color: var(--color-main-dark);
+            border-radius: 0 0 0 10px;
+            animation: fade-in 100ms 1;
+            & li {
+                padding: 10px 10px;
+            }
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .dropdown-container:not(:hover) .dropdown-menu {
+            animation: fade-out 200ms 1 ease-out;
+        }
+        .dropdown-menu-icon {
+            margin-right: 10px;
+            z-index: 2;
+        }
+    }
+    @media only screen and (min-width: 700px) {
+        .dropdown-menu-icon {
+            display: none;
+        }
+        .dropdown-menu li:last-of-type {
+            margin-right: 1rem;
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translate(120px);
+        }
+        25% {
+        }
+        75% {
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+            display: flex;
+        }
+        25% {
+        }
+        75% {
+        }
+        100% {
+            opacity: 0;
+            transform: translate(120px);
+        }
+    }
+</style>

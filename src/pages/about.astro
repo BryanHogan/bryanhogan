@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
-import { instagram, linkedin } from "../data/socials.ts";
+import {instagram, linkedin} from "../data/socials.ts"
 import { getCollection } from "astro:content";
 const allPosts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
@@ -12,7 +12,7 @@ const allPosts = (await getCollection("blog")).sort(
 <Layout
     title="Bryan Hogan - About"
     metaDescription="About BryanHogan.com & Bryan Hogan."
-    headerMode="Home"
+    headerMode="Reduced"
     ogtype="website"
 >
     <div class="gradient-background small-intro-section">
@@ -70,13 +70,13 @@ const allPosts = (await getCollection("blog")).sort(
         <nav slot="aside-content">
             <Button
                 text="Instagram"
-                link={instagram.url}
+                link={instagram.href}
                 buttonStyle="transparent-bright small grow color-accent"
                 targetText="_blank"
             />
             <Button
                 text="LinkedIn"
-                link={linkedin.url}
+                link={linkedin.href}
                 buttonStyle="transparent-bright small grow color-accent"
                 targetText="_blank"
             />
