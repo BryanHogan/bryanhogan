@@ -222,6 +222,10 @@ import { ViewTransitions } from "astro:transitions";
     4 - Utility
     ==================== */
   }
+  .modern-container {
+    width: min(100% - 2rem, 700px);
+    margin-inline: auto;
+  }
   .underline-accent {
     border-bottom: 5px solid var(--color-main-accent);
   }
@@ -229,8 +233,11 @@ import { ViewTransitions } from "astro:transitions";
     & > *:not(:first-child) {
       margin-block-start: 2em;
     }
-    & > p {
-      max-width: 700px;
+    & li {
+      margin-block-end: 0.5em;
+    }
+    & ol, ul {
+      margin-left: 1.5rem;
     }
   }
   .text-shadow {

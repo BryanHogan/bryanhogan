@@ -1,0 +1,224 @@
+---
+import Layout from "./Layout.astro";
+import ButtondownSignupForm from "../components/ButtondownSignupForm.astro";
+import { Icons } from "../components/Icons";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+
+const allPosts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const indexOfPost = allPosts.findIndex(
+    (posts) => post.data.title === posts.data.title,
+);
+---
+
+<Layout
+    title={post.data.title}
+    metaDescription={post.data.description}
+    headerMode="Reduced"
+>
+    <div class="gradient-background">
+        <img
+            src={post.data.coverImage.url}
+            alt={post.data.coverImage.alt}
+            width={post.data.coverImage.width}
+            height={post.data.coverImage.height}
+            transition:name={post.data.coverImage.url}
+        />
+    </div>
+    <div class="second-menu-section">
+        <ul>
+            <li>
+                <button onclick="
+        history.back()
+        " class="">
+                    <svg
+                        class="arrow-back"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 22 22"
+                        fill="currentColor"
+                        set:html={Icons["leftarrow"]}
+                    />
+                </button>
+            </li>
+        </ul>
+    </div>
+    <article class="blog-post">
+        <div class="center-container modern-container text-section">
+            <h1 class="text-align-center">{post.data.title}</h1>
+            <slot />
+            <div class="infos">
+                <p>
+                    Written by {
+                        post.data.author ===
+                        "Bryan@BryanHogan.com (Bryan Hogan)" ? (
+                            <a href="/about">Bryan Hogan</a>
+                        ) : (
+                            post.data.author
+                        )
+                    }
+                </p>
+                <time datetime={post.data.pubDate.toISOString()}>
+                    <p>
+                        Published: {
+                            new Date(post.data.pubDate).toLocaleDateString()
+                        }
+                    </p>
+                </time>
+                <time datetime={post.data.lastUpdate.toISOString()}>
+                    <p>
+                        Last Update: {
+                            new Date(post.data.lastUpdate).toLocaleDateString()
+                        }
+                    </p>
+                </time>
+            </div>
+            <ButtondownSignupForm />
+            <div class="next-prev-post-section">
+                {
+                    allPosts[indexOfPost - 1] ? (
+                        <div>
+                            <p>Next Post:</p>
+                            <a
+                                href={`/blog/${allPosts[indexOfPost - 1].slug}/`}
+                            >
+                                {allPosts[indexOfPost - 1].data.title}
+                            </a>
+                        </div>
+                    ) : null
+                }
+
+                {
+                    allPosts[indexOfPost + 1] ? (
+                        <div style="margin-left: auto;">
+                            <p>Previous Post:</p>
+                            <a
+                                href={`/blog/${allPosts[indexOfPost + 1].slug}/`}
+                            >
+                                {allPosts[indexOfPost + 1].data.title}
+                            </a>
+                        </div>
+                    ) : null
+                }
+            </div>
+        </div>
+    </article>
+</Layout>
+
+<style>
+    article {
+        display: flex;
+        justify-content: center;
+        margin-inline: auto;
+        max-width: 1300px;
+        flex-wrap: wrap;
+    }
+    .center-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+    .blog-post {
+        & :global(h1) {
+            text-wrap: balance;
+        }
+        & :global(h2) {
+            word-break: break-word;
+        }
+        & :global(img) {
+            object-fit: scale-down;
+            width: 100%;
+            height: auto;
+        }
+        & :global(ol) {
+            list-style: decimal;
+        }
+        & :global(ul) {
+            list-style: circle;
+        }
+    }
+    .gradient-background {
+        min-height: 250px;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img {
+            height: 120px;
+            width: auto;
+        }
+    }
+    .second-menu-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        & li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+        }
+        & button {
+            background-color: var(--color-main-dark);
+            color: var(--color-main-dark-50);
+            border: none;
+            & :hover {
+                color: var(--color-main-bright);
+            }
+        }
+    }
+    .infos {
+        border-top: 1px solid var(--color-main-bright);
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        & p {
+            font-size: 0.9rem;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    .next-prev-post-section {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        margin-top: 2em;
+        & > * {
+            max-width: 45%;
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--color-main-bright);
+            border-radius: 1em;
+        }
+    }
+    @media only screen and (max-width: 699px) {
+        .gradient-background {
+            min-height: 150px;
+            height: 20vh;
+            & img {
+                height: 80px;
+            }
+        }
+        .infos {
+            flex-direction: column;
+        }
+    }
+</style>
