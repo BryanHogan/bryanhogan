@@ -75,7 +75,8 @@ const { headings } = await post.render();
                             new Date(post.data.pubDate).toLocaleDateString(
                                 "en-GB",
                             )
-                        }</time>
+                        }</time
+                    >
                 </p>
                 <p>
                     Last Update: <time
@@ -84,7 +85,8 @@ const { headings } = await post.render();
                             new Date(post.data.lastUpdate).toLocaleDateString(
                                 "en-GB",
                             )
-                        }</time>
+                        }</time
+                    >
                 </p>
             </div>
             <ButtondownSignupForm />
@@ -149,7 +151,6 @@ const { headings } = await post.render();
         flex-direction: row;
         justify-content: center;
         margin-inline: auto;
-        max-width: 1300px;
         flex-wrap: wrap;
     }
     .center-container {
@@ -323,17 +324,27 @@ const { headings } = await post.render();
         }
     }
 </style>
-<script>
-    const stickyElement = document.querySelector(
-        ".sticky-element",
-    ) as HTMLElement;
+<script type="module">
+    const observer = new MutationObserver((mutations) => {
+  const stickyElement = document.querySelector('.sticky-element');
+  if (stickyElement) {
     const stickyOffset = stickyElement.offsetTop;
 
-    window.addEventListener("scroll", function () {
-        if (window.scrollY >= stickyOffset - 50) {
-            stickyElement.classList.add("fixed");
-        } else {
-            stickyElement.classList.remove("fixed");
-        }
-    });
+    const handleScroll = () => {
+      if (window.scrollY >= stickyOffset - 50) {
+        stickyElement.classList.add('fixed');
+      } else {
+        stickyElement.classList.remove('fixed');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Stop observing once we have our element
+    observer.disconnect();
+  }
+});
+
+// Start observing the document body for DOM changes
+observer.observe(document.body, { childList: true, subtree: true });
 </script>
