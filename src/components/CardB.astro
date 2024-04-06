@@ -58,7 +58,7 @@ const {
           />
           <p>
             <time datetime={pubDate.toISOString()}>
-              {new Date(pubDate).toLocaleDateString()}
+              {new Date(pubDate).toLocaleDateString("en-GB")}
             </time>
           </p>
         </div>
@@ -125,11 +125,10 @@ const {
         height: auto;
       }
       & div {
-        
         display: flex;
         flex-direction: row;
         align-items: center;
-        & >* {
+        & > * {
           padding-inline: 5px;
         }
       }

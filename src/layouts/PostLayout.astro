@@ -69,20 +69,23 @@ const { headings } = await post.render();
                         )
                     }
                 </p>
-                <time datetime={post.data.pubDate.toISOString()}>
-                    <p>
-                        Published: {
-                            new Date(post.data.pubDate).toLocaleDateString()
-                        }
-                    </p>
-                </time>
-                <time datetime={post.data.lastUpdate.toISOString()}>
-                    <p>
-                        Last Update: {
-                            new Date(post.data.lastUpdate).toLocaleDateString()
-                        }
-                    </p>
-                </time>
+                <p>
+                    Published: <time datetime={post.data.pubDate.toISOString()}
+                        >{
+                            new Date(post.data.pubDate).toLocaleDateString(
+                                "en-GB",
+                            )
+                        }</time>
+                </p>
+                <p>
+                    Last Update: <time
+                        datetime={post.data.lastUpdate.toISOString()}
+                        >{
+                            new Date(post.data.lastUpdate).toLocaleDateString(
+                                "en-GB",
+                            )
+                        }</time>
+                </p>
             </div>
             <ButtondownSignupForm />
             <div class="next-prev-post-section">

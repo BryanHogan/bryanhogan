@@ -20,7 +20,11 @@ import CardB from "./CardB.astro";
                 </div>
                 <p>
                     <a href={`/blog/${post.slug}/`}>{post.data.title}</a> -
-                    {new Date(post.data.pubDate).toLocaleDateString()}
+                    <time datetime={post.data.pubDate.toISOString()}>
+                        {new Date(post.data.pubDate).toLocaleDateString(
+                            "en-GB",
+                        )}
+                    </time>
                 </p>
             </li>
         ))
