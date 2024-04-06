@@ -14,23 +14,6 @@ length: Medium
 ---
 What is it like to go to South Korea and visit Hanyang University erica as a student from Germany? In the following I will talk about my experience in studying one semester at Hanyang University erica campus for summer 2023.
 
-**Table of Contents**
-<ol class="toc">
-    <li>📝 <a href="#before-korea">Before Korea</a></li>
-    <li>🇰🇷 <a href="#before-the-semester-but-in-korea">Before The Semester But In Korea</a></li>
-    <li>🏛️ <a href="#start-of-the-new-semester">Start Of The New Semester</a></li>
-    <ul>
-        <li><a href="#the-dormitory-changei">The Dormitory (CHANGEI)</a></li>
-        <li><a href="#student-clubs-events-and-programs">Student Clubs, Events And Programs</a></li>
-        <li><a href="#courses-at-hanyang-erica">Courses At Hanyang erica</a></li>
-        <li><a href="#the-campus">The Campus</a></li>
-        <li><a href="#food">Food</a></li>
-    </ul>
-    <li>💸 <a href="#costs">Costs</a></li>
-    <li>🤔 <a href="#hanyang--hanyang-erica---seoul-or-ansan">Hanyang & Hanyang erica - Seoul or Ansan?</a></li>
-    <li>👍 <a href="#would-i-do-it-again">Would I Do It Again?</a></li>
-</ol>
-
 As part of my studies on Code & Context at TH Köln I was able to do an additional optional semester in which I chose to go abroad. I will talk about my time in Korea from February 2nd 2023 to x which was the last day for me on the erica campus.
 
 As Code & Context is quite new there haven't been many students abroad during their studies, this meant a lot was unknown but also that the rules weren't that strict. I applied through my universities program to partner universities

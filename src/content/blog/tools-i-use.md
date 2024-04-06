@@ -15,39 +15,6 @@ length: Short
 
 This page is all about which digital tools, programs, applications and services I use and value for my work in Design, Development and Editing. There are many amazing options out there and I want to give a concise list of tools I recommend. Most of the tools here are free.
 
-**Table of Contents**
-<ol class="toc">
-    <li>⭐ <a href="#development">Development</a></li>
-    <ul>
-        <li><a href="#visual-studio-code">Visual Studio Code</a>,
-        <a href="#intellij">IntelliJ</a>,
-        <a href="#git--github">Git & Github</a></li>
-    </ul>
-    <li>⭐ <a href="#media--design">Media & Design</a></li>
-    <ul>
-        <li><a href="#figma">Figma</a>,
-        <a href="#davinci-resolve">DaVinci Resolve</a>,
-        <a href="#affinity-suite">Affinity Suite</a>,
-        <a href="#aseprite">Aseprite</a></li>
-    </ul>
-    <li>⭐ <a href="#management">Management</a></li>
-    <ul>
-        <li><a href="#obsidian">Obsidian</a>,
-        <a href="#notion">Notion</a>,
-        <a href="#trello">Trello</a>,
-        <a href="#google-sheets">Google Sheets</a>,
-        <a href="#google-calendar">Google Calendar</a>,
-        <a href="#zotero">Zotero</a></li>
-    </ul>
-    <li>⭐ <a href="#management">General & Miscellaneous</a></li>
-    <ul>
-        <li><a href="#anki">Anki</a>,
-        <a href="#syncthing">Syncthing</a>,
-        <a href="#google-chrome--mozilla-firefox">Google Chrome & Mozilla Firefox</a>,
-        <a href="#ai-and-llm">AI And LLM</a></li>
-    </ul>
-</ol>
-
 ## Development
 There are some things you should use to code. I have used these tools during my [Code & Context](../blog/what-is-coco) study, on my web development journey and other projects.
 

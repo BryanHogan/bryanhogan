@@ -14,25 +14,6 @@ length: Medium
 ---
 Code & Context shows how studying should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship with a modern approach to learning.
 
-**Table of Contents**
-<ol class="toc">
-    <li>⭐ <a href="#what-is-code--context">What is Code & Context?</a></li>
-    <li>🥇 <a href="#what-makes-coco-special--effective">What Makes CoCo Special & Effective?</a></li>
-    <ul>
-        <li><a href="#coco-is-different">CoCo Is Different</a></li>
-        <li><a href="#culture--environment">Culture & Environment</a></li>
-        <li><a href="#interdisciplinary">Interdisciplinary</a></li>
-        <li><a href="#the-exams---there-are-no-exams">The Exams - There Are No Exams?</a></li>
-    </ul>
-    <li>🧠 <a href="#what-do-you-learn-in-code--context">What Do You Learn In Code & Context?</a></li>
-    <ul>
-        <li><a href="#computer-science-part">Computer Science Part</a></li>
-        <li><a href="#design-part">Design Part</a></li>
-        <li><a href="#business-part">Business Part</a></li>
-    </ul>
-    <li>🤔 <a href="#should-you-study-coco">Should You Study CoCo?</a></li>
-</ol>
-
 ## What is Code & Context?
 Code & Context is a Bachelor of Science program at TH Cologne (TH Köln) which combines computer science, design and business/entrepreneurship. It is fundamentally different from other fields of study and for me the best study I have ever heard of.
 

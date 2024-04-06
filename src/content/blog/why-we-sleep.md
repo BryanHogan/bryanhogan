@@ -14,24 +14,6 @@ length: Long
 ---
 We spend 1/3rd of our life sleeping. But why do we sleep? We don't live in a sleep loss epidemic?
 
-**Table of Contents**
-<ol class="toc">
-   <li>💤 <a href="#why-everyone-needs-to-sleep">Why Everyone Needs To Sleepy</a></li>
-   <li>❌ <a href="#common-misconceptions-about-sleep">Common Misconceptions About Sleep</a></li>
-   <li>⚙️ <a href="#how-sleeping-works">How Sleeping Works</a></li>
-   <ul>
-      <li><a href="#circadian-rhythm">Circadian Rhythm</a></li>
-      <li><a href="#sleep-pressure">Sleep Pressure</a></li>
-      <li><a href="#did-we-always-sleep-like-this">Did we always sleep like this?</a></li>
-   </ul>
-   <li>🕵️ <a href="#sleep-stages">Sleep Stages</a></li>
-   <li>📈 <a href="#how-to-sleep-better">How To Sleep Better</a></li>
-   <li>💬 <a href="#quotes">Quotes</a></li>
-   ---
-   <li>💤 <a href="#is-why-we-sleep-worth-reading">Is Why We Sleep Worth Reading?</a></li>
-   <li>🛌 <a href="#how-has-why-we-sleep-helped-me">How Has Why We Sleep Helped Me?</a></li>
-</ol>
-
 ## Why Everyone Needs To Sleep
 
 Everyone sleeps. But why?
