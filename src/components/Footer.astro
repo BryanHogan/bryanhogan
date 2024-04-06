@@ -1,43 +1,99 @@
 ---
+import Icon from "./Icon.astro";
+import socials from "../data/socials";
 ---
 
 <footer>
-  <div class="">
-    <p>Site build from the ground up by me using</br>HTML & CSS with Astro & PostCSS.</p>
-  </div>
-  <div>
-    <p class="text-align-center">© {String(new Date().getFullYear().toString())} Bryan Hogan</p>
-  </div>
-  <div>
-    <span><a href="/">Home</a> </span>
-    <span><a href="/blog">Blog</a> </span>
-    <span><a href="/follow">Mailing-List</a> </span>
-    <span><a href="/privacy">Privacy</a> </span>
-    <span><a href="/portfolio">Portfolio</a></span>
-  </div>
+    <ul>
+        <li class="first-list-container">
+            <p>
+                <a href="/">BryanHogan.com</a> © 2023 - {
+                    String(new Date().getFullYear().toString())
+                }<br />Made by <a href="https://bryanhogan.com/about" target="_blank">Bryan Hogan</a><br />with Astro and PostCSS
+            </p>
+        </li>
+        <li class="second-list-container">
+            <a href={socials.instagram.href} title={socials.instagram.name} target="_blank"
+                ><Icon name={socials.instagram.icon} size="1.5rem" label="instagram" /></a
+            >
+            <a href={socials.mastodon.href} title={socials.mastodon.name} target="_blank"
+                ><Icon name={socials.mastodon.icon} size="1.5rem" label="mastodon" /></a
+            >
+            <a href={socials.threads.href} title={socials.threads.name} target="_blank"
+                ><Icon name={socials.threads.icon} size="1.5rem" label="threads" /></a
+            >
+            <a href={socials.github.href} title={socials.github.name} target="_blank"
+                ><Icon name={socials.github.icon} size="1.5rem" label="github" /></a
+            >
+            <a href="/rss.xml" title="RSS"
+                ><Icon name="rss" size="1.5rem" label="RSS" /></a
+            >
+        </li>
+        <li class="third-list-container">
+            <ul style="width: 100%">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/follow">Mailing-List</a></li>
+                <li><a href="/privacy">Privacy</a></li></ul><ul>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/now">Now</a></li>
+                <li><a href="/ideas">Ideas</a></li>
+                <li><a href="/portfolio#contact">Contact</a></li>
+                <li><a href="/sitemap-index.xml">Sitemap</a></li>
+            </ul>
+        </li>
+    </ul>
 </footer>
 
 <style>
-  footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 5%;
-    row-gap: 20%;
-    padding-inline: 10%;
-    padding-bottom: 40px;
-    padding-top: 4em;
-    text-align: center;
-    min-height: 16svh;
-  }
-  footer p, footer a {
-    color: var(--color-main-dark-30);
-    font-size: 0.8rem;
-    text-align: center;
-  }
-  span {
-    padding-inline: 3px;
-  }
-  a:hover {
-    color: var(--color-main-accent);
-  }
+    footer {
+        padding-inline: 0.5rem;
+        padding-top: 2rem; /* this sets small pages over 100% */
+    }
+    footer,
+    a,
+    p {
+        color: var(--color-main-dark-50);
+        font-size: 1rem;
+        transition: color 200ms;
+    }
+    footer > ul {
+        width: 100%;
+        max-width: 1800px;
+        margin-inline: auto;
+        min-height: var(--footer-height);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    footer > ul > li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        min-width: 200px;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding-bottom: 2rem;
+    }
+    a:hover, a:focus {
+        color: var(--color-main-accent);
+    }
+    .second-list-container {
+        gap: 11px;
+    }
+    .third-list-container > ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px 11px;
+        justify-content: center;
+        & li {
+            width: max-content;
+        }
+    }
 </style>
