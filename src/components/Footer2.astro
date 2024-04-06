@@ -9,13 +9,10 @@ import socials from "../data/socials";
             <p>
                 <a href="/">BryanHogan.com</a> © 2023 - {
                     String(new Date().getFullYear().toString())
-                }<br />Made by <a href="https://bryanhogan.com" target="_blank">Bryan Hogan</a><br />
+                }<br />Made by <a href="https://bryanhogan.com/about" target="_blank">Bryan Hogan</a><br />with Astro and PostCSS
             </p>
         </li>
         <li class="second-list-container">
-            <a href="/rss.xml" title="RSS"
-                ><Icon name="rss" size="1.5rem" label="RSS" /></a
-            >
             <a href={socials.instagram.href} title={socials.instagram.name} target="_blank"
                 ><Icon name={socials.instagram.icon} size="1.5rem" label="instagram" /></a
             >
@@ -28,6 +25,9 @@ import socials from "../data/socials";
             <a href={socials.github.href} title={socials.github.name} target="_blank"
                 ><Icon name={socials.github.icon} size="1.5rem" label="github" /></a
             >
+            <a href="/rss.xml" title="RSS"
+                ><Icon name="rss" size="1.5rem" label="RSS" /></a
+            >
         </li>
         <li class="third-list-container">
             <ul style="width: 100%">
@@ -39,6 +39,7 @@ import socials from "../data/socials";
                 <li><a href="/about">About</a></li>
                 <li><a href="/now">Now</a></li>
                 <li><a href="/ideas">Ideas</a></li>
+                <li><a href="/portfolio#contact">Contact</a></li>
                 <li><a href="/sitemap-index.xml">Sitemap</a></li>
             </ul>
         </li>
