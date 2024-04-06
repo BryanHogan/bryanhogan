@@ -115,25 +115,27 @@ const { headings } = await post.render();
         </div>
         <aside>
             <div class="toc">
-				<svg
-					class="toc-dropdown-icon"
-					width="26"
-					height="26"
-					viewBox="0 0 24 24"
-					fill="currentColor"
-					set:html={Icons["magnifier"]}
-				/>
-				<div class="toc-items">
-					<p><strong>Table Of Contents</strong></p>
-					<TableOfContentsList
-						toc={generateToC(headings, {
-							minHeadingLevel: 1,
-							maxHeadingLevel: 6,
-							title: post.data.title,
-						})}
-					/>
-				</div>
-			</div>
+                <div class="sticky-element">
+                    <svg
+                        class="toc-dropdown-icon"
+                        width="26"
+                        height="26"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        set:html={Icons["magnifier"]}
+                    />
+                    <div class="toc-items">
+                        <p><strong>Table Of Contents</strong></p>
+                        <TableOfContentsList
+                            toc={generateToC(headings, {
+                                minHeadingLevel: 1,
+                                maxHeadingLevel: 6,
+                                title: post.data.title,
+                            })}
+                        />
+                    </div>
+                </div>
+            </div>
         </aside>
     </article>
 </Layout>
@@ -141,6 +143,7 @@ const { headings } = await post.render();
 <style>
     article {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         margin-inline: auto;
         max-width: 1300px;
@@ -235,14 +238,13 @@ const { headings } = await post.render();
         }
     }
     .toc {
-		position: fixed;
-		z-index: 10;
-	}
-	.toc-dropdown-icon {
-		display: none;
-		margin-left: auto;
-		padding: 3px;
-	}
+        z-index: 10;
+    }
+    .toc-dropdown-icon {
+        display: none;
+        margin-left: auto;
+        padding: 3px;
+    }
     @media only screen and (max-width: 699px) {
         .gradient-background {
             min-height: 150px;
@@ -255,39 +257,70 @@ const { headings } = await post.render();
             flex-direction: column;
         }
     }
-	@media only screen and (max-width: 675px) {
-		.cover-image {
-			border-radius: 0;
-		}
-	}
-	@media only screen and (max-width: 1200px) {
-		.toc-dropdown-icon {
-			display: block;
-		}
-		.toc .toc-items {
-			display: none;
-		}
-		.toc:hover .toc-items {
-			display: block;
-		}
-		.toc {
-			position: fixed;
-			top: calc(var(--navbar-height) + 1rem);
-			right: 0;
-			padding-right: 0.5rem;
-			background-color: var(--color-main-1);
-			background-color: color-mix(in srgb, var(--color-main-1) 90%, transparent);
-			backdrop-filter: blur(0.15rem);
-			border-radius: 1rem 0 0 1rem;
-			
-		}
-		.toc-items {
-			padding-left: 0.5rem;
-			padding-bottom: 1rem;
-			min-width: 80vw;
-		}
-		aside, .toc {
-			z-index: 1;
-		}
-	}
+
+    @media only screen and (min-width: 1200px) {
+        aside {
+            padding-inline: 2rem;
+            flex-grow: 0;
+        }
+        .toc {
+            width: max(20svw, 200px);
+        }
+        .sticky-element {
+            transition: all 0.3s; /* Smooth transition for when it becomes fixed */
+        }
+        .fixed {
+            position: fixed;
+            top: var(--navbar-height);
+            width: max(20svw, 200px);
+        }
+    }
+    @media only screen and (max-width: 1199px) {
+        .toc-dropdown-icon {
+            display: block;
+        }
+        .toc .toc-items {
+            display: none;
+        }
+        .toc:hover .toc-items {
+            display: block;
+        }
+        .toc {
+            position: fixed;
+            top: calc(var(--navbar-height) + 1rem);
+            right: 0;
+            padding-right: 0.5rem;
+            background-color: var(--color-main-dark);
+            background-color: color-mix(
+                in srgb,
+                var(--color-main-dark) 90%,
+                transparent
+            );
+            backdrop-filter: blur(0.15rem);
+            border-radius: 1rem 0 0 1rem;
+        }
+        .toc-items {
+            padding-left: 0.5rem;
+            padding-bottom: 1rem;
+            min-width: 80vw;
+        }
+        aside,
+        .toc {
+            z-index: 1;
+        }
+    }
 </style>
+<script>
+    const stickyElement = document.querySelector(
+        ".sticky-element",
+    ) as HTMLElement;
+    const stickyOffset = stickyElement.offsetTop;
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= stickyOffset - 50) {
+            stickyElement.classList.add("fixed");
+        } else {
+            stickyElement.classList.remove("fixed");
+        }
+    });
+</script>
