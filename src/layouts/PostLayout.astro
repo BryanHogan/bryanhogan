@@ -55,8 +55,8 @@ const { headings } = await post.render();
         </ul>
     </div>
     <article class="blog-post">
+        <h1 class="text-align-center" id="_top">{post.data.title}</h1>
         <div class="center-container modern-container text-section">
-            <h1 class="text-align-center" id="_top">{post.data.title}</h1>
             <slot />
             <div class="infos">
                 <p>
@@ -149,19 +149,24 @@ const { headings } = await post.render();
         max-width: 1300px;
         flex-wrap: wrap;
     }
-    .center-section {
+    .center-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
-        flex-grow: 1;
     }
-    .blog-post .center-section {
+    h1 {
+        margin-inline: 2rem;
+        margin-bottom: 2rem;
+    }
+    .blog-post .center-container {
         & :global(h1) {
             text-wrap: balance;
         }
         & :global(h2) {
             word-break: break-word;
+            margin-top: 2.25em;
+            margin-bottom: 0.4em;
         }
         & :global(img) {
             object-fit: scale-down;
@@ -170,9 +175,11 @@ const { headings } = await post.render();
         }
         & :global(ol) {
             list-style: decimal;
+            word-break: break-word;
         }
         & :global(ul) {
             list-style: circle;
+            word-break: break-word;
         }
     }
     .gradient-background {
@@ -260,7 +267,8 @@ const { headings } = await post.render();
 
     @media only screen and (min-width: 1200px) {
         aside {
-            padding-inline: 2rem;
+            padding-left: 2rem;
+            margin-top: 1rem;
             flex-grow: 0;
         }
         .toc {
@@ -290,6 +298,7 @@ const { headings } = await post.render();
             top: calc(var(--navbar-height) + 1rem);
             right: 0;
             padding-right: 0.5rem;
+            margin-left: 2rem;
             background-color: var(--color-main-dark);
             background-color: color-mix(
                 in srgb,

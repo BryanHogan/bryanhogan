@@ -153,7 +153,14 @@ import { ViewTransitions } from "astro:transitions";
   a {
     color: var(--color-main-accent);
   }
-
+  h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		scroll-margin-top: var(--navbar-height);
+	}
    {
     /*  ====================
       2 - Layout
@@ -173,27 +180,30 @@ import { ViewTransitions } from "astro:transitions";
     ==================== */
   }
   h1 {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 3rem;
   }
-
   h2 {
-    font-size: 3.2rem;
-    margin-bottom: 1em;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
   }
-
   h3 {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
   }
   @media only screen and (max-width: 699px) {
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
     h2 {
-      font-size: 2.6rem;
+      font-size: 1.8rem; /* might need to adjust this */
     }
     h3 {
-      font-size: 1.8rem;
+      font-size: 1.25rem; /* might need to adjust this */
+    }
+    h4 {
+      font-size: 1.125rem; /* might need to adjust this */
     }
   }
   p,
@@ -233,7 +243,7 @@ import { ViewTransitions } from "astro:transitions";
   }
   .text-section {
     & > *:not(:first-child) {
-      margin-block-start: 2em;
+      margin-block-start: 1.5em;
     }
     & li {
       margin-block-end: 0.5em;
