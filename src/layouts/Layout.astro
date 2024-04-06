@@ -7,7 +7,7 @@ interface Props {
 const { title, metaDescription, headerMode} = Astro.props;
 
 import NavBar from "../components/NavBar.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "../components/Footer2.astro";
 import { ViewTransitions } from "astro:transitions";
 ---
 
@@ -94,6 +94,7 @@ import { ViewTransitions } from "astro:transitions";
     --large-gap: 8em;
 
     --navbar-height: 50px;
+    --footer-height: 150px;
 
     --gradient-backgrounda-brighter: linear-gradient(
       140deg,
@@ -148,7 +149,7 @@ import { ViewTransitions } from "astro:transitions";
     min-width: 280px;
   }
   main {
-    min-height: calc(84svh - 50px);
+    min-height: calc(100svh - var(--navbar-height) - var(--footer-height) - 2rem);
   }
   a {
     color: var(--color-main-accent);
