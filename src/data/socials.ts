@@ -19,7 +19,7 @@ const socials: Socials = {
     },
     linkedin: {
         name: "LinkedIn",
-        href: "https://instagram.com/bryanhoganme",
+        href: "https://www.linkedin.com/in/bryanhoganme/",
         icon: "linkedin",
         iconalt: "LinkedIn logo"
     },

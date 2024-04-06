@@ -114,7 +114,7 @@ const { mode } = Astro.props;
                     </div>
                 </div>
             ) : (
-            <div class="nav-container">
+                <div class="nav-container">
                     <ul class="container-priority-items">
                         <li>
                             <a href="/" title="To Landing Page">
@@ -142,22 +142,17 @@ const { mode } = Astro.props;
                             <li>
                                 <a href="/about">About</a>
                             </li>
-                                <li>
-                                    <a
-                                        href={socials.linkedin.href}
-                                        target="_blank"
-                                    >
-                                        <svg
-                                            width="22"
-                                            height="22"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            set:html={
-                                                Icons[socials.linkedin.icon]
-                                            }
-                                        />
-                                    </a>
-                                </li>
+                            <li>
+                                <a href={socials.linkedin.href} target="_blank">
+                                    <svg
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        set:html={Icons[socials.linkedin.icon]}
+                                    />
+                                </a>
+                            </li>
                             <li>
                                 <a href={socials.github.href} target="_blank">
                                     <svg
@@ -181,7 +176,10 @@ const { mode } = Astro.props;
     nav {
         width: 100%;
         height: var(--navbar-height);
-        
+    }
+    ol,
+    ul {
+        list-style: none;
     }
     a {
         text-decoration: none;
