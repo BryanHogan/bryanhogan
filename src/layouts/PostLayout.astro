@@ -326,25 +326,22 @@ const { headings } = await post.render();
 
 <script type="module">
     const observer = new MutationObserver((mutations) => {
-  const stickyElement = document.querySelector('.sticky-element');
-  if (stickyElement) {
-    const stickyOffset = stickyElement.offsetTop;
+        const stickyElement = document.querySelector(".sticky-element");
+        if (stickyElement) {
+            const stickyOffset = stickyElement.offsetTop;
 
-    const handleScroll = () => {
-      if (window.scrollY >= stickyOffset - 50) {
-        stickyElement.classList.add('fixed');
-      } else {
-        stickyElement.classList.remove('fixed');
-      }
-    };
+            const handleScroll = () => {
+                if (window.scrollY >= stickyOffset - 50) {
+                    stickyElement.classList.add("fixed");
+                } else {
+                    stickyElement.classList.remove("fixed");
+                }
+            };
 
-    window.addEventListener('scroll', handleScroll);
+            window.addEventListener("scroll", handleScroll);
 
-    // Stop observing once we have our element
-    observer.disconnect();
-  }
-});
-
-// Start observing the document body for DOM changes
-observer.observe(document.body, { childList: true, subtree: true });
+            observer.disconnect();
+        }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
 </script>
