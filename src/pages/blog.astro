@@ -37,7 +37,6 @@ const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.get
   <ul class="posts-container">
     {
       allPosts.map((post) => (
-        <p>{getReadingTime(post.body)}</p>
         <li class="post">
           <CardB
             title={post.data.title}
