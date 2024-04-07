@@ -57,9 +57,18 @@ const allPosts = (await getCollection("blog")).sort(
   </section>
   <section>
     <h2 class="margin-inline text-align-center">There's More?</h2>
+    <ul class="sub-menu-navigation-container">
+      <li><a href="">Blog</a></li>
+      <li><a href="">Monthly-Mail</a></li>
+      <li><a href="">Portfolio</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Now</a></li>
+      <li><a href="">Ideas</a></li>
+    </ul>
     <CardGrid>
       <CardC
         title="ToLearnKorean.com"
+        titlehref="https://tolearnkorean.com/"
         icon="external"
         external
         backgroundColor="var(--color-side-accent-a)"
@@ -71,7 +80,8 @@ const allPosts = (await getCollection("blog")).sort(
       </CardC>
       <CardC
         title="Beku.blue"
-        icon="lightbulb"
+        titlehref="/ideas"
+        icon="openbook"
         external
         backgroundColor="var(--color-side-accent-b)"
       >
@@ -82,7 +92,8 @@ const allPosts = (await getCollection("blog")).sort(
       </CardC>
       <CardC
         title="Life Updates"
-        icon="lightbulb"
+        titlehref="/about"
+        icon="star"
         gridHeight={"3"}
         backgroundColor="var(--color-side-accent-b)"
       >
@@ -100,7 +111,7 @@ const allPosts = (await getCollection("blog")).sort(
       <CardC
         title="Web Dev Helper & Components"
         titlehref="https://webdev.bryanhogan.com/"
-        icon="lightbulb"
+        icon="puzzle"
         external
         backgroundColor="var(--color-side-accent-d)"
       >
@@ -111,6 +122,7 @@ const allPosts = (await getCollection("blog")).sort(
       </CardC>
       <CardC
         title="Oh, I don't have a color."
+        titlehref="/now"
         icon="lightbulb"
         backgroundColor="var(--color-main-dark)"
       >
@@ -130,7 +142,8 @@ const allPosts = (await getCollection("blog")).sort(
       </CardC>
       <CardC
         title="Blog"
-        icon="lightbulb"
+        titlehref="/blog"
+        icon="pen"
         backgroundColor="var(--color-side-accent-c)"
       >
         <p>
@@ -141,35 +154,23 @@ const allPosts = (await getCollection("blog")).sort(
       </CardC>
     </CardGrid>
   </section>
-  <section>
-    <h2 class="text-align-center">Life Updates</h2>
-    <ul class="life-updates-container">
-      {
-        LifeUpdates.map((lifeUpdate) => (
-          <li>
-            <CardLU
-              title={lifeUpdate.title}
-              date={lifeUpdate.date}
-              text={lifeUpdate.description}
-              cardButtons={lifeUpdate.cardButtons}
-            />
-          </li>
-        ))
-      }
-      <li>
-        <li class="special">
-          <p>
-            Sharing updates on my life. The <a href="/about">About</a> and <a
-              href="/now">Now</a
-            > pages are also definitely worth checking out.
-          </p>
-        </li>
-      </li>
-    </ul>
-  </section>
 </Layout>
 
 <style>
+  .sub-menu-navigation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1rem;
+    margin-inline: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding-inline: 1rem;
+    & a {color: var(--color-main-bright); font-weight: 500;}
+    & a:hover {color: var(--color-main-accent)}
+  }
   .life-updates-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

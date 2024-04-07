@@ -22,17 +22,15 @@ const {
 ---
 
 <li class="link-card">
-    <div>
-        {
-            title && (
+    {
+        title && external == true && (
+            <div>
                 <h3>
-                    <a href={titlehref}>{title}</a>
+                    <a href={titlehref} target="_blank">
+                        {title}
+                    </a>
                 </h3>
-            )
-        }
-        {
-            external == true && (
-                <a href={titlehref}>
+                <a href={titlehref} target="_blank">
                     <svg
                         class="external-icon"
                         width="24"
@@ -42,9 +40,16 @@ const {
                         set:html={Icons["external"]}
                     />
                 </a>
-            )
-        }
-    </div>
+            </div>
+        )
+    }
+    {
+        title && external != true && (
+        <div><h3>
+                <a href={titlehref}>{title}</a>
+            </h3></div>
+        )
+    }
     <slot />
     <div class="last-row">
         <slot name="last-row" />
@@ -79,9 +84,13 @@ const {
         display: inline;
         margin-right: 0.25rem;
     }
-    a, * :global(a) {
+    a,
+    * :global(a) {
         color: var(--color-main-bright);
         /*color: #fff;*/
+        &:hover {
+            color: var(--color-main-accent);
+        }
     }
     .link-card > :global(p) {
         margin-top: 0.5rem;
