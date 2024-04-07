@@ -136,8 +136,10 @@ const allPosts = (await getCollection("blog")).sort(
         backgroundColor="var(--color-side-accent-b)"
       >
         <p>
-          Instagram is a platform for sharing pictures. Oh, you already know
-          that? How about <a href={mastodon.href} target="_blank">my Mastodon</a> or <a href={threads.href}>Threads</a> then, the best place to share Tweets now.
+          Instagram is a platform for sharing pictures. You already know that?
+          How about <a href={mastodon.href} target="_blank">my Mastodon</a> or <a
+            href={threads.href}>Threads</a
+          > then, the best place to share Tweets now.
         </p>
       </CardC>
       <CardC
@@ -168,8 +170,13 @@ const allPosts = (await getCollection("blog")).sort(
     margin-top: 2rem;
     margin-bottom: 4rem;
     padding-inline: 1rem;
-    & a {color: var(--color-main-bright); font-weight: 500;}
-    & a:hover {color: var(--color-main-accent)}
+    & a {
+      color: var(--color-main-bright);
+      font-weight: 500;
+    }
+    & a:hover {
+      color: var(--color-main-accent);
+    }
   }
   .life-updates-container {
     display: grid;
