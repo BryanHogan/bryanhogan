@@ -1,0 +1,112 @@
+---
+import { Icons } from "../components/Icons";
+import Icon from "./Icon.astro";
+
+interface Props {
+    title?: string;
+    titlehref?: string;
+    external?: boolean;
+    icon?: keyof typeof Icons;
+    gridHeight?: string;
+    backgroundColor?: string;
+}
+
+const {
+    title,
+    titlehref = "#",
+    external = "false",
+    icon,
+    gridHeight = "1",
+    backgroundColor = "var(--color-main-dark)",
+} = Astro.props;
+---
+
+<li class="link-card">
+    <div>
+        {
+            title && (
+                <h3>
+                    <a href={titlehref}>{title}</a>
+                </h3>
+            )
+        }
+        {
+            external == true && (
+                <a href={titlehref}>
+                    <svg
+                        class="external-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        set:html={Icons["external"]}
+                    />
+                </a>
+            )
+        }
+    </div>
+    <slot />
+    <div class="last-row">
+        <slot name="last-row" />
+        <svg
+            class="icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            set:html={Icons[icon]}
+        />
+    </div>
+</li>
+
+<style define:vars={{ gridHeight, backgroundColor }}>
+    li {
+        background-color: var(--backgroundColor);
+        padding: 0.75rem 1rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        grid-row: span var(--gridHeight);
+    }
+    .external-icon {
+        vertical-align: middle;
+        margin-bottom: 5px;
+    }
+    h3 {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        width: fit-content;
+        display: inline;
+        margin-right: 0.25rem;
+    }
+    a, * :global(a) {
+        color: var(--color-main-bright);
+        /*color: #fff;*/
+    }
+    .link-card > :global(p) {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        /*color: #fff;*/
+    }
+    li .last-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: auto;
+    }
+    .last-row :global(> *) {
+    }
+    li .last-row :global(> *:last-child) {
+    }
+    li :global(.list) {
+        list-style: disc;
+        padding-left: 1.5rem;
+    }
+    li :global(.icon) {
+        margin-left: auto;
+        margin-right: 5%;
+        margin-top: 0.75rem;
+        margin-bottom: 1.5%;
+        align-self: center;
+    }
+</style>

@@ -5,6 +5,14 @@ import CardLU from "../components/CardLU.astro";
 import { LifeUpdates } from "../data/life-updates.ts";
 import { Image } from "astro:assets";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
+import CardGrid from "../components/CardGrid.astro";
+import CardC from "../components/CardC.astro";
+import CardCSection from "../components/CardCSection.astro";
+import { mastodon, instagram, threads } from "../data/socials";
+import { getCollection } from "astro:content";
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 ---
 
 <Layout
@@ -46,6 +54,92 @@ import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
         />
       </div>
     </div>
+  </section>
+  <section>
+    <h2 class="margin-inline text-align-center">There's More?</h2>
+    <CardGrid>
+      <CardC
+        title="ToLearnKorean.com"
+        icon="external"
+        external
+        backgroundColor="var(--color-side-accent-a)"
+      >
+        <p>
+          Made a website for anyone wanting to learn Korean. Sharing alongside
+          my personal learning.
+        </p>
+      </CardC>
+      <CardC
+        title="Beku.blue"
+        icon="lightbulb"
+        external
+        backgroundColor="var(--color-side-accent-b)"
+      >
+        <p>
+          Currently still in the early stages of being built. A page about game
+          reviews and game design.
+        </p>
+      </CardC>
+      <CardC
+        title="Life Updates"
+        icon="lightbulb"
+        gridHeight={"3"}
+        backgroundColor="var(--color-side-accent-b)"
+      >
+        {
+          LifeUpdates.slice(0, 3).map((lifeUpdate) => (
+            <CardCSection
+              title={lifeUpdate.title}
+              date={lifeUpdate.date}
+              text={lifeUpdate.description}
+              cardButtons={lifeUpdate.cardButtons}
+            />
+          ))
+        }
+      </CardC>
+      <CardC
+        title="Web Dev Helper & Components"
+        titlehref="https://webdev.bryanhogan.com/"
+        icon="lightbulb"
+        external
+        backgroundColor="var(--color-side-accent-d)"
+      >
+        <p>
+          Collection of components for any web development project and help for
+          getting started as a web developer.
+        </p>
+      </CardC>
+      <CardC
+        title="Oh, I don't have a color."
+        icon="lightbulb"
+        backgroundColor="var(--color-main-dark)"
+      >
+        <p>Well, this is awkward, or, is it?</p>
+      </CardC>
+      <CardC
+        title="Instagram"
+        titlehref={instagram.href}
+        icon="instagram"
+        external
+        backgroundColor="var(--color-side-accent-b)"
+      >
+        <p>
+          Instagram is a platform for sharing pictures. Oh, you already know
+          that? How about <a href={mastodon.href} target="_blank">my Mastodon</a> or <a href={threads.href}>Threads</a> then, the best place to share Tweets now.
+        </p>
+      </CardC>
+      <CardC
+        title="Blog"
+        icon="lightbulb"
+        backgroundColor="var(--color-side-accent-c)"
+      >
+        <p>
+          Check out my latest post titled: "<a
+            href={`/blog/${allPosts[0].slug}/`}>{allPosts[0].data.title}</a
+          >".
+        </p>
+      </CardC>
+    </CardGrid>
   </section>
   <section>
     <h2 class="text-align-center">Life Updates</h2>

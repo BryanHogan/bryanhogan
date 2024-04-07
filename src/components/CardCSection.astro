@@ -1,0 +1,79 @@
+---
+import Button from "./Button.astro";
+import { Icons } from "./Icons";
+
+export interface CardLUButton {
+    buttonText: string;
+    buttonLink: string;
+    buttonTarget: string;
+}
+
+interface Props {
+    title: string;
+    date: Date;
+    text: string;
+    cardButtons: Array<CardLUButton>;
+}
+
+const { title, date, text, cardButtons } = Astro.props;
+---
+
+<div class="cardc-container">
+    <div class="title-row">
+        <h4>{title}</h4>
+        <p>
+            <time datetime={new Date(date).toISOString()}>
+                {new Date(date).toLocaleDateString()}
+            </time>
+        </p>
+    </div>
+    <p>{text}</p>
+    <div class="buttons-container">
+        {
+            cardButtons.map((button) => (
+                <div>
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 26 26"
+                        fill="currentColor"
+                        set:html={Icons["rightarrow"]}
+                    />
+                    <a
+                        href={button.buttonLink}
+                        target={button.buttonTarget}
+                        class=""
+                    >
+                        {button.buttonText}
+                    </a>
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<style>
+    .buttons-container {
+        height: 100%;
+    }
+    a {
+        color: var(--color-main-bright);
+    }
+    svg {
+        vertical-align: middle;
+    }
+    .cardc-container {
+        padding-block: 1rem;
+    }
+    .title-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .time {
+        margin-left: auto;
+        padding-left: 1em;
+    }
+</style>
