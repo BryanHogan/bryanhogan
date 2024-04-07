@@ -7,6 +7,7 @@ import Button from "../components/Button.astro";
 import CardB from "../components/CardB.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import { getReadingTime } from "../utils/reading-time.ts"
 
 const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
@@ -36,6 +37,7 @@ const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.get
   <ul class="posts-container">
     {
       allPosts.map((post) => (
+        <p>{getReadingTime(post.body)}</p>
         <li class="post">
           <CardB
             title={post.data.title}
@@ -47,14 +49,15 @@ const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.get
             coverWidth={post.data.coverImage.width}
             coverHeight={post.data.coverImage.height}
             tag={post.data.tags[0]}
-            length={post.data.length}
+            length={getReadingTime(post.body)}
             pubDate={post.data.pubDate}
             lastUpdate={post.data.lastUpdate}
             postURL={`/blog/${post.slug}/`}
           />
-        </li>
+        </li>  
       ))
     }
+    
   </ul>
 </Layout>
 

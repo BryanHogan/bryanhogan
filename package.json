@@ -13,7 +13,9 @@
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.2",
     "astro": "^4.5.16",
-    "node": "^18.14.1"
+    "mdast-util-to-string": "^4.0.0",
+    "node": "^18.14.1",
+    "reading-time": "^1.5.0"
   },
   "devDependencies": {
     "cssnano": "^6.0.1",
