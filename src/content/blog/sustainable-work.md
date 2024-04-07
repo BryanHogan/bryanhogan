@@ -10,7 +10,6 @@ coverImage:
 pubDate: 2023-12-17
 lastUpdate: 2023-12-17
 tags: ["health", "productivity"]
-length: Short
 ---
 Choosing a career is a complex process. What kind of work direction you go into has a major impact on your life. But most people never take a step back and think about it.
 

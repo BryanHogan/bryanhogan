@@ -10,7 +10,6 @@ coverImage:
 pubDate: 2023-11-08
 lastUpdate: 2023-11-08
 tags: ["tools", "productivity", "design", "development"]
-length: Short
 ---
 
 This page is all about which digital tools, programs, applications and services I use and value for my work in Design, Development and Editing. There are many amazing options out there and I want to give a concise list of tools I recommend. Most of the tools here are free.

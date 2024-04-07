@@ -14,8 +14,7 @@ const postsCollection = defineCollection({
         }),
         pubDate: z.date(),
         lastUpdate: z.date(),
-        tags: z.array(z.string()),
-        length: z.string()
+        tags: z.array(z.string())
     })
 });
 

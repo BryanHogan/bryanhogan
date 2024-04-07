@@ -10,7 +10,6 @@ coverImage:
 pubDate: 2023-11-26
 lastUpdate: 2023-11-26
 tags: ["korea", "travel", "university"]
-length: Medium
 ---
 What is it like to go to South Korea and visit Hanyang University erica as a student from Germany? In the following I will talk about my experience in studying one semester at Hanyang University erica campus for summer 2023.
 
