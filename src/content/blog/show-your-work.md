@@ -1,7 +1,7 @@
 ---
 title: Show Your Work - Summary, Review & Thoughts
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: Why and how we should share the things we love to make.
+description: Why and how we should share the things we love to make and its process.
 coverImage:
     url: /post-covers/Show-Your-Work-Cover.svg
     alt: Simple icon of a book with a share symbol on the center of the cover
@@ -16,14 +16,14 @@ On Show Your Work - 10 ways to share your creativity and get discovered by Austi
 
 ## Summary
 ### 1. You don't have to be a genius.
-Great ideas are often birthed by a group of creative individuals. Most people who stood out as a genius in history and had great impact on society actually came from a whole scene of people who were supporting each other.
-Being a valuable part of such a group is not necessarily about how smart or talented you are, but instead what you have to contribute, the ideas you share, the quality of connections you make and the conversations you start. Focus on what and how to contribute, what can you do for others.
+Great ideas are often birthed by a group of creative individuals. Most people who stood out as a genius in history and had a great impact on society actually came from a whole scene of people who were supporting each other.
+Being a valuable part of such a group is not necessarily about how smart or talented you are, but instead what you have to contribute, the ideas you share, the quality of connections you make and the conversations you start. Focus on what and how to contribute, what you can do for others.
 
 **Be an amateur.** Amateurs are not afraid to make mistakes in public, even if it makes them look stupid. Even if that work seems silly or stupid to others, they are in love with that they do. Even when creating mediocre work, it's possible to go from mediocre to good in increments. The real gap lies between doing nothing and doing something. Amateurs know that contributing something is better than contributing nothing.
 
 The world is changing at a fast rate that it turns everyone into amateurs. The best way to continue on even for professionals is to keep an amateur's spirit, embrace uncertainty and the unknown.
 
-To get started on the path to sharing think about what you want to learn, then make a commitment to learning it in front of others.
+To get started on the path to sharing, think about what you want to learn, then make a commitment to learning it in front of others.
 What are other people in that scene sharing? What are they **not** sharing? Look out for gaps to fill, no matter how bad they are at first. Don't worry about making money or a career of it, forget about being an expert or professional. Share what you love, and the people who love the same things will find out.
 
 If you want people to know about what you do and the things you care about, you have to share. Take a look at the obituaries, the part of a newspaper about the people who have recently died. Take inspiration from the people who lived through life before you. They all started out as amateurs, and they got where they were by making do with what they were given, and having the guts to put themselves out there.
@@ -85,7 +85,7 @@ Dan Harmon's Story Circle:
 The minute you learn something, turn around and teach it to others. Share your reading list. Point to helpful reference materials. Create some tutorial and post them online. Use any media format, pictures, words and video. 
 
 ### 7. Don't Turn Into Human Spam
-Forward-thinking artists look for potential collaborator, not just passive consumer of their work. They understand how important feedback on their work is. They hang out online, answer questions, ask for reading recommendations, they chat with fans about the things they love.
+Forward-thinking artists look for potential collaborators, not just passive consumers of their work. They understand how important feedback on their work is. They hang out online, answer questions, ask for reading recommendations, they chat with fans about the things they love.
 
 To be interesting, you have to be interested yourself.
 
@@ -133,4 +133,4 @@ It's worth to read for anyone interested in creating something, people who spend
 ## How Has Show Your Work Helped Me?
 Show Your Work has given me a lot of motivation and direction for sharing my work and putting myself out there. With a better understanding of why and how to share what I love, I feel more confident.
 
-It has been one of the major motivations for me to start my blog. It also made me start with sharing more on the new Twitters, and now alongside my bachelors final project and thesis.
+It has been one of the major motivations for me to start my blog. It also made me start with sharing more on the new Twitters, and now even alongside my bachelor's final project and thesis.
