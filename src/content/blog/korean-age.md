@@ -30,10 +30,10 @@ Translating "you" into Korean is quite interesting since it is hard to translate
 - Just don’t, omit the “you”
 - Use titles instead (선생님 / teacher, 사장님 / manager)
 - Use "언니 / Unnie" , "오빠 / Oppa", "누나 / Noona" or "형 / Hyung" (for an older friend)
-- "그쪽 / geujjok" (stranger momentarily)
+- "그쪽 / geujjok" (stranger momentarily, can be very rude and mostly avoided)
 - Name + 씨 / ssi
-- 당신 / dangsin (spouse, start a fight, songs, speeches)
-- 너 / neo (highly impolite)
+- 당신 / dangsin (spouse, songs, speeches)
+- 너 / neo (highly impolite, good for starting fights, okay for friends)
 
 So one of the main reasons why age matters in Korea is to understand the relation between the two of you.
 
