@@ -18,7 +18,8 @@ Meeting new people in Korea they would often ask very early on what year I was b
 
 ## Showing Respect & You
 
-You can't be "friends" if you are not born in the same year. At least, the word "친구 / chingu" which translates to "friend" is only used between people born in the same year. You can still be friends with anyone regardless of what your age is, but there is a tendency to be with people born in the same year as you for multiple reasons.  
+You can't be "friends" if you are not born in the same year. At least, the word "친구 / chingu" which translates to "friend" is only used between people born in the same year. You can still be friends with anyone regardless of what your age is, but there is a tendency to be with people born in the same year as you for multiple reasons.
+
 In Korean culture age matters, you should always show respect to your elders and any people older than you.  
 There is a more strict hierarchy which is purely decided by age.
 
@@ -28,9 +29,9 @@ The younger person also addresses the older person, usually with a title or anot
 
 Translating "you" into Korean is quite interesting since it is hard to translate that word directly. Instead you can:  
 - Just don’t, omit the “you”
-- Use titles instead (선생님 / teacher, 사장님 / manager)
+- Use titles instead ("선생님 / seonsaengnim" for teacher, "사장님 / sajangnim" for manager)
 - Use "언니 / Unnie" , "오빠 / Oppa", "누나 / Noona" or "형 / Hyung" (for an older friend)
-- "그쪽 / geujjok" (stranger momentarily, can be very rude and mostly avoided)
+- "그쪽 / geujjok" (stranger momentarily, can be rude, avoided by many)
 - Name + 씨 / ssi
 - 당신 / dangsin (spouse, songs, speeches)
 - 너 / neo (highly impolite, good for starting fights, okay for friends)
@@ -44,9 +45,9 @@ Well, Koreans might still ask how old and if you then answer with an amount of y
 Which one? In Korea you will find that people use two different kinds of counting systems for age, the international age and the Korean age.
 
 The international age is what I was used to, but what is Korean age?
-In Korean age you are born with 1 and you gain a year on January 1st. Yes, every person gains a year at the beginning of the calender year. This means that your Korean age is always one or two years more than your international age.  
+In Korean age you are born with 1 and you gain a year on January 1st. Yes, every person gains a year at the beginning of the calendar year. This means that your Korean age is always one or two years more than your international age.  
 This can lead to the funny situation of someone who's born on December 31st being two years old the next day in Korean age after not even spending one whole day on this earth.
 
 South Korea is shifting over to use international age more and more, they even formally adopted to the international age standard in June 2023. But Korean age is still deeply ingrained into society and still relevant. For example, the legal drinking age in Korea is 20 in Korean age. 
 
-So to avoid all of this confusion and make things easier, just ask for their birth year.
+So one solution to make things easier in a conversation, is to just ask for the birth year instead.
