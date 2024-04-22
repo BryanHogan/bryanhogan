@@ -12,8 +12,7 @@ lastUpdate: 2024-04-17
 tags: ["korea"]
 ---
 
-One thing that was surprising for me 
-in South Korea was how important age is.  
+One thing that was surprising for me in South Korea was how important age is.  
 Meeting new people in Korea they would often ask very early on what year I was born. But why? In Germany, people generally don't really care that much about your age. In Korea there are several reasons why age matters though.
 
 ## Showing Respect & You

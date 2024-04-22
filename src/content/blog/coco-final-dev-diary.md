@@ -39,7 +39,12 @@ What can this be useful for?
 One of the greater challenges of this project will be building a suitable and easy to understand interface while still allowing for high customizability and quick ways to enter information.  
 Also need to think about how to improve the pitch of this app. How can I better explain in just a few words what the app is about?
 
-## Week 1 - Analysis & Research
+## Week 1
+
+- market & competing products analysis
+- questionaire
+- tooling to build
+### Market & Competing Products Analysis
 
 This week was mainly about finding answers to the following three questions:
 1. What products in this space are already out there?
@@ -48,6 +53,22 @@ This week was mainly about finding answers to the following three questions:
 
 As part of the process of defining what the app should be I also had to look for already existing tools. What do they do? How do they look? What do they do well? What can be improved? 
 
-With this understanding of what's already out there I can adjust my app, onboard future users with they probably are already used to but also differentiate myself in a way that brings additional value. No idea is born in isolation, each idea is born out of past experiences and already existing solutions.  
+With this understanding of what's already out there I can adjust my app. I can see what's already working but also how to differentiate myself in a way that brings additional value. No idea is born in isolation, each idea is born out of past experiences and already existing solutions.  
 This is also a fundamental step to decide whether my idea is even worth to pursue or not.
 The insight gained from this step had also major influence on the idea already described above.
+
+### User Survey
+- Survey to find out how people use already existing tools and what they think of them, what do they value
+
+### How To Make App
+- already researched beforehand, 
+
+| Name | Usage | Programming Language |
+| --- | --- | --- |
+| Flutter | Native Apps | Dart |
+| React Native | Native Apps | . |
+| CapacityJS | Hybrid Apps | HTML, CSS, JS |
+
+Looked into but zero interest: 
+
+Decided to go with React Native using Expo.
