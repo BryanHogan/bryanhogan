@@ -85,7 +85,8 @@ const allPosts = (await getCollection("blog")).sort(
         backgroundColor="var(--color-side-accent-b)"
       >
         <p>
-          I will put something else in this box in the future. For now you can look at this amazing turtle emoji.
+          I will put something else in this box in the future. For now you can
+          look at this amazing turtle emoji.
         </p>
       </CardC>
       <CardC
@@ -124,11 +125,11 @@ const allPosts = (await getCollection("blog")).sort(
         icon="lightbulb"
         backgroundColor="var(--color-main-dark)"
       >
-      <p>
-        Check out my latest post titled: "<a
-          href={`/blog/${allPosts[0].slug}/`}>{allPosts[0].data.title}</a
-        >".
-      </p>
+        <p>
+          Check out my latest post titled: "<a
+            href={`/blog/${allPosts[0].slug}/`}>{allPosts[0].data.title}</a
+          >".
+        </p>
       </CardC>
       <CardC
         title="Instagram"
@@ -138,13 +139,14 @@ const allPosts = (await getCollection("blog")).sort(
         backgroundColor="var(--color-side-accent-b)"
       >
         <p>
-          Instagram is a platform for sharing pictures. You already know that?
-          How about <a href={mastodon.href} target="_blank">my Mastodon</a> or <a
-            href={threads.href}>Threads</a
-          > then, the best place to share Tweets now.
+          Instagram is a platform for sharing pictures. Oh, you already knew that and the info is out of date? How about <a
+            href={mastodon.href}
+            target="_blank">my Mastodon</a
+          > or <a href={threads.href}>Threads</a> then, the best place to share Tweets
+          now.
         </p>
       </CardC>
-      
+
       <CardC
         title="Beku.blue"
         titlehref="https://buttondown.email/BekuBlue"
@@ -153,7 +155,10 @@ const allPosts = (await getCollection("blog")).sort(
         backgroundColor="var(--color-side-accent-c)"
       >
         <p>
-          Collection of Game Reviews. Page not built yet. You can <a href="https://buttondown.email/BekuBlue" target="_blank">subscribe</a> to Beku.blue by mail and get notified when the page is ready.
+          Collection of Game Reviews. Page not built yet. You can <a
+            href="https://buttondown.email/BekuBlue"
+            target="_blank">subscribe</a
+          > to Beku.blue by mail and get notified when the page is ready.
         </p>
       </CardC>
     </CardGrid>
