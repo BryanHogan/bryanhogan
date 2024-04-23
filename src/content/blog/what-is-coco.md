@@ -1,20 +1,20 @@
 ---
-title: What Is Code & Context? The Best Field Of Study?
+title: What Is Code & Context? The Modern Way To Study
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: Code & Context shows how studying should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship.
+description: Code & Context shows how studying at university should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship.
 coverImage:
     url: /post-covers/What-Is-Code-And-Context-Cover.svg
     alt: Code and Context B.Sc. Logo
     width: 100
     height: 35
 pubDate: 2023-11-07
-lastUpdate: 2023-11-07
+lastUpdate: 2024-04-23T21:45:13Z
 tags: ["learning", "productivity", "design", "development", "university"]
 ---
 Code & Context shows how studying should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship with a modern approach to learning.
 
 ## What is Code & Context?
-Code & Context is a Bachelor of Science program at TH Cologne (TH Köln) which combines computer science, design and business/entrepreneurship. It is fundamentally different from other fields of study and for me the best study I have ever heard of.
+Code & Context is a Bachelor of Science program at TH Köln (Cologne University of Applied Sciences) which combines computer science, design and business/entrepreneurship. It is fundamentally different from other fields of study and for me the best study I have ever heard of.
 
 Students of CoCo (Code & Context) learn how to create modern and impactful products, services and other artifacts. 
 CoCo covers many disciplines, from various fields in design to creating a startup company and building all kinds of products in a modern environment.
