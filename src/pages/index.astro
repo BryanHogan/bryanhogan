@@ -79,15 +79,13 @@ const allPosts = (await getCollection("blog")).sort(
         </p>
       </CardC>
       <CardC
-        title="Beku.blue"
-        titlehref="/ideas"
-        icon="openbook"
-        external
+        title="💜🐢"
+        titlehref="/blog"
+        icon="pen"
         backgroundColor="var(--color-side-accent-b)"
       >
         <p>
-          Currently still in the early stages of being built. A page about game
-          reviews and game design.
+          I will put something else in this box in the future. For now you can look at this amazing turtle emoji.
         </p>
       </CardC>
       <CardC
@@ -121,12 +119,16 @@ const allPosts = (await getCollection("blog")).sort(
         </p>
       </CardC>
       <CardC
-        title="Oh, I don't have a color."
-        titlehref="/now"
+        title="Blog"
+        titlehref="/blog"
         icon="lightbulb"
         backgroundColor="var(--color-main-dark)"
       >
-        <p>Well, this is awkward, or, is it?</p>
+      <p>
+        Check out my latest post titled: "<a
+          href={`/blog/${allPosts[0].slug}/`}>{allPosts[0].data.title}</a
+        >".
+      </p>
       </CardC>
       <CardC
         title="Instagram"
@@ -142,16 +144,16 @@ const allPosts = (await getCollection("blog")).sort(
           > then, the best place to share Tweets now.
         </p>
       </CardC>
+      
       <CardC
-        title="Blog"
-        titlehref="/blog"
-        icon="pen"
+        title="Beku.blue"
+        titlehref="https://buttondown.email/BekuBlue"
+        icon="openbook"
+        external
         backgroundColor="var(--color-side-accent-c)"
       >
         <p>
-          Check out my latest post titled: "<a
-            href={`/blog/${allPosts[0].slug}/`}>{allPosts[0].data.title}</a
-          >".
+          Collection of Game Reviews. Page not built yet. You can <a href="https://buttondown.email/BekuBlue" target="_blank">subscribe</a> to Beku.blue by mail and get notified when the page is ready.
         </p>
       </CardC>
     </CardGrid>
