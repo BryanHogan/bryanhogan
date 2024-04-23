@@ -7,10 +7,22 @@ interface LifeUpdate {
 export interface CardLUButton {
   buttonText: string;
   buttonLink: string;
-  buttonTarget: string;
+  buttonTarget?: string;
 }
 
 export const LifeUpdates: LifeUpdate[] = [
+  {
+    title: "New Post: Show Your Work - Summary, Review & Thoughts",
+    date: new Date("2024-03-13"),
+    description: "Made a new blog post, this time on a book that has changed my life quite a bit. Share Your Work is an amazing book I can highly recommend.",
+    cardButtons: [
+      {
+        buttonText: "See Post",
+        buttonLink: "/blog/show-your-work",
+        buttonTarget: "_self",
+      },
+    ]
+  },
   {
     title: "Bryan's Briefing February Edition",
     date: new Date("2024-03-13"),
@@ -42,7 +54,7 @@ export const LifeUpdates: LifeUpdate[] = [
     cardButtons: []
   },
   {
-    title: "Back In Germany",
+    title: "Back in Germany",
     date: new Date("2024-01-27"),
     description: "Back in Germany after a year abroad in South Korea as an exchange student.",
     cardButtons: [

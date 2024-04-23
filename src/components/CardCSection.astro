@@ -1,11 +1,10 @@
 ---
-import Button from "./Button.astro";
 import { Icons } from "./Icons";
 
 export interface CardLUButton {
     buttonText: string;
     buttonLink: string;
-    buttonTarget: string;
+    buttonTarget?: string;
 }
 
 interface Props {
@@ -21,7 +20,7 @@ const { title, date, text, cardButtons } = Astro.props;
 <div class="cardc-container">
     <div class="title-row">
         <h4>{title}</h4>
-        <p>
+        <p class="date-time-text">
             <time datetime={new Date(date).toISOString()}>
                 {new Date(date).toLocaleDateString()}
             </time>
@@ -42,7 +41,6 @@ const { title, date, text, cardButtons } = Astro.props;
                     <a
                         href={button.buttonLink}
                         target={button.buttonTarget}
-                        class=""
                     >
                         {button.buttonText}
                     </a>
@@ -55,8 +53,6 @@ const { title, date, text, cardButtons } = Astro.props;
 <style>
     .buttons-container {
         height: 100%;
-    }
-    a {
     }
     svg {
         vertical-align: middle;
@@ -71,7 +67,7 @@ const { title, date, text, cardButtons } = Astro.props;
         justify-content: space-between;
         align-items: center;
     }
-    .time {
+    .date-time-text {
         margin-left: auto;
         padding-left: 1em;
     }
