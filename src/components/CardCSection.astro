@@ -38,9 +38,10 @@ const { title, date, text, cardButtons } = Astro.props;
                         fill="currentColor"
                         set:html={Icons["rightarrow"]}
                     />
+                    <p>hi {button.buttonTarget}</p>
                     <a
                         href={button.buttonLink}
-                        target={button.buttonTarget}
+                        target={button.buttonTarget != "" ? button.buttonTarget : "_self"}
                     >
                         {button.buttonText}
                     </a>

@@ -18,8 +18,7 @@ export const LifeUpdates: LifeUpdate[] = [
     cardButtons: [
       {
         buttonText: "See Post",
-        buttonLink: "/blog/show-your-work",
-        buttonTarget: "_self",
+        buttonLink: "/blog/show-your-work"
       },
     ]
   },
