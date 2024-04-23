@@ -47,7 +47,7 @@ const {
             alt="Minimal bright tag icon"
             width="17"
             height="17"
-          /><p>{tag}</p>
+          /><p class="tag-text">{tag}</p>
         </div>
         <div title={"Published: " + new Date(pubDate).toLocaleDateString("en-GB") + " & Last update: " + new Date(lastUpdate).toLocaleDateString("en-GB")}>
           <img
@@ -83,6 +83,9 @@ const {
     max-height: 75px;
     width: 75px;
     margin-top: 30px;
+  }
+  .tag-text {
+    text-transform: capitalize;
   }
   .card-container {
     & a {

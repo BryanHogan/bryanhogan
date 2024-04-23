@@ -27,7 +27,7 @@ allPosts.forEach(post => {
       {
         tags.map((tag) => (
           <li>
-            <a href={`/tags/${tag}`}>{tag}</a> ({tagCounts[tag] || 0})
+            <a href={`/tags/${tag}`} class="tag-name">{tag}</a> ({tagCounts[tag] || 0})
           </li>
         ))
       }
@@ -43,5 +43,7 @@ allPosts.forEach(post => {
     padding-top: 1em;
     padding-bottom: 0.25em;
   }
-  
+  .tag-name {
+    text-transform: capitalize;
+  }
 </style>
