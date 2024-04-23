@@ -26,10 +26,29 @@ const { headings } = await post.render();
     title={post.data.title}
     metaDescription={post.data.description}
     headerMode="Reduced"
+    ogType="article"
 >
-
-<meta property="article:published_time" content={post.data.pubDate.toISOString()} slot="head"/>
-<meta http-equiv="last-modified" content={post.data.lastUpdate.toISOString()} slot="head"/>
+    <meta property="article:author" content="Bryan Hogan" slot="header" />
+    <meta
+        property="article:published_time"
+        content={post.data.pubDate.toISOString()}
+        slot="head"
+    />
+    <meta
+        property="article:modified_time"
+        content={post.data.lastUpdate.toISOString()}
+        slot="head"
+    />
+    <meta property="article:tag" content={post.data.tags[0]} slot="head" />
+    {
+        post.data.tags[1] && (
+            <meta
+                property="article:tag"
+                content={post.data.tags[1]}
+                slot="head"
+            />
+        )
+    }
     <div class="gradient-background">
         <img
             src={post.data.coverImage.url}
