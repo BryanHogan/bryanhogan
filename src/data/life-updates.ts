@@ -20,6 +20,10 @@ export const LifeUpdates: LifeUpdate[] = [
         buttonText: "See Post",
         buttonLink: "/blog/show-your-work"
       },
+      {
+        buttonText: "All Posts Tagged With 'Book'",
+        buttonLink: "/tags/book"
+      }
     ]
   },
   {
