@@ -66,7 +66,7 @@ Getting a general understanding of how people think and how they use such tools 
 With the knowledge from the survey I can refine my idea, improve the overall design and better evaluate how important certain features are.
 
 ### How To Make An App
-Relevant for making an app are also the tools to make an app 🤯. Since I already felt comfortable with web-development I was mostly choosing between React Native with Expo or Capacitor with Ionic. After some back and forth I decided to stick with React Native. Other than reading [posts](https://capgo.app/blog/comparing-react-native-vs-capacitor/) and watching [videos](https://youtu.be/-tTVYqyNZas) on the two framework I found this [HackerNews discussion](https://news.ycombinator.com/item?id=38500146) useful to aid my decision.
+Relevant for making an app are also the tools to make an app 🤯. Since I already felt comfortable with web-development I was mostly choosing between React Native with Expo or Capacitor with Ionic. After some back and forth I decided to stick with React Native. Other than reading [posts](https://capgo.app/blog/comparing-react-native-vs-capacitor/) and watching [videos](https://youtu.be/-tTVYqyNZas) on the two frameworks I found this [HackerNews discussion](https://news.ycombinator.com/item?id=38500146) useful to aid my decision.
 
 For React Native there are more resources, the community is stronger and it also just feels like the more stable and safe option.
 

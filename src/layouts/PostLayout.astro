@@ -212,6 +212,22 @@ const { headings } = await post.render();
             list-style: circle;
             word-break: break-word;
         }
+        & :global(blockquote) {
+            border-left: 2px solid var(--color-main-accent);
+            quotes: "\201C""\201D""\2018""\2019";
+            padding-left: 1.25em;
+            padding-block: 0.5em;
+            border-radius: 0 0.5rem 0.5rem 0;
+            background-color: var(--color-main-dark-brighter);
+            & :global(footer) {
+                border-left: none;
+                margin-top: 0px;
+                padding-top: 0.5em;
+                padding-right: 2em;
+                border-radius: 0 0 0.5rem 0;
+                font-size: 1.1em;
+            }
+        }
         & :global(table) {
             border-collapse: collapse;
             width: 100%;

@@ -103,9 +103,8 @@ When receiving feedback, it's always important to remember who it came from. You
 The worst kind of hate is the one that stays in your head. The hate that makes you tell yourself that you are not good enough, that you suck. Is there someone that makes you feel like that? Block them. Remove their comments.
 At some point, maybe even consider a space without comments.
 
-> There's never a space under paintings in a gallery where someone writes their opinion,
-
-— Natalie Dee
+> "There's never a space under paintings in a gallery where someone writes their opinion,"
+> <footer>— Natalie Dee</footer>
 
 ### 9. Sell Out
 Once an audience starts gathering for the work you put out freely, you want to consider turning them into supporters. One easy way to do this is to ask for donations.
