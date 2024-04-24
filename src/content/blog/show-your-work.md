@@ -8,7 +8,7 @@ coverImage:
     width: 91
     height: 111
 pubDate: 2024-04-14
-lastUpdate: 2024-04-14
+lastUpdate: 2024-04-24T14:18:15Z
 tags: ["creating", "productivity", "book"]
 ---
 
@@ -39,9 +39,9 @@ Each day find a little piece of your process that you can share.
 Don't worry about the post being perfect. Get it in front of others and see how they react. Most likely it will be crap, since the majority is crap. But just sometimes, maybe rarely, it won't be crap. The problem is, we don't always know what's good and what sucks.
 So put it out there and find out.
 
-Be open, share imperfect and unfinished work you want feedback on. But don't share everything. Don't share content which you don't want to get copied all over the internet.
+Be open, share imperfect and unfinished work. Especially work you want feedback on. But don't share everything. Don't share content which you don't want to get copied all over the internet.
 
-Ask yourself, "So What?" with the pieces you share. You want to put something out there that's helpful or entertaining to someone.
+Ask yourself, "So What?" with each piece you share. You want to put something out there that's helpful or entertaining to someone.
 
 If you are unsure whether to share something or not, wait 24 hours on it. The next day, ask yourself: "Is this helpful? Is it entertaining?" (Or another good question: "Is it something I'd feel comfortable with my boss or my mother seeing?).
 

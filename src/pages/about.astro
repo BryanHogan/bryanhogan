@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
-import {instagram, linkedin} from "../data/socials.ts"
+import { instagram, linkedin } from "../data/socials.ts";
 import { getCollection } from "astro:content";
 const allPosts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
@@ -98,7 +98,10 @@ const allPosts = (await getCollection("blog")).sort(
         </p>
         <p><strong>What I Value & How I Think:</strong></p>
         <ul>
-            <li>🌱 - Building a great future for yourself and others.</li>
+            <li>
+                🌱 - There's special meaning in building a great future for
+                yourself and others.
+            </li>
             <li>❤️ - To life happily in the future you need to be healthy.</li>
             <li>
                 ⏳ - To achieve ambitious goals some things need to be improved,
@@ -122,8 +125,9 @@ const allPosts = (await getCollection("blog")).sort(
             </li>
             <li>
                 <a href="/tags/korea">Korea</a> - I studied one year abroad in South
-                Korea. It was fascinating to see how Korea is different compared
-                to Germany. I also made some great memories.
+                Korea. Exploring Korea was fascinating. I was able to experience
+                many new things, it was very different to the life I had Germany
+                and I loved that. I also made some great memories.
             </li>
             <li>
                 <a href="/tags/development">Development</a> - About developing in
