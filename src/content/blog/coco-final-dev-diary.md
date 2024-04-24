@@ -1,7 +1,7 @@
 ---
-title: Code & Context Final Project Dev Diary
+title: Code & Context Final Project Dev Diary - Live Post
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: Dev Diary on my project on developing an app to help people keep track of what matters to them. (Live Update)
+description: Dev Diary on my project on developing an app to help people keep track of what matters to them.
 coverImage:
     url: /post-covers/CoCo-Final-Diary-Cover.svg
     alt: Simple icon of a mechanical cog
@@ -23,7 +23,7 @@ Next up was finding a professor willing to be my supervisor and completing the s
 
 I was able to find a supervisor and completed my proposal, now it was time for me to go back to university for the first time after my year [abroad in South Korea](/blog/hanyang-erica-exchange). I had a meeting with my supervisor, got feedback on my proposal and then knew in which direction to go into and how to approach my project.
 
-My idea is to build an app which works as a tool for effective journaling, habit building and keeping track of information for self-reflection, achieving goals and improving personal health. One of the first impressions I heard was that it sounds like a "Eierlegende Wollmilchsau", a egg-laying, milk-bearing woolly sow. A German phrase used for something that only has benefits, meets all requirements and is useful for every purpose always, thus it is impossible to create since it's requirements are not feasible for reality.
+My idea is to build an app which works as a tool for effective journaling, habit building and keeping track of information for self-reflection, achieving goals and improving personal health. One of the first impressions I heard was that it sounds like a "Eierlegende Wollmilchsau", a egg-laying, milk-bearing woolly sow. A German phrase used for something that only has benefits, meets all requirements and is useful for every purpose always, thus it is impossible to create since its requirements are not feasible for reality.
 
 The actual idea of the app is not that complex. Once per day the user should be prompted to enter information into the app. What information is up to the user. This way the user can choose what they want to keep track of, like how many minutes they read today, state of a health condition or whether they did sports that day or not.  
 The user can decide what to keep track of and in what way. So also which type of data it should be, like a text field, single word, number, unit, number on a scale or true or false statement.
@@ -33,8 +33,8 @@ The user should then be able to view this tracked data in a way that allows them
 What can this be useful for?  
 
 - **New healthy habits**. Do more sports or read more books. Gamify a habit by keeping a daily streak. Or note down how many minutes the activity has been done each day. Optionally set a minimum amount of minutes you want to read each day. Visualise the tracked data to see if you are going into the direction you want to go into. 
-- **Break old habits**. Just how the app can be used to acquire a new habit, it can also be used to help to quit a old ones, like smoking or other toxic instant gratifications.
-- **Mood tracking journal**. Track your mood and write a quick journal each day. Get a overview of your mood each day. Understand the relation between your mood of and the activities of each day.
+- **Break old habits**. Just how the app can be used to acquire a new habit, it can also be used to help to quit old ones, like smoking or other toxic instant gratifications.
+- **Mood tracking journal**. Track your mood and write a quick journal each day. Get an overview of your mood each day. Understand the relation between your mood and the activities of each day.
 - **Understanding Food Allergies & Intolerances**. Get a better understanding of what food you can and can't eat. Track each day how well your stomach feels or how well you can digest the food and also what food you ate that day. Have an overview of days where you feel well and what you ate then but also the days where you felt unwell.
 - **Understanding Health Conditions**. Get a better understanding of one of your personal health problems. For example, keep track of how bad your chronic migraines are each day and note down what you did that day. Get an overview of days where you feel well and see what you did then but also what you did on days where it feels worse.
 
@@ -59,19 +59,21 @@ There are some worth highlighting:
 - **DailyBean** - Although it's use case differs quite a bit from my app, I really liked the UI and part of the monetization here. It has it's own custom currency which can be spent to buy different visual themes, all of which look beautiful (and cute).
 
 ### User Survey
-- Survey to find out how people use already existing tools and what they think of them, what do they value
+With the survey I want to find out more about the people who use such tools, how do they think, what's important to them?
+
+Getting a general understanding of how people think and how they use such tools is important. Also collected the information of people who'd be interested in trying out a first MVP for testing.
+
+With the knowledge from the survey I can refine my idea, improve the overall design and better evaluate how important certain features are.
 
 ### How To Make An App
-- already researched beforehand, 
+Relevant for making an app are also the tools to make an app 🤯. Since I already felt comfortable with web-development I was mostly choosing between React Native with Expo or Capacitor with Ionic. After some back and forth I decided to stick with React Native. Other than reading [posts](https://capgo.app/blog/comparing-react-native-vs-capacitor/) and watching [videos](https://youtu.be/-tTVYqyNZas) on the two framework I found this [HackerNews discussion](https://news.ycombinator.com/item?id=38500146) useful to aid my decision.
+
+For React Native there are more resources, the community is stronger and it also just feels like the more stable and safe option.
 
 | Name | Usage | Programming Language | Popularity |
 | --- | --- | --- | --- |
 | Flutter | Native Apps | Dart | Very high |
 | React Native | Native Apps | Javascript, React | Very high |
-| CapacityJS | Hybrid Apps | HTML, CSS, JS | Low |
+| Capacitor (w/ Ionic) | Hybrid Apps | HTML, CSS, JS | Low |
 
-Looked into but zero interest: 
-Other ways to make an app that did not seem like a viable or efficient way of doing it:
-They either seemed outdated or had 
-
-Decided to go with React Native using Expo.
+There were some other options I also stumbled upon, like NativeScript or Xamarin, but they either seemed long forgotten and abandoned with no community support behind them or not reasonable viable to make an Android and IOS app from a single code base efficiently.
