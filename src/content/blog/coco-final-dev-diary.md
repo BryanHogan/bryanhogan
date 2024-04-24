@@ -1,7 +1,7 @@
 ---
 title: Code & Context Final Project Dev Diary
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: Dev Diary on my project on developing an app to help people keep track of what matters to them.
+description: Dev Diary on my project on developing an app to help people keep track of what matters to them. (Live Update)
 coverImage:
     url: /post-covers/CoCo-Final-Diary-Cover.svg
     alt: Simple icon of a mechanical cog
@@ -64,11 +64,11 @@ There are some worth highlighting:
 ### How To Make An App
 - already researched beforehand, 
 
-| Name | Usage | Programming Language |
-| --- | --- | --- |
-| Flutter | Native Apps | Dart |
-| React Native | Native Apps | . |
-| CapacityJS | Hybrid Apps | HTML, CSS, JS |
+| Name | Usage | Programming Language | Popularity |
+| --- | --- | --- | --- |
+| Flutter | Native Apps | Dart | Very high |
+| React Native | Native Apps | Javascript, React | Very high |
+| CapacityJS | Hybrid Apps | HTML, CSS, JS | Low |
 
 Looked into but zero interest: 
 Other ways to make an app that did not seem like a viable or efficient way of doing it:
