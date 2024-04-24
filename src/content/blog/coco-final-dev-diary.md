@@ -7,8 +7,8 @@ coverImage:
     alt: Simple icon of a mechanical cog
     width: 101
     height: 101
-pubDate: 2024-04-21
-lastUpdate: 2024-04-21
+pubDate: 2024-04-24T14:09:52Z
+lastUpdate: 2024-04-24T14:09:52Z
 tags: ["creating", "development", "coco", "university"]
 ---
 

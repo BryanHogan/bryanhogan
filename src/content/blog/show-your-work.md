@@ -1,7 +1,7 @@
 ---
 title: Show Your Work - Summary, Review & Thoughts
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: Why and how we should share the things we love to make and its process.
+description: Why and how we should share the things we love to make.
 coverImage:
     url: /post-covers/Show-Your-Work-Cover.svg
     alt: Simple icon of a book with a share symbol on the center of the cover
