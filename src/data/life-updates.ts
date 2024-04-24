@@ -12,8 +12,30 @@ export interface CardLUButton {
 
 export const LifeUpdates: LifeUpdate[] = [
   {
+    title: "New Post: Code & Context Final Project Dev Diary - Live Post",
+    date: new Date("2024-04-24"),
+    description: "About my final project at Code & Context.",
+    cardButtons: [
+      {
+        buttonText: "Read Post",
+        buttonLink: "/blog/coco-final-dev-diary"
+      }
+    ]
+  },
+  {
+    title: "New Post: Why Koreans Ask What Year You Were Born",
+    date: new Date("2024-04-23"),
+    description: "A shorter post on one of the interesting cultural experiences I had while in South Korea.",
+    cardButtons: [
+      {
+        buttonText: "Read Post",
+        buttonLink: "/blog/korean-age"
+      }
+    ]
+  },
+  {
     title: "New Post: Show Your Work - Summary, Review & Thoughts",
-    date: new Date("2024-03-13"),
+    date: new Date("2024-04-14"),
     description: "Made a new blog post, this time on a book that has changed my life quite a bit. Share Your Work is an amazing book I can highly recommend.",
     cardButtons: [
       {
