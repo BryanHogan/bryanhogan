@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
 import { instagram, linkedin } from "../data/socials";
+import Icon from "../components/Icon.astro";
 ---
 
 <Layout
@@ -29,9 +30,12 @@ import { instagram, linkedin } from "../data/socials";
         <ul>
             <li>
                 Make a game out of Anki flashcards. Make learning with
-                flashcards more fun by using them to make a more fun game.
+                flashcards more fun.
             </li>
-            <li>Build app helper to keep track of things. Make personal overview of health or learning goals.</li>
+            <li>
+                Build app helper to keep track of things. Make personal overview
+                of health or learning goals. <Icon name="rightarrow"/> Now working on building this for my <a href="/blog/coco-final-dev-diary">bachelors final project</a>.
+            </li>
         </ul>
         <nav slot="aside-content">
             <Button
