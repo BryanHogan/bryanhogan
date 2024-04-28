@@ -8,7 +8,7 @@ coverImage:
     width: 101
     height: 101
 pubDate: 2024-04-24T14:09:52Z
-lastUpdate: 2024-04-24T14:09:52Z
+lastUpdate: 2024-04-28T18:12:00Z
 tags: ["creating", "development", "coco", "university"]
 ---
 
@@ -65,6 +65,8 @@ Getting a general understanding of how people think and how they use such tools 
 
 With the knowledge from the survey I can refine my idea, improve the overall design and better evaluate how important certain features are.
 
+After a few iterations of thinking of what do I really want to ask, testing with some people and then adapting changes I had a survey which will help me find some answers and give me some confirmation for the hypothesis I put up.
+
 ### How To Make An App
 Relevant for making an app are also the tools to make an app 🤯. Since I already felt comfortable with web-development I was mostly choosing between React Native with Expo or Capacitor with Ionic. After some back and forth I decided to stick with React Native. Other than reading [posts](https://capgo.app/blog/comparing-react-native-vs-capacitor/) and watching [videos](https://youtu.be/-tTVYqyNZas) on the two frameworks I found this [HackerNews discussion](https://news.ycombinator.com/item?id=38500146) useful to aid my decision.
 
@@ -78,16 +80,15 @@ For React Native there are more resources, the community is stronger and it also
 
 There were some other options I also stumbled upon, like NativeScript or Xamarin, but they either seemed long forgotten and abandoned with no community support behind them or not reasonable viable to make an Android and IOS app from a single code base efficiently.
 
-## Week 2 - Development
-Started work on developing the App and learning how to use React Native this week. Mostly learning React Native though.
+## Week 2
+This week was focussed on:
+- Learning React Native
+- Getting started on developing the app
+- Evaluating the survey
 
-I underestimated how different React Native is compared to developing a website. From the syntax to how CSS works, things are very different to what I was used to. It's definitely frustrating to be stuck at working at 1% speed of what I could do if I would instead use regular HTML and CSS.
+### Development
+This was my first time using React Native, it's harder then expected. I hoped for more of my web development knowledge to carry over. It's a bit frustrating to only be able to create interfaces at 1% of the speed to what I'm usually used to. But I expect to get quicker once I get familiar with React Native. This is reminding me of how much I struggled when I first started coding my first webpage.
 
-Also was suprised by how man unneccesarry hurdles there are in app development, having to setup Android Studio and choose another emulator than the default one, since that crashed my pc 3 times, or being unable to emulate anything of the iOS ecosystem.
+Also spend a nice amount of time figuring out that it was the default emulator that Android Studio installs that kept crashing my pc. And a bit disappointed in the Apple ecosystem regarding how closed of it is, it's not even possible to emulate a iOS system on a windows or linux machine.
 
-- this week:
-    - development, learning rn, understand rn a bit,
-    - create plan of how to structure app, rough content of each page/view,
-    - page example wireframe
-
-- build skeleton of app, rough draft of app -> which feature
+Once I have a better understanding of how React Native works I will create a plan of how I want to structure the my, think about what content will roughly belong where. This should also be the time when I create a basic wireframe or example image of how the app could look like.
