@@ -91,4 +91,4 @@ This was my first time using React Native, it's harder then expected. I hoped fo
 
 Also spend a nice amount of time figuring out that it was the default emulator that Android Studio installs that kept crashing my pc. And a bit disappointed in the Apple ecosystem regarding how closed of it is, it's not even possible to emulate a iOS system on a windows or linux machine.
 
-Once I have a better understanding of how React Native works I will create a plan of how I want to structure the my, think about what content will roughly belong where. This should also be the time when I create a basic wireframe or example image of how the app could look like.
+Once I have a better understanding of how React Native works I will create a plan of how I want to structure my app, create a plan of what elements belong where and how I want to structure it. This should also be the time when I create a basic wireframe or example image of how the app could look like.
