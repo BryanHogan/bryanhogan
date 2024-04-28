@@ -77,3 +77,17 @@ For React Native there are more resources, the community is stronger and it also
 | Capacitor (w/ Ionic) | Hybrid Apps | HTML, CSS, JS | Low |
 
 There were some other options I also stumbled upon, like NativeScript or Xamarin, but they either seemed long forgotten and abandoned with no community support behind them or not reasonable viable to make an Android and IOS app from a single code base efficiently.
+
+## Week 2 - Development
+Started work on developing the App and learning how to use React Native this week. Mostly learning React Native though.
+
+I underestimated how different React Native is compared to developing a website. From the syntax to how CSS works, things are very different to what I was used to. It's definitely frustrating to be stuck at working at 1% speed of what I could do if I would instead use regular HTML and CSS.
+
+Also was suprised by how man unneccesarry hurdles there are in app development, having to setup Android Studio and choose another emulator than the default one, since that crashed my pc 3 times, or being unable to emulate anything of the iOS ecosystem.
+
+- this week:
+    - development, learning rn, understand rn a bit,
+    - create plan of how to structure app, rough content of each page/view,
+    - page example wireframe
+
+- build skeleton of app, rough draft of app -> which feature
