@@ -104,5 +104,12 @@ I began by creating a rough sketch of the different views / pages the app will h
 
 ![Sketch showcasing possible view and elements of mobile app"](../../assets/blog/Bryan-Hogan-CoCo-Final-Dev-Diary-Sketch.jpg)
 
-In addition to the sketch I created a flow chart on how the user can interact with the app.
+In addition to the sketch I created a flow chart on how the user can interact with the app. This will help me design the overall layout. Elements and pages that are navigated to often should be placed somewhere where they are easily accessible.
 
+![Sketch showcasing possible view and elements of mobile app"](../../assets/blog/Bryan-Hogan-CoCo-Final-Dev-Diary-Flowchart.jpg)
+
+Both are very far away from how to app will ultimately end up looking like, but that is also not their function. They are only there to help me understand how the different elements will be interacting with each other and how I can design a smooth navigation through the app.  
+With the insights from both the sketch and rough flowchart I can get started on a wireframe.
+
+In a wireframe I go into more details of the layout, like what elements are on the home page, which navigation elements lead to where, what are the rough sizes of elements. At this step I still do not care at all about the design details. Don't waste any time on thinking of the name for the app, colors, animations, typography, domain name, you get it, all of this does not matter for now.  
+With a presentable wireframe I get started on testing. I give the wireframe to people and see how they interact with it. What works well, what do they struggle with?
