@@ -84,7 +84,6 @@ There were some other options I also stumbled upon, like NativeScript or Xamarin
 This week was focussed on:
 - Learning React Native
 - Getting started on developing the app
-- Evaluating the survey
 
 ### Development
 This was my first time using React Native, it's harder then expected. I hoped for more of my web development knowledge to carry over. It's a bit frustrating to only be able to create interfaces at 1% of the speed to what I'm usually used to. But I expect to get quicker once I get familiar with React Native. This is reminding me of how much I struggled when I first started coding my first webpage.
@@ -92,3 +91,18 @@ This was my first time using React Native, it's harder then expected. I hoped fo
 Also spend a nice amount of time figuring out that it was the default emulator that Android Studio installs that kept crashing my pc. And a bit disappointed in the Apple ecosystem regarding how closed of it is, it's not even possible to emulate a iOS system on a windows or linux machine.
 
 Once I have a better understanding of how React Native works I will create a plan of how I want to structure my app, create a plan of what elements belong where and how I want to structure it. This should also be the time when I create a basic wireframe or example image of how the app could look like.
+
+## Week 3
+Focus of this week:
+- Learn React Native
+- Design the app
+- Evaluating the survey
+
+With an basic understanding of how React Native works I felt ready to get started on designing the app.
+
+I began by creating a rough sketch of the different views / pages the app will have. My only goal here is to understand which views, components and data I will be interacting with.
+
+![Sketch showcasing possible view and elements of mobile app"](../../assets/blog/Bryan-Hogan-CoCo-Final-Dev-Diary-Sketch.jpg)
+
+In addition to the sketch I created a flow chart on how the user can interact with the app.
+
