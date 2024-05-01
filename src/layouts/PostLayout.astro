@@ -372,17 +372,11 @@ const { headings } = await post.render();
             right: 0;
             padding-right: 0.5rem;
             margin-left: 2rem;
-            background-color: var(--color-main-dark);
-            background-color: color-mix(
-                in srgb,
-                var(--color-main-dark) 90%,
-                transparent
-            );
+            background-color: var(--color-main-dark-transparent-90);
             backdrop-filter: blur(0.15rem);
             border-radius: 1rem 0 0 1rem;
-            border: 1px solid var(--color-main-dark);
+            border: 1px solid transparent;
             border-right: 0;
-            
         }
         .toc-items {
             padding-left: 0.5rem;
