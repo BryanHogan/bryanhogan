@@ -360,6 +360,7 @@ const { headings } = await post.render();
         }
         .toc:hover .toc-items {
             display: block;
+            animation: toc-fade-in 300ms 1;
         }
         .toc {
             position: fixed;
@@ -375,6 +376,7 @@ const { headings } = await post.render();
             );
             backdrop-filter: blur(0.15rem);
             border-radius: 1rem 0 0 1rem;
+            
         }
         .toc-items {
             padding-left: 0.5rem;
@@ -384,6 +386,15 @@ const { headings } = await post.render();
         aside,
         .toc {
             z-index: 1;
+        }
+    }
+    @keyframes toc-fade-in {
+        0% {
+            opacity: 0;
+            transform: translate(20px);
+        }
+        100% {
+            opacity: 1;
         }
     }
 </style>
