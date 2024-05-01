@@ -10,6 +10,10 @@ const { title, metaDescription, headerMode, ogType = "website"} = Astro.props;
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+if (canonicalURL.pathname.endsWith('/')) {
+    canonicalURL.pathname = canonicalURL.pathname.slice(0, -1);
+}
 ---
 
 <!DOCTYPE html>
@@ -25,6 +29,7 @@ import { ViewTransitions } from "astro:transitions";
     <link rel="manifest" href="/logos/fav/site.webmanifest" />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href={canonicalURL}>
 
     <meta name="generator" content={Astro.generator} />
     <meta name="keywords" content="bryan, hogan, blog, portfolio" />
@@ -37,7 +42,7 @@ import { ViewTransitions } from "astro:transitions";
     <meta property="og:title" content={title} />
     <meta property="og:site_name" content="Bryan Hogan" />
     <meta property="og:type" content={ogType} />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:image" content="/images/Bryan-Hogan-Preview.png" />
     <meta property="og:image:type" content="image/png" />
@@ -53,6 +58,9 @@ import { ViewTransitions } from "astro:transitions";
   </head>
 
   <body>
+    <p>Line 1: {Astro.url}</p>
+    <p>Line 2: {Astro.url.pathname}</p>
+    <p>Line 3: {canonicalURL}</p>
     <NavBar mode={headerMode} />
     <main>
       <slot />
