@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
 import { instagram, linkedin } from "../data/socials";
+
+const lastUpdate: Date = new Date("2024-05-01T12:27:11Z"); // ISO Time 8601
 ---
 
 <Layout
@@ -14,7 +16,14 @@ import { instagram, linkedin } from "../data/socials";
         <div class="text-section text-align-center text-shadow">
             <h1>Now</h1>
             <p class="text-align-center" style="margin-inline: auto;">
-                Last updated on 26th April,<br />from my home in Cologne.
+                Last updated <time datetime={lastUpdate.toISOString()}></time>
+                {
+                    new Date(lastUpdate).toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })
+                }<br />from my home in Cologne.
             </p>
         </div>
     </div>
@@ -29,24 +38,45 @@ import { instagram, linkedin } from "../data/socials";
         <ul>
             <li>
                 <strong>Working on my final B.Sc. university project</strong>.
-                Currently <a href="/blog/coco-final-dev-diary">building an app</a> to help you improve your wellbeing and
-                health. This is my final project needed to finish my <a
-                    href="/blog/what-is-coco">Code & Context B.Sc. studies</a
+                Currently <a href="/blog/coco-final-dev-diary"
+                    >building an app</a
+                > to help you improve your wellbeing and health. This is my final
+                project needed to finish my <a href="/blog/what-is-coco"
+                    >Code & Context B.Sc. studies</a
                 >.
             </li>
             <li>
-                <strong>Working as a Software Developer.</strong> Working as
-                a software developer at a smaller company.
+                <strong>Working as a Software Developer.</strong> Working as a software
+                developer at a smaller company.
             </li>
             <li><strong>Blog.</strong> Writing more content for my blog.</li>
             <li>
-                <strong>ToLearnKorean.com.</strong> Making <a href="https://tolearnkorean.com/" target="_blank">ToLearnKorean.com</a> to help other Korean learners. Sharing alongside my own journey of learning Korean. Posting part of my experience and journey on <a href="https://www.threads.net/@bryanhoganme" target="_blank">Threads</a> and <a href="https://mastodon.social/@BryanHogan" target="_blank">Mastodon</a>.
+                <strong>ToLearnKorean.com.</strong> Making <a
+                    href="https://tolearnkorean.com/"
+                    target="_blank">ToLearnKorean.com</a
+                > to help other Korean learners. Sharing alongside my own journey
+                of learning Korean. Posting part of my experience and journey on
+                <a href="https://www.threads.net/@bryanhoganme" target="_blank"
+                    >Threads</a
+                > and <a
+                    href="https://mastodon.social/@BryanHogan"
+                    target="_blank">Mastodon</a
+                >.
             </li>
             <li>
-                <strong>Making a Web Development guide page</strong>. Creating <a href="https://webdev.bryanhogan.com/" target="_blank">WebDev.BryanHogan.com</a> to help out other web developers.
+                <strong>Making a Web Development guide page</strong>. Creating <a
+                    href="https://webdev.bryanhogan.com/"
+                    target="_blank">WebDev.BryanHogan.com</a
+                > to help out other web developers.
             </li>
         </ul>
-        <p>It has only been recently that I came back to Germany. I spent one year abroad studying at different universities in South Korean. Currently visiting lots of doctors as well because of multiple health problems. So while I was forced to stay at home more often I spent to work on my projects mentioned above.</p>
+        <p>
+            It has only been recently that I came back to Germany. I spent one
+            year abroad studying at different universities in South Korean.
+            Currently visiting lots of doctors as well because of multiple
+            health problems. So while I was forced to stay at home more often I
+            spent to work on my projects mentioned above.
+        </p>
         <nav slot="aside-content">
             <Button
                 text="Blog"
