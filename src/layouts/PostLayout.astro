@@ -362,6 +362,10 @@ const { headings } = await post.render();
             display: block;
             animation: toc-fade-in 300ms 1;
         }
+        .toc:hover {
+            border: 1px solid var(--color-main-dark-50);
+            border-right: 0;
+        }
         .toc {
             position: fixed;
             top: calc(var(--navbar-height) + 1rem);
@@ -376,6 +380,8 @@ const { headings } = await post.render();
             );
             backdrop-filter: blur(0.15rem);
             border-radius: 1rem 0 0 1rem;
+            border: 1px solid var(--color-main-dark);
+            border-right: 0;
             
         }
         .toc-items {
