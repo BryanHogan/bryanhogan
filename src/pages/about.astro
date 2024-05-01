@@ -7,6 +7,8 @@ import { getCollection } from "astro:content";
 const allPosts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
+
+const lastUpdate = Date.now();
 ---
 
 <Layout
@@ -54,11 +56,15 @@ const allPosts = (await getCollection("blog")).sort(
         </p>
         <p>
             Like described on my <a href="/now">Now page</a>, I'm currently
-            working on <a href="https://tolearnkorean.com/" target="_blank">ToLearnKorean.com</a> and <a
-                href="https://webdev.bryanhogan.com/"
-                target="_blank">WebDev.BryanHogan.com</a
+            working on <a href="https://tolearnkorean.com/" target="_blank"
+                >ToLearnKorean.com</a
+            > and <a href="https://webdev.bryanhogan.com/" target="_blank"
+                >WebDev.BryanHogan.com</a
             > in addition to working as a Software Developer at DGS (smaller company
-            in Germany) and <a href="/blog/coco-final-dev-diary">writing my bachelor thesis</a> in the space of building an app to support you in journaling and improving your health and wellbeing.
+            in Germany) and <a href="/blog/coco-final-dev-diary"
+                >writing my bachelor thesis</a
+            > in the space of building an app to support you in journaling and improving
+            your health and wellbeing.
         </p>
         <p>
             I've got a more career focussed introduction of myself on my <a
@@ -141,6 +147,13 @@ const allPosts = (await getCollection("blog")).sort(
                 buttonStyle="transparent-bright small grow color-accent"
             />
         </nav>
+        <p>
+            <small class="subtle-text">
+                This website was last updated on <time datetime={new Date(lastUpdate).toISOString()}>
+                    {new Date(lastUpdate).toLocaleDateString("en-GB")}.
+                </time>
+            </small>
+        </p>
     </TextSectionWithSide>
 </Layout>
 <style></style>
