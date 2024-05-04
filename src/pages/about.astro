@@ -16,6 +16,16 @@ const lastUpdate = Date.now();
     metaDescription="About BryanHogan.com, Bryan Hogan and Bryan's Blog."
     headerMode="All"
 >
+    <meta
+        property="article:published_time"
+        content={new Date(lastUpdate).toISOString()}
+        slot="head"
+    />
+    <meta
+        property="article:modified_time"
+        content={new Date(lastUpdate).toISOString()}
+        slot="head"
+    />
     <div class="gradient-background small-intro-section">
         <div class="text-section text-align-center text-shadow">
             <h1>About</h1>
@@ -149,7 +159,9 @@ const lastUpdate = Date.now();
         </nav>
         <p>
             <small class="subtle-text">
-                This website was last updated on <time datetime={new Date(lastUpdate).toISOString()}>
+                This website was last updated on <time
+                    datetime={new Date(lastUpdate).toISOString()}
+                >
                     {new Date(lastUpdate).toLocaleDateString("en-GB")}.
                 </time>
             </small>
