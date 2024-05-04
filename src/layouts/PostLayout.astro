@@ -39,16 +39,11 @@ const { headings } = await post.render();
         content={post.data.lastUpdate.toISOString()}
         slot="head"
     />
-    <meta property="article:tag" content={post.data.tags[0]} slot="head" />
-    {
-        post.data.tags[1] && (
-            <meta
-                property="article:tag"
-                content={post.data.tags[1]}
-                slot="head"
-            />
-        )
-    }
+    <meta
+        property="article:tag"
+        content={post.data.tags.map((tag) => tag).join(" ")}
+        slot="head"
+    />
     <div class="gradient-background">
         <img
             src={post.data.coverImage.url}
