@@ -175,6 +175,7 @@ const { headings } = await post.render();
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: wrap;
+        overflow-x: hidden;
     }
     h1 {
         margin-inline: 2rem;
@@ -219,8 +220,8 @@ const { headings } = await post.render();
         }
         & :global(table) {
             border-collapse: collapse;
-            width: 100%;
-            max-width: fit-content;
+            width: fit-content;
+            max-width: 100%;
             border: 2px solid var(--color-main-bright);
             display: block;
             margin-inline: auto;
