@@ -8,10 +8,10 @@ coverImage:
     width: 83
     height: 86
 pubDate: 2023-11-26
-lastUpdate: 2024-04-23T16:50:45Z
+lastUpdate: 2024-05-16T20:10:05Z
 tags: ["korea", "travel", "university"]
 ---
-What is it like to go to South Korea and visit Hanyang University erica as a student from Germany? In the following I will talk about my experience in studying one semester at Hanyang University erica campus for summer 2023.
+What is it like to go to South Korea and visit Hanyang University erica as a student from Germany? I will talk about my experience in studying one semester at Hanyang University erica campus for summer 2023.
 
 As part of my studies on Code & Context at TH Köln I was able to do an additional optional semester in which I chose to go abroad. I will talk about my time in Korea from February 2nd 2023 to x which was the last day for me on the erica campus.
 
@@ -22,7 +22,7 @@ The process itself also wasn't really straightforward but in the end everything 
 ## Before Korea
 
 I didn't know much about Korea before going there, except the few things I had learned through my involvement in e-sports. My decision to go there has been somewhat random. I wanted to go somewhere completely different and I was determined that that should be South Korea.
-For a lot of people I have met here in South Korea that was also the case, their decision to go there has been somewhat obituary. Just like me, they didn't have a particular interest in K-pop or K-dramas.
+For a lot of people I have met here in South Korea that was also the case, their decision to go there has been somewhat arbitrary. Just like me, they didn't have a particular interest in K-pop or K-dramas.
 
 I also didn't prepare that much. I looked at a few guides and read experience reports, so I learned how to get my first T-Money card for public transport at the convenience store, what I need to buy a SIM card from Chingu Mobile, or to not tip at restaurants.
 
