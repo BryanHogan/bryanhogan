@@ -8,7 +8,7 @@ coverImage:
     width: 101
     height: 101
 pubDate: 2024-04-24T14:09:52Z
-lastUpdate: 2024-04-28T18:12:00Z
+lastUpdate: 2024-05-26T20:46:15Z
 tags: ["creating", "development", "coco", "university"]
 ---
 
