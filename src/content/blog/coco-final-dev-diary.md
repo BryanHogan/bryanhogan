@@ -100,16 +100,86 @@ Focus of this week:
 
 With a basic understanding of how React Native works I felt ready to get started on designing the app.
 
+### Sketch
+
 I began by creating a rough sketch of the different views / pages the app will have. My only goal here is to understand which views, components and data I will be interacting with.
 
 ![Sketch showcasing possible view and elements of mobile app"](../../assets/blog/Bryan-Hogan-CoCo-Final-Dev-Diary-Sketch.jpg)
+
+### Flowchart
 
 In addition to the sketch I created a rough flowchart on how the user can interact with the app. This will help me design the overall layout. Elements and pages that are navigated to often should be placed somewhere where they are easily accessible.
 
 ![Sketch showcasing possible view and elements of mobile app"](../../assets/blog/Bryan-Hogan-CoCo-Final-Dev-Diary-Flowchart.jpg)
 
-Both are very far away from how the app will ultimately end up looking, but that is also not their function. They are only there to help me understand how the different elements will be interacting with each other and how I can design a smooth navigation through the app.  
+Both are very far away from how the app will ultimately end up looking, but that is also not their function. They are only there to help me understand how the different elements will be interacting with each other and how I can design a smooth navigation throughout the app.  
 With the insights from both the sketch and rough flowchart I can get started on a wireframe.
 
-In a wireframe I go into more details of the layout, like what elements are on the home page, which navigation elements lead to where, what are the rough sizes of elements. At this step I still do not care at all about the design details. Don't waste any time on thinking of the name for the app, colors, animations, typography, domain name, you get it, all of this does not matter for now.  
-With a presentable wireframe I get started on testing. I give the wireframe to people and see how they interact with it. What works well, what do they struggle with?
+## Week 4 - 7
+
+### Wireframe
+
+With the sketch and flowchart at a state where I am happy with them I made a first version of the wireframe.
+
+![Wireframe showcasing possible view and elements of mobile app](../../assets/blog/Bryan-Hogan-CoCo-Final-Dev-Diary-Wireframe-All.png)
+
+A wireframe should be more detailed than a sketch and flowchart.
+
+In a wireframe I go into more details of the layout, like what elements are on the home page, which navigation elements lead to where, what are the rough sizes of elements. At this step I still do not care at all about the design details. I don't waste any time on thinking of the name for the app, colors, animations, typography, domain name, you get it, all of this does not matter for now.
+
+In a wireframe the size of elements matters. Important elements should be large, less important elements should be smaller.  
+I add names where they are relevant, such a titling the different views and what element represents what. Details are abstracted away.
+
+I used Figma to create this wireframe. I already had experience using Figma for creating various graphics, it also offers all the tooling needed to create wireframe. Figma was the perfect tool for this. In Figma it is possible to create such wireframes or mockups by dragging links from elements to other frames. 
+With the Figma app downloaded on my phone I could open the home page image on my phone and let others experience what navigating through the app really feels like.
+
+![Sketch showcasing the transition links between pages](../../assets/blog/Bryan-Hogan-CoCo-Final-Dev-Diary-Wireframe-Links.png)
+
+With a presentable wireframe I got started on testing. I give the wireframe to people and see how they interact with it. What works well, what do they struggle with?
+
+I found it more useful to test with people that understand what I wireframe is and what use-case it has.  
+With this I got a lot of insight on how people feel about the overall navigation and what they think of the name and icons representing the different parts of the navigation.
+
+<video width="100%" height="400" controls muted>
+  <source src="/videos/Bryan-Hogan-CoCo-Final-Dev-Diary-Wireframe.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+There were a lot of discussion about the navigation bar at the bottom. In the end I decided to keep it but also include the icons in all other elements that link to the same pages, this makes it more clear that clicking there leads to the same destination.
+
+Really valuable was also getting feedback on how it feels to enter information. For successfully entering a days information the app did nothing, there was no indication that information was added successfully nor some sort of other positive reaffirmation for the users, like a celebratory animation. This is important, successfully entering information will have to feel rewarding.
+
+In my first version I added a large title greeting the user. In the moment it felt natural to add a large text greeting on the first page of the app, but this would be a great waste of space and make the overall UX worse. But with some creative ideas by my test participants I now got ideas on what to use this space for.  
+My current idea is to add a image / vector graphic of a plant, the state of the plants improves when the app is used more, such as overall usage or daily streaks. But I will have to keep in mind that users should have the option to disable rewarding streaks of daily usage, in case they feel forced or stressed to use the app daily, which could negatively impact their experience.
+
+### Dropping React Native
+During these weeks I have decided to stop using React Native to build my app. React Native is a capable tool, but not the right one for me. I kept running into problems, styling was much harder than it should be, the development process felt far too slow. And for me it also didn't feel that enjoyable to use.  
+Getting an app from this which can be used on a desktop pc, such as a web view or windows/linux/mac version, also seemed much harder to do. According to my survey a desktop version didn't seem highly important, but relevant enough that it should be there.
+
+React Native does not feel intuitive for someone who already knows React or web technologies such as HTML, CSS and JavaScript/TypeScript. The slight advantages it can give in performance or native functionality also did not seem to matter yet in my project.
+
+### CapacitorJS
+
+So instead of continuing with React Native I decided to go with CapacitorJS. Of course abandoning code did not feel good, but this seemed to be the better long-term decision for me now.
+
+CapacitorJS allows you to make any web project into a native feeling app, a progressive web app. By using this any project consisting of HTML, CSS and JavaScript/TypeScript can be brought into the Google Play Store and Apple's App Store.  
+So now I am creating a website which is made into a app, something I feel much more comfortable with and make faster progress on while also supporting more platforms.
+
+Capacitor also allows the use a many native features.
+
+### Ionic React
+
+For creating a website it is common to use a framework. I decided to go with React, since that also seems to work well with Capacitor. But instead of using React standalone I also added Ionic.
+
+Ionic and Capacitor are often used together. Ionic is mostly a styling library which makes your app feel more native and seem less like a website. It offers various components that can change their styling depending on which platform they are used, iOS or Android.  
+I was unsure whether I should use Ionic or not, since I also like writing my own styles without being limited to pre-defined styles. I decided to go with Ionic to see how well it works, it also includes help with routing which might be harder to get right by myself. By using this styling library I can also get faster to building the logic, at least once I understand how to use it. Ionic does change a lot on how my code looks since I now always use various Ionic components instead the common HTML elements.
+
+[Ionic React](https://ionicframework.com/docs/react) is its own framework that combines Ionic with React.
+
+### Electron
+
+As I am now building "just a website" I can throw in Electron into the tech-stack and get builds for Windows, Mac and Linux done in minutes. There is a [custom Electron integration](https://capacitor-community.github.io/electron/) for Capacitor projects made by the community which made this add-on very easy to include.
+
+### Survey Results
+
+Prior to finalizing my decision to change my tech-stack I also went through the survey results.
