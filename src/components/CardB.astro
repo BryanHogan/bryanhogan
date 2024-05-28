@@ -122,6 +122,11 @@ const {
     flex-direction: column;
     border-radius: 1em 1em 0 0;
     background-color: var(--backgroundColor);
+    background-color: color-mix(
+                in srgb,
+                var(--backgroundColor) 90%,
+                transparent);
+    
     & .post-cover-symbol {
       margin-inline: auto;
       height: 70px;
