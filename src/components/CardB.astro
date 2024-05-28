@@ -12,6 +12,7 @@ interface Props {
   postURL: string;
   pubDate: Date;
   lastUpdate: Date;
+  backgroundColor: string
 }
 const {
   coverURL,
@@ -25,12 +26,13 @@ const {
   description,
   pubDate,
   lastUpdate,
+  backgroundColor
 } = Astro.props;
 ---
 
 <div class="card-container">
   <a href={postURL}>
-    <div class="gradient-background gradient-area">
+    <div class="gradient-area">
       <img
         class="post-cover-symbol"
         src={coverURL}
@@ -84,7 +86,7 @@ const {
   </a>
 </div>
 
-<style>
+<style  define:vars={{ backgroundColor }}>
   .post-cover-symbol {
     max-height: 75px;
     width: 75px;
@@ -119,6 +121,7 @@ const {
     display: flex;
     flex-direction: column;
     border-radius: 1em 1em 0 0;
+    background-color: var(--backgroundColor);
     & .post-cover-symbol {
       margin-inline: auto;
       height: 70px;

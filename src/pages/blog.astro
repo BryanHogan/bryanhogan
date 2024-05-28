@@ -10,6 +10,7 @@ import { getCollection } from "astro:content";
 import { getReadingTime } from "../utils/reading-time.ts"
 
 const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const backgroundColors = ["var(--color-side-accent-a)", "var(--color-side-accent-b)", "var(--color-side-accent-c)" , "var(--color-side-accent-d)"];
 ---
 
 <Layout
@@ -36,7 +37,7 @@ const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.get
   </div>
   <ul class="posts-container">
     {
-      allPosts.map((post) => (
+      allPosts.map((post, index) => (
         <li class="post">
           <CardB
             title={post.data.title}
@@ -52,6 +53,7 @@ const allPosts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.get
             pubDate={post.data.pubDate}
             lastUpdate={post.data.lastUpdate}
             postURL={`/blog/${post.slug}/`}
+            backgroundColor={backgroundColors[index % backgroundColors.length]}
           />
         </li>  
       ))
