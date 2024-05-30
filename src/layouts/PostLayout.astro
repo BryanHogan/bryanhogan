@@ -244,6 +244,12 @@ const { headings } = await post.render();
                 );
             }
         }
+        & :global(code) {
+            padding: 2px 0.125em;
+            background-color: var(--color-main-dark-brighter);
+            border-radius: 4px;
+            color: var(--color-side-accent);
+        }
     }
     @media only screen and (max-width: 699px) {
     }
