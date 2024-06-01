@@ -54,7 +54,7 @@ const {
             width="17"
             height="17"
           /><p class="tag-text">{tag}</p>
-        </div>
+        </div class="small-text">
         <div
           title={"Published: " +
             new Date(pubDate).toLocaleDateString("en-GB") +
@@ -144,6 +144,10 @@ const {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px 15px;
+    color: var(--color-main-dark-50);
+    & p {
+      font-size: 1rem;
+    }
     & img {
       width: 30px;
       height: auto;
