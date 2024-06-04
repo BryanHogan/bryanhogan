@@ -5,7 +5,7 @@ import CardLU from "../components/CardLU.astro";
 import { LifeUpdates } from "../data/life-updates.ts";
 import { Image } from "astro:assets";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
-import CircleImage from "../assets/images/circle-decoration.png";
+import DecoImage from "../assets/images/deco-index.png";
 import CardGrid from "../components/CardGrid.astro";
 import CardC from "../components/CardC.astro";
 import CardCSection from "../components/CardCSection.astro";
@@ -23,6 +23,13 @@ const allPosts = (await getCollection("blog")).sort(
 >
   <section class="intro">
     <div class="intro-section">
+      <Image
+        class="index-decoration-image"
+        src={DecoImage}
+        alt="Image of Bryan Hogan in a classic polaroid style"
+        width={1024}
+        height={1024}
+      />
       <div class="header-picture-section">
         <h1>Hi, I'm<br />Bryan Hogan.</h1>
         <Image
@@ -168,6 +175,18 @@ const allPosts = (await getCollection("blog")).sort(
 </Layout>
 
 <style>
+  .index-decoration-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 90%;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: cover;
+  }
   .sub-menu-navigation-container {
     display: flex;
     flex-direction: row;
