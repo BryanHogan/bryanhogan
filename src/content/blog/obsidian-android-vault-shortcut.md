@@ -38,4 +38,4 @@ I really like this solution, since it even opens your preferred Vault even if a 
 
 Here is a video that shows an example of how to create a shortcut this way:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NRtVAFfqoyg?si=ic2dxbat_Hq4GhHi" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/NRtVAFfqoyg?si=ic2dxbat_Hq4GhHi" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
