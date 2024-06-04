@@ -23,13 +23,6 @@ const allPosts = (await getCollection("blog")).sort(
 >
   <section class="intro">
     <div class="intro-section">
-      <Image
-        class="decoration-circle-image"
-        src={CircleImage}
-        alt="Image of Bryan Hogan in a classic polaroid style"
-        width={1024}
-        height={1024}
-      />
       <div class="header-picture-section">
         <h1>Hi, I'm<br />Bryan Hogan.</h1>
         <Image
@@ -175,18 +168,6 @@ const allPosts = (await getCollection("blog")).sort(
 </Layout>
 
 <style>
-  .decoration-circle-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: 90%;
-    opacity: 0.05;
-    z-index: -1;
-    pointer-events: none;
-    object-fit: cover;
-  }
   .sub-menu-navigation-container {
     display: flex;
     flex-direction: row;
