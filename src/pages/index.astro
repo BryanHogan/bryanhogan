@@ -5,6 +5,7 @@ import CardLU from "../components/CardLU.astro";
 import { LifeUpdates } from "../data/life-updates.ts";
 import { Image } from "astro:assets";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
+import CircleImage from "../assets/images/circle-decoration.png";
 import CardGrid from "../components/CardGrid.astro";
 import CardC from "../components/CardC.astro";
 import CardCSection from "../components/CardCSection.astro";
@@ -22,6 +23,13 @@ const allPosts = (await getCollection("blog")).sort(
 >
   <section class="intro">
     <div class="intro-section">
+      <Image
+        class="decoration-circle-image"
+        src={CircleImage}
+        alt="Image of Bryan Hogan in a classic polaroid style"
+        width={1024}
+        height={1024}
+      />
       <div class="header-picture-section">
         <h1>Hi, I'm<br />Bryan Hogan.</h1>
         <Image
@@ -139,7 +147,8 @@ const allPosts = (await getCollection("blog")).sort(
         backgroundColor="var(--color-side-accent-b)"
       >
         <p>
-          Instagram is a platform for sharing pictures. Oh, you already knew that and the info is out of date? How about <a
+          Instagram is a platform for sharing pictures. Oh, you already knew
+          that and the info is out of date? How about <a
             href={mastodon.href}
             target="_blank">my Mastodon</a
           > or <a href={threads.href}>Threads</a> then, the best place to share Tweets
@@ -166,6 +175,18 @@ const allPosts = (await getCollection("blog")).sort(
 </Layout>
 
 <style>
+  .decoration-circle-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 90%;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: cover;
+  }
   .sub-menu-navigation-container {
     display: flex;
     flex-direction: row;
@@ -217,7 +238,6 @@ const allPosts = (await getCollection("blog")).sort(
     margin: 0px;
   }
   .intro-section {
-    min-height: 40svh;
     max-width: 650px;
     margin-inline: auto;
     padding-inline: 1em;
@@ -228,6 +248,7 @@ const allPosts = (await getCollection("blog")).sort(
       border-radius: 2rem;
     }
   }
+
   .header-picture-section {
     display: flex;
     flex-direction: column-reverse;
