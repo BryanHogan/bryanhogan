@@ -175,7 +175,6 @@ const { headings } = await post.render();
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: wrap;
-        overflow-x: hidden;
     }
     h1 {
         margin-inline: 2rem;
@@ -206,7 +205,7 @@ const { headings } = await post.render();
             word-break: break-word;
         }
         & :global(ul) {
-            list-style: circle;
+            list-style: disc;
             word-break: break-word;
         }
         & :global(blockquote) {
