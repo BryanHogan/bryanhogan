@@ -12,6 +12,28 @@ export interface CardLUButton {
 
 export const LifeUpdates: LifeUpdate[] = [
   {
+    title: "New Post: A Second Brain - Smart Notes With An Obsidian Zettelkasten",
+    date: new Date("2024-06-05"),
+    description: "How to have one growing system to take life-long notes, a second brain. The Zettelkasten system.",
+    cardButtons: [
+      {
+        buttonText: "Read Post",
+        buttonLink: "/blog/obsidian-zettelkasten"
+      }
+    ]
+  },
+  {
+    title: "Bryan's Briefing May Edition published",
+    date: new Date("2024-06-03"),
+    description: "Published the latest version of my monthly newsletter. 😃📬",
+    cardButtons: [
+      {
+        buttonText: "Get the next edition",
+        buttonLink: "/follow"
+      }
+    ]
+  },
+  {
     title: "New Post: Code & Context Final Project Dev Diary - Live Post",
     date: new Date("2024-04-24"),
     description: "About my final project at Code & Context.",
