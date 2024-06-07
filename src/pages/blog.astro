@@ -50,7 +50,7 @@ const backgroundColors = ["var(--color-side-accent-a)", "var(--color-side-accent
             length={getReadingTime(post.body)}
             pubDate={post.data.pubDate}
             lastUpdate={post.data.lastUpdate}
-            postURL={`/blog/${post.slug}/`}
+            postURL={`/blog/${post.slug}`}
             backgroundColor={backgroundColors[index % backgroundColors.length]}
           />
         </li>  
