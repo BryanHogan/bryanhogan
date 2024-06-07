@@ -5,8 +5,6 @@ description: Dev Diary on my project on developing an app to help people keep tr
 coverImage:
     url: /post-covers/CoCo-Final-Diary-Cover.svg
     alt: Simple icon of a mechanical cog
-    width: 101
-    height: 101
 pubDate: 2024-04-24T14:09:52Z
 lastUpdate: 2024-05-26T20:46:15Z
 tags: ["creating", "development", "coco", "university"]

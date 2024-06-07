@@ -8,9 +8,7 @@ const postsCollection = defineCollection({
         description: z.string().max(162, "Maximum of 162 characters in description required.").min(50, "Minimum of 50 characters in description required."),
         coverImage: z.object({
             url: z.string(),
-            alt: z.string(),
-            width: z.number(),
-            height: z.number()
+            alt: z.string()
         }),
         pubDate: z.date(),
         lastUpdate: z.date(),

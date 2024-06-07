@@ -5,8 +5,6 @@ description: Why age is crucial in Korea, affecting language, respect, and socia
 coverImage:
     url: /post-covers/Korean-Age-Cover.svg
     alt: Simple icon of a calender with non-readable text
-    width: 70
-    height: 77
 pubDate: 2024-04-23
 lastUpdate: 2024-04-23T14:09:52Z
 tags: ["korea"]

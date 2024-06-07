@@ -5,8 +5,6 @@ description: What is it like to go abroad to South Korea to do an exchange semes
 coverImage:
     url: /post-covers/Hanyang-Logo-Cover.svg
     alt: Hanyang University logo simple
-    width: 83
-    height: 86
 pubDate: 2023-11-26
 lastUpdate: 2024-05-16T20:10:05Z
 tags: ["korea", "travel", "university"]

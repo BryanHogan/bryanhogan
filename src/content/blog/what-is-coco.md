@@ -5,8 +5,6 @@ description: Code & Context shows how studying at university should be done. A B
 coverImage:
     url: /post-covers/What-Is-Code-And-Context-Cover.svg
     alt: Code and Context B.Sc. Logo
-    width: 100
-    height: 35
 pubDate: 2023-11-07
 lastUpdate: 2024-04-23T21:45:13Z
 tags: ["learning", "productivity", "design", "development", "university"]

@@ -5,8 +5,6 @@ description: How to identify fitting work to you - avoid burnout, have meaning a
 coverImage:
     url: /post-covers/Sustainable-Work-Cover.svg
     alt: Magnifying glass hovering over business suitcase
-    width: 82
-    height: 82
 pubDate: 2023-12-17
 lastUpdate: 2023-12-17
 tags: ["health", "productivity"]

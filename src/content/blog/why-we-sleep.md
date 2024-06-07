@@ -5,8 +5,6 @@ description: We spend 1/3rd of our life sleeping. But why do we sleep? We don't 
 coverImage:
     url: /post-covers/Why-We-Sleep-Book-Post-Cover.svg
     alt: Minimalistic depiction of the book Why We Sleep with moon symbol
-    width: 84
-    height: 103
 pubDate: 2022-07-15
 lastUpdate: 2023-10-05
 tags: ["health", "learning", "book","productivity"]

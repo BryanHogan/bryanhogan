@@ -5,8 +5,6 @@ description: How to create home screen shortcuts to specific Obsidian Vaults on 
 coverImage:
     url: /post-covers/Obsidian-Android-Cover.svg
     alt: Simple icon mixing Obsidian and Android logo
-    width: 56
-    height: 72
 pubDate: 2024-05-30T22:00:10Z
 lastUpdate: 2024-05-30T22:00:10Z
 tags: ["obsidian", "productivity"]

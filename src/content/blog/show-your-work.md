@@ -5,8 +5,6 @@ description: Why and how we should share the things we love to make.
 coverImage:
     url: /post-covers/Show-Your-Work-Cover.svg
     alt: Simple icon of a book with a share symbol on the center of the cover
-    width: 91
-    height: 111
 pubDate: 2024-04-14
 lastUpdate: 2024-04-24T14:18:15Z
 tags: ["creating", "productivity", "book"]

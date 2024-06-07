@@ -5,8 +5,6 @@ description: Create a second brain. The life-long note taking system Zettelkaste
 coverImage:
     url: /post-covers/Obsidian-Zettelkasten-Cover.svg
     alt: Simple icon of a Obsidian in a rounded square
-    width: 58
-    height: 82
 pubDate: 2024-06-05T21:21:12Z
 lastUpdate: 2024-06-05T21:21:12Z
 tags: ["obsidian", "productivity"]
