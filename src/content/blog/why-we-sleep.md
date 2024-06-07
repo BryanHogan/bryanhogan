@@ -8,7 +8,6 @@ coverImage:
 pubDate: 2022-07-15
 lastUpdate: 2023-10-05
 tags: ["health", "learning", "book","productivity"]
-length: Long
 ---
 We spend 1/3rd of our life sleeping. But why do we sleep? We don't live in a sleep loss epidemic?
 
