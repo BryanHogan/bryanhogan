@@ -19,14 +19,11 @@ Integrating Astro posts to be edited in Obsidian is quite easy. For this to work
 
 I love writing in Obsidian. And just like Astro content collections, Obsidian is also based on .md files. So how can we utilise this to write markdown files in Obsidian that get added into our Astro project?
 
-There are two different solutions:
+There are two solutions:
 1. Create an Obsidian vault within your Astro project. Then add the Obsidian project file to gitignore.
 2. Create a folder in our Obsidian vault that has its content linked to the content in our Astro project.
 
-Option 1 has a few problems. It is harder to include images within the Obsidian editor. We can't rename our vault, we would have to use the name of the file that contains our posts in Astro. And each project would use its own Vault.   
-So we will go with solution 2.
-
-Solution 2 also allows us to include the content of multiple Astro projects in one Vault.
+Both options are valid solutions. We will first focus on solution 2 since that might seem like the easier and cleaner solution.
 
 (Mac uses a different command, check out [this video](https://youtu.be/dz3GOp4hN50) by Lazar Nikolov who explains how to do it on Mac.)
 
@@ -58,10 +55,36 @@ I also changed how the frontmatter is displayed. You can do this under `Settings
 
 That's it! 🎉 Enjoy writing your posts in Obsidian now.
 
+## The Problems
+This method isn't perfect and might cause a few problems.  
+It mainly causes problem with syncing your files. Google Drive Desktop can't sync any files that come from a symbolic link. Obsidian sync also does not support this. Obsidian even includes a ["Use at your own risk" warning](https://help.obsidian.md/Files+and+folders/Symbolic+links+and+junctions) for symbolic links and junctions.
+
+If we only use this solution to write our posts and then commit these to git we don't have any problems with losing data though. Since everything is still saved securely in our project and only how we edit it has changed.
+
+## Further Adjustments - My Solution
+I like having a separate vault for each Astro project. By doing this I can use different plug-ins and templates for each project, something I personally prefer. With my approach I can also have the same Obsidian environment on different devices.
+
+My solution was to combine both the previously mentioned solution 1 and 2.
+
+Create a folder in your Astro project like `.obsidian-vault`. Create another folder within that, the folder name of this will be the name of our vault. Here we create a new Obsidian vault. You will now have a folder structure that should look like this: `AstroProject > .obsidian-vault > ObsidianVaultName > .obsidian`.
+
+Now we can adjust our vault, add the templates we need, change the settings and style however we like. If wanted we can push our obsidian setup to git, after that I would add the `.obsidian-vault` folder to our .gitignore, so that VS Code doesn't tell us to commit and push any changes within our Obsidian editor to git, otherwise any new windows we open in Obsidian would be registered as a change in our codebase.
+
+To add our `.obsidian-vault` to `.gitignore` you just need to add this line: `.obsidian-vault`
+
+Then it's time to add the folders that actually have the content we need.
+
+Create a symbolic link within that folder, mine looked like this: `mklink /D D:\Bryan\Documents\Code\astrobryan\.obsidian-vault\ToLearnKorean\Content D:\Bryan\Documents\Code\astrobryan\src\content`.  
+Then we create another folder for the `assets` folder: `mklink /D D:\Bryan\Documents\Code\astrobryan\.obsidian-vault\ToLearnKorean\Assets D:\Bryan\Documents\Code\astrobryan\src\assets`.
+
+With this solution we won't cause any problems in a shared environment, and we also keep our ability to write our Astro content in Obsidian how we want. All while still being able to share the same Obsidian environment / layout across different devices.
+
+Write me your questions on any of my socials linked at the bottom or top of this page. Any feedback or other responses are also welcome!
+
 <details>
   <summary>References</summary>
   
-- https://www.howtogeek.com/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/
-- https://www.reddit.com/r/ObsidianMD/comments/1943yza/a_lazy_mans_obsidian_astro_workflow_integration/
+- Symlinks on Windows explained (also explains differences between `/D`, `/J` and `/H`): https://www.howtogeek.com/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/
+- The post that introduced me to symbolic links: https://www.reddit.com/r/ObsidianMD/comments/1943yza/a_lazy_mans_obsidian_astro_workflow_integration/
   
 </details>
