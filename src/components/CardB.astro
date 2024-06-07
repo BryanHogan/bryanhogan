@@ -5,8 +5,6 @@ interface Props {
   ahref: string;
   coverURL: string;
   coverALT: string;
-  coverWidth: any;
-  coverHeight: any;
   tag: string;
   length: string;
   postURL: string;
@@ -17,8 +15,6 @@ interface Props {
 const {
   coverURL,
   coverALT,
-  coverWidth,
-  coverHeight,
   title,
   tag,
   length,
@@ -37,8 +33,8 @@ const {
         class="post-cover-symbol"
         src={coverURL}
         alt={coverALT}
-        width={coverWidth}
-        height={coverHeight}
+        width=75
+        height=75
         transition:name={coverURL}
       />
       <h2>{title}</h2>
@@ -126,10 +122,8 @@ const {
                 in srgb,
                 var(--backgroundColor) 90%,
                 transparent);
-    
     & .post-cover-symbol {
       margin-inline: auto;
-      height: 70px;
     }
   }
   .card-second-content-container {
