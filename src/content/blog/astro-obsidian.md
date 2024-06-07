@@ -1,10 +1,10 @@
 ---
-title: How To Integrate Astro and Obsidian Workflow
+title: Integrate Obsidian Into Astro Website Workflow
 author: Bryan@BryanHogan.com (Bryan Hogan)
 description: The quick way to edit your Astro project's blog posts within one central Obsidian Vault.
 coverImage:
   url: /post-covers/Obsidian-Astro-Cover.svg
-  alt: Simple icon of a something.
+  alt: Mix between Astro and Obsidian logo.
 pubDate: 2024-06-07T10:51:52Z
 lastUpdate: 2024-06-07T10:51:52Z
 tags:
@@ -13,14 +13,14 @@ tags:
 ---
 
 How to use Obsidian for your Astro website's content writing workflow.  
-Integrating Astro posts to be edited in Obsidian is quite easy. For this to work we just need to link files with symbolic ("mklink"). This post is focussed on Windows, but this is also possible on Mac by slightly adjusting the command.
+Integrating Astro posts to be edited in Obsidian is quite easy. For this to work we just need to link files with symbolic links(`mklink`). This post is focussed on Windows, but this is also possible on Mac by slightly adjusting the command.
 
 ## Integrating Obsidian Into Astro
 
 I love writing in Obsidian. And just like Astro content collections, Obsidian is also based on .md files. So how can we utilise this to write markdown files in Obsidian that get added into our Astro project?
 
 There are two different solutions:
-1. Create a Obsidian vault within your Astro project. Then add the Obsidian project file to gitignore.
+1. Create an Obsidian vault within your Astro project. Then add the Obsidian project file to gitignore.
 2. Create a folder in our Obsidian vault that has its content linked to the content in our Astro project.
 
 Option 1 has a few problems. It is harder to include images within the Obsidian editor. We can't rename our vault, we would have to use the name of the file that contains our posts in Astro. And each project would use its own Vault.   
@@ -31,7 +31,7 @@ Solution 2 also allows us to include the content of multiple Astro projects in o
 (Mac uses a different command, check out [this video](https://youtu.be/dz3GOp4hN50) by Lazar Nikolov who explains how to do it on Mac.)
 
 ## Linking folders with symbolic links on Windows (10 / 11)
-To start open the cmd as a administrator. On the bottom left search on Windows, enter "cmd", right click and select "Run as administrator".
+To start, open the cmd as an administrator. On the bottom left search on Windows, enter "cmd", right click and select "Run as administrator".
 
 Here we will use `mklink /D LinkToNewFolder LinkToOriginalFolder` to create a symbolic link.
 
@@ -54,7 +54,7 @@ We use the same command this time, but instead we use the assets folder as the o
 
 Now we can see all our images and edit our Astro posts, all within Obsidian. We can define templates to pre-define content we would use on every new post, such as the frontmatter, content structure, image links, html snippets, or anything really.
 
-I also changed how the frontmatter is displayed. You can do this under `Settings -> Editor -> Properties in document -> Source`, this way how the frontmatter looks is more clear.
+I also changed how the frontmatter is displayed. You can do this under `Settings -> Editor -> Properties in document -> Source`, this way the frontmatter looks more clear.
 
 That's it! 🎉 Enjoy writing your posts in Obsidian now.
 
