@@ -1,5 +1,5 @@
 ---
-title: Integrate Obsidian Into Astro Website Workflow
+title: How To Use Obsidian To Write Astro Markdown Content
 author: Bryan@BryanHogan.com (Bryan Hogan)
 description: The quick way to edit your Astro project's blog posts within one central Obsidian Vault.
 coverImage:
