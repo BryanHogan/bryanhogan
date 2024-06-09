@@ -55,8 +55,7 @@ vladcampos has made a [Youtube video](https://youtu.be/XOYwSCtJH5U) showcasing t
 
 A few challenges I had when I first used Syncthing:
 - Having to manually start the synchronization on desktop devices -> [SyncTrazor](https://github.com/canton7/SyncTrayzor) for Windows solved this for me. This program allows running Syncthing in the little tray utility in the bottom corner. SyncTrazor is an enhanced version of Syncthing.
-- Constant "syncing" notification on Android -> Disable Syncthing notifications
--  altogether.
+- Constant "syncing" notification on Android -> Disable Syncthing notifications altogether.
 - There are some files you don't want to sync, like the current state of your workspace. [This page](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Auxiliary+Tools/Syncthing) includes an example of how you can do that.
 
 I recommend enabling File Versioning in Syncthing. This way when files accidentally get deleted you can still recover them.  
