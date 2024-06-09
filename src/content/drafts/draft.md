@@ -1,7 +1,7 @@
 ---
-title: Title
+title: Title Title Title
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: Description
+description: Description Description Description Description Description Description Description 
 coverImage:
   url: /post-covers/Obsidian-Astro-Cover.svg
   alt: Alt!!
