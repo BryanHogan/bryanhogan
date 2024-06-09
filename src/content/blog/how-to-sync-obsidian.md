@@ -1,15 +1,15 @@
 ---
 title: How To Sync Obsidian
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: This is a description with content. cription with content.
+description: How to synchronize your Obsidian Vaults. Obsdian Sync, Syncthing, Google Drive or Github.
 coverImage:
-  url: /post-covers/Obsidian-Astro-Cover.svg
+  url: /post-covers/Obsidian-Sync-Cover.svg
   alt: Alt!!
-pubDate: 2024-06-07T10:51:52Z
-lastUpdate: 2024-06-07T10:51:52Z
+pubDate: 2024-06-09T20:54:39Z
+lastUpdate: 2024-06-09T20:54:39Z
 tags:
-  - Tag A
-  - Tag B
+  - Obsidian
+  - Productivity
 ---
 
 There are a few ways to sync your Obsidian vaults between multiple devices:
@@ -20,15 +20,17 @@ There are a few ways to sync your Obsidian vaults between multiple devices:
 
 Other possible options: OneDrive, iCloud and Dropbox.
 
-Different Obsidian synchronisation options in comparison.
+Which synchronization tool is best for your use case?
 
 I have tested the Windows and Android environments myself. I will include references to options for Linux and the apple ecosystem.
 I have used all of these options to sync between my Windows 10 desktop, Windows 10 laptop and Android phone.
 
 Obsidian is an amazing tool, but the price of its Obsidian Sync feels exorbitant to many. There are free options such as Syncthing or Github. Or you might already be using a sync tool for your images or documents like Google Drive, might as well include your Vaults in there then.
 
+I will go over how each tool works, what's it strength and weaknesses are and how to set them up.
+
 ## Obsidian synchronization tools compared
-A comparison overview of different tools to synchronize your Obsidian Vaults.
+A comparison overview of different tools to synchronize your Obsidian Vaults:
 
 | Name | Costs | How it works |
 | --- | --- | --- |
@@ -52,8 +54,9 @@ Create a connection between your devices. Then choose where the other devices sh
 vladcampos has made a [Youtube video](https://youtu.be/XOYwSCtJH5U) showcasing the setup.
 
 A few challenges I had when I first used Syncthing:
-- Having to manually start the synchronization on desktop devices -> [SyncTrazor](https://github.com/canton7/SyncTrayzor) for Windows solved this for me. This program allows to run Syncthing in the little tray utility in the bottom corner.
-- Constant "syncing" notification on Android -> Disable its notifications altogether.
+- Having to manually start the synchronization on desktop devices -> [SyncTrazor](https://github.com/canton7/SyncTrayzor) for Windows solved this for me. This program allows to run Syncthing in the little tray utility in the bottom corner. SyncTrazor is an enhanced version of Syncthing.
+- Constant "syncing" notification on Android -> Disable Syncthing notifications
+-  altogether.
 - There are some files you don't want to sync, like the current state of your workspace. [This page](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Auxiliary+Tools/Syncthing) includes an example of how you can do that.
 
 I recommend enabling File Versioning in Syncthing. This way when files accidentally get deleted you can still recover them.  
@@ -87,5 +90,8 @@ Their github repo also includes a [installation guide for mobile devices](https:
 
 If their explanation leaves you with question you might want to check out this Obsidian forum post on how to use Git to sync between Linux Debian and an iPad.
 There is also a guide on the Obsidian forums on [how to sync between Linux Debian and an iPad](https://forum.obsidian.md/t/yet-another-obsidian-git-tutorial-desktop-pc-ipad-sync/67531) that includes **all the steps** needed to do so.
+
+
+
 
 [^1]: https://www.reddit.com/r/GoogleOne/comments/zzertm/did_google_remove_the_199_100gb_option/ & https://www.androidcentral.com/apps-software/google-one-hides-200gb-plan

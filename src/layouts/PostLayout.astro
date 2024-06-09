@@ -48,8 +48,8 @@ const { headings } = await post.render();
         <img
             src={post.data.coverImage.url}
             alt={post.data.coverImage.alt}
-            width={post.data.coverImage.width}
-            height={post.data.coverImage.height}
+            width=75
+            height=75
             transition:name={post.data.coverImage.url}
         />
     </div>
@@ -250,6 +250,23 @@ const { headings } = await post.render();
 		    font-family:
                 Menlo,
                 monospace;
+        }
+        & :global(pre) {
+            background-color: var(--color-main-dark-brighter);
+            border-radius: 4px;
+            color: var(--color-side-accent);
+            font-family:
+                Menlo,
+                monospace;
+            padding: 1em;
+            overflow-x: auto;
+        }
+        & :global(.footnotes) {
+            margin: 0px;
+            padding: 0px;
+            & :global(h2) {
+                font-size: x-large;
+            }
         }
     }
     @media only screen and (max-width: 699px) {
