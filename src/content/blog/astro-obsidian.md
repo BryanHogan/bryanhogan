@@ -1,7 +1,7 @@
 ---
 title: How To Use Obsidian To Write Astro Markdown Content
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: The quick way to edit your Astro project's blog posts within one central Obsidian Vault.
+description: The efficient way to edit your Astro project's markdown blog posts with Obsidian.
 coverImage:
   url: /post-covers/Obsidian-Astro-Cover.svg
   alt: Mix between Astro and Obsidian logo.
