@@ -6,7 +6,7 @@ coverImage:
   url: /post-covers/Obsidian-Astro-Cover.svg
   alt: Mix between Astro and Obsidian logo.
 pubDate: 2024-06-07T10:51:52Z
-lastUpdate: 2024-06-07T10:51:52Z
+lastUpdate: 2024-06-09T13:32:30Z
 tags:
   - Astro
   - Obsidian
