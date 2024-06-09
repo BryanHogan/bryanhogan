@@ -73,7 +73,7 @@ To summarize it:
 The sync your local files on your desktop with Google Drive download [ Google Drive for Desktop](https://www.google.com/drive/download/). Set up your folder to be shared with Google Drive, [this Google support page](https://support.google.com/drive/answer/10838124) explains how to.  
 To sync on your Android device get [Autosync for Google Drive](https://play.google.com/store/apps/details?id=com.ttxapps.drivesync&hl=en) and set it up.
 
-For Linux options: [grive2](https://github.com/vitalif/grive2), [Insync](https://www.insynchq.com/), [drive](https://github.com/odeke-em/drive)
+There are also multiple options for Linux: [grive2](https://github.com/vitalif/grive2), [Insync](https://www.insynchq.com/), [drive](https://github.com/odeke-em/drive)
 
 **Adding another desktop device to sync with Google Drive Desktop:**
 
