@@ -1,7 +1,7 @@
 ---
 title: How To Sync Obsidian
 author: Bryan@BryanHogan.com (Bryan Hogan)
-description: How to synchronize your Obsidian Vaults. Obsidian Sync, Syncthing, Google Drive or Github.
+description: How to synchronize your Obsidian Vaults. Using Obsidian Sync, Syncthing, Google Drive or Github.
 coverImage:
   url: /post-covers/Obsidian-Sync-Cover.svg
   alt: Obsidian logo inside a synchronisation icon.
