@@ -6,7 +6,7 @@ coverImage:
     url: /post-covers/CoCo-Final-Diary-Cover.svg
     alt: Simple icon of a mechanical cog
 pubDate: 2024-04-24T14:09:52Z
-lastUpdate: 2024-05-26T20:46:15Z
+lastUpdate: 2024-06-18T15:43:48Z
 tags: ["creating", "development", "coco", "university"]
 ---
 
@@ -156,16 +156,19 @@ Getting an app from this which can be used on a desktop pc, such as a web view o
 
 React Native does not feel intuitive for someone who already knows React or web technologies such as HTML, CSS and JavaScript/TypeScript. The slight advantages it can give in performance or native functionality also did not seem to matter yet in my project.
 
-### CapacitorJS
+### The New Tech-Stack
+With my new tech-stack I can instead build a website and then build this into a native feeling app that can be added to the Play or App Store. So what did I use?
 
-So instead of continuing with React Native I decided to go with CapacitorJS. Of course abandoning code did not feel good, but this seemed to be the better long-term decision for me now.
+#### CapacitorJS
 
-CapacitorJS allows you to make any web project into a native feeling app, a progressive web app. By using this any project consisting of HTML, CSS and JavaScript/TypeScript can be brought into the Google Play Store and Apple's App Store.  
-So now I am creating a website which is made into a app, something I feel much more comfortable with and make faster progress on while also supporting more platforms.
+Instead of continuing with React Native I decided to go with CapacitorJS. Of course abandoning code did not feel good, but this seemed to be the better long-term decision for me now.
+
+CapacitorJS allows you to make any web project into a native feeling app, a web native app. By using this any project consisting of HTML, CSS and JavaScript/TypeScript can be brought into the Google Play Store and Apple's App Store.  
+So now I am creating a website which is made into an app, something I feel much more comfortable and faster with while also supporting more platforms.
 
 Capacitor also allows the use a many native features.
 
-### Ionic React
+#### Ionic React
 
 For creating a website it is common to use a framework. I decided to go with React, since that also seems to work well with Capacitor. But instead of using React standalone I also added Ionic.
 
@@ -174,9 +177,15 @@ I was unsure whether I should use Ionic or not, since I also like writing my own
 
 [Ionic React](https://ionicframework.com/docs/react) is its own framework that combines Ionic with React.
 
-### Electron
+#### Electron
 
 As I am now building "just a website" I can throw in Electron into the tech-stack and get builds for Windows, Mac and Linux done in minutes. There is a [custom Electron integration](https://capacitor-community.github.io/electron/) for Capacitor projects made by the community which made this add-on very easy to include.
+
+#### PostCSS Preset Env
+
+As I am now writing normal CSS again I can also use useful CSS enhancements such as PostCSS. Similar to SASS or SCSS it can improve how you write CSS. I like PostCSS since it is the most customizable out of these three. By itself it actually does nothing as it is fully dependent on which PostCSS plugins you use.
+
+One of the best PostCSS plugins out there is [postcss-preset-env](https://www.npmjs.com/package/postcss-preset-env) which makes writing CSS much nicer. It converts modern CSS into something older browsers can understand. With this there is no need to include multiple lines of annoying vendor prefixes such as `-ms--transition` or `-webkit-transition` as the one `transition` line gets converted automatically for all browsers to understand on build.
 
 ### Survey Results
 
