@@ -1,0 +1,85 @@
+---
+import { Icons } from "./Icons";
+interface Props {
+    id: string;
+    iconMarginLeft?: String;
+    startChecked?: boolean;
+}
+const {
+    id,
+    iconMarginLeft = "var(--space-xs)",
+    startChecked = false,
+} = Astro.props;
+---
+
+<!-- Example Usage:
+    <Accordion id={"accordion_one"}>
+        <p slot="top">This part is always shown.</p>
+        <p>This part can be hidden.</p>
+    </Accordion>
+ -->
+<div class="accordion">
+    <input
+        type="checkbox"
+        name="collapse-checkbox"
+        id={id}
+        checked={startChecked}
+    />
+
+    <label for={id}>
+        <span><slot name="top" /></span>
+        <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            set:html={Icons["rightcaret"]}
+        />
+    </label>
+    <div class="collapsable text-section">
+        <div>
+            <slot />
+        </div>
+    </div>
+</div>
+
+<style define:vars={{ iconMarginLeft }}>
+    label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    label > svg {
+        height: 1.5rem;
+        width: auto;
+        margin-left: var(--depth);
+        background-color: var(--color-side-1);
+        color: var(--color-main-1);
+        border: 1px solid var(--color-accent-1);
+        border-radius: 0.5em;
+        transition: all 100ms;
+    }
+
+    .collapsable {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 150ms;
+    }
+    .collapsable > * {
+        overflow: hidden;
+    }
+
+    input[name="collapse-checkbox"] {
+        display: none;
+    }
+    input[name="collapse-checkbox"]:checked ~ .collapsable {
+        grid-template-rows: 1fr;
+    }
+    input[name="collapse-checkbox"]:checked ~ label svg {
+        transform: rotate(90deg);
+    }
+    span {
+        margin-right: 1rem;
+    }
+</style>

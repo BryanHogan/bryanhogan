@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardGrid from "../components/CardGrid.astro";
+import CardC from "../components/CardC.astro";
+---
+
+<Layout
+  title="Blog Introduction"
+  headerMode="Reduced"
+  metaDescription="Introduction to my blog, overview of the best posts on each topic I write about."
+>
+  <div class="gradient-background small-intro-section">
+    <div class="text-section text-align-center text-shadow">
+      <h1>Blog Introduction</h1>
+      <p class="text-align-center" style="margin-inline: auto;">
+        New here? Some of my best pieces below.
+      </p>
+    </div>
+  </div>
+  <section>
+    <CardGrid gtcolumns="1fr 1fr">
+      <CardC title="Korea" titlehref="/tags/korea" backgroundColor="">
+        <ul>
+          <li><a href="/blog/hanyang-erica-exchange">Exchange Semester At Hanyang University ERICA</a></li>
+          <li>Will write about a post about how Korea is different (soon).</li>
+          <li>Will write about a post about how my exchange semester at University of Seoul (soon).</li>
+        </ul>
+      </CardC>
+      <CardC title="Obsidian" backgroundColor="/tags/obsidian">
+        <ul>
+          <li><a href="/blog/obsidian-zettelkasten">A Second Brain - Smart Notes With An Obsidian Zettelkasten</a></li>
+          <li><a href="/blog/astro-obsidian">How To Use Obsidian To Write Astro Markdown Content</a></li>
+        </ul>
+      </CardC>
+      <CardC title="Book Reviews" backgroundColor="">
+        <ul>
+          <li><a href="/blog/why-we-sleep">Why We Sleep - Summary, Review & Thoughts</a></li>
+          <li><a href="/blog/show-your-work">Show Your Work - Summary, Review & Thoughts</a></li>
+        </ul>
+      </CardC>
+    </CardGrid>
+  </section>
+</Layout>
+
+<style>
+  section {
+    width: min(100%, 900px);
+    margin-inline: auto;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  li {
+    margin-left: 1.5rem;
+    & a {
+      color: var(--color-main-accent);
+    }
+  }
+</style>

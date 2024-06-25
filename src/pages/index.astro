@@ -87,14 +87,19 @@ const allPosts = (await getCollection("blog")).sort(
         </p>
       </CardC>
       <CardC
-        title="💜🐢"
+        title="Blog💜🐢"
         titlehref="/blog"
         icon="pen"
         backgroundColor="var(--color-side-accent-b)"
       >
         <p>
-          I will put something else in this box in the future. For now you can
-          look at this amazing turtle emoji.
+          Latest Post: <a href={`/blog/${allPosts[0].slug}/`}
+            >{allPosts[0].data.title}</a
+          >
+        </p>
+        <p>
+          Take a look at my <a href="/blog-introduction">Blog Introduction</a> if you are new here
+          for a look at my best posts for my favorite topics.
         </p>
       </CardC>
       <CardC
@@ -128,15 +133,13 @@ const allPosts = (await getCollection("blog")).sort(
         </p>
       </CardC>
       <CardC
-        title="Blog"
+        title="YouTube"
         titlehref="/blog"
         icon="lightbulb"
         backgroundColor="var(--color-main-dark)"
       >
         <p>
-          Check out my latest post titled: "<a
-            href={`/blog/${allPosts[0].slug}/`}>{allPosts[0].data.title}</a
-          >".
+          Soon.
         </p>
       </CardC>
       <CardC
