@@ -190,3 +190,9 @@ One of the best PostCSS plugins out there is [postcss-preset-env](https://www.np
 ### Survey Results
 
 Prior to finalizing my decision to change my tech-stack I also went through the survey results.
+
+Got information on how and why people use self-tracking. And the answers were various, from answers on goals for studying more to period tracking and psychological help.
+
+## Week 8 - 9
+
+## Week 10 - 12
