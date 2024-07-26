@@ -12,24 +12,13 @@ export interface CardLUButton {
 
 export const LifeUpdates: LifeUpdate[] = [
   {
-    title: "New Post: A Second Brain - Smart Notes With An Obsidian Zettelkasten",
-    date: new Date("2024-06-05"),
-    description: "How to have one growing system to take life-long notes, a second brain. The Zettelkasten system.",
+    title: "In South Korea",
+    date: new Date("2024-07-21"),
+    description: "Spending more time in Korea!",
     cardButtons: [
       {
-        buttonText: "Read Post",
-        buttonLink: "/blog/obsidian-zettelkasten"
-      }
-    ]
-  },
-  {
-    title: "Bryan's Briefing May Edition published",
-    date: new Date("2024-06-03"),
-    description: "Published the latest version of my monthly newsletter. 😃📬",
-    cardButtons: [
-      {
-        buttonText: "Get the next edition",
-        buttonLink: "/follow"
+        buttonText: "Instagram Highlight",
+        buttonLink: "https://www.instagram.com/stories/highlights/18010288922308989/"
       }
     ]
   },
@@ -43,6 +32,23 @@ export const LifeUpdates: LifeUpdate[] = [
         buttonLink: "/blog/coco-final-dev-diary"
       }
     ]
+  },
+  {
+    title: "New Post: How To Zettelkasten",
+    date: new Date("2024-05-06"),
+    description: "How to create a second brain. The life-long note taking system called Zettelkasten.",
+    cardButtons: [
+      {
+        buttonText: "Read Post",
+        buttonLink: "/blog/obsidian-zettelkasten"
+      }
+    ]
+  },
+  {
+    title: "Bryan's Briefing June Edition",
+    date: new Date("2024-04-06"),
+    description: "Published the June edition of my personal newsletter.",
+    cardButtons: []
   },
   {
     title: "New Post: Why Koreans Ask What Year You Were Born",
