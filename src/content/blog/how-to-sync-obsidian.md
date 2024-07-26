@@ -8,8 +8,8 @@ coverImage:
 pubDate: 2024-06-09T21:48:59Z
 lastUpdate: 2024-06-09T21:48:59Z
 tags:
-  - Obsidian
-  - Productivity
+  - obsidian
+  - productivity
 ---
 
 There are a few ways on how to sync your Obsidian vaults between multiple devices:

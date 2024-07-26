@@ -8,8 +8,8 @@ coverImage:
 pubDate: 2024-06-07T10:51:52Z
 lastUpdate: 2024-06-09T13:32:30Z
 tags:
-  - Astro
-  - Obsidian
+  - astro
+  - obsidian
 ---
 
 How to use Obsidian for your Astro website's content writing workflow.  
