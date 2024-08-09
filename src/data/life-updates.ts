@@ -23,19 +23,8 @@ export const LifeUpdates: LifeUpdate[] = [
     ]
   },
   {
-    title: "New Post: Code & Context Final Project Dev Diary - Live Post",
-    date: new Date("2024-04-24"),
-    description: "About my final project at Code & Context.",
-    cardButtons: [
-      {
-        buttonText: "Read Post",
-        buttonLink: "/blog/coco-final-dev-diary"
-      }
-    ]
-  },
-  {
     title: "New Post: How To Zettelkasten",
-    date: new Date("2024-05-06"),
+    date: new Date("2024-06-04"),
     description: "How to create a second brain. The life-long note taking system called Zettelkasten.",
     cardButtons: [
       {
@@ -46,9 +35,20 @@ export const LifeUpdates: LifeUpdate[] = [
   },
   {
     title: "Bryan's Briefing June Edition",
-    date: new Date("2024-04-06"),
+    date: new Date("2024-06-04"),
     description: "Published the June edition of my personal newsletter.",
     cardButtons: []
+  },
+  {
+    title: "New Post: Code & Context Final Project Dev Diary - Live Post",
+    date: new Date("2024-04-24"),
+    description: "About my final project at Code & Context.",
+    cardButtons: [
+      {
+        buttonText: "Read Post",
+        buttonLink: "/blog/coco-final-dev-diary"
+      }
+    ]
   },
   {
     title: "New Post: Why Koreans Ask What Year You Were Born",
