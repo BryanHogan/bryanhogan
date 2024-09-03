@@ -1,20 +1,14 @@
 ---
 import { Icons } from "./Icons";
 
-export interface CardLUButton {
-    buttonText: string;
-    buttonLink: string;
-    buttonTarget?: string;
-}
-
 interface Props {
     title: string;
-    date: Date;
     text: string;
-    cardButtons: Array<CardLUButton>;
+    href: string;
+    buttonText: string;
 }
 
-const { title, date, text, cardButtons } = Astro.props;
+const { title, text, href, buttonText } = Astro.props;
 ---
 
 <div class="cardc-container">
@@ -22,35 +16,19 @@ const { title, date, text, cardButtons } = Astro.props;
         <h4>{title}</h4>
     </div>
     <p>{text}</p>
-    <div class="buttons-container">
-        {
-            cardButtons.map((button) => (
-                <div>
-                    <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 26 26"
-                        fill="currentColor"
-                        set:html={Icons["rightarrow"]}
-                    />
-                    <a
-                        href={button.buttonLink}
-                        target={
-                            button.buttonTarget != ""
-                                ? button.buttonTarget
-                                : "_self"
-                        }
-                    >
-                        {button.buttonText}
-                    </a>
-                </div>
-            ))
-        }
-        <p class="date-time-text">
-            <time datetime={new Date(date).toISOString()}>
-                {new Date(date).toLocaleDateString("en-GB")}
-            </time>
-        </p>
+    <div>
+        <div>
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 26 26"
+                fill="currentColor"
+                set:html={Icons["rightarrow"]}
+            />
+            <a href={href} target={"_self"}>
+                {buttonText}
+            </a>
+        </div>
     </div>
 </div>
 

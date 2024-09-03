@@ -87,38 +87,38 @@ const allPosts = (await getCollection("blog")).sort(
         </p>
       </CardC>
       <CardC
-        title="Blog💜🐢"
-        titlehref="/blog"
+        title="Self-track App Project"
+        titlehref="/now"
         icon="pen"
         backgroundColor="var(--color-side-accent-b)"
       >
-        <p>
-          Latest Post: <a href={`/blog/${allPosts[0].slug}/`}
-            >{allPosts[0].data.title}</a
-          >
-        </p>
-        <p>
-          Take a look at my <a href="/blog-introduction">Blog Introduction</a> if you are new here
-          for a look at my best posts for my favorite topics.
-        </p>
+      <p>
+        Building an app for journaling and self-tracking. Writing my bachelor thesis on this app as well.
+      </p>
       </CardC>
       <CardC
-        title="Life Updates"
-        titlehref="/about"
+        title="Blog 💜"
+        titlehref="/blog"
         icon="star"
         gridHeight={"3"}
         backgroundColor="var(--color-side-accent-b)"
       >
-        {
-          LifeUpdates.slice(0, 3).map((lifeUpdate) => (
-            <CardCSection
-              title={lifeUpdate.title}
-              date={lifeUpdate.date}
-              text={lifeUpdate.description}
-              cardButtons={lifeUpdate.cardButtons}
-            />
-          ))
-        }
+      <CardCSection 
+        title="Blog Introduction"
+        text="Take a look at my blog introduction if you are new here."
+        href="/blog-introduction"
+        buttonText="See blog introduction"
+      />
+      {
+        allPosts.slice(0, 2).map((post) => (
+          <CardCSection
+            title={post.data.title}
+            text={post.data.description}
+            href={`/blog/${post.slug}/`}
+            buttonText="Read post"
+          />
+        ))
+      }
       </CardC>
       <CardC
         title="Web Dev Helper & Components"
