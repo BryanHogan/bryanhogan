@@ -4,6 +4,37 @@ import TextSectionWithSide from "./TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
 
 const lastUpdate: Date = new Date("2024-05-01T12:27:11Z"); // ISO Time 8601
+
+const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
+const OWNER = 'BryanHogan';
+const REPO = 'bryanhogan';
+const FILE_PATH = 'src/pages/index.astro';
+
+async function getLastModifiedDate() {
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${FILE_PATH}&page=1&per_page=1`;
+  
+  const response = await fetch(url, {
+    headers: {
+      'Authorization': `token ${GITHUB_TOKEN}`,
+      'Accept': 'application/vnd.github.v3+json'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub API request failed: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  
+  if (data.length > 0) {
+    const lastCommitDate = new Date(data[0].commit.committer.date);
+    return lastCommitDate.toLocaleDateString();
+  }
+  
+  return 'Unknown';
+}
+
+const lastModified = await getLastModifiedDate();
 ---
 
 <Layout
@@ -24,6 +55,7 @@ const lastUpdate: Date = new Date("2024-05-01T12:27:11Z"); // ISO Time 8601
                     })
                 }<br />from my home in Cologne.
             </p>
+            <p>Text: {lastModified}</p>
         </div>
     </div>
     <TextSectionWithSide>
