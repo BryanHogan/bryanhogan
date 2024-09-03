@@ -2,7 +2,21 @@
 import Layout from "../layouts/Layout.astro";
 import TextSectionWithSide from "../layouts/TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
-import { instagram, linkedin } from "../data/socials";
+
+const res = await fetch('https://mastodon.social/api/v1/accounts/109508985665400827/statuses');
+const data = await res.json();
+const latestPost = data[0];
+
+function truncateText(text, maxLength) {
+  if (text.length <= maxLength) return text;
+  const truncated = text.slice(0, maxLength);
+  const lastSpaceIndex = truncated.lastIndexOf(' ');
+  return lastSpaceIndex > 0 ? truncated.slice(0, lastSpaceIndex) + '...' : truncated + '...';
+}
+const fullContent = latestPost.content;
+const strippedContent = fullContent.replace(/<[^>]*>/g, '');
+const truncatedContent = truncateText(strippedContent, 380);
+
 
 const lastUpdate: Date = new Date("2024-05-01T12:27:11Z"); // ISO Time 8601
 ---
@@ -72,6 +86,7 @@ const lastUpdate: Date = new Date("2024-05-01T12:27:11Z"); // ISO Time 8601
             working on the before mentioned projects but also visiting doctors
             more often recently.
         </p>
+        <p set:html={truncatedContent}></p>
         <nav slot="aside-content">
             <Button
                 text="Blog"
