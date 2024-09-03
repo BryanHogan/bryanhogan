@@ -3,6 +3,8 @@ import Layout from "./Layout.astro";
 import TextSectionWithSide from "./TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
 
+const {frontmatter} = Astro.props;
+
 const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
 const OWNER = "BryanHogan";
 const REPO = "bryanhogan";
@@ -60,7 +62,7 @@ const isoString = lastModified.toISOString();
             <p class="text-align-center" style="margin-inline: auto;">
                 Last updated on <time datetime={isoString}>{formattedDate}</time
                 >
-                <br />from my home in Cologne.
+                <br />from {frontmatter.updatedFrom}
             </p>
         </div>
     </div>

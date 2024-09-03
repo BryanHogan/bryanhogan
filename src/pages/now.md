@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/NowLayout.astro
+updatedFrom: 천안 in South Korea
 ---
 - **Working on my final B.Sc. university project**. Currently [building an app](/blog/coco-final-dev-diary) to help you improve your wellbeing and health. This is my final project needed to finish my [Code & Context B.Sc. studies](/blog/what-is-coco).
 - **Blog**. Writing more content for my blog.
