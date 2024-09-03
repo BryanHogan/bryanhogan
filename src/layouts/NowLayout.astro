@@ -3,38 +3,50 @@ import Layout from "./Layout.astro";
 import TextSectionWithSide from "./TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
 
-const lastUpdate: Date = new Date("2024-05-01T12:27:11Z"); // ISO Time 8601
-
 const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
-const OWNER = 'BryanHogan';
-const REPO = 'bryanhogan';
-const FILE_PATH = 'src/pages/now.md';
+const OWNER = "BryanHogan";
+const REPO = "bryanhogan";
+const FILE_PATH = "src/pages/now.md";
 
 async function getLastModifiedDate() {
-  const url = `https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${FILE_PATH}&page=1&per_page=1`;
-  
-  const response = await fetch(url, {
-    headers: {
-      'Authorization': `token ${GITHUB_TOKEN}`,
-      'Accept': 'application/vnd.github.v3+json'
+    const url = `https://api.github.com/repos/${OWNER}/${REPO}/commits?path=${FILE_PATH}&page=1&per_page=1`;
+
+    try {
+        const response = await fetch(url, {
+            headers: {
+                Authorization: `token ${GITHUB_TOKEN}`,
+                Accept: "application/vnd.github.v3+json",
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error(
+                `GitHub API request failed: ${response.statusText}`,
+            );
+        }
+
+        const data = await response.json();
+
+        if (data.length > 0) {
+            return new Date(data[0].commit.committer.date);
+        }
+
+        throw new Error("No commit data found");
+    } catch (error) {
+        console.error("Error fetching last modified date:", error);
+        return new Date(); // Fallback to current date
     }
-  });
-
-  if (!response.ok) {
-    throw new Error(`GitHub API request failed: ${response.statusText}`);
-  }
-
-  const data = await response.json();
-  
-  if (data.length > 0) {
-    const lastCommitDate = new Date(data[0].commit.committer.date);
-    return lastCommitDate.toLocaleDateString();
-  }
-  
-  return 'Unknown';
 }
 
 const lastModified = await getLastModifiedDate();
+
+const formattedDate = lastModified.toLocaleDateString("en-UK", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+});
+
+const isoString = lastModified.toISOString();
 ---
 
 <Layout
@@ -42,20 +54,14 @@ const lastModified = await getLastModifiedDate();
     metaDescription="About BryanHogan.com & Bryan Hogan."
     headerMode="All"
 >
-    <div class="gradient-background small-intro-section" style="">
+    <div class="gradient-background small-intro-section">
         <div class="text-section text-align-center text-shadow">
             <h1>Now</h1>
             <p class="text-align-center" style="margin-inline: auto;">
-                Last updated <time datetime={lastUpdate.toISOString()}></time>
-                {
-                    new Date(lastUpdate).toLocaleDateString(undefined, {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                    })
-                }<br />from my home in Cologne.
+                Last updated on <time datetime={isoString}>{formattedDate}</time
+                >
+                <br />from my home in Cologne.
             </p>
-            <p>Text: {lastModified}</p>
         </div>
     </div>
     <TextSectionWithSide>
