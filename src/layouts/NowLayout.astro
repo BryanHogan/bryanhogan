@@ -2,9 +2,11 @@
 import Layout from "./Layout.astro";
 import TextSectionWithSide from "./TextSectionWithSide.astro";
 import Button from "../components/Button.astro";
+import socials from "../data/socials";
 
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
 
+//Github
 const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
 const OWNER = "BryanHogan";
 const REPO = "bryanhogan";
@@ -49,6 +51,13 @@ const formattedDate = lastModified.toLocaleDateString("en-UK", {
 });
 
 const isoString = lastModified.toISOString();
+
+// Mastodon
+const mastodonFetch = await fetch(
+    "https://mastodon.social/api/v1/accounts/109508985665400827/statuses",
+);
+const mastodonData = await mastodonFetch.json();
+const latestPostMastodon = mastodonData[0];
 ---
 
 <Layout
@@ -79,6 +88,24 @@ const isoString = lastModified.toISOString();
             <Button
                 text="Blog"
                 link="/blog"
+                buttonStyle="transparent-bright small grow color-accent"
+            />
+        </nav>
+    </TextSectionWithSide>
+    <TextSectionWithSide>
+        <h2
+            class="text-align-center accent-underline-adjust-width"
+            id="mastodon"
+            slot="h2-title"
+        >
+            Social Media Activity
+        </h2>
+        <h3 class="text-align-center">Last Mastodon Post</h3>
+        <p set:html={latestPostMastodon.content} />
+        <nav slot="aside-content">
+            <Button
+                text="Mastodon"
+                link={socials.mastodon.href}
                 buttonStyle="transparent-bright small grow color-accent"
             />
         </nav>
