@@ -8,8 +8,8 @@ coverImage:
 pubDate: 2024-09-23T20:40:46Z
 lastUpdate: 2024-09-23T20:40:46Z
 tags:
-  - Korea
-  - Travel
+  - korea
+  - travel
 ---
 
 I have loved spending a large amount of my life in South Korea. Especially travelling here has been extremely joyful. But what should you know if you go to South Korea for the first time?  
@@ -41,7 +41,7 @@ Things to get when you arrive in Korea:
 ## Great locations in Seoul to visit
 Seoul is actually quite large with many different areas that can feel totally different. I still feel like there are so many things I haven't seen here yet, I love going outside here and exploring new places. Before coming to Korea I have never felt like this about travelling.
 
-The Seoul Metropolitan Government has officially declared 7 tourist zones in Seoul^[https://english.seoul.go.kr/special-inspections-of-7-special-tourist-zones-to-prevent-price-gouging] ^[https://english.visitseoul.net/lantern/Themes%20by%20Special%20Tourist%20Zone_/35529]:
+The Seoul Metropolitan Government has officially declared 7 tourist zones in Seoul[^1] [^2]:
 
 1. Jong-ro & Cheonggyecheon Stream (Jongno-gu)
 2. Myeong-dong, Namdaemun, Bukchang-dong, Da-dong & Mugyo-dong (Jung-gu)
@@ -56,24 +56,24 @@ You also (probably) can't go wrong with getting an accommodation in any of these
 
 Some favourites of mine in no particular order:
 
-**Hongdae.**  
+**Hongdae.** (홍대)  
 A more modern area of Seoul. Known for its modern feel and vibrant nightlife. But also by day it's great with many restaurants, cafes, clothing shops and more. I can highly recommend walking along the Red Road (Eoulmadang-ro), either start at Sogang Univ. Station or start on the other side in the Mapo Saebit Culture Forest near Hapjeong station.
 
-**Yeonnam.**  
+**Yeonnam.** (연남)  
 Directly north of Hongdae you can find Yeonnam, a smaller area filled with the prettiest cafes. Yeonnam's streets are narrow and winding, giving it a more cozy feel.
 
-**Jong-ro.**  
-There are many great areas in Jong-ro since it's a bit larger. There are multiple trains stations here with many things to see. Jonggak station. Up to Anguk or west to Jongno 3(sam)ga. The areas around Gyeongbokgung Palace, except the north, are also all great. (Red areas more things)
+**Jong-ro.** (종로)  
+There are many great areas in Jong-ro since it's a bit larger. There are multiple trains stations here with many things to see. Jonggak station. Up to Anguk or west to Jongno 3(sam)ga. The areas around Gyeongbokgung Palace, except the north, are also all great. There's even <a href="https://www.jongno.go.kr/englishMain.do" target="_blank">website all about Jongno</a> with recommendations on where to go, like the traditional Bukchon Hanok Village.
 
-**City Hall Station.**  
-The area surrounding City Hall station (시청역) is also really nice, it's the historical center of Seoul.
+**City Hall Station.** (시청역)  
+The area surrounding City Hall station is also really nice, it's the historical center of Seoul.
 
 You also have Myeong-dong directly to the east, a popular shopping area of Seoul that has become more of a tourist trap with highly overpriced meals recently. But it's offering of street food in the evening is still enjoyable.
 
 If I had to recommend 3 things for any tourist visiting Korea I'd say:
-- Gyeognbokgung Palace
-- Namsan Tower
-- Lotte Tower
+- Gyeognbokgung Palace / 경복궁 (<a href="https://naver.me/FLBKTWSB" target="_blank">Naver Maps</a>)
+- Namsan Seoul Tower / 남산서울타워 (<a href="https://naver.me/xlW10MyG" target="_blank">Naver Maps</a>)
+- Lotte World Tower / 롯데월드타워 (<a href="https://naver.me/55IrNwzn" target="_blank">Naver Maps</a>)
 
 ## Where to stay
 Should you stay in a hotel, hostel, AirBnB or Goshiwon?
@@ -100,7 +100,7 @@ If you are doing an exchange semester I would highly recommend you to try gettin
   But dormitories in Korea often have weird rules and gender separation here is very strict. It is also common to share these rooms with one or more people.
 - **Share house:** There are many share houses in Korea but finding one can be a bit hard. You will also find similar things under the names of "Boarding house" or "Guest house". In a share house you usually have your own room but things like the kitchen and bathroom are shared.
 
-Accommodations in most areas of Seoul are notably more expensive than outside.
+Accommodations in most areas of Seoul are usually more expensive than outside.
 
 ## Infrastructure: Using trains, buses and taxis
 Getting around Seoul is mostly easy and comfortable. Before going to Korea I would have never imagined how big the impact of a functional train system is on my quality of life.
@@ -225,17 +225,17 @@ One of the things I really love about living in Korea is the large amount of thi
 So here are some things that you might want to try while in South Korea:
 
 1. **Photobooths.** Korea has photo booths everywhere, here you can take pictures with your friends. They are unmanned, have a place to do your hair and make-up and have a great selection of silly accessories.
-   Photo booths are usually open 24h. Go into one, choose a background of your liking, choose the amount of prints, choose a frame and a design of your liking, take the pictures, select the ones you all like, then receive your print. Scan the QR code to get the photo digitally and most also have a video that you can download.
-   There are also special themed photo booths.
-2. **Karaoke.** Karaoke is very popular in Korea. Just like photo booths you can find Karaoke places everywhere. There are different kinds of Karaoke places. There's Coin Karaoke, so a place where you really just go for singing, a song here usually costs around 500 Korean Won. Then there are also Karaoke places where you can order drinks and food.
-   In Karaoke places in Korea you usually get one room for your group and then you have a machine that you can operate yourself to find a song of your liking. Depending on the size of the room there are 2 or more microphones. After selecting a song the song starts and you get the lyrics displayed on screen.
+  Photo booths are usually open 24h. Go into one, choose a background of your liking, choose the amount of prints, choose a frame and a design of your liking, take the pictures, select the ones you all like, then receive your print. Scan the QR code to get the photo digitally and most also have a video that you can download.  
+  There are also special themed photo booths.
+2. **Karaoke.** Karaoke is very popular in Korea. Just like photo booths you can find Karaoke places everywhere. There are different kinds of Karaoke places. There's Coin Karaoke, so a place where you really just go for singing, a song here usually costs around 500 Korean Won. Then there are also Karaoke places where you can order drinks and food.  
+  In Karaoke places in Korea you usually get one room for your group and then you have a machine that you can operate yourself to find a song of your liking. Depending on the size of the room there are 2 or more microphones. After selecting a song the song starts and you get the lyrics displayed on screen.
 3. **Pop-up Stores.** Pop-up stores are stores with a specific theme that only exist for a limited time. Often they are really cool since they are decorated in detail and offer fun experiences like free games, unique products or free pictures. (I'm a proud owner of a soju and beer licence, which I got at a Jinso Soju pop-up store.)
 4. **Arcades.** Try your luck (and skill) to win something at the claw machine, or maybe just enjoy one of the arcade games.
 5. **PC Bang.** At a Pc방 you can play games on a pc. You will find many Koreans going here to play League of Legends. Fifa, PUBG, Valorant, Sudden Attack, Maple Story, Overwatch and Lost Ark are also popular here.
-   In a Pc Bang you will find many Pcs all equipped with special software. Buy some time at the machine and then log in with the code given to you. You can order food and drinks right at your pc and they will deliver it to you, it's highly comfortable.
-   Be aware that to make an permanent account at the Pc Bang itself or for online games like League of Legends you will need an ARC and a Korean phone number connected to it.
+  In a Pc Bang you will find many Pcs all equipped with special software. Buy some time at the machine and then log in with the code given to you. You can order food and drinks right at your pc and they will deliver it to you, it's highly comfortable.  
+  Be aware that to make an permanent account at the Pc Bang itself or for online games like League of Legends you will need an ARC and a Korean phone number connected to it.
 6. **Playstation Room** (플스방)**.** A playstation room is a place where you can play console games. 
-7. **Cafes.** I already mentioned cafes earlier, but I want to highlight how many different cafes there actually are. From room cafes or multi bangs to animal or DIY cafes. So if you want to visit a Harry Potter cafe, have British tea time or listen to music on vinyl records, it's all there.
+7. **Cafes.** I already mentioned cafes earlier, but I want to highlight how many different cafes there actually are. From room cafes or multi bangs to animal or DIY cafes. So if you want to visit a Harry Potter cafe, have British tea time, have your own room to watch Netflix or listen to music on vinyl records, it's all there.
 8. **Amusement Parks.** Lotte World and Everland are the two most popular amusement parks in South Korea. Lotte World is located in Seoul and a bit smaller, still a fun place to spend the day. Everland is located outside of Seoul and Korea's largest amusement park. Even though it's smaller than the big amusement parks in Germany it's still worth a visit.
 9. **Virtual sports.** There's a large offering of different virtual sports in Korea. Here you can try virtual baseball or golf, but there's also places for shooting or VR games.
 10. **Shopping & night shopping.** Shopping, for cosmetic products at Olive Young or fashion at the million stores available, is highly popular in Korea. In areas such as the Dongdaemun market area you can even do your shopping at 2am. 
@@ -253,7 +253,7 @@ During summer:
 
 During winter:
 1. **Ski.** Korea has multiple ski resorts, although not as large as the ones I was used to they were still fun.
-2. **Christmas markets.** Although Christmas is not that important in Korea it's still celebrated a bit as a couple's day, you can find Christmas decorations all over the place and some small European style Christmas markets are also there if you look for them. Some malls also turn into small christmas themed villages.
+2. **Christmas theming.** Although Christmas is not that important in Korea it's still celebrated a bit as a couple's day, you can find Christmas decorations all over the place and some small European style Christmas markets are also there if you look for them. Some malls also turn into small christmas themed villages.
 
 ## Partying, drinking and clubbing in Seoul
 Seoul is great if you love drinking and partying. Because Seoul is so large you have many different options on where to go for a night out.
@@ -261,10 +261,10 @@ The most common drinking areas are Hongdae and Itaewon. But there are also amazi
 
 If you just want to get drinks for dinner or go to a bar you will find many options everywhere in Korea. There are many Koreans that love drinking and they go multiple times per week.
 But from my experience the places with the best nightlife definitely were:
-- Apgujeong
-- Hongdae
-- Itaewon
-- Kondae
+- Hongdae / 홍대
+- Itaewon / 이태원
+- Apgujeong / 압구정
+- Kondae / 건대
 
 ### Hongdae / 홍대
 Hongdae is very popular and has many great bars. You will find many international bars and clubs in Hongdae as well as Korean ones. Majority of people in Hongdae are students in their twenties up to people in their middle thirties usually.
@@ -320,4 +320,5 @@ In Korean:
 - Tips on using Naver Maps: First off, if you prefer English change the language to English, but keep in mind not everything will be in English then. When looking for a place name in English you might have to combine the word into one, so "SuwonStation" instead of "Suwon Station", but just sometimes not always.
   One hidden trick to find the best cafes and amazing locations to visit is by using the "Attractions" button on Naver Maps. Press it, then zoom in on the area you want to know more of, then press "Search here" at the top again.
 
-
+[^1]: https://english.seoul.go.kr/special-inspections-of-7-special-tourist-zones-to-prevent-price-gouging
+[^2]: https://english.visitseoul.net/lantern/Themes%20by%20Special%20Tourist%20Zone_/35529
