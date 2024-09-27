@@ -5,14 +5,14 @@ description: Essential tips for your first trip to South Korea. Location, activi
 coverImage:
   url: /post-covers/Map-Guide-Seoul-Cover.svg
   alt: Simple map icon with simplified South Korean flag symbol in the center.
-pubDate: 2024-09-23T20:40:46Z
-lastUpdate: 2024-09-23T20:40:46Z
+pubDate: 2024-09-27T18:16:10Z
+lastUpdate: 2024-09-27T18:16:10Z
 tags:
   - korea
   - travel
 ---
 
-I have loved spending a large amount of my life in South Korea. Especially travelling here has been extremely joyful. But what should you know if you go to South Korea for the first time?  
+I loved spending a lot of time in South Korea. Traveling here has been extremely joyful. But what should you know if you go to South Korea for the first time?  
 In this post I want to answer your questions if you are planning a holiday, an exchange semester, language school or anything similar in South Korea.
 
 ## Things to prepare on your first visit to South Korea
@@ -39,7 +39,7 @@ Things to get when you arrive in Korea:
 </details>
 
 ## Great locations in Seoul to visit
-Seoul is actually quite large with many different areas that can feel totally different. I still feel like there are so many things I haven't seen here yet, I love going outside here and exploring new places. Before coming to Korea I have never felt like this about travelling.
+Seoul is actually quite large with many different areas that can feel totally different. I still feel like there are so many things I haven't seen here yet, I love going outside here and exploring new places. Before coming to Korea I have never felt like this about traveling.
 
 The Seoul Metropolitan Government has officially declared 7 tourist zones in Seoul[^1] [^2]:
 
@@ -63,7 +63,7 @@ A more modern area of Seoul. Known for its modern feel and vibrant nightlife. Bu
 Directly north of Hongdae you can find Yeonnam, a smaller area filled with the prettiest cafes. Yeonnam's streets are narrow and winding, giving it a more cozy feel.
 
 **Jong-ro.** (종로)  
-There are many great areas in Jong-ro since it's a bit larger. There are multiple trains stations here with many things to see. Jonggak station. Up to Anguk or west to Jongno 3(sam)ga. The areas around Gyeongbokgung Palace, except the north, are also all great. There's even <a href="https://www.jongno.go.kr/englishMain.do" target="_blank">website all about Jongno</a> with recommendations on where to go, like the traditional Bukchon Hanok Village.
+There are many great areas in Jong-ro, since it's a bit larger. There are multiple train stations here with many things to see. Like the area around Jonggak station (종각역) is always enjoyable. The areas around Gyeongbokgung Palace, except the north, are also all great. There's even <a href="https://www.jongno.go.kr/englishMain.do" target="_blank">website all about Jongno</a> with recommendations on where to go, like the traditional Bukchon Hanok Village.
 
 **City Hall Station.** (시청역)  
 The area surrounding City Hall station is also really nice, it's the historical center of Seoul.
@@ -74,6 +74,10 @@ If I had to recommend 3 things for any tourist visiting Korea I'd say:
 - Gyeognbokgung Palace / 경복궁 (<a href="https://naver.me/FLBKTWSB" target="_blank">Naver Maps</a>)
 - Namsan Seoul Tower / 남산서울타워 (<a href="https://naver.me/xlW10MyG" target="_blank">Naver Maps</a>)
 - Lotte World Tower / 롯데월드타워 (<a href="https://naver.me/55IrNwzn" target="_blank">Naver Maps</a>)
+
+![Sunrise view from near Namsan Seoul Tower during News Years](../../assets/blog/Bryan-Hogan-Blog-South-Korea-New-Years.png)
+
+The view of the 2024 New Year's sunrise near the Namsan Seoul Tower.
 
 ## Where to stay
 Should you stay in a hotel, hostel, AirBnB or Goshiwon?
@@ -175,6 +179,8 @@ There's lots of great food in Korea. A list of things I can recommend:
 **Bibimbap / 비빔밥**  
 Mixed rice with different vegetables, maybe meat, an egg and gochujang sauce.
 
+![Bibimbap already mixed with side dishes.](../../assets/blog/Bryan-Hogan-Blog-South-Korea-Bibimbap.jpg)
+
 **Kimbap / 김밥**  
 A rice roll wrapped in seaweed filled with rice, different vegetables and/or meat. There are many variations, such as tuna, cheese, vegetable, and more.
 
@@ -196,6 +202,8 @@ Chewy rice cakes cooked in a spicy and sweet gochujang-based sauce, often with f
 
 **Chicken and beer / 치맥**  
 Chimaek is the pairing of fried chicken and beer.
+
+![Different variants of fried chicken at a chimaek restaurant.](../../assets/blog/Bryan-Hogan-Blog-South-Korea-Chimaek.jpg)
 
 **Donkatsu / 돈까스**  
 A breaded and deep-fried pork cutlet. Both the Korean and Japanese version of this are popular in Korea.
@@ -298,21 +306,16 @@ Kondae is definitely a student drinking area. Less popular than Hongdae or Itaew
 
 📷 **Instagram**
 
-In English:
-- https://www.instagram.com/interesting.kr/ - One of the best channels to get some information on upcoming events.
-- https://www.instagram.com/seoulcity/  - More focussed on general travel information but also nice.
+- <a href="https://www.instagram.com/interesting.kr/" target="_blank">interesting.kr</a> - One of the best channels to get some information on upcoming events.
+- <a href="https://www.instagram.com/seoulcity/" target="_blank">seoulcity</a> - More focussed on general travel information but also nice.
 
-In Korean:
-- https://www.instagram.com/_seoulhotplace/ (Korean)
-- https://www.instagram.com/seoultravel/ (Korean)
-
+Then there are channels in Korean like <a href="https://www.instagram.com/_seoulhotplace/" target="_blank">_seoulhotplace</a> or <a href="https://www.instagram.com/seoultravel/" target="_blank">seoultravel</a> which have nice recommendations as well.
 
 🌐 **Websites**
-- https://english.visitseoul.net/lantern/Themes%20by%20Special%20Tourist%20Zone_/35529 - Amazing site, here linked to the list of the 7 official tourism zones of Seoul. But this website also includes much more tourism information, like 
-	- Information guides: https://english.visitseoul.net/map-guide-book
-	- List of places to go for entertainment: https://english.visitseoul.net/entertainment , there's also lists for attractions, shopping, restaurants and more 
-- https://english.seoul.go.kr/category/policy/culture-and-tourism/ - Updates, new events and other tourism related things going on, a site from the Seoul Metropolitan Government.
-- https://www.culture.go.kr/index.do
+-  <a href="https://english.visitseoul.net/" target="_blank">visitseoul.net</a> - An amazing site that has high quality information on a lot of different things regarding visiting Seoul.
+   - Information guides: https://english.visitseoul.net/map-guide-book
+   - List of places to go for entertainment: https://english.visitseoul.net/entertainment, there's also lists for attractions, shopping, restaurants and more.
+-  <a href="https://english.seoul.go.kr/category/policy/culture-and-tourism/" target="_blank">seoul.go.kr culture and tourism</a> - Updates, new events and other tourism related things going on, a site from the Seoul Metropolitan Government.
 
 ## Other things
 - ARC: You will need an Alien Registration Card (ARC), also refered to as Residence Card, when you stay more than 90 days in South Korea. Connect your Korean phone number with your ARC and you can now use any apps and services just like a Korean resident.
