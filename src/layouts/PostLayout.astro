@@ -377,6 +377,8 @@ const { headings } = await post.render();
         }
         .toc .toc-items {
             display: none;
+            max-height: calc(100svh - var(--navbar-height) - 75px);
+            overflow-y: auto;
         }
         .toc:hover .toc-items {
             display: block;
