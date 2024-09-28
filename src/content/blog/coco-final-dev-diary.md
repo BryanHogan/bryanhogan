@@ -193,6 +193,6 @@ Prior to finalizing my decision to change my tech-stack I also went through the 
 
 Got information on how and why people use self-tracking. And the answers were various, from answers on goals for studying more to period tracking and psychological help.
 
-## Week 8 - 9
+## Week 8 - 12
 
-## Week 10 - 12
+My final weeks have been spent on writing text instead of developing the project further. Need to write a report about what I did and what I will be doing for my thesis.
