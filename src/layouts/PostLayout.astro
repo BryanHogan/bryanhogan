@@ -6,6 +6,8 @@ import { generateToC } from "../components/TableOfContents/generateToC";
 import { Icons } from "../components/Icons";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import { getReadingTime } from "../utils/reading-time";
+import CompactPostsList from "../components/CompactPostsList.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -20,6 +22,10 @@ const indexOfPost = allPosts.findIndex(
     (posts) => post.data.title === posts.data.title,
 );
 const { headings } = await post.render();
+
+const sameTagPosts = allPosts.filter(
+    (posts) => posts.data.tags && posts.data.tags[0] === post.data.tags[0],
+);
 ---
 
 <Layout
@@ -48,8 +54,8 @@ const { headings } = await post.render();
         <img
             src={post.data.coverImage.url}
             alt={post.data.coverImage.alt}
-            width=75
-            height=75
+            width="75"
+            height="75"
             transition:name={post.data.coverImage.url}
         />
     </div>
@@ -134,6 +140,8 @@ const { headings } = await post.render();
                     ) : null
                 }
             </div>
+            <h2 class="text-align-center margin-inline-auto">Similar Posts</h2>
+            <CompactPostsList posts={sameTagPosts} />
         </div>
         <aside>
             <div class="toc">
@@ -243,13 +251,13 @@ const { headings } = await post.render();
                 );
             }
         }
-        & :global(code), & :global(code span), & :global(pre)  {
+        & :global(code),
+        & :global(code span),
+        & :global(pre) {
             background-color: var(--color-main-dark-brighter);
             border-radius: 4px;
             color: var(--color-side-accent);
-		    font-family:
-                Menlo,
-                monospace;
+            font-family: Menlo, monospace;
             overflow-x: hidden;
             max-width: 100%;
         }
@@ -257,9 +265,7 @@ const { headings } = await post.render();
             background-color: var(--color-main-dark-brighter);
             border-radius: 4px;
             color: var(--color-side-accent);
-            font-family:
-                Menlo,
-                monospace;
+            font-family: Menlo, monospace;
             padding: 1em;
             overflow-x: auto;
         }
