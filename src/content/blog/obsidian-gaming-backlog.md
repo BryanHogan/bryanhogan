@@ -74,7 +74,7 @@ Now we got our first game entry! But how do we display them in a pretty way? How
 ## Using the "Projects" plugin
 A simple way for managing your game entries is by using the "Projects" plugin.
 
-Download a community plugin by first enabling them, then downloading `Projects`by Marcus Olsson and then activating it in the `Community plugins`tab inside your settings.
+Download a community plugin by first enabling them, then downloading `Projects` by Marcus Olsson and then activating it in the `Community plugins` tab inside your settings.
 
 Now right click the folder that contains your game entries and select `Create project in folder`. Use the default settings.
 
@@ -94,7 +94,7 @@ To display each note with its corresponding cover image select `Cover`on the top
 
 Now we are done! Looking for a new game to play? Sort through your game notes by filtering to `Ready To Play` only. Add additional properties like `Interest` to list games that interest you more higher.
 
-## Using dataview plugin plus CSS snippets
+## Using the "dataview" plugin with CSS snippets
 Another way to display the game entries can be achieved by using the `Dataview` plugin and CSS snippets.
 
 Get the `Dataview` plugin and activate it.
@@ -103,29 +103,33 @@ Create a new note (**not** part of the Games or Template folder) and call it "Ga
 
 Then add the following code:
 
-```
+````
+```dataview
 TABLE "![cover|20](" + cover + ")" AS "Cover", status
 FROM "Games"
 ```
+````
 
+How it should look in source mode:
 
+![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-Code.png)
 
-(image dataview code)
+How it should look in reading mode:
 
-Above is how it should look in source mode. Below is how it should look in reading mode.
-
-(image dataview reading mode setup)
+![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-Reading-Mode-Setup.png)
 
 As you can see, the images are a bit too small and everything is displayed as a table, we don't want that. We can change this by utilising CSS snippets, this allows us to change how content is shown without changing the actual content.
 
-We will use two snippets: Cards and Wide Views. (insert download link)
-*The content of these CSS came from these Obsidian discussions: (insert)* (make small?)
+We will use two snippets: Cards and Wide Views.  
+Download them: <a href="/documents/Obsidian-Cards-Snippet.css" download="Obsidian-Cards-Snippet">Cards Snippet Download</a> & <a href="/documents/Obsidian-Wide-Views-Snippet.css" download="Obsidian-Wide-Views-Snippet">Wide Views Snippet Download</a>.
+
+<small>The content of these CSS files came from the Obsidian community forum: [Dataview Cards snippet discussion](https://forum.obsidian.md/t/snippet-so-you-can-use-dataview-cards-from-minimal-theme-in-any-theme/56866/5) and [Modular css layout Github](https://github.com/efemkay/obsidian-modular-css-layout)</small>.
 
 Go into settings, then `Appearance`, then scroll down and include these two files in the `CSS snippets` folder. Reload and activate them.
 
-Add the property `cssclasses` to the note where you want to display the backlog of your games. Add the text `cards`and `cards-16-9` to this new property.
+Add the property `cssclasses` to the note where you want to display the backlog of your games. Add the text `cards` and `cards-16-9` to this new property.
 
-(image cssclasses added)
+![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-cssclasses-Added.png)
 
 Now we are mostly finished! This list shows all entries you have included in your folder with an image that's sized for human eyes. 
 
@@ -133,25 +137,27 @@ But we haven't used the `Wide Views` CSS snippet yet. So what do we use it for? 
 
 Include `wide-dataview` (and make sure both CSS snippets are active in the settings) and voilà! Less wasted space, I think this makes this view much nicer.
 
-(image wideview added)
+![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-wideview-Added.png)
 
 If you want to use additional filters we have to include them in the dataview code. For example if you want to display Games which you are currently playing you'd use this code:
-```
+````
+```dataview
 TABLE "![cover|20](" + cover + ")" AS "Cover", status
 FROM "Games"
 WHERE status = "Playing"
 ```
+````
 
 ChatGPT or any other LLM tool can be very helpful in writing these filters if they are confusing to you :)
 
-- Get dataview plugin
-- get styles
-- create overview notes
-- paste code
+And that's it! 🎉 Enjoy your game library in Obsidian!
 
-And that's it 🎉
+## More? Book backlog?
+As you might have already noticed the system is very flexible and you can include anything you want, it's not limited to games. I am also using this system for an overview of all the books I have and want to read.
 
-## Book library?
-System is flexible, can make a folder anything you want. 
+If you don't feel ready yet to actually play your games or read your books yet you can spend further time on your setup.  
+Here are some suggestions on how you can enhance it:
+- The [Game Search Plugin](https://obsidian.md/plugins?id=game-search). With it you can quickly make new game entries and automatically add metadata information such as release date, publisher, Metacritic score and more.
+- Using the [Metadata Menu Plugin](https://obsidian.md/plugins?id=metadata-menu). With it you can build custom interactions to adjust and manage the metadata of your notes, but it's a bit complicated.
 
-Enhance with Metadata Menu plugin, scripts for creating notes, web views
+I don't use the Game Search Plugin as I don't find the information it adds useful, but I do use the [Book Search Plugin](https://obsidian.md/plugins?id=obsidian-book-search-plugin).
