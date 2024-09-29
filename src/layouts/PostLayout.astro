@@ -243,13 +243,15 @@ const { headings } = await post.render();
                 );
             }
         }
-        & :global(code) {
+        & :global(code), & :global(code span), & :global(pre)  {
             background-color: var(--color-main-dark-brighter);
             border-radius: 4px;
             color: var(--color-side-accent);
 		    font-family:
                 Menlo,
                 monospace;
+            overflow-x: hidden;
+            max-width: 100%;
         }
         & :global(pre) {
             background-color: var(--color-main-dark-brighter);
