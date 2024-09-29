@@ -30,7 +30,7 @@ You can also use both of these methods with no additional overhead other than se
 Start by creating a new Vault, or by creating a new folder in your existing Vault.  
 Add a folder in which you will be adding the games, each note in that folder represents one game.
 
-You will want to create a template for these game entries. In this template we want to define meta data that each game entry will use. In this example I will use the following properties: `Creation Date`, `Type`, `Cover`, `Status`, and `Game Tags`.
+You will want to create a template for these game entries. In this template we want to define the metadata that each game entry will use. In this example I will use the following properties: `Creation Date`, `Type`, `Cover`, `Status`, and `Game Tags`.
 
 To create the template create a folder, then create a new note within that folder with the following content:
 
@@ -54,7 +54,7 @@ In the settings under "Core Plugins" define the location of your templates folde
 
 ![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Template-Settings.png)
 
-By going to a game note and pressing `ctrl + p`, then searching for `Templates: Insert template` you can insert the template. It's also possible to chose a custom shortcut to insert templates in the Obsidian settings.
+By going to a game note and pressing `ctrl + p`, then searching for `Templates: Insert template` you can insert the template. It's also possible to choose a custom shortcut to insert templates in the Obsidian settings.
 
 After inserting the template and filling in the relevant information for the game your note could look like this:
 
@@ -80,7 +80,7 @@ Now right click the folder that contains your game entries and select `Create pr
 
 ![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Create-Project.png)
 
-Now when you can click on `Open projects` icon on the far left. You will get a view that should look somewhat like the following. 
+Now you can click on the `Open projects` icon on the far left. You will get a view that should look somewhat like the following. 
 
 ![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Projects-First-View.png)
 
