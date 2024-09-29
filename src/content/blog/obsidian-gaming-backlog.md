@@ -22,7 +22,7 @@ How it looks using way 1, the "Projects" plugin:
 
 How it looks using way 2, "dataview" plugin with custom styling via CSS snippets:
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-wideview-Added.png)
+![Obsidian game library view using the "Dataview" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-wideview-Added.png)
 
 You can also use both of these methods with no additional overhead other than setting them up both.
 
@@ -45,24 +45,24 @@ Game Tags:
 ```
 
 The template would then look like this:
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Template-Setup.png)
+![Obsidian game template example](../../assets/blog/Obsidian-Game-Library-Template-Setup.png)
 
 
 The property type of all of these will be `Text`, with the exception of `Game Tags` which is a `List`.
 
 In the settings under "Core Plugins" define the location of your templates folder, in my case it is "Templates".
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Template-Settings.png)
+![Obsidian Templates settings](../../assets/blog/Obsidian-Game-Library-Template-Settings.png)
 
 By going to a game note and pressing `ctrl + p`, then searching for `Templates: Insert template` you can insert the template. It's also possible to choose a custom shortcut to insert templates in the Obsidian settings.
 
 After inserting the template and filling in the relevant information for the game your note could look like this:
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Game-Entry-Example.png)
+![Obsidian Cult of the Lamb game entry note](../../assets/blog/Obsidian-Game-Library-Game-Entry-Example.png)
 
 For the cover image I like to usually use the Steam capsules of the game. You can get the link to them by opening the steam store in the browser and right clicking the capsule image to select `open image in new tab`, then copy the link at the top.
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Steam-Cover-Image.png)
+![Steam Cult of the Lamb store page with right click on banner image example](../../assets/blog/Obsidian-Game-Library-Steam-Cover-Image.png)
 
 But you can use any image, you can enter online links like I did or use local images that you have downloaded.
 
@@ -78,11 +78,11 @@ Download a community plugin by first enabling them, then downloading `Projects` 
 
 Now right click the folder that contains your game entries and select `Create project in folder`. Use the default settings.
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Create-Project.png)
+![Obsidian right click example with Projects plugin installed](../../assets/blog/Obsidian-Game-Library-Create-Project.png)
 
 Now you can click on the `Open projects` icon on the far left. You will get a view that should look somewhat like the following. 
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Projects-First-View.png)
+![Obsidian Projects Table view](../../assets/blog/Obsidian-Game-Library-Projects-First-View.png)
 
 The Projects plugin allows us to adjust this table however we want. We can also apply filters. You can sort them however you want, or filter by the `Game Tags` you have added.
 
@@ -90,7 +90,7 @@ One view that might be a bit cooler than the Table view is the Gallery view. Add
 
 To display each note with its corresponding cover image select `Cover`on the top right, then select `Cover Image`. Now it takes the image we have added on each note in the `Cover Image` property and displays it in this gallery view.
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Projects-Gallery-View.png)
+![Obsidian Projects plugin gallery view with correct cover image selected](../../assets/blog/Obsidian-Game-Library-Projects-Gallery-View.png)
 
 Now we are done! Looking for a new game to play? Sort through your game notes by filtering to `Ready To Play` only. Add additional properties like `Interest` to list games that interest you more higher.
 
@@ -112,11 +112,11 @@ FROM "Games"
 
 How it should look in source mode:
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-Code.png)
+![Obsidian game overview note dataview code example in source mode](../../assets/blog/Obsidian-Game-Library-Dataview-Code.png)
 
 How it should look in reading mode:
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-Reading-Mode-Setup.png)
+![Obsidian game overview note dataview query in read mode](../../assets/blog/Obsidian-Game-Library-Dataview-Reading-Mode-Setup.png)
 
 As you can see, the images are a bit too small and everything is displayed as a table, we don't want that. We can change this by utilising CSS snippets, this allows us to change how content is shown without changing the actual content.
 
@@ -129,7 +129,7 @@ Go into settings, then `Appearance`, then scroll down and include these two file
 
 Add the property `cssclasses` to the note where you want to display the backlog of your games. Add the text `cards` and `cards-16-9` to this new property.
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-cssclasses-Added.png)
+![Obsidian game overview note with cssclasses for styling added](../../assets/blog/Obsidian-Game-Library-Dataview-cssclasses-Added.png)
 
 Now we are mostly finished! This list shows all entries you have included in your folder with an image that's sized for human eyes. 
 
@@ -137,7 +137,7 @@ But we haven't used the `Wide Views` CSS snippet yet. So what do we use it for? 
 
 Include `wide-dataview` (and make sure both CSS snippets are active in the settings) and voilà! Less wasted space, I think this makes this view much nicer.
 
-![Obsidian game library view using the "Projects" plugin](../../assets/blog/Obsidian-Game-Library-Dataview-wideview-Added.png)
+![Obsidian game overview note with css class added for wide view](../../assets/blog/Obsidian-Game-Library-Dataview-wideview-Added.png)
 
 If you want to use additional filters we have to include them in the dataview code. For example if you want to display Games which you are currently playing you'd use this code:
 ````
