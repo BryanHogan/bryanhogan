@@ -24,7 +24,10 @@ const indexOfPost = allPosts.findIndex(
 const { headings } = await post.render();
 
 const sameTagPosts = allPosts.filter(
-    (posts) => posts.data.tags && posts.data.tags[0] === post.data.tags[0],
+    (posts) => 
+        posts.data.tags && 
+        posts.data.tags[0] === post.data.tags[0] && 
+        posts.data.title !== post.data.title
 );
 ---
 
@@ -140,8 +143,12 @@ const sameTagPosts = allPosts.filter(
                     ) : null
                 }
             </div>
-            <h2 class="text-align-center margin-inline-auto">Similar Posts</h2>
-            <CompactPostsList posts={sameTagPosts} />
+            {sameTagPosts.length > 0 && (
+                <>
+                    <h2 class="text-align-center margin-inline-auto">Similar Posts</h2>
+                    <CompactPostsList posts={sameTagPosts} />
+                </>
+            )}
         </div>
         <aside>
             <div class="toc">
