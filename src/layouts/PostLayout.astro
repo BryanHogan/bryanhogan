@@ -261,20 +261,18 @@ const sameTagPosts = allPosts.filter(
         & :global(code),
         & :global(code span),
         & :global(pre) {
-            background-color: var(--color-main-dark-brighter);
             border-radius: 4px;
             color: var(--color-side-accent);
             font-family: Menlo, monospace;
-            overflow-x: hidden;
+            overflow-x: auto;
             max-width: 100%;
+            background-color: var(--color-main-dark-brighter) !important;
+        }
+        & :global(code) {
+            background-color: var(--color-main-dark-brighter) !important;
         }
         & :global(pre) {
-            background-color: var(--color-main-dark-brighter);
-            border-radius: 4px;
-            color: var(--color-side-accent);
-            font-family: Menlo, monospace;
             padding: 1em;
-            overflow-x: auto;
         }
         & :global(.footnotes) {
             margin: 0px;
