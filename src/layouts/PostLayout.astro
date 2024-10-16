@@ -217,11 +217,11 @@ const sameTagPosts = allPosts.filter(
         }
         & :global(ol) {
             list-style: decimal;
-            word-break: break-word;
+            overflow-wrap: anywhere;
         }
         & :global(ul) {
             list-style: disc;
-            word-break: break-word;
+            overflow-wrap: anywhere;
         }
         & :global(blockquote) {
             border-left: 2px solid var(--color-main-accent);
