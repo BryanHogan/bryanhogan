@@ -234,12 +234,12 @@ const sameTagPosts = allPosts.filter(
         }
         & :global(table) {
             border-collapse: collapse;
-            width: fit-content;
             max-width: 100%;
             border: 2px solid var(--color-main-bright);
-            display: block;
             margin-inline: auto;
-            overflow-x: auto;
+            display: block;
+        	overflow: auto;
+            border-spacing: 0;
             & :global(td) {
                 border: 1px solid var(--color-main-bright);
                 padding-block: 12px;
