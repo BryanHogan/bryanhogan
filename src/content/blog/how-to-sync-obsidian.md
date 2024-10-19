@@ -88,7 +88,6 @@ I already back-up my Vaults to Github from time to time. But you can take it a s
 The most straightforward way to synchronize with git is to use the Obsidian plugin [Git](https://github.com/denolehov/obsidian-git).  
 Their github repo also includes a [installation guide for mobile devices](https://github.com/denolehov/obsidian-git/wiki/Installation).
 
-If their explanation leaves you with question you might want to check out this Obsidian forum post on how to use Git to sync between Linux Debian and an iPad.
 There is also a guide on the Obsidian forums on [how to sync between Linux Debian and an iPad](https://forum.obsidian.md/t/yet-another-obsidian-git-tutorial-desktop-pc-ipad-sync/67531) that includes **all the steps** needed to do so.
 
 [^1]: [Reddit: Did Google Remove the $1.99 (100GB) Option?](https://www.reddit.com/r/GoogleOne/comments/zzertm/did_google_remove_the_199_100gb_option/) and [Google One is playing hide-and-seek with its 200GB plan](https://www.androidcentral.com/apps-software/google-one-hides-200gb-plan)
