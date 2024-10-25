@@ -6,7 +6,7 @@ coverImage:
   url: /post-covers/Obsidian-Sync-Cover.svg
   alt: Obsidian logo inside a synchronisation icon.
 pubDate: 2024-06-09T21:48:59Z
-lastUpdate: 2024-06-09T21:48:59Z
+lastUpdate: 2024-10-25T11:01:07Z
 tags:
   - obsidian
   - productivity
@@ -18,14 +18,14 @@ There are a few ways on how to sync your Obsidian vaults between multiple device
 - **Google Drive** - Use Google Drive tools to sync local files between devices.
 - **Github** - Push and pull your Vaults to a Github repository. 
 
-Other possible options: OneDrive, iCloud and Dropbox.
+Other possible options similar to Google Drive: OneDrive, iCloud and Dropbox.[^1]
 
 Which synchronization tool is best for your use case?
 
 I have tested the Windows and Android environments myself. I will include references to options for Linux and the apple ecosystem.
-I have used all of these options to sync between my Windows 10 desktop, Windows 10 laptop and Android phone.
+I have used all of these options to sync between my Windows 10 / 11 desktop, Windows 10 / 11 laptop and Android phone.
 
-Obsidian is an amazing tool, but the price of its Obsidian Sync feels exorbitant to many. There are free options such as Syncthing or Github. Or you might already be using a sync tool for your images or documents like Google Drive, might as well include your Vaults in there then.
+Obsidian is an amazing tool, but the price of its Obsidian Sync feels a bit too high to many. There are free options such as Syncthing or Github. Or you might already be using a sync tool for your images or documents like Google Drive, might as well include your Vaults in there then.
 
 I will go over how each tool works, what's it strength and weaknesses are and how to set them up.
 
@@ -65,7 +65,7 @@ Syncthing is also not a long-term backup tool, back-up your files in a way that 
 
 ### Google Drive Desktop
 This is the solution I currently use.  
-The less private option compared to Syncthing is using Google Drive. There are some annoyances with Google One, the service which includes extra storage space for your Google Drive, like Google actively hiding its cheaper options[^1]. But otherwise this option works great.
+The less private option compared to Syncthing is using Google Drive. There are some annoyances with Google One, the service which includes extra storage space for your Google Drive, like Google actively hiding its cheaper options.[^2] But otherwise this option works great.
 
 [This Obsidian forum post](https://forum.obsidian.md/t/sync-mobile-app-through-google-drive-android-windows10/20891) explains how to use Google Drive to sync between multiple devices.
 
@@ -73,7 +73,7 @@ To summarize it:
 The sync your local files on your desktop with Google Drive download [ Google Drive for Desktop](https://www.google.com/drive/download/). Set up your folder to be shared with Google Drive, [this Google support page](https://support.google.com/drive/answer/10838124) explains how to.  
 To sync on your Android device get [Autosync for Google Drive](https://play.google.com/store/apps/details?id=com.ttxapps.drivesync&hl=en) and set it up.
 
-There are also multiple options for Linux: [grive2](https://github.com/vitalif/grive2), [Insync](https://www.insynchq.com/), [drive](https://github.com/odeke-em/drive)
+There are also multiple options for Linux: [grive2](https://github.com/vitalif/grive2), [Insync](https://www.insynchq.com/)
 
 **Adding another desktop device to sync with Google Drive Desktop:**
 
@@ -90,4 +90,5 @@ Their github repo also includes a [installation guide for mobile devices](https:
 
 There is also a guide on the Obsidian forums on [how to sync between Linux Debian and an iPad](https://forum.obsidian.md/t/yet-another-obsidian-git-tutorial-desktop-pc-ipad-sync/67531) that includes **all the steps** needed to do so.
 
-[^1]: [Reddit: Did Google Remove the $1.99 (100GB) Option?](https://www.reddit.com/r/GoogleOne/comments/zzertm/did_google_remove_the_199_100gb_option/) and [Google One is playing hide-and-seek with its 200GB plan](https://www.androidcentral.com/apps-software/google-one-hides-200gb-plan)
+[^1]: Synching with Dropbox, OneDrive, Yandex Disk etc. is also possible. There's this [remotely save plugin](https://github.com/remotely-save/remotely-save) which needs a bit of setup but seems to help, though I have not personally tested it.
+[^2]: [Reddit: Did Google Remove the $1.99 (100GB) Option?](https://www.reddit.com/r/GoogleOne/comments/zzertm/did_google_remove_the_199_100gb_option/) and [Google One is playing hide-and-seek with its 200GB plan](https://www.androidcentral.com/apps-software/google-one-hides-200gb-plan)
