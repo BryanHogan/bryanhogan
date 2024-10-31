@@ -24,14 +24,14 @@ This is also heavily rooted into the language. There are 7 different speech leve
 So the older person usually talks "down" to the younger person, and the younger person has to talk "up" to show the older person more respect.  
 The younger person also addresses the older person, usually with a title or another word that fits their relationship, but not their name. Only the older person addresses the younger one with their name. (*There can be more nuance.*)
 
-Translating "you" into Korean is quite interesting since it is hard to translate that word directly. Instead you can:  
+Using "you" in Korean is quite interesting since the direct translation 너 / neo is often too rude. Instead you can:  
 - Just don’t, omit the “you”
 - Use titles instead ("선생님 / seonsaengnim" for teacher, "사장님 / sajangnim" for manager)
 - Use "언니 / Unnie" , "오빠 / Oppa", "누나 / Noona" or "형 / Hyung" (for an older friend)
 - "그쪽 / geujjok" (stranger momentarily, can be rude, avoided by many)
 - Name + 씨 / ssi
 - 당신 / dangsin (spouse, songs, speeches)
-- 너 / neo (highly impolite, good for starting fights, okay for friends)
+- 너 / neo (it's highly impolite, good for starting fights, okay for close friends)
 
 So one of the main reasons why age matters in Korea is to understand the relation between the two of you.
 
