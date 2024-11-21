@@ -39,7 +39,7 @@ Things to get when you arrive in Korea:
 </details>
 
 ## Great locations in Seoul to visit
-Seoul is actually quite large with many different areas that can feel totally different. I still feel like there are so many things I haven't seen here yet, I love going outside here and exploring new places. Before coming to Korea I have never felt like this about traveling.
+Seoul is actually quite large with many different areas that can feel totally different. I still feel like there are so many things I haven't seen here yet, I love going outside and exploring new places. Before coming to Korea I have never felt like this about traveling.
 
 The Seoul Metropolitan Government has officially declared 7 tourist zones in Seoul[^1] [^2]:
 
@@ -60,7 +60,7 @@ Some favourites of mine in no particular order:
 A more modern area of Seoul. Known for its modern feel and vibrant nightlife. But also by day it's great with many restaurants, cafes, clothing shops and more. I can highly recommend walking along the Red Road (Eoulmadang-ro), either start at Sogang Univ. Station or start on the other side in the Mapo Saebit Culture Forest near Hapjeong station.
 
 **Yeonnam.** (연남)  
-Directly north of Hongdae you can find Yeonnam, a smaller area filled with the prettiest cafes. Yeonnam's streets are narrow and winding, giving it a more cozy feel.
+Directly north of Hongdae you can find Yeonnam, a smaller area filled with the prettiest cafes. Yeonnam's streets are narrow, giving it a more cozy feel.
 
 **Jong-ro.** (종로)  
 There are many great areas in Jong-ro, since it's a bit larger. There are multiple train stations here with many things to see. Like the area around Jonggak station (종각역) is always enjoyable. The areas around Gyeongbokgung Palace, except the north, are also all great. There's even <a href="https://www.jongno.go.kr/englishMain.do" target="_blank">website all about Jongno</a> with recommendations on where to go, like the traditional Bukchon Hanok Village.
@@ -68,7 +68,7 @@ There are many great areas in Jong-ro, since it's a bit larger. There are multip
 **City Hall Station.** (시청역)  
 The area surrounding City Hall station is also really nice, it's the historical center of Seoul.
 
-You also have Myeong-dong directly to the east, a popular shopping area of Seoul that has become more of a tourist trap with highly overpriced meals recently. But it's offering of street food in the evening is still enjoyable.
+You also have Myeong-dong directly to the east, a popular shopping area of Seoul that has become more of a tourist trap with highly overpriced meals recently. But its offering of street food in the evening is still enjoyable.
 
 If I had to recommend 3 things for any tourist visiting Korea I'd say:
 - Gyeognbokgung Palace / 경복궁 (<a href="https://naver.me/FLBKTWSB" target="_blank">Naver Maps</a>)
@@ -88,7 +88,7 @@ If you are planning to stay in Korea only for a short period I can recommend you
 - Hotels in Korea are also amazing and the great service culture of South Korea also shines through here.
 - AirBNBs are good since you can avoid the high price spikes you usually see on the weekend or holidays.
 
-Sometimes it's hard to get the vibe and elevation of the area without having visited it before though. But Korea is always safe so there's no need to worry about landing in an unsafe area.
+Sometimes it's hard to get the vibe and elevation of the area without having visited it before though. But Korea is very safe so there's no need to worry about landing in a bad area.
 
 Many hotels in Korea are also motels, the Korean expression for a love hotel. A love hotel is just a normal hotel but it also has the option for "rest" stays, so staying just for a few hours instead of the night.
 
@@ -96,7 +96,7 @@ Many hotels in Korea are also motels, the Korean expression for a love hotel. A 
 For long-term stays you have multiple options usually: Dormitory, Share house, Goshiwon/Goshitel,
 AirBnB
 
-If you are doing an exchange semester I would highly recommend you to try getting into the university's dormitory, you will be able to meet and stay nearby many like-minded exchange students and it's easy to get to class. What I enjoyed doing was staying at a Goshiwon before and after the semester but to live in the dormitory during it. 
+If you are doing an exchange semester I would highly recommend you to try to get into the university's dormitory, you will be able to meet and stay nearby many like-minded exchange students and it's easy to get to class. What I enjoyed doing was staying at a Goshiwon before and after the semester but to live in the dormitory during it. 
 
 - **Goshiwon / Goshitel:** A Goshiwon is a small one person room. A Goshitel is a place that contains many of these Goshiwon. They are usually quite affordable but very small, so small that you can take only one or two steps.
 - **Dormitory:** Universities usually have a dormitory for their students to live in. Although spots can be limited and not everyone is able to get in. From my experience they are by far the cheapest option, even much cheaper than Goshiwons.
@@ -104,7 +104,7 @@ If you are doing an exchange semester I would highly recommend you to try gettin
   But dormitories in Korea often have weird rules and gender separation here is very strict. It is also common to share these rooms with one or more people.
 - **Share house:** There are many share houses in Korea but finding one can be a bit hard. You will also find similar things under the names of "Boarding house" or "Guest house". In a share house you usually have your own room but things like the kitchen and bathroom are shared.
 
-Accommodations in most areas of Seoul are usually more expensive than outside.
+Accommodations in most areas of Seoul are usually more expensive than outside of Seoul.
 
 ## Infrastructure: Using trains, buses and taxis
 Getting around Seoul is mostly easy and comfortable. Before going to Korea I would have never imagined how big the impact of a functional train system is on my quality of life.
