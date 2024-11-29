@@ -9,6 +9,7 @@ import DecoImage from "../assets/images/deco-index.png";
 import CardGrid from "../components/CardGrid.astro";
 import CardC from "../components/CardC.astro";
 import CardCSection from "../components/CardCSection.astro";
+import SubtleButton from "../components/SubtleButton.astro";
 import { mastodon, instagram, threads, bluesky, github } from "../data/socials";
 import { getCollection, getEntry } from "astro:content";
 import { Icons } from "../components/Icons";
@@ -119,7 +120,7 @@ const popularBlogPost = await getEntry("blog", "obsidian-zettelkasten");
             fill="currentColor"
             set:html={Icons["rightarrow"]}
           />
-          <a href="/now"> Read more </a>
+          <a href="/now">Read more</a>
         </div>
       </CardC>
 
@@ -147,14 +148,7 @@ const popularBlogPost = await getEntry("blog", "obsidian-zettelkasten");
           </a>
         </div>
       </CardC>
-      <CardC
-        title="All Projects"
-        titlehref="/projects"
-        icon="pen"
-        backgroundColor="var(--color-side-accent-d)"
-      >
-        <p>Currently building an overview page of all my projects :)</p>
-      </CardC>
+      <SubtleButton title="View all projects" href="/projects" />
       <h2>Socials</h2>
       <CardC
         title="Instagram"
@@ -185,43 +179,25 @@ const popularBlogPost = await getEntry("blog", "obsidian-zettelkasten");
       </CardC>
       <CardC
         title="Mastodon, Bsky & Threads"
-        titlehref="/blog"
+        titlehref={threads.href}
         icon="threads"
         external
         backgroundColor="var(--color-side-accent-d)"
       >
-        <p>Find me on Mastodon, BlueSky and Threads.</p>
-        <ul style="list-style-type: circle; padding-left: 1.5rem;">
-          <li><a href={mastodon.href} target="_blank">Mastodon</a></li>
-          <li><a href={bluesky.href} target="_blank">BlueSky</a></li>
-          <li><a href={threads.href} target="_blank">Threads</a></li>
-        </ul>
+        <p>
+          Find me on <a href={mastodon.href} target="_blank">Mastodon</a>, <a
+            href={bluesky.href}
+            target="_blank">BlueSky</a
+          > and <a href={threads.href} target="_blank">Threads</a>.
+        </p>
       </CardC>
-      <CardC
-        title="GitHub"
-        titlehref="https://github.com/BryanHogan/"
-        icon="github"
-        external
-        backgroundColor="var(--color-side-accent-a)"
-      >
-        <p>My GitHub profile.</p>
-        <div slot="last-row">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 26 26"
-            fill="currentColor"
-            set:html={Icons["rightarrow"]}
-          />
-          <a href={github.href} target="_blank"> Bryan's GitHub </a>
-        </div>
-      </CardC>
+      <p></p>
 
       <h2>Blog</h2>
 
       <CardC
         title="Blog Introduction"
-        titlehref="/blog"
+        titlehref="/blog-introduction"
         icon="lightbulb"
         backgroundColor="var(--color-side-accent-d)"
       >
@@ -257,27 +233,7 @@ const popularBlogPost = await getEntry("blog", "obsidian-zettelkasten");
             ))
         }
       </CardC>
-      <CardC
-        title="Popular Post"
-        titlehref="/blog"
-        icon="star"
-        backgroundColor="var(--color-side-accent-d)"
-      >
-        <p><strong>{popularBlogPost.data.title}</strong></p>
-        <p>{popularBlogPost.data.description}</p>
-        <div slot="last-row">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 26 26"
-            fill="currentColor"
-            set:html={Icons["rightarrow"]}
-          />
-          <a href={`/blog/${popularBlogPost.slug}`} target="_self">
-            Read post
-          </a>
-        </div>
-      </CardC>
+      <SubtleButton title="See all blog posts" href="/blog" />
     </CardGrid>
   </section>
 </Layout>
