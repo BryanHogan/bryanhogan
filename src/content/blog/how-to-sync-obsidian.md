@@ -6,7 +6,7 @@ coverImage:
   url: /post-covers/Obsidian-Sync-Cover.svg
   alt: Obsidian logo inside a synchronisation icon.
 pubDate: 2024-06-09T21:48:59Z
-lastUpdate: 2024-10-25T11:01:07Z
+lastUpdate: 2024-11-29T23:57:50Z
 tags:
   - obsidian
   - productivity
@@ -42,7 +42,7 @@ A comparison overview of different tools to synchronize your Obsidian Vaults:
 *I wrote "free" in quotes when that option isn't really free, you pay with your data and the control of your files lie in someone else's hands. Free tier could be removed at any moment.*
 
 ### SyncThing
-[Syncthing](https://syncthing.net/) is a truly free and open-source tool to synchronize files between two or more devices.
+Syncthing is a truly free and open-source tool to synchronize files between two or more devices. Since December 2024 the official Syncthing is not the in PlayStore anymore, but there's an improved [Syncthing fork on f-droid](https://f-droid.org/en/packages/com.github.catfriend1.syncthingandroid/).[^3]
 
 It can connect two or more of your devices directly, they then send the files to each other. This means your files never enter someone else's system.
 
@@ -92,3 +92,4 @@ There is also a guide on the Obsidian forums on [how to sync between Linux Debia
 
 [^1]: Synching with Dropbox, OneDrive, Yandex Disk etc. is also possible. There's this [remotely save plugin](https://github.com/remotely-save/remotely-save) which needs a bit of setup but seems to help, though I have not personally tested it.
 [^2]: [Reddit: Did Google Remove the $1.99 (100GB) Option?](https://www.reddit.com/r/GoogleOne/comments/zzertm/did_google_remove_the_199_100gb_option/) and [Google One is playing hide-and-seek with its 200GB plan](https://www.androidcentral.com/apps-software/google-one-hides-200gb-plan)
+[^3]: Another alternative is [Resilio](https://www.resilio.com/sync/), which like SyncThing is a P2P sync solution.
