@@ -83,11 +83,12 @@ const {
         margin-bottom: 5px;
     }
     h3 {
-        text-decoration: underline;
-        text-underline-offset: 6px;
         width: fit-content;
         display: inline;
         margin-right: 0.25rem;
+    }
+    a {
+        text-decoration: none;
     }
     a,
     * :global(a) {
@@ -105,8 +106,12 @@ const {
     li .last-row {
         display: flex;
         flex-direction: row;
+        align-items: center;
         flex-wrap: wrap;
         margin-top: auto;
+        :global(svg) {
+            vertical-align: middle;
+        }
     }
     .last-row :global(> *) {
     }

@@ -9,11 +9,13 @@ import DecoImage from "../assets/images/deco-index.png";
 import CardGrid from "../components/CardGrid.astro";
 import CardC from "../components/CardC.astro";
 import CardCSection from "../components/CardCSection.astro";
-import { mastodon, instagram, threads } from "../data/socials";
-import { getCollection } from "astro:content";
+import { mastodon, instagram, threads, bluesky, github } from "../data/socials";
+import { getCollection, getEntry } from "astro:content";
+import { Icons } from "../components/Icons";
 const allPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
+const popularBlogPost = await getEntry("blog", "obsidian-zettelkasten");
 ---
 
 <Layout
@@ -74,10 +76,11 @@ const allPosts = (await getCollection("blog")).sort(
       <li><a href="/ideas">Ideas</a></li>
     </ul>
     <CardGrid>
+      <h2>Projects</h2>
       <CardC
         title="ToLearnKorean.com"
         titlehref="https://tolearnkorean.com/"
-        icon="external"
+        icon="book"
         external
         backgroundColor="var(--color-side-accent-a)"
       >
@@ -85,6 +88,18 @@ const allPosts = (await getCollection("blog")).sort(
           Made a website for anyone wanting to learn Korean. Sharing alongside
           my personal learning.
         </p>
+        <div slot="last-row">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 26 26"
+            fill="currentColor"
+            set:html={Icons["rightarrow"]}
+          />
+          <a href="https://tolearnkorean.com/" target="_blank">
+            Visit ToLearnKorean.com
+          </a>
+        </div>
       </CardC>
       <CardC
         title="Self-track App Project"
@@ -92,56 +107,55 @@ const allPosts = (await getCollection("blog")).sort(
         icon="pen"
         backgroundColor="var(--color-side-accent-b)"
       >
-      <p>
-        Building an app for journaling and self-tracking. Writing my bachelor thesis on this app as well.
-      </p>
-      </CardC>
-      <CardC
-        title="Blog 💜"
-        titlehref="/blog"
-        icon="star"
-        gridHeight={"3"}
-        backgroundColor="var(--color-side-accent-b)"
-      >
-      <CardCSection 
-        title="Blog Introduction"
-        text="Take a look at my blog introduction if you are new here."
-        href="/blog-introduction"
-        buttonText="See blog introduction"
-      />
-      {
-        allPosts.slice(0, 2).map((post) => (
-          <CardCSection
-            title={post.data.title}
-            text={post.data.description}
-            href={`/blog/${post.slug}/`}
-            buttonText="Read post"
+        <p>
+          Building an app for journaling and self-tracking. Writing my bachelor
+          thesis on this app as well.
+        </p>
+        <div slot="last-row">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 26 26"
+            fill="currentColor"
+            set:html={Icons["rightarrow"]}
           />
-        ))
-      }
+          <a href="/now"> Read more </a>
+        </div>
       </CardC>
+
       <CardC
-        title="Web Dev Helper & Components"
+        title="Web Dev Guide"
         titlehref="https://webdev.bryanhogan.com/"
         icon="puzzle"
         external
-        backgroundColor="var(--color-side-accent-d)"
+        backgroundColor="var(--color-side-accent-c)"
       >
         <p>
-          Collection of components for any web development project and help for
-          getting started as a web developer.
+          All about how to create a website. HTML & CSS only components
+          included.
         </p>
+        <div slot="last-row">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 26 26"
+            fill="currentColor"
+            set:html={Icons["rightarrow"]}
+          />
+          <a href="https://webdev.bryanhogan.com/" target="_blank">
+            Visit Web Dev guide
+          </a>
+        </div>
       </CardC>
       <CardC
-        title="YouTube"
-        titlehref="/blog"
-        icon="lightbulb"
-        backgroundColor="var(--color-main-dark)"
+        title="All Projects"
+        titlehref="/projects"
+        icon="pen"
+        backgroundColor="var(--color-side-accent-d)"
       >
-        <p>
-          Soon.
-        </p>
+        <p>Currently building an overview page of all my projects :)</p>
       </CardC>
+      <h2>Socials</h2>
       <CardC
         title="Instagram"
         titlehref={instagram.href}
@@ -149,29 +163,120 @@ const allPosts = (await getCollection("blog")).sort(
         external
         backgroundColor="var(--color-side-accent-b)"
       >
-        <p>
-          Instagram is a platform for sharing pictures. Oh, you already knew
-          that and the info is out of date? How about <a
-            href={mastodon.href}
-            target="_blank">my Mastodon</a
-          > or <a href={threads.href}>Threads</a> then, the best place to share Tweets
-          now.
-        </p>
+        <p>I mostly share stories about Korea or things I am building.</p>
+        <div slot="last-row">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 26 26"
+            fill="currentColor"
+            set:html={Icons["rightarrow"]}
+          />
+          <a href={instagram.href} target="_blank"> Bryan's Instagram </a>
+        </div>
+      </CardC>
+      <CardC
+        title="YouTube"
+        titlehref="/blog"
+        icon="youtube"
+        backgroundColor="var(--color-main-dark)"
+      >
+        <p>Soon.</p>
+      </CardC>
+      <CardC
+        title="Mastodon, Bsky & Threads"
+        titlehref="/blog"
+        icon="threads"
+        external
+        backgroundColor="var(--color-side-accent-d)"
+      >
+        <p>Find me on Mastodon, BlueSky and Threads.</p>
+        <ul style="list-style-type: circle; padding-left: 1.5rem;">
+          <li><a href={mastodon.href} target="_blank">Mastodon</a></li>
+          <li><a href={bluesky.href} target="_blank">BlueSky</a></li>
+          <li><a href={threads.href} target="_blank">Threads</a></li>
+        </ul>
+      </CardC>
+      <CardC
+        title="GitHub"
+        titlehref="https://github.com/BryanHogan/"
+        icon="github"
+        external
+        backgroundColor="var(--color-side-accent-a)"
+      >
+        <p>My GitHub profile.</p>
+        <div slot="last-row">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 26 26"
+            fill="currentColor"
+            set:html={Icons["rightarrow"]}
+          />
+          <a href={github.href} target="_blank"> Bryan's GitHub </a>
+        </div>
       </CardC>
 
+      <h2>Blog</h2>
+
       <CardC
-        title="Beku.blue"
-        titlehref="https://buttondown.email/BekuBlue"
-        icon="openbook"
-        external
-        backgroundColor="var(--color-side-accent-c)"
+        title="Blog Introduction"
+        titlehref="/blog"
+        icon="lightbulb"
+        backgroundColor="var(--color-side-accent-d)"
       >
-        <p>
-          Collection of Game Reviews. Page not built yet. You can <a
-            href="https://buttondown.email/BekuBlue"
-            target="_blank">subscribe</a
-          > to Beku.blue by e-mail and get notified when the page is ready.
-        </p>
+        <p>Take a look at my blog introduction if you are new here.</p>
+        <div slot="last-row">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 26 26"
+            fill="currentColor"
+            set:html={Icons["rightarrow"]}
+          />
+          <a href="/blog-introduction">Blog introduction</a>
+        </div>
+      </CardC>
+      <CardC
+        title="Latest Blog Posts"
+        titlehref="/blog"
+        icon="star"
+        gridHeight={"2"}
+        backgroundColor="var(--color-side-accent-b)"
+      >
+        {
+          allPosts
+            .slice(0, 2)
+            .map((post) => (
+              <CardCSection
+                title={post.data.title}
+                text={post.data.description}
+                href={`/blog/${post.slug}`}
+                buttonText="Read post"
+              />
+            ))
+        }
+      </CardC>
+      <CardC
+        title="Popular Post"
+        titlehref="/blog"
+        icon="star"
+        backgroundColor="var(--color-side-accent-d)"
+      >
+        <p><strong>{popularBlogPost.data.title}</strong></p>
+        <p>{popularBlogPost.data.description}</p>
+        <div slot="last-row">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 26 26"
+            fill="currentColor"
+            set:html={Icons["rightarrow"]}
+          />
+          <a href={`/blog/${popularBlogPost.slug}`} target="_self">
+            Read post
+          </a>
+        </div>
       </CardC>
     </CardGrid>
   </section>

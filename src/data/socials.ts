@@ -64,10 +64,16 @@ const socials: Socials = {
         href: "https://mastodon.social/@BryanHogan",
         icon: "mastodon",
         iconalt: "Mastodon logo"
+    },
+    bluesky: {
+        name: "BlueSky",
+        href: "https://bsky.app/profile/bryanhogan.com",
+        icon: "blueSky",
+        iconalt: "BlueSky logo"
     }
 
 }
-export const { instagram, linkedin, youtube, twitch, github, substack, medium, threads, mastodon } = socials;
+export const { instagram, linkedin, youtube, twitch, github, substack, medium, threads, mastodon, bluesky } = socials;
 
 export default socials;
 

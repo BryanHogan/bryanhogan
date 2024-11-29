@@ -1,20 +1,22 @@
 ---
-const {gtcolumns = "1fr 1fr 1fr"} = Astro.props;
+const { gtcolumns = "1fr 1fr 1fr", gtrows = "auto auto auto auto auto" } =
+    Astro.props;
 ---
 
 <ul>
     <slot />
 </ul>
 
-<style define:vars={{ gtcolumns }}>
+<style define:vars={{ gtcolumns, gtrows }}>
     ul {
         display: grid;
+        grid-auto-flow: column;
         grid-template-columns: var(--gtcolumns);
-        grid-template-rows: auto;
+        grid-template-rows: var(--gtrows);
         justify-items: center;
         list-style: none;
         max-width: 1500px;
-        gap: 1.5rem 1.5rem;
+        gap: 1.5rem 3.5rem;
         margin-inline: auto;
         padding-inline: 1rem;
     }
@@ -22,7 +24,14 @@ const {gtcolumns = "1fr 1fr 1fr"} = Astro.props;
         width: 100%;
     }
     @media only screen and (max-width: 699px) {
-        ul {grid-template-columns: 1fr;}
+        ul {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-auto-flow: row;
+            :global(h2) {
+                padding-top: 2rem;
+            }
+        }
     }
     .many-columns {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
