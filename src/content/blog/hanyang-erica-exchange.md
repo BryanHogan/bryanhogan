@@ -9,6 +9,7 @@ pubDate: 2023-11-26
 lastUpdate: 2024-05-16T20:10:05Z
 tags: ["korea", "travel", "university"]
 ---
+
 What is it like to go to South Korea and visit Hanyang University erica as a student from Germany? I will talk about my experience in studying one semester at Hanyang University erica campus for summer 2023.
 
 As part of my studies on Code & Context at TH Köln I was able to do an additional optional semester in which I chose to go abroad. I will talk about my time in Korea from February 2nd 2023 to x which was the last day for me on the erica campus.
@@ -64,13 +65,14 @@ The dormitory is also strictly gender separated and has some other weird rules, 
 ![Hanyang erica dormitory rules](../../assets/blog/Hanyang-Exchange-Dormitory-Rules.jpg)
 
 There are many facilities inside the dormitory building. There's:
+
 - Cafeteria (One side was the university food side & other side had two small restaurant chains and a cafe)
 - Convenience Store (CU)
 - Karaoke Rooms
 - Areas for table tennis and badminton
 
 The cafeteria was only okay but I liked it. The options were always a bit limited but enough. Taste was good enough and it was cheap, but the nutrition and food variety was a bit lacking. Some friends of mine also just preferred to never eat there (there were other cafeterias on campus and nice restaurants right outside the main gate).
-The cafeteria also had very strict opening hours (Breakfast: 07:50~09:00; Lunch: 11:30~13:20; Dinner: 17:10~18:40). Sometimes they would even run out of food before the stated time. So I'd miss the meal and there wasn't even a kitchen where you could have made your own stuff.
+The cafeteria also had very strict opening hours (Breakfast: 07:50~~09:00; Lunch: 11:30~~13:20; Dinner: 17:10\~18:40). Sometimes they would even run out of food before the stated time. So I'd miss the meal and there wasn't even a kitchen where you could have made your own stuff.
 
 It cost me 1.223.600 KRW to stay at the dormitory for 4 months. There also was the option to stay for 6 months which would have cost 1.835.600 KRW.
 
@@ -86,17 +88,21 @@ Hanyang erica had a mentor program called Hanmille buddy program. It pairs up ea
 What kind of buddy you get can be very hit or miss. I had a very pleasant experience and it's also just a great chance for more interaction with Korean students which can be quite rare for many exchange students..
 
 Then there are different events. Like mentioned before, there was one event where clubs would present themselves. But the highlight of the semester was definitely the university festival, which lasted for 3 days. During that time there was:
-- a food street full of food trucks which were offering all kinds of street food. 
+
+- a food street full of food trucks which were offering all kinds of street food.
 - photo booth tents to take pictures together with friends.
 - booths where you could play games and win small prizes.
 - performances by student clubs and popular K-pop artists.
 - after party drinks & food.
+
 ### Courses At Hanyang erica
+
 Hanyang erica had a lot of different courses offered in English and I was very happy with the options they had.
 
 I took the following courses:
-- Visual Communication - Seeing is believing. 
-- Survival Korean - An introduction to Korean, starts at the very basics. 
+
+- Visual Communication - Seeing is believing.
+- Survival Korean - An introduction to Korean, starts at the very basics.
 - Game Development - Class should have been called Game Design as we did not do any game development, only game design. Class had both Korean and international students which was very nice. The professor kept saying the same things in English once and then in Korean again though.
 - Sports Physiology - Similar to my high school biology class but in English with a focus on sport related topics.
 - UX Design - This class stood out positively. It was a collaboration with the government of Ansan. We'd do some lectures and assignments on designing interactions between people and an object and also designing a product / solution to a problem. At the end of the course we proposed a solution to a problem the city of Ansan was having. But quite a few parts of the class could only be done in Korean and we did not have much freedom in how we worked.
@@ -113,6 +119,7 @@ The classes were good to make friends though.
 
 My first impression of it wasn't the best but I did grow to like it more. Especially once the semester began the huge campus was more filled with life and people.
 On campus you can find:
+
 - multiple cafeterias
 - cafes
 - restaurants
@@ -127,6 +134,7 @@ On campus you can find:
 There are also many cherry blossom trees which look beautiful during the cherry blossom season.
 
 ### Food
+
 Food in Korea is great. It's also a lot cheaper to go out and eat outside. So often I would go for lunch and dinner together with friends at the cafeteria or a nearby restaurant, at least once per day.
 
 Right outside the main gate of the university are a lot of restaurants. It does take close to 20 minutes to get there from the dormitory by foot though, but you can also take the shuttle bus if you want to time it.
@@ -134,9 +142,11 @@ Right outside the main gate of the university are a lot of restaurants. It does 
 It is hard to find food in the university area at night though, which often would not be the case in many areas in Seoul.
 
 ## Costs
+
 The amount I was spending each month was similar to how much I spend per month in Germany. On average things in Korea are cheaper but as I spend every day outside I had more situations in which I would spend.
 
 ## Hanyang & Hanyang erica - Seoul or Ansan?
+
 Hanyang University has two campi. One in Seoul and one in Ansan. Many exchange students are surprised when they apply to Hanyang and get sent to the erica campus, which is in Ansan. The two locations are like two different universities, so once you are sent to the erica campus you will have nothing to do with the campus in Seoul. And a lot of exchange students will get sent to erica campus.
 
 Ansan is directly to the south of Seoul. Getting to some place in Seoul takes around 90 minutes (Of course this heavily depends on where in Seoul).
@@ -146,6 +156,7 @@ If you want to look up how long it takes to go from place A to B use Naver Maps 
 I can recommend to anyone going to Hanyang erica to live in the on-campus dormitory. It was great to live together with so many friends and head out from the dormitory together.
 
 ## Would I Do It Again?
+
 Overall my experience in South Korea was great. The location of the Hanyang erica campus is not optimal to explore Korea though. The classes were academically not the most useful, but I did enjoy them sometimes. Overall, I enjoyed my stay at the university a lot.
 
 I also learned that I prefer to have my own room to sleep in. And that is what I had at my next exchange semester I did in South Korea. I went to the University of Seoul right after my semester at Hanyang erica.
@@ -153,5 +164,3 @@ I also learned that I prefer to have my own room to sleep in. And that is what I
 If you liked this post you might also enjoy my post about the exchange semester at University of Seoul I did for winter 2023 here (not published yet). Or my post focusing more on the difference between Korea and the western world here (not published yet).
 
 You can [join my mailing list](/follow) if you would like to get notified about new posts, I appreciate every single new member.
-
-
