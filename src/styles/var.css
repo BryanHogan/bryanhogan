@@ -1,0 +1,98 @@
+:root {
+
+    /* Color */
+    --color-neutral-900: #202124;
+    --color-neutral-800: #23262D;
+    --color-neutral-700: #2C3039;
+    --color-neutral-600: #3A3F4A;
+    --color-neutral-500: #515866;
+    --color-neutral-400: #727A88;
+    --color-neutral-300: #9AA2AF;
+    --color-neutral-200: #C2C8D0;
+    --color-neutral-100: #E8ECF0;
+    --color-neutral-50: #FCFCFD;
+
+    --color-accent-800: #625B7B;
+    --color-accent-500: #A594D3;
+    --color-accent-200: #C7C0E2;
+
+    --color-accent-red-500: #E67E22;
+    --color-accent-green-500: #27AE60;
+
+    --a-hover-color: var(--color-accent-500);
+
+    /* Typography */
+    --font-family: ui-sans-serif, "Helvetica Neue", Arial;
+    --font-mono: ui-monospace, Menlo, monospace;
+
+    --font-size-small: 0.875rem;
+    --font-size-base: 18px;
+    /* or 18px*/
+    --font-size-large: 1.25rem;
+
+
+    --text-size-6xl: 4rem;
+    --text-size-5xl: 2.75rem;
+    /* desktop h1*/
+    --text-size-4xl: 2.25rem;
+    /* mobile h1; desktop h2 */
+    --text-size-3xl: 1.75rem;
+    /* mobile h2 */
+    --text-size-2xl: 1.5rem;
+    --text-size-xl: 1.25rem;
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    --font-line-height: 1.5;
+    --font-line-height-heading: 1.2;
+
+    /* Spacing */
+    --space-xss: 0.375rem;
+    --space-xs: 0.5rem;
+    --space-s: 0.75rem;
+    --space-m: 1.25rem;
+    --space-l: 2rem;
+    --space-xl: 3.25rem;
+    --space-2xl: 5.25rem;
+    --space-3xl: 8.5rem;
+
+    --flow-space: 1em;
+
+    /* Border */
+    --border-radius-s: 4px;
+    --border-radius-m: 8px;
+    --border-radius-l: 16px;
+
+    --border-width-s: 1px;
+    --border-width-m: 2px;
+    --border-width-l: 4px;
+
+    /* Shadows */
+    --text-shadow-s: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --text-shadow-m: 0 4px 4px rgba(0, 0, 0, 0.15);
+    --text-shadow-l: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+    --box-shadow-s: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    --box-shadow-m: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --box-shadow-l: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+
+    /* Transitions */
+    --transition-normal: 0.2s ease;
+
+    /* consider adding animation var if needed */
+
+    /* Other */
+    --navbar-height: 3rem;
+    --footer-height: 8rem;
+    --side-gap-padding: var(--space-s);
+
+
+    --base-layout-max-width: 84rem;
+    --main-content-max-width: 45rem;
+
+    --opacity-weak: 0.3;
+    --opacity-strong: 0.7;
+}
