@@ -75,9 +75,12 @@ import socials from "../data/socials";
     .navigation-container {
         max-width: 75%;
         margin-inline: auto;
+        & a {
+            font-size: var(--font-size-small);
+        }
     }
     p, li, img, a {
-        color: var(--color-neutral-600);
+        color: var(--color-neutral-300);
         transition: color var(--transition-normal);
     }
     a:hover, a:focus-within {

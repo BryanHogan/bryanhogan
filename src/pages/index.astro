@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -6,9 +8,50 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	title="Bryan Hogan"
 	description="I'm Bryan Hogan, a Web Developer, Digital Creator and Blogger. Welcome to my personal page for you."
 >
-	<section>
-		
+	<section class="intro-section-container">
+		<div class="intro-container">
+			<div class="intro margin-bottom-s">
+				<h1>Hi, I'm<br />Bryan Hogan.</h1>
+				<div class="image-container">
+					<Image
+						class="image"
+						src={BryanHoganImage}
+						alt="Image of Bryan Hogan in a classic polariod style"
+						width={237}
+						height={234}
+					/>
+				</div>
+			</div>
+			<p>I'm a Developer, Digital Creator and Blogger.</p>
+		</div>
 	</section>
 </BaseLayout>
 
-<style></style>
+<style>
+	.intro-section-container {
+		display: flex;
+		height: calc(90svh - var(--footer-height) - var(--navbar-height));
+		align-items: center;
+	}
+	.intro-container {
+		margin-inline: auto;
+		max-width: max-content;
+		& .intro {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: start;
+			height: auto;
+			gap: var(--space-xs);
+		}
+		& .image {
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+		}
+	}
+	@media (min-width: 48rem) {
+		.intro-container .intro {
+			flex-direction: row;
+		}
+	}
+</style>

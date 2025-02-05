@@ -64,7 +64,9 @@ if (canonicalURL.pathname.endsWith('/')) {
       </head>
     <body>
         <Header />
-        <slot />
+		<div class="height-smart-fill-screen">
+			<slot />
+		</div>
         <Footer />
     </body>
 </html>
