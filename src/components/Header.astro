@@ -8,7 +8,7 @@ import Icon from "./Icon.astro";
         <header>
             <ul role="list" class="left-content-container">
                 <li>
-                    <a href="/"
+                    <a href="/" class="logo-a"
                         ><svg
                             class="logo"
                             width="28"
@@ -36,7 +36,7 @@ import Icon from "./Icon.astro";
                 <Icon
                     name="close"
                     size="1.5rem"
-                    label="Close icon"
+                    label="Instagram"
                     class="close-icon"
                 />
             </button>
@@ -54,7 +54,8 @@ import Icon from "./Icon.astro";
 
 <style>
     .logo {
-        margin-left: 0.25rem;
+    }
+    .logo-a {
     }
     .backdrop-area {
         width: 100%;
@@ -89,16 +90,18 @@ import Icon from "./Icon.astro";
         margin-inline: auto;
         padding-inline: var(--side-gap-padding);
         height: var(--navbar-height);
+        overflow: hidden;
     }
 
 
     .primary-navigation ul, .left-content-container {
         display: flex;
         align-items: center;
-        gap: var(--space-m);
-        & li a {
+        gap: calc(var(--space-m) - 4px);
+        &>li>a {
             color: var(--color-neutral-300);
             text-decoration: none;
+            padding: 2px;
             transition: var(--transition-normal) color;
             &:hover,
             &:focus-within {
@@ -107,14 +110,12 @@ import Icon from "./Icon.astro";
         }
     }
     li>a {
-        padding: var(--space-xs);
-        border: 1px solid red;
     }
     .menu-toggle-button {
         display: none;
     }
 
-    @media only screen and (max-width: 31.999rem) {
+    @media only screen and (max-width: 35.999rem) {
         .primary-navigation ul {
             display: none;
         }
@@ -127,7 +128,7 @@ import Icon from "./Icon.astro";
             padding: 0.5rem 0 0.5rem 0.5rem;
             border: 0;
             cursor: pointer;
-            & .close-icon {
+            .close-icon {
                 display: none;
             }
         }
