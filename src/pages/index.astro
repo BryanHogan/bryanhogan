@@ -12,17 +12,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		<div class="intro-container">
 			<div class="intro margin-bottom-s">
 				<h1>Hi, I'm<br />Bryan Hogan.</h1>
-				<div class="image-container">
-					<Image
-						class="image"
-						src={BryanHoganImage}
-						alt="Image of Bryan Hogan in a classic polariod style"
-						width={237}
-						height={234}
-					/>
-				</div>
+				<Image
+					class="image"
+					src={BryanHoganImage}
+					alt="Image of Bryan Hogan in a classic polariod style"
+					width={237}
+					height={234}
+				/>
 			</div>
 			<p>I'm a Developer, Digital Creator and Blogger.</p>
+		</div>
+		<div class="intro-button-navigation">
+
 		</div>
 	</section>
 </BaseLayout>
@@ -39,14 +40,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		& .intro {
 			display: flex;
 			flex-direction: column-reverse;
-			align-items: start;
-			height: auto;
 			gap: var(--space-xs);
 		}
 		& .image {
-			height: 100%;
+			align-self: center;
 			width: auto;
-			object-fit: contain;
+			height: 7rem;
 		}
 	}
 	@media (min-width: 48rem) {

@@ -10,7 +10,7 @@ import Icon from "./Icon.astro";
                 <li>
                     <a href="/"
                         ><svg
-                            class="logo-icon"
+                            class="logo"
                             width="28"
                             height="28"
                             viewBox="0 0 16 16"
@@ -52,7 +52,7 @@ import Icon from "./Icon.astro";
     </div>
 </div>
 
-<style is:global>
+<style>
     .logo {
         margin-left: 0.25rem;
     }
@@ -87,15 +87,14 @@ import Icon from "./Icon.astro";
         justify-content: space-between;
         align-items: center;
         margin-inline: auto;
-        /*max-width: var(--base-layout-max-width);*/
         padding-inline: var(--side-gap-padding);
-        padding-block: var(--space-xs);
         height: var(--navbar-height);
     }
 
 
     .primary-navigation ul, .left-content-container {
         display: flex;
+        align-items: center;
         gap: var(--space-m);
         & li a {
             color: var(--color-neutral-300);
@@ -107,11 +106,15 @@ import Icon from "./Icon.astro";
             }
         }
     }
+    li>a {
+        padding: var(--space-xs);
+        border: 1px solid red;
+    }
     .menu-toggle-button {
         display: none;
     }
 
-    @media only screen and (max-width: 27.999rem) {
+    @media only screen and (max-width: 31.999rem) {
         .primary-navigation ul {
             display: none;
         }
@@ -131,7 +134,6 @@ import Icon from "./Icon.astro";
         [aria-expanded="true"] {
             .close-icon {
                 display: block;
-                /* Visibility: visible? */
             }
             .hamburger-icon {
                 display: none;
