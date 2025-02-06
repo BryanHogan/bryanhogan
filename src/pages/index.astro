@@ -3,13 +3,15 @@ import { Image } from "astro:assets";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
+import CardMin from "../components/CardMin.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <BaseLayout
 	title="Bryan Hogan"
 	description="I'm Bryan Hogan, a Web Developer, Digital Creator and Blogger. Welcome to my personal page for you."
 >
-	<section class="intro-section-container">
+	<section class="intro-section-container padding-top-l padding-bottom-l">
 		<div class="intro-container">
 			<div class="intro margin-bottom-s">
 				<h1>Hi, I'm<br />Bryan Hogan.</h1>
@@ -29,13 +31,53 @@ import Button from "../components/Button.astro";
 			<Button text="Projects" href="/projects" buttonStyle="neutral-strong set-size"/>
 		</div>
 	</section>
+	<section class="all-pages-nav-section margin-bottom-xl">
+		<h2 class="text-align-center padding-bottom-m">See More</h2>
+		<ul role="list">
+			<li><a href="/blog">Blog</a></li>
+			<li><a href="/follow">Monthly-Mail</a></li>
+			<li><a href="/projects">Projects</a></li>
+			<li><a href="/socials">Socials</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/now">Now</a></li>
+			<li><a href="/ideas">Ideas</a></li>
+			<li><a href="/portfolio">Portfolio</a></li>
+		</ul>
+	</section>
+	<div class="content-sections-container">
+		<section class="content-cards-container">
+			<div class="first-row">
+				<h2>Blog</h2>
+				<Button text="See all blog posts" href="/blog" buttonStyle="line"/>
+				<Button text="See blog introduction" href="/blog-introduction" buttonStyle="line"/>
+			</div>
+		</section>
+		<section class="content-cards-container">
+			<div class="first-row">
+				<h2>Projects</h2>
+				<Button text="See all projects" href="/projects" buttonStyle="line"/>
+			</div>
+		</section>
+		<section class="content-cards-container">
+			<div class="first-row">
+				<h2>Socials</h2>
+				<Button text="See all socials" href="/blog" buttonStyle="line"/>
+			</div>
+			<div class="some-content-row">
+				<CardMin href="/" icon=""><Icon name="threads" label="BlueSky icon" size="2.5rem"/></CardMin>
+				<CardMin href="/" icon=""><Icon name="bluesky" label="BlueSky icon" size="2.5rem"/></CardMin>
+				<CardMin href="/" icon=""><Icon name="mastodon" label="BlueSky icon" size="2.5rem"/></CardMin>
+				<CardMin href="/" icon=""><Icon name="instagram" label="BlueSky icon" size="2.5rem"/></CardMin>
+			</div>
+		</section>
+	</div>
 </BaseLayout>
 
 <style>
 	.intro-section-container {
 		display: flex;
 		flex-direction: column;
-		height: calc(90svh - var(--footer-height) - var(--navbar-height));
+		min-height: calc(100svh - var(--footer-height) - var(--navbar-height));
 		justify-content: center;
 	}
 	.intro-container {
@@ -57,15 +99,54 @@ import Button from "../components/Button.astro";
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-block: var(--space-xl);
+		margin-block: var(--space-l);
 		gap: var(--space-m) var(--space-l);
+	}
+	.all-pages-nav-section {
+		ul {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: var(--space-s);
+		}
+	}
+	.content-sections-container {
+		max-width: 48rem;
+		width: 100%;
+		margin-inline: auto;
+		border: 1px solid red;
+	}
+	.content-cards-container {
+		.first-row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: var(--space-m);
+			h2 {
+				margin-right: var(--space-s);
+			}
+		}
+	}
+	.some-content-row {
+		display: grid;
+		gap: var(--space-m);
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
 	}
 	@media (min-width: 48rem) {
 		.intro-container .intro {
 			flex-direction: row;
 		}
 		.intro-button-navigation {
+			margin-block: var(--space-l);
 			gap: var(--space-m) var(--space-l);
+		}
+		.some-content-row {
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 </style>

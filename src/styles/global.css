@@ -34,11 +34,13 @@ h6 {
 
 a {
     color: var(--color-accent-300);
+    transition: color var(--transition-normal);
 }
 
 a:hover,
 a:focus-within {
-    color: var(--color-accent-700);
+    color: var(--a-hover-color);
+    
 }
 
 small {

@@ -1,0 +1,28 @@
+---
+interface Props {
+    icon: string;
+    href: string;
+    size?: string;
+    targetBlank?: boolean;
+}
+const {icon, href, size = "6rem", targetBlank = true} = Astro.props;
+---
+
+<a href={href} target={targetBlank ? "_blank" : "_self"}><slot/></a>
+
+<style define:vars={{ size }}>
+    a {
+        width: 100%;
+        height: var(--size);
+        border: 1px solid var(--color-neutral-300);
+        background-color: var(--color-neutral-900);
+        border-radius: var(--border-radius-s);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+
+        }
+    }
+</style>
