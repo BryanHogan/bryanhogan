@@ -16,10 +16,18 @@
     --color-accent-500: #A594D3;
     --color-accent-200: #C7C0E2;
 
-    --color-accent-red-500: #E67E22;
-    --color-accent-green-500: #27AE60;
-
     --a-hover-color: var(--color-accent-500);
+
+    --color-accent-lilac-500: #af81cd;
+    --color-accent-blue-500: #767fd1;
+    --color-accent-cyan-500: #8fb8cd;
+
+    --color-gradient: linear-gradient(
+        140deg,
+        var(--color-accent-lilac-500),
+        var(--color-accent-blue-500),
+        var(--color-accent-cyan-500)
+    );
 
     /* Typography */
     --font-family: ui-sans-serif, "Helvetica Neue", Arial;

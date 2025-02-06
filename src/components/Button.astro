@@ -1,0 +1,67 @@
+---
+interface Props {
+    buttonStyle?: string;
+    href: string;
+    text: string;
+    targetBlank?: boolean;
+}
+
+const { buttonStyle = "neutral", href, text, targetBlank = false } = Astro.props;
+---
+
+<a href={href} class={buttonStyle} target={targetBlank ? "_blank" : "_self"}>{text}</a>
+
+<style>
+    a {
+        transition: background-color var(--transition-normal);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: var(--border-radius-m);
+        max-width: fit-content;
+        padding: var(--space-xs) var(--space-m);
+    }
+    /* =========== Color Styles =========== */
+    .neutral {
+        color: var(--color-neutral-100);
+        background-color: var(--color-neutral-700);
+        &:hover {
+            background-color: var(--color-neutral-600);
+        }
+    }
+    .neutral-strong {
+        color: var(--color-neutral-900);
+        background-color: var(--color-neutral-100);
+        &:hover {
+            background-color: var(--color-neutral-300);
+        }
+    }
+    .accent {
+        color: var(--color-neutral-100);
+        background-color: var(--color-accent-800);
+        &:hover {
+            background-color: var(--color-accent-500);
+        }
+    }
+    .gradient {
+        background-image: var(--color-gradient);
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    /* =========== Size Styles =========== */
+
+    .grow {
+        max-width: none;
+        width: 100%;
+    }
+    .set-size {
+        max-width: none;
+        padding: var(--space-s) var(--space-m);
+        width: 7rem;
+        font-size: var(--font-size-large);
+        font-weight: var(--font-weight-bold);
+    }
+</style>
