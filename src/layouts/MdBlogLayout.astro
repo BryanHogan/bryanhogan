@@ -1,0 +1,20 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+    post: CollectionEntry<"blog">;
+}
+const { post } = Astro.props;
+
+const posts: CollectionEntry<"blog">[] = await getCollection("blog");
+---
+
+<BaseLayout title="" description="">
+    <div>
+        <p>mdlayout</p>
+        <slot />
+    </div>
+</BaseLayout>
