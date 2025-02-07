@@ -1,11 +1,10 @@
 ---
 interface Props {
-    icon: string;
     href: string;
     size?: string;
     targetBlank?: boolean;
 }
-const {icon, href, size = "6rem", targetBlank = true} = Astro.props;
+const {href, size = "6rem", targetBlank = true} = Astro.props;
 ---
 
 <a href={href} target={targetBlank ? "_blank" : "_self"}><slot/></a>

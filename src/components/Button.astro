@@ -1,15 +1,37 @@
 ---
+import Icon from "./Icon.astro";
+import { Icons } from "../components/Icons";
+
 interface Props {
     buttonStyle?: string;
     href: string;
     text: string;
     targetBlank?: boolean;
+    icon?: keyof typeof Icons;
 }
 
-const { buttonStyle = "neutral", href, text, targetBlank = false } = Astro.props;
+const {
+    buttonStyle = "neutral",
+    href,
+    text,
+    targetBlank = false,
+    icon,
+} = Astro.props;
 ---
 
-<a href={href} class={buttonStyle} target={targetBlank ? "_blank" : "_self"}>{text}</a>
+<a href={href} class={buttonStyle} target={targetBlank ? "_blank" : "_self"}>
+    {
+        icon && (
+            <Icon
+                name={icon}
+                label="lightbulb icon"
+                size="1.5rem"
+                class="icon"
+            />
+        )
+    }
+    {text}
+</a>
 
 <style>
     a {
@@ -21,7 +43,18 @@ const { buttonStyle = "neutral", href, text, targetBlank = false } = Astro.props
         border-radius: var(--border-radius-m);
         max-width: fit-content;
         padding: var(--space-xs) var(--space-m);
+        & :global(svg) {
+            margin-right: var(--space-xs);
+            background-image: var(--color-gradient);
+            background-clip: text;
+        }
     }
+
+    /* =========== Using Icons =========== */
+    .icon-left {
+        padding-left: var(--space-xs);
+    }
+
     /* =========== Color Styles =========== */
     .neutral {
         color: var(--color-neutral-100);
