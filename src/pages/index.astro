@@ -5,6 +5,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
 import CardMin from "../components/CardMin.astro";
 import Icon from "../components/Icon.astro";
+import CardBlog from "../components/CardBlog.astro";
+import { getCollection } from "astro:content";
+const blogPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 ---
 
 <BaseLayout
@@ -50,6 +55,13 @@ import Icon from "../components/Icon.astro";
 				<h2>Blog</h2>
 				<Button text="See all blog posts" href="/blog" buttonStyle="line"/>
 				<Button text="See blog introduction" href="/blog-introduction" buttonStyle="line"/>
+			</div>
+			<div class="blog-content-row">
+				{
+					blogPosts.slice(0, 2).map((post) => (
+						<CardBlog post={post}/>
+					))
+				}
 			</div>
 		</section>
 		<section class="content-cards-container">

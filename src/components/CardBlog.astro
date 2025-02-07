@@ -1,21 +1,15 @@
 ---
 import { Image } from "astro:assets";
-
+import type { CollectionEntry } from 'astro:content';
 interface Props {
-    icon: string;
-    title: string;
-    description: string;
-    href: string;
+  post: CollectionEntry<'blog'>;
 }
-const { icon, title, description, href } = Astro.props;
+
+const { post } = Astro.props;
 ---
 
-<a href={href}>
-    <div class="">
-        
-    </div>
-    <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
-    </div>
+<a href="">
+    <p>hi?</p>
+    <Image src={post.data.coverImage as ImageMetadata} alt={post.data.title + " cover image icon"}/>
+    <h3>{post.data.title}</h3>
 </a>
