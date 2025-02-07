@@ -7,6 +7,7 @@ import CardMin from "../components/CardMin.astro";
 import Icon from "../components/Icon.astro";
 import CardBlog from "../components/CardBlog.astro";
 import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
 const blogPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
@@ -56,9 +57,9 @@ const blogPosts = (await getCollection("blog")).sort(
 				<Button text="See all blog posts" href="/blog" buttonStyle="line"/>
 				<Button text="See blog introduction" href="/blog-introduction" buttonStyle="line"/>
 			</div>
-			<div class="blog-content-row">
+			<div class="blog-content-cards">
 				{
-					blogPosts.slice(0, 2).map((post) => (
+					blogPosts.slice(0, 3).map((post) => (
 						<CardBlog post={post}/>
 					))
 				}
@@ -68,6 +69,20 @@ const blogPosts = (await getCollection("blog")).sort(
 			<div class="first-row">
 				<h2>Projects</h2>
 				<Button text="See all projects" href="/projects" buttonStyle="line"/>
+			</div>
+			<div class="projects-content-cards">
+				<Card title="ToLearnKorean" href="/">
+					<p>Website on information to learn Korean.</p>
+					<Icon name="updated" label="updated icon" size="1.5rem" slot="icon-row"/>
+				</Card>
+				<Card title="WebDev Guide" href="/">
+					<p>Guide on building well designed performant web pages.</p>
+					<Icon name="puzzle" label="updated icon" size="1.5rem" slot="icon-row"/>
+				</Card>
+				<Card title="Flow Timer" href="/" >
+					<p>Flow timer is a timer for time-boxing and getting tasks done without getting distracted.</p>
+					<Icon name="timer" label="updated icon" size="1.5rem" slot="icon-row"/>
+				</Card>
 			</div>
 		</section>
 		<section class="content-cards-container">
@@ -125,7 +140,7 @@ const blogPosts = (await getCollection("blog")).sort(
 		}
 	}
 	.content-sections-container {
-		max-width: 48rem;
+		max-width: 64rem;
 		width: 100%;
 		margin-inline: auto;
 		border: 1px solid red;
@@ -142,12 +157,18 @@ const blogPosts = (await getCollection("blog")).sort(
 			}
 		}
 	}
+	.blog-content-cards, .projects-content-cards {
+		display: grid;
+		gap: var(--space-l);
+		grid-template-columns: 1fr;
+	}
 	.some-content-row {
 		display: grid;
 		gap: var(--space-m);
 		grid-template-columns: repeat(2, 1fr);
 		justify-content: center;
 		align-items: center;
+		max-width: 40rem;
 	}
 	@media (min-width: 48rem) {
 		.intro-container .intro {
@@ -156,6 +177,9 @@ const blogPosts = (await getCollection("blog")).sort(
 		.intro-button-navigation {
 			margin-block: var(--space-l);
 			gap: var(--space-m) var(--space-l);
+		}
+		.blog-content-cards, .projects-content-cards {
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.some-content-row {
 			grid-template-columns: repeat(4, 1fr);

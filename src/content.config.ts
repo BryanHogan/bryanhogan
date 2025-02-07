@@ -9,6 +9,7 @@ const blog = defineCollection({
         description: z.string().max(162, "Maximum of 162 characters in description required.").min(50, "Minimum of 50 characters in description required."),
         coverImage: image(),
         pubDate: z.date(),
+        lastUpdate: z.date().optional(),
         tags: z.array(z.string())
     })
 });

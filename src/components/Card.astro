@@ -1,0 +1,53 @@
+---
+import Icon from "./Icon.astro";
+import { Icons } from "../components/Icons";
+
+interface Props {
+    title: string;
+    href: string;
+}
+
+const { title, href } = Astro.props;
+---
+
+<a href={href} target="_blank">
+    <div class="container">
+        <h3>{title}</h3>
+        <slot />
+        <div class="icon-row-container">
+            <slot name="icon-row" />
+        </div>
+    </div>
+</a>
+
+<style>
+    a {
+        text-decoration: none;
+        color: var(--color-neutral-100);
+
+        &:hover h3 {
+            color: var(--a-hover-color);
+        }
+    }
+    .container {
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-m);
+        padding: var(--space-m);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        & :global(p) {
+            padding-bottom: var(--space-s);
+        }
+    }
+    h3 {
+        font-size: var(--font-size-large);
+        padding-bottom: var(--space-s);
+        transition: color var(--transition-normal);
+    }
+    .icon-row-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: auto;
+    }
+</style>

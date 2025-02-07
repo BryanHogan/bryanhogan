@@ -1,15 +1,78 @@
 ---
 import { Image } from "astro:assets";
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
+import Icon from "./Icon.astro";
 interface Props {
-  post: CollectionEntry<'blog'>;
+    post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
 ---
 
 <a href="">
-    <p>hi?</p>
-    <Image src={post.data.coverImage as ImageMetadata} alt={post.data.title + " cover image icon"}/>
-    <h3>{post.data.title}</h3>
+    <div class="image-container flex-center">
+        <Image
+            src={post.data.coverImage as ImageMetadata}
+            alt={post.data.title + " cover image icon"}
+        />
+    </div>
+    <div class="text-container">
+        <h3>{post.data.title}</h3>
+        <p class="description">{post.data.description}</p>
+        <div class="tag-row-container margin-bottom-xs">
+            <Icon name="tag" label="Tag icon" size="1.5rem" />
+            <p>Obsidian, Notion</p>
+        </div>
+        <div class="last-row-container">
+            <div class="last-update">
+                <Icon name="updated" label="Tag icon" size="1.5rem" />
+                <p>19/1/2025</p>
+            </div>
+            <div class="reading-time">
+                <Icon name="timer" label="Tag icon" size="1.5rem" />
+                <p>6 min</p>
+            </div>
+        </div>
+    </div>
 </a>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+    .image-container {
+        background-color: var(--color-accent-cyan-500);
+        border-radius: var(--border-radius-m) var(--border-radius-m) 0 0;
+        min-height: 8rem;
+        > * {
+            height: 5rem;
+            width: 100%;
+        }
+    }
+    .text-container {
+        padding: var(--space-m);
+        background-color: var(--color-neutral-800);
+        border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
+        h3 {
+            font-size: var(--font-size-large);
+            padding-bottom: var(--space-s);
+        }
+        .description {
+            padding-bottom: var(--space-m);
+            color: var(--color-neutral-200);
+        }
+    }
+    .tag-row-container, .last-row-container>div {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-xs);
+        color: var(--color-neutral-200);
+        p {font-size: var(--font-size-small); }
+    }
+    .last-row-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: var(--space-s);
+    }
+</style>

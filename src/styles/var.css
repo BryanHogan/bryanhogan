@@ -17,6 +17,7 @@
     --color-accent-200: #C7C0E2;
 
     --a-hover-color: var(--color-accent-500);
+    --border-color: var(--color-neutral-300);
 
     --color-accent-lilac-500: #af81cd;
     --color-accent-blue-500: #767fd1;
