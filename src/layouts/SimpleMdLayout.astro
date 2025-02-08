@@ -1,17 +1,14 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import "../styles/markdown.css";
-
+import Hero from "../components/Hero.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
-    <div class="hero full-width">
-        <h1 class="text-align-center margin-bottom-s">{frontmatter.title}</h1>
-        <p class="text-align-center">{frontmatter.description}</p>
-    </div>
-    <div class="markdown-container margin-top-xl">
+    <Hero h1={frontmatter.title} subtitle={frontmatter.description}/>
+    <div class="markdown-container margin-top-xl margin-bottom-xl">
         <slot />
     </div>
 </BaseLayout>

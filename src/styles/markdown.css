@@ -6,6 +6,12 @@
     & >*:not(:first-child) {
         margin-block-start: var(--flow-space);
     }
+    a {
+        color: var(--a-hover-color);
+        &:hover {
+            color: var(--color-accent-200);
+        }
+    }
     img, picture {
         object-fit: scale-down;
         max-width: 100%;

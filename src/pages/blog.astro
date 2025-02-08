@@ -3,18 +3,66 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 import type { CollectionEntry } from "astro:content";
+import CardBlog from "../components/CardBlog.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
 const posts: CollectionEntry<"blog">[] = await getCollection("blog");
 ---
 
 <BaseLayout title="some" description="hi">
-    <p>hi</p>
-    <ul>
+    <Hero h1="Bryan's Blog" subtitle="About learning, exploring and creating." height="35svh">
+        <Button text="Get Updates" href="/follow" buttonStyle="transparent margin-inline-auto margin-top-s"/>
+    </Hero>
+    <nav class="sub-nav-container">
+        <ul role="list">
+            <li><a href="/">Introduction</a></li>
+            <li><a href="/">Compact View</a></li>
+            <li><a href="/">Tag Index</a></li>
+            <li><a href="/">RSS</a></li>
+        </ul>
+    </nav>
+    <ul role="list" class="blog-posts-container margin-top-l margin-bottom-xl">
         {
             posts.map((post) => (
                 <li>
-                    <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                    <CardBlog post={post} />
                 </li>
             ))
         }
     </ul>
 </BaseLayout>
+
+<style>
+    .blog-posts-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-l);
+    }
+    .sub-nav-container ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: row;
+        justify-content: center;
+        gap: var(--space-xs) var(--space-s);
+        padding-block: var(--space-xs);
+        li a {
+            color: var(--color-neutral-300);
+            text-decoration: none;
+            font-size: 0.75em;
+            &:hover {
+                color: var(--a-hover-color);
+            }
+        }
+    }
+    @media (min-width: 32rem) {
+        .blog-posts-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (min-width: 74rem) {
+        .blog-posts-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+</style>

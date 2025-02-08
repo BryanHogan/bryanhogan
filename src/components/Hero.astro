@@ -1,0 +1,33 @@
+---
+interface Props {
+    h1: string;
+    subtitle: string;
+    height?: string;
+}
+const { h1, subtitle, height="20svh" } = Astro.props;
+---
+
+<div class="hero full-width">
+    <h1 class="text-align-center">{h1}</h1>
+    <p class="text-align-center">{subtitle}</p>
+    <slot />
+</div>
+
+<style define:vars={{ height }}>
+    .hero {
+        background-color: var(--color-accent-500);
+        background-image: var(--color-gradient);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: var(--height);
+        padding-block: var(--space-l);
+        & :global(p), h1 {
+            color: var(--color-neutral-50);
+            text-shadow: var(--text-shadow-m);
+        }
+        &>:global(*):not(:last-child) {
+            margin-bottom: var(--space-s);
+        }
+    }
+</style>

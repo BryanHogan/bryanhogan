@@ -4,57 +4,29 @@ title: About
 description: About me, Bryan Hogan, and my blog.
 ---
 
-## About Bryan Hogan
+<h2 class="text-align-center">About Bryan Hogan</h2>
 
-I am Bryan
+I'm Bryan Hogan, a (Web) Developer, Digital Creator and Blogger.  
+Soon to be graduate in Code & Context, a modern interdisciplinary B.Sc. study in Cologne that combines the fields of computer science, design and entrepreneurship.
 
-## About Bryan's Blog
+I have recently spent a year abroad in South Korea, studying at different universities. At the beginning of my stay abroad I also started with [BryanHogan.com/blog](/blog), a place for me to share all the things I would have loved to know about before I knew about them.
 
-My blog "Bryan's Blog" is about topics that interest me, all with the aim to also help you. From health-related topics such as understanding sleep, to sharing cultural insights and achieving personal goals. I want to share my journey and learn alongside others. 
+I also run a [monthly newsletter](/follow) called "Bryan's Briefing" since the beginning of 2024 in which I share what I'm up to, cool insights I've recently had and other amazing content I came across.
 
-- hi
-- there
-- how ya doinggggggggggggggggg
+Take a look at my [Now page](/now) to see what I'm currently doing.
 
-Noice
+I've got a more career focussed introduction of myself on my portfolio page.
 
-### Header 3
 
-Something more stuff.
+<h2 class="text-align-center">About Bryan's Blog</h2>
 
-> Single line quote.
+My blog "Bryan's Blog" is about topics that interest me, all with the aim to also help you. From health-related topics such as understanding sleep, to sharing cultural insights and achieving personal goals. I want to share my journey and learn alongside others.
 
-Finished.
+**What I Value & How I Think:**
 
-> Multi
-> 
-> Line  
-> Quote is being written here.
-
-With a footer:
-
-> "There's never a space under paintings in a gallery where someone writes their opinion,"
-> <footer>— Natalie Dee</footer>
-
-Table stuff now!
-
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| --- | --- | --- | --- |
-| Content | More | Great | Hell yeah........... |
-| Content | More | Great | Hell yeah........... |
-| Content | More | Great | Hell yeah........... |
-
-`Single code line` and wow, that `is really` great.
-
-Noice.
-
----
-
-Multi line code:
-
-```html
-How does this
-look like?
-Now?
-```
+- 🌱 - There's special meaning in building a great future for yourself and others.
+- ❤️ - To life happily in the future you need to be healthy.
+- ⏳ - We all have ambitious goals, but how do we reach them?
+- 📣 - There's already amazing content out there, and I'm eager to share it.
+- ⚙️ - Modern thinking and building requires some technology. I also just love building digital experiences.
 

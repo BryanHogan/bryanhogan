@@ -1,9 +1,10 @@
 ---
 layout: ../layouts/SimpleMdLayout.astro
-title: now
+title: Now
 description: What am I doing now?
 ---
 
-## Test
+## What am I doing now?
 
-Does this work at all?
+- Writing my bachelor thesis.
+- Learning Korean.
