@@ -1,1 +1,9 @@
 /* wip */
+
+.markdown-container {
+    max-width: var(--main-content-max-width);
+    margin-inline: auto;
+    p {
+        color: blue;
+    }
+}
