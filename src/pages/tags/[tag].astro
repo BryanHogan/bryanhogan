@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import CardBlog from "../../components/CardBlog.astro";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("blog");
+    const uniqueTags = [
+        ...new Set(allPosts.map((post) => post.data.tags).flat()),
+    ];
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = allPosts.filter((post) =>
+            post.data.tags.includes(tag),
+        );
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout
+    title={"Tag: " + tag}
+    description={"All posts containing the tag " + tag.charAt(0).toUpperCase() + tag.slice(1) + "."}
+>
+    <Hero h1={tag.charAt(0).toUpperCase() + tag.slice(1)} subtitle={"About the " + tag + " tag."} />
+    <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts tagged with " + tag.charAt(0).toUpperCase() + tag.slice(1) }</h2>
+    <ul role="list" class="blog-posts-container margin-bottom-xl">
+    {
+        posts.map((post) => (
+            <li>
+                <CardBlog post={post} />
+            </li>
+        ))
+    }
+    </ul>
+</BaseLayout>
+
+<style>
+    .blog-posts-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-l);
+    }
+    @media (min-width: 32rem) {
+        .blog-posts-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (min-width: 74rem) {
+        .blog-posts-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+</style>

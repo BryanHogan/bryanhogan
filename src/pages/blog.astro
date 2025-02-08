@@ -6,19 +6,19 @@ import type { CollectionEntry } from "astro:content";
 import CardBlog from "../components/CardBlog.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
-const posts: CollectionEntry<"blog">[] = await getCollection("blog");
+const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <BaseLayout title="some" description="hi">
-    <Hero h1="Bryan's Blog" subtitle="About learning, exploring and creating." height="35svh">
+    <Hero h1="Bryan's Blog" subtitle="About learning, exploring and creating." height="40svh">
         <Button text="Get Updates" href="/follow" buttonStyle="transparent margin-inline-auto margin-top-s"/>
     </Hero>
     <nav class="sub-nav-container">
         <ul role="list">
             <li><a href="/">Introduction</a></li>
-            <li><a href="/">Compact View</a></li>
-            <li><a href="/">Tag Index</a></li>
-            <li><a href="/">RSS</a></li>
+            <li><a href="/blog-compact">Compact View</a></li>
+            <li><a href="/tags">Tag Index</a></li>
+            <li><a href="/rss.xml">RSS</a></li>
         </ul>
     </nav>
     <ul role="list" class="blog-posts-container margin-top-l margin-bottom-xl">
