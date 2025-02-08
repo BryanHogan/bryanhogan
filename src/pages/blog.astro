@@ -6,6 +6,7 @@ import type { CollectionEntry } from "astro:content";
 import CardBlog from "../components/CardBlog.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
+import Icon from "../components/Icon.astro";
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
@@ -18,7 +19,7 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, 
             <li><a href="/">Introduction</a></li>
             <li><a href="/blog-compact">Compact View</a></li>
             <li><a href="/tags">Tag Index</a></li>
-            <li><a href="/rss.xml">RSS</a></li>
+            <li style="display: flex; align-items: center;"><a href="/rss.xml"><Icon name="rss" label="RSS icon" size="1.125rem" class="rss-icon"/></a></li>
         </ul>
     </nav>
     <ul role="list" class="blog-posts-container margin-top-l margin-bottom-xl">
