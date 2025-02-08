@@ -104,4 +104,6 @@
 
     --opacity-weak: 0.3;
     --opacity-strong: 0.7;
+
+    --smart-height-fill-screen: calc(100svh - var(--navbar-height) - var(--footer-height));
 }

@@ -1,0 +1,59 @@
+---
+
+---
+
+<form
+    action="https://buttondown.email/api/emails/embed-subscribe/BryanHogan"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.email/BryanHogan', 'popupwindow')"
+    class={Astro.props.class}
+>
+    <label for="bd-email"></label>
+    <input
+        type="email"
+        name="email"
+        id="bd-email"
+        placeholder="Your email"
+        class="email"
+    />
+    <input type="hidden" name="tag" value="blog" />
+    <input type="submit" value="Subscribe" class="button" />
+</form>
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: min(100%, 350px);
+        margin-inline: auto;
+    }
+    .email {
+        background-color: var(--color-neutral-100);
+        color: var(--color-neutral-800);
+        border: 1px solid var(--color-neutral-600);
+        border-radius: var(--border-radius-s);
+        padding: 2px 4px;
+        accent-color: var(--color-accent-500);
+        width: 100%;
+        margin-bottom: var(--space-s);
+    }
+    .button {
+        background-color: var(--color-neutral-100);
+        color: var(--color-neutral-800);
+        border: 1px solid var(--color-neutral-600);
+        border-radius: var(--border-radius-m);
+        max-width: 50%;
+        width: 100%;
+        transition: color var(--transition-normal);
+        padding-block: 4px;
+        &:hover {
+            color: var(--color-accent-500);
+        }
+    }
+    .spaced {
+        margin-top: var(--space-s);
+        
+    }
+</style>

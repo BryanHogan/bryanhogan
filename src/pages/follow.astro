@@ -1,0 +1,14 @@
+---
+import Hero from "../components/Hero.astro";
+import EmailSignup from "../components/EmailSignup.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+    title="Follow"
+    description="Bryan's Monthly Briefing, get my monthly newsletter."
+>
+    <Hero height="var(--smart-height-fill-screen)" h1="Bryan's Monthly Briefing" subtitle="Once a month I write about what I've been up to, what I built, and cool things I came across.">
+        <EmailSignup class="spaced" />
+    </Hero>
+</BaseLayout>
