@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
         <h1 class="text-align-center margin-bottom-s">{frontmatter.title}</h1>
         <p class="text-align-center">{frontmatter.description}</p>
     </div>
-    <div class="markdown-container flow margin-top-xl">
+    <div class="markdown-container margin-top-xl">
         <slot />
     </div>
 </BaseLayout>
@@ -28,9 +28,6 @@ const { frontmatter } = Astro.props;
         p, h1 {
             color: var(--color-neutral-50);
             text-shadow: var(--text-shadow-m);
-        }
-        p {
-            font-size: var(--font-size-large);
         }
     }
 </style>
