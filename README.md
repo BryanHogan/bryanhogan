@@ -1,6 +1,6 @@
 To Do's:
 
-- Update readme
+
 - Update blog post card: Include tags and date; Color array
 - Blog post layout
 - Now layout, using auto last update + field for location
@@ -11,4 +11,5 @@ To Do's:
 - Testing (Go through checklist)
 
 Later:
+- Update readme
 - Add image to about
