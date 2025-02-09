@@ -1,7 +1,9 @@
 ---
 layout: ../layouts/SimpleMdLayout.astro
-title: About
-description: About me, Bryan Hogan, and my blog.
+title: About - Bryan Hogan
+description: About me, Bryan Hogan, and my blog. Who am I?
+h1: About
+subtitle: About me, Bryan Hogan, and my blog.
 ---
 
 <h2 class="text-align-center">About Bryan Hogan</h2>

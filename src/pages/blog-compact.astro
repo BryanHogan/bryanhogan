@@ -3,13 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 import type { CollectionEntry } from "astro:content";
-import CardBlog from "../components/CardBlog.astro";
 import Hero from "../components/Hero.astro";
-import Button from "../components/Button.astro";
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
-<BaseLayout title="Blog Compact" description="All blog posts but in a compact view instead.">
+<BaseLayout title="Bryan's Blog Compact View" description="All blog posts but in a compact view instead.">
     <Hero h1="Blog Compact" subtitle="Compact View"/>
     <h2 class="text-align-center margin-top-xl">All blog posts in a compact view</h2>
     <p class="text-align-center margin-top-m"><a href="/blog">To standard view</a></p>

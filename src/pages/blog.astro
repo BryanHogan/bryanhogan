@@ -10,7 +10,7 @@ import Icon from "../components/Icon.astro";
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
-<BaseLayout title="some" description="hi">
+<BaseLayout title="Bryan's Blog" description="Bryan Hogan's blog. All about learning, creating and finding balance.">
     <Hero h1="Bryan's Blog" subtitle="About learning, exploring and creating." height="40svh">
         <Button text="Get Updates" href="/follow" buttonStyle="transparent margin-inline-auto margin-top-s"/>
     </Hero>
