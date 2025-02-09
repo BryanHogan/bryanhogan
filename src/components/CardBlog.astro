@@ -5,9 +5,10 @@ import Icon from "./Icon.astro";
 interface Props {
     post: CollectionEntry<"blog">;
     backgroundColor?: string;
+    transitionIcon?: boolean;
 }
 
-const { post, backgroundColor = "var(--color-accent-cyan-500)" } = Astro.props;
+const { post, backgroundColor = "var(--color-accent-cyan-500)", transitionIcon = false } = Astro.props;
 import { getReadingTime } from "../utils/reading-time.ts"
 import { getLastModifiedDate } from "../utils/last-update";
 
@@ -19,10 +20,20 @@ const isoLastUpdate = lastUpdate.toISOString();
 <a href={`/blog/${post.id}`}>
     <div class="container">
         <div class="image-container flex-center">
-            <Image
-                src={post.data.coverImage as ImageMetadata}
-                alt={post.data.title + " cover image icon"}
-            />
+            { transitionIcon ?
+                <Image
+                    src={post.data.coverImage as ImageMetadata}
+                    alt={post.data.title + " cover image icon"}
+                    transition:name={post.data.title}
+                    style="max-height: 100%; width: auto;"
+                />
+                :
+                <Image
+                    src={post.data.coverImage as ImageMetadata}
+                    alt={post.data.title + " cover image icon"}
+                    style="max-height: 100%; width: auto;"
+                />
+            }
         </div>
         <div class="text-container">
             <h3>{post.data.title}</h3>

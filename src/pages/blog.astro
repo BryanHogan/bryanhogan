@@ -28,7 +28,7 @@ const cardBlogBackgroundColors = ["var(--color-accent-lilac-500)", "var(--color-
         {
             posts.map((post, index) => (
                 <li>
-                    <CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index]} />
+                    <CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index]} transitionIcon={true} />
                 </li>
             ))
         }

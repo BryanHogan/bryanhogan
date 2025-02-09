@@ -59,6 +59,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         <Image
             src={post.data.coverImage as ImageMetadata}
             alt={post.data.title + " cover image icon"}
+            transition:name={post.data.title}
         />
     </div>
     <div class="sub-menu-container">
