@@ -8,6 +8,8 @@ import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
 import Icon from "../components/Icon.astro";
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const cardBlogBackgroundColors = ["var(--color-accent-lilac-500)", "var(--color-accent-blue-500)", "var(--color-accent-cyan-500)", "var(--color-accent-500)"]
 ---
 
 <BaseLayout title="Bryan's Blog" description="Bryan Hogan's blog. All about learning, creating and finding balance.">
@@ -24,9 +26,9 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, 
     </nav>
     <ul role="list" class="blog-posts-container margin-top-l margin-bottom-xl">
         {
-            posts.map((post) => (
+            posts.map((post, index) => (
                 <li>
-                    <CardBlog post={post} />
+                    <CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index]} />
                 </li>
             ))
         }

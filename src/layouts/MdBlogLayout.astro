@@ -30,6 +30,8 @@ const sameTagPosts = allPosts.filter(
         posts.data.title !== post.data.title
 );
 const { headings } = await render(post);
+
+const cardBlogBackgroundColors = ["var(--color-accent-lilac-500)", "var(--color-accent-blue-500)", "var(--color-accent-cyan-500)", "var(--color-accent-500)"]
 ---
 
 <BaseLayout title="" description="">
@@ -66,8 +68,8 @@ const { headings } = await render(post);
                     <p><small>Last Update: 1555</small></p>
                 </div>
                 <div class="next-prev-post-container margin-top-l">
-                    {allPosts[indexOfPost - 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
-                    {allPosts[indexOfPost + 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
+                    {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
+                    {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
                 </div>
                 <div class="email-container margin-top-l">
                     <h2 class="text-align-center margin-bottom-xs">Email Updates</h2>
@@ -78,7 +80,7 @@ const { headings } = await render(post);
                     <h2 class="text-align-center margin-top-l margin-bottom-m">Similar Posts</h2>
                     <CardGrid>
                         {
-                            sameTagPosts.map((post) => (<CardBlog post={post}/>))
+                            sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index]}/>))
                         }
                     </CardGrid>
                 )}

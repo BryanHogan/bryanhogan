@@ -4,9 +4,10 @@ import type { CollectionEntry } from "astro:content";
 import Icon from "./Icon.astro";
 interface Props {
     post: CollectionEntry<"blog">;
+    backgroundColor?: string;
 }
 
-const { post } = Astro.props;
+const { post, backgroundColor = "var(--color-accent-cyan-500)" } = Astro.props;
 import { getReadingTime } from "../utils/reading-time.ts"
 import { getLastModifiedDate } from "../utils/last-update";
 
@@ -44,7 +45,7 @@ const isoLastUpdate = lastUpdate.toISOString();
     </div>
 </a>
 
-<style>
+<style define:vars={{ backgroundColor }}>
     a {
         text-decoration: none;
     }
@@ -54,7 +55,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         flex-direction: column;
     }
     .image-container {
-        background-color: var(--color-accent-cyan-500);
+        background-color: var(--backgroundColor);
         border-radius: var(--border-radius-m) var(--border-radius-m) 0 0;
         min-height: 8rem;
         > * {

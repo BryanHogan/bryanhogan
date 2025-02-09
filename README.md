@@ -1,10 +1,8 @@
 To Do's:
 
 
-- Update blog post card: Include tags and date; Color array
-- Blog post layout
 - Now layout, using auto last update + field for location
-- SVG
+- SVG favicon
 - Import blog content & use seperate repo for blog content
 - Project cards: Some icons change color on hover and some don't
 - Add title attribute to social icons

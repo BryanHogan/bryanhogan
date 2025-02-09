@@ -28,6 +28,12 @@ const { title, href } = Astro.props;
         &:hover h3 {
             color: var(--a-hover-color);
         }
+        :global(svg) {
+            transition: color var(--transition-normal);
+        }
+        &:hover :global(svg) {
+            color: var(--a-hover-color);
+        }
     }
     .container {
         border: 1px solid var(--border-color);
