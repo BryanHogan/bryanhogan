@@ -56,7 +56,7 @@ const socials: Socials = {
     bluesky: {
         name: "BlueSky",
         href: "https://bsky.app/profile/bryanhogan.com",
-        icon: "blueSky",
+        icon: "bluesky",
         iconalt: "BlueSky logo"
     }
 

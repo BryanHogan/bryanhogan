@@ -67,6 +67,11 @@
   max-width: var(--main-content-max-width);
 }
 
+.post-hero-h2 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-m);
+}
+
 
 .margin-top-3xl { margin-top: var(--space-3xl); }
 .margin-top-2xl { margin-top: var(--space-2xl); }

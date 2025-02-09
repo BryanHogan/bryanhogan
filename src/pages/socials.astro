@@ -1,0 +1,39 @@
+---
+import CardMin from "../components/CardMin.astro";
+import Hero from "../components/Hero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import socials from "../data/socials";
+import Icon from "../components/Icon.astro";
+---
+
+<BaseLayout
+    title="Social Media Profiles"
+    description="List of Bryan Hogan's social media profiles."
+>
+    <Hero
+        h1="Social Media Profiles"
+        subtitle="List of all of my social media profiles."
+    />
+    <h2 class="post-hero-h2 text-align-center">Find me here</h2>
+    <ul role="list">
+        <li><CardMin href={socials.instagram.href}><Icon name={socials.instagram.icon} label={socials.instagram.iconalt} size="2.5rem"/></CardMin></li>
+        <li><CardMin href={socials.threads.href}><Icon name={socials.threads.icon} label={socials.threads.iconalt} size="2.5rem"/></CardMin></li>
+        <li><CardMin href={socials.bluesky.href}><Icon name={socials.bluesky.icon} label={socials.bluesky.iconalt} size="2.5rem"/></CardMin></li>
+        <li><CardMin href={socials.mastodon.href}><Icon name={socials.mastodon.icon} label={socials.mastodon.iconalt} size="2.5rem"/></CardMin></li>
+        <li><CardMin href={socials.github.href}><Icon name={socials.github.icon} label={socials.github.iconalt} size="2.5rem"/></CardMin></li>
+        <li><CardMin href={socials.linkedin.href}><Icon name={socials.linkedin.icon} label={socials.linkedin.iconalt} size="2.5rem"/></CardMin></li>
+    </ul>
+</BaseLayout>
+
+<style>
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--space-s);
+        li {
+            min-width: 6rem;
+        }
+    }
+</style>
