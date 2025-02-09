@@ -3,11 +3,12 @@ interface Props {
     href: string;
     size?: string;
     targetBlank?: boolean;
+    title?: string;
 }
-const {href, size = "6rem", targetBlank = true} = Astro.props;
+const {href, size = "6rem", targetBlank = true, title} = Astro.props;
 ---
 
-<a href={href} target={targetBlank ? "_blank" : "_self"}><slot/></a>
+<a href={href} target={targetBlank ? "_blank" : "_self"} title={title}><slot/></a>
 
 <style define:vars={{ size }}>
     a {

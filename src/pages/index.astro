@@ -8,6 +8,7 @@ import Icon from "../components/Icon.astro";
 import CardBlog from "../components/CardBlog.astro";
 import { getCollection } from "astro:content";
 import Card from "../components/Card.astro";
+import socials from "../data/socials";
 const blogPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
@@ -91,10 +92,10 @@ const blogPosts = (await getCollection("blog")).sort(
 				<Button text="See all socials" href="/socials" buttonStyle="line icon-left" icon="rightarrow"/>
 			</div>
 			<div class="some-content-row">
-				<CardMin href="/"><Icon name="threads" label="Threads icon" size="2.5rem"/></CardMin>
-				<CardMin href="/"><Icon name="bluesky" label="BlueSky icon" size="2.5rem"/></CardMin>
-				<CardMin href="/"><Icon name="mastodon" label="Mastodon icon" size="2.5rem"/></CardMin>
-				<CardMin href="/"><Icon name="instagram" label="Instagram icon" size="2.5rem"/></CardMin>
+				<CardMin href={socials.threads.href} title={socials.threads.name}><Icon name="threads" label="Threads icon" size="2.5rem"/></CardMin>
+				<CardMin href={socials.bluesky.href} title={socials.bluesky.name}><Icon name="bluesky" label="BlueSky icon" size="2.5rem"/></CardMin>
+				<CardMin href={socials.mastodon.href} title={socials.mastodon.name}><Icon name="mastodon" label="Mastodon icon" size="2.5rem"/></CardMin>
+				<CardMin href={socials.instagram.href} title={socials.instagram.name}><Icon name="instagram" label="Instagram icon" size="2.5rem"/></CardMin>
 			</div>
 		</section>
 	</div>
