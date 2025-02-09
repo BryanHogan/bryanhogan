@@ -55,8 +55,10 @@
     --font-weight-semi-bold: 600;
     --font-weight-bold: 700;
 
-    --font-line-height: 1.5;
+    --font-line-height: 1.6;
     --font-line-height-heading: 1.2;
+
+    --font-letter-spacing: 0.2px;
 
     /* Spacing */
     --space-2xs: 0.375rem;

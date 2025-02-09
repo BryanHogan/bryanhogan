@@ -1,8 +1,10 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-
+import "../styles/markdown.css";
 import BaseLayout from "./BaseLayout.astro";
+import { Image } from "astro:assets";
+import { Icons } from "../components/Icons";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -13,8 +15,59 @@ const posts: CollectionEntry<"blog">[] = await getCollection("blog");
 ---
 
 <BaseLayout title="" description="">
-    <div>
-        <p>mdlayout</p>
+    <div class="gradient-background flex-center full-width">
+        <Image
+            src={post.data.coverImage as ImageMetadata}
+            alt={post.data.title + " cover image icon"}
+        />
+    </div>
+    <div class="sub-menu-container">
+        <button onclick="
+        history.back()
+        " class="back-button">
+            <svg
+                class="arrow-back"
+                width="28"
+                height="28"
+                viewBox="0 0 22 22"
+                fill="currentColor"
+                set:html={Icons["leftarrow"]}
+            />
+        </button>
+    </div>
+    
+    <div class="markdown-container">
+        <h1 class="text-align-center margin-bottom-m margin-top-s">{post.data.title}</h1>
         <slot />
     </div>
 </BaseLayout>
+
+<style>
+    .gradient-background {
+        background-color: var(--color-accent-500);
+        background-image: var(--color-gradient);
+        min-height: 25svh;
+        > * {
+            height: 8rem;
+            width: auto;
+        }
+    }
+    .sub-menu-container {
+        padding-top: var(--space-2xs);
+        .back-button {
+        border: none;
+            background-color: var(--color-neutral-900);
+            color: var(--color-neutral-300);
+            border-radius: var(--border-radius-s);
+            &:hover, &:focus {
+                background-color: var(--color-neutral-700);
+            }
+        }
+    }
+    @media only screen and (max-width: 36rem) {
+        h1 {
+            font-size: 36px;
+        }
+    }
+    
+</style>

@@ -13,3 +13,4 @@ To Do's:
 Later:
 - Update readme
 - Add image to about
+- animating id for blog icons

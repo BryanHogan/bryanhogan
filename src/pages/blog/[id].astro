@@ -1,10 +1,10 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import MdBlogLayout from '../../layouts/MdBlogLayout.astro';
+import MdBlogLayout from "../../layouts/MdBlogLayout.astro";
 export async function getStaticPaths() {
-  const posts: CollectionEntry<"blog">[] = await getCollection('blog');
-  return posts.map(post => ({
+  const posts: CollectionEntry<"blog">[] = await getCollection("blog");
+  return posts.map((post) => ({
     params: { id: post.id },
     props: { post },
   }));
@@ -15,6 +15,5 @@ const { Content } = await render(post);
 ---
 
 <MdBlogLayout post={post}>
-  <h1>{post.data.title}</h1>
   <Content />
 </MdBlogLayout>

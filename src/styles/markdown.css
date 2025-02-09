@@ -6,6 +6,10 @@
     & >*:not(:first-child) {
         margin-block-start: var(--flow-space);
     }
+    p {
+        color: var(--color-neutral-100);
+        
+    }
     a {
         color: var(--a-hover-color);
         &:hover {
