@@ -8,6 +8,11 @@ interface Props {
 
 const { post } = Astro.props;
 import { getReadingTime } from "../utils/reading-time.ts"
+import { getLastModifiedDate } from "../utils/last-update";
+
+const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/content/blog/${post.id}.md`));
+const formattedDateLastUpdate = lastUpdate.toLocaleDateString("en-GB");
+const isoLastUpdate = lastUpdate.toISOString();
 ---
 
 <a href={`/blog/${post.id}`}>
@@ -28,7 +33,7 @@ import { getReadingTime } from "../utils/reading-time.ts"
             <div class="last-row-container">
                 <div class="last-update">
                     <Icon name="updated" label="Tag icon" size="1.5rem" />
-                    <p>19/1/2025</p>
+                    <p><time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></p>
                 </div>
                 <div class="reading-time">
                     <Icon name="timer" label="Tag icon" size="1.5rem" />
