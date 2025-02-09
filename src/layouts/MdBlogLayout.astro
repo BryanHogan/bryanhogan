@@ -5,13 +5,28 @@ import "../styles/markdown.css";
 import BaseLayout from "./BaseLayout.astro";
 import { Image } from "astro:assets";
 import { Icons } from "../components/Icons";
+import EmailSignup from "../components/EmailSignup.astro";
+import CardMin from "../components/CardMin.astro";
+import CardGrid from "../components/CardGrid.astro";
+import CardBlog from "../components/CardBlog.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
 }
 const { post } = Astro.props;
-
-const posts: CollectionEntry<"blog">[] = await getCollection("blog");
+;
+const allPosts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const indexOfPost = allPosts.findIndex(
+    (posts) => post.data.title === posts.data.title,
+);
+const sameTagPosts = allPosts.filter(
+    (posts) => 
+        posts.data.tags && 
+        posts.data.tags[0] === post.data.tags[0] && 
+        posts.data.title !== post.data.title
+);
 ---
 
 <BaseLayout title="" description="">
@@ -36,9 +51,33 @@ const posts: CollectionEntry<"blog">[] = await getCollection("blog");
         </button>
     </div>
     
-    <div class="markdown-container">
+    <article class="markdown-container">
         <h1 class="text-align-center margin-bottom-m margin-top-s">{post.data.title}</h1>
         <slot />
+        <hr />
+    </article>
+    <div class="post-container">
+        <div class="post-post-info-container margin-top-s margin-bottom-l">
+            <p><small>Published: {post.data.pubDate.toLocaleDateString("en-GB",)}</small></p>
+            <p><small>Last Update: 1555</small></p>
+        </div>
+        <div class="next-prev-post-container margin-top-l">
+            {allPosts[indexOfPost - 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
+            {allPosts[indexOfPost + 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
+        </div>
+        <div class="email-container margin-top-l">
+            <h2 class="text-align-center margin-bottom-xs">Email Updates</h2>
+            <p class="margin-bottom-s">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
+            <EmailSignup class="set-max-width" />
+        </div>
+        {sameTagPosts.length > 0 && (
+            <h2 class="text-align-center margin-top-l margin-bottom-m">Similar Posts</h2>
+            <CardGrid>
+                {
+                    sameTagPosts.map((post) => (<CardBlog post={post}/>))
+                }
+            </CardGrid>
+        )}
     </div>
 </BaseLayout>
 
@@ -63,6 +102,30 @@ const posts: CollectionEntry<"blog">[] = await getCollection("blog");
                 background-color: var(--color-neutral-700);
             }
         }
+    }
+    .post-container {
+        margin-inline: auto;
+        width: 100%;
+        max-width: var(--main-content-max-width);
+    }
+    .post-post-info-container {
+        font-size: var(--font-size-small);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: var(--space-xs) var(--space-m);
+        padding-inline: var(--space-m);
+    }
+    .email-container {
+        background-color: var(--color-neutral-800);
+        padding: var(--space-s) var(--space-m);
+        border-radius: var(--border-radius-m);
+    }
+    .next-prev-post-container {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-s);
     }
     @media only screen and (max-width: 36rem) {
         h1 {

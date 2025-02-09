@@ -20,8 +20,13 @@ const {href, size = "6rem", targetBlank = true} = Astro.props;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
         &:hover {
-
+            color: var(--color-accent-500);
+        }
+        &>:global(p) {
+            padding-inline: var(--space-xs);
+            text-align: center;
         }
     }
 </style>
