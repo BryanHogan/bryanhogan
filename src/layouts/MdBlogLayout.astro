@@ -11,6 +11,7 @@ import CardGrid from "../components/CardGrid.astro";
 import CardBlog from "../components/CardBlog.astro";
 import TableOfContentsList from "../components/toc/TableOfContentsList.astro";
 import { generateToC } from "../components/toc/generateToC";
+import { getLastModifiedDate } from "../utils/last-update";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -32,9 +33,28 @@ const sameTagPosts = allPosts.filter(
 const { headings } = await render(post);
 
 const cardBlogBackgroundColors = ["var(--color-accent-lilac-500)", "var(--color-accent-blue-500)", "var(--color-accent-cyan-500)", "var(--color-accent-500)"]
+
+const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/content/blog/${post.id}.md`));
+const formattedDateLastUpdate = lastUpdate.toLocaleDateString("en-GB");
+const isoLastUpdate = lastUpdate.toISOString();
 ---
 
-<BaseLayout title="" description="">
+<BaseLayout title={post.data.title} description={post.data.description}>
+    <meta
+        property="article:published_time"
+        content={post.data.pubDate.toISOString()}
+        slot="head"
+    />
+    <meta
+        property="article:modified_time"
+        content={isoLastUpdate}
+        slot="head"
+    />
+    <meta
+        property="article:tag"
+        content={post.data.tags.map((tag) => tag).join(" ")}
+        slot="head"
+    />
     <div class="gradient-background flex-center full-width">
         <Image
             src={post.data.coverImage as ImageMetadata}
@@ -64,8 +84,8 @@ const cardBlogBackgroundColors = ["var(--color-accent-lilac-500)", "var(--color-
             </main>
             <div class="post-container">
                 <div class="post-post-info-container margin-top-s margin-bottom-l">
-                    <p><small>Published: {post.data.pubDate.toLocaleDateString("en-GB",)}</small></p>
-                    <p><small>Last Update: 1555</small></p>
+                    <p><small>Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB",)}</time></small></p>
+                    <p><small>Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></small></p>
                 </div>
                 <div class="next-prev-post-container margin-top-l">
                     {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
