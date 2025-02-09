@@ -39,6 +39,9 @@ if (canonicalURL.pathname.endsWith('/')) {
         <meta name="author" content="Bryan Hogan" />
         <meta name="copyright" content="Bryan Hogan" />
         <meta name="theme-color" content="#A594D3">
+
+        <link rel="alternate" type="application/rss+xml" title="Bryan Hogan" href={new URL("rss.xml", Astro.site)}
+/>
     
     <!-- OpenGraph -->
         <meta property="og:title" content={title} />
