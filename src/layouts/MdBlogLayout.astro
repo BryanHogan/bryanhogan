@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import "../styles/markdown.css";
 import BaseLayout from "./BaseLayout.astro";
@@ -9,12 +9,14 @@ import EmailSignup from "../components/EmailSignup.astro";
 import CardMin from "../components/CardMin.astro";
 import CardGrid from "../components/CardGrid.astro";
 import CardBlog from "../components/CardBlog.astro";
+import TableOfContentsList from "../components/toc/TableOfContentsList.astro";
+import { generateToC } from "../components/toc/generateToC";
 
 interface Props {
     post: CollectionEntry<"blog">;
 }
 const { post } = Astro.props;
-;
+
 const allPosts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
@@ -27,6 +29,7 @@ const sameTagPosts = allPosts.filter(
         posts.data.tags[0] === post.data.tags[0] && 
         posts.data.title !== post.data.title
 );
+const { headings } = await render(post);
 ---
 
 <BaseLayout title="" description="">
@@ -50,38 +53,76 @@ const sameTagPosts = allPosts.filter(
             />
         </button>
     </div>
-    
-    <article class="markdown-container">
-        <h1 class="text-align-center margin-bottom-m margin-top-s">{post.data.title}</h1>
-        <slot />
-        <hr />
-    </article>
-    <div class="post-container">
-        <div class="post-post-info-container margin-top-s margin-bottom-l">
-            <p><small>Published: {post.data.pubDate.toLocaleDateString("en-GB",)}</small></p>
-            <p><small>Last Update: 1555</small></p>
+    <h1 id="_top" class="text-align-center margin-bottom-m margin-top-s">{post.data.title}</h1>
+    <div class="content-and-toc">
+        <div class="main-container">
+            <main class="markdown-container main-content">
+                <slot />
+                <hr />
+            </main>
+            <div class="post-container">
+                <div class="post-post-info-container margin-top-s margin-bottom-l">
+                    <p><small>Published: {post.data.pubDate.toLocaleDateString("en-GB",)}</small></p>
+                    <p><small>Last Update: 1555</small></p>
+                </div>
+                <div class="next-prev-post-container margin-top-l">
+                    {allPosts[indexOfPost - 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
+                    {allPosts[indexOfPost + 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
+                </div>
+                <div class="email-container margin-top-l">
+                    <h2 class="text-align-center margin-bottom-xs">Email Updates</h2>
+                    <p class="margin-bottom-s">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
+                    <EmailSignup class="set-max-width" />
+                </div>
+                {sameTagPosts.length > 0 && (
+                    <h2 class="text-align-center margin-top-l margin-bottom-m">Similar Posts</h2>
+                    <CardGrid>
+                        {
+                            sameTagPosts.map((post) => (<CardBlog post={post}/>))
+                        }
+                    </CardGrid>
+                )}
+            </div>
         </div>
-        <div class="next-prev-post-container margin-top-l">
-            {allPosts[indexOfPost - 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
-            {allPosts[indexOfPost + 1] ? (<CardMin href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
-        </div>
-        <div class="email-container margin-top-l">
-            <h2 class="text-align-center margin-bottom-xs">Email Updates</h2>
-            <p class="margin-bottom-s">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
-            <EmailSignup class="set-max-width" />
-        </div>
-        {sameTagPosts.length > 0 && (
-            <h2 class="text-align-center margin-top-l margin-bottom-m">Similar Posts</h2>
-            <CardGrid>
-                {
-                    sameTagPosts.map((post) => (<CardBlog post={post}/>))
-                }
-            </CardGrid>
-        )}
+        <aside class="aside-container-right">
+            <div class="toc">
+                <div class="sticky-element">
+                    <span class="toc-icon">
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            set:html={Icons["rightcaret"]}
+                        />
+                    </span>
+                    <div class="toc-items">
+                        <p><strong>Table of Contents</strong></p>
+                        <TableOfContentsList
+                            toc={generateToC(headings, {
+                                minHeadingLevel: 1,
+                                maxHeadingLevel: 6,
+                                title: post.data.title,
+                            })}
+                        />
+                    </div>
+                </div>
+            </div>
+        </aside>
     </div>
+        
 </BaseLayout>
 
 <style>
+    .main-container {
+        width: 100%;
+        max-width: var(--main-content-max-width);
+    }
+    .content-and-toc {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     .gradient-background {
         background-color: var(--color-accent-500);
         background-image: var(--color-gradient);
@@ -103,11 +144,6 @@ const sameTagPosts = allPosts.filter(
             }
         }
     }
-    .post-container {
-        margin-inline: auto;
-        width: 100%;
-        max-width: var(--main-content-max-width);
-    }
     .post-post-info-container {
         font-size: var(--font-size-small);
         display: flex;
@@ -127,10 +163,197 @@ const sameTagPosts = allPosts.filter(
         flex-direction: row;
         gap: var(--space-s);
     }
+
+    .aside-container-right {
+        width: 450px;
+    }
+
     @media only screen and (max-width: 36rem) {
         h1 {
             font-size: 36px;
         }
     }
-    
+
+    @media only screen and (min-width: 1000px) {
+		.toc {
+			width: 100%;
+            max-width: 430px;
+            margin-left: 16px;
+		}
+		.toc-icon {
+			display: none;
+			padding: 0;
+			margin: 0;
+		}
+		.sticky-element {
+			transition: top 0.3s ease;
+			z-index: 10;
+			width: 100%;
+			padding: 1rem;
+		}
+		.fixed {
+			position: fixed;
+			top: var(--navbar-height);
+			width: var(--aside-width);
+		}
+	}
+    @media only screen and (max-width: 999.9px) {
+        .content-and-toc {
+            flex-direction: column;
+        }
+        
+		.toc {
+			display: contents;
+		}
+
+		.toc-icon {
+			position: fixed;
+			top: calc(var(--space-2xs) + var(--navbar-height));
+			right: var(--space-s);
+			display: block;
+			cursor: pointer;
+			padding: var(--space-2xs);
+			border-radius: var(--border-radius-m);
+			transition: background-color;
+            var(--transition-normal);
+			z-index: 100;
+		}
+
+		.toc-icon:hover,
+		.toc-icon:focus-within {
+			background-color: var(--color-neutral-800);
+		}
+
+		.toc-icon svg {
+			transition: transform var(--transition-normal);
+		}
+
+		.toc-icon[aria-expanded="true"] svg {
+			transform: rotate(90deg);
+		}
+
+		.toc-items {
+			position: fixed;
+			top: calc(var(--navbar-height) + var(--space-2xs));
+			right: 0;
+			display: none;
+			max-height: calc(100svh - var(--navbar-height) - 75px);
+			overflow-y: auto;
+			background-color: var(--color-neutral-800);
+			border-radius: var(--border-radius-m) 0 0 var(--border-radius-m);
+			padding: var(--space-m);
+			box-shadow: var(--shadow-m);
+			min-width: 200px;
+			max-width: calc(100vw - var(--space-xl));
+			z-index: 99;
+		}
+
+		.toc-icon[aria-expanded="true"] + .toc-items {
+			display: block;
+			animation: slideInFromRight 0.2s ease-out;
+		}
+	}  
 </style>
+
+
+<script>
+	function setupStickyToc() {
+		const stickyElement = document.querySelector(
+			".sticky-element",
+		) as HTMLElement;
+		const asideContainer = document.querySelector(".aside-container-right");
+
+		if (stickyElement && asideContainer) {
+			const updateWidth = () => {
+				const asideWidth = asideContainer.getBoundingClientRect().width;
+				stickyElement.style.setProperty(
+					"--aside-width",
+					`${asideWidth}px`,
+				);
+			};
+
+			const updateOffset = () => {
+				return stickyElement.offsetTop;
+			};
+
+			let stickyOffset = updateOffset();
+
+			const handleScroll = () => {
+				if (!stickyElement.classList.contains("fixed")) {
+					stickyOffset = updateOffset();
+				}
+
+				if (window.scrollY >= stickyOffset - 50) {
+					stickyElement.classList.add("fixed");
+				} else {
+					stickyElement.classList.remove("fixed");
+				}
+			};
+
+			const handleResize = () => {
+				stickyElement.classList.remove("fixed");
+				updateWidth();
+				stickyOffset = updateOffset();
+				handleScroll();
+			};
+
+			updateWidth();
+
+			window.addEventListener("scroll", handleScroll);
+			window.addEventListener("resize", handleResize);
+
+			return () => {
+				window.removeEventListener("scroll", handleScroll);
+				window.removeEventListener("resize", handleResize);
+			};
+		}
+	}
+
+	setupStickyToc();
+
+	document.addEventListener("astro:after-swap", () => {
+		setupStickyToc();
+	});
+
+	function setupTocToggle() {
+		const tocToggle = document.querySelector(
+			".toc-icon",
+		) as HTMLElement | null;
+		const tocItems = document.querySelector(
+			".toc-items",
+		) as HTMLElement | null;
+
+		if (!tocToggle || !tocItems) return;
+
+		tocToggle.setAttribute("aria-expanded", "false");
+		tocToggle.setAttribute("aria-controls", "toc-items");
+		tocItems.id = "toc-items";
+
+		const closeToc = (event: Event) => {
+			if (
+				tocItems.contains(event.target as Node) ||
+				tocToggle.contains(event.target as Node)
+			)
+				return;
+			tocToggle.setAttribute("aria-expanded", "false");
+		};
+
+		const toggleToc = (event: Event) => {
+			event.stopPropagation();
+			const isExpanded =
+				tocToggle.getAttribute("aria-expanded") === "true";
+			tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
+		};
+
+		tocToggle.removeEventListener("click", toggleToc);
+		document.removeEventListener("click", closeToc);
+
+		tocToggle.addEventListener("click", toggleToc);
+		document.addEventListener("click", closeToc);
+	}
+
+	setupTocToggle();
+
+	document.addEventListener("astro:after-swap", setupTocToggle);
+</script>
+
