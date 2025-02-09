@@ -1,9 +1,6 @@
 ---
-layout: ../layouts/SimpleMdLayout.astro
-title: Now
-description: What am I doing now?
-h1: Now
-subtitle: Change later
+layout: ../layouts/NowLayout.astro
+location: Cologne in Germany
 ---
 
 ## What am I doing now?

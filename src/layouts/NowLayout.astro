@@ -1,0 +1,23 @@
+---
+import Hero from "../components/Hero.astro";
+import { getLastModifiedDate } from "../utils/last-update";
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+
+const lastModified = await getLastModifiedDate("src/pages/now.md");
+const formattedDate = lastModified.toLocaleDateString("en-UK", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+});
+const isoString = lastModified.toISOString();
+---
+<BaseLayout title="Now - Bryan Hogan" description="What am I doing now? Bryan Hogan's Now page.">
+    <Hero h1="Now" subtitle="">
+        <p class="text-align-center">Last updated on <time datetime={isoString}>{formattedDate}</time><br/>from {frontmatter.location}.</p>
+    </Hero>
+    <div class="markdown-container margin-top-xl margin-bottom-xl margin-inline-auto">
+        <slot />
+    </div>
+</BaseLayout>
