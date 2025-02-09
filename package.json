@@ -11,6 +11,8 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.2.5"
+    "astro": "^5.2.5",
+    "mdast-util-to-string": "^4.0.0",
+    "reading-time": "^1.5.0"
   }
 }

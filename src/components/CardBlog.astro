@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
+import { getReadingTime } from "../utils/reading-time.ts"
 ---
 
 <a href={`/blog/${post.id}`}>
@@ -31,7 +32,7 @@ const { post } = Astro.props;
                 </div>
                 <div class="reading-time">
                     <Icon name="timer" label="Tag icon" size="1.5rem" />
-                    <p>6 min</p>
+                    <p>{getReadingTime(post.body || "")} min</p>
                 </div>
             </div>
         </div>
@@ -72,7 +73,7 @@ const { post } = Astro.props;
     .tag-row-container,
     .last-row-container > div {
         display: flex;
-
+        align-items: center;
         flex-direction: row;
         gap: var(--space-xs);
         color: var(--color-neutral-200);
