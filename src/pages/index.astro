@@ -56,8 +56,8 @@ import { cardBlogBackgroundColors } from "../data/colors";
 		<section class="content-cards-container">
 			<div class="first-row">
 				<h2>Blog</h2>
-				<Button text="See all blog posts" href="/blog" buttonStyle="line gradient-underline icon-left" icon="rightarrow"/>
-				<Button text="See blog introduction" href="/blog-introduction" buttonStyle="line icon-left" icon="rightarrow"/>
+				<Button text="All blog posts" href="/blog" buttonStyle="line gradient-underline icon-left" icon="rightarrow"/>
+				<Button text="Blog introduction" href="/blog-introduction" buttonStyle="line icon-left" icon="rightarrow"/>
 			</div>
 			<div class="blog-content-cards">
 				{
@@ -70,7 +70,7 @@ import { cardBlogBackgroundColors } from "../data/colors";
 		<section class="content-cards-container">
 			<div class="first-row">
 				<h2>Projects</h2>
-				<Button text="See all projects" href="/projects" buttonStyle="line icon-left" icon="rightarrow"/>
+				<Button text="All projects" href="/projects" buttonStyle="line icon-left" icon="rightarrow"/>
 			</div>
 			<div class="projects-content-cards">
 				<Card title="ToLearnKorean" href="https://tolearnkorean.com/">
@@ -90,7 +90,7 @@ import { cardBlogBackgroundColors } from "../data/colors";
 		<section class="content-cards-container">
 			<div class="first-row">
 				<h2>Socials</h2>
-				<Button text="See all socials" href="/socials" buttonStyle="line icon-left" icon="rightarrow"/>
+				<Button text="All my socials" href="/socials" buttonStyle="line icon-left" icon="rightarrow"/>
 			</div>
 			<div class="some-content-row">
 				<CardMin href={socials.threads.href} title={socials.threads.name}><Icon name="threads" label="Threads icon" size="2.5rem"/></CardMin>
@@ -173,7 +173,7 @@ import { cardBlogBackgroundColors } from "../data/colors";
 		align-items: center;
 		max-width: 40rem;
 	}
-	@media (min-width: 48rem) {
+	@media only screen and (min-width: 48rem) {
 		.intro-container .intro {
 			flex-direction: row;
 		}
@@ -186,6 +186,13 @@ import { cardBlogBackgroundColors } from "../data/colors";
 		}
 		.some-content-row {
 			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	@media only screen and (max-width: 35.999rem) {
+		.content-cards-container .first-row {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--space-s);
 		}
 	}
 </style>
