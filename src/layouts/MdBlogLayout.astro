@@ -13,6 +13,7 @@ import TableOfContentsList from "../components/toc/TableOfContentsList.astro";
 import { generateToC } from "../components/toc/generateToC";
 import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
+import Icon from "../components/Icon.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -40,7 +41,7 @@ const formattedDateLastUpdate = lastUpdate.toLocaleDateString("en-GB");
 const isoLastUpdate = lastUpdate.toISOString();
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout title={post.data.title} description={post.data.description} ogType="article">
     <meta
         property="article:published_time"
         content={post.data.pubDate.toISOString()}
@@ -100,7 +101,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 </div>
                 {sameTagPosts.length > 0 && (
                     <h2 class="text-align-center margin-top-l margin-bottom-m">Similar Posts</h2>
-                    <CardGrid>
+                    <CardGrid columnWidth="max-2">
                         {
                             sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]}/>))
                         }

@@ -5,6 +5,7 @@ coverImage: ../blog-assets/covers/Notion-Obsidian-Comparison-Cover.svg
 pubDate: 2025-01-19T07:35:38Z
 lastUpdate: 2025-01-19T07:35:38Z
 tags:
+  - korea
   - obsidian
   - notion
   - productivity

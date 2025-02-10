@@ -15,11 +15,18 @@ const { columnWidth = "max-3" } = Astro.props;
         gap: var(--space-l);
         grid-template-columns: 1fr;
     }
+    @media (min-width: 38rem) {
+        .max-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
     @media (min-width: 48rem) {
         .max-3 {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+
     @media (min-width: 32rem) {
         .max-4 {
             grid-template-columns: 1fr 1fr;
