@@ -3,7 +3,7 @@ layout: ../layouts/NowLayout.astro
 location: Cologne in Germany
 ---
 
-## What am I doing now?
-
 - Writing my bachelor thesis.
 - Learning Korean.
+
+Mainly working on writing my thesis now. Building an app for self-tracking.

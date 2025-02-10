@@ -1,0 +1,1 @@
+export const cardBlogBackgroundColors = ["var(--color-accent-lilac-500)", "var(--color-accent-blue-500)", "var(--color-accent-cyan-500)", "var(--color-accent-500)"];

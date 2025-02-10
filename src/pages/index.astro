@@ -12,6 +12,7 @@ import socials from "../data/socials";
 const blogPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
+import { cardBlogBackgroundColors } from "../data/colors";
 ---
 
 <BaseLayout
@@ -60,8 +61,8 @@ const blogPosts = (await getCollection("blog")).sort(
 			</div>
 			<div class="blog-content-cards">
 				{
-					blogPosts.slice(0, 3).map((post) => (
-						<CardBlog post={post}/>
+					blogPosts.slice(0, 3).map((post, index) => (
+						<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
 					))
 				}
 			</div>

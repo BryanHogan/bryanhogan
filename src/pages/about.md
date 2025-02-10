@@ -17,8 +17,13 @@ I also run a [monthly newsletter](/follow) called "Bryan's Briefing" since the b
 
 Take a look at my [Now page](/now) to see what I'm currently doing.
 
-I've got a more career focussed introduction of myself on my portfolio page.
+<div style="column-count: 2;">
 
+![Text here](../assets/images/Bryan-Hogan-Surfing-Standing.png)
+
+![Text here](../assets/images/B-BryanHogan.png)
+
+</div>
 
 <h2 class="text-align-center">About Bryan's Blog</h2>
 

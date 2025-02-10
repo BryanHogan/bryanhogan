@@ -12,6 +12,7 @@ import CardBlog from "../components/CardBlog.astro";
 import TableOfContentsList from "../components/toc/TableOfContentsList.astro";
 import { generateToC } from "../components/toc/generateToC";
 import { getLastModifiedDate } from "../utils/last-update";
+import { cardBlogBackgroundColors } from "../data/colors";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -32,7 +33,7 @@ const sameTagPosts = allPosts.filter(
 );
 const { headings } = await render(post);
 
-const cardBlogBackgroundColors = ["var(--color-accent-lilac-500)", "var(--color-accent-blue-500)", "var(--color-accent-cyan-500)", "var(--color-accent-500)"]
+
 
 const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/content/blog/${post.id}.md`));
 const formattedDateLastUpdate = lastUpdate.toLocaleDateString("en-GB");
@@ -77,7 +78,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         </button>
     </div>
     <h1 id="_top" class="text-align-center margin-bottom-m margin-top-s">{post.data.title}</h1>
-    <div class="content-and-toc">
+    <div class="content-and-toc margin-bottom-xl">
         <div class="main-container">
             <main class="markdown-container main-content">
                 <slot />
@@ -101,7 +102,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <h2 class="text-align-center margin-top-l margin-bottom-m">Similar Posts</h2>
                     <CardGrid>
                         {
-                            sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index]}/>))
+                            sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]}/>))
                         }
                     </CardGrid>
                 )}

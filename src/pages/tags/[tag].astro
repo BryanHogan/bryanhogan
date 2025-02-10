@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/Hero.astro";
 import CardBlog from "../../components/CardBlog.astro";
+import { cardBlogBackgroundColors } from "../../data/colors";
 
 export async function getStaticPaths() {
     const allPosts = await getCollection("blog");
@@ -32,9 +33,9 @@ const { posts } = Astro.props;
     <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts tagged with " + tag.charAt(0).toUpperCase() + tag.slice(1) }</h2>
     <ul role="list" class="blog-posts-container margin-bottom-xl">
     {
-        posts.map((post) => (
+        posts.map((post, index) => (
             <li>
-                <CardBlog post={post} />
+                <CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
             </li>
         ))
     }

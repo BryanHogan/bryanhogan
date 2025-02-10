@@ -5,12 +5,13 @@ import { Icons } from "../components/Icons";
 interface Props {
     title: string;
     href: string;
+    targetBlank?: boolean;
 }
 
-const { title, href } = Astro.props;
+const { title, href, targetBlank = true } = Astro.props;
 ---
 
-<a href={href} target="_blank">
+<a href={href} target={targetBlank ? "_blank" : "_self"}>
     <div class="container">
         <h3>{title}</h3>
         <slot />

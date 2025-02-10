@@ -5,6 +5,9 @@
     & >*:not(:first-child) {
         margin-block-start: var(--flow-space);
     }
+    & >div>p:not(:first-child) {
+        margin-block-start: var(--flow-space);
+    }
     p {
         color: var(--color-neutral-100);
         
