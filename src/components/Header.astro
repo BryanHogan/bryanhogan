@@ -32,12 +32,14 @@ import Icon from "./Icon.astro";
                     size="1.5rem"
                     label="Bars"
                     class="hamburger-icon"
+                    color="var(--color-neutral-200)"
                 />
                 <Icon
                     name="close"
                     size="1.5rem"
                     label="Instagram"
                     class="close-icon"
+                    color="var(--color-neutral-200)"
                 />
             </button>
             <nav class="primary-navigation">
@@ -53,6 +55,9 @@ import Icon from "./Icon.astro";
 </div>
 
 <style>
+    .close-icon, .hamburger-icon {
+        color: var(--color-neutral-200);
+    }
     .logo {
     }
     .logo-a {
