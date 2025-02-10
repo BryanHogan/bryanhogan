@@ -58,11 +58,15 @@ const isoLastUpdate = lastUpdate.toISOString();
         slot="head"
     />
     <div class="gradient-background flex-center full-width">
-        <Image
-            src={post.data.coverImage as ImageMetadata}
-            alt={post.data.title + " cover image icon"}
-            transition:name={post.data.title}
-        />
+        {
+            post.data.coverImage &&
+            <Image
+                src={post.data.coverImage as ImageMetadata}
+                alt={post.data.title + " cover image icon"}
+                transition:name={post.data.title}
+            />
+        }
+        {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.data.title} style="font-size: 4rem;">{post.data.emoji}</p></div>}
     </div>
     <div class="sub-menu-container">
         <button onclick="
@@ -156,6 +160,12 @@ const isoLastUpdate = lastUpdate.toISOString();
             height: 8rem;
             width: auto;
         }
+    }
+    .emoji {
+        background-color: var(--color-neutral-100);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .sub-menu-container {
         padding-top: var(--space-2xs);

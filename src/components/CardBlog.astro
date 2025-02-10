@@ -20,20 +20,23 @@ const isoLastUpdate = lastUpdate.toISOString();
 <a href={`/blog/${post.id}`}>
     <div class="container">
         <div class="image-container flex-center">
-            { transitionIcon ?
-                <Image
+            {post.data.coverImage && (
+                transitionIcon ? (
+                  <Image
                     src={post.data.coverImage as ImageMetadata}
-                    alt={post.data.title + " cover image icon"}
+                    alt={`${post.data.title} cover image icon`}
                     transition:name={post.data.title}
                     style="max-height: 100%; width: auto;"
-                />
-                :
-                <Image
+                  />
+                ) : (
+                  <Image
                     src={post.data.coverImage as ImageMetadata}
-                    alt={post.data.title + " cover image icon"}
+                    alt={`${post.data.title} cover image icon`}
                     style="max-height: 100%; width: auto;"
-                />
-            }
+                  />
+                )
+              )}
+              {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.data.title} style="font-size: 3.5rem;">{post.data.emoji}</p></div>}
         </div>
         <div class="text-container">
             <h3>{post.data.title}</h3>
@@ -74,6 +77,12 @@ const isoLastUpdate = lastUpdate.toISOString();
             width: 100%;
             max-width: 70%;
         }
+    }
+    .emoji {
+        background-color: var(--color-neutral-100);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .text-container {
         padding: var(--space-m);
