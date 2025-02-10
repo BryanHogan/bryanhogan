@@ -33,6 +33,7 @@ Using "you" in Korean is quite interesting since the direct translation 너 / ne
 So one of the main reasons why age matters in Korea is to understand the relation between the two of you.
 
 ## The Different Ages
+
 But why ask for the year born and not age?  
 Well, Koreans might still ask how old and if you then answer with an amount of years that might lead to confusion. "Which one?" could be a possible reaction to your answer.
 
