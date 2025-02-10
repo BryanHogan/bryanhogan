@@ -40,7 +40,7 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, 
     .blog-posts-container {
         display: grid;
         grid-template-columns: 1fr;
-        gap: var(--space-2xl) var(--space-l);
+        gap: var(--space-m) var(--space-m);
     }
     .sub-nav-container ul {
         display: flex;
@@ -60,6 +60,7 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, 
     }
     @media (min-width: 32rem) {
         .blog-posts-container {
+            gap: var(--space-2xl) var(--space-l);
             grid-template-columns: 1fr 1fr;
         }
     }
