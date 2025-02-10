@@ -39,7 +39,7 @@ if (canonicalURL.pathname.endsWith('/')) {
         <meta name="copyright" content="Bryan Hogan" />
         <meta name="theme-color" content="#A594D3">
 
-        <link rel="alternate" type="application/rss+xml" title="Bryan Hogan" href={new URL("rss.xml", Astro.site)}
+        <link rel="alternate" type="application/rss+xml" title="Blog posts by Bryan Hogan" href={new URL("rss.xml", Astro.site)}
 />
     
     <!-- OpenGraph -->
@@ -62,6 +62,7 @@ if (canonicalURL.pathname.endsWith('/')) {
          <meta name="twitter:description" content={description}>
          <meta name="twitter:image" content="https://bryanhogan.com/images/Bryan-Hogan-Preview.png">
          <meta name="twitter:image:alt" content="Bold prominent BryanHogan.com text in the middle with small round picture of Bryan Hogan smiling above.">
+         <script is:inline defer src="https://analytics.eu.umami.is/script.js" data-website-id="e463afca-796b-4024-b97f-3587d94c29ef"></script>
          <ClientRouter />
          <slot name="head"/>
       </head>
