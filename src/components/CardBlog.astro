@@ -24,14 +24,14 @@ const isoLastUpdate = lastUpdate.toISOString();
                 transitionIcon ? (
                   <Image
                     src={post.data.coverImage as ImageMetadata}
-                    alt={`${post.data.title} cover image icon`}
+                    alt={`${post.data.title} cover icon`}
                     transition:name={post.data.title}
                     style="max-height: 100%; width: auto;"
                   />
                 ) : (
                   <Image
                     src={post.data.coverImage as ImageMetadata}
-                    alt={`${post.data.title} cover image icon`}
+                    alt={`${post.data.title} cover icon`}
                     style="max-height: 100%; width: auto;"
                   />
                 )

@@ -25,6 +25,7 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, 
             <li style="display: flex; align-items: center;"><a href="/rss.xml"><Icon name="rss" label="RSS icon" size="1.125rem" class="rss-icon"/></a></li>
         </ul>
     </nav>
+    <h2 class="visually-hidden">All of Bryan Hogan's blog posts</h2>
     <ul role="list" class="blog-posts-container margin-top-l margin-bottom-xl">
         {
             posts.map((post, index) => (

@@ -8,7 +8,7 @@ interface Props {
 const {href, size = "6rem", targetBlank = true, title} = Astro.props;
 ---
 
-<a href={href} target={targetBlank ? "_blank" : "_self"} title={title}><slot/></a>
+<a href={href} target={targetBlank ? "_blank" : "_self"} title={title} aria-label={"Go to " + href}><slot/></a>
 
 <style define:vars={{ size }}>
     a {
