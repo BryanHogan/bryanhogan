@@ -293,103 +293,84 @@ const isoLastUpdate = lastUpdate.toISOString();
 
 
 <script>
-	function setupStickyToc() {
-		const stickyElement = document.querySelector(
-			".sticky-element",
-		) as HTMLElement;
-		const asideContainer = document.querySelector(".aside-container-right");
+    function setupStickyToc() {
+        const stickyElement = document.querySelector(".sticky-element") as HTMLElement;
+        const asideContainer = document.querySelector(".aside-container-right");
 
-		if (stickyElement && asideContainer) {
-			const updateWidth = () => {
-				const asideWidth = asideContainer.getBoundingClientRect().width;
-				stickyElement.style.setProperty(
-					"--aside-width",
-					`${asideWidth}px`,
-				);
-			};
+        if (stickyElement && asideContainer) {
+            const updateWidth = () => {
+                const asideWidth = asideContainer.getBoundingClientRect().width;
+                stickyElement.style.setProperty("--aside-width", `${asideWidth}px`);
+            };
 
-			const updateOffset = () => {
-				return stickyElement.offsetTop;
-			};
+            const updateOffset = () => {
+                return stickyElement.offsetTop;
+            };
 
-			let stickyOffset = updateOffset();
+            let stickyOffset = updateOffset();
 
-			const handleScroll = () => {
-				if (!stickyElement.classList.contains("fixed")) {
-					stickyOffset = updateOffset();
-				}
+            const handleScroll = () => {
+                if (!stickyElement.classList.contains("fixed")) {
+                    stickyOffset = updateOffset();
+                }
 
-				if (window.scrollY >= stickyOffset - 50) {
-					stickyElement.classList.add("fixed");
-				} else {
-					stickyElement.classList.remove("fixed");
-				}
-			};
+                if (window.scrollY >= stickyOffset - 50) {
+                    stickyElement.classList.add("fixed");
+                } else {
+                    stickyElement.classList.remove("fixed");
+                }
+            };
 
-			const handleResize = () => {
-				stickyElement.classList.remove("fixed");
-				updateWidth();
-				stickyOffset = updateOffset();
-				handleScroll();
-			};
+            const handleResize = () => {
+                stickyElement.classList.remove("fixed");
+                updateWidth();
+                stickyOffset = updateOffset();
+                handleScroll();
+            };
 
-			updateWidth();
+            updateWidth();
 
-			window.addEventListener("scroll", handleScroll);
-			window.addEventListener("resize", handleResize);
+            window.addEventListener("scroll", handleScroll);
+            window.addEventListener("resize", handleResize);
 
-			return () => {
-				window.removeEventListener("scroll", handleScroll);
-				window.removeEventListener("resize", handleResize);
-			};
-		}
-	}
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+                window.removeEventListener("resize", handleResize);
+            };
+        }
+    }
 
-	setupStickyToc();
+    function setupTocToggle() {
+        const tocToggle = document.querySelector(".toc-icon") as HTMLElement | null;
+        const tocItems = document.querySelector(".toc-items") as HTMLElement | null;
 
-	document.addEventListener("astro:after-swap", () => {
-		setupStickyToc();
-	});
+        if (!tocToggle || !tocItems) return;
 
-	function setupTocToggle() {
-		const tocToggle = document.querySelector(
-			".toc-icon",
-		) as HTMLElement | null;
-		const tocItems = document.querySelector(
-			".toc-items",
-		) as HTMLElement | null;
+        tocToggle.setAttribute("aria-expanded", "false");
+        tocToggle.setAttribute("aria-controls", "toc-items");
+        tocItems.id = "toc-items";
 
-		if (!tocToggle || !tocItems) return;
+        const closeToc = (event: Event) => {
+            if (tocItems.contains(event.target as Node) || tocToggle.contains(event.target as Node)) return;
+            tocToggle.setAttribute("aria-expanded", "false");
+        };
 
-		tocToggle.setAttribute("aria-expanded", "false");
-		tocToggle.setAttribute("aria-controls", "toc-items");
-		tocItems.id = "toc-items";
+        const toggleToc = (event: Event) => {
+            event.stopPropagation();
+            const isExpanded = tocToggle.getAttribute("aria-expanded") === "true";
+            tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
+        };
 
-		const closeToc = (event: Event) => {
-			if (
-				tocItems.contains(event.target as Node) ||
-				tocToggle.contains(event.target as Node)
-			)
-				return;
-			tocToggle.setAttribute("aria-expanded", "false");
-		};
+        tocToggle.addEventListener("click", toggleToc);
+        document.addEventListener("click", closeToc);
+    }
 
-		const toggleToc = (event: Event) => {
-			event.stopPropagation();
-			const isExpanded =
-				tocToggle.getAttribute("aria-expanded") === "true";
-			tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
-		};
+    function initializeToc() {
+        setupStickyToc();
+        setupTocToggle();
+    }
 
-		tocToggle.removeEventListener("click", toggleToc);
-		document.removeEventListener("click", closeToc);
+    initializeToc();
 
-		tocToggle.addEventListener("click", toggleToc);
-		document.addEventListener("click", closeToc);
-	}
-
-	setupTocToggle();
-
-	document.addEventListener("astro:after-swap", setupTocToggle);
+    document.addEventListener("astro:after-swap", initializeToc);
 </script>
-
