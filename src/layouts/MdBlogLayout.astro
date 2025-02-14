@@ -13,7 +13,6 @@ import TableOfContentsList from "../components/toc/TableOfContentsList.astro";
 import { generateToC } from "../components/toc/generateToC";
 import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
-import Icon from "../components/Icon.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -68,7 +67,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         }
         {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.data.title} style="font-size: 4rem;">{post.data.emoji}</p></div>}
     </div>
-    <div class="sub-menu-container">
+    <div class="sub-menu-container full-width">
         <button onclick="
         history.back()
         " class="back-button">
@@ -156,8 +155,9 @@ const isoLastUpdate = lastUpdate.toISOString();
         background-color: var(--color-accent-500);
         background-image: var(--color-gradient);
         min-height: 25svh;
-        > * {
-            height: 8rem;
+        >* {
+            height: 11rem;
+            padding-block: var(--space-l);
             width: auto;
         }
     }
@@ -252,6 +252,7 @@ const isoLastUpdate = lastUpdate.toISOString();
 			transition: background-color;
             var(--transition-normal);
 			z-index: 100;
+            color: var(--color-neutral-300);
 		}
 
 		.toc-icon:hover,

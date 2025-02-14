@@ -13,7 +13,7 @@ const {href, size = "6rem", targetBlank = true, title} = Astro.props;
 <style define:vars={{ size }}>
     a {
         width: 100%;
-        height: var(--size);
+        min-height: var(--size);
         border: 1px solid var(--border-color);
         background-color: var(--color-neutral-900);
         border-radius: var(--border-radius-s);
@@ -22,6 +22,7 @@ const {href, size = "6rem", targetBlank = true, title} = Astro.props;
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        padding: var(--space-2xs);
         &:hover {
             color: var(--color-accent-500);
         }

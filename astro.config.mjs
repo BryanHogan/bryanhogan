@@ -6,5 +6,9 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bryanhogan.com',
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+  server: {
+    host: true,
+    port: 4321,
+  },
 });
