@@ -293,84 +293,97 @@ const isoLastUpdate = lastUpdate.toISOString();
 
 
 <script>
-    function setupStickyToc() {
-        const stickyElement = document.querySelector(".sticky-element") as HTMLElement;
-        const asideContainer = document.querySelector(".aside-container-right");
-
+    function setupStickyToc(): (() => void) | undefined {
+        const stickyElement = document.querySelector(".sticky-element") as HTMLElement | null;
+        const asideContainer = document.querySelector(".aside-container-right") as HTMLElement | null;
+    
         if (stickyElement && asideContainer) {
             const updateWidth = () => {
                 const asideWidth = asideContainer.getBoundingClientRect().width;
                 stickyElement.style.setProperty("--aside-width", `${asideWidth}px`);
             };
-
-            const updateOffset = () => {
-                return stickyElement.offsetTop;
-            };
-
-            let stickyOffset = updateOffset();
-
+        
+            let stickyOffset = stickyElement.offsetTop;
+        
             const handleScroll = () => {
                 if (!stickyElement.classList.contains("fixed")) {
-                    stickyOffset = updateOffset();
+                    stickyOffset = stickyElement.offsetTop;
                 }
-
                 if (window.scrollY >= stickyOffset - 50) {
                     stickyElement.classList.add("fixed");
                 } else {
                     stickyElement.classList.remove("fixed");
                 }
             };
-
+        
             const handleResize = () => {
                 stickyElement.classList.remove("fixed");
                 updateWidth();
-                stickyOffset = updateOffset();
+                stickyOffset = stickyElement.offsetTop;
                 handleScroll();
             };
-
+        
             updateWidth();
-
             window.addEventListener("scroll", handleScroll);
             window.addEventListener("resize", handleResize);
-
+        
             return () => {
                 window.removeEventListener("scroll", handleScroll);
                 window.removeEventListener("resize", handleResize);
             };
         }
     }
-
-    function setupTocToggle() {
+    
+    function setupTocToggle(): (() => void) | undefined {
         const tocToggle = document.querySelector(".toc-icon") as HTMLElement | null;
         const tocItems = document.querySelector(".toc-items") as HTMLElement | null;
-
+    
         if (!tocToggle || !tocItems) return;
-
+    
         tocToggle.setAttribute("aria-expanded", "false");
-        tocToggle.setAttribute("aria-controls", "toc-items");
-        tocItems.id = "toc-items";
-
+    
         const closeToc = (event: Event) => {
-            if (tocItems.contains(event.target as Node) || tocToggle.contains(event.target as Node)) return;
+            if (
+                tocItems.contains(event.target as Node) || 
+                tocToggle.contains(event.target as Node)
+            ) return;
             tocToggle.setAttribute("aria-expanded", "false");
         };
-
+    
         const toggleToc = (event: Event) => {
             event.stopPropagation();
             const isExpanded = tocToggle.getAttribute("aria-expanded") === "true";
             tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
         };
-
+    
         tocToggle.addEventListener("click", toggleToc);
         document.addEventListener("click", closeToc);
+    
+        return () => {
+            tocToggle.removeEventListener("click", toggleToc);
+            document.removeEventListener("click", closeToc);
+        };
     }
-
-    function initializeToc() {
-        setupStickyToc();
-        setupTocToggle();
+    
+    function initializeToc(): (() => void) | undefined {
+        const stickyCleanup = setupStickyToc();
+        const tocCleanup = setupTocToggle();
+    
+        return () => {
+            if (stickyCleanup) stickyCleanup();
+            if (tocCleanup) tocCleanup();
+        };
     }
-
+    
+    // Ensure ToC is re-initialized after page navigation
+    document.addEventListener("astro:after-swap", () => {
+        setTimeout(() => {
+            const cleanup = initializeToc();
+            return cleanup;
+        }, 50); // Small delay to ensure elements are ready
+    });
+    
+    // Initialize on page load
     initializeToc();
 
-    document.addEventListener("astro:after-swap", initializeToc);
 </script>
