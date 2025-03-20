@@ -14,6 +14,7 @@ import { generateToC } from "../components/toc/generateToC";
 import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
 import Icon from "../components/Icon.astro";
+import { mastodon } from "../data/socials";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -97,9 +98,9 @@ const isoLastUpdate = lastUpdate.toISOString();
                         <div class="social-ref-icons-container">
                             <p class="padding-right-xs">Like & comment this post on:</p>
                             <ul role="list" class="social-ref-icons">
-                                <li><a><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>
-                                <li><a><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>
-                                <li><a><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>
+                                {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
+                                {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
+                                {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
                             </ul>
                         </div>
                             
@@ -205,6 +206,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 align-items: center;
                 gap: var(--space-2xs);
                 cursor: pointer;
+                text-decoration: none;
             }
         }
 
