@@ -11,6 +11,9 @@ const blog = defineCollection({
         emoji: z.string().optional(),
         pubDate: z.date(),
         lastUpdate: z.date().optional(),
+        blueskyRef: z.string().optional(),
+        mastodonRef: z.string().optional(),
+        threadsRef: z.string().optional(),
         tags: z.array(z.string())
     }).refine((data) => data.coverImage || data.emoji, {
         message: "Either coverImage or emoji must be provided.",

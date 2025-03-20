@@ -13,6 +13,7 @@ import TableOfContentsList from "../components/toc/TableOfContentsList.astro";
 import { generateToC } from "../components/toc/generateToC";
 import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
+import Icon from "../components/Icon.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -86,9 +87,25 @@ const isoLastUpdate = lastUpdate.toISOString();
         <div class="main-container">
             <main class="markdown-container main-content">
                 <slot />
-                <hr class="padding-top-l"/>
+                <hr class="padding-top-xl"/>
+                <p>I want to hear your feedback! Was something confusing? Did you get stuck? Did you find this post amazingly helpful? Was it all very mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!</p>
             </main>
             <div class="post-container">
+                {
+                    (post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) &&
+                    (
+                        <div class="social-ref-icons-container">
+                            <p class="padding-right-xs">Like & comment this post on:</p>
+                            <ul role="list" class="social-ref-icons">
+                                <li><a><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>
+                                <li><a><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>
+                                <li><a><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>
+                            </ul>
+                        </div>
+                            
+                        
+                    )
+                }
                 <div class="post-post-info-container margin-top-s margin-bottom-l">
                     <p><small>Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB",)}</time></small></p>
                     <p><small>Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></small></p>
@@ -97,13 +114,13 @@ const isoLastUpdate = lastUpdate.toISOString();
                     {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
                     {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
                 </div>
-                <div class="email-container margin-top-l">
+                <div class="email-container margin-top-xl">
                     <h2 class="text-align-center margin-bottom-xs">Email Updates</h2>
                     <p class="margin-bottom-s">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
                     <EmailSignup class="set-max-width" />
                 </div>
                 {sameTagPosts.length > 0 && (
-                    <h2 class="text-align-center margin-top-l margin-bottom-m">Similar Posts</h2>
+                    <h2 class="text-align-center margin-top-xl margin-bottom-m">Similar Posts</h2>
                     <CardGrid columnWidth="max-2">
                         {
                             sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]}/>))
@@ -167,6 +184,32 @@ const isoLastUpdate = lastUpdate.toISOString();
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    .social-ref-icons-container {
+        margin-top: var(--space-m);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: var(--space-xs);
+        .social-ref-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-xs);
+            li a {
+                padding: var(--space-xs);
+                border: 1px solid var(--color-neutral-500);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: var(--space-2xs);
+                cursor: pointer;
+            }
+        }
+
+    }
+
     .sub-menu-container {
         padding-top: var(--space-2xs);
         .back-button {
