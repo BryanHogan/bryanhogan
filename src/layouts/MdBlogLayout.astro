@@ -336,10 +336,10 @@ const isoLastUpdate = lastUpdate.toISOString();
 	}  
 </style>
 
-<script>
+<script is:inline>
     function setupStickyToc() {
-        const stickyElement = document.querySelector(".sticky-element") as HTMLElement | null;
-        const asideContainer = document.querySelector(".aside-container-right") as HTMLElement | null;
+        const stickyElement = document.querySelector(".sticky-element");
+        const asideContainer = document.querySelector(".aside-container-right");
    
         if (!stickyElement || !asideContainer) return;
            
@@ -371,30 +371,25 @@ const isoLastUpdate = lastUpdate.toISOString();
         updateWidth();
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", handleResize);
-   
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
-        };
     }
    
     function setupTocToggle() {
-        const tocToggle = document.querySelector(".toc-icon") as HTMLElement | null;
-        const tocItems = document.querySelector(".toc-items") as HTMLElement | null;
+        const tocToggle = document.querySelector(".toc-icon");
+        const tocItems = document.querySelector(".toc-items");
    
         if (!tocToggle || !tocItems) return;
    
         tocToggle.setAttribute("aria-expanded", "false");
    
-        const closeToc = (event: MouseEvent) => {
+        const closeToc = (event) => {
             if (
-                tocItems.contains(event.target as Node) ||
-                tocToggle.contains(event.target as Node)
+                tocItems.contains(event.target) ||
+                tocToggle.contains(event.target)
             ) return;
             tocToggle.setAttribute("aria-expanded", "false");
         };
    
-        const toggleToc = (event: MouseEvent) => {
+        const toggleToc = (event) => {
             event.stopPropagation();
             const isExpanded = tocToggle.getAttribute("aria-expanded") === "true";
             tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
@@ -402,11 +397,6 @@ const isoLastUpdate = lastUpdate.toISOString();
    
         tocToggle.addEventListener("click", toggleToc);
         document.addEventListener("click", closeToc);
-   
-        return () => {
-            tocToggle.removeEventListener("click", toggleToc);
-            document.removeEventListener("click", closeToc);
-        };
     }
    
     function initializeToc() {
@@ -414,14 +404,4 @@ const isoLastUpdate = lastUpdate.toISOString();
         setupTocToggle();
     }
     initializeToc();
-   
-    document.addEventListener("astro:after-swap", () => {
-        setTimeout(initializeToc, 50);
-    });
-    
-    document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "visible") {
-            initializeToc();
-        }
-    });
 </script>
