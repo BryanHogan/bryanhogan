@@ -335,79 +335,93 @@ const isoLastUpdate = lastUpdate.toISOString();
 		}
 	}  
 </style>
-<script is:inline>
+
+<script>
     function setupStickyToc() {
-      const stickyElement = document.querySelector(".sticky-element");
-      const asideContainer = document.querySelector(".aside-container-right");
-      if (!stickyElement || !asideContainer) return;
-  
-      if (stickyElement.dataset.initialized === "true") return;
-      stickyElement.dataset.initialized = "true";
-  
-      const updateWidth = () => {
-        const asideWidth = asideContainer.getBoundingClientRect().width;
-        stickyElement.style.setProperty("--aside-width", `${asideWidth}px`);
-      };
-  
-      let stickyOffset = stickyElement.offsetTop;
-  
-      const handleScroll = () => {
-        if (!stickyElement.classList.contains("fixed")) {
-          stickyOffset = stickyElement.offsetTop;
-        }
-        if (window.scrollY >= stickyOffset - 50) {
-          stickyElement.classList.add("fixed");
-        } else {
-          stickyElement.classList.remove("fixed");
-        }
-      };
-  
-      const handleResize = () => {
-        stickyElement.classList.remove("fixed");
+        const stickyElement = document.querySelector(".sticky-element") as HTMLElement | null;
+        const asideContainer = document.querySelector(".aside-container-right") as HTMLElement | null;
+   
+        if (!stickyElement || !asideContainer) return;
+           
+        const updateWidth = () => {
+            const asideWidth = asideContainer.getBoundingClientRect().width;
+            stickyElement.style.setProperty("--aside-width", `${asideWidth}px`);
+        };
+   
+        let stickyOffset = stickyElement.offsetTop;
+   
+        const handleScroll = () => {
+            if (!stickyElement.classList.contains("fixed")) {
+                stickyOffset = stickyElement.offsetTop;
+            }
+            if (window.scrollY >= stickyOffset - 50) {
+                stickyElement.classList.add("fixed");
+            } else {
+                stickyElement.classList.remove("fixed");
+            }
+        };
+   
+        const handleResize = () => {
+            stickyElement.classList.remove("fixed");
+            updateWidth();
+            stickyOffset = stickyElement.offsetTop;
+            handleScroll();
+        };
+   
         updateWidth();
-        stickyOffset = stickyElement.offsetTop;
-        handleScroll();
-      };
-  
-      updateWidth();
-      window.addEventListener("scroll", handleScroll);
-      window.addEventListener("resize", handleResize);
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleResize);
+   
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleResize);
+        };
     }
   
     function setupTocToggle() {
-      const tocToggle = document.querySelector(".toc-icon");
-      const tocItems = document.querySelector(".toc-items");
-      if (!tocToggle || !tocItems) return;
-  
-      if (tocToggle.dataset.initialized === "true") return;
-      tocToggle.dataset.initialized = "true";
-  
-      tocToggle.setAttribute("aria-expanded", "false");
-  
-      const closeToc = (event) => {
-        if (
-          tocItems.contains(event.target) ||
-          tocToggle.contains(event.target)
-        ) return;
+        const tocToggle = document.querySelector(".toc-icon") as HTMLElement | null;
+        const tocItems = document.querySelector(".toc-items") as HTMLElement | null;
+   
+        if (!tocToggle || !tocItems) return;
+   
         tocToggle.setAttribute("aria-expanded", "false");
-      };
-  
-      const toggleToc = (event) => {
-        event.stopPropagation();
-        const isExpanded = tocToggle.getAttribute("aria-expanded") === "true";
-        tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
-      };
-  
-      tocToggle.addEventListener("click", toggleToc);
-      document.addEventListener("click", closeToc);
+   
+        const closeToc = (event: MouseEvent) => {
+            if (
+                tocItems.contains(event.target as Node) ||
+                tocToggle.contains(event.target as Node)
+            ) return;
+            tocToggle.setAttribute("aria-expanded", "false");
+        };
+   
+        const toggleToc = (event: MouseEvent) => {
+            event.stopPropagation();
+            const isExpanded = tocToggle.getAttribute("aria-expanded") === "true";
+            tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
+        };
+   
+        tocToggle.addEventListener("click", toggleToc);
+        document.addEventListener("click", closeToc);
+   
+        return () => {
+            tocToggle.removeEventListener("click", toggleToc);
+            document.removeEventListener("click", closeToc);
+        };
     }
   
     function initializeToc() {
       setupStickyToc();
       setupTocToggle();
     }
-  
-    document.addEventListener("astro:page-load", () => {
-      setTimeout(initializeToc, 50);
+    initializeToc();
+   
+    document.addEventListener("astro:after-swap", () => {
+        setTimeout(initializeToc, 50);
     });
-  </script>
+    
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+            initializeToc();
+        }
+    });
+</script>
