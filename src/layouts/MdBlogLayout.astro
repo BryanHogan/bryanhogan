@@ -121,12 +121,14 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <EmailSignup class="set-max-width" />
                 </div>
                 {sameTagPosts.length > 0 && (
-                    <h2 class="text-align-center margin-top-xl margin-bottom-m">Similar Posts</h2>
-                    <CardGrid columnWidth="max-2">
-                        {
-                            sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]}/>))
-                        }
-                    </CardGrid>
+                    <details>
+                        <summary class="margin-top-xl margin-bottom-m margin-inline-auto" style="font-size: var(--text-size-3xl);">Similar Posts</summary>
+                        <CardGrid columnWidth="max-2">
+                            {
+                                sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]}/>))
+                            }
+                        </CardGrid>
+                    </details>
                 )}
             </div>
         </div>
