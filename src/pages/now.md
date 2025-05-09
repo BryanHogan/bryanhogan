@@ -3,7 +3,6 @@ layout: ../layouts/NowLayout.astro
 location: Cologne in Germany
 ---
 
-- Writing my bachelor thesis.
+- Planing what to do in my future.
+- Work on DailySelfTrack app, make it into a startup?
 - Learning Korean.
-
-Mainly working on writing my thesis now. Building an app for self-tracking.
