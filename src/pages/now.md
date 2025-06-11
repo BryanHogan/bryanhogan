@@ -1,8 +1,10 @@
 ---
 layout: ../layouts/NowLayout.astro
-location: Cologne in Germany
+location: Seoul in South Korea
 ---
 
-- Planing what to do in my future.
-- Work on DailySelfTrack app, make it into a startup?
-- Learning Korean.
+- Starting a nomadic life.
+- Working on [DailySelfTrack](https://dailyselftrack.com/).
+- Looking for further ways to finance myself.
+
+Finished my bachelor thesis in Germany, now [starting a new chapter beginning with my one-way flight to South Korea]().
