@@ -1,5 +1,0 @@
-{
-  "key": "ctrl+alt+g",
-  "command": "workbench.action.tasks.runTask",
-  "args":   "ACP ALL"
-}
