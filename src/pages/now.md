@@ -3,7 +3,7 @@ layout: ../layouts/NowLayout.astro
 location: Seoul in South Korea
 ---
 
-- Starting a nomadic life.
+- Starting a nomadic life
 - Working on [DailySelfTrack](https://dailyselftrack.com/).
 - Looking for further ways to finance myself.
 

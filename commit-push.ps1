@@ -1,27 +1,38 @@
 param([string]$msg)
 
-# Get submodule path from .gitmodules
-$submodulePath = Get-Content ".gitmodules" | Select-String "path = " | ForEach-Object { ($_ -split " = ")[1].Trim() }
+# 1. Detect submodule path (first entry in .gitmodules)
+$submodulePath = Get-Content ".gitmodules" |
+                 Select-String "path\s*=" |
+                 ForEach-Object { ($_ -split " = ")[1].Trim() }
 
 if (-not $submodulePath) {
-  Write-Host "❌ No submodule found."
-  exit 1
+  Write-Host "No submodule found." ; exit 1
 }
 
-# Commit and push submodule
+###########################################################################
+function Commit-And-Push {
+  param([string]$message)
+
+  git diff --cached --quiet
+  if ($LASTEXITCODE -ne 0) {
+    git commit -m $message       ; if ($LASTEXITCODE) { exit 1 }
+    git push                     ; if ($LASTEXITCODE) { exit 1 }
+  } else {
+    Write-Host "No changes to commit here."
+  }
+}
+###########################################################################
+
+# 2. SUBMODULE
+Write-Host "Processing submodule '$submodulePath'..."
 Push-Location $submodulePath
 git add -A
-$subChanges = git diff --cached
-if ($subChanges) {
-  git commit -m $msg
-  git push
-}
+Commit-And-Push $msg
 Pop-Location
 
-# Commit and push main repo
-git add $submodulePath
-$mainChanges = git diff --cached
-if ($mainChanges) {
-  git commit -m "Update submodule: $msg"
-  git push
-}
+# 3. MAIN REPO
+Write-Host "Processing main repo..."
+git add -A
+Commit-And-Push "Update submodule + misc: $msg"
+
+Write-Host "All done!"
