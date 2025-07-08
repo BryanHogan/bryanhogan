@@ -10,7 +10,7 @@ if (-not $submodulePath) {
 }
 
 ###########################################################################
-function Commit-And-Push {
+function ACP-All {
   param([string]$message)
 
   git diff --cached --quiet
@@ -27,12 +27,12 @@ function Commit-And-Push {
 Write-Host "Processing submodule '$submodulePath'..."
 Push-Location $submodulePath
 git add -A
-Commit-And-Push $msg
+ACP-All $msg
 Pop-Location
 
 # 3. MAIN REPO
 Write-Host "Processing main repo..."
 git add -A
-Commit-And-Push "Update submodule + misc: $msg"
+ACP-All "Update submodule + misc: $msg"
 
 Write-Host "All done!"
