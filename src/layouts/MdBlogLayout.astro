@@ -114,6 +114,23 @@ const isoLastUpdate = lastUpdate.toISOString();
                     {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
                     {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
                 </div>
+                <div class="tags-container margin-top-m"> 
+                    {post.data.tags?.length && (
+                        <ul role="list" class="tag-list flex-center flex-row" style="gap: var(--space-s)">
+                            {post.data.tags.map((tag) => {
+                            const slug = tag
+                                .toLowerCase()
+                                .replace(/\s+/g, "-")
+                                .replace(/[^a-z0-9\-]/g, "");
+                            return (
+                                <li>
+                                <a href={`/tags/${slug}`} rel="tag">{tag}</a>
+                                </li>
+                            );
+                            })}
+                        </ul>
+                    )}
+                </div>
                 <div class="email-container margin-top-xl">
                     <h2 class="text-align-center margin-bottom-xs">Email Updates</h2>
                     <p class="margin-bottom-s">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
@@ -210,7 +227,6 @@ const isoLastUpdate = lastUpdate.toISOString();
                 text-decoration: none;
             }
         }
-
     }
 
     .sub-menu-container {
@@ -238,6 +254,12 @@ const isoLastUpdate = lastUpdate.toISOString();
         background-color: var(--color-neutral-800);
         padding: var(--space-s) var(--space-m);
         border-radius: var(--border-radius-m);
+    }
+    .tags-container {
+        li {
+            border: 1px solid var(--color-neutral-500);
+            padding: var(--space-2xs) var(--space-xs);
+        }
     }
     .next-prev-post-container {
         display: flex;
