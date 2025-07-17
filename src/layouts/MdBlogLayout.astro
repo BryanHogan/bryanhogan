@@ -88,8 +88,9 @@ const isoLastUpdate = lastUpdate.toISOString();
         <div class="main-container">
             <main class="markdown-container main-content">
                 <slot />
-                <hr class="padding-top-xl"/>
-                <p>I want to hear your feedback! Was something confusing? Did you get stuck? Did you find this post amazingly helpful? Was it all very mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!</p>
+                <p style="border: 1px solid var(--border-color); padding: var(--space-s); margin-top: var(--space-xl); border-radius: var(--border-radius-s);">
+                    I want to hear your feedback! Was something confusing? Did you get stuck? Did you find this post amazingly helpful? Was it all very mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!
+                </p>
             </main>
             <div class="post-container">
                 {
@@ -103,8 +104,6 @@ const isoLastUpdate = lastUpdate.toISOString();
                                 {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
                             </ul>
                         </div>
-                            
-                        
                     )
                 }
                 <div class="post-post-info-container margin-top-s margin-bottom-l">
