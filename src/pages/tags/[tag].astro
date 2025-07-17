@@ -29,7 +29,7 @@ const { posts } = Astro.props;
     title={"Tag: " + tag}
     description={"All posts containing the tag " + tag.charAt(0).toUpperCase() + tag.slice(1) + "."}
 >
-    <Hero h1={tag.charAt(0).toUpperCase() + tag.slice(1)} subtitle={"About the " + tag + " tag."} />
+    <Hero h1={tag.charAt(0).toUpperCase() + tag.slice(1)} subtitle={"Bryan's blog on " + tag + "."} />
     <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts tagged with " + tag.charAt(0).toUpperCase() + tag.slice(1) }</h2>
     <ul role="list" class="blog-posts-container margin-bottom-xl">
     {
