@@ -3,43 +3,77 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 const execFileP = promisify(execFile);
 
-const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN; // keep server-only (no PUBLIC_)
+const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN; // keep non-PUBLIC so it never ships to client
 const OWNER = "BryanHogan";
 const REPO = "bryanhogan-blog-content";
 const DEFAULT_BRANCH = "main";
 
-// simple per-build cache
+// Simple per-build cache to avoid repeated lookups
 const cache = new Map<string, Date>();
 
-type Args = {
-  /** Path on disk in your main repo (including submodule mount), e.g. "src/content/blog/my-post.md" */
-  localPath: string;
-  /** Path inside the CONTENT repo, e.g. "blog/my-post.md" */
-  repoPath: string;
-  branch?: string;
-  /** Optional: override with a known date (e.g. frontmatter) if git/GitHub fail */
-  fallback?: Date;
-};
-
-async function getFromLocalGit(localPath: string): Promise<Date | undefined> {
+/**
+ * Returns the last modified Date for a given file path.
+ * Accepts the SAME input your component passes, e.g. "src/content/blog/<slug>.md".
+ * Tries local git (fast, works with submodules) -> GitHub API -> falls back to current date (preserves your old behavior).
+ */
+export async function getLastModifiedDate(file_path: string): Promise<Date> {
   try {
-    // If file lives in the submodule at "src/content", run git inside that dir
-    // Adjust "submoduleRoot" if yours differs.
-    const submoduleRoot = "src/content";
-    if (localPath.startsWith(`${submoduleRoot}/`)) {
-      const rel = localPath.slice(submoduleRoot.length + 1);
+    // Normalize to POSIX separators
+    const localPath = file_path.replace(/\\/g, "/");
+
+    // If file lives in the submodule at "src/content", derive the repo-internal path by stripping that prefix
+    const submoduleRoot = "src/content/";
+    const repoPath = localPath.startsWith(submoduleRoot)
+      ? localPath.slice(submoduleRoot.length)
+      : localPath;
+
+    // Cache by repoPath+branch so multiple cards don't repeat work
+    const cacheKey = `${DEFAULT_BRANCH}:${repoPath}`;
+    const cached = cache.get(cacheKey);
+    if (cached) return cached;
+
+    // 1) Try local git first (fast, avoids rate limits)
+    const fromGit = await getFromLocalGit(localPath, repoPath);
+    if (fromGit) {
+      cache.set(cacheKey, fromGit);
+      return fromGit;
+    }
+
+    // 2) Fallback to GitHub API
+    const fromAPI = await getFromGitHub(repoPath, DEFAULT_BRANCH);
+    if (fromAPI) {
+      cache.set(cacheKey, fromAPI);
+      return fromAPI;
+    }
+
+    // 3) Preserve your previous behavior: fallback to "now"
+    throw new Error("No commit data found");
+  } catch (error) {
+    console.error("Error fetching last modified date:", error);
+    return new Date(); // keep your original fallback
+  }
+}
+
+async function getFromLocalGit(
+  localPath: string,
+  repoPath: string
+): Promise<Date | undefined> {
+  try {
+    if (localPath.startsWith("src/content/")) {
+      // Path inside submodule; run git in that dir
       const { stdout } = await execFileP("git", [
         "-C",
-        submoduleRoot,
+        "src/content",
         "log",
         "-1",
         "--format=%cI",
         "--",
-        rel,
+        repoPath,
       ]);
-      const s = stdout.trim();
-      if (s) return new Date(s);
+      const iso = stdout.trim();
+      if (iso) return new Date(iso);
     } else {
+      // Regular file in main repo
       const { stdout } = await execFileP("git", [
         "log",
         "-1",
@@ -47,16 +81,19 @@ async function getFromLocalGit(localPath: string): Promise<Date | undefined> {
         "--",
         localPath,
       ]);
-      const s = stdout.trim();
-      if (s) return new Date(s);
+      const iso = stdout.trim();
+      if (iso) return new Date(iso);
     }
   } catch {
-    // ignore — we'll fall back
+    // ignore; we'll fall back to API
   }
   return undefined;
 }
 
-async function getFromGitHub(repoPath: string, branch = DEFAULT_BRANCH): Promise<Date | undefined> {
+async function getFromGitHub(
+  repoPath: string,
+  branch: string
+): Promise<Date | undefined> {
   try {
     const url =
       `https://api.github.com/repos/${OWNER}/${REPO}/commits` +
@@ -72,37 +109,13 @@ async function getFromGitHub(repoPath: string, branch = DEFAULT_BRANCH): Promise
 
     const data = await res.json();
     if (Array.isArray(data) && data.length > 0) {
-      // You can choose author vs committer; committer is usually what you want for “last changed in repo”
-      const iso = data[0]?.commit?.committer?.date ?? data[0]?.commit?.author?.date;
+      // Prefer committer date for "last changed in repo"
+      const iso =
+        data[0]?.commit?.committer?.date ?? data[0]?.commit?.author?.date;
       if (iso) return new Date(iso);
     }
   } catch {
-    // ignore — we'll fall back
+    // ignore; caller will handle fallback
   }
-  return undefined;
-}
-
-/** Main entry: tries local git -> GitHub -> fallback (no fake "today") */
-export async function getLastModifiedDate(args: Args): Promise<Date | undefined> {
-  const { localPath, repoPath, branch = DEFAULT_BRANCH, fallback } = args;
-
-  // Cache on repoPath+branch (what you show on site)
-  const key = `${branch}:${repoPath}`;
-  if (cache.has(key)) return cache.get(key)!;
-
-  const fromGit = await getFromLocalGit(localPath);
-  if (fromGit) {
-    cache.set(key, fromGit);
-    return fromGit;
-  }
-
-  const fromAPI = await getFromGitHub(repoPath, branch);
-  if (fromAPI) {
-    cache.set(key, fromAPI);
-    return fromAPI;
-  }
-
-  if (fallback) return fallback;
-
   return undefined;
 }
