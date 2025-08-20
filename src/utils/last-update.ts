@@ -1,6 +1,6 @@
 const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
 const OWNER = "BryanHogan";
-const REPO = "bryanhogantemp";
+const REPO = "bryanhogan-blog-content";
 // const FILE_PATH = "src/pages/now.md";
 
 export async function getLastModifiedDate(file_path: string) {
