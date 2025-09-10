@@ -6,19 +6,40 @@ import "../styles/util.css";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SEOHead from "../components/SEOHead.astro";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
     title: string;
     description: string;
-    ogType?: string;
+    canonical?: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    ogImage?: string;
+    ogImageAlt?: string;
+    ogType?: "website" | "article";
+    articlePublished?: Date;
+    articleModified?: Date;
+    articleTags?: string[];
+    robots?: string;
+    author?: string;
 }
-const { title, description, ogType="website"} = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-if (canonicalURL.pathname.endsWith('/')) {
-    canonicalURL.pathname = canonicalURL.pathname.slice(0, -1);
-}
+const { 
+    title, 
+    description, 
+    canonical,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    ogImageAlt,
+    ogType = "website",
+    articlePublished,
+    articleModified,
+    articleTags,
+    robots,
+    author
+} = Astro.props;
 
 ---
 
@@ -27,41 +48,31 @@ if (canonicalURL.pathname.endsWith('/')) {
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        
+        <SEOHead 
+            title={title}
+            description={description}
+            canonical={canonical}
+            ogTitle={ogTitle}
+            ogDescription={ogDescription}
+            ogImage={ogImage}
+            ogImageAlt={ogImageAlt}
+            ogType={ogType}
+            articlePublished={articlePublished}
+            articleModified={articleModified}
+            articleTags={articleTags}
+            robots={robots}
+            author={author}
+        />
     
         <link rel="icon" href="favicon.ico">
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="sitemap" type="application/xml" href="/sitemap-index.xml">
-        <link rel="canonical" href={canonicalURL}>
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Bryan Hogan" />
         <meta name="copyright" content="Bryan Hogan" />
         <meta name="theme-color" content="#A594D3">
 
-        <link rel="alternate" type="application/rss+xml" title="Blog posts by Bryan Hogan" href={new URL("rss.xml", Astro.site)}
-/>
-    
-    <!-- OpenGraph -->
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://bryanhogan.com/images/Bryan-Hogan-Preview.png" />
-        <meta property="og:image:alt" content="Bold prominent BryanHogan.com text in the middle with small round picture of Bryan Hogan smiling above" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Bryan Hogan" />
-        <meta property="og:type" content={ogType} /> <!-- Usually "website" or "article" -->
-        <meta property="og:url" content={canonicalURL} />
-        <meta property="og:locale" content="en"/>
-    
-    <!-- Twitter -->
-         <meta name="twitter:card" content="summary_large_image">
-         <meta name="twitter:url" content={canonicalURL}>
-         <meta name="twitter:title" content={title}>
-         <meta name="twitter:description" content={description}>
-         <meta name="twitter:image" content="https://bryanhogan.com/images/Bryan-Hogan-Preview.png">
-         <meta name="twitter:image:alt" content="Bold prominent BryanHogan.com text in the middle with small round picture of Bryan Hogan smiling above.">
+        <link rel="alternate" type="application/rss+xml" title="Blog posts by Bryan Hogan" href={new URL("rss.xml", Astro.site)} />
+         
          <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="88cecc6c-ebbb-4b08-a5d1-b07a8f7383df"></script>
          <ClientRouter />
          <slot name="head"/>

@@ -1,0 +1,133 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: "website" | "article";
+  articlePublished?: Date;
+  articleModified?: Date;
+  articleTags?: string[];
+  robots?: string;
+  author?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = "https://bryanhogan.com/images/Bryan-Hogan-Preview.png",
+  ogImageAlt = "Bold prominent BryanHogan.com text in the middle with small round picture of Bryan Hogan smiling above",
+  ogType = "website",
+  articlePublished,
+  articleModified,
+  articleTags,
+  robots = "index, follow",
+  author = "Bryan Hogan"
+} = Astro.props;
+
+const canonicalURL = canonical 
+  ? new URL(canonical, Astro.site)
+  : new URL(Astro.url.pathname, Astro.site);
+
+if (canonicalURL.pathname.endsWith('/') && canonicalURL.pathname !== '/') {
+  canonicalURL.pathname = canonicalURL.pathname.slice(0, -1);
+}
+
+// Generate JSON-LD structured data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": ogType === "article" ? "Article" : "WebPage",
+  headline: title,
+  description: description,
+  url: canonicalURL.toString(),
+  author: {
+    "@type": "Person",
+    name: author,
+    url: "https://bryanhogan.com"
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Bryan Hogan",
+    url: "https://bryanhogan.com"
+  },
+  image: ogImage,
+  ...(ogType === "article" && {
+    datePublished: articlePublished?.toISOString(),
+    dateModified: articleModified?.toISOString(),
+    keywords: articleTags?.join(", ")
+  })
+};
+
+// Site-wide JSON-LD for WebSite with SearchAction
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Bryan Hogan",
+  url: "https://bryanhogan.com",
+  description: "Personal website and blog about learning, exploring and creating.",
+  author: {
+    "@type": "Person",
+    name: "Bryan Hogan",
+    url: "https://bryanhogan.com"
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://bryanhogan.com/blog?search={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+---
+
+<!-- Basic Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content={robots} />
+<meta name="author" content={author} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={ogImageAlt} />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Bryan Hogan" />
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:locale" content="en" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={ogTitle} />
+<meta name="twitter:description" content={ogDescription} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={ogImageAlt} />
+
+<!-- Article-specific meta tags -->
+{articlePublished && (
+  <meta property="article:published_time" content={articlePublished.toISOString()} />
+)}
+{articleModified && (
+  <meta property="article:modified_time" content={articleModified.toISOString()} />
+)}
+{articleTags && articleTags.map(tag => (
+  <meta property="article:tag" content={tag} />
+))}
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+{Astro.url.pathname === '/' && (
+  <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+)}

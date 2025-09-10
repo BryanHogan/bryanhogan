@@ -42,22 +42,14 @@ const formattedDateLastUpdate = lastUpdate.toLocaleDateString("en-GB");
 const isoLastUpdate = lastUpdate.toISOString();
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} ogType="article">
-    <meta
-        property="article:published_time"
-        content={post.data.pubDate.toISOString()}
-        slot="head"
-    />
-    <meta
-        property="article:modified_time"
-        content={isoLastUpdate}
-        slot="head"
-    />
-    <meta
-        property="article:tag"
-        content={post.data.tags.map((tag) => tag).join(" ")}
-        slot="head"
-    />
+<BaseLayout 
+    title={post.data.title} 
+    description={post.data.description} 
+    ogType="article"
+    articlePublished={post.data.pubDate}
+    articleModified={lastUpdate}
+    articleTags={post.data.tags}
+>
     <div class="gradient-background flex-center full-width">
         {
             post.data.coverImage &&
