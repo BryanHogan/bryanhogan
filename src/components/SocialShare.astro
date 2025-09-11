@@ -1,0 +1,270 @@
+---
+interface Props {
+    title: string;
+    url: string;
+    description?: string;
+}
+
+const { title, url, description = "" } = Astro.props;
+
+// Encode the text for URLs
+const encodedTitle = encodeURIComponent(title);
+const encodedUrl = encodeURIComponent(url);
+const encodedDescription = encodeURIComponent(description);
+
+// Social sharing URLs
+const socialLinks = {
+    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    mastodon: `https://mastodon.social/share?text=${encodedTitle}%20${encodedUrl}`,
+    bluesky: `https://bsky.app/intent/compose?text=${encodedTitle}%20${encodedUrl}`,
+    threads: `https://www.threads.net/intent/post?text=${encodedTitle}%20${encodedUrl}`,
+    reddit: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+    email: `mailto:?subject=${encodedTitle}&body=I thought you might find this interesting:%0A%0A${encodedTitle}%0A${encodedUrl}`,
+    copy: url // For copy to clipboard functionality
+};
+---
+
+<div class="social-share-container">
+    <h3 class="social-share-title">Share this post</h3>
+    <div class="social-share-buttons">
+        <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" class="social-share-button twitter" aria-label="Share on Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            Twitter
+        </a>
+        
+        <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" class="social-share-button linkedin" aria-label="Share on LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3v9ZM6.59 8.48a1.56 1.56 0 0 1 0-3.12 1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06v5.18Z"/>
+            </svg>
+            LinkedIn
+        </a>
+        
+        <a href={socialLinks.mastodon} target="_blank" rel="noopener noreferrer" class="social-share-button mastodon" aria-label="Share on Mastodon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16.45 17.77c2.77-.33 5.18-2.03 5.49-3.58.47-2.45.44-5.97.44-5.97 0-4.77-3.15-6.17-3.15-6.17-1.58-.72-4.3-1.03-7.13-1.05h-.07c-2.83.02-5.55.33-7.13 1.05 0 0-3.14 1.4-3.14 6.17v.91c-.01.88-.02 1.86 0 2.88.12 4.67.87 9.27 5.2 10.4 2 .53 3.72.64 5.1.57 2.51-.14 3.92-.9 3.92-.9l-.08-1.8s-1.8.56-3.8.5c-2-.08-4.1-.22-4.43-2.66a4.97 4.97 0 0 1-.04-.68s1.96.48 4.44.59c1.51.07 2.94-.09 4.38-.26Zm2.22-3.4h-2.3v-5.6c0-1.19-.5-1.79-1.5-1.79-1.1 0-1.66.71-1.66 2.12v3.07h-2.3V9.1c0-1.4-.55-2.12-1.65-2.12-1 0-1.5.6-1.5 1.78v5.61h-2.3V8.6c0-1.18.3-2.12.9-2.81a3.17 3.17 0 0 1 2.47-1.05c1.18 0 2.07.45 2.66 1.35l.57.96.58-.96a2.97 2.97 0 0 1 2.66-1.35c1.01 0 1.83.36 2.46 1.05.6.7.9 1.63.9 2.81v5.78Z"/>
+            </svg>
+            Mastodon
+        </a>
+        
+        <a href={socialLinks.bluesky} target="_blank" rel="noopener noreferrer" class="social-share-button bluesky" aria-label="Share on BlueSky">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 10.8c-1-2.1-4-6-6.8-8C2.6 1 1.6 1.3.9 1.6.1 1.9 0 3 0 3.8c0 .7.4 5.6.6 6.4C1.4 13 4.3 14 7 13.6h.4H7c-4 .6-7.4 2-2.8 7 5 5.3 6.8-1 7.8-4.2 1 3.2 2 9.3 7.7 4.3 4.3-4.3 1.2-6.5-2.7-7a9 9 0 0 1-.4-.1h.4c2.7.3 5.6-.6 6.4-3.4.2-.8.6-5.7.6-6.4 0-.7-.1-1.9-.9-2.2-.7-.3-1.7-.7-4.3 1.2-2.8 2-5.7 5.9-6.8 8"/>
+            </svg>
+            BlueSky
+        </a>
+        
+        <a href={socialLinks.threads} target="_blank" rel="noopener noreferrer" class="social-share-button threads" aria-label="Share on Threads">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="m17.73 11.2-.29-.13c-.17-3.13-1.88-4.92-4.75-4.94h-.04c-1.72 0-3.14.73-4.02 2.06l1.58 1.09a2.8 2.8 0 0 1 2.47-1.21c.94 0 1.66.28 2.12.81.33.4.56.93.67 1.61-.84-.14-1.74-.18-2.71-.13-2.73.16-4.49 1.75-4.37 3.97a3.41 3.41 0 0 0 1.57 2.71c.81.54 1.85.8 2.93.74a4.32 4.32 0 0 0 3.33-1.62 6 6 0 0 0 1.14-2.97 3.5 3.5 0 0 1 1.46 1.6 4 4 0 0 1-.98 4.4c-1.3 1.3-2.86 1.85-5.21 1.87-2.62-.02-4.6-.86-5.88-2.5-1.2-1.52-1.82-3.73-1.85-6.56.03-2.83.65-5.04 1.85-6.57 1.29-1.63 3.26-2.47 5.88-2.49 2.63.02 4.64.86 5.97 2.5.66.8 1.15 1.82 1.48 3l1.85-.5c-.4-1.44-1.02-2.7-1.86-3.73-1.71-2.1-4.21-3.19-7.44-3.21h-.01c-3.22.02-5.7 1.1-7.35 3.22C3.79 6.1 3.03 8.72 3 11.99V12c.03 3.29.79 5.9 2.27 7.78 1.66 2.12 4.13 3.2 7.35 3.22h.01c2.86-.02 4.88-.77 6.54-2.43a5.95 5.95 0 0 0 1.4-6.56 5.62 5.62 0 0 0-2.84-2.81Zm-4.94 4.64c-1.2.07-2.44-.47-2.5-1.62-.05-.85.6-1.8 2.57-1.92l.67-.02c.71 0 1.38.07 1.99.2-.23 2.84-1.56 3.3-2.73 3.36Z"/>
+            </svg>
+            Threads
+        </a>
+        
+        <a href={socialLinks.reddit} target="_blank" rel="noopener noreferrer" class="social-share-button reddit" aria-label="Share on Reddit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+            </svg>
+            Reddit
+        </a>
+        
+        <a href={socialLinks.email} class="social-share-button email" aria-label="Share via Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Email
+        </a>
+        
+        <button class="social-share-button copy" data-url={url} aria-label="Copy link to clipboard">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+            Copy Link
+        </button>
+    </div>
+</div>
+
+<style>
+    .social-share-container {
+        margin-top: var(--space-xl);
+        padding: var(--space-m);
+        background-color: var(--color-neutral-800);
+        border-radius: var(--border-radius-m);
+        border: 1px solid var(--color-neutral-700);
+    }
+
+    .social-share-title {
+        margin: 0 0 var(--space-s) 0;
+        font-size: var(--text-size-lg);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-neutral-100);
+        text-align: center;
+    }
+
+    .social-share-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        justify-content: center;
+    }
+
+    .social-share-button {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2xs);
+        padding: var(--space-xs) var(--space-s);
+        border: 1px solid var(--color-neutral-600);
+        border-radius: var(--border-radius-s);
+        background-color: var(--color-neutral-900);
+        color: var(--color-neutral-300);
+        text-decoration: none;
+        font-size: var(--text-size-sm);
+        font-weight: var(--font-weight-medium);
+        transition: all var(--transition-normal);
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .social-share-button:hover,
+    .social-share-button:focus {
+        background-color: var(--color-neutral-700);
+        border-color: var(--color-neutral-500);
+        color: var(--color-neutral-100);
+        transform: translateY(-1px);
+    }
+
+    .social-share-button svg {
+        flex-shrink: 0;
+    }
+
+    /* Platform-specific colors on hover */
+    .social-share-button.twitter:hover {
+        background-color: #1da1f2;
+        border-color: #1da1f2;
+    }
+
+    .social-share-button.linkedin:hover {
+        background-color: #0077b5;
+        border-color: #0077b5;
+    }
+
+    .social-share-button.mastodon:hover {
+        background-color: #563acc;
+        border-color: #563acc;
+    }
+
+    .social-share-button.bluesky:hover {
+        background-color: #00a8e8;
+        border-color: #00a8e8;
+    }
+
+    .social-share-button.threads:hover {
+        background-color: #000;
+        border-color: #000;
+    }
+
+    .social-share-button.reddit:hover {
+        background-color: #ff4500;
+        border-color: #ff4500;
+    }
+
+    .social-share-button.email:hover {
+        background-color: #34a853;
+        border-color: #34a853;
+    }
+
+    .social-share-button.copy:hover {
+        background-color: var(--color-accent-500);
+        border-color: var(--color-accent-500);
+    }
+
+    .social-share-button.copy.copied {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: white;
+    }
+
+    @media (max-width: 600px) {
+        .social-share-buttons {
+            flex-direction: column;
+        }
+        
+        .social-share-button {
+            justify-content: center;
+        }
+    }
+</style>
+
+<script>
+    function initializeSocialShare() {
+        const copyButtons = document.querySelectorAll('.social-share-button.copy');
+        
+        copyButtons.forEach(button => {
+            const htmlButton = button as HTMLButtonElement;
+            if (htmlButton.dataset.initialized) return;
+            htmlButton.dataset.initialized = 'true';
+            
+            htmlButton.addEventListener('click', async () => {
+                const url = htmlButton.dataset.url;
+                if (!url) return;
+                
+                try {
+                    await navigator.clipboard.writeText(url);
+                    
+                    // Visual feedback
+                    const originalText = htmlButton.innerHTML;
+                    htmlButton.innerHTML = `
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                        Copied!
+                    `;
+                    htmlButton.classList.add('copied');
+                    
+                    setTimeout(() => {
+                        htmlButton.innerHTML = originalText;
+                        htmlButton.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy: ', err);
+                    
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = url;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    // Visual feedback for fallback
+                    const originalText = htmlButton.innerHTML;
+                    htmlButton.innerHTML = `
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                        Copied!
+                    `;
+                    htmlButton.classList.add('copied');
+                    
+                    setTimeout(() => {
+                        htmlButton.innerHTML = originalText;
+                        htmlButton.classList.remove('copied');
+                    }, 2000);
+                }
+            });
+        });
+    }
+
+    // Initialize on page load
+    document.addEventListener('astro:page-load', initializeSocialShare);
+    
+    // Initialize immediately if script loads after page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeSocialShare);
+    } else {
+        initializeSocialShare();
+    }
+</script>

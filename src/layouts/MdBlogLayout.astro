@@ -15,6 +15,7 @@ import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
 import Icon from "../components/Icon.astro";
 import { mastodon } from "../data/socials";
+import SocialShare from "../components/SocialShare.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -80,6 +81,11 @@ const isoLastUpdate = lastUpdate.toISOString();
         <div class="main-container">
             <main class="markdown-container main-content">
                 <slot />
+                <SocialShare 
+                    title={post.data.title}
+                    url={`${Astro.site?.origin || 'https://bryanhogan.com'}/blog/${post.id}/`}
+                    description={post.data.description}
+                />
                 <p style="border: 1px solid var(--border-color); padding: var(--space-s); margin-top: var(--space-xl); border-radius: var(--border-radius-s);">
                     I want to hear your feedback! Was something confusing? Did you get stuck? Did you find this post amazingly helpful? Was it all very mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!
                 </p>
