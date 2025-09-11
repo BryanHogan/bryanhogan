@@ -81,11 +81,6 @@ const isoLastUpdate = lastUpdate.toISOString();
         <div class="main-container">
             <main class="markdown-container main-content">
                 <slot />
-                <SocialShare 
-                    title={post.data.title}
-                    url={`${Astro.site?.origin || 'https://bryanhogan.com'}/blog/${post.id}/`}
-                    description={post.data.description}
-                />
                 <p style="border: 1px solid var(--border-color); padding: var(--space-s); margin-top: var(--space-xl); border-radius: var(--border-radius-s);">
                     I want to hear your feedback! Was something confusing? Did you get stuck? Did you find this post amazingly helpful? Was it all very mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!
                 </p>
@@ -134,6 +129,11 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <p class="margin-bottom-s">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
                     <EmailSignup class="set-max-width" />
                 </div>
+                <SocialShare 
+                    title={post.data.title}
+                    url={`${Astro.site?.origin || 'https://bryanhogan.com'}/blog/${post.id}/`}
+                    description={post.data.description}
+                />
                 {sameTagPosts.length > 0 && (
                     <details>
                         <summary class="margin-top-xl margin-bottom-m margin-inline-auto" style="font-size: var(--text-size-3xl);">Similar Posts</summary>
