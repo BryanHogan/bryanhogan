@@ -73,7 +73,39 @@ const {
 
         <link rel="alternate" type="application/rss+xml" title="Blog posts by Bryan Hogan" href={new URL("rss.xml", Astro.site)} />
          
+         <!-- Theme script - must run before body renders to prevent flash -->
+         <script is:inline>
+            (function() {
+                // Only apply theme if data-theme attribute doesn't exist yet
+                if (!document.documentElement.hasAttribute('data-theme')) {
+                    let theme = 'dark'; // default
+                    
+                    if (typeof localStorage !== 'undefined') {
+                        const storedTheme = localStorage.getItem('theme');
+                        if (storedTheme) {
+                            theme = storedTheme;
+                        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                            theme = 'light';
+                        }
+                    }
+                    
+                    document.documentElement.setAttribute('data-theme', theme);
+                }
+            })();
+         </script>
+         
          <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="88cecc6c-ebbb-4b08-a5d1-b07a8f7383df"></script>
+         
+         <!-- View transitions theme persistence -->
+         <script is:inline>
+            document.addEventListener('astro:before-swap', (ev) => {
+                // Preserve the current theme across view transitions
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (currentTheme) {
+                    ev.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+                }
+            });
+         </script>
          <ClientRouter />
          <slot name="head"/>
       </head>
