@@ -12,9 +12,9 @@ export async function getStaticPaths() {
     ];
 
     return uniqueTags.map((tag) => {
-        const filteredPosts = allPosts.filter((post) =>
-            post.data.tags.includes(tag),
-        );
+        const filteredPosts = allPosts
+            .filter((post) => post.data.tags.includes(tag))
+            .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
         return {
             params: { tag },
             props: { posts: filteredPosts },
