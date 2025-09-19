@@ -6,7 +6,7 @@
 export const featuredPosts = [
 	"obsidian-zettelkasten", 
 	"south-korea-travel-guide",
-	"living-in-macau"
+	"introduction"
 ];
 
 export default featuredPosts;

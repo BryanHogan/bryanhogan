@@ -76,7 +76,7 @@ const featuredBlogPosts = featuredPosts
 			<div class="blog-content-cards">
 				{
 					featuredBlogPosts.map((post, index) => (
-						<CardBlog post={post} compact backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
+						<CardBlog post={post} compact backgroundColor={cardBlogBackgroundColors[(index + 3) % cardBlogBackgroundColors.length]} transitionIcon/>
 					))
 				}
 			</div>
