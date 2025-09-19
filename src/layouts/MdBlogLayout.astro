@@ -85,31 +85,35 @@ const isoLastUpdate = lastUpdate.toISOString();
                     I want to hear your feedback! Was something confusing? Did you get stuck? Did you find this post amazingly helpful? Was it all very mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!
                 </p>
             </main>
-            <div class="post-container">
+            <div class="end-of-post-section">
+                <p class="margin-top-s">
+                    I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> 👈 or at any of my social media spaces 👇!
+                </p>
                 {
                     (post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) &&
                     (
-                        <div class="social-ref-icons-container">
-                            <p class="padding-right-xs">Like & comment this post on:</p>
-                            <ul role="list" class="social-ref-icons">
-                                {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
-                                {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
-                                {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
-                            </ul>
-                        </div>
+                        <p class="heading-line-element">Like & comment this post on:</p>
+                        <ul role="list" class="social-ref-icons">
+                            {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
+                            {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
+                            {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
+                        </ul>
                     )
                 }
-                <div class="post-post-info-container margin-top-s margin-bottom-l">
-                    <p><small>Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB",)}</time></small></p>
-                    <p><small>Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></small></p>
+                <p class="heading-line-element">Dates</p>
+                <div class="post-post-dates-info-container">
+                    <p class="subtle">Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB",)}</time></p>
+                    <p class="subtle">Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></p>
                 </div>
-                <div class="next-prev-post-container margin-top-l">
-                    {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
-                    {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
+                <p class="heading-line-element">Next & previous post</p>
+                <div class="next-prev-post-container">
+                    {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
+                    {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style=";">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
                 </div>
-                <div class="tags-container margin-top-m"> 
+                <p class="heading-line-element">Tags</p>
+                <div class="tags-container"> 
                     {post.data.tags?.length && (
-                        <ul role="list" class="tag-list flex-center flex-row" style="gap: var(--space-s)">
+                        <ul role="list" class="tag-list" style="gap: var(--space-s)">
                             {post.data.tags.map((tag) => {
                             const slug = tag
                                 .toLowerCase()
@@ -124,6 +128,21 @@ const isoLastUpdate = lastUpdate.toISOString();
                         </ul>
                     )}
                 </div>
+                <p class="heading-line-element">Monthly Newsletter</p>
+                <p>Join it here.......</p>
+                <p><small>No spam. Unsubscribe anytime.</small></p>
+                <p class="heading-line-element">Share</p>
+                <p>Share with one of these</p>
+            </div>
+            <div class="post-container">
+
+                
+                
+                <div class="next-prev-post-container margin-top-l">
+                    {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
+                    {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
+                </div>
+                
                 <div class="email-container margin-top-xl">
                     <p class="text-align-center margin-bottom-xs"><strong>Email Updates</strong></p>
                     <p class="margin-bottom-s">Join my monthly updates. No spam. Unsubscribe anytime.</p>
@@ -201,29 +220,40 @@ const isoLastUpdate = lastUpdate.toISOString();
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    .end-of-post-section {
+        margin-top: var(--space-l);
+        padding-inline: var(--space-s);
+        background-color: var(--color-neutral-800);
+        border-radius: var(--border-radius-m);
+        border: 1px solid var(--color-neutral-700);
+        > p {
+            margin-bottom: var(--space-s);
+        }
+        .subtle {
+            color: var(--color-neutral-300);
+        }
+        .heading-line-element {
+            font-weight: var(--font-weight-bold);
+            margin-top: var(--space-xl);
+        }
+    }
 
-    .social-ref-icons-container {
-        margin-top: var(--space-m);
+    .social-ref-icons {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        row-gap: var(--space-xs);
-        .social-ref-icons {
+        justify-content: flex-start;
+        gap: var(--space-xs);
+        li a {
+            padding: var(--space-xs);
+            border: 1px solid var(--color-neutral-500);
+            background-color: var(--color-neutral-900);
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: row;
             justify-content: center;
-            gap: var(--space-xs);
-            li a {
-                padding: var(--space-xs);
-                border: 1px solid var(--color-neutral-500);
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                gap: var(--space-2xs);
-                cursor: pointer;
-                text-decoration: none;
-            }
+            align-items: center;
+            gap: var(--space-2xs);
+            cursor: pointer;
+            text-decoration: none;
         }
     }
 
@@ -239,24 +269,29 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
         }
     }
-    .post-post-info-container {
-        font-size: var(--font-size-small);
+    .post-post-dates-info-container {
+        /*font-size: var(--font-size-small);*/
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: flex-start;
         gap: var(--space-xs) var(--space-m);
-        padding-inline: var(--space-m);
     }
     .email-container {
         background-color: var(--color-neutral-800);
         padding: var(--space-s) var(--space-m);
         border-radius: var(--border-radius-m);
     }
-    .tags-container {
+    .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--space-xs);
         li {
             border: 1px solid var(--color-neutral-500);
             padding: var(--space-2xs) var(--space-xs);
+            background-color: var(--color-neutral-900);
+
         }
     }
     .next-prev-post-container {
