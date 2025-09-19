@@ -13,6 +13,11 @@ const blogPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
 import { cardBlogBackgroundColors } from "../data/colors";
+
+import featuredPosts from "../data/featured-posts";
+const featuredBlogPosts = featuredPosts
+  .map(postId => blogPosts.find(post => post.id === postId))
+  .filter(post => post !== undefined);
 ---
 
 <BaseLayout
@@ -59,10 +64,19 @@ import { cardBlogBackgroundColors } from "../data/colors";
 				<Button text="All blog posts" href="/blog" buttonStyle="line gradient-underline icon-left" icon="rightarrow"/>
 				<Button text="Blog introduction" href="/blog/introduction" buttonStyle="line icon-left" icon="rightarrow"/>
 			</div>
+			<p class="margin-bottom-s" style="color: var(--color-neutral-200)"><strong>Latest posts</strong></p>
 			<div class="blog-content-cards">
 				{
 					blogPosts.slice(0, 3).map((post, index) => (
-						<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
+						<CardBlog post={post} compact backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
+					))
+				}
+			</div>
+			<p class="margin-bottom-s margin-top-l" style="color: var(--color-neutral-200)"><strong>Featured posts</strong></p>
+			<div class="blog-content-cards">
+				{
+					featuredBlogPosts.map((post, index) => (
+						<CardBlog post={post} compact backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
 					))
 				}
 			</div>
@@ -154,7 +168,7 @@ import { cardBlogBackgroundColors } from "../data/colors";
 			flex-wrap: wrap;
 			align-items: center;
 			gap: var(--space-m);
-			margin-bottom: var(--space-l);
+			margin-bottom: var(--space-m);
 			h2 {
 				margin-right: var(--space-s);
 			}
