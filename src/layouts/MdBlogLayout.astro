@@ -102,8 +102,8 @@ const isoLastUpdate = lastUpdate.toISOString();
                 }
                 <p class="heading-line-element">Dates</p>
                 <div class="post-post-dates-info-container">
-                    <p class="subtle">Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB",)}</time></p>
-                    <p class="subtle">Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></p>
+                    <p>Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB",)}</time></p>
+                    <p>Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></p>
                 </div>
                 <p class="heading-line-element">Next & previous post</p>
                 <div class="next-prev-post-container">
