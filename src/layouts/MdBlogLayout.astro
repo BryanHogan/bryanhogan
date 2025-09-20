@@ -81,16 +81,13 @@ const isoLastUpdate = lastUpdate.toISOString();
         <div class="main-container">
             <main class="markdown-container main-content">
                 <slot />
-                <p style="border: 1px solid var(--border-color); padding: var(--space-s); margin-top: var(--space-xl); border-radius: var(--border-radius-s);">
-                    I want to hear your feedback! Was something confusing? Did you get stuck? Did you find this post amazingly helpful? Was it all very mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!
-                </p>
             </main>
             <div class="end-of-post-section">
-                <div class="feedback-section">
-                    <h3 class="section-title">
+                <div class="end-of-post-subsection">
+                    <h2 class="section-title">
                         <Icon name="megaphone" label="Feedback" size="1.2rem"/>
-                        Your Feedback Matters
-                    </h3>
+                        Hey!
+                    </h2>
                     <p class="feedback-text">
                         I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces below!
                     </p>
@@ -99,7 +96,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 {
                     (post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) &&
                     (
-                        <div class="social-section">
+                        <div class="end-of-post-subsection">
                             <h4 class="subsection-title">Like & comment this post on:</h4>
                             <ul role="list" class="social-ref-icons">
                                 {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
@@ -112,10 +109,10 @@ const isoLastUpdate = lastUpdate.toISOString();
 
                 <div class="meta-info-grid">
                     <div class="dates-section">
-                        <h4 class="subsection-title">
+                        <h3 class="subsection-title">
                             <Icon name="pen" label="Dates" size="1rem"/>
                             Publication Details
-                        </h4>
+                        </h3>
                         <div class="dates-info">
                             <div class="date-item">
                                 <span class="date-label">Published:</span>
@@ -129,10 +126,10 @@ const isoLastUpdate = lastUpdate.toISOString();
                     </div>
 
                     <div class="tags-section">
-                        <h4 class="subsection-title">
+                        <h3 class="subsection-title">
                             <Icon name="tag" label="Tags" size="1rem"/>
                             Topics
-                        </h4>
+                        </h3>
                         <div class="tags-container">
                             {post.data.tags?.length && (
                                 <ul role="list" class="tag-list">
@@ -152,8 +149,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                         </div>
                     </div>
                 </div>
-
-                <div class="navigation-section">
+                <div class="navigation-section end-of-post-subsection">
                     <h4 class="subsection-title">
                         Continue Reading:
                     </h4>
@@ -172,37 +168,17 @@ const isoLastUpdate = lastUpdate.toISOString();
                         ) : null}
                     </div>
                 </div>
+                <div class="email-section end-of-post-subsection margin-top-m">
+                    <h4 class="subsection-title">Monthly newsletter:</h4>
+                    <p>Join my monthly updates.</p>
+                    <EmailSignup />
+                </div>
+                <div class="social-share-section end-of-post-subsection">
+                    <h4 class="subsection-title">Share</h4>
+                    <p>Share this on: ...</p>
+                </div>
             </div>
-            <div class="post-container">
 
-                
-                
-                <div class="next-prev-post-container margin-top-l">
-                    {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
-                    {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style="font-weight: var(--font-weight-bold);">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
-                </div>
-                
-                <div class="email-container margin-top-xl">
-                    <p class="text-align-center margin-bottom-xs"><strong>Email Updates</strong></p>
-                    <p class="margin-bottom-s">Join my monthly updates. No spam. Unsubscribe anytime.</p>
-                    <EmailSignup class="set-max-width" />
-                </div>
-                <SocialShare 
-                    title={post.data.title}
-                    url={`${Astro.site?.origin || 'https://bryanhogan.com'}/blog/${post.id}/`}
-                    description={post.data.description}
-                />
-                {sameTagPosts.length > 0 && (
-                    <details>
-                        <summary class="margin-top-xl margin-bottom-m margin-inline-auto" style="font-size: var(--text-size-3xl);">Similar Posts</summary>
-                        <CardGrid columnWidth="max-2">
-                            {
-                                sameTagPosts.map((post, index) => (<CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]}/>))
-                            }
-                        </CardGrid>
-                    </details>
-                )}
-            </div>
         </div>
         <aside class="aside-container-right">
             <div class="toc">
@@ -267,7 +243,10 @@ const isoLastUpdate = lastUpdate.toISOString();
         border: 1px solid var(--color-neutral-700);
         box-shadow: var(--box-shadow-m);
 
-        .feedback-section {
+        p {
+            color: var(--color-neutral-200);
+        }
+        .end-of-post-subsection {
             margin-bottom: var(--space-xl);
             padding-bottom: var(--space-l);
             border-bottom: 1px solid var(--color-neutral-700);
@@ -297,12 +276,6 @@ const isoLastUpdate = lastUpdate.toISOString();
             color: var(--color-neutral-200);
             line-height: 1.6;
             margin: 0;
-        }
-
-        .social-section {
-            margin-bottom: var(--space-xl);
-            padding-bottom: var(--space-l);
-            border-bottom: 1px solid var(--color-neutral-700);
         }
 
         .meta-info-grid {
