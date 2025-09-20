@@ -86,53 +86,92 @@ const isoLastUpdate = lastUpdate.toISOString();
                 </p>
             </main>
             <div class="end-of-post-section">
-                <p class="margin-top-s">
-                    I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> 👈 or at any of my social media spaces 👇!
-                </p>
+                <div class="feedback-section">
+                    <h3 class="section-title">
+                        <Icon name="megaphone" label="Feedback" size="1.2rem"/>
+                        Your Feedback Matters
+                    </h3>
+                    <p class="feedback-text">
+                        I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces below!
+                    </p>
+                </div>
+
                 {
                     (post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) &&
                     (
-                        <p class="heading-line-element">Like & comment this post on:</p>
-                        <ul role="list" class="social-ref-icons">
-                            {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
-                            {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
-                            {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
-                        </ul>
+                        <div class="social-section">
+                            <h4 class="subsection-title">Like & comment this post on:</h4>
+                            <ul role="list" class="social-ref-icons">
+                                {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
+                                {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
+                                {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
+                            </ul>
+                        </div>
                     )
                 }
-                <p class="heading-line-element">Dates</p>
-                <div class="post-post-dates-info-container">
-                    <p>Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB",)}</time></p>
-                    <p>Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></p>
+
+                <div class="meta-info-grid">
+                    <div class="dates-section">
+                        <h4 class="subsection-title">
+                            <Icon name="pen" label="Dates" size="1rem"/>
+                            Publication Details
+                        </h4>
+                        <div class="dates-info">
+                            <div class="date-item">
+                                <span class="date-label">Published:</span>
+                                <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time>
+                            </div>
+                            <div class="date-item">
+                                <span class="date-label">Last Update:</span>
+                                <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tags-section">
+                        <h4 class="subsection-title">
+                            <Icon name="tag" label="Tags" size="1rem"/>
+                            Topics
+                        </h4>
+                        <div class="tags-container">
+                            {post.data.tags?.length && (
+                                <ul role="list" class="tag-list">
+                                    {post.data.tags.map((tag) => {
+                                    const slug = tag
+                                        .toLowerCase()
+                                        .replace(/\s+/g, "-")
+                                        .replace(/[^a-z0-9\-]/g, "");
+                                    return (
+                                        <li>
+                                        <a href={`/tags/${slug}`} rel="tag">{tag}</a>
+                                        </li>
+                                    );
+                                    })}
+                                </ul>
+                            )}
+                        </div>
+                    </div>
                 </div>
-                <p class="heading-line-element">Next & previous post</p>
-                <div class="next-prev-post-container">
-                    {allPosts[indexOfPost - 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}><p style="">Next post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost - 1].data.title}</p></CardMin>) : null}
-                    {allPosts[indexOfPost + 1] ? (<CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}><p style=";">Previous post</p><p style="color: var(--color-accent-500);">{allPosts[indexOfPost + 1].data.title}</p></CardMin>) : null}
+
+                <div class="navigation-section">
+                    <h4 class="subsection-title">
+                        Continue Reading:
+                    </h4>
+                    <div class="next-prev-post-container">
+                        {allPosts[indexOfPost - 1] ? (
+                            <CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
+                                <p class="nav-label">Next post</p>
+                                <p class="nav-title">{allPosts[indexOfPost - 1].data.title}</p>
+                            </CardMin>
+                        ) : null}
+                        {allPosts[indexOfPost + 1] ? (
+                            <CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
+                                <p class="nav-label">Previous post</p>
+                                <p class="nav-title">{allPosts[indexOfPost + 1].data.title}</p>
+                            </CardMin>
+                        ) : null}
+                    </div>
                 </div>
-                <p class="heading-line-element">Tags</p>
-                <div class="tags-container"> 
-                    {post.data.tags?.length && (
-                        <ul role="list" class="tag-list" style="gap: var(--space-s)">
-                            {post.data.tags.map((tag) => {
-                            const slug = tag
-                                .toLowerCase()
-                                .replace(/\s+/g, "-")
-                                .replace(/[^a-z0-9\-]/g, "");
-                            return (
-                                <li>
-                                <a href={`/tags/${slug}`} rel="tag">{tag}</a>
-                                </li>
-                            );
-                            })}
-                        </ul>
-                    )}
-                </div>
-                <p class="heading-line-element">Monthly Newsletter</p>
-                <p>Join it here.......</p>
-                <p><small>No spam. Unsubscribe anytime.</small></p>
-                <p class="heading-line-element">Share</p>
-                <p>Share with one of these</p>
             </div>
             <div class="post-container">
 
@@ -222,19 +261,110 @@ const isoLastUpdate = lastUpdate.toISOString();
     }
     .end-of-post-section {
         margin-top: var(--space-l);
-        padding-inline: var(--space-s);
-        background-color: var(--color-neutral-800);
-        border-radius: var(--border-radius-m);
+        padding: var(--space-l);
+        background: linear-gradient(135deg, var(--color-neutral-800) 0%, var(--color-neutral-900) 100%);
+        border-radius: var(--border-radius-l);
         border: 1px solid var(--color-neutral-700);
-        > p {
-            margin-bottom: var(--space-s);
+        box-shadow: var(--box-shadow-m);
+
+        .feedback-section {
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-l);
+            border-bottom: 1px solid var(--color-neutral-700);
         }
-        .subtle {
-            color: var(--color-neutral-300);
-        }
-        .heading-line-element {
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-size-xl);
             font-weight: var(--font-weight-bold);
-            margin-top: var(--space-xl);
+            color: var(--color-neutral-100);
+            margin: 0 0 var(--space-m) 0;
+        }
+
+        .subsection-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-size-lg);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-neutral-100);
+            margin: 0 0 var(--space-s) 0;
+        }
+
+        .feedback-text {
+            color: var(--color-neutral-200);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .social-section {
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-l);
+            border-bottom: 1px solid var(--color-neutral-700);
+        }
+
+        .meta-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-l);
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-l);
+            border-bottom: 1px solid var(--color-neutral-800);
+        }
+
+        .dates-section, .tags-section {
+            background-color: var(--color-neutral-800);
+            padding: var(--space-m);
+            border-radius: var(--border-radius-m);
+            border: 1px solid var(--color-neutral-600);
+        }
+
+        .dates-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-xs) 0;
+            color: var(--color-neutral-200);
+        }
+
+        .date-label {
+            color: var(--color-neutral-200);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .navigation-section {
+            margin-top: var(--space-m);
+        }
+
+        .nav-label {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-neutral-300);
+            margin: 0 0 var(--space-2xs) 0;
+            font-size: var(--text-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-title {
+            color: var(--color-accent-500);
+            margin: 0;
+            font-weight: var(--font-weight-medium);
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .end-of-post-section {
+            .meta-info-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-m);
+            }
         }
     }
 
@@ -243,17 +373,36 @@ const isoLastUpdate = lastUpdate.toISOString();
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: var(--space-xs);
-        li a {
-            padding: var(--space-xs);
-            border: 1px solid var(--color-neutral-500);
-            background-color: var(--color-neutral-900);
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: var(--space-2xs);
-            cursor: pointer;
-            text-decoration: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+
+            a {
+                padding: var(--space-xs) var(--space-s);
+                border: 1px solid var(--color-neutral-500);
+                background-color: var(--color-neutral-900);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: var(--space-2xs);
+                cursor: pointer;
+                text-decoration: none;
+                border-radius: var(--border-radius-s);
+                color: var(--color-neutral-300);
+                font-weight: var(--font-weight-medium);
+                transition: all var(--transition-fast);
+
+                &:hover, &:focus {
+                    border-color: var(--color-accent-500);
+                    background-color: var(--color-neutral-800);
+                    color: var(--color-accent-500);
+                    transform: translateY(-1px);
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+            }
         }
     }
 
@@ -269,14 +418,6 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
         }
     }
-    .post-post-dates-info-container {
-        /*font-size: var(--font-size-small);*/
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: var(--space-xs) var(--space-m);
-    }
     .email-container {
         background-color: var(--color-neutral-800);
         padding: var(--space-s) var(--space-m);
@@ -287,11 +428,29 @@ const isoLastUpdate = lastUpdate.toISOString();
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: var(--space-xs);
+        margin: 0;
+        padding: 0;
         li {
             border: 1px solid var(--color-neutral-500);
             padding: var(--space-2xs) var(--space-xs);
             background-color: var(--color-neutral-900);
+            border-radius: var(--border-radius-s);
+            transition: all var(--transition-fast);
 
+            &:hover {
+                border-color: var(--color-accent-500);
+                background-color: var(--color-neutral-800);
+            }
+
+            a {
+                color: var(--color-neutral-200);
+                font-size: var(--text-size-sm);
+                font-weight: var(--font-weight-medium);
+
+                &:hover {
+                    color: var(--color-accent-500);
+                }
+            }
         }
     }
     .next-prev-post-container {
