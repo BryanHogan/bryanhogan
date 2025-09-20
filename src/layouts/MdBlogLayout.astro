@@ -98,7 +98,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                     (
                         <div class="end-of-post-subsection">
                             <h4 class="subsection-title">Like & comment this post on:</h4>
-                            <ul role="list" class="social-ref-icons">
+                            <ul role="list" class="interactive-list social-ref-icons">
                                 {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
                                 {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
                                 {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
@@ -108,7 +108,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 }
 
                 <div class="meta-info-grid">
-                    <div class="dates-section">
+                    <div class="info-card dates-section">
                         <h3 class="subsection-title">
                             <Icon name="pen" label="Dates" size="1rem"/>
                             Publication Details
@@ -125,14 +125,14 @@ const isoLastUpdate = lastUpdate.toISOString();
                         </div>
                     </div>
 
-                    <div class="tags-section">
+                    <div class="info-card tags-section">
                         <h3 class="subsection-title">
                             <Icon name="tag" label="Tags" size="1rem"/>
                             Topics
                         </h3>
                         <div class="tags-container">
                             {post.data.tags?.length && (
-                                <ul role="list" class="tag-list">
+                                <ul role="list" class="interactive-list tag-list">
                                     {post.data.tags.map((tag) => {
                                     const slug = tag
                                         .toLowerCase()
@@ -270,13 +270,7 @@ const isoLastUpdate = lastUpdate.toISOString();
             font-weight: var(--font-weight-semibold);
             color: var(--color-neutral-100);
             margin: 0 0 var(--space-s) 0;
-        }
-
-        .feedback-text {
-            color: var(--color-neutral-200);
-            line-height: 1.6;
-            margin: 0;
-        }
+        }   
 
         .meta-info-grid {
             display: grid;
@@ -287,7 +281,7 @@ const isoLastUpdate = lastUpdate.toISOString();
             border-bottom: 1px solid var(--color-neutral-800);
         }
 
-        .dates-section, .tags-section {
+        .info-card {
             background-color: var(--color-neutral-800);
             padding: var(--space-m);
             border-radius: var(--border-radius-m);
@@ -308,7 +302,6 @@ const isoLastUpdate = lastUpdate.toISOString();
         }
 
         .date-label {
-            color: var(--color-neutral-200);
             font-weight: var(--font-weight-medium);
         }
 
@@ -341,7 +334,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         }
     }
 
-    .social-ref-icons {
+    .interactive-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -351,61 +344,7 @@ const isoLastUpdate = lastUpdate.toISOString();
 
         li {
             list-style: none;
-
-            a {
-                padding: var(--space-xs) var(--space-s);
-                border: 1px solid var(--color-neutral-500);
-                background-color: var(--color-neutral-900);
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                gap: var(--space-2xs);
-                cursor: pointer;
-                text-decoration: none;
-                border-radius: var(--border-radius-s);
-                color: var(--color-neutral-300);
-                font-weight: var(--font-weight-medium);
-                transition: all var(--transition-fast);
-
-                &:hover, &:focus {
-                    border-color: var(--color-accent-500);
-                    background-color: var(--color-neutral-800);
-                    color: var(--color-accent-500);
-                    transform: translateY(-1px);
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                }
-            }
-        }
-    }
-
-    .sub-menu-container {
-        padding-top: var(--space-2xs);
-        .back-button {
-        border: none;
-            background-color: var(--color-neutral-900);
-            color: var(--color-neutral-300);
-            border-radius: var(--border-radius-s);
-            &:hover, &:focus {
-                background-color: var(--color-neutral-700);
-            }
-        }
-    }
-    .email-container {
-        background-color: var(--color-neutral-800);
-        padding: var(--space-s) var(--space-m);
-        border-radius: var(--border-radius-m);
-    }
-    .tag-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: var(--space-xs);
-        margin: 0;
-        padding: 0;
-        li {
             border: 1px solid var(--color-neutral-500);
-            padding: var(--space-2xs) var(--space-xs);
             background-color: var(--color-neutral-900);
             border-radius: var(--border-radius-s);
             transition: all var(--transition-fast);
@@ -416,9 +355,14 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
 
             a {
+                display: flex;
+                align-items: center;
+                gap: var(--space-2xs);
+                padding: var(--space-xs) var(--space-s);
                 color: var(--color-neutral-200);
-                font-size: var(--text-size-sm);
                 font-weight: var(--font-weight-medium);
+                text-decoration: none;
+                transition: color var(--transition-fast);
 
                 &:hover {
                     color: var(--color-accent-500);
@@ -426,9 +370,43 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
         }
     }
+
+    .social-ref-icons li a {
+        justify-content: center;
+        transform: translateY(0);
+        transition: all var(--transition-fast);
+
+        &:hover, &:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .sub-menu-container {
+        padding-top: var(--space-2xs);
+
+        .back-button {
+            border: none;
+            background-color: var(--color-neutral-900);
+            color: var(--color-neutral-300);
+            border-radius: var(--border-radius-s);
+
+            &:hover, &:focus {
+                background-color: var(--color-neutral-700);
+            }
+        }
+    }
+    .tag-list li {
+        padding: var(--space-2xs) var(--space-xs);
+
+        a {
+            padding: 0;
+            font-size: var(--text-size-sm);
+            color: var(--color-neutral-200);
+        }
+    }
     .next-prev-post-container {
         display: flex;
-        flex-direction: row;
         gap: var(--space-s);
     }
 
