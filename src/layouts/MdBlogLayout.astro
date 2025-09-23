@@ -89,7 +89,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                         Thank you!
                     </h2>
                     <p>
-                        I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces below!
+                        I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!
                     </p>
                 </div>
                 {
@@ -140,13 +140,13 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <h3 class="subsection-title">Continue reading:</h3>
                     <div class="next-prev-post-container">
                         {allPosts[indexOfPost - 1] ? (
-                            <CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
+                            <CardMin justifyTop targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
                                 <p class="next-prev-post-title" style="">Next post</p>
                                 <p class="next-prev-post-body">{allPosts[indexOfPost - 1].data.title}</p>
                             </CardMin>
                         ) : null}
                         {allPosts[indexOfPost + 1] ? (
-                            <CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
+                            <CardMin justifyTop  targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
                                 <p class="next-prev-post-title">Previous post</p>
                                 <p class="next-prev-post-body">{allPosts[indexOfPost + 1].data.title}</p>
                             </CardMin>
@@ -154,10 +154,10 @@ const isoLastUpdate = lastUpdate.toISOString();
                     </div>
                 </div>
                 <div class="end-of-post-subsection">
-                        <h3 class="subsection-title">Email Newsletter</h3>
-                        <p class="margin-bottom-xs">Join my monthly updates called Bryan's Briefing.</p>
-                        <EmailSignup class="compact"/>
-                        <p class="margin-top-2xs"><small>Zero spam. Unsubscribe anytime.</small></p>
+                    <h3 class="subsection-title">Email Newsletter</h3>
+                    <p class="margin-bottom-xs">Join my monthly updates called Bryan's Briefing.</p>
+                    <EmailSignup class="compact"/>
+                    <p class="margin-top-2xs"><small>Zero spam. Unsubscribe anytime.</small></p>
                 </div>
             </div>
 

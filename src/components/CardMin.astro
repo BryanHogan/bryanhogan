@@ -4,11 +4,12 @@ interface Props {
     size?: string;
     targetBlank?: boolean;
     title?: string;
+    justifyTop?: boolean;
 }
-const {href, size = "6rem", targetBlank = true, title} = Astro.props;
+const {href, size = "6rem", targetBlank = true, title, justifyTop = false} = Astro.props;
 ---
 
-<a href={href} target={targetBlank ? "_blank" : "_self"} title={title} aria-label={"Go to " + href}><slot/></a>
+<a href={href} target={targetBlank ? "_blank" : "_self"} title={title} aria-label={"Go to " + href} class={justifyTop ? "justify-top" : ""}><slot/></a>
 
 <style define:vars={{ size }}>
     a {
@@ -30,5 +31,9 @@ const {href, size = "6rem", targetBlank = true, title} = Astro.props;
             padding-inline: var(--space-xs);
             text-align: center;
         }
+    }
+    .justify-top {
+        justify-content: flex-start;
+        padding-block: var(--space-xs);
     }
 </style>
