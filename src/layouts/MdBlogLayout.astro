@@ -96,7 +96,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                     (post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) &&
                     (
                         <div class="end-of-post-subsection">
-                            <h3 class="subsection-title">Like & comment this post on:</h3>
+                            <h3 class="subsection-title">Like & comment this post on</h3>
                             <ul role="list" class="social-refs-container">
                                 {(post.data.blueskyRef && <Button text="Bluesky" targetBlank href={post.data.blueskyRef} buttonStyle="line icon-left" icon="bluesky"/>)}
                                 {(post.data.mastodonRef && <Button text="Mastodon" targetBlank href={post.data.mastodonRef} buttonStyle="line icon-left" icon="mastodon"/>)}
@@ -107,7 +107,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 }
                 <div class="end-of-post-subsection meta-info-container">
                     <div class="info-card">
-                        <h3 class="subsection-title">Publication Details</h3>
+                        <h3 class="subsection-title">Publication dates</h3>
                         <p>
                             Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time>
                         </p>
@@ -137,7 +137,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                     </div>
                 </div>
                 <div class="end-of-post-subsection">
-                    <h3 class="subsection-title">Continue reading:</h3>
+                    <h3 class="subsection-title">Continue reading</h3>
                     <div class="next-prev-post-container">
                         {allPosts[indexOfPost - 1] ? (
                             <CardMin justifyTop targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
@@ -154,8 +154,8 @@ const isoLastUpdate = lastUpdate.toISOString();
                     </div>
                 </div>
                 <div class="end-of-post-subsection">
-                    <h3 class="subsection-title">Email Newsletter</h3>
-                    <p class="margin-bottom-xs">Join my monthly updates called Bryan's Briefing.</p>
+                    <h3 class="subsection-title">E-mail updates</h3>
+                    <p class="margin-bottom-xs">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
                     <EmailSignup class="compact"/>
                     <p class="margin-top-2xs"><small>Zero spam. Unsubscribe anytime.</small></p>
                 </div>
@@ -267,6 +267,9 @@ const isoLastUpdate = lastUpdate.toISOString();
                 color: var(--color-accent-500);
                 text-transform: uppercase;
                 font-weight: var(--font-weight-bold);
+            }
+            .next-prev-post-body {
+                transition: color var(--transition-normal);
             }
             :hover .next-prev-post-body  {
                 color: var(--color-accent-500);
