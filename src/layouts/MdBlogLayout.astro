@@ -16,6 +16,7 @@ import { cardBlogBackgroundColors } from "../data/colors";
 import Icon from "../components/Icon.astro";
 import { mastodon } from "../data/socials";
 import SocialShare from "../components/SocialShare.astro";
+import Button from "../components/Button.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -97,10 +98,10 @@ const isoLastUpdate = lastUpdate.toISOString();
                     (
                         <div class="end-of-post-subsection">
                             <h3 class="subsection-title">Like & comment this post on:</h3>
-                            <ul role="list" class="">
-                                {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
-                                {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
-                                {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
+                            <ul role="list" class="social-refs-container">
+                                {(post.data.blueskyRef && <Button text="Bluesky" targetBlank href={post.data.blueskyRef} buttonStyle="line icon-left" icon="bluesky"/>)}
+                                {(post.data.mastodonRef && <Button text="Mastodon" targetBlank href={post.data.mastodonRef} buttonStyle="line icon-left" icon="mastodon"/>)}
+                                {(post.data.threadsRef && <Button text="Threads" targetBlank href={post.data.threadsRef} buttonStyle="line icon-left" icon="threads"/>)}
                             </ul>
                         </div>
                     )
@@ -124,8 +125,21 @@ const isoLastUpdate = lastUpdate.toISOString();
                             <h3 class="subsection-title">Tags</h3>
                         </div>
                         <ul role="list">
-                            <li>hi</li>
-                            <li>hi2</li>
+                            {post.data.tags?.length && (
+                                <ul role="list" class="interactive-list tag-list">
+                                    {post.data.tags.map((tag) => {
+                                    const slug = tag
+                                        .toLowerCase()
+                                        .replace(/\s+/g, "-")
+                                        .replace(/[^a-z0-9\-]/g, "");
+                                    return (
+                                        <li>
+                                        <a href={`/tags/${slug}`} rel="tag">{tag}</a>
+                                        </li>
+                                    );
+                                    })}
+                                </ul>
+                            )}
                         </ul>
                     </div>
                 </div>
@@ -331,6 +345,13 @@ const isoLastUpdate = lastUpdate.toISOString();
             font-weight: var(--font-weight-normal);
             color: var(--color-neutral-100);
             margin: 0 0 var(--space-m) 0;
+        }
+
+        .social-refs-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
         }
 
         .meta-info-container {
