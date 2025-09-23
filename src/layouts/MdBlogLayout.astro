@@ -84,7 +84,73 @@ const isoLastUpdate = lastUpdate.toISOString();
             </main>
             <div class="end-of-post-container">
                 <div class="end-of-post-subsection">
-
+                    <h2 class="margin-bottom-m">
+                        <Icon name="megaphone" label="Feedback" size="1.2rem"/>
+                        Hey!
+                    </h2>
+                    <p>
+                        I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces below!
+                    </p>
+                </div>
+                {
+                    (post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) &&
+                    (
+                        <div class="end-of-post-subsection">
+                            <h3 class="subsection-title">Like & comment this post on:</h3>
+                            <ul role="list" class="">
+                                {(post.data.blueskyRef && <li><a href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" label="BlueSky" size="1rem"/> BlueSky</a></li>)}
+                                {(post.data.mastodonRef && <li><a href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" label="Mastodon" size="1rem"/> Mastodon</a></li>)}
+                                {(post.data.threadsRef && <li><a href={post.data.threadsRef} target="_blank"><Icon name="threads" label="Threads" size="1rem"/> Threads</a></li>)}
+                            </ul>
+                        </div>
+                    )
+                }
+                <div class="end-of-post-subsection meta-info-container">
+                    <div class="info-card">
+                        <div style="display: flex; flex-direction: row;">
+                            <Icon name="pen" label="Dates" size="1rem"/>
+                            <h3 class="subsection-title">Publication Details</h3>
+                        </div>
+                        <p>
+                            Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time>
+                        </p>
+                        <p class="margin-top-xs">
+                            Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <div style="display: flex; flex-direction: row;">
+                            <Icon name="tag" label="Tags" size="1rem"/>
+                            <h3 class="subsection-title">Tags</h3>
+                        </div>
+                        <ul role="list">
+                            <li>hi</li>
+                            <li>hi2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="end-of-post-subsection">
+                    <h3 class="subsection-title">Continue reading:</h3>
+                    <div class="next-prev-post-container">
+                        {allPosts[indexOfPost - 1] ? (
+                            <CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
+                                <p class="next-prev-post-title" style="">Next post</p>
+                                <p class="next-prev-post-body">{allPosts[indexOfPost - 1].data.title}</p>
+                            </CardMin>
+                        ) : null}
+                        {allPosts[indexOfPost + 1] ? (
+                            <CardMin targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
+                                <p class="next-prev-post-title">Previous post</p>
+                                <p class="next-prev-post-body">{allPosts[indexOfPost + 1].data.title}</p>
+                            </CardMin>
+                        ) : null}
+                    </div>
+                </div>
+                <div class="end-of-post-subsection">
+                        <h3 class="subsection-title">Email Newsletter</h3>
+                        <p class="margin-bottom-xs">Join my monthly updates called Bryan's Briefing.</p>
+                        <EmailSignup class="compact"/>
+                        <p class="margin-top-2xs"><small>Zero spam. Unsubscribe anytime.</small></p>
                 </div>
 
             </div>
@@ -260,9 +326,9 @@ const isoLastUpdate = lastUpdate.toISOString();
             border-bottom: 1px solid var(--color-neutral-700);
         }
 
-        .section-title {
-            font-size: var(--text-size-xl);
-            font-weight: var(--font-weight-bold);
+        .subsection-title {
+            font-size: var(--font-size-normal);
+            font-weight: var(--font-weight-normal);
             color: var(--color-neutral-100);
             margin: 0 0 var(--space-m) 0;
         }
@@ -270,15 +336,36 @@ const isoLastUpdate = lastUpdate.toISOString();
         .meta-info-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-l);
+            gap: var(--space-m);
+        }
+        .info-card {
+            background-color: var(--color-neutral-800);
+            padding: var(--space-m);
+            border-radius: var(--border-radius-m);
+            border: 1px solid var(--color-neutral-600);
+        }
+        .next-prev-post-container {
+            display: flex;
+            gap: var(--space-s);
+            .next-prev-post-title {
+                color: var(--color-accent-500);
+                text-transform: uppercase;
+                font-weight: var(--font-weight-bold);
+            }
+            :hover .next-prev-post-body  {
+                color: var(--color-accent-500);
+            }
         }
     }
 
     @media only screen and (max-width: 768px) {
-        .meta-info-container {
-            .meta-info-grid {
+        .end-of-post-container {
+            .meta-info-container {
                 grid-template-columns: 1fr;
                 gap: var(--space-m);
+            }
+            .next-prev-post-container {
+                flex-direction: column;
             }
         }
     }
@@ -453,10 +540,6 @@ const isoLastUpdate = lastUpdate.toISOString();
             font-size: var(--text-size-sm);
             color: var(--color-neutral-200);
         }
-    }
-    .next-prev-post-container {
-        display: flex;
-        gap: var(--space-s);
     }
 
     .aside-container-right {
