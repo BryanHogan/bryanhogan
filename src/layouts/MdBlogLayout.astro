@@ -83,11 +83,10 @@ const isoLastUpdate = lastUpdate.toISOString();
             <main class="markdown-container main-content">
                 <slot />
             </main>
-            <div class="end-of-post-container">
+            <div class="end-of-post-container margin-top-xl">
                 <div class="end-of-post-subsection">
-                    <h2 class="margin-bottom-m">
-                        <Icon name="megaphone" label="Feedback" size="1.2rem"/>
-                        Hey!
+                    <h2 style="font-size: var(--text-size-2xl);" class="margin-bottom-m">
+                        Thank you!
                     </h2>
                     <p>
                         I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces below!
@@ -108,10 +107,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 }
                 <div class="end-of-post-subsection meta-info-container">
                     <div class="info-card">
-                        <div style="display: flex; flex-direction: row;">
-                            <Icon name="pen" label="Dates" size="1rem"/>
-                            <h3 class="subsection-title">Publication Details</h3>
-                        </div>
+                        <h3 class="subsection-title">Publication Details</h3>
                         <p>
                             Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time>
                         </p>
@@ -120,10 +116,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                         </p>
                     </div>
                     <div class="info-card">
-                        <div style="display: flex; flex-direction: row;">
-                            <Icon name="tag" label="Tags" size="1rem"/>
-                            <h3 class="subsection-title">Tags</h3>
-                        </div>
+                        <h3 class="subsection-title">Tags</h3>
                         <ul role="list">
                             {post.data.tags?.length && (
                                 <ul role="list" class="interactive-list tag-list">
@@ -292,8 +285,6 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
         }
     }
-
-    /* ######################################################### */
     
     .sub-menu-container {
         padding-top: var(--space-2xs);
