@@ -140,16 +140,16 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <h3 class="subsection-title">Continue reading</h3>
                     <div class="next-prev-post-container">
                         {allPosts[indexOfPost - 1] ? (
-                            <CardMin justifyTop targetBlank={false} href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
+                            <a href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
                                 <p class="next-prev-post-title" style="">Next post</p>
                                 <p class="next-prev-post-body">{allPosts[indexOfPost - 1].data.title}</p>
-                            </CardMin>
+                            </a>
                         ) : null}
                         {allPosts[indexOfPost + 1] ? (
-                            <CardMin justifyTop  targetBlank={false} href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
+                            <a class="right-side" href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
                                 <p class="next-prev-post-title">Previous post</p>
                                 <p class="next-prev-post-body">{allPosts[indexOfPost + 1].data.title}</p>
-                            </CardMin>
+                            </a>
                         ) : null}
                     </div>
                 </div>
@@ -263,13 +263,31 @@ const isoLastUpdate = lastUpdate.toISOString();
         .next-prev-post-container {
             display: flex;
             gap: var(--space-s);
+            >a {
+                flex-basis: 50%;
+                border: 1px solid var(--color-neutral-600);
+                background-color: var(--color-neutral-900);
+                padding: var(--space-m);
+                transition: border var(--transition-normal);
+                text-decoration: none;
+            }
+            a:hover {
+                border: 1px solid var(--color-accent-500);
+                box-shadow: var(--box-shadow-m);
+            }
+            .right-side {
+                text-align: right;
+                margin-left: auto;
+            }
             .next-prev-post-title {
                 color: var(--color-accent-500);
                 text-transform: uppercase;
                 font-weight: var(--font-weight-bold);
+                margin-bottom: var(--space-xs);
             }
             .next-prev-post-body {
                 transition: color var(--transition-normal);
+                text-decoration: underline;
             }
             :hover .next-prev-post-body  {
                 color: var(--color-accent-500);
