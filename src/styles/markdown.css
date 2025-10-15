@@ -18,8 +18,7 @@
             color: var(--color-accent-200);
         }
     }
-    img, picture {
-        object-fit: scale-down;
+    img {
         max-width: 100%;
         height: auto;
         border-radius: var(--border-radius-s);
