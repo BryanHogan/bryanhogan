@@ -26,6 +26,20 @@ function ACP-All {
 # 2. SUBMODULE
 Write-Host "Processing submodule '$submodulePath'..."
 Push-Location $submodulePath
+
+# Check for detached HEAD
+$currentBranch = git branch --show-current
+if (-not $currentBranch) {
+    Write-Warning "Submodule is in 'Detached HEAD' state."
+    $choice = Read-Host "Do you want to checkout 'main' and continue? (y/n)"
+    if ($choice -eq 'y') {
+        git checkout main
+    } else {
+        Write-Error "Cannot push from detached HEAD. Please fix submodule state manually."
+        exit 1
+    }
+}
+
 git add -A
 ACP-All $msg
 Pop-Location
