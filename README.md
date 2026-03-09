@@ -1,6 +1,6 @@
 # Hello, I'm Bryan Hogan 👋
 
-I build digital things. I graduated from Code & Context in 2025. A study based in Cologne, Germany, that combines computer science, design and business/entrepreneurship. Building solutions from start to finish.
+I build digital things. I majored in a combination of code, design and entrepreneurship and have been working in this intertaled field since.
 
 - Check out my website [BryanHogan.com](https://bryanhogan.com) to learn more about me.
 - You can also find my portfolio [here](https://bryanhogan.com/portfolio).
