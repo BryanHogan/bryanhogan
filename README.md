@@ -1,25 +1,24 @@
 # Hello, I'm Bryan Hogan 👋
 
-I build digital things. I graduated from Code & Context in 2025. A study based in Cologne, Germany, that combines computer science, design and business/entrepreneurship. Building solutions from start to finish.
+I build digital things. I majored in a combination of code, design and entrepreneurship and have been working in this interrelated field since.
 
 - Check out my website [BryanHogan.com](https://bryanhogan.com) to learn more about me.
-- You can also find my portfolio [here](https://bryanhogan.com/portfolio).
-- I also got a [blog](https://bryanhogan.com/blog).
+- I also have [portfolio page](https://bryanhogan.com/portfolio).
+- I also have [a blog](https://bryanhogan.com/blog).
+- I also have a [projects page](https://bryanhogan.com/projects) about different projects I have published.
 
 
 # 🧭 Current Endeavors
 
 Find what I'm currently up to on my [now page](https://bryanhogan.com/now).
 
-In 2025 I graduated from [Code & Context](https://bryanhogan.com/blog/what-is-coco).
+I got a B.Sc. in [Code & Context](https://bryanhogan.com/blog/what-is-coco). My final project and thesis there was about [DailySelfTrack](https://dailyselftrack.com/).
 
-As part of my final bachelor project I started work on [DailySelfTrack](https://dailyselftrack.com/).
-
-Before that I spent a year in South Korea:
-- Read more about my semester at Hanyang University erica [here](https://bryanhogan.com/blog/hanyang-erica-exchange).
-- My second semester I did at University of Seoul.
+- [I studied a semester at Hanyang University erica](https://bryanhogan.com/blog/hanyang-erica-exchange).
+- And then one semester at University of Seoul.
 
 # 📪 Contact
+
 Reach out to me via [LinkedIn](https://www.linkedin.com/in/bryanhoganme/) or send a mail to Bryan@BryanHogan.com
 
 
