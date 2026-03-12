@@ -14,7 +14,7 @@ import { generateToC } from "../components/toc/generateToC";
 import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
 import Icon from "../components/Icon.astro";
-import { mastodon } from "../data/socials";
+import { mastodon, bluesky } from "../data/socials";
 import SocialShare from "../components/SocialShare.astro";
 import Button from "../components/Button.astro";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
@@ -101,14 +101,21 @@ const isoLastUpdate = lastUpdate.toISOString();
                     </div>
                 </div>
                 <div class="end-of-post-section">
-                    <h3>Spread the word</h3>
-                    <p>Comment, like and share on:</p>
-                    {(post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) && (
-                        <div class="social-refs">
-                            {post.data.blueskyRef && <a class="social-link" href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" size="1rem" label="Bluesky"/> Bluesky</a>}
-                            {post.data.mastodonRef && <a class="social-link" href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" size="1rem" label="Mastodon"/> Mastodon</a>}
-                            {post.data.threadsRef && <a class="social-link" href={post.data.threadsRef} target="_blank"><Icon name="threads" size="1rem" label="Threads"/> Threads</a>}
-                        </div>
+                    {(post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) ? (
+                        <Fragment>
+                            <h3>Spread the word</h3>
+                            <p>Comment, like and share on:</p>
+                            <div class="social-refs">
+                                {post.data.blueskyRef && <a class="social-link" href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" size="1rem" label="Bluesky"/> Bluesky</a>}
+                                {post.data.mastodonRef && <a class="social-link" href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" size="1rem" label="Mastodon"/> Mastodon</a>}
+                                {post.data.threadsRef && <a class="social-link" href={post.data.threadsRef} target="_blank"><Icon name="threads" size="1rem" label="Threads"/> Threads</a>}
+                            </div>
+                        </Fragment>
+                    ) : (
+                        <Fragment>
+                            <h3>Read more</h3>
+                            <p>Check out my <a href="/blog/introduction/">blog introduction</a> to see what I write about.</p>
+                        </Fragment>
                     )}
                 </div>
                 <div class="end-of-post-section">
@@ -361,24 +368,34 @@ const isoLastUpdate = lastUpdate.toISOString();
         .tag-list-2 {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--space-xs);
+            gap: var(--space-2xs);
             list-style: none;
             padding: 0;
             margin: 0;
 
             a {
-                color: var(--color-accent-200);
+                display: inline-block;
+                padding: 0.15rem 0.5rem;
+                border: 1px solid var(--color-neutral-600);
+                border-radius: var(--border-radius-s);
+                color: var(--color-neutral-200);
+                font-size: var(--font-size-small);
                 text-decoration: none;
+                text-transform: capitalize;
+                transition: border-color var(--transition-normal), color var(--transition-normal);
+
                 &:hover {
                     color: var(--color-accent-500);
-                    text-decoration: underline;
+                    border-color: var(--color-accent-500);
                 }
             }
         }
 
         .next-and-previous-post-section {
             .next-and-previous-post-card {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
                 background-color: var(--color-neutral-900);
                 border: 1px solid var(--color-neutral-600);
                 border-radius: var(--border-radius-m);
@@ -397,7 +414,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                     text-transform: uppercase;
                     font-weight: var(--font-weight-bold);
                     font-size: var(--font-size-small);
-                    margin-bottom: var(--space-2xs);
+                    margin-bottom: auto;
                 }
 
                 .nav-title {
