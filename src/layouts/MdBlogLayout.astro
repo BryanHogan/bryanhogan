@@ -138,6 +138,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <h3>Donate</h3>
                     <p>Please.</p>
                 </div>
+                <hr class="section-divider" />
                 {allPosts[indexOfPost + 1] && (
                     <div class="next-and-previous-post-section">
                         <a class="next-and-previous-post-card" href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
@@ -154,6 +155,12 @@ const isoLastUpdate = lastUpdate.toISOString();
                         </a>
                     </div>
                 )}
+                <div class="newsletter-section">
+                    <h3>Newsletter</h3>
+                    <p>Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
+                    <EmailSignup class="compact"/>
+                    <p><small>Zero spam. Unsubscribe anytime.</small></p>
+                </div>
             </div>
 
             <div class="end-of-post-container margin-top-xl">
@@ -390,6 +397,13 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
         }
 
+        .section-divider {
+            grid-column: 1 / 3;
+            border: none;
+            border-top: 1px solid var(--color-neutral-700);
+            margin: 0;
+        }
+
         .next-and-previous-post-section {
             .next-and-previous-post-card {
                 display: flex;
@@ -428,6 +442,20 @@ const isoLastUpdate = lastUpdate.toISOString();
 
             .next-card {
                 text-align: end;
+            }
+        }
+
+        .newsletter-section {
+            grid-column: 1 / 3;
+            border-top: 1px solid var(--color-neutral-700);
+            padding-top: var(--space-l);
+
+            p {
+                margin-bottom: var(--space-xs);
+            }
+
+            small {
+                color: var(--color-neutral-300);
             }
         }
     }
@@ -513,7 +541,9 @@ const isoLastUpdate = lastUpdate.toISOString();
         .end-of-post-container-2 {
             grid-template-columns: 1fr;
 
-            .author-section {
+            .author-section,
+            .newsletter-section,
+            .section-divider {
                 grid-column: 1;
             }
         }
