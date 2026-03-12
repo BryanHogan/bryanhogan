@@ -17,6 +17,7 @@ import Icon from "../components/Icon.astro";
 import { mastodon } from "../data/socials";
 import SocialShare from "../components/SocialShare.astro";
 import Button from "../components/Button.astro";
+import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -83,6 +84,41 @@ const isoLastUpdate = lastUpdate.toISOString();
             <main class="markdown-container main-content">
                 <slot />
             </main>
+
+            <div class="end-of-post-container-2">
+                <div class="author-section">
+                    <Image
+					    class="author-image"
+					    src={BryanHoganImage}
+					    alt="Bryan Hogan in a classic polariod style"
+					    width={237}
+					    height={234}
+				    />
+                    <div class="author-section-text-area">
+                        <h2>Bryan Hogan</h2>
+                        <p>Developer & digital creator - web apps, design, language learning, self-growth</p>
+                    </div>
+                </div>
+                <div class="end-of-post-section">
+                    <h3>Spread the word</h3>
+                    <p>Comment, like and share this post on:</p>
+                </div>
+                <div class="end-of-post-section">
+                    <h3>Publication dates</h3>
+                    <p>Published:</p>
+                    <p>Last updated:</p>
+                </div>
+                <div class="end-of-post-section">
+                    <h3>Tags</h3>
+                    <p>Obsidian, Design</p>
+                </div>
+                <div class="end-of-post-section">
+                    <h3>Donate</h3>
+                    <p>Please.</p>
+                </div>
+                <div class="end-of-post-section"></div>
+            </div>
+
             <div class="end-of-post-container margin-top-xl">
                 <div class="end-of-post-subsection">
                     <h2 style="font-size: var(--text-size-2xl);" class="margin-bottom-m">
@@ -216,6 +252,33 @@ const isoLastUpdate = lastUpdate.toISOString();
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .end-of-post-container-2 {
+        background-color: var(--color-neutral-800);
+        border-radius: var(--border-radius-m);
+        padding: var(--space-s);
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-l);
+
+        .author-section {
+            display: flex;
+            flex-direction: row;
+            gap: var(--space-m);
+            grid-column: 1 / 3;
+
+            .author-image {
+                width: 6rem;
+                height: 100%;
+            }
+        }
+
+        h2, h3 {
+            margin-bottom: var(--space-2xs);
+        }
+
     }
 
     .end-of-post-container {
