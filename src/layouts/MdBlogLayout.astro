@@ -102,33 +102,51 @@ const isoLastUpdate = lastUpdate.toISOString();
                 </div>
                 <div class="end-of-post-section">
                     <h3>Spread the word</h3>
-                    <p>Comment, like and share this post on:</p>
+                    <p>Comment, like and share on:</p>
+                    {(post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) && (
+                        <div class="social-refs">
+                            {post.data.blueskyRef && <a class="social-link" href={post.data.blueskyRef} target="_blank"><Icon name="bluesky" size="1rem" label="Bluesky"/> Bluesky</a>}
+                            {post.data.mastodonRef && <a class="social-link" href={post.data.mastodonRef} target="_blank"><Icon name="mastodon" size="1rem" label="Mastodon"/> Mastodon</a>}
+                            {post.data.threadsRef && <a class="social-link" href={post.data.threadsRef} target="_blank"><Icon name="threads" size="1rem" label="Threads"/> Threads</a>}
+                        </div>
+                    )}
                 </div>
                 <div class="end-of-post-section">
                     <h3>Publication dates</h3>
-                    <p>Published:</p>
-                    <p>Last updated:</p>
+                    <p>Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time></p>
+                    <p>Last updated: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time></p>
                 </div>
                 <div class="end-of-post-section">
                     <h3>Tags</h3>
-                    <p>Obsidian, Design</p>
+                    {post.data.tags?.length && (
+                        <ul role="list" class="tag-list-2">
+                            {post.data.tags.map((tag) => {
+                                const slug = tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+                                return <li><a href={`/tags/${slug}`} rel="tag">{tag}</a></li>;
+                            })}
+                        </ul>
+                    )}
                 </div>
                 <div class="end-of-post-section">
                     <h3>Donate</h3>
                     <p>Please.</p>
                 </div>
-                <div class="next-and-previous-post-section">
-                    <div class="next-and-previous-post-card">
-                        <p><strong>Previous post</strong></p>
-                        <p>Title of the post is here</p>
+                {allPosts[indexOfPost + 1] && (
+                    <div class="next-and-previous-post-section">
+                        <a class="next-and-previous-post-card" href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
+                            <p class="nav-label">Previous post</p>
+                            <p class="nav-title">{allPosts[indexOfPost + 1].data.title}</p>
+                        </a>
                     </div>
-                </div>
-                <div class="next-and-previous-post-section">
-                    <div class="next-and-previous-post-card next-card">
-                        <p><strong>Next post</strong></p>
-                        <p>Title of the post is here</p>
+                )}
+                {allPosts[indexOfPost - 1] && (
+                    <div class="next-and-previous-post-section">
+                        <a class="next-and-previous-post-card next-card" href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
+                            <p class="nav-label">Next post</p>
+                            <p class="nav-title">{allPosts[indexOfPost - 1].data.title}</p>
+                        </a>
                     </div>
-                </div>
+                )}
             </div>
 
             <div class="end-of-post-container margin-top-xl">
@@ -268,51 +286,134 @@ const isoLastUpdate = lastUpdate.toISOString();
 
     .end-of-post-container-2 {
         background-color: var(--color-neutral-800);
+        border: 1px solid var(--color-neutral-700);
         border-radius: var(--border-radius-m);
         padding: var(--space-s);
+        margin-top: var(--space-xl);
 
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-l);
+        gap: var(--space-m) var(--space-xs);
+
+        p {
+            color: var(--color-neutral-200);
+        }
+
+        h2 {
+            font-size: var(--text-size-2xl);
+            margin-bottom: var(--space-2xs);
+        }
+
+        h3 {
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-semi-bold);
+            color: var(--color-neutral-100);
+            margin: 0 0 var(--space-xs) 0;
+        }
 
         .author-section {
             display: flex;
             flex-direction: row;
+            align-items: center;
             gap: var(--space-m);
             grid-column: 1 / 3;
+            padding-bottom: var(--space-m);
+            border-bottom: 1px solid var(--color-neutral-700);
 
             .author-image {
                 width: 4rem;
-                height: 100%;
+                height: auto;
+                border-radius: 50%;
             }
         }
 
-        end-of-post-section {
-            border: 1px solid var(neutral-600);
+        .end-of-post-section {
+            border-radius: var(--border-radius-m);
+            padding: var(--space-s);
+        }
+
+        .social-refs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-s);
+            margin-top: var(--space-xs);
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--color-neutral-200);
+            text-decoration: none;
+            font-size: var(--font-size-small);
+            transition: color var(--transition-normal);
+
+            &:hover {
+                color: var(--color-accent-500);
+            }
+
+            :global(svg) {
+                background-image: var(--color-gradient);
+                background-clip: text;
+            }
+        }
+
+        .tag-list-2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            a {
+                color: var(--color-accent-200);
+                text-decoration: none;
+                &:hover {
+                    color: var(--color-accent-500);
+                    text-decoration: underline;
+                }
+            }
         }
 
         .next-and-previous-post-section {
             .next-and-previous-post-card {
-                border: 1px solid var(--color-neutral-300);
-                min-height: 8rem;
-                padding: var(--space-s);
-                transition: color linear var(--transition-normal);
+                display: block;
+                background-color: var(--color-neutral-900);
+                border: 1px solid var(--color-neutral-600);
+                border-radius: var(--border-radius-m);
+                min-height: 5rem;
+                padding: var(--space-m);
+                text-decoration: none;
+                transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+
                 &:hover {
                     border-color: var(--color-accent-500);
+                    box-shadow: var(--box-shadow-m);
+                }
+
+                .nav-label {
+                    color: var(--color-accent-500);
+                    text-transform: uppercase;
+                    font-weight: var(--font-weight-bold);
+                    font-size: var(--font-size-small);
+                    margin-bottom: var(--space-2xs);
+                }
+
+                .nav-title {
+                    text-decoration: underline;
+                    transition: color var(--transition-normal);
+                }
+
+                &:hover .nav-title {
+                    color: var(--color-accent-500);
                 }
             }
 
             .next-card {
-                p {
-                    text-align: end;
-                }
+                text-align: end;
             }
         }
-
-        h2, h3 {
-            margin-bottom: var(--space-2xs);
-        }
-
     }
 
     .end-of-post-container {
@@ -393,6 +494,13 @@ const isoLastUpdate = lastUpdate.toISOString();
     }
 
     @media only screen and (max-width: 768px) {
+        .end-of-post-container-2 {
+            grid-template-columns: 1fr;
+
+            .author-section {
+                grid-column: 1;
+            }
+        }
         .end-of-post-container {
             .meta-info-container {
                 grid-template-columns: 1fr;
