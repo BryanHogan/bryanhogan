@@ -14,6 +14,7 @@ import { generateToC } from "../components/toc/generateToC";
 import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
 import Icon from "../components/Icon.astro";
+import Button from "../components/Button.astro";
 import { mastodon, bluesky } from "../data/socials";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
 
@@ -130,7 +131,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                         <ul role="list" class="tag-list">
                             {post.data.tags.map((tag) => {
                                 const slug = tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
-                                return <li><a href={`/tags/${slug}`} rel="tag">{tag}</a></li>;
+                                return <li><Button href={`/tags/${slug}`} text={tag} buttonStyle="line small" style="color: var(--color-neutral-200)" /></li>;
                             })}
                         </ul>
                     )}
@@ -286,23 +287,7 @@ const isoLastUpdate = lastUpdate.toISOString();
             list-style: none;
             padding: 0;
             margin: 0;
-
-            a {
-                display: inline-block;
-                padding: 0.15rem 0.5rem;
-                border: 1px solid var(--color-neutral-600);
-                border-radius: var(--border-radius-s);
-                color: var(--color-neutral-200);
-                font-size: var(--font-size-small);
-                text-decoration: none;
-                text-transform: capitalize;
-                transition: border-color var(--transition-normal), color var(--transition-normal);
-
-                &:hover {
-                    color: var(--color-accent-500);
-                    border-color: var(--color-accent-500);
-                }
-            }
+            text-transform: capitalize;
         }
 
         .section-divider {

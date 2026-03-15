@@ -8,6 +8,7 @@ interface Props {
     text: string;
     targetBlank?: boolean;
     icon?: keyof typeof Icons;
+    style?: string;
 }
 
 const {
@@ -16,10 +17,11 @@ const {
     text,
     targetBlank = false,
     icon,
+    style,
 } = Astro.props;
 ---
 
-<a href={href} class={buttonStyle} target={targetBlank ? "_blank" : "_self"}>
+<a href={href} class={buttonStyle} target={targetBlank ? "_blank" : "_self"} style={style}>
     {
         icon && (
             <Icon
@@ -119,5 +121,9 @@ const {
         width: 7rem;
         font-size: var(--font-size-large);
         font-weight: var(--font-weight-bold);
+    }
+    .small {
+        padding: 0.15rem 0.5rem;
+        font-size: var(--font-size-small);
     }
 </style>
