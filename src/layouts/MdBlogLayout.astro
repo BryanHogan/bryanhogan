@@ -263,9 +263,8 @@ const isoLastUpdate = lastUpdate.toISOString();
         }
 
         .social-link {
-            display: inline-flex;
-            align-items: baseline;
-            gap: 0.25em;
+            display: inline;
+            white-space: nowrap;
             color: var(--color-neutral-200);
             text-decoration: underline;
             transition: color var(--transition-normal);
@@ -275,7 +274,7 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
 
             .social-icon {
-                display: flex;
+                display: inline-block;
                 transform: translateY(0.125em);
             }
         }
