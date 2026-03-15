@@ -113,9 +113,9 @@ const isoLastUpdate = lastUpdate.toISOString();
                                     <Fragment>
                                         {i > 0 && i < arr.length - 1 && ", "}
                                         {i > 0 && i === arr.length - 1 && " or "}
-                                        {link}
+                                        {link}{i === arr.length - 1 && "."}
                                     </Fragment>
-                                ))}.
+                                ))}
                             </p>
                         </Fragment>
                     ) : (
