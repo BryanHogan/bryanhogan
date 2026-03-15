@@ -15,10 +15,7 @@ import { getLastModifiedDate } from "../utils/last-update";
 import { cardBlogBackgroundColors } from "../data/colors";
 import Icon from "../components/Icon.astro";
 import { mastodon, bluesky } from "../data/socials";
-import SocialShare from "../components/SocialShare.astro";
-import Button from "../components/Button.astro";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
-import Card from "../components/Card.astro";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -86,7 +83,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 <slot />
             </main>
 
-            <div class="end-of-post-container-2">
+            <div class="end-of-post-container">
                 <div class="author-section">
                     <Image
 					    class="author-image"
@@ -97,7 +94,7 @@ const isoLastUpdate = lastUpdate.toISOString();
 				    />
                     <div class="author-section-text-area">
                         <h2>Bryan Hogan</h2>
-                        <p>Developer & digital creator - web apps, design, language learning, self-growth, digital nomad</p>
+                        <p>Developer & digital creator - web apps, design, self-balance, digital nomad</p>
                     </div>
                 </div>
                 <p class="author-description">I write about what I learn, build, and find interesting. Combining expertise in development, design and entrepreneurship.</p>
@@ -130,7 +127,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 <div class="end-of-post-section">
                     <h3>Tags</h3>
                     {post.data.tags?.length && (
-                        <ul role="list" class="tag-list-2">
+                        <ul role="list" class="tag-list">
                             {post.data.tags.map((tag) => {
                                 const slug = tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
                                 return <li><a href={`/tags/${slug}`} rel="tag">{tag}</a></li>;
@@ -159,87 +156,6 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <p>Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
                     <EmailSignup class="compact"/>
                     <p><small>Zero spam. Unsubscribe anytime.</small></p>
-                </div>
-            </div>
-            <p class="publication-dates">
-                Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time> · Last updated: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time>
-            </p>
-
-            <div class="end-of-post-container margin-top-xl">
-                <div class="end-of-post-subsection">
-                    <h2 style="font-size: var(--text-size-2xl);" class="margin-bottom-m">
-                        Thank you!
-                    </h2>
-                    <p>
-                        I love your feedback! Was something confusing? Got stuck? Amazingly helpful? Just mid? Let me know per <a href="mailto:bryan@bryanhogan.com">e-mail</a> or at any of my social media spaces!
-                    </p>
-                </div>
-                {
-                    (post.data.blueskyRef || post.data.mastodonRef || post.data.threadsRef) &&
-                    (
-                        <div class="end-of-post-subsection">
-                            <h3 class="subsection-title">Like & comment this post on</h3>
-                            <ul role="list" class="social-refs-container">
-                                {(post.data.blueskyRef && <Button text="Bluesky" targetBlank href={post.data.blueskyRef} buttonStyle="line icon-left" icon="bluesky"/>)}
-                                {(post.data.mastodonRef && <Button text="Mastodon" targetBlank href={post.data.mastodonRef} buttonStyle="line icon-left" icon="mastodon"/>)}
-                                {(post.data.threadsRef && <Button text="Threads" targetBlank href={post.data.threadsRef} buttonStyle="line icon-left" icon="threads"/>)}
-                            </ul>
-                        </div>
-                    )
-                }
-                <div class="end-of-post-subsection meta-info-container">
-                    <div class="info-card">
-                        <h3 class="subsection-title">Publication dates</h3>
-                        <p>
-                            Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time>
-                        </p>
-                        <p class="margin-top-xs">
-                            Last Update: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time>
-                        </p>
-                    </div>
-                    <div class="info-card">
-                        <h3 class="subsection-title">Tags</h3>
-                        <ul role="list">
-                            {post.data.tags?.length && (
-                                <ul role="list" class="interactive-list tag-list">
-                                    {post.data.tags.map((tag) => {
-                                    const slug = tag
-                                        .toLowerCase()
-                                        .replace(/\s+/g, "-")
-                                        .replace(/[^a-z0-9\-]/g, "");
-                                    return (
-                                        <li>
-                                        <a href={`/tags/${slug}`} rel="tag">{tag}</a>
-                                        </li>
-                                    );
-                                    })}
-                                </ul>
-                            )}
-                        </ul>
-                    </div>
-                </div>
-                <div class="end-of-post-subsection">
-                    <h3 class="subsection-title">Continue reading</h3>
-                    <div class="next-prev-post-container">
-                        {allPosts[indexOfPost - 1] ? (
-                            <a href={`/blog/${allPosts[indexOfPost - 1].id}/`}>
-                                <p class="next-prev-post-title" style="">Next post</p>
-                                <p class="next-prev-post-body">{allPosts[indexOfPost - 1].data.title}</p>
-                            </a>
-                        ) : null}
-                        {allPosts[indexOfPost + 1] ? (
-                            <a class="right-side" href={`/blog/${allPosts[indexOfPost + 1].id}/`}>
-                                <p class="next-prev-post-title">Previous post</p>
-                                <p class="next-prev-post-body">{allPosts[indexOfPost + 1].data.title}</p>
-                            </a>
-                        ) : null}
-                    </div>
-                </div>
-                <div class="end-of-post-subsection">
-                    <h3 class="subsection-title">E-mail updates</h3>
-                    <p class="margin-bottom-xs">Once a month I write about what I've been up to, what I built, and cool things I came across.</p>
-                    <EmailSignup class="compact"/>
-                    <p class="margin-top-2xs"><small>Zero spam. Unsubscribe anytime.</small></p>
                 </div>
             </div>
 
@@ -300,7 +216,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         -webkit-text-fill-color: transparent;
     }
 
-    .end-of-post-container-2 {
+    .end-of-post-container {
         background-color: var(--color-neutral-800);
         border: 1px solid var(--color-neutral-700);
         border-radius: var(--border-radius-m);
@@ -367,7 +283,7 @@ const isoLastUpdate = lastUpdate.toISOString();
             }
         }
 
-        .tag-list-2 {
+        .tag-list {
             display: flex;
             flex-wrap: wrap;
             gap: var(--space-2xs);
@@ -460,92 +376,10 @@ const isoLastUpdate = lastUpdate.toISOString();
         }
     }
 
-    .publication-dates {
-        text-align: center;
-        font-size: var(--font-size-small);
-        color: var(--color-neutral-300);
-        margin-top: var(--space-m);
-    }
 
-    .end-of-post-container {
-        padding: var(--space-l);
-        background-color: var(--color-neutral-800);
-        border: 1px solid var(--color-neutral-700);
-        border-radius: var(--border-radius-s);
-        box-shadow: var(--box-shadow-m);
-
-        p {
-            color: var(--color-neutral-200);
-        }
-
-        .end-of-post-subsection:not(:last-of-type) {
-            margin-bottom: var(--space-xl);
-            padding-bottom: var(--space-l);
-            border-bottom: 1px solid var(--color-neutral-700);
-        }
-
-        .subsection-title {
-            font-size: var(--font-size-normal);
-            font-weight: var(--font-weight-normal);
-            color: var(--color-neutral-100);
-            margin: 0 0 var(--space-m) 0;
-        }
-
-        .social-refs-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: var(--space-xs);
-        }
-
-        .meta-info-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-m);
-        }
-        .info-card {
-            background-color: var(--color-neutral-800);
-            padding: var(--space-m);
-            border-radius: var(--border-radius-m);
-            border: 1px solid var(--color-neutral-600);
-        }
-        .next-prev-post-container {
-            display: flex;
-            gap: var(--space-s);
-            >a {
-                flex-basis: 50%;
-                border: 1px solid var(--color-neutral-600);
-                background-color: var(--color-neutral-900);
-                padding: var(--space-m);
-                transition: border var(--transition-normal);
-                text-decoration: none;
-            }
-            a:hover {
-                border: 1px solid var(--color-accent-500);
-                box-shadow: var(--box-shadow-m);
-            }
-            .right-side {
-                text-align: right;
-                margin-left: auto;
-            }
-            .next-prev-post-title {
-                color: var(--color-accent-500);
-                text-transform: uppercase;
-                font-weight: var(--font-weight-bold);
-                margin-bottom: var(--space-xs);
-            }
-            .next-prev-post-body {
-                transition: color var(--transition-normal);
-                text-decoration: underline;
-            }
-            :hover .next-prev-post-body  {
-                color: var(--color-accent-500);
-            }
-        }
-    }
 
     @media only screen and (max-width: 768px) {
-        .end-of-post-container-2 {
+        .end-of-post-container {
             grid-template-columns: 1fr;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
@@ -568,15 +402,6 @@ const isoLastUpdate = lastUpdate.toISOString();
                     border-right: none;
                     border-bottom: 1px solid var(--color-neutral-600);
                 }
-            }
-        }
-        .end-of-post-container {
-            .meta-info-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-m);
-            }
-            .next-prev-post-container {
-                flex-direction: column;
             }
         }
     }
