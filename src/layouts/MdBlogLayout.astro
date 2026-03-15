@@ -159,6 +159,9 @@ const isoLastUpdate = lastUpdate.toISOString();
                     <p><small>Zero spam. Unsubscribe anytime.</small></p>
                 </div>
             </div>
+            <p class="publication-dates">
+                Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time> · Last updated: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time>
+            </p>
 
         </div>
         <aside class="aside-container-right">
@@ -354,6 +357,12 @@ const isoLastUpdate = lastUpdate.toISOString();
                 color: var(--color-neutral-300);
             }
         }
+    }
+
+    .publication-dates {
+        font-size: var(--font-size-small);
+        color: var(--color-neutral-300);
+        margin-top: var(--space-m);
     }
 
     @media only screen and (max-width: 580px) {
