@@ -17,9 +17,20 @@ collections:
     format: yaml-frontmatter
     slug: "{{slug}}"
     sortable_fields: [pubDate, title]
-    view_groups:
-      - label: Tags
-        field: tags
+    view_filters:
+      - { label: AI, field: tags, pattern: AI }
+      - { label: Book, field: tags, pattern: book }
+      - { label: CoCo, field: tags, pattern: coco }
+      - { label: Creating, field: tags, pattern: creating }
+      - { label: Design, field: tags, pattern: design }
+      - { label: Development, field: tags, pattern: development }
+      - { label: Health, field: tags, pattern: health }
+      - { label: Korea, field: tags, pattern: korea }
+      - { label: Learning, field: tags, pattern: learning }
+      - { label: Obsidian, field: tags, pattern: obsidian }
+      - { label: Productivity, field: tags, pattern: productivity }
+      - { label: Travel, field: tags, pattern: travel }
+      - { label: University, field: tags, pattern: university }
     media_folder: ../blog-assets/images
     public_folder: ../blog-assets/images
     fields:
