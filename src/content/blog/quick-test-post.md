@@ -25,3 +25,5 @@ Orrr
 Image!: ..
 
 Another try for image:
+
+![](../blog-assets/images/1000110010.jpg)
