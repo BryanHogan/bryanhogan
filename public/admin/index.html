@@ -65,6 +65,11 @@
       flex-shrink: 0;
     }
 
+    /* Wrap datetime picker on narrow screens */
+    div[role="none"]:has(> input[type="datetime-local"]) {
+      flex-wrap: wrap;
+    }
+
     @media (min-width: 769px) {
       .toolbar-toggle {
         display: none;
