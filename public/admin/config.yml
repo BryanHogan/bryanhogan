@@ -16,6 +16,10 @@ collections:
     create: true
     format: yaml-frontmatter
     slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    view_groups:
+      - label: Tags
+        field: tags
     media_folder: ../blog-assets/images
     public_folder: ../blog-assets/images
     fields:
