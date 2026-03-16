@@ -3,6 +3,7 @@ title: Leaving Germany with 4000€ and no return
 description: Starting a new chapter of my life, beginning with my 4000€ and a one-way flight to South Korea.
 emoji: ✈️
 pubDate: 2025-10-18T16:35:50+00:00
+lastUpdate: 2025-10-18T23:45:30Z
 tags:
   - travel
   - personal

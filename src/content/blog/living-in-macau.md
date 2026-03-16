@@ -3,6 +3,7 @@ title: Living in Macau
 description: What is it like to live in Macau? Working in a special administrative region of China, at the University of Macau.
 coverImage: ../blog-assets/covers/Macau-Cover.svg
 pubDate: 2025-08-23T10:00:26+00:00
+lastUpdate: 2025-08-26T10:41:37Z
 tags:
   - travel
 ---

@@ -3,6 +3,7 @@ title: Using Obsidian as a Gaming Backlog Library
 description: How to use Obsidian as a gaming backlog library. Get a long-lasting overview of games you want to and have played. 
 coverImage: ../blog-assets/covers/Obsidian-Collection-Cover.svg
 pubDate: 2024-09-29T07:48:01Z
+lastUpdate: 2025-08-20T04:40:16Z
 tags:
   - obsidian
 blueskyRef: https://bsky.app/profile/bryanhogan.com/post/3ll246n7uc226

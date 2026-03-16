@@ -3,6 +3,7 @@ title: Blog Introduction
 description: Welcome to my blog! An overview of what I write about, and my best & most popular posts.
 emoji: 👋
 pubDate: 2025-02-10T23:23:11Z
+lastUpdate: 2025-09-28T23:09:16Z
 tags:
   - blog
 ---

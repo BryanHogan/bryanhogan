@@ -3,6 +3,7 @@ title: Obsidian for Writing Academic Papers?
 description: Should you use Obsidian to write academic papers? It's great for knowledge management, but more than that?
 emoji: 📃
 pubDate: 2025-06-11T02:10:40Z
+lastUpdate: 2025-07-04T04:23:42Z
 tags:
   - obsidian
   - productivity
