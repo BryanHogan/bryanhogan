@@ -1,3 +1,0 @@
-[submodule "src/content"]
-	path = src/content
-	url = https://github.com/BryanHogan/bryanhogan-blog-content.git
