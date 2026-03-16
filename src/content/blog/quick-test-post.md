@@ -22,6 +22,6 @@ Sooo
 
 Orrr
 
-Image!:
+Image!: ..
 
-![](../blog-assets/images/1000110010.jpg)
+Another try for image:
