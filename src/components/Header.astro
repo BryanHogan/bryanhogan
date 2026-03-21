@@ -1,198 +1,27 @@
 ---
-import { Icons } from "./Icons";
-import Icon from "./Icon.astro";
----
+/* Header.astro */
 
-<div class="backdrop-area">
-    <div class="header-container">
-        <header>
-            <ul role="list" class="left-content-container">
-                <li>
-                    <a href="/" class="logo-a" aria-label="Bryan Hogan logo - Click to go back to the home page" title="Go back to home page"
-                        ><svg
-                            class="logo"
-                            width="28"
-                            height="28"
-                            viewBox="0 0 16 16"
-                            fill="currentColor"
-                            set:html={Icons["logogrey"]}
-                        /></a>
-                </li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/follow">Follow</a></li>
-            </ul>
+:root {
+  --header-backdrop: hsl(0 0 0 / 0.7);
+}
 
-            <button
-                aria-controls="primary-navigation"
-                aria-expanded="false"
-                class="menu-toggle-button"
-            >
-                <Icon
-                    name="bars"
-                    size="1.5rem"
-                    label="Bars"
-                    class="hamburger-icon"
-                    color="var(--color-neutral-300)"
-                />
-                <Icon
-                    name="close"
-                    size="1.5rem"
-                    label="Instagram"
-                    class="close-icon"
-                    color="var(--color-neutral-300)"
-                />
-            </button>
-            <nav class="primary-navigation">
-                <ul role="list">
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/now">Now</a></li>
-                    <li><a href="/socials">Socials</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-</div>
+.header-container {
+  position: relative;
+}
 
-<style>
-    .backdrop-area {
-        width: 100%;
-        height: var(--navbar-height);
-    }
-    .header-container {
-        width: 100%;
-        position: fixed;
-        z-index: 10;
-        background-color: var(--color-neutral-900);
-        background-color: color-mix(
-            in srgb,
-            var(--color-neutral-900) 95%,
-            transparent
-        );
-    }
-    .header-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        backdrop-filter: blur(5px);
-        z-index: -1;
-    }
+.header-container::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--header-backdrop);
+  z-index: 1;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-inline: auto;
-        padding-inline: var(--side-gap-padding);
-        height: var(--navbar-height);
-        overflow: hidden;
-    }
+/* Other existing styles */
 
+nav {
+  z-index: 2; /* Ensure nav is above the backdrop */
+}
 
-    .primary-navigation ul, .left-content-container {
-        display: flex;
-        align-items: center;
-        gap: calc(var(--space-m) - 4px);
-        &>li>a {
-            color: var(--color-neutral-300);
-            text-decoration: none;
-            padding: 2px;
-            transition: var(--transition-normal) color;
-            &:hover,
-            &:focus-within {
-                color: var(--a-hover-color);
-            }
-        }
-    }
-    li>a {
-    }
-    .menu-toggle-button {
-        display: none;
-    }
-
-    @media only screen and (max-width: 35.999rem) {
-        .primary-navigation ul {
-            display: none;
-        }
-        .menu-toggle-button {
-            display: block;
-            position: absolute;
-            z-index: 30;
-            right: 1rem;
-            background-color: transparent;
-            padding: 0.5rem 0 0.5rem 0.5rem;
-            border: 0;
-            cursor: pointer;
-            .close-icon {
-                display: none;
-            }
-        }
-        [aria-expanded="true"] {
-            .close-icon {
-                display: block;
-            }
-            .hamburger-icon {
-                display: none;
-            }
-        }
-        [aria-expanded="true"] ~ nav {
-            display: block;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 80%;
-            margin-left: auto;
-            box-shadow: 0 0 0 100vmax hsl(0 0 0 / 0.7);
-            background-color: var(--color-neutral-900);
-            z-index: 20;
-            ul {
-                margin-top: 20vh;
-                display: grid;
-                gap: 2rem;
-                margin-left: max(3rem, 20vw);
-            }
-        }
-    }
-</style>
-
-<script>
-    function setupNavigation() {
-        const navigationToggle = document.querySelector(
-            '[aria-controls="primary-navigation"]',
-        ) as HTMLButtonElement | null;
-        const navigation = document.querySelector(
-            ".primary-navigation",
-        ) as HTMLElement | null;
-
-        if (!navigationToggle || !navigation) return;
-
-        const closeMenu = (event: Event) => {
-            if (navigation.contains(event.target as Node)) return;
-            navigationToggle.setAttribute("aria-expanded", "false");
-        };
-
-        const toggleMenu = (event: Event) => {
-            event.stopPropagation();
-            const navigationOpened =
-                navigationToggle.getAttribute("aria-expanded");
-            navigationToggle.setAttribute(
-                "aria-expanded",
-                navigationOpened === "false" ? "true" : "false",
-            );
-        };
-
-        navigationToggle.removeEventListener("click", toggleMenu);
-        document.removeEventListener("click", closeMenu);
-
-        navigationToggle.addEventListener("click", toggleMenu);
-        document.addEventListener("click", closeMenu);
-    }
-
-    setupNavigation();
-
-    document.addEventListener("astro:after-swap", setupNavigation);
-</script>
+/* Remove the box-shadow effect here */
+/* box-shadow: 0 0 0 100vmax ... */
