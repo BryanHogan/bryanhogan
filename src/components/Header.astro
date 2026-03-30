@@ -137,19 +137,17 @@ import Icon from "./Icon.astro";
             padding: 0.5rem 0 0.5rem 0.5rem;
             border: 0;
             cursor: pointer;
-            .close-icon {
-                display: none;
             }
+        .menu-toggle-button .close-icon {
+            display: none;
         }
-        [aria-expanded="true"] {
-            .close-icon {
-                display: block;
-            }
-            .hamburger-icon {
-                display: none;
-            }
+        .menu-toggle-button[aria-expanded="true"] .close-icon {
+            display: block;
         }
-        [aria-expanded="true"] ~ nav {
+        .menu-toggle-button[aria-expanded="true"] .hamburger-icon {
+            display: none;
+        }
+        .menu-toggle-button[aria-expanded="true"] ~ nav {
             display: block;
             position: fixed;
             top: 0;
