@@ -138,13 +138,13 @@ import Icon from "./Icon.astro";
             border: 0;
             cursor: pointer;
             }
-        .menu-toggle-button .close-icon {
+        .menu-toggle-button :global(.close-icon) {
             display: none;
         }
-        .menu-toggle-button[aria-expanded="true"] .close-icon {
+        .menu-toggle-button[aria-expanded="true"] :global(.close-icon) {
             display: block;
         }
-        .menu-toggle-button[aria-expanded="true"] .hamburger-icon {
+        .menu-toggle-button[aria-expanded="true"] :global(.hamburger-icon) {
             display: none;
         }
         .menu-toggle-button[aria-expanded="true"] ~ nav {
