@@ -2,8 +2,12 @@
 title: Making a Website with Obsidian
 description: How can you build a website using Obsidian? From markdown to web.
 coverImage: ../blog-assets/covers/Obsidian-Website-Cover.svg
-pubDate: 2025-08-26T15:09:49+00:00
-lastUpdate: 2025-08-26T15:46:51Z
+emoji: ''
+pubDate: 2025-08-26T15:09:00+00:00
+lastUpdate: 2025-08-26T15:46:00+00:00
+blueskyRef: ''
+mastodonRef: ''
+threadsRef: ''
 tags:
   - obsidian
   - creating
@@ -18,12 +22,12 @@ Obsidian is a note-taking tool built on top of markdown files, so what we are ac
 
 ## Overview of different ways to make a website with Obsidian
 
-| Tool name                                         | Description                                                                                                                                   | Complexity      | Cost                 |
-| ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | -------------------- |
-| [Obsidian Publish](https://obsidian.md/publish)   | The simplest way to create your site. This feature is offered by the Obsidian team as part of a monthly subscription.                         | Low             | Monthly subscription |
-| [Quartz](https://quartz.jzhao.xyz/)               | Converts markdown content into a website. Built to work with Obsidian vaults.<br><br>Integrates well with Obsidian syntax, e.g. `[[]]` links. | Medium          | Free                 |
-| [Astro Starlight](https://starlight.astro.build/) | Use a web framework / static-site framework with an existing "theme" such as Astro Starlight.                                                 | Medium ~ Higher | Free                 |
-| Custom coded website                              | Fully develop the website yourself and use a library or framework to render your markdown files.                                              | Maximum         | Free                 |
+| Tool name | Description | Complexity | Cost |
+| --- | --- | --- | --- |
+| [Obsidian Publish](https://obsidian.md/publish) | The simplest way to create your site. This feature is offered by the Obsidian team as part of a monthly subscription. | Low | Monthly subscription |
+| [Quartz](https://quartz.jzhao.xyz/) | Converts markdown content into a website. Built to work with Obsidian vaults.<br><br>Integrates well with Obsidian syntax, e.g. `[[]]` links. | Medium | Free |
+| [Astro Starlight](https://starlight.astro.build/) | Use a web framework / static-site framework with an existing "theme" such as Astro Starlight. | Medium \~ Higher | Free |
+| Custom coded website | Fully develop the website yourself and use a library or framework to render your markdown files. | Maximum | Free |
 
 Will mention further alternatives to these in the following sections of the respective tool.
 
@@ -46,24 +50,28 @@ Quartz is a bit more difficult to set up than Obsidian Publish, but overall stil
 Astro is a web framework used to build websites, [Starlight](https://starlight.astro.build/) is a pre-built documentation theme for Astro. With this approach you get a beautiful looking "documentation" site, and all of the features of the Astro web framework, plus everything you can do with a custom coded website if you want to.
 
 Steps needed then:
+
 1. Create a project using [Astro Starlight](https://starlight.astro.build/).
 2. Go through the [setup guide](https://starlight.astro.build/getting-started/).
 3. I prefer including the Obsidian vault as a GitHub submodule, I wrote [a guide on how to do that](/blog/obsidian-astro-submodule).
    OR: You can just make the folder that contains the markdown files into a Obsidian vault and leave it at that.
-4. Put it online. Hosting static websites is free on providers such as [Cloudflare](https://pages.cloudflare.com/)
+4. Put it online. Hosting static websites is free on providers such as [Cloudflare](https://pages.cloudflare.com/).
 
-*This is how I work on [ToLearnKorean.com](https://tolearnkorean.com/) and [my web development guide](https://webdev.bryanhogan.com/).*
+I found Astro Starlight to be the best option compared to their competitors.
 
-### Possible alternatives 
+_This is how I work on_ [_ToLearnKorean.com_](https://tolearnkorean.com/) _and_ [_my web development guide_](https://webdev.bryanhogan.com/)_._
+
+### Possible alternatives
 
 There are other "simple" static site generators that use markdown that you could use instead:
 
 - [Jekyll](https://jekyllrb.com/)
-	- There's also this pre-built template for Jekyll called [Digital Garden](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
+    - There's also this pre-built template for Jekyll called [Digital Garden](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
 - [Hugo](https://gohugo.io/)
 - [Eleventy](https://www.11ty.dev/)
 
 Similar to Starlight, there are other pre-built documentation tools for different web frameworks that utilise markdown or MDX as well:
+
 - [Nextra](https://nextra.site/) - Uses Next.js and MDX. You will need [this Obsidian plugin](https://github.com/mkozhukharenko/mdx-as-md-obsidian) to use .mdx in Obsidian. `.mdx` is very similar to `.md`.
 - [VitePress](https://vitepress.dev/) - Uses Vue as its framework.
 
