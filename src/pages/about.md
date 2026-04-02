@@ -14,7 +14,7 @@ My decision to go study abroad in Korea was one of the best I ever made. Since t
 
 I started my blog [Bryan's Blog](/blog) during 2023 while in Korea, and now it's a place for me to share all the things I would have loved to know about before I knew about them.
 
-I write about building digital products, web development, intentional digitalism and balanced productivity. I aim to write content that is helpful, entertaining and for the intellectually curious, e.g. content about [Obsidian](/tags/obsidian), [Creating](/tags/creating) or [Korea](/tags/korea). See my [blog introduction](/blog/blog-introdiction) for more information about my blog.
+I write about building digital products, web development, intentional digitalism and balanced productivity. I aim to write content that is helpful, entertaining and for the intellectually curious, e.g. content about [Obsidian](/tags/obsidian), [Creating](/tags/creating) or [Korea](/tags/korea). See my [blog introduction](/blog/introduction) for more information about my blog.
 
 Other writing I have published is part of my [web development guide](https://webdev.bryanhogan.com/) or my [guide to learn Korean](https://tolearnkorean.com/).
 
