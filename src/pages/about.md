@@ -16,7 +16,7 @@ I started my blog [Bryan's Blog](/blog) during 2023 while in Korea, and now it's
 
 I also run a [monthly newsletter called Bryan's Briefing](/follow) since the beginning of 2024 in which I share what I'm up to, cool insights I've recently had and other amazing content I came across.
 
-I update my [Now page](/now) from time to time to show what I'm currently up to.
+I also have a [Now page](/now) with updates on what I'm currently up to.
 
 <div style="column-count: 2;">
 
