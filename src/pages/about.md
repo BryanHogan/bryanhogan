@@ -20,7 +20,7 @@ Other writing I have published is part of my [web development guide](https://web
 
 I also run a [monthly newsletter called Bryan's Briefing](/follow) since the beginning of 2024 in which I share what I'm up to, cool insights I've recently had and other amazing content I came across. *I appreciate everyone who joins!*
 
-I graduated in [Code & Context](/blog/what-is-coco) in Cologne in 2025, but knew that after the year in South Korea that I wanted to go back, but also see more of the world. I [started a nomadic life](new-chapter-nomadic-life) and lived in Korea, [Macau](/blog/living-in-macau), China, Japan and Australia.
+I graduated in [Code & Context](/blog/what-is-coco) in Cologne in 2025, but knew that after the year in South Korea that I wanted to go back, but also see more of the world. I [started a nomadic life](/blog/new-chapter-nomadic-life) and lived in Korea, [Macau](/blog/living-in-macau), China, Japan and Australia.
 
 Trying to not starve I continued working on [DailySelfTrack app](https://dailyselftrack.com/) and also became a freelancer, creating websites and (web) apps. I enjoy creating digital tools that help you, so see [my projects page] for more tools I have published.
 
