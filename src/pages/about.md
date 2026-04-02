@@ -8,20 +8,21 @@ subtitle: About me, Bryan Hogan, and my blog.
 
 <h2 class="text-align-center">About Bryan Hogan</h2>
 
-I'm Bryan Hogan, a (Web) Developer, Digital Creator and Blogger.  
-Soon to be graduate in Code & Context, a modern interdisciplinary B.Sc. study in Cologne that combines the fields of computer science, design and entrepreneurship.
+I'm Bryan Hogan, a developer and designer. I studied a mix of code, design and entrepreneurship and have been working in this field ever since.
 
-I have recently spent a year abroad in South Korea, studying at different universities. At the beginning of my stay abroad I also started with [BryanHogan.com/blog](/blog), a place for me to share all the things I would have loved to know about before I knew about them.
+My decision to go study abroad in Korea was one of the best I ever made. Since then I have spent many days outside of Germany, living as a digital nomad and working in countries such as Macau, Japan and Australia.
 
-I also run a [monthly newsletter](/follow) called "Bryan's Briefing" since the beginning of 2024 in which I share what I'm up to, cool insights I've recently had and other amazing content I came across.
+I started my blog [Bryan's Blog](/blog) during 2023 while in Korea, and now it's a place for me to share all the things I would have loved to know about before I knew about them.
 
-Take a look at my [Now page](/now) to see what I'm currently doing.
+I also run a [monthly newsletter called Bryan's Briefing](/follow) since the beginning of 2024 in which I share what I'm up to, cool insights I've recently had and other amazing content I came across.
+
+I update my [Now page](/now) from time to time to show what I'm currently up to.
 
 <div style="column-count: 2;">
 
-![Text here](../assets/images/Bryan-Hogan-Surfing-Standing.png)
+![Bryan Hogan in Korea holding a surfboard](../assets/images/Bryan-Hogan-Surfing-Standing.png)
 
-![Text here](../assets/images/B-BryanHogan.png)
+![Bryan Hogan Picture](../assets/images/B-BryanHogan.png)
 
 </div>
 
