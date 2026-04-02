@@ -22,7 +22,7 @@ I also run a [monthly newsletter called Bryan's Briefing](/follow) since the beg
 
 I graduated in [Code & Context](/blog/what-is-coco) in Cologne in 2025, but knew that after the year in South Korea that I wanted to go back, but also see more of the world. I [started a nomadic life](/blog/new-chapter-nomadic-life) and lived in Korea, [Macau](/blog/living-in-macau), China, Japan and Australia.
 
-Trying to not starve I continued working on [DailySelfTrack app](https://dailyselftrack.com/) and also became a freelancer, creating websites and (web) apps. I enjoy creating digital tools that help you, so see [my projects page] for more tools I have published.
+Trying to not starve I continued working on [DailySelfTrack app](https://dailyselftrack.com/) and also became a freelancer, creating websites and (web) apps. I enjoy creating digital tools that help you, so see [my projects page](/projects) for more tools I have published.
 
 I also have a [Now page](/now) with updates on what I'm currently up to.
 
