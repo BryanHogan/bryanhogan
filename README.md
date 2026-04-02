@@ -8,7 +8,7 @@ I build digital things. I majored in a combination of code, design and entrepren
 - I also have a [projects page](https://bryanhogan.com/projects) about different projects I have published.
 
 
-# 🧭 Current Endeavors
+# 🧭 Current and Recent Endeavors
 
 Find what I'm currently up to on my [now page](https://bryanhogan.com/now).
 
