@@ -29,12 +29,14 @@ const allPosts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
 const indexOfPost = allPosts.findIndex(
     (posts) => post.data.title === posts.data.title,
 );
-const sameTagPosts = allPosts.filter(
-    (posts) => 
-        posts.data.tags && 
-        posts.data.tags[0] === post.data.tags[0] && 
-        posts.data.title !== post.data.title
-);
+const sameTagPosts = allPosts
+    .filter((p) => p.data.title !== post.data.title)
+    .map((p) => ({
+        ...p,
+        _sharedTags: p.data.tags.filter((t) => post.data.tags.includes(t)).length,
+    }))
+    .filter((p) => p._sharedTags > 0)
+    .sort((a, b) => b._sharedTags - a._sharedTags);
 const { headings } = await render(post);
 
 

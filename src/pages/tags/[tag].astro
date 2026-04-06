@@ -26,8 +26,9 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout
-    title={"Tag: " + tag}
-    description={"All posts containing the tag " + tag.charAt(0).toUpperCase() + tag.slice(1) + "."}
+    title={"Tag: " + tag.charAt(0).toUpperCase() + tag.slice(1) + " — Bryan Hogan's Blog"}
+    description={"Articles about " + tag.charAt(0).toUpperCase() + tag.slice(1) + " — guides, insights, and lessons learned by Bryan Hogan."}
+    robots="noindex, follow"
 >
     <Hero h1={tag.charAt(0).toUpperCase() + tag.slice(1)} subtitle={"Bryan's blog on " + tag + "."} />
     <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts tagged with " + tag.charAt(0).toUpperCase() + tag.slice(1) }</h2>

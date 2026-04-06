@@ -40,7 +40,9 @@ function blogAssetsPreview() {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bryanhogan.com',
-  integrations: [sitemap(), blogAssetsPreview()],
+  integrations: [sitemap({
+    filter: (page) => !page.includes('/tags/') && !page.includes('/tags'),
+  }), blogAssetsPreview()],
   server: {
     host: true,
     port: 4321,

@@ -13,30 +13,84 @@ allPosts.forEach(post => {
         });
     }
 });
+
+const sortedTags = tags.sort((a, b) => (tagCounts[b] || 0) - (tagCounts[a] || 0));
+const maxCount = Math.max(...Object.values(tagCounts));
 ---
 
 <BaseLayout
-    title="Tag Index"
-    description="Overview of all my topics I write about. See all blog post tags. Bryan's tag index."
+    title="All Blog Topics — Bryan Hogan"
+    description="Browse all topics Bryan Hogan writes about — productivity, obsidian, development, travel, and more."
+    robots="noindex, follow"
 >
-    <Hero h1="Tag Index" subtitle="Overview of all blog post tags." />
-    <h2 class="text-align-center margin-top-xl margin-bottom-m">All Tags</h2>
-    <ul class="margin-bottom-l">
+    <Hero h1="All Topics" subtitle="Browse all topics I write about." />
+    <ul role="list" class="tag-cloud">
         {
-            tags.map((tag) => (
-                <li>
-                    <a href={`/tags/${tag}`} class="tag-name">{tag}</a> ({tagCounts[tag] || 0})
-                </li>
-            ))
+            sortedTags.map((tag) => {
+                const count = tagCounts[tag] || 0;
+                const weight = Math.ceil((count / maxCount) * 3);
+                return (
+                    <li>
+                        <a href={`/tags/${tag}`} class="tag-pill" data-weight={weight}>
+                            <span class="tag-name">{tag}</span>
+                            <span class="tag-count">{count}</span>
+                        </a>
+                    </li>
+                );
+            })
         }
-      </ul>
+    </ul>
 </BaseLayout>
 
 <style>
-    ul {
-        margin-inline: auto;
+    .tag-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-s);
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: var(--space-xl) auto var(--space-2xl);
+        max-width: 48rem;
     }
-    .tag-name {
+
+    .tag-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2xs);
+        padding: var(--space-xs) var(--space-m);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-m);
+        background-color: var(--color-neutral-800);
+        text-decoration: none;
         text-transform: capitalize;
+        transition: all var(--transition-normal);
+
+        &:hover {
+            background-color: var(--color-neutral-700);
+            border-color: var(--color-accent-500);
+            color: var(--color-accent-500);
+        }
+    }
+
+    .tag-count {
+        font-size: var(--font-size-small);
+        color: var(--color-neutral-300);
+        background-color: var(--color-neutral-700);
+        padding: 0.1rem 0.4rem;
+        border-radius: var(--border-radius-s);
+    }
+
+    .tag-pill[data-weight="3"] {
+        font-size: var(--text-size-xl);
+        font-weight: var(--font-weight-semi-bold);
+    }
+
+    .tag-pill[data-weight="2"] {
+        font-size: var(--font-size-large);
+    }
+
+    .tag-pill[data-weight="1"] {
+        font-size: var(--font-size-base);
     }
 </style>

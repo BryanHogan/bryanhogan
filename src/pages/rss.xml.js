@@ -13,6 +13,7 @@ export async function GET(context) {
       pubDate: post.data.pubDate,
       description: post.data.description,
       link: `/blog/${post.id}`,
+      categories: post.data.tags,
     })),
   })
 }
