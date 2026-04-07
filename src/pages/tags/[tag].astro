@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/Hero.astro";
 import CardBlog from "../../components/CardBlog.astro";
 import { cardBlogBackgroundColors } from "../../data/colors";
+import tagData from "../../data/tags";
 
 export async function getStaticPaths() {
     const allPosts = await getCollection("blog");
@@ -23,14 +24,25 @@ export async function getStaticPaths() {
 }
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+
+const data = tagData[tag];
+const capitalizedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+const heroH1 = data?.heroTitle ?? capitalizedTag;
+const heroSubtitle = data?.heroSubtitle ?? ("Bryan's blog on " + tag + ".");
+const seoTitle = "Tag: " + capitalizedTag + " - Bryan's Blog";
+const seoDescription = data?.seoDescription
+    ?? ("Articles about " + capitalizedTag + " - guides, insights, and lessons learned by Bryan Hogan.");
 ---
 
 <BaseLayout
-    title={"Tag: " + tag}
-    description={"All posts containing the tag " + tag.charAt(0).toUpperCase() + tag.slice(1) + "."}
+    title={seoTitle}
+    description={seoDescription}
 >
-    <Hero h1={tag.charAt(0).toUpperCase() + tag.slice(1)} subtitle={"Bryan's blog on " + tag + "."} />
-    <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts tagged with " + tag.charAt(0).toUpperCase() + tag.slice(1) }</h2>
+    <Hero h1={heroH1} subtitle={heroSubtitle} />
+    {data?.explanation && (
+        <p class="margin-top-l set-main-content-max-width margin-inline-auto">{data.explanation}</p>
+    )}
+    <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts about " + capitalizedTag}</h2>
     <ul role="list" class="blog-posts-container margin-bottom-xl">
     {
         posts.map((post, index) => (
@@ -43,7 +55,7 @@ const { posts } = Astro.props;
 </BaseLayout>
 
 <style>
-    .blog-posts-container {
+.blog-posts-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: var(--space-l);
