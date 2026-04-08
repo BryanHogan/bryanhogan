@@ -106,9 +106,9 @@ const isoLastUpdate = lastUpdate.toISOString();
                             <h3>Spread the word</h3>
                             <p>Comment, like and share on{" "}
                                 {[
-                                    post.data.blueskyRef && <a class="social-link" href={post.data.blueskyRef} target="_blank"><span class="social-icon"><Icon name="bluesky" size="1rem" label="Bluesky"/></span> Bluesky</a>,
-                                    post.data.mastodonRef && <a class="social-link" href={post.data.mastodonRef} target="_blank"><span class="social-icon"><Icon name="mastodon" size="1rem" label="Mastodon"/></span> Mastodon</a>,
-                                    post.data.threadsRef && <a class="social-link" href={post.data.threadsRef} target="_blank"><span class="social-icon"><Icon name="threads" size="1rem" label="Threads"/></span> Threads</a>,
+                                    post.data.blueskyRef && <a class="social-link" href={post.data.blueskyRef} target="_blank"><span class="social-icon"><Icon name="bluesky" size="1rem" label="Bluesky"/></span>Bluesky</a>,
+                                    post.data.mastodonRef && <a class="social-link" href={post.data.mastodonRef} target="_blank"><span class="social-icon"><Icon name="mastodon" size="1rem" label="Mastodon"/></span>Mastodon</a>,
+                                    post.data.threadsRef && <a class="social-link" href={post.data.threadsRef} target="_blank"><span class="social-icon"><Icon name="threads" size="1rem" label="Threads"/></span>Threads</a>,
                                 ].filter(Boolean).map((link, i, arr) => (
                                     <Fragment>
                                         {i > 0 && i < arr.length - 1 && ", "}
@@ -279,6 +279,7 @@ const isoLastUpdate = lastUpdate.toISOString();
             .social-icon {
                 display: inline-block;
                 transform: translateY(0.125em);
+                margin-right: 0.2em;
             }
         }
 
