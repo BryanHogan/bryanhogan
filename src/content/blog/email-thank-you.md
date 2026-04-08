@@ -4,7 +4,6 @@ description: Thank you for joining my e-mail newsletter. Why I'm grateful to hav
 emoji: 💌
 pubDate: 2025-11-30T03:54:12+00:00
 tags:
-  - blog
   - personal
 ---
 

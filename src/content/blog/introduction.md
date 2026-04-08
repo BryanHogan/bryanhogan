@@ -4,8 +4,7 @@ description: Welcome to my blog! An overview of what I write about, and my best 
 emoji: 👋
 pubDate: 2025-02-10T23:23:11Z
 lastUpdate: 2025-09-28T23:09:16Z
-tags:
-  - blog
+tags: []
 ---
 
 Welcome to my blog! I write about things that I would have loved to know before I knew about them.

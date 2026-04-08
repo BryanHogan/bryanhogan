@@ -3,8 +3,7 @@ title: Every blog post I have shared until 2026
 description: In my monthly email newsletter I share cool things I came across on the internet, which so far has included the following blog posts!
 emoji: 📚
 pubDate: 2026-02-12T15:42:57+00:00
-tags:
-  - blog
+tags: []
 mastodonRef: https://mastodon.social/@BryanHogan/116063618185070994
 blueskyRef: https://bsky.app/profile/bryanhogan.com/post/3meqnatmomk2o
 threadsRef: https://www.threads.com/@bryanhoganme/post/DUs0GfSj2Qy

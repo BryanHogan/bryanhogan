@@ -4,7 +4,7 @@ description: Dev Diary on my project on developing an app to help people keep tr
 coverImage: ../blog-assets/covers/CoCo-Final-Diary-Cover.svg
 pubDate: 2024-04-24T14:09:52Z
 lastUpdate: 2024-06-18T15:43:48Z
-tags: ["creating", "development", "coco", "university"]
+tags: ["creating", "development", "university"]
 ---
 
 For my last semester at Code & Context I am creating an app to help you keep track of what matters to you.

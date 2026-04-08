@@ -6,7 +6,6 @@ pubDate: 2025-02-14T17:28:59Z
 tags:
   - astro
   - obsidian
-  - blog
 mastodonRef: https://mastodon.social/@BryanHogan/114196714161676421
 blueskyRef: https://bsky.app/profile/bryanhogan.com/post/3lktkx7ukp22h
 threadsRef: https://www.threads.net/@bryanhoganme/post/DHb2DIPs7sC

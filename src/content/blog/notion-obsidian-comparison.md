@@ -6,7 +6,6 @@ pubDate: 2025-01-19T07:35:38Z
 lastUpdate: 2025-09-19T02:01:09+00:00
 tags:
   - obsidian
-  - notion
   - productivity
 ---
 
