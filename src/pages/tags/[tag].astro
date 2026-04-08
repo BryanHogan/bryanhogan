@@ -49,26 +49,30 @@ const seoDescription = data?.description
         ]
     })} />
     <Hero overline={heroOverline} heading={heroHeading} />
-    <nav class="sub-nav-container">
-        <ul role="list">
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/tags">Tags</a></li>
-            <li><span>{capitalizedTag}</span></li>
-        </ul>
-    </nav>
-    {data?.description && (
-        <p class="margin-top-m set-main-content-max-width margin-inline-auto">{data.description}</p>
-    )}
-    <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts about " + capitalizedTag}</h2>
-    <ul role="list" class="blog-posts-container margin-bottom-xl">
-    {
-        posts.map((post, index) => (
-            <li>
-                <CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
-            </li>
-        ))
-    }
-    </ul>
+    <main>
+        <nav class="sub-nav-container">
+            <ul role="list">
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/tags">Tags</a></li>
+                <li><span>{capitalizedTag}</span></li>
+            </ul>
+        </nav>
+        {data?.description && (
+            <p class="margin-top-m set-main-content-max-width margin-inline-auto">{data.description}</p>
+        )}
+        <section aria-labelledby="posts-heading">
+            <h2 id="posts-heading" class={`text-align-center margin-bottom-l ${data?.description ? "margin-top-xl" : "margin-top-m"}`}>{"Posts about " + capitalizedTag}</h2>
+            <ul role="list" class="blog-posts-container margin-bottom-xl">
+            {
+                posts.map((post, index) => (
+                    <li>
+                        <CardBlog post={post} backgroundColor={cardBlogBackgroundColors[index % cardBlogBackgroundColors.length]} transitionIcon/>
+                    </li>
+                ))
+            }
+            </ul>
+        </section>
+    </main>
 </BaseLayout>
 
 <style>
