@@ -6,11 +6,11 @@ interface TagData {
 const tagData: Record<string, TagData> = {
     obsidian: {
         title: "Obsidian",
-        description: "Obsidian is a markdown-based note-taking app that stores your notes as local files. I use it for everything from blog drafting to managing long-term knowledge.",
+        description: "Obsidian is a note-taking app that stores your notes as local markdown files. I use it for everything from writing blog posts to managing long-term knowledge.",
     },
     productivity: {
         title: "Productivity",
-        description: "Productivity isn't about doing more — it's about doing the right things well. These posts cover the systems and tools that help me work and think better.",
+        description: "About balanced productivity. Productivity for long-term growth to reach your goals in a healthy way without burn-out.",
     },
 };
 
