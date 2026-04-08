@@ -39,8 +39,15 @@ const seoDescription = data?.seoDescription
     description={seoDescription}
 >
     <Hero h1={heroH1} subtitle={heroSubtitle} />
+    <nav class="sub-nav-container">
+        <ul role="list">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/tags">Tags</a></li>
+            <li><span>{capitalizedTag}</span></li>
+        </ul>
+    </nav>
     {data?.explanation && (
-        <p class="margin-top-l set-main-content-max-width margin-inline-auto">{data.explanation}</p>
+        <p class="margin-top-m set-main-content-max-width margin-inline-auto">{data.explanation}</p>
     )}
     <h2 class="text-align-center margin-top-xl margin-bottom-l">{"Posts about " + capitalizedTag}</h2>
     <ul role="list" class="blog-posts-container margin-bottom-xl">
@@ -55,7 +62,28 @@ const seoDescription = data?.seoDescription
 </BaseLayout>
 
 <style>
-.blog-posts-container {
+    .sub-nav-container ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--space-xs) var(--space-s);
+        padding-block: var(--space-xs);
+        li a, li span {
+            color: var(--color-neutral-300);
+            text-decoration: none;
+            font-size: 0.75em;
+            &:hover {
+                color: var(--a-hover-color);
+            }
+        }
+        li:not(:first-child)::before {
+            content: "/";
+            color: var(--color-neutral-500);
+            font-size: 0.75em;
+            padding-right: var(--space-s);
+        }
+    }
+    .blog-posts-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: var(--space-l);
