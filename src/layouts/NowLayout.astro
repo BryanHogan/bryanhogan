@@ -15,7 +15,7 @@ const formattedDate = lastModified.toLocaleDateString("en-UK", {
 const isoString = lastModified.toISOString();
 ---
 <BaseLayout title="Now - Bryan Hogan" description="What am I doing now? Bryan Hogan's Now page.">
-    <Hero h1="Now" subtitle="">
+    <Hero overline="Now" heading="What Bryan Hogan is up to now">
         <p class="text-align-center">Last updated on <time datetime={isoString}>{formattedDate}</time><br/>from {frontmatter.location}.</p>
     </Hero>
     <div class="markdown-container margin-top-xl margin-bottom-xl margin-inline-auto">

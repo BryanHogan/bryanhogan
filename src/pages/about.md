@@ -2,11 +2,11 @@
 layout: ../layouts/SimpleMdLayout.astro
 title: About - Bryan Hogan
 description: About me, Bryan Hogan, and my blog. Who is Bryan Hogan?
-h1: About
-subtitle: About Bryan Hogan
+overline: About
+heading: About Bryan Hogan
 ---
 
-<h2 class="text-align-center">About Bryan Hogan</h2>
+<h2 class="text-align-center">About me</h2>
 
 I'm Bryan Hogan, a developer and designer. I studied a mix of code, design and entrepreneurship and have been working in this field since.
 

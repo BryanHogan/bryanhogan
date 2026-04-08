@@ -2,8 +2,8 @@
 layout: ../layouts/SimpleMdLayout.astro
 title: Privacy
 description: Privacy statement.
-h1: Privacy
-subtitle: About privacy and how I handle your data.
+overline: Privacy
+heading: About privacy and how I handle your data.
 ---
 
 - Umami is used to collect some simple information. It's GDPR compliant and no cookies are used.

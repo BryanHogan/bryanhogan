@@ -1,15 +1,15 @@
 ---
 interface Props {
-    h1: string;
-    subtitle: string;
+    overline: string;
+    heading: string;
     height?: string;
 }
-const { h1, subtitle, height="20svh" } = Astro.props;
+const { overline, heading, height="20svh" } = Astro.props;
 ---
 
 <div class="hero full-width">
-    <h1 class="text-align-center">{h1}</h1>
-    <p class="text-align-center">{subtitle}</p>
+    <h1 class="text-align-center">{heading}</h1>
+    <p class="hero-title text-align-center">{overline}</p>
     <slot />
 </div>
 
@@ -23,12 +23,26 @@ const { h1, subtitle, height="20svh" } = Astro.props;
         min-height: var(--height);
         padding-block: var(--space-l);
         padding-inline: var(--side-gap-padding);
+        gap: var(--space-s);
         & :global(p), h1 {
             color: var(--color-neutral-50);
             text-shadow: var(--text-shadow-m);
         }
-        &>:global(*):not(:last-child) {
-            margin-bottom: var(--space-s);
+        h1 {
+            font-size: 1rem;
+            font-weight: var(--font-weight-regular);
+            line-height: var(--font-line-height);
+            text-wrap: pretty;
+        }
+        .hero-title {
+            order: -1;
+            font-size: var(--text-size-4xl);
+            font-weight: var(--font-weight-bold);
+            line-height: var(--font-line-height-heading);
+            text-wrap: balance;
+            @media (min-width: 48rem) {
+                font-size: var(--text-size-5xl);
+            }
         }
     }
 </style>

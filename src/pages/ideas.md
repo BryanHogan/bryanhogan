@@ -2,8 +2,8 @@
 layout: ../layouts/SimpleMdLayout.astro
 title: Ideas - Bryan Hogan
 description: My (project) ideas, things I'd love if they'd exist, and what I want to work on.
-h1: Ideas
-subtitle: Things I'd love if they'd exist & what I want to work on.
+overline: Ideas
+heading: Things I'd love if they'd exist & what I want to work on.
 ---
 
 <h2 class="text-align-center">Ideas of mine</h2>
