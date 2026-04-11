@@ -4,7 +4,7 @@
  */
 
 export const featuredPosts = [
-	"obsidian-zettelkasten", 
+	"obsidian-vault", 
 	"south-korea-travel-guide",
 	"introduction"
 ];
