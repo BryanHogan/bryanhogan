@@ -2,10 +2,13 @@
 
 I build digital things. I majored in a combination of code, design and entrepreneurship and have been working in this interrelated field since.
 
-- Check out my website [BryanHogan.com](https://bryanhogan.com) to learn more about me.
-- I also have [portfolio page](https://bryanhogan.com/portfolio).
-- I also have [a blog](https://bryanhogan.com/blog).
-- I also have a [projects page](https://bryanhogan.com/projects) about different projects I have published.
+Web pages about me:
+
+- [BryanHogan.com](https://bryanhogan.com)
+- [/blog](https://bryanhogan.com/blog)
+- [/projects](https://bryanhogan.com/projects)
+- [/portfolio](https://bryanhogan.com/portfolio)
+- [/about](https://bryanhogan.com/about)
 
 
 # 🧭 Current and Recent Endeavors
