@@ -2,8 +2,13 @@
 title: Dangers of AI
 description: Risks of AI - Misinformation, power concentration, skill loss. The shift towards a bot-filled internet.
 emoji: ⚠️
-pubDate: 2025-08-20T04:20:58+00:00
-tags: [AI]
+pubDate: 2025-08-20T04:20:00+00:00
+lastUpdate: ''
+blueskyRef: ''
+mastodonRef: ''
+threadsRef: ''
+tags:
+  - AI
 ---
 
 AI is very powerful, it allows us to do a lot of new things and become much more efficient at things we currently do, but it is also immensely dangerous.
@@ -34,7 +39,7 @@ Many education systems have been outdated more than 50 years ago, and they aren'
 
 ## The end of a social internet
 
-*Added this part later in August 2025.*
+_Added this part later in August 2025._
 
 AI "agents" are easily available now. They can navigate websites and interact with elements. They can interact with the internet like a human. A lot of "social" activity online will soon be bots talking to bots, with humans as the target metric.
 
@@ -59,3 +64,4 @@ Other sites talking about these problems of AI:
 - <a href="https://www.noemamag.com/the-last-days-of-social-media/" target="_blank">The Last Days Of Social Media</a> by James O'Sullivan
 - <a href="https://youtu.be/vWidan8ggGo?t=4435">Timestamped link to a part of a podcast between two game creators on AI</a>
 - <a href="https://youtu.be/72VDT-wdWlc?t=710">AI is ruining the web</a> by Kevin Powell
+- <a href="https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/">AI is destroying online communities</a> by Robin Moffatt
