@@ -8,114 +8,63 @@ heading: Bryan Hogan's Portfolio
 
 ## DailySelfTrack
 
-![Placeholder for a DailySelfTrack screenshot collage showing the dashboard, tracker setup, daily entry, heatmap, calendar, and graph views](../assets/images/portfolio/DailySelfTrack-Main-Screenshots.png)
+![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../assets/images/portfolio/DailySelfTrack-Main-Screenshots.png)
 
 DailySelfTrack is a customizable self-tracking app combining elements from habit trackers, health logging and journaling.
 
 This was a self-initiated project started as my final B.Sc. project and bachelor thesis, then further iterated and developed later on.
 
-I was solely responsible for all aspects of this project, including research, design, development and product direction.
+I led the full product process, research, UX design, visual design, development, testing, and product direction.
+
+**View live app**: [app.dailyselftrack.com](https://app.dailyselftrack.com/)
 
 ### Problem
 
-Habit tracking, health logging and journaling all have their use-cases and solutions in this space provide various values to users.
+Most self-tracking apps are too rigid. Habit trackers, mood trackers and health logs lock you into predefined metrics and workflows. The fully flexible alternatives go the other way, spreadsheets, Notion or Obsidian let you track anything, but daily entry is slow and the UX is built for notes, not for tracking.
 
-But traditional habit trackers and health logging software enforces limits on their users. Users frequently encounter limitations in tracking information that is relevant to themselves. 
-
-- each person is unique, has unique goals and health issues, the combination the things the user actually values provides insights that are most important to the user. E.g. the relation between these different aspects
-- more customizability than common apps, better usability than using a spreadsheet
-- Insight achieved through larger market analysis of different sectors (available apps, user statistics, etc.), plus quantitative research methods (survey) and then qualitative research (interviews) plus user testing.
+As part of working on this project I wrote my bachelor thesis answering the question: "Does greater customization in a self-tracking app improve usability and market fit?" and went in-depth analyzing the flexibility-usability trade-off.
 
 ### Design Direction & Process
 
-1. Research
-2. Sketch
-3. Wireframe -> Testing
-4. Survey
-5. MVP
-6. Interview
-7. User testing
+The process looked like the following:
 
-- Process has been described in detail as part of my bachelor thesis which I can gladly share, just contact me by mail.
+1. **Market & competitor analysis**: Looked at general market trends and analyzed 29 apps in the self-tracking space. Looked at which user needs are met, which aren't, and where a niche could exist.
+2. **User survey**: Quantitative research on how people currently self-track and what they value about it. Used the results to check the gaps the market analysis suggested.
+3. **Problem definition**: Most apps lock users into predefined metrics. The flexible alternatives are built for notes, not daily tracking. There is room in between.
+4. **Personas**: Two user personas to guide design decisions.
+5. **Sketches, flowchart and clickable Figma wireframe**: Went iteratively from sketches to flowchart to clickable Figma wireframe. User tested the Figma wireframe.
+![Showcasing Figma board with transition links between Wireframe pages](../content/blog-assets/images/Bryan-Hogan-CoCo-Final-Dev-Diary-Wireframe-Links.png)
+6. **MVP**: Built first MVP version using SvelteKit + Capacitor with custom CSS. Trackers are user-defined (text, number, checkbox), advanced options hidden behind progressive disclosure, defaults are sensible, and storage is local only.
+7. **Usability + market-fit testing**: Task-based observation, the SUS questionnaire, and follow-up questions for market-fit evaluations.
 
-### Implementation
-
-The project went through multiple tech-stacks:
-
-1. React Native Expo
-2. React Capacitor
-3. SvelteKit Capacitor (Dexie.js)
-
-### Outcome
-
-- Role: Solo product builder, responsible for research, design, development, and product direction.
-- Stack: SvelteKit, Capacitor, Dexie.js, PWA, Android.
-- Status: Web/PWA pre-alpha is usable at [app.dailyselftrack.com](https://app.dailyselftrack.com/). Android version is ready for user testing.
-- Highlights: Custom trackers, grouped tracking, reminders, heatmaps, calendar lists, and graphs.
-- Case study: Full write-up coming soon. Process notes are currently available in my [development diary](/blog/coco-final-dev-diary).
-
-## Freelance Project A
-
-- Freelance project as developer
-
-### Problem
-
-### Design Direction & Process
+Testing showed greater customization can work, as long as the added complexity stays hidden until the user wants it. The main tools for this are progressive disclosure, sensible defaults and contextual help. There is a user need behind solutions in self-tracking that can be highly customized to unique needs and continue to adapt to changing user needs. 
 
 ### Implementation
 
-SvelteKit, Capacitor
+The tech-stack went through three iterations.
+
+1. **React Native + Expo**
+2. **Ionic React + Capacitor**
+3. **SvelteKit + Capacitor + Dexie.js** (current): Low styling overhead, fast dev loop, and built-in routing. Uses IndexedDB through Dexie. One codebase that ships to web/PWA, Android, iOS, and Windows/macOS/Linux through Tauri.
+
+The app is local-first. All user data stays on the device by default.
 
 ### Outcome
 
-## ToLearnKorean
+The app is currently usable on the web and as a PWA (not launched yet) on [app.dailyselftrack.com](https://app.dailyselftrack.com/) and the Android version is ready for user-testing.
 
-This project consists of ToLearnKorean.com a and Game.ToLearnKorean.com, will focus on game.tolearnkorean.com for this section as this is where the more interesting decisions happened.
+The full bachelor thesis with the user-testing results is available on request.
 
-An anonymized freelance project placeholder for a client website or web app.
+== App screenshots / video ==
 
-- Role: Freelance designer/developer.
-- Stack: Add project-specific stack.
-- Status: Add launch/current status.
-- Highlights: Add the main client problem, shipped features, and measurable result.
-- Case study: Add once screenshots, client permission, and public details are ready.
+---
 
-## ToLearnKorean
+## Include
 
-![Placeholder for a ToLearnKorean screenshot collage showing the lesson site, Hangul content, vocabulary browser, and game interface](/images/portfolio-placeholder.svg)
-
-ToLearnKorean is a Korean learning website with structured lessons, beginner-friendly explanations, and a separate vocabulary practice game.
-
-- Role: Solo creator, writer, designer, and developer.
-- Stack: Astro, Starlight, Markdown/MDX, plus a separate web game.
-- Status: Live at [tolearnkorean.com](https://tolearnkorean.com/) and [game.tolearnkorean.com](https://game.tolearnkorean.com/).
-- Highlights: Hangul lessons, unit-based curriculum, search, theme support, and a vocabulary game with 1000+ words.
-- Case study: Full write-up coming soon.
-
-## BryanHogan.com
-
-![Placeholder for a BryanHogan.com screenshot collage showing the homepage, blog index, article page, and projects page](/images/portfolio-placeholder.svg)
-
-BryanHogan.com is my personal website, blog, and project archive.
-
-- Role: Solo creator, writer, designer, and developer.
-- Stack: Astro, Markdown, RSS, sitemap generation, and custom components.
-- Status: Live at [bryanhogan.com](https://bryanhogan.com/).
-- Highlights: Blog, portfolio, projects, tags, RSS feed, sitemap, newsletter links, and responsive content layouts.
-- Case study: Full write-up coming soon.
-
-## Clean Web Development Guide
-
-![Placeholder for a Clean Web Development Guide screenshot collage showing the guide homepage, article page, navigation, and code examples](/images/portfolio-placeholder.svg)
-
-Clean Web Development Guide is a separate educational site about building well-designed, performant web pages.
-
-- Role: Solo creator, writer, designer, and developer.
-- Stack: Add project-specific stack.
-- Status: Live at [webdev.bryanhogan.com](https://webdev.bryanhogan.com/).
-- Highlights: Web development explanations, design guidance, performance-focused advice, and reusable learning material.
-- Case study: Full write-up coming soon.
+- Freelance Project A
+- GameToLearnKorean
 
 ## Other
 
 - Lenevin designs
+- General social media designs
