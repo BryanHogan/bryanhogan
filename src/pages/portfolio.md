@@ -53,11 +53,18 @@ The app is local-first. All user data stays on the device by default.
 
 The app is currently usable on the web and as a PWA (not launched yet) on [app.dailyselftrack.com](https://app.dailyselftrack.com/) and the Android version is ready for user-testing.
 
+<video width="100%" height="400" aria-label="DailySelfTrack app demo" controls muted>
+  <source src="/videos/DailySelfTrack-App-Demo-Video-Portfolio-Bryan-Hogan.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 The full bachelor thesis with the user-testing results is available on request.
 
-== App screenshots / video ==
-
 ---
+
+## Freelance Project: Sorbit
+
+
 
 ## Include
 
