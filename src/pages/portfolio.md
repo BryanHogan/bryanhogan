@@ -64,7 +64,47 @@ The full bachelor thesis with the user-testing results is available on request.
 
 ## Freelance Project: Sorbit
 
+Sorbit is a relationship-care app focused on social health, helping users actively maintain their closest relationships through a visual orbit-based relationship view, contact rhythms and reflective journaling.
 
+This is a freelance collaboration with the project's founder, a psychologist. I am responsible for the technical implementation and part of the UX.
+
+**Project site**: [sorbit.app](https://sorbit.app/)
+
+### Problem
+
+Many people feel socially isolated despite being constantly digitally connected. Many relationships turn cold despite our wishes for forming deeper and more trusting relationships. Current trends show these issues are rising, social media platforms promote shallow interactions or have become outright anti-social, AI is replacing human interactions, third spaces are vanishing and a large part of our society is growing lonelier and more disconnected than ever before.
+
+### Design Direction & Process
+
+The process followed for this engagement:
+
+1. **Strategy & planning sessions** with the founder, aligning on technical and organizational requirements and defining measurable project goals.
+2. **Prioritized feature backlog** to guide development.
+3. **Low-fidelity wireframes** covering the core flows: orbit relationship view, contacts list, contact creation, journal entries.
+4. **Wireframe testing** to verify the relationship-care concept lands without design polish in the way, and to derive backlog adjustments.
+5. **AI-generated MVP from the wireframes**, used as a quick interactive spike to pressure-test the flows before committing to the production stack.
+6. **Design mockups** for the highest-impact views (home / orbit view), informed by wireframe feedback and learnings from the AI MVP.
+7. **Phase 1 development**: core architecture.
+8. **Phase 2 development**: central features, including orbit visualization, contact rhythms, vibe-tracking and journaling.
+9. **User testing** using Nielsen Norman Group methods, feeding back into iteration plans.
+
+### Implementation
+
+The stack is SvelteKit with Capacitor and Dexie.js, mirroring what worked well on DailySelfTrack: a web-first PWA from a single codebase that can be bundled to native iOS and Android when needed. Data is local-first via IndexedDB, which fits the privacy expectations of a relationship-care app.
+
+Core features delivered in the MVP:
+
+- Contact creation with configurable contact-frequency targets and basic attributes
+- Orbit-based relationship visualization with inner, middle and outer circles
+- Rhythm, vibe and quality tracking across relationships
+- Journal entries tied to contacts, with mood and energy evaluation
+- Reminder logic for desired social interactions
+
+The system is designed to be extensible and long-term operable by other developers.
+
+### Outcome
+
+A functional MVP web-app is in place for internal testing, with a staged beta launch and iterative user feedback planned for Q1 2026. The architecture is set up to support native iOS and Android bundles and follow-on development phases.
 
 ## Include
 
