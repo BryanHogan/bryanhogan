@@ -112,5 +112,8 @@ The app is currently being tested in-house and not released yet.
 
 ## Other
 
+![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../assets/images/portfolio/Lenevin-Final-Instagram-Post.png)
+![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../assets/images/portfolio/Portfolio-Icon-Work.png)
+
 - Lenevin designs
 - General social media designs
