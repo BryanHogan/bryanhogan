@@ -6,6 +6,10 @@ overline: Portfolio
 heading: Bryan Hogan's Portfolio
 ---
 
+I'm Bryan Hogan, a developer and designer. I work across product design, (web) development, and UX research, on both self-initiated products and freelance client work.
+
+Currently open to freelance projects and full-time roles. Reach me at [bryan@bryanhogan.com](mailto:bryan@bryanhogan.com) or via my [socials](/socials).
+
 ## DailySelfTrack
 
 ![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../assets/images/portfolio/DailySelfTrack-Main-Screenshots.png)
@@ -105,15 +109,16 @@ The app is currently being tested in-house and not released yet.
 
 ---
 
-## Include
-
-- Freelance Project A
-- GameToLearnKorean
-
 ## Other
 
-![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../assets/images/portfolio/Lenevin-Final-Instagram-Post.png)
-![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../assets/images/portfolio/Portfolio-Icon-Work.png)
+### Lenevin
 
-- Lenevin designs
-- General social media designs
+![Lenevin Instagram product post for an organic cress salve, green botanical branding on a cream background](../assets/images/portfolio/Lenevin-Final-Instagram-Post.png)
+
+Example of social media content design.
+
+### Icon Design
+
+![A grid of custom line and solid glyph icons on a dark background](../assets/images/portfolio/Portfolio-Icon-Work.png)
+
+Example of icon design as used on this websites' blog.
