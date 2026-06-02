@@ -15,9 +15,10 @@ const blogPosts = (await getCollection("blog")).sort(
 import { cardBlogBackgroundColors } from "../data/colors";
 
 import featuredPosts from "../data/featured-posts";
+const latestPostIds = new Set(blogPosts.slice(0, 3).map(post => post.id));
 const featuredBlogPosts = featuredPosts
   .map(postId => blogPosts.find(post => post.id === postId))
-  .filter(post => post !== undefined);
+  .filter(post => post !== undefined && !latestPostIds.has(post.id));
 ---
 
 <BaseLayout

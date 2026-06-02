@@ -27,7 +27,7 @@ const allPosts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
 const indexOfPost = allPosts.findIndex(
-    (posts) => post.data.title === posts.data.title,
+    (posts) => posts.id === post.id,
 );
 const sameTagPosts = allPosts.filter(
     (posts) => 
@@ -58,10 +58,10 @@ const isoLastUpdate = lastUpdate.toISOString();
             <Image
                 src={post.data.coverImage as ImageMetadata}
                 alt={post.data.title + " cover image icon"}
-                transition:name={post.data.title}
+                transition:name={post.id}
             />
         }
-        {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.data.title} style="font-size: 4rem;">{post.data.emoji}</p></div>}
+        {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.id} style="font-size: 4rem;">{post.data.emoji}</p></div>}
     </div>
     <div class="sub-menu-container full-width">
         <button onclick="

@@ -26,7 +26,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                   <Image
                     src={post.data.coverImage as ImageMetadata}
                     alt={`${post.data.title} cover icon`}
-                    transition:name={post.data.title}
+                    transition:name={post.id}
                     style="max-height: 100%; width: auto;"
                   />
                 ) : (
@@ -37,7 +37,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                   />
                 )
               )}
-              {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.data.title} style="font-size: 3.5rem;">{post.data.emoji}</p></div>}
+              {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.id} style="font-size: 3.5rem;">{post.data.emoji}</p></div>}
         </div>
         <div class="text-container">
             <h3>{post.data.title}</h3>
