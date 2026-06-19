@@ -6,7 +6,7 @@ import Button from "../components/Button.astro";
 import CardMin from "../components/CardMin.astro";
 import Icon from "../components/Icon.astro";
 import CardBlog from "../components/CardBlog.astro";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import Card from "../components/Card.astro";
 import socials from "../data/socials";
 const blogPosts = (await getCollection("blog")).sort(
@@ -18,7 +18,7 @@ import featuredPosts from "../data/featured-posts";
 const latestPostIds = new Set(blogPosts.slice(0, 3).map(post => post.id));
 const featuredBlogPosts = featuredPosts
   .map(postId => blogPosts.find(post => post.id === postId))
-  .filter(post => post !== undefined && !latestPostIds.has(post.id));
+  .filter((post): post is CollectionEntry<"blog"> => post !== undefined && !latestPostIds.has(post.id));
 ---
 
 <BaseLayout

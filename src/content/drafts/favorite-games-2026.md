@@ -1,15 +1,18 @@
 ---
-title: My top 15 favorite video games
-description: My top 15 favorite video games to play now, and top disappointments.
+title: My favorite video games
+description: My top favorite video games to play now, top disappointments and backlog. Which video games I recommend.
 emoji: 👋
-pubDate: 2025-11-19T10:37:42+00:00
+pubDate: 2026-06-19T06:25:10+00:00
 tags:
   - games
 ---
 
 This is a list of games I recommend and rate depending on how it would be to play them right now. There are games which have greatly shaped me and how I play games, for example Pokemon Platinum, but this list is not about how much I have enjoyed them in the past or how much these games have shaped the industry, but rather a focus on great experiences to have right now, in the present.
 
+I usually like system-driven games with meaningful player agency, especially when they support experimentation, long-term mastery and creative solutions. The best label for my taste is probably the *buildcraft* genre.
+
 1. [Terraria](https://store.steampowered.com/app/105600/Terraria/)
+   - Nice
 2. [Divinity Original Sin 2](https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/)
 3. [Monster Train](https://store.steampowered.com/app/1102190/Monster_Train/)
 4. [Minecraft](https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc)
@@ -17,45 +20,56 @@ This is a list of games I recommend and rate depending on how it would be to pla
 6. [Factorio](https://store.steampowered.com/app/427520/Factorio/)
 7. [Cobalt Core](https://store.steampowered.com/app/2179850/Cobalt_Core/)
 8. [Rimworld](https://store.steampowered.com/app/294100/RimWorld/)
-9. [Cult of the Lamb](https://store.steampowered.com/app/1313140/Cult_of_the_Lamb/)
+9.  [Cult of the Lamb](https://store.steampowered.com/app/1313140/Cult_of_the_Lamb/)
 10. [Tales & Tactics](https://store.steampowered.com/app/1652250/Tales__Tactics/)
 11. [Astrea Six Sided Oracle](https://store.steampowered.com/app/1755830/Astrea_SixSided_Oracles/)
-12. [Sea of Stars](https://store.steampowered.com/app/1244090/Sea_of_Stars/)
-13. [The Legend of Zelda Breath of The Wild](https://www.nintendo.com/store/products/the-legend-of-zelda-breath-of-the-wild-switch/)
-14. [Cadence of Hyrule](https://www.nintendo.com/store/products/cadence-of-hyrule-crypt-of-the-necrodancer-featuring-the-legend-of-zelda-switch/)
-15. [Persona 5 Royal](https://store.steampowered.com/app/1687950/Persona_5_Royal/)
-16. [Cyberpunk 2077](https://store.steampowered.com/app/1091500/Cyberpunk_2077/)
+12. [Cadence of Hyrule](https://www.nintendo.com/store/products/cadence-of-hyrule-crypt-of-the-necrodancer-featuring-the-legend-of-zelda-switch/)
 
-## Games that didn't make it
+## Games that almost made it
 
 There are many more games I've played and enjoyed, but I didn't feel they were worth including in the top list. In most cases, better options for very similar experiences are now available, or the games were simply not good enough, but also not disappointing enough to be a failure.
 
+These games were:
 
-These include games like [Moonstone Island](https://store.steampowered.com/app/1658150/Moonstone_Island/), which offers a solid experience overall, but has design choices I strongly dislike, such as how decks are built (not letting the player freely adjust them) and its time-based mechanics. Also games that seemed nice overall like [Stardew Valley](https://store.steampowered.com/app/413150/Stardew_Valley/), [Crypt of the Necrodancer](https://store.steampowered.com/app/247080/Crypt_of_the_NecroDancer/), [Enter the Gungeon](https://store.steampowered.com/app/311690/Enter_the_Gungeon/), [Darkest Dungeon](https://store.steampowered.com/app/262060/Darkest_Dungeon/), but I just couldn't get into them or they got boring too quick. Then there are games like [Animal Crossing: New Horizons](https://www.nintendo.com/store/products/animal-crossing-new-horizons-switch/) which are nice, but are severely held back by some bad decisions, there's so much potential, it really needs modding support, but as its a game from Nintendo we will never see this. [Octopath Traveller](https://store.steampowered.com/app/1971650/OCTOPATH_TRAVELER_II/) was also a strong contender, a beautiful JRPG that sadly doesn't excel at gameplay, story or exploration. None of these elements are bad, but aside from its stunning visuals, nothing feels particularly outstanding either.
+1.  [Sea of Stars](https://store.steampowered.com/app/1244090/Sea_of_Stars/) - JRPG games usually come with a lot of outdated game design decision, so does this one. Adding time / reaction based mechanics to combat feels more like a band-aid solution instead of actually making the combat interesting. The game is beautiful, but the world feels flat. I enjoyed it when I had a really bad cold and didn't want to think.
+2.  [Cross Code](https://store.steampowered.com/app/368340/CrossCode/) - I tried it two times, but didn't get into it, will have to try again in the future.
+3.  [The Legend of Zelda Breath of The Wild](https://www.nintendo.com/store/products/the-legend-of-zelda-breath-of-the-wild-switch/) - Lots of incredible game design. Sadly it's on a locked down system and modding it is unnecessarily difficult.
+4.  [Persona 5 Royal](https://store.steampowered.com/app/1687950/Persona_5_Royal/) - The game with the best music, rarily have I vibed so strongly with a game. Sadly it comes with some typical JRPG problems, e.g. weak combat.
+5.  [Cyberpunk 2077](https://store.steampowered.com/app/1091500/Cyberpunk_2077/) - Masterful world building, lackluster shooter / FPS gameplay. Maybe melee is more enjoyable, will have to try.
+6.  [Moonstone Island](https://store.steampowered.com/app/1658150/Moonstone_Island/) - Offers a solid experience overall, but has design choices I strongly dislike, such as how decks are built (not letting the player freely adjust them) and its time-based mechanics.
+7.  [Stardew Valley](https://store.steampowered.com/app/413150/Stardew_Valley/) - I enjoyed playing this game with my partner, but for solo play there are way too many slow parts.
+8.  [Crypt of the Necrodancer](https://store.steampowered.com/app/247080/Crypt_of_the_NecroDancer/) - Good, but not amazing.
+9.  [Animal Crossing: New Horizons](https://www.nintendo.com/store/products/animal-crossing-new-horizons-switch/) - Fun, I just wish this game had modding supporting, there is so much potential.
+10. Super Mario Maker 2 - Wish this game was available on pc and modable.
+  
+## Games that were okay
 
-<details>
-<summary>List of further games not included in best or worst:</summary>
+One category below the games that almost made it, still these are solid experiences but not something I'd rate too highly as well:
 
-- [Hollow Knight](https://store.steampowered.com/app/367520/Hollow_Knight/)
-- [Subnautica](https://store.steampowered.com/app/264710/Subnautica/)
-- [Dead Cells](https://store.steampowered.com/app/588650/Dead_Cells/)
-- [Grand Theft Auto 5](https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/)
-- [Spelunky](https://store.steampowered.com/app/239350/Spelunky/)
-- [Moonlighter](https://store.steampowered.com/app/606150/Moonlighter/)
-- [Sekiro: Shadows Die Twice](https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/)
-- [Cross Code](https://store.steampowered.com/app/368340/CrossCode/)
-
-</details>
+1.  [Spelunky](https://store.steampowered.com/app/239350/Spelunky/)
+2.  [Darkest Dungeon](https://store.steampowered.com/app/262060/Darkest_Dungeon/)
+3.  [Subnautica](https://store.steampowered.com/app/264710/Subnautica/)
+4.  [Octopath Traveller](https://store.steampowered.com/app/1971650/OCTOPATH_TRAVELER_II/) - Was also a strong contender, a beautiful JRPG that sadly doesn't excel at gameplay, story nor exploration. None of these elements are bad, but aside from its amazing visuals, nothing feels outstanding either.
+5.  [Sekiro: Shadows Die Twice](https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/)
+6.  [Dead Cells](https://store.steampowered.com/app/588650/Dead_Cells/)
+7.  [Moonlighter](https://store.steampowered.com/app/606150/Moonlighter/)
+8.  [Hollow Knight](https://store.steampowered.com/app/367520/Hollow_Knight/)
+9.  [Grand Theft Auto 5](https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/)
+10. [Enter the Gungeon](https://store.steampowered.com/app/311690/Enter_the_Gungeon/)
 
 ## Top disappointments
 
 1. [Slay The Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/) - As someone who has loved card / deckbuilding games for a long time Slay The Spire seemed interesting, especially since it has been very inspiring for many devs out there and strongly influenced this genre, it made deckbuilder games much more popular, but I also find it immensely unenjoyable. It's a mix of missing player agency, missing creative problem solving and just being boring in general.
-2. [Baldurs Gate 3](https://store.steampowered.com/app/1086940/Baldurs_Gate_3/) - Big fan of DOS2, so was looking forwars to the next game from the same studio, but man for a game with turn-based combat for its major game mechanics the combat here sucks so bad.
+2. [Baldurs Gate 3](https://store.steampowered.com/app/1086940/Baldurs_Gate_3/) - Big fan of DOS2, so was looking forward to the next game from the same studio, but man for a game with turn-based combat for its major game mechanics the combat here sucks so bad.
 3. [Songs of Conquest](https://store.steampowered.com/app/867210/Songs_of_Conquest/) - Might try again, but found it very boring, these combat games where things just feel arbitrary are not for me, kinda dislike having these huge grid fields where every turn units have to be placed at specific strategic places, overwhelming, don't know what I'm deciding on, but also so many small clicks feel annoying quickly.
 4. [Pacific Drive](https://store.steampowered.com/app/1458140/Pacific_Drive/) - Buggy, wanted a driving game, got a car repair game that's highly uninterrsting at that and not the part of the game that I wanted to interact with, at least not on that level that it takes up most of the game.
 5. [Disco Elysium](https://store.steampowered.com/app/632470/Disco_Elysium__The_Final_Cut/) - I don't dislike narrative games, but most things I interacted with in the first 3 hours felt boring and irrelevant.
-6. [Against the Storm](https://store.steampowered.com/app/1336490/Against_the_Storm/)
-7. [Monster Sanctuary](https://store.steampowered.com/app/814370/Monster_Sanctuary/)
+6. [Against the Storm](https://store.steampowered.com/app/1336490/Against_the_Storm/) - I love base building in games such as Anno or Factorio, and I love Roguelikes like Cobalt Core or Monster Train, sadly this combination just never clicked for me.
+7. [Monster Sanctuary](https://store.steampowered.com/app/814370/Monster_Sanctuary/) - I like buildcraft as a genre, but here rarily feel like I have meaningful decisions. No single system in the game felt good, e.g. combat, puzzles nor exploration.
+
+## What I play these days
+
+These days I play video games a lot less than I used to. I prefer to play games to connect with people, like playing a game together with friends or my partner. Another thing I'm doing more is trying to use games as a tool for language learning, to practice and improve my Korean.
 
 ## Not tried yet
 
