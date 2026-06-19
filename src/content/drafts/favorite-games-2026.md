@@ -11,19 +11,46 @@ This is a list of games I recommend and rate depending on how it would be to pla
 
 I usually like system-driven games with meaningful player agency, especially when they support experimentation, long-term mastery and creative solutions. The best label for my taste is probably the *buildcraft* genre.
 
-1. [Terraria](https://store.steampowered.com/app/105600/Terraria/)
-   - Nice
-2. [Divinity Original Sin 2](https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/)
-3. [Monster Train](https://store.steampowered.com/app/1102190/Monster_Train/)
-4. [Minecraft](https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc)
-5. [Anno 1800](https://store.steampowered.com/app/916440/Anno_1800/)
-6. [Factorio](https://store.steampowered.com/app/427520/Factorio/)
-7. [Cobalt Core](https://store.steampowered.com/app/2179850/Cobalt_Core/)
-8. [Rimworld](https://store.steampowered.com/app/294100/RimWorld/)
-9.  [Cult of the Lamb](https://store.steampowered.com/app/1313140/Cult_of_the_Lamb/)
-10. [Tales & Tactics](https://store.steampowered.com/app/1652250/Tales__Tactics/)
-11. [Astrea Six Sided Oracle](https://store.steampowered.com/app/1755830/Astrea_SixSided_Oracles/)
-12. [Cadence of Hyrule](https://www.nintendo.com/store/products/cadence-of-hyrule-crypt-of-the-necrodancer-featuring-the-legend-of-zelda-switch/)
+**1. [Terraria](https://store.steampowered.com/app/105600/Terraria/)**
+
+The classic sandbox gather resources, fight bosses, unlock better gear loop.
+
+**2. [Divinity Original Sin 2](https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/)**
+
+Strong story, great exploration, many creative solutions possible to achieve things and win combat. I loved act 1, but felt like as the acts continued the overall quality went a bit down, still a very enjoyable experience from start to finish.
+
+**3. [Monster Train](https://store.steampowered.com/app/1102190/Monster_Train/)**
+
+**4. [Minecraft](https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc)**
+
+This game might even count as a game-engine, as people built all kinds of different experiences in here. The sandbox aspect here is much greater focus than in Terraria, although updates in recent years have been not that exciting.
+
+**5. [Anno 1800](https://store.steampowered.com/app/916440/Anno_1800/)**
+
+Probably the best city builder of its genre.
+
+**6. [Factorio](https://store.steampowered.com/app/427520/Factorio/)**
+
+Build factory, make it better, make it bigger. Space Age DLC also seems amazing.
+
+**7. [Cobalt Core](https://store.steampowered.com/app/2179850/Cobalt_Core/)**
+
+**8. [Rimworld](https://store.steampowered.com/app/294100/RimWorld/)**
+
+The creator calls this game not a game, but instead a story generator. Not sure I agree, gets a bit repetitive after almost a 100 hours, but by then I felt like I had a great experience.
+
+**9.  [Cult of the Lamb](https://store.steampowered.com/app/1313140/Cult_of_the_Lamb/)**
+
+Solid game. Combines some light base-building with roguelike real-time action runs.
+
+**10. [Tales & Tactics](https://store.steampowered.com/app/1652250/Tales__Tactics/)**
+
+Like TFT, but for singleplayer, which makes it much better. 
+
+**11. [Astrea Six Sided Oracle](https://store.steampowered.com/app/1755830/Astrea_SixSided_Oracles/)**
+
+**12. [Cadence of Hyrule](https://www.nintendo.com/store/products/cadence-of-hyrule-crypt-of-the-necrodancer-featuring-the-legend-of-zelda-switch/)**
+
 
 ## Games that almost made it
 
