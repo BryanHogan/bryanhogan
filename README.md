@@ -5,10 +5,10 @@ I build digital things. I majored in a combination of code, design and entrepren
 Web pages about me:
 
 - [BryanHogan.com](https://bryanhogan.com)
-- [/blog](https://bryanhogan.com/blog)
-- [/projects](https://bryanhogan.com/projects)
-- [/portfolio](https://bryanhogan.com/portfolio)
-- [/about](https://bryanhogan.com/about)
+    - [/blog](https://bryanhogan.com/blog)
+    - [/projects](https://bryanhogan.com/projects)
+    - [/portfolio](https://bryanhogan.com/portfolio)
+    - [/about](https://bryanhogan.com/about)
 
 ## 🧭 Current and Recent Endeavors
 
