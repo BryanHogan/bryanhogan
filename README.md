@@ -29,6 +29,7 @@ The projects I'm working on:
 - [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template)
 - [Flow Timer](https://timer.bryanhogan.com/)
 - [AppToLearnJapanese](https://app.tolearnjapanese.com/)
+- [Obsidian Vault Template](https://github.com/BryanHogan/obsidian-vault-template)
 
 I describe these projects in more detail on my [/projects](https://bryanhogan.com/projects) page.
 
