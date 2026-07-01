@@ -11,7 +11,7 @@ tags:
 
 Artificial Intelligence (AI) / Large Language Models (LLMs) for coding are amazing, they allow you to get things done so much quicker, understand and learn faster, find issues and much more, it's a fundamental change to programming.
 
-What used to take weeks, can now be done in just a few hours. But where to even begin? There are so many AI tools out there, it's overwhelming. I've been exploring what I want to use and a workflow for my development work, from creating static websites using [Astro](https://astro.build) to complex web apps via [SvelteKit](https://svelte.dev/docs/kit) and native apps through [CapacitorJS](https://capacitorjs.com).
+What used to take weeks, can now be done in just a few hours. But where to even begin? There are so many AI tools out there, it's overwhelming. I've been exploring what I want to use and a workflow for my development work, from creating static websites using Astro to complex web apps via SvelteKit and native apps through CapacitorJS.
 
 ## Exploring solutions
 
@@ -51,13 +51,13 @@ As of July 2026 I found the following to be the strongest options for coding wit
 - [Cursor](https://cursor.com/pricing)
 - [OpenRouter](https://openrouter.ai/) - Use any provider, no subscription offered, pay per token.
 
-Many of these tools use their own interface, e.g. when you use the Claude models you use the Claude Code extension, or the Codex extension for Open AI's GPT models. Some of the Chinese providers don't have their own interface, but it can be integrated into one of the existing ones, e.g. there's an extension for [adding DeepSeek to Copilot](https://github.com/Vizards/deepseek-v4-for-copilot). I also found [Cline](https://cline.bot/) to work okay.
+Many of these tools use their own interface, e.g. when you use the Claude models you use the Claude Code extension, or the Codex extension for OpenAI's GPT models. Some of the Chinese providers don't have their own interface, but it can be integrated into one of the existing ones, e.g. there's an extension for [adding DeepSeek to Copilot](https://github.com/Vizards/deepseek-v4-for-copilot). I also found [Cline](https://cline.bot/) to work okay.
 
 ## What to choose
 
 I currently mostly use Claude Code and Codex as extensions in VSCode, I found them to be the most consistent and provide the best answers usually.
 
-Whether Codex or Claude is currently leading changes quite frequently, so I'm not making a statement on that. I do have to say that Claude has been quite customer unfriendly recently. Codex provides more usage with their around 20€ subscription as well. I have been using Codex with the [Svelte MCP](https://svelte.dev/docs/ai/overview) which made it much better at writing Svelte code, [Svelte](https://svelte.dev/) is the front-end framework I prefer to use.
+Whether Codex or Claude is currently leading changes quite frequently, so I'm not making a statement on that. I do have to say that Claude has been quite customer unfriendly recently. Codex provides more usage with their around 20€/month subscription as well. I have been using Codex with the [Svelte MCP](https://svelte.dev/docs/ai/overview) which made it much better at writing Svelte code, [Svelte](https://svelte.dev/) is the front-end framework I prefer to use.
 
 As more anti-consumer decisions in Codex and Claude trickle in I will be looking to explore the other options mentioned above more and more.
 
@@ -84,7 +84,7 @@ There are many of such tools available now:
 - [Claude Artifact](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them)
 - [Figma Make](https://www.figma.com/make/)
 - [Lovable](https://lovable.dev/)
-- And even more: [Bolt.new](https://bolt.new/), [v0](https://v0.app/), [Replit](https://replit.com/), [Base44](https://base44.com/) 
+- And even more: [Bolt.new](https://bolt.new/), [v0](https://v0.app/), [Replit](https://replit.com/), [Base44](https://base44.com/), [Softr](https://www.softr.io/)
 
 ## AI Design
 
@@ -114,7 +114,7 @@ I wrote about [dangers of AI](/blog/dangers-of-ai), but I think it's important t
 
 Will AI replace developers?
 
-Obviously not. There has to be someone to at least write the prompts. For many projects you also want someone to check the code and you also have to setup the project in the first place. There is a lot of value in understanding code that can't be quickly explained by AI.
+Obviously not. There has to be someone to at least write the prompts. For many projects you also want someone to check the code and you also have to set up the project in the first place. There is a lot of value in understanding code that can't be quickly explained by AI.
 
 But, it is true that coding has fundamentally changed.
 
