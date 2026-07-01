@@ -6,9 +6,9 @@ overline: Portfolio
 heading: Bryan Hogan's Portfolio
 ---
 
-I'm Bryan Hogan, a developer and designer. I work across product design, (web) development, and UX research, on both self-initiated products and freelance client work.
+I'm Bryan Hogan, a developer and designer. Majored in a combination of technology, design, and business. Now taking digital experiences from 0 to 1.
 
-Currently open to freelance projects and full-time roles. Reach me at [bryan@bryanhogan.com](mailto:bryan@bryanhogan.com) or via my [socials](/socials).
+Currently open to full-time roles and freelance projects. Reach me at [bryan@bryanhogan.com](mailto:bryan@bryanhogan.com) or via my [socials](/socials) such as [LinkedIn](https://www.linkedin.com/in/bryanhoganme/).
 
 ## DailySelfTrack
 
