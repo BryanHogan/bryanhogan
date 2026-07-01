@@ -10,6 +10,38 @@ I'm Bryan Hogan, a developer and designer. Majored in a combination of technolog
 
 Currently open to full-time roles and freelance projects. Reach me at [bryan@bryanhogan.com](mailto:bryan@bryanhogan.com) or via my [socials](/socials) such as [LinkedIn](https://www.linkedin.com/in/bryanhoganme/).
 
+<details>
+<summary><strong>Previous roles</strong></summary>
+
+- Software Developer
+- Online Marketing & Website Management
+- Social Media Management
+
+Find more details on [LinkedIn](https://www.linkedin.com/in/bryanhoganme/).
+
+</details>
+
+<details>
+<summary><strong>Freelance work</strong></summary>
+
+- Landing pages
+- [Complex web- and native app for a Psychology start-up](https://sorbit.app/)
+
+</details>
+
+<details>
+<summary><strong>Personal projects</strong></summary>
+
+- [DailySelfTrack](https://dailyselftrack.com/)
+- [Clean Web Dev Guide](https://webdev.bryanhogan.com/)
+- [ToLearnKorean](https://tolearnkorean.com/) & [Game.ToLearnKorean](https://game.tolearnkorean.com/)
+- [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template)
+- [See all projects](/projects)
+
+</details>
+
+
+
 ## DailySelfTrack
 
 ![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../assets/images/portfolio/DailySelfTrack-Main-Screenshots.png)
