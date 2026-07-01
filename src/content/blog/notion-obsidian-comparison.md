@@ -61,6 +61,6 @@ In the end, the choice between Notion and Obsidian depends on what you need. If 
 On the other hand, if you prioritize owning your data, offline functionality, and deep customization, Obsidian could be the better fit. Both tools are excellent in their own ways, so pick the one that matches your workflow and goals.
 
 [^1]: [Relay plugin](https://github.com/no-instructions/relay) in Obsidian adds real-time collaboration, but it's proprietary and not made by Obsidian. Costs money for collaboration between more than 3 users.
-[^2]: Synchronisation is possible through multiple ways, see this post for more information: [How to sync Obsidian](https://bryanhogan.com/blog/how-to-sync-obsidian). 
+[^2]: Synchronisation is possible through multiple ways, see this post for more information: [How to sync Obsidian](/blog/how-to-sync-obsidian). 
 [^4]: [HedgeDoc](https://hedgedoc.org/) or [Holocron.so](https://holocron.so/) allows you to work on markdown documents collaboratively. These markdown files you can open in Obsidian whenever you want.
 [^3]: By setting up a server it is possible to make Obsidian run in a browser: [Obsidian remote via docker container](https://github.com/sytone/obsidian-remote)

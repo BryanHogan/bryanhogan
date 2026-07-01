@@ -19,4 +19,4 @@ I appreciate having a regular digital interaction that is disconnected from soci
 
 Thank you for joining, for replying, for reading it from time to time, for skimming it sometimes, for maybe clicking a link that I've included, or just reading the first few lines to see where I currently am in the world.
 
-*If you haven't you can [join it here](https://bryanhogan.com/follow).*
+*If you haven't you can [join it here](/follow).*

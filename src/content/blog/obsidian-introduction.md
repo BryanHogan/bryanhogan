@@ -24,7 +24,7 @@ Obsidian allows you to use it how you want, make it fit into your use-case. You 
 The desktop app of Obsidian works great, just like the mobile app, and there's no limits in its features on either version.
 
 - Obsidian's CEO also wrote about why [file over app](https://stephango.com/file-over-app) is great.
-- I wrote a more detailed comparison of [Notion vs Obsidian](https://bryanhogan.com/blog/notion-obsidian-comparison), it should give you a better idea of what Obsidian is good at compared to other note-taking applications.
+- I wrote a more detailed comparison of [Notion vs Obsidian](/blog/notion-obsidian-comparison), it should give you a better idea of what Obsidian is good at compared to other note-taking applications.
 
 ## Rules to keep in mind
 
@@ -36,14 +36,14 @@ Keep it simple. Obsidian should help you work on other things.
 
 I use Obsidian for:
 
-- **Content Creation**: Writing blog posts and my [monthly email newsletter](https://bryanhogan.com/follow).
+- **Content Creation**: Writing blog posts and my [monthly email newsletter](/follow).
 - **Knowledge Management**: Collecting, summarizing, and preparing information (using a "bottom-up" approach).
 - **Project Management**: Managing personal projects and life aspects like health.
 - **Tracking Media**: Collecting information on books, video games, and YouTube videos. ([Obsidian Bases](https://help.obsidian.md/bases) are great!)
 
 I avoid custom themes. I try to use as few plugins as possible. Obsidian has "core plugins", features which are already built into Obsidian by the Obsidian team, and "community plugins", plugins made by the community.
 
-I value a simple long-lasting system. So I use a system inspired from Zettelkasten and Evergreen notes, bottom-up instead of top-down. I wrote in more detail about [my full Obsidian vault setup here](https://bryanhogan.com/blog/obsidian-vault) and go into detail [on how to implement the bottom-up approach for note-taking here](/blog/obsidian-zettelkasten).
+I value a simple long-lasting system. So I use a system inspired from Zettelkasten and Evergreen notes, bottom-up instead of top-down. I wrote in more detail about [my full Obsidian vault setup here](/blog/obsidian-vault) and go into detail [on how to implement the bottom-up approach for note-taking here](/blog/obsidian-zettelkasten).
 
 Keep in mind, you don't need any of this though. You can just create folders and put your notes in there, if you already have a system that works for you, do that.
 

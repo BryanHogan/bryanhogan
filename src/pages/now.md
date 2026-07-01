@@ -10,9 +10,9 @@ location: Seoul in South Korea
 
 ## My recent story so far
 
-Beginning of 2025 I finished my B.Sc. in [Code & Context](https://bryanhogan.com/blog/what-is-coco) and decided to go abroad. I returned to Korea where I have been for a whole year before, and then went to Macau, a place I have never been to before for an internship.
+Beginning of 2025 I finished my B.Sc. in [Code & Context](/blog/what-is-coco) and decided to go abroad. I returned to Korea where I have been for a whole year before, and then went to Macau, a place I have never been to before for an internship.
 
-Now I recently finished [my internship in Macau](https://bryanhogan.com/blog/living-in-macau) but my time abroad continues.
+Now I recently finished [my internship in Macau](/blog/living-in-macau) but my time abroad continues.
 
 After a month in Korea I came to Japan, by train & ferry. I completed my Working Holiday in Japan, living in Osaka and Tokyo was great!
 
