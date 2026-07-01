@@ -5,10 +5,10 @@ I build digital things. I majored in a combination of code, design and entrepren
 Web pages about me:
 
 - [BryanHogan.com](https://bryanhogan.com)
-- [/blog](https://bryanhogan.com/blog)
-- [/projects](https://bryanhogan.com/projects)
-- [/portfolio](https://bryanhogan.com/portfolio)
-- [/about](https://bryanhogan.com/about)
+    - [/blog](https://bryanhogan.com/blog)
+    - [/projects](https://bryanhogan.com/projects)
+    - [/portfolio](https://bryanhogan.com/portfolio)
+    - [/about](https://bryanhogan.com/about)
 
 ## 🧭 Current and Recent Endeavors
 
@@ -29,6 +29,7 @@ The projects I'm working on:
 - [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template)
 - [Flow Timer](https://timer.bryanhogan.com/)
 - [AppToLearnJapanese](https://app.tolearnjapanese.com/)
+- [Obsidian Vault Template](https://github.com/BryanHogan/obsidian-vault-template)
 
 I describe these projects in more detail on my [/projects](https://bryanhogan.com/projects) page.
 
