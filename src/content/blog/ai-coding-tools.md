@@ -65,11 +65,11 @@ As more anti-consumer decisions in Codex and Claude trickle in I will be looking
 
 The most important practices for better results with AI were keeping the context small, frequently restarting chats, a good `AGENTS.md` file and being specific.
 
-I found it helpful to **at least use two AIs that review each other's work**, e.g. one AI writes code based on very specific prompts and another AI reviews that code in addition to reviewing all of the code with my own eyes as well.
+I found it helpful to **use two AIs that review each other's work**, e.g. one AI writes code based on very specific prompts and another AI reviews that code in addition to reviewing all of the code with my own eyes as well.
 
 I wrote a separate post going more into detail of [how to use AI well for coding here](/blog/ai-code-well).
 
-In my free and open [Clean Web Development guide](https://webdev.bryanhogan.com/) I go into even further details.
+In my free and open [Clean Web Development guide](https://webdev.bryanhogan.com/) I go into even further details. (Soon)
 
 ## Prototyping Tools
 
