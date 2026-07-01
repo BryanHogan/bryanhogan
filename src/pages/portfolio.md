@@ -11,7 +11,7 @@ I'm Bryan Hogan, a developer and designer. Majored in a combination of technolog
 Currently open to full-time roles and freelance projects. Reach me at [bryan@bryanhogan.com](mailto:bryan@bryanhogan.com) or via my [socials](/socials) such as [LinkedIn](https://www.linkedin.com/in/bryanhoganme/).
 
 <details>
-<summary><strong>Previous roles</strong></summary>
+<summary><strong>Previous employment</strong></summary>
 
 - Software Developer
 - Online Marketing & Website Management
