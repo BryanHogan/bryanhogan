@@ -18,6 +18,16 @@
             color: var(--color-accent-200);
         }
     }
+    a[href^="http"]:not([href*="//bryanhogan.com"])::after {
+        content: "";
+        display: inline-block;
+        width: 0.8em;
+        height: 0.8em;
+        margin-left: 0.25em;
+        background-color: currentColor;
+        mask: url("/icons/external-link.svg") no-repeat center / contain;
+        /*-webkit-mask: url("/icons/external-link.svg") no-repeat center / contain;*/
+    }
     img {
         max-width: 100%;
         height: auto;
