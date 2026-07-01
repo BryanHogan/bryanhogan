@@ -63,17 +63,14 @@ const {
             robots={robots}
             author={author}
         />
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="/favicon.ico">
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="sitemap" type="application/xml" href="/sitemap-index.xml">
-        <meta name="copyright" content="Bryan Hogan" />
         <meta name="theme-color" content="#A594D3">
-
         <link rel="alternate" type="application/rss+xml" title="Blog posts by Bryan Hogan" href={new URL("rss.xml", Astro.site)} />
-         
-         <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="88cecc6c-ebbb-4b08-a5d1-b07a8f7383df"></script>
-         <ClientRouter />
-         <slot name="head"/>
+        <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="88cecc6c-ebbb-4b08-a5d1-b07a8f7383df"></script>
+        <ClientRouter />
+        <slot name="head"/>
       </head>
     <body>
         <Header />
