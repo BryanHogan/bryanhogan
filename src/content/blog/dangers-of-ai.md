@@ -7,7 +7,7 @@ blueskyRef: ''
 mastodonRef: ''
 threadsRef: ''
 tags:
-  - AI
+  - ai
 ---
 
 AI is very powerful, it allows us to do a lot of new things and become much more efficient at things we currently do, but it is also immensely dangerous.
