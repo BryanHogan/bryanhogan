@@ -8,6 +8,9 @@ backend:
 media_folder: src/assets
 public_folder: /assets
 
+output:
+  omit_empty_optional_fields: true
+
 collections:
   - name: blog
     label: Blog Posts

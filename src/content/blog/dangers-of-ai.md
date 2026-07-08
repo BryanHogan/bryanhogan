@@ -3,9 +3,6 @@ title: Dangers of AI
 description: Risks of AI - Misinformation, power concentration, skill loss. The shift towards a bot-filled internet.
 emoji: ⚠️
 pubDate: 2025-08-20T04:20:00+00:00
-blueskyRef: ''
-mastodonRef: ''
-threadsRef: ''
 tags:
   - ai
 ---

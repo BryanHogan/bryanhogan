@@ -2,12 +2,8 @@
 title: Making a Website with Obsidian
 description: How can you build a website using Obsidian? From markdown to web.
 coverImage: ../blog-assets/covers/Obsidian-Website-Cover.svg
-emoji: ''
 pubDate: 2025-08-26T15:09:00+00:00
 lastUpdate: 2025-08-26T15:46:00+00:00
-blueskyRef: ''
-mastodonRef: ''
-threadsRef: ''
 tags:
   - obsidian
   - creating
