@@ -167,7 +167,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         <aside class="aside-container-right">
             <div class="toc">
                 <div class="sticky-element">
-                    <span class="toc-icon">
+                    <button class="toc-icon" aria-expanded="false" aria-controls="toc-items" aria-label="Table of contents">
                         <svg
                             width="22"
                             height="22"
@@ -175,8 +175,8 @@ const isoLastUpdate = lastUpdate.toISOString();
                             fill="currentColor"
                             set:html={Icons["rightcaret"]}
                         />
-                    </span>
-                    <div class="toc-items">
+                    </button>
+                    <nav id="toc-items" class="toc-items" aria-label="Table of contents">
                         <p><strong>Table of Contents</strong></p>
                         <TableOfContentsList
                             toc={generateToC(headings, {
@@ -185,7 +185,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                                 title: post.data.title,
                             })}
                         />
-                    </div>
+                    </nav>
                 </div>
             </div>
         </aside>
@@ -425,6 +425,7 @@ const isoLastUpdate = lastUpdate.toISOString();
 			width: 100%;
             max-width: 430px;
             margin-left: 16px;
+            height: 100%;
 		}
 		.toc-icon {
 			display: none;
@@ -432,15 +433,11 @@ const isoLastUpdate = lastUpdate.toISOString();
 			margin: 0;
 		}
 		.sticky-element {
-			transition: top 0.3s ease;
+			position: sticky;
+			top: var(--navbar-height);
 			z-index: 10;
 			width: 100%;
 			padding: 1rem;
-		}
-		.fixed {
-			position: fixed;
-			top: var(--navbar-height);
-			width: var(--aside-width);
 		}
 	}
     @media only screen and (max-width: 999.9px) {
@@ -459,6 +456,8 @@ const isoLastUpdate = lastUpdate.toISOString();
 			display: block;
 			cursor: pointer;
 			padding: var(--space-2xs);
+			border: none;
+			background-color: transparent;
 			border-radius: var(--border-radius-m);
 			transition: background-color var(--transition-normal);
 			z-index: 100;
@@ -501,79 +500,25 @@ const isoLastUpdate = lastUpdate.toISOString();
 	}  
 </style>
 
-<script is:inline>
-    function setupStickyToc() {
-      const stickyElement = document.querySelector(".sticky-element");
-      const asideContainer = document.querySelector(".aside-container-right");
-      if (!stickyElement || !asideContainer) return;
-  
-      if (stickyElement.dataset.initialized === "true") return;
-      stickyElement.dataset.initialized = "true";
-  
-      const updateWidth = () => {
-        const asideWidth = asideContainer.getBoundingClientRect().width;
-        stickyElement.style.setProperty("--aside-width", `${asideWidth}px`);
-      };
-  
-      let stickyOffset = stickyElement.offsetTop;
-  
-      const handleScroll = () => {
-        if (!stickyElement.classList.contains("fixed")) {
-          stickyOffset = stickyElement.offsetTop;
-        }
-        if (window.scrollY >= stickyOffset - 50) {
-          stickyElement.classList.add("fixed");
-        } else {
-          stickyElement.classList.remove("fixed");
-        }
-      };
-  
-      const handleResize = () => {
-        stickyElement.classList.remove("fixed");
-        updateWidth();
-        stickyOffset = stickyElement.offsetTop;
-        handleScroll();
-      };
-  
-      updateWidth();
-      window.addEventListener("scroll", handleScroll);
-      window.addEventListener("resize", handleResize);
+<script>
+    // With the ClientRouter this script re-executes whenever navigation enters a
+    // blog page from a page that doesn't include it, so guard the registration.
+    const w = window as Window & { tocToggleInit?: boolean };
+    if (!w.tocToggleInit) {
+        w.tocToggleInit = true;
+        document.addEventListener("click", (event) => {
+            const tocToggle = document.querySelector(".toc-icon");
+            if (!tocToggle || !(event.target instanceof Element)) return;
+
+            if (tocToggle.contains(event.target)) {
+                const isExpanded = tocToggle.getAttribute("aria-expanded") === "true";
+                tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
+                return;
+            }
+
+            const tocItems = document.querySelector(".toc-items");
+            const keepOpen = tocItems?.contains(event.target) && !event.target.closest("a");
+            if (!keepOpen) tocToggle.setAttribute("aria-expanded", "false");
+        });
     }
-  
-    function setupTocToggle() {
-      const tocToggle = document.querySelector(".toc-icon");
-      const tocItems = document.querySelector(".toc-items");
-      if (!tocToggle || !tocItems) return;
-  
-      if (tocToggle.dataset.initialized === "true") return;
-      tocToggle.dataset.initialized = "true";
-  
-      tocToggle.setAttribute("aria-expanded", "false");
-  
-      const closeToc = (event) => {
-        if (
-          tocItems.contains(event.target) ||
-          tocToggle.contains(event.target)
-        ) return;
-        tocToggle.setAttribute("aria-expanded", "false");
-      };
-  
-      const toggleToc = (event) => {
-        event.stopPropagation();
-        const isExpanded = tocToggle.getAttribute("aria-expanded") === "true";
-        tocToggle.setAttribute("aria-expanded", (!isExpanded).toString());
-      };
-  
-      tocToggle.addEventListener("click", toggleToc);
-      document.addEventListener("click", closeToc);
-    }
-  
-    function initializeToc() {
-      setupStickyToc();
-      setupTocToggle();
-    }
-  
-    document.addEventListener("astro:page-load", () => {
-      setTimeout(initializeToc, 50);
-    });
 </script>

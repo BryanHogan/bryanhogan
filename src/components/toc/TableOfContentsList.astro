@@ -53,44 +53,44 @@ const { toc, depth = 0 } = Astro.props;
 <script>
 	const isInViewport = (elem: Element) => {
 		const bounding = elem.getBoundingClientRect();
-		return (
-			bounding.bottom >= 0 &&
-			bounding.top <=
-				(window.innerHeight * 0.8 ||
-					document.documentElement.clientHeight)
-		);
+		return bounding.bottom >= 0 && bounding.top <= window.innerHeight * 0.8;
 	};
 
-	// Function to handle scroll event
 	const handleScroll = () => {
-    const mainContent = document.querySelector(".main-content");
-    if (!mainContent) return;
+		// #_top is the post title, rendered outside .main-content
+		const headings = document.querySelectorAll(
+			"#_top, .main-content :is(h1, h2, h3, h4, h5, h6)",
+		);
+		let activeHeading: Element | null = null;
 
-    const headings = mainContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
-    let activeHeading: HTMLElement | null = null;
+		for (const heading of headings) {
+			if (isInViewport(heading)) activeHeading = heading;
+		}
+		if (!activeHeading) return;
 
-    headings.forEach((heading) => {
-        if (isInViewport(heading as HTMLElement)) {
-            activeHeading = heading as HTMLElement;
-        }
-    });
+		const activeLink = document.querySelector(
+			`.toc a[href="#${activeHeading.id}"]`,
+		);
+		if (!activeLink) return;
 
-    if (activeHeading) {
-        const activeLink = document.querySelector(
-            `[href="#${(activeHeading as HTMLElement & { id: string }).id}"]`
-        );
-        if (activeLink) {
-            document.querySelectorAll(".toc a").forEach((link) => {
-                link.classList.remove("active");
-            });
-            (activeLink as HTMLElement).classList.add("active");
-        }
-    }
-};
+		document.querySelectorAll(".toc a").forEach((link) => {
+			link.classList.remove("active");
+			link.removeAttribute("aria-current");
+		});
+		activeLink.classList.add("active");
+		activeLink.setAttribute("aria-current", "true");
+	};
 
-
-	// Add scroll event listener
-	window.addEventListener("scroll", handleScroll);
+	// With the ClientRouter this script re-executes whenever navigation enters a
+	// blog page from a page that doesn't include it, so guard the registration.
+	const w = window as Window & { tocHighlightInit?: boolean };
+	if (!w.tocHighlightInit) {
+		w.tocHighlightInit = true;
+		window.addEventListener("scroll", handleScroll);
+		// Fires on initial load and after every view-transition navigation,
+		// so the highlight is correct before the user scrolls.
+		document.addEventListener("astro:page-load", handleScroll);
+	}
 </script>
 
 
