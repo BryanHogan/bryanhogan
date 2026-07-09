@@ -1,19 +1,16 @@
 ---
 layout: ../layouts/NowLayout.astro
-location: Seoul in South Korea
+location: Sydney in Australia
 ---
   
-- In Korea, Seoul.
-- Looking for a new freelance project or job in Melbourne.
-- Working on [DailySelfTrack](https://dailyselftrack.com/).
-- Learning Korean. Really should make [Game.ToLearnKorean.com](https://game.tolearnkorean.com/) into an useable app, I'm my own biggest customer here.
+- I'm looking for work! I will fly back to Germany this July. After more than 400 days of traveling around Korea, Macau, China, Japan and Australia I'm looking for more stability again.
+- I've been working on my [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template) recently. I want to be able to recommend it to people who want to create a simple high-quality website which they can also fully own. I also want to use it for my own sites.
+- Been writing more on my [blog](/blog) lately. Also still have user testing [DailySelfTrack](https://dailyselftrack.com/) in my task backlog. (And it also needs a better landing page.)
 
 ## My recent story so far
 
-Beginning of 2025 I finished my B.Sc. in [Code & Context](/blog/what-is-coco) and decided to go abroad. I returned to Korea where I have been for a whole year before, and then went to Macau, a place I have never been to before for an internship.
+Beginning of 2025 I finished my B.Sc. in [Code & Context](/blog/what-is-coco) and decided to go abroad. I returned to Korea where I had been for a whole year before, then to [Macau for an internship](/blog/living-in-macau), then to Japan for a Working Holiday and then to Australia for another Working Holiday.
 
-Now I recently finished [my internship in Macau](/blog/living-in-macau) but my time abroad continues.
+During that time I traveled between these countries quite frequently, I might've been to Korea 5 times in that year alone.
 
-After a month in Korea I came to Japan, by train & ferry. I completed my Working Holiday in Japan, living in Osaka and Tokyo was great!
-
-Right now I'm back in Korea, but am planning on going to Australia soon with another Working Holiday visa. Melbourne seems like a fun place to live.
+Now I'm looking to stay in one place and build up some financial stability.
