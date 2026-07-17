@@ -2,7 +2,7 @@
 title: Setting up Sveltia CMS for an Astro Markdown Blog
 description: How I added Sveltia CMS to my Astro markdown blog. Setup, image optimization, mobile editing fixes, and solving frontmatter issues.
 emoji: ✍️
-pubDate: 2026-07-08T07:39:32+00:00
+pubDate: 2026-07-08T07:39:00+00:00
 tags:
   - development
 ---
@@ -13,11 +13,11 @@ I want to be able to write and edit my posts on mobile as well, after a bunch of
 
 Sveltia CMS gives me an editing interface at `/admin` that reads and writes the markdown files directly through GitHub. No complex database or server, just the plain markdown files.
 
-This post covers how I set it up and the problems I had to solve along the way.
+This post covers how I set it up and fixes to the problems I encountered.
 
 ## What is Sveltia CMS?
 
-[Sveltia CMS](https://github.com/sveltia/sveltia-cms) is a git-based CMS, an improved fork from Netlify CMS / Decap CMS. It's a single JavaScript file that runs entirely in the browser and talks to the GitHub API. You configure it with one YAML file.
+[Sveltia CMS](https://github.com/sveltia/sveltia-cms) is a git-based CMS, an improved fork from Netlify CMS / Decap CMS. It's a single JavaScript file that runs entirely in the browser and talks to the GitHub API. It's with one YAML file.
 
 It commits directly to your repository on GitHub. I was able to just use my existing build pipeline.
 
@@ -55,18 +55,18 @@ media_folder: src/assets
 public_folder: /assets
 
 collections:
-  - name: blog
+    - name: blog
     label: Blog Posts
     folder: src/content/blog
     create: true
     format: yaml-frontmatter
     slug: "{{slug}}"
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: string }
-      - { label: Publish Date, name: pubDate, widget: datetime }
-      - { label: Tags, name: tags, widget: list }
-      - { label: Body, name: body, widget: markdown }
+            - { label: Title, name: title, widget: string }
+            - { label: Description, name: description, widget: string }
+            - { label: Publish Date, name: pubDate, widget: datetime }
+            - { label: Tags, name: tags, widget: list }
+            - { label: Body, name: body, widget: markdown }
 ```
 
 For authentication I use a GitHub personal access token. Sveltia CMS lets you sign in with a token directly. I just had to create a token within GitHub with read and write access to the repository and use it in the sign-in dialog.
@@ -220,11 +220,10 @@ In Sveltia I found it easy to adjust the config to add new options of how I want
 ```yaml
 sortable_fields: [pubDate, title]
 view_filters:
-  - { label: Obsidian, field: tags, pattern: obsidian }
-  - { label: Development, field: tags, pattern: development }
+    - { label: Obsidian, field: tags, pattern: obsidian }
+    - { label: Development, field: tags, pattern: development }
   # one per tag
 ```
-
 
 ## Was it worth it?
 
