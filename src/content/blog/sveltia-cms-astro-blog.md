@@ -17,7 +17,7 @@ This post covers how I set it up and fixes to the problems I encountered.
 
 ## What is Sveltia CMS?
 
-[Sveltia CMS](https://github.com/sveltia/sveltia-cms) is a git-based CMS, an improved fork from Netlify CMS / Decap CMS. It's a single JavaScript file that runs entirely in the browser and talks to the GitHub API. It's with one YAML file.
+[Sveltia CMS](https://github.com/sveltia/sveltia-cms) is a git-based CMS, an improved rewrite of Netlify CMS / Decap CMS. It's a single JavaScript file that runs entirely in the browser and talks to the GitHub API. You configure it with one YAML file.
 
 It commits directly to your repository on GitHub. I was able to just use my existing build pipeline.
 
