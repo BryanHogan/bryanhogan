@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
-    <Hero overline={frontmatter.overline} heading={frontmatter.heading}/>
+    <Hero heading={frontmatter.heading} headingDetail={frontmatter.headingDetail}/>
     <div class="markdown-container margin-top-xl margin-bottom-xl margin-inline-auto">
         <slot />
     </div>

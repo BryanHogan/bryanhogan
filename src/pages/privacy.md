@@ -1,15 +1,15 @@
 ---
 layout: ../layouts/SimpleMdLayout.astro
-title: Privacy
+title: Privacy - BryanHogan.com
 description: Privacy statement.
-overline: Privacy
-heading: About privacy and how I handle your data.
+heading: Privacy
+headingDetail: How BryanHogan.com handles your data
 ---
 
 - Umami is used to collect some simple information. It's GDPR compliant and no cookies are used.
 - The email list is handled by Buttondown.
 
-<h1>Datenschutzerklärung</h1>
+<h2>Datenschutzerklärung</h2>
             <p>Stand: 28. August 2023</p><h2>Inhaltsübersicht</h2>
             <ul class="index">
                 <li>

@@ -10,11 +10,10 @@ import Icon from "../components/Icon.astro";
 import { cardBlogBackgroundColors } from "../data/colors";
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
-
 ---
 
 <BaseLayout title="Bryan's Blog" description="Bryan Hogan's blog. All about learning, creating and finding balance.">
-    <Hero overline="Bryan's Blog" heading="Bryan's blog about learning, exploring and creating." height="40svh">
+    <Hero heading="Bryan's Blog" headingDetail="About learning, creating and exploring" height="40svh">
         <Button text="Get Updates" href="/follow" buttonStyle="transparent margin-inline-auto margin-top-s"/>
     </Hero>
     <nav class="sub-nav-container">

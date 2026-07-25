@@ -1,12 +1,10 @@
 ---
 layout: ../layouts/SimpleMdLayout.astro
-title: Ideas - Bryan Hogan
+title: Project Ideas - Bryan Hogan
 description: My (project) ideas, things I'd love if they'd exist, and what I want to work on.
-overline: Ideas
-heading: Things I'd love if they'd exist & what I want to work on.
+heading: Ideas
+headingDetail: Things I'd love to see exist and want to work on.
 ---
-
-<h2 class="text-align-center">Ideas of mine</h2>
 
 - Obsidian plugin that connects a note to a web page, note represents the content available through Web Clipper. Offers button to re-pull content if online content has changed, either as a button on that specific note or for all notes in the vault that are connected through this way.
 - A days counting app for couples (already is/was popular in Korea), but also make couple add content weekly to deepen their relationship, e.g. both choose a picture of the week or write something short based on a prompt.
@@ -21,7 +19,7 @@ heading: Things I'd love if they'd exist & what I want to work on.
 
 If you think anything on this list sounds cool, or anything on my [projects page](/projects) sounds cool as well and you'd like to work together, and/or support me, contact me at one of [my socials](/socials).
 
-### Ideas I actually started working on
+## Ideas I actually started working on
 
 Some ideas I wrote above I started to work on so I moved them down into a separate list:
 

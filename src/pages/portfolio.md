@@ -2,8 +2,8 @@
 layout: ../layouts/SimpleMdLayout.astro
 title: Portfolio - Bryan Hogan
 description: Bryan Hogan's portfolio. Code & Context B.Sc. graduate. Combining development, design and entrepreneurship. Experienced in marketing, design and web development.
-overline: Portfolio
-heading: Bryan Hogan's Portfolio
+heading: Portfolio
+headingDetail: Work and experience by Bryan Hogan
 ---
 
 I'm Bryan Hogan, a developer and designer. Majored in a combination of technology, design, and business. Now taking digital experiences from 0 to 1.

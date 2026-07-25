@@ -28,8 +28,8 @@ const { posts } = Astro.props;
 const data = tagData[tag];
 const capitalizedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
 const displayName = data?.title ?? capitalizedTag;
-const heroOverline = displayName;
-const heroHeading = "Bryan's blog about " + displayName + ".";
+const heroHeading = displayName;
+const heroHeadingDetail = "Posts from Bryan's Blog";
 const seoTitle = "Tag: " + displayName + " - Bryan's Blog";
 const seoDescription = data?.description
     ? "Bryan's blog about " + displayName + ". " + data.description
@@ -49,7 +49,7 @@ const seoDescription = data?.description
             { "@type": "ListItem", "position": 3, "name": displayName, "item": "https://bryanhogan.com/tags/" + tag }
         ]
     })} />
-    <Hero overline={heroOverline} heading={heroHeading} />
+    <Hero heading={heroHeading} headingDetail={heroHeadingDetail} />
     <main>
         <nav class="sub-nav-container">
             <ul role="list">
