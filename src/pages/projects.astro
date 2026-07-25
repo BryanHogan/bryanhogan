@@ -9,7 +9,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 <BaseLayout title="Projects - Bryan Hogan" description="What I'm currently working on and past projects of mine.">
     <Hero heading="Projects" headingDetail="Digital products and tools by Bryan Hogan"/>
-    <h2 class="post-hero-h2 text-align-center">Projects I'm working on</h2>
+    <div class="margin-top-xl"></div>
     <CardGrid>
         <Card title="Self-Track App" href="https://dailyselftrack.com/">
             <p>Building a customizable app for self-tracking, a user-friendly health log, diary and habit tracker.</p>
@@ -36,6 +36,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <Icon name="magnifier" label="magnifier icon" size="1.5rem" slot="icon-row"/>
         </Card>
     </CardGrid>
+    <div class="margin-bottom-2xl"></div>
 </BaseLayout>
 
 <style>
