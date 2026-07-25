@@ -19,22 +19,60 @@ allPosts.forEach(post => {
     title="Blog Topics - Bryan Hogan"
     description="Browse all topics and tags covered on Bryan Hogan's blog, such as development, Korea, productivity and more."
 >
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Blog", "item": "https://bryanhogan.com/blog" },
+            { "@type": "ListItem", "position": 2, "name": "Tags", "item": "https://bryanhogan.com/tags" }
+        ]
+    })} />
     <Hero heading="Topics" headingDetail="Browse all blog posts by tag" />
-    <h2 class="text-align-center margin-top-xl margin-bottom-m">All tags</h2>
-    <ul class="margin-bottom-l">
-        {
-            tags.map((tag) => (
-                <li>
-                    <a href={`/tags/${tag}`} class="tag-name">{tag}</a> ({tagCounts[tag] || 0})
-                </li>
-            ))
-        }
-      </ul>
+    <main>
+        <nav class="sub-nav-container">
+            <ul role="list">
+                <li><a href="/blog">Blog</a></li>
+                <li><span>Tags</span></li>
+            </ul>
+        </nav>
+        <h2 class="text-align-center margin-top-xl margin-bottom-m">All tags</h2>
+        <ul class="tag-list margin-bottom-l">
+            {
+                tags.map((tag) => (
+                    <li>
+                        <a href={`/tags/${tag}`} class="tag-name">{tag}</a> ({tagCounts[tag] || 0})
+                    </li>
+                ))
+            }
+        </ul>
+    </main>
 </BaseLayout>
 
 <style>
-    ul {
+    .tag-list {
+        width: fit-content;
         margin-inline: auto;
+    }
+    .sub-nav-container ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--space-xs) var(--space-s);
+        padding-block: var(--space-xs);
+        li a, li span {
+            color: var(--color-neutral-300);
+            text-decoration: none;
+            font-size: 0.75em;
+            &:hover {
+                color: var(--a-hover-color);
+            }
+        }
+        li:not(:first-child)::before {
+            content: "/";
+            color: var(--color-neutral-500);
+            font-size: 0.75em;
+            padding-right: var(--space-s);
+        }
     }
     .tag-name {
         text-transform: capitalize;
