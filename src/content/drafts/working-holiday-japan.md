@@ -1,6 +1,6 @@
 ---
-title: Working Holiday in Japan Recommendations
-description: My experience and recommendations from doing a Working Holiday in Japan.
+title: "Working Holiday in Japan: My Experience and Practical Tips"
+description: My experience living in Osaka and Tokyo on a Working Holiday visa, with practical advice on preparation, housing, work, useful apps, and places to eat.
 emoji: 🗾
 pubDate: 2026-07-29T11:16:03+00:00
 lastUpdate: 2026-07-29T11:16:03+00:00
@@ -10,7 +10,7 @@ tags:
 
 I just finished my Working Holiday in Japan. I stayed in Osaka and Tokyo. So what was my life there like and what do I recommend?
 
-## Why go to Japan
+## Why I choose a Working Holiday in Japan
 
 I was born and grew up in Germany, but after a total time of almost 2 years in South Korea which I did really enjoy I wanted to see other countries around Asia as well. So after I got [my degree in Germany](/blog/what-is-coco) I [started a nomadic life](/blog/new-chapter-nomadic-life), [I worked in Macau](/blog/living-in-macau), traveled in Mainland China a bit, and then came to Japan on a Working Holiday visa.
 
@@ -32,14 +32,14 @@ After that time in Osaka I went to Tokyo.
 
 ## Japan preparation
 
-### Things to prepare before going
+### What to prepare before going
 
 1. **Travel Health Insurance** - Make sure your health insurance covers you for long-term stays, usually basic travel insurances in Germany only cover up to 2 months abroad.
 2. **Bank card** - Get a card that works abroad, a found Revolut much better than any German bank I used.
 3. **Vaccinations** - Talk to your doctor about what vaccinations you need.
 4. **Cash** - Get cash before or after arriving. Some restaurants require you to pay in cash. Often I could use my Revolut visa card though. Sometimes I could use the IC card for paying as well.
 
-### Things to get when you arrive in Japan
+### What to get after arriving in Japan
 
 1. **IC Card** - The rechargeable card for taking public transport. Depending on which region in Japan you are in they might have a different name, but just get any at a nearby Konbini or bigger train station and charge it with cash at the machine.
 2. **Residence registration** - You'll need to go to the citizens office to register your address and to get a residence card.
@@ -47,7 +47,7 @@ After that time in Osaka I went to Tokyo.
 
 Japan has many big supermarkets such as Life (my favorite), Aeon, Oasis, Daiei and many more which probably sell all the food you need. Daiso and Don Quijote are also worth a visit, they both sell a wide range of products.
 
-### App to use in Japan
+### Apps to use for living in Japan
 
 1. **Google Maps** - The app which is commonly used for navigation in Japan. 
 2. **Google Translate** - For translating, you can also take pictures of menus for example and get them translated.
