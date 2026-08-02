@@ -2,8 +2,8 @@
 title: "Working Holiday in Japan: My Experience and Practical Tips"
 description: My experience living in Osaka and Tokyo on a Working Holiday visa, with practical advice on preparation, housing, work, useful apps, and places to eat.
 emoji: 🗾
-pubDate: 2026-07-29T11:16:03+00:00
-lastUpdate: 2026-07-29T11:16:03+00:00
+pubDate: 2026-08-02T07:26:43+00:00
+lastUpdate: 2026-08-02T07:26:43+00:00
 tags:
   - japan
   - travel
@@ -19,11 +19,11 @@ Japan seemed like a great place to live in, and now I know that it really is.
 
 ## Where I went
 
-I took the ferry from Busan to Fukuoka, and after a few days there I went to Osaka. I found work at a hostel in Osaka near Namba, I would work there, clean up and make the beds, and in exchange I could live there.
+I took the ferry from Busan to Fukuoka, and after a few days there, continued to Osaka. I found work at a hostel in Osaka near Namba, where I cleaned and made beds in exchange for accommodation.
 
 At the same time my first larger freelance project began where I worked on creating an app for my client, taking over development and design tasks.
 
-After a few weeks at the hostel I didn't feel that comfortable staying there for longer, the room was very small, I couldn't stand straight in it usually, the floor was not flat, there was no sunlight, it was noisy because of the constant pipe sounds, the air was very dry, I didn't have any space to work on my laptop, the hostel work took up more time than I expected, and the room was shared with another person who was also on a Working Holiday visa.
+After a few weeks, I no longer felt comfortable staying at the hostel. The room was very small, I usually couldn't stand upright in it, the floor was not flat, there was no sunlight, it was noisy because of the constant pipe sounds, the air was very dry, I didn't have any space to work on my laptop, the hostel work took up more time than I expected, and the room was shared with another person who was also on a Working Holiday visa.
 
 So I looked for a new place, luckily these days there are many medium-term furnished apartment rentals in Japan for foreigners. I'll talk more in-depth about these further down.
 
