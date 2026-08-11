@@ -61,6 +61,26 @@ const featuredBlogPosts = featuredPosts
 	<div class="content-sections-container">
 		<section class="content-cards-container">
 			<div class="first-row">
+				<h2>Projects</h2>
+				<Button text="All projects" href="/projects" buttonStyle="line icon-left" icon="rightarrow"/>
+			</div>
+			<div class="projects-content-cards">
+				<Card title="DailySelfTrack App" href="https://dailyselftrack.com" >
+					<p>A tool combining the best of habit trackers, health apps and journals. </p>
+					<Icon name="book" label="book icon" size="1.5rem" slot="icon-row"/>
+				</Card>
+				<Card title="Website Starter Template" href="https://starter.bryanhogan.com">
+					<p>The simplest way to start your blog and own website.</p>
+					<Icon name="magnifier" label="magnifier icon" size="1.5rem" slot="icon-row"/>
+				</Card>
+				<Card title="ToLearnKorean" href="https://tolearnkorean.com">
+					<p>Website on information to learn Korean.</p>
+					<Icon name="lightbulb" label="lightbulb icon" size="1.5rem" slot="icon-row"/>
+				</Card>
+			</div>
+		</section>
+		<section class="content-cards-container">
+			<div class="first-row">
 				<h2>Blog</h2>
 				<Button text="All blog posts" href="/blog" buttonStyle="line gradient-underline icon-left" icon="rightarrow"/>
 				<Button text="Blog introduction" href="/blog/introduction" buttonStyle="line icon-left" icon="rightarrow"/>
@@ -80,26 +100,6 @@ const featuredBlogPosts = featuredPosts
 						<CardBlog post={post} compact backgroundColor={cardBlogBackgroundColors[(index + 3) % cardBlogBackgroundColors.length]} transitionIcon/>
 					))
 				}
-			</div>
-		</section>
-		<section class="content-cards-container">
-			<div class="first-row">
-				<h2>Projects</h2>
-				<Button text="All projects" href="/projects" buttonStyle="line icon-left" icon="rightarrow"/>
-			</div>
-			<div class="projects-content-cards">
-				<Card title="DailySelfTrack App" href="https://dailyselftrack.com/" >
-					<p>A tool combining the best of habit trackers, health apps and journals. </p>
-					<Icon name="book" label="book icon" size="1.5rem" slot="icon-row"/>
-				</Card>
-				<Card title="ToLearnKorean" href="https://tolearnkorean.com/">
-					<p>Website on information to learn Korean.</p>
-					<Icon name="lightbulb" label="lightbulb icon" size="1.5rem" slot="icon-row"/>
-				</Card>
-				<Card title="WebDev Guide" href="https://webdev.bryanhogan.com/">
-					<p>Guide on building well designed performant web pages.</p>
-					<Icon name="puzzle" label="puzzle icon" size="1.5rem" slot="icon-row"/>
-				</Card>
 			</div>
 		</section>
 		<section class="content-cards-container">
