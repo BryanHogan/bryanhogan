@@ -16,6 +16,8 @@ headingDetail: Things I'd love to see exist and want to work on.
 - Kanban board that is interlinked with a markdown file which also has these tasks. Better context for AI-assisted development.
 - Journaling tool with good science based journaling practices / prompts and AI assistance. Using AI for better prompts, weekly planning and feedback on things, e.g. solutions to problems or evaluations if workload is too much. Use local markdown files, make it interoperable with Obsidian.
 - Game that is combination of roguelike, deck- / dice builder, creature-collector and autocombat. Taking inspirations from SpellRogue, DOS2, Pokemon, TFT, The Bazaar, Cobalt Core, Monster Train and Darkest Dungeon. Using web-based tech-stack.
+- A resume builder that's local-first without dark design patterns. I've been making my resume using different `.json` files then rendering them as a Astro page and turning that into a PDF. This way I can separate styling and content which has many benefits. The content of each resume is a `.json` which I can easily edit within VSCode as well, which has many benefits. Want to bring these benefits to a public tool.
+- Business generator: Let user fill out Business Model Canvas, Unique-Selling-Point questions and User Journey's, then analyse and evaluate and create content such as pitch decks, marketing / promotion plans, etc. based on this information using AI. Use this as a context base for SvelteKit-Capacitor-Starter also.
 
 If you think anything on this list sounds cool, or anything on my [projects page](/projects) sounds cool as well and you'd like to work together, and/or support me, contact me at one of [my socials](/socials).
 
