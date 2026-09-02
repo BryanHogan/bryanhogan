@@ -43,8 +43,8 @@ Reach out to me via [LinkedIn](https://www.linkedin.com/in/bryanhoganme/) or sen
     </tr>
 </table>
 
-## Support my work
+## 🪙 Support my work
 
 You can support me financially here:
 
-<iframe src="https://github.com/sponsors/BryanHogan/button" title="Sponsor BryanHogan" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+[![Sponsor Bryan Hogan](https://img.shields.io/badge/Sponsor-BryanHogan-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/BryanHogan)
