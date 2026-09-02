@@ -25,7 +25,7 @@ The projects I'm working on:
 - [DailySelfTrack](https://dailyselftrack.com/)
 - [ToLearnKorean](https://tolearnkorean.com/)
 - [GameToLearnKorean](https://game.tolearnkorean.com/)
-- [Clean Wev Development Guide](https://webdev.bryanhogan.com/)
+- [Clean Web Development Guide](https://webdev.bryanhogan.com/)
 - [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template)
 - [Flow Timer](https://timer.bryanhogan.com/)
 - [AppToLearnJapanese](https://app.tolearnjapanese.com/)
