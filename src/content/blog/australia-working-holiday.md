@@ -158,6 +158,12 @@ It's very common to cook at home, as restaurants in Australia are quite expensiv
 
 You can find household items at Kmart, Big W, Target or Daiso. Chemist Warehouse is a pharmacy chain with decent prices.
 
+## Extending your visa
+
+It is also possible to extend your Working Holiday by applying for up to two additional visas, allowing you to stay for a total of 3 years. However, this has recently been made more difficult.
+
+Visa prices have also recently increased. As of September 2026, getting a second- or third-year Working Holiday visa is becoming more difficult, as applicants will have to enter a random ballot and there will be a strict cap on how many can receive another visa. The previous requirement of completing 88 days of specified work for the second-year visa, or six months for the third-year visa, will also remain in place. (*UK passport holders are exempt from the specified-work requirement.*)
+
 ## Do I recommend a Working Holiday in Australia?
 
 I came to Australia after already travelling quite a bit. I was exhausted from constantly changing where I lived, getting used to a new place and culture every time, making new friends, learning how to live in a new place, and finding new housing. What made things stressful for me was that I had to keep worrying about money, which is not fun when staying in a place as expensive as Australia.
