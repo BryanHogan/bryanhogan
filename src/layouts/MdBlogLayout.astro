@@ -17,6 +17,7 @@ import Icon from "../components/Icon.astro";
 import Button from "../components/Button.astro";
 import { mastodon, bluesky } from "../data/socials";
 import BryanHoganImage from "../assets/images/Bryan-Hogan.png";
+import featuredPosts from "../data/featured-posts";
 
 interface Props {
     post: CollectionEntry<"blog">;
@@ -29,12 +30,30 @@ const allPosts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
 const indexOfPost = allPosts.findIndex(
     (posts) => posts.id === post.id,
 );
+const currentPostTags = new Set(post.data.tags);
 const sameTagPosts = allPosts.filter(
-    (posts) => 
-        posts.data.tags && 
-        posts.data.tags[0] === post.data.tags[0] && 
-        posts.data.title !== post.data.title
+    (candidatePost) =>
+        candidatePost.id !== post.id &&
+        candidatePost.data.tags.some((tag) => currentPostTags.has(tag)),
 );
+const mostRecentPost = allPosts.find(
+    (candidatePost) => candidatePost.id !== post.id,
+);
+const featuredBlogPosts = featuredPosts
+    .map((postId) => allPosts.find((candidatePost) => candidatePost.id === postId))
+    .filter((candidatePost): candidatePost is CollectionEntry<"blog"> =>
+        candidatePost !== undefined && candidatePost.id !== post.id
+    );
+const recommendationCandidates: CollectionEntry<"blog">[] = [
+    ...sameTagPosts,
+    ...(mostRecentPost ? [mostRecentPost] : []),
+    ...featuredBlogPosts,
+];
+const recommendedPosts = [
+    ...new Map(
+        recommendationCandidates.map((candidatePost) => [candidatePost.id, candidatePost]),
+    ).values(),
+];
 const { headings } = await render(post);
 
 
@@ -167,6 +186,18 @@ const isoLastUpdate = lastUpdate.toISOString();
             <p class="publication-dates">
                 Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time> · Last updated: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time>
             </p>
+            {recommendedPosts.length > 0 && (
+                <section class="related-posts markdown-container margin-top-xl" aria-labelledby="related-posts-heading">
+                    <p id="related-posts-heading" class="margin-bottom-s" style="color: var(--color-neutral-200)"><strong>You might also enjoy</strong></p>
+                    <ul>
+                        {recommendedPosts.map((recommendedPost) => (
+                            <li>
+                                <a href={`/blog/${recommendedPost.id}/`}>{recommendedPost.data.title}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
 
         </div>
         <aside class="aside-container-right">
