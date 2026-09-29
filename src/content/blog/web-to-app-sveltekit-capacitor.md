@@ -45,41 +45,33 @@ Then `npx cap init`.
 
 ### 3. Step: Changing to static
 
-Now make the output static. First add the SvelteKit static adapter with `pnpm add -D @sveltejs/adapter-static`. 
+Now make the output static. First add the SvelteKit static adapter with `pnpm add -D @sveltejs/adapter-static`. If your project has `@sveltejs/adapter-auto`, remove it with `pnpm remove @sveltejs/adapter-auto`.
 
 Then add the file `src/routes/+layout.js` that has the following one line:
 
-```JavaScript
+```js
 export const prerender = true;
 ```
 
-This ensures every route is pre-generated as HTML.
+This tells SvelteKit to pre-generate routes as HTML.
 
-In `capacitor.config.json`, set the output directory to: `"webDir": "build",`. This tells Capacitor where to find your bundled assets.
+In `capacitor.config.json`, set the output directory to `"webDir": "build"`. This tells Capacitor where to find your bundled assets.
 
-Your files might look slightly different if your are using TypeScript, the underlying step stays the same even if the syntax and file ending looks slightly different.
+Your files might look slightly different if you are using TypeScript, but the steps stay the same.
 
-Update `svelte.config.js` to use the static adapter. We set the output to `build` so Capacitor can find the files:
+Update `vite.config.js` to use the static adapter. Keep any other options already inside `sveltekit()`. The static adapter outputs to `build` by default:
 
-```
+```js
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-    preprocess: vitePreprocess(),
-    kit: {
-        adapter: adapter({
-            pages: 'build',
-            assets: 'build',
-            fallback: null,
-            precompress: false,
-            strict: true
-        })
-    }
-};
-export default config;
+export default defineConfig({
+	plugins: [sveltekit({ adapter: adapter() })]
+});
 ```
+
+If your project uses `svelte.config.js` instead, set `kit.adapter` to `adapter()` there.
 
 Now `pnpm run dev` will already work, so use it to start the dev server and you can look at your website at `localhost:5173`. 
 
@@ -110,7 +102,7 @@ Apple makes developing for iOS a lot harder (for no good reason). I won't explor
 
 Currently any changes require a rebuild to show up in the Android emulator, but we want our changes to show up instantly.
 
-> Make sure to undo this when you build the app for production, so when you actually want to release it.
+> Remove `server.url` and `server.cleartext` from `capacitor.config.json`, then rebuild and sync before releasing the app.
 
 For that we need to adjust the `vite.config.js` and `capacitor.config.json`.
 
@@ -136,11 +128,12 @@ server: {
 
 ```
 //vite.config.js
+import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [sveltekit({ adapter: adapter() })],
 	server: {
 		host: '0.0.0.0',
 		port: 5173,
