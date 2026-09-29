@@ -1,6 +1,6 @@
 ---
 title: "From Web to Native: Building Apps with SvelteKit & Capacitor"
-description: A step-by-step tutorial on integrating CapacitorJS with SvelteKit. Convert your website into an Android/iOS app.
+description: A step-by-step tutorial on integrating CapacitorJS with SvelteKit. Convert your website into an Android app.
 coverImage: ../blog-assets/covers/Web-To-App-SvelteKit-Capacitor-Cover.svg
 pubDate: 2026-01-02T12:27:14+00:00
 tags:
@@ -17,7 +17,7 @@ CapacitorJS allows you to wrap any standard web application (HTML/CSS/JS) into a
 
 In this post I’ll walk through the setup I use:
 - SvelteKit for the actual app (static build)
-- Capacitor for Android & iOS
+- Capacitor for Android
 - Adjustments for live (hot module) reload inside the Android emulator
 
 ## General steps:
@@ -26,7 +26,7 @@ We will do the following:
 1. Create a project using SvelteKit.
 2. Add Capacitor to this SvelteKit project.
 3. Change the build output to static.
-4. Add the mobile platforms (Android & iOS)
+4. Add the Android platform.
 5. Implement live / hot module reload so that changes instantly show up in the Android emulator.
 
 ### 1. Step: Set up SvelteKit
@@ -75,7 +75,7 @@ If your project uses `svelte.config.js` instead, set `kit.adapter` to `adapter()
 
 Now `pnpm run dev` will already work, so use it to start the dev server and you can look at your website at `localhost:5173`. 
 
-### 4. Step: Adding mobile platforms
+### 4. Step: Adding the Android platform
 
 Now we are very close to being able to run our web app on a mobile device.
 
@@ -93,8 +93,6 @@ The `sync` command copies your built web assets to the native Android project.
 Next step is to install [Android Studio](https://developer.android.com/studio) and setup an emulator for this to work.
 
 Now to open the project's Android version with an Android emulator do `npx cap open android`. 
-
-Apple makes developing for iOS a lot harder (for no good reason). I won't explore Virtual Machines, remote access to macOS devices or other solutions in this blog post. But generally this will "need" a device running macOS and Xcode.
 
 > If you are using Visual Studio Code I also highly recommend the [webnative extension](https://webnative.dev/).
 
