@@ -20,6 +20,10 @@ code {
     font-family: var(--font-mono);
 }
 
+details > summary {
+    cursor: pointer;
+}
+
 p,
 li,
 details,
