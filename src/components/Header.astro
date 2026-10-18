@@ -26,24 +26,23 @@ import Icon from "./Icon.astro";
             <button
                 aria-controls="primary-navigation"
                 aria-expanded="false"
+                aria-label="Navigation menu"
                 class="menu-toggle-button"
             >
                 <Icon
                     name="bars"
                     size="1.5rem"
-                    label="Bars"
                     class="hamburger-icon"
                     color="var(--color-neutral-300)"
                 />
                 <Icon
                     name="close"
                     size="1.5rem"
-                    label="Close"
                     class="close-icon"
                     color="var(--color-neutral-300)"
                 />
             </button>
-            <nav class="primary-navigation">
+            <nav id="primary-navigation" class="primary-navigation">
                 <ul role="list">
                     <li><a href="/projects">Projects</a></li>
                     <li><a href="/about">About</a></li>
@@ -169,7 +168,11 @@ import Icon from "./Icon.astro";
 </style>
 
 <script>
+    let navigationController: AbortController | undefined;
+
     function setupNavigation() {
+        navigationController?.abort();
+
         const navigationToggle = document.querySelector(
             '[aria-controls="primary-navigation"]',
         ) as HTMLButtonElement | null;
@@ -181,6 +184,8 @@ import Icon from "./Icon.astro";
         ) as HTMLElement | null;
 
         if (!navigationToggle || !navigation) return;
+
+        navigationController = new AbortController();
 
         const closeMenu = (event: Event) => {
             if (navigation.contains(event.target as Node)) return;
@@ -204,11 +209,12 @@ import Icon from "./Icon.astro";
             }
         };
 
-        navigationToggle.removeEventListener("click", toggleMenu);
-        document.removeEventListener("click", closeMenu);
-
-        navigationToggle.addEventListener("click", toggleMenu);
-        document.addEventListener("click", closeMenu);
+        navigationToggle.addEventListener("click", toggleMenu, {
+            signal: navigationController.signal,
+        });
+        document.addEventListener("click", closeMenu, {
+            signal: navigationController.signal,
+        });
     }
 
     setupNavigation();

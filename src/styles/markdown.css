@@ -90,7 +90,7 @@
     }
     code {
         background-color: var(--color-neutral-800) !important;
-        font-size: var(--variable-font-size);
+        font-size: inherit;
     }
     pre {
         padding: var(--space-xs) var(--space-s);

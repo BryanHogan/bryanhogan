@@ -44,7 +44,7 @@ h6 {
 }
 
 a {
-    color: var(--color-accent-300);
+    color: inherit;
     transition: color var(--transition-normal);
 }
 

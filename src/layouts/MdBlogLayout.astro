@@ -83,10 +83,9 @@ const isoLastUpdate = lastUpdate.toISOString();
         {post.data.emoji && !post.data.coverImage && <div class="flex-center"><p class="text-align-center emoji" transition:name={post.id} style="font-size: 4rem;">{post.data.emoji}</p></div>}
     </div>
     <div class="sub-menu-container full-width">
-        <button onclick="
-        history.back()
-        " class="back-button">
+        <button type="button" onclick="history.back()" class="back-button" aria-label="Go back">
             <svg
+                aria-hidden="true"
                 class="arrow-back"
                 width="28"
                 height="28"
@@ -446,6 +445,7 @@ const isoLastUpdate = lastUpdate.toISOString();
         padding-top: var(--space-2xs);
 
         .back-button {
+            cursor: pointer;
             border: none;
             background-color: var(--color-neutral-900);
             color: var(--color-neutral-300);
@@ -534,7 +534,7 @@ const isoLastUpdate = lastUpdate.toISOString();
 			background-color: var(--color-neutral-800);
 			border-radius: var(--border-radius-m) 0 0 var(--border-radius-m);
 			padding: var(--space-m);
-			box-shadow: var(--shadow-m);
+			box-shadow: var(--box-shadow-m);
 			min-width: 200px;
 			max-width: calc(100vw - var(--space-xl));
 			z-index: 99;
