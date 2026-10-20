@@ -22,6 +22,11 @@ import Icon from "../components/Icon.astro";
         <li><CardMin href={socials.mastodon.href} title={socials.mastodon.name}><Icon name={socials.mastodon.icon} label={socials.mastodon.iconalt} size="2.5rem"/></CardMin></li>
         <li><CardMin href={socials.github.href} title={socials.github.name}><Icon name={socials.github.icon} label={socials.github.iconalt} size="2.5rem"/></CardMin></li>
         <li><CardMin href={socials.linkedin.href} title={socials.linkedin.name}><Icon name={socials.linkedin.icon} label={socials.linkedin.iconalt} size="2.5rem"/></CardMin></li>
+        <li>
+            <CardMin href="mailto:Bryan@BryanHogan.com" title="Email: Bryan@BryanHogan.com" targetBlank={false}>
+                <Icon name="email" label="Email Bryan Hogan" size="2.5rem" />
+            </CardMin>
+        </li>
     </ul>
 </BaseLayout>
 

@@ -59,7 +59,6 @@ const socials: Socials = {
         icon: "bluesky",
         iconalt: "BlueSky logo"
     }
-
 }
 export const { instagram, linkedin, youtube, twitch, github, substack, medium, threads, mastodon, bluesky } = socials;
 

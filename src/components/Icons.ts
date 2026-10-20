@@ -61,6 +61,8 @@ export const AllIcons = {
         '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 2H14"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14L15 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     updated:
         '<svg width="24" height="24" viewBox="0 0 24 24" style="fill:none; fill-rule:nonzero; stroke:currentColor; stroke-width:2px;" xmlns="http://www.w3.org/2000/svg"><path d="M21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3C14.52 3 16.93 4 18.74 5.74L21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 3V8H16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    email:
+		'<path d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-.41 2-5.88 5.88a1 1 0 0 1-1.42 0L5.41 6ZM20 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7.41l5.88 5.88a3 3 0 0 0 4.24 0L20 7.41Z"/>',
     };
 export const Icons = {
     ...AllIcons
