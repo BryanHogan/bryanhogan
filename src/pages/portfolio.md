@@ -143,13 +143,11 @@ The app is currently being tested in-house and not released yet.
 
 ## Other
 
-### Lenevin
+### Visual Design
 
 ![Lenevin Instagram product post for an organic cress salve, green botanical branding on a cream background](../assets/images/portfolio/Lenevin-Final-Instagram-Post.png)
 
 Example of social media content design.
-
-### Icon Design
 
 ![A grid of custom line and solid glyph icons on a dark background](../assets/images/portfolio/Portfolio-Icon-Work.png)
 
