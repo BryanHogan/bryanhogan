@@ -23,7 +23,7 @@ const featuredBlogPosts = featuredPosts
 
 <BaseLayout
 	title="Bryan Hogan"
-	description="I'm Bryan Hogan, a Web Developer, Digital Creator and Blogger. Welcome to my personal page for you."
+	description="I'm Bryan Hogan, a Web Developer, Designer, Digital Creator and Blogger. Welcome to my personal page for you."
 >
 	<section class="intro-section-container padding-top-l padding-bottom-l">
 		<div class="intro-container">
@@ -34,10 +34,11 @@ const featuredBlogPosts = featuredPosts
 					src={BryanHoganImage}
 					alt="Simple studio-style headshot of Bryan Hogan wearing a black collared shirt on a light gray background"
 					width={237}
-					height={234}
+					height={237}
 				/>
 			</div>
-			<p>I'm a Developer, Designer and Builder.</p>
+			<p>I build useful digital experiences. Combining design and development.</p>
+			<p> Creator of <a href="https://dailyselftrack.com/">DailySelfTrack</a>, <a href="https://starter.bryanhogan.com/">Astro Starter Template</a> and <a href="/projects">more</a>.</p>
 		</div>
 		<div class="intro-button-navigation">
 			<Button text="Blog" href="/blog" buttonStyle="gradient set-size"/>
@@ -125,6 +126,12 @@ const featuredBlogPosts = featuredPosts
 	.intro-container {
 		margin-inline: auto;
 		max-width: max-content;
+		& > p {
+			line-height: 1.45;
+		}
+		& > p + p {
+			margin-block-start: 0.5em;
+		}
 		& .intro {
 			display: flex;
 			flex-direction: column-reverse;
@@ -132,8 +139,11 @@ const featuredBlogPosts = featuredPosts
 		}
 		& .image {
 			align-self: center;
-			width: auto;
+			flex-shrink: 0;
+			width: 7rem;
 			height: 7rem;
+			object-fit: cover;
+			border-radius: 50%;
 		}
 	}
 	.intro-button-navigation {
@@ -189,6 +199,7 @@ const featuredBlogPosts = featuredPosts
 	@media only screen and (min-width: 48rem) {
 		.intro-container .intro {
 			flex-direction: row;
+			justify-content: center;
 		}
 		.intro-button-navigation {
 			margin-block: var(--space-l);
