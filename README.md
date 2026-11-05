@@ -20,14 +20,15 @@ Read more about me on my [about page](https://bryanhogan.com/about).
 
 The projects I'm working on:
 
-- [DailySelfTrack](https://dailyselftrack.com/)
-- [ToLearnKorean](https://tolearnkorean.com/)
-- [GameToLearnKorean](https://game.tolearnkorean.com/)
-- [Clean Web Development Guide](https://webdev.bryanhogan.com/)
-- [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template)
-- [Flow Timer](https://timer.bryanhogan.com/)
-- [AppToLearnJapanese](https://app.tolearnjapanese.com/)
-- [Obsidian Vault Template](https://github.com/BryanHogan/obsidian-vault-template)
+- [DailySelfTrack](https://dailyselftrack.com/) - A customizable self-tracking app combining elements from habit trackers, health logging and journal apps.
+- [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template) - A simple scalable bloat-free web starter using the Astro frame build upon the teachings from my Clean Web Development Guide.
+- [UV Todo](https://todo.bryanhogan.com/) - A simple to do web app sorting tasks based on urgency and value estimations.
+- [ToLearnKorean](https://tolearnkorean.com/) - A guide teaching the Korean language.
+- [GameToLearnKorean](https://game.tolearnkorean.com/) - Gamified app to practice and learn Korean words.
+- [Clean Web Development Guide](https://webdev.bryanhogan.com/) - A web development focused on building scalable performant well-designed websites.
+- [Flow Timer](https://timer.bryanhogan.com/) - Simple tool for time-boxing.
+- [AppToLearnJapanese](https://app.tolearnjapanese.com/) - Web app to practice and memorize Hiragana.
+- [Obsidian Vault Template](https://github.com/BryanHogan/obsidian-vault-template) - Vault template for Obsidian showcasing my current Obsidian system.
 
 I describe these projects in more detail on my [/projects](https://bryanhogan.com/projects) page.
 
