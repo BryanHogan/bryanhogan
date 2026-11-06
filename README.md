@@ -1,6 +1,6 @@
-# Hello, I'm Bryan Hogan 👋
+# Hello, I'm Bryan Hogan
 
-I build digital things. I majored in a combination of code, design and entrepreneurship and have been working in this interrelated field since.
+I build useful digital experiences. I majored in a combination of code, design and entrepreneurship and have been working in this interrelated field since.
 
 Web pages about me:
 
@@ -10,30 +10,29 @@ Web pages about me:
     - [/portfolio](https://bryanhogan.com/portfolio)
     - [/about](https://bryanhogan.com/about)
 
-## 🧭 Current and Recent Endeavors
-
 Find what I'm currently up to on my [now page](https://bryanhogan.com/now).
 
 I got a B.Sc. in [Code & Context](https://bryanhogan.com/blog/what-is-coco). My final project and thesis there was about [DailySelfTrack](https://dailyselftrack.com/).
 
-[I studied a semester at Hanyang University erica](https://bryanhogan.com/blog/hanyang-erica-exchange) in South Korea. And then one semester at University of Seoul.
+Read more about me on my [about page](https://bryanhogan.com/about).
 
-## 🛠️ Projects
+## Projects
 
 The projects I'm working on:
 
-- [DailySelfTrack](https://dailyselftrack.com/)
-- [ToLearnKorean](https://tolearnkorean.com/)
-- [GameToLearnKorean](https://game.tolearnkorean.com/)
-- [Clean Web Development Guide](https://webdev.bryanhogan.com/)
-- [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template)
-- [Flow Timer](https://timer.bryanhogan.com/)
-- [AppToLearnJapanese](https://app.tolearnjapanese.com/)
-- [Obsidian Vault Template](https://github.com/BryanHogan/obsidian-vault-template)
+- [DailySelfTrack](https://dailyselftrack.com/) - A customizable self-tracking app combining elements from habit trackers, health logging and journal apps.
+- [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template) - A simple scalable bloat-free web starter using the Astro frame build upon the teachings from my Clean Web Development Guide.
+- [UV Todo](https://todo.bryanhogan.com/) - A simple to do web app sorting tasks based on urgency and value estimations.
+- [ToLearnKorean](https://tolearnkorean.com/) - A guide teaching the Korean language.
+- [GameToLearnKorean](https://game.tolearnkorean.com/) - Gamified app to practice and learn Korean words.
+- [Clean Web Development Guide](https://webdev.bryanhogan.com/) - A web development focused on building scalable performant well-designed websites.
+- [Flow Timer](https://timer.bryanhogan.com/) - Simple tool for time-boxing.
+- [AppToLearnJapanese](https://app.tolearnjapanese.com/) - Web app to practice and memorize Hiragana.
+- [Obsidian Vault Template](https://github.com/BryanHogan/obsidian-vault-template) - Vault template for Obsidian showcasing my current Obsidian system.
 
 I describe these projects in more detail on my [/projects](https://bryanhogan.com/projects) page.
 
-## 📪 Contact
+## Contact
 
 Reach out to me via [LinkedIn](https://www.linkedin.com/in/bryanhoganme/) or send a mail to Bryan@BryanHogan.com
 
