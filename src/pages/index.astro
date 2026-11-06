@@ -25,25 +25,25 @@ const featuredBlogPosts = featuredPosts
 	title="Bryan Hogan"
 	description="I'm Bryan Hogan, a Web Developer, Designer, Digital Creator and Blogger. Welcome to my personal page for you."
 >
-	<section class="intro-section-container padding-top-l padding-bottom-l">
-		<div class="intro-container">
-			<div class="intro margin-bottom-s">
+	<section class="intro-section-container padding-top-l padding-bottom-2xl">
+		<div class="hero">
+			<div class="intro-container">
 				<h1>Hi, I'm<br />Bryan Hogan.</h1>
-				<Image
-					class="image"
-					src={BryanHoganImage}
-					alt="Simple studio-style headshot of Bryan Hogan wearing a black collared shirt on a light gray background"
-					width={237}
-					height={237}
-				/>
+				<p>I build useful digital experiences. Combining design and development.</p>
+				<p> Creator of <a href="https://dailyselftrack.com/">DailySelfTrack</a>, <a href="https://starter.bryanhogan.com/">Astro Starter Template</a> and <a href="/projects">more</a>.</p>
+				<div class="intro-button-navigation">
+					<Button text="Blog" href="/blog" buttonStyle="gradient set-size"/>
+					<Button text="Follow" href="/follow" buttonStyle="neutral-strong set-size"/>
+					<Button text="Projects" href="/projects" buttonStyle="neutral-strong set-size"/>
+				</div>
 			</div>
-			<p>I build useful digital experiences. Combining design and development.</p>
-			<p> Creator of <a href="https://dailyselftrack.com/">DailySelfTrack</a>, <a href="https://starter.bryanhogan.com/">Astro Starter Template</a> and <a href="/projects">more</a>.</p>
-		</div>
-		<div class="intro-button-navigation">
-			<Button text="Blog" href="/blog" buttonStyle="gradient set-size"/>
-			<Button text="Follow" href="/follow" buttonStyle="neutral-strong set-size"/>
-			<Button text="Projects" href="/projects" buttonStyle="neutral-strong set-size"/>
+			<Image
+				class="image"
+				src={BryanHoganImage}
+				alt="Simple studio-style headshot of Bryan Hogan wearing a black collared shirt on a light gray background"
+				width={512}
+				height={512}
+			/>
 		</div>
 	</section>
 	<section class="all-pages-nav-section margin-bottom-2xl">
@@ -123,20 +123,10 @@ const featuredBlogPosts = featuredPosts
 		min-height: calc(100svh - var(--footer-height) - var(--navbar-height));
 		justify-content: center;
 	}
-	.intro-container {
-		margin-inline: auto;
-		max-width: max-content;
-		& > p {
-			line-height: 1.45;
-		}
-		& > p + p {
-			margin-block-start: 0.5em;
-		}
-		& .intro {
-			display: flex;
-			flex-direction: column-reverse;
-			gap: var(--space-xs);
-		}
+	.hero {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: var(--space-xs);
 		& .image {
 			align-self: center;
 			flex-shrink: 0;
@@ -146,12 +136,22 @@ const featuredBlogPosts = featuredPosts
 			border-radius: 50%;
 		}
 	}
+	.intro-container {
+		margin-inline: auto;
+		max-width: max-content;
+		& > h1 {
+			margin-block-end: var(--space-s);
+		}
+		& > p + p {
+			margin-block-start: var(--space-xs);
+		}
+	}
 	.intro-button-navigation {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-block: var(--space-l);
+		margin-block-start: var(--space-l);
 		gap: var(--space-m) var(--space-l);
 	}
 	.all-pages-nav-section {
@@ -197,13 +197,22 @@ const featuredBlogPosts = featuredPosts
 		max-width: 40rem;
 	}
 	@media only screen and (min-width: 48rem) {
-		.intro-container .intro {
+		.hero {
 			flex-direction: row;
+			align-items: center;
 			justify-content: center;
+			gap: var(--space-2xl);
+			& .image {
+				width: clamp(10rem, 18vw, 13rem);
+				height: clamp(10rem, 18vw, 13rem);
+			}
+		}
+		.intro-container {
+			margin-inline: 0;
+			max-width: 30rem;
 		}
 		.intro-button-navigation {
-			margin-block: var(--space-l);
-			gap: var(--space-m) var(--space-l);
+			justify-content: flex-start;
 		}
 		.blog-content-cards, .projects-content-cards {
 			grid-template-columns: 1fr 1fr 1fr;
