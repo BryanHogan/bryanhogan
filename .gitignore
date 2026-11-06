@@ -24,3 +24,6 @@ pnpm-debug.log*
 .idea/
 
 src/content/.obsidian
+
+# Playwright MCP screenshots/snapshots
+.playwright-mcp/
