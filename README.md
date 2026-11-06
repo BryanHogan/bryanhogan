@@ -1,6 +1,6 @@
 # Hello, I'm Bryan Hogan
 
-I build digital things. I majored in a combination of code, design and entrepreneurship and have been working in this interrelated field since.
+I build useful digital experiences. I majored in a combination of code, design and entrepreneurship and have been working in this interrelated field since.
 
 Web pages about me:
 
