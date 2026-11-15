@@ -14,7 +14,7 @@ I've gone abroad, lived as a nomad, recently finished my first larger contract a
 
 So which projects am I working on now, and why?
 
-*This post was published in October 2026, as time goes on my priorities will shift. My [now page](/now) will be kept up to date.*
+_This post was published in October 2026, as time goes on my priorities will shift. My_ _[now page](/now)_ _will be kept up to date._
 
 ## DailySelfTrack App
 
@@ -87,7 +87,7 @@ The landing page on [starter.bryanhogan.com](https://starter.bryanhogan.com/) us
 
 ![Landing page hero section of the Astro Starter Template as shown on starter.bryanhogan.com](../blog-assets/images/Project-Astro-Starter-Template-Landing-Page-Hero.png)
 
-It uses the Astro framework, a simple CSS (design) system utilising a token-based approach and allows you to write pages with markdown / mdx. This is much better than using TailwindCSS or some other bloated approach. The UX/UI is also quite clean, none of the typical mistakes I regularly find on other blog and company pages.
+It uses the Astro framework, a simple CSS (design) system utilising a token-based approach and allows you to write pages with markdown / mdx. I think this works much better as a foundation rather than using TailwindCSS or some other bloated approach. The UX/UI is also quite clean, none of the typical mistakes I regularly find on other blog and company pages.
 
 ## Freelancer
 
@@ -106,20 +106,20 @@ My [Obsidian Vault Template](https://github.com/BryanHogan/obsidian-vault-templa
 I mention my projects on my [/projects](/projects) page, which I will also continue to keep updated. Here is the list of projects I mentioned in this post, including the GitHub repository if available:
 
 - DailySelfTrack
-	- Website: [dailyselftrack.com](https://dailyselftrack.com/)
+    - Website: [dailyselftrack.com](https://dailyselftrack.com/)
 - Astro Starter Template
-	- Website: [starter.bryanhogan.com](https://starter.bryanhogan.com/)
-	- GitHub: [github.com/BryanHogan/astro-starter-template](https://github.com/BryanHogan/astro-starter-template)
+    - Website: [starter.bryanhogan.com](https://starter.bryanhogan.com/)
+    - GitHub: [github.com/BryanHogan/astro-starter-template](https://github.com/BryanHogan/astro-starter-template)
 - ToLearnKorean
-	- Website: [tolearnkorean.com](https://tolearnkorean.com/)
-	- GitHub: [github.com/BryanHogan/learnkorean](https://github.com/BryanHogan/learnkorean)
+    - Website: [tolearnkorean.com](https://tolearnkorean.com/)
+    - GitHub: [github.com/BryanHogan/learnkorean](https://github.com/BryanHogan/learnkorean)
 - Game.ToLearnKorean.com
-	- Website: [game.tolearnkorean.com](https://game.tolearnkorean.com/)
+    - Website: [game.tolearnkorean.com](https://game.tolearnkorean.com/)
 - Clean Web Development Guide
     - Website: [webdev.bryanhogan.com](https://webdev.bryanhogan.com/)
-	- GitHub: [github.com/BryanHogan/webdev](https://github.com/BryanHogan/webdev)
+    - GitHub: [github.com/BryanHogan/webdev](https://github.com/BryanHogan/webdev)
 - Learn Hiragana Web App:
     - Website: [app.tolearnjapanese.com](https://app.tolearnjapanese.com/)
 - Flow Timer:
-	- Website: [timer.bryanhogan.com](https://timer.bryanhogan.com/)
-	- GitHub: [github.com/BryanHogan/flow-timer](https://github.com/BryanHogan/flow-timer)
+    - Website: [timer.bryanhogan.com](https://timer.bryanhogan.com/)
+    - GitHub: [github.com/BryanHogan/flow-timer](https://github.com/BryanHogan/flow-timer)
