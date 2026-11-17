@@ -25,7 +25,7 @@ Tend to stay more concise with this file, and especially avoid instructions that
 
 A good AGENTS.md file includes an outline of the project, commands, code style preferences and common gotchas.
 
-*When using Claude, create a CLAUDE.md file that just says `@AGENTS.md`, then it knows to use that file instead.*
+_When using Claude, create a CLAUDE.md file that just says `@AGENTS.md`, then it knows to use that file instead._
 
 ## 3. Be specific and mention files
 
@@ -35,7 +35,7 @@ Be clear and specific with your instructions. Explicitly mention which component
 
 With the AGENTS.md file we have something that is used for **every** session, but what about other information we want to re-use? Create a `/context` folder for this, fill it with relevant knowledge (.md files) that you want to reference, e.g. `user-journeys.md`, `design.md`, `notification-plans.md` and similar.
 
-For some providers you could also use "skills" for this, e.g. Claude Skills, although I found the `/context` approach to work well enough already. I'd prefer these over skills usually as I don't have any lock-in into any specific provider here and keeping them project specific and versioned is easy.
+A somewhat related concept are "skills", e.g. Claude Skills. You can use these for agent instructions which you reuse. These can be specific things such as to do a code review or security review, and how to do it.
 
 Files I frequently have in my `/context` folder:
 
@@ -63,11 +63,11 @@ You might also want to write some tests. By running automated tests you can catc
 
 You can also add more things to your AI model / interface. There are plugins and MCPs (Model Context Protocol) which help AI connect to external data sources. Some providers use "Plugin" as the umbrella term for "Skills" (reusable instructions), "Apps" (connection to external sources) and "MCP servers" (connection to external sources).
 
-I would be careful with adding them though. As this additional content might make your AI agent use more tokens, increasing the context size. It might also add additional instructions that you don't even want. So be very selective with what you add.
+Be careful with adding them though. As this additional content might make your AI agent use more tokens, increasing the context size, and because of security. It might also add additional instructions that you don't even want. So be very selective with what you add.
 
-For example I've been happy using Codex with only the [Svelte MCP](https://svelte.dev/docs/ai/overview) as it improved the Svelte code it wrote (Svelte is the web framework I frequently use). There is probably a framework / tool specific MCP server plugin for the tool you are using that could be worth exploring. I'd suggest using official, narrow MCPs over generic docs MCPs though.
+For example I've been happy using Codex with the [Svelte MCP](https://svelte.dev/docs/ai/overview) as it improved the Svelte code it wrote (Svelte is the web framework I frequently use). There is probably a framework / tool specific MCP server plugin for the tool you are using that could be worth exploring. I'd suggest using official, narrow MCPs over generic docs MCPs though.
 
-Other MCPs I found cool was the [Playwright MCP](https://github.com/microsoft/playwright-mcp) and the [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp). Both of these let the AI agent interact with the browser, e.g. "check" the outcome of the written code by itself. 
+Other MCPs I found useful were the [Playwright MCP](https://github.com/microsoft/playwright-mcp) and the [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp). Both of these let the AI agent interact with the browser, e.g. "check" the outcome of the written code by itself. 
 
 ## But be careful
 
