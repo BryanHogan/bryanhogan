@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 
 import { glob, file } from 'astro/loaders';
 
@@ -18,7 +19,7 @@ const blog = defineCollection({
     }).refine((data) => data.coverImage || data.emoji, {
         message: "Either coverImage or emoji must be provided.",
         path: ["coverImage", "emoji"]
-    })
+    }).and(z.object({ coverImage: z.string().optional() }).transform(({ coverImage }) => ({ coverImagePath: coverImage })))
 });
 
 export const collections = { blog };
