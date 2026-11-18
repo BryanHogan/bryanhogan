@@ -28,9 +28,3 @@ All these steps should take you around 2 min to complete.
 
 Now the shortcut works and always opens the specified Vault.  
 I really like this solution, since it even opens your preferred Vault even if a different one is currently open.
-
-## Video showcase
-
-Here is a video that shows an example of how to create a shortcut this way:
-
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/NRtVAFfqoyg?si=ic2dxbat_Hq4GhHi" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
