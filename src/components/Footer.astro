@@ -1,6 +1,10 @@
 ---
 import Icon from "./Icon.astro";
 import socials from "../data/socials";
+interface Props {
+    markdownHref?: string;
+}
+const { markdownHref } = Astro.props;
 ---
 
 <footer class="set-base-layout-max-width">
@@ -53,6 +57,7 @@ import socials from "../data/socials";
         <li><p><a href="/portfolio">Portfolio</a></p></li>
         <li><p><a href="/privacy">Privacy</a></p></li>
         <li><p><a href="/sitemap-index.xml">Sitemap</a></p></li>
+        {markdownHref && <li><p><a href={markdownHref} data-astro-reload>View as Markdown</a></p></li>}
     </ul>
 </footer>
 

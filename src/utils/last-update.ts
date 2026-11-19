@@ -14,38 +14,17 @@ const cache = new Map<string, Date>();
 /**
  * Returns the last modified Date for a given file path.
  * Accepts the SAME input your component passes, e.g. "src/content/blog/<slug>.md".
- * Tries local git (fast) -> GitHub API -> falls back to current date.
+ * Returns undefined when neither local Git nor GitHub has a date.
  */
-export async function getLastModifiedDate(file_path: string): Promise<Date> {
-  try {
-    // Normalize to POSIX separators
-    const localPath = file_path.replace(/\\/g, "/");
+export async function getLastModifiedDate(file_path: string): Promise<Date | undefined> {
+  const localPath = file_path.replace(/\\/g, "/");
+  const cacheKey = `${DEFAULT_BRANCH}:${localPath}`;
+  const cached = cache.get(cacheKey);
+  if (cached) return cached;
 
-    // Cache by path+branch so multiple cards don't repeat work
-    const cacheKey = `${DEFAULT_BRANCH}:${localPath}`;
-    const cached = cache.get(cacheKey);
-    if (cached) return cached;
-
-    // 1) Try local git first (fast, avoids rate limits)
-    const fromGit = await getFromLocalGit(localPath);
-    if (fromGit) {
-      cache.set(cacheKey, fromGit);
-      return fromGit;
-    }
-
-    // 2) Fallback to GitHub API
-    const fromAPI = await getFromGitHub(localPath, DEFAULT_BRANCH);
-    if (fromAPI) {
-      cache.set(cacheKey, fromAPI);
-      return fromAPI;
-    }
-
-    // 3) Preserve previous behavior: fallback to "now"
-    throw new Error("No commit data found");
-  } catch (error) {
-    console.error("Error fetching last modified date:", error);
-    return new Date(); // keep original fallback
-  }
+  const date = await getFromLocalGit(localPath) ?? await getFromGitHub(localPath, DEFAULT_BRANCH);
+  if (date) cache.set(cacheKey, date);
+  return date;
 }
 
 async function getFromLocalGit(

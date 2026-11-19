@@ -1,5 +1,7 @@
 ---
 layout: ../layouts/NowLayout.astro
+heading: Now
+headingDetail: What Bryan Hogan is up to
 location: Cologne in Germany
 ---
   

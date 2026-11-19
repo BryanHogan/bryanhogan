@@ -59,14 +59,13 @@ const { headings } = await render(post);
 
 
 const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/content/blog/${post.id}.md`));
-const formattedDateLastUpdate = lastUpdate.toLocaleDateString("en-GB");
-const isoLastUpdate = lastUpdate.toISOString();
 ---
 
 <BaseLayout 
     title={post.data.title} 
     description={post.data.description} 
     ogType="article"
+    markdownHref={`/blog/${post.id}.md`}
     ogImage={new URL(`/og/blog/${post.id}.png`, Astro.site).href}
     ogImageAlt={`${post.data.title} — BryanHogan.com`}
     articlePublished={post.data.pubDate}
@@ -185,7 +184,7 @@ const isoLastUpdate = lastUpdate.toISOString();
                 </div>
             </div>
             <p class="publication-dates">
-                Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time> · Last updated: <time datetime={isoLastUpdate}>{formattedDateLastUpdate}</time>
+                Published: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString("en-GB")}</time>{lastUpdate && <> · Last updated: <time datetime={lastUpdate.toISOString()}>{lastUpdate.toLocaleDateString("en-GB")}</time></>}
             </p>
             {recommendedPosts.length > 0 && (
                 <section class="related-posts markdown-container margin-top-xl" aria-labelledby="related-posts-heading">

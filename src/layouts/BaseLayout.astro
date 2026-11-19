@@ -8,11 +8,13 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEOHead from "../components/SEOHead.astro";
 import { ClientRouter } from "astro:transitions";
+import { markdownPages } from "../utils/markdown";
 
 interface Props {
     title: string;
     description: string;
     canonical?: string;
+    markdownHref?: string;
     ogTitle?: string;
     ogDescription?: string;
     ogImage?: string;
@@ -41,6 +43,9 @@ const {
     author
 } = Astro.props;
 
+const pathname = Astro.url.pathname.replace(/\/$/, "");
+const markdownHref = Astro.props.markdownHref ??
+    (markdownPages.includes(pathname.slice(1)) ? `${pathname}.md` : undefined);
 ---
 
 <!doctype html>
@@ -66,6 +71,7 @@ const {
         <link rel="icon" href="/favicon.ico">
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="sitemap" type="application/xml" href="/sitemap-index.xml">
+        {markdownHref && <link rel="alternate" type="text/markdown" href={markdownHref} />}
         <meta name="theme-color" content="#A594D3">
         <link rel="alternate" type="application/rss+xml" title="Blog posts by Bryan Hogan" href={new URL("rss.xml", Astro.site)} />
         <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="88cecc6c-ebbb-4b08-a5d1-b07a8f7383df"></script>
@@ -79,7 +85,7 @@ const {
                 <slot />
 		    </div>
         </div>
-        <Footer />
+        <Footer markdownHref={markdownHref} />
     </body>
 </html>
 

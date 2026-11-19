@@ -7,16 +7,15 @@ import "../styles/markdown.css";
 const { frontmatter } = Astro.props;
 
 const lastModified = await getLastModifiedDate("src/pages/now.md");
-const formattedDate = lastModified.toLocaleDateString("en-UK", {
+const formattedDate = lastModified?.toLocaleDateString("en-GB", {
     year: "numeric",
     month: "long",
     day: "numeric",
 });
-const isoString = lastModified.toISOString();
 ---
 <BaseLayout title="Now - Bryan Hogan" description="What am I doing now? Bryan Hogan's Now page.">
-    <Hero heading="Now" headingDetail="What Bryan Hogan is up to">
-        <p class="text-align-center">Last updated on <time datetime={isoString}>{formattedDate}</time><br/>from {frontmatter.location}.</p>
+    <Hero heading={frontmatter.heading} headingDetail={frontmatter.headingDetail}>
+        <p class="text-align-center">{lastModified && <>Last updated on <time datetime={lastModified.toISOString()}>{formattedDate}</time><br/></>}from {frontmatter.location}.</p>
     </Hero>
     <div class="markdown-container margin-top-xl margin-bottom-xl margin-inline-auto">
         <slot />

@@ -5,11 +5,17 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 /** @returns {import('astro').AstroIntegration} */
-function blogAssetsPreview() {
+function blogAssets() {
   const blogAssetsDir = path.resolve('src/content/blog-assets');
   return {
-    name: 'blog-assets-preview',
+    name: 'blog-assets',
     hooks: {
+      'astro:build:done': async ({ dir }) => {
+        await fs.promises.cp(path.join(blogAssetsDir, 'images'), new URL('blog-assets/images/', dir), {
+          recursive: true,
+          filter: (source) => !path.basename(source).startsWith('.'),
+        });
+      },
       'astro:server:setup': ({ server }) => {
         server.middlewares.use('/blog-assets',
           /** @param {import('node:http').IncomingMessage} req @param {import('node:http').ServerResponse} res @param {() => void} next */
@@ -40,7 +46,7 @@ function blogAssetsPreview() {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bryanhogan.com',
-  integrations: [sitemap(), blogAssetsPreview()],
+  integrations: [sitemap(), blogAssets()],
   server: {
     host: true,
     port: 4321,
