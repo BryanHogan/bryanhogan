@@ -451,7 +451,7 @@ const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/conte
         }
     }
 
-    @media only screen and (min-width: 1000px) {
+    @media only screen and (width >= 75rem) {
 		.toc {
 			width: 100%;
             max-width: 430px;
@@ -471,19 +471,24 @@ const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/conte
 			padding: 1rem;
 		}
 	}
-    @media only screen and (max-width: 999.9px) {
+    @media only screen and (width < 75rem) {
         .content-and-toc {
             flex-direction: column;
         }
-        
+
+        .main-container {
+            margin-inline: auto;
+        }
+
 		.toc {
 			display: contents;
 		}
 
 		.toc-icon {
 			position: fixed;
-			top: calc(var(--space-2xs) + var(--navbar-height));
-			right: var(--space-s);
+			top: calc(var(--navbar-height) / 2);
+			translate: 0 -50%;
+			right: 3rem;
 			display: block;
 			cursor: pointer;
 			padding: var(--space-2xs);
@@ -491,7 +496,7 @@ const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/conte
 			background-color: transparent;
 			border-radius: var(--border-radius-m);
 			transition: background-color var(--transition-normal);
-			z-index: 100;
+			z-index: 21;
             color: var(--color-neutral-300);
 		}
 
@@ -499,7 +504,6 @@ const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/conte
 		.toc-icon:focus-within {
 			background-color: var(--color-neutral-800);
 		}
-
 		.toc-icon svg {
 			transition: transform var(--transition-normal);
 		}
@@ -550,6 +554,6 @@ const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/conte
             const tocItems = document.querySelector(".toc-items");
             const keepOpen = tocItems?.contains(event.target) && !event.target.closest("a");
             if (!keepOpen) tocToggle.setAttribute("aria-expanded", "false");
-        });
+        }, { capture: true });
     }
 </script>

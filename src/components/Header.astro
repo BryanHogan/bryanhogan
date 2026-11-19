@@ -123,7 +123,10 @@ import Icon from "./Icon.astro";
         display: block;
     }
 
-    @media only screen and (max-width: 35.999rem) {
+    @media only screen and (width < 75rem) {
+        .header-container.menu-open {
+            z-index: 30;
+        }
         .primary-navigation ul {
             display: none;
         }
@@ -183,30 +186,26 @@ import Icon from "./Icon.astro";
             "nav-backdrop",
         ) as HTMLElement | null;
 
+        const headerContainer = document.querySelector(".header-container");
+
         if (!navigationToggle || !navigation) return;
 
         navigationController = new AbortController();
 
+        const setMenuOpen = (open: boolean) => {
+            navigationToggle.setAttribute("aria-expanded", open ? "true" : "false");
+            backdrop?.classList.toggle("is-open", open);
+            headerContainer?.classList.toggle("menu-open", open);
+        };
+
         const closeMenu = (event: Event) => {
             if (navigation.contains(event.target as Node)) return;
-            navigationToggle.setAttribute("aria-expanded", "false");
-            backdrop?.classList.remove("is-open");
+            setMenuOpen(false);
         };
 
         const toggleMenu = (event: Event) => {
             event.stopPropagation();
-            const navigationOpened =
-                navigationToggle.getAttribute("aria-expanded");
-            const isOpening = navigationOpened === "false";
-            navigationToggle.setAttribute(
-                "aria-expanded",
-                isOpening ? "true" : "false",
-            );
-            if (isOpening) {
-                backdrop?.classList.add("is-open");
-            } else {
-                backdrop?.classList.remove("is-open");
-            }
+            setMenuOpen(navigationToggle.getAttribute("aria-expanded") === "false");
         };
 
         navigationToggle.addEventListener("click", toggleMenu, {
@@ -215,6 +214,11 @@ import Icon from "./Icon.astro";
         document.addEventListener("click", closeMenu, {
             signal: navigationController.signal,
         });
+        window.matchMedia("(width < 75rem)").addEventListener(
+            "change",
+            (event) => !event.matches && setMenuOpen(false),
+            { signal: navigationController.signal },
+        );
     }
 
     setupNavigation();
