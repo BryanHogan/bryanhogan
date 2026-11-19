@@ -1,0 +1,48 @@
+---
+interface Props {
+    label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<li class="description-list-item">
+    <h3 class="label">{label}</h3>
+    <div class="content"><slot /></div>
+</li>
+
+<style>
+    .description-list-item {
+        display: grid;
+        gap: var(--space-2xs);
+        margin: 0;
+        padding: var(--space-m) var(--description-list-inset, 0px);
+        border-top: var(--border-width-s) solid var(--color-neutral-700);
+        min-width: 0;
+    }
+
+    .label {
+        margin: 0;
+        color: var(--color-neutral-100);
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-semi-bold);
+        line-height: var(--font-line-height);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+        min-width: 0;
+        color: var(--color-neutral-200);
+        overflow-wrap: anywhere;
+    }
+
+    @media only screen and (min-width: 581px) {
+        .description-list-item {
+            grid-template-columns: 9rem minmax(0, 1fr);
+            column-gap: var(--space-m);
+            align-items: baseline;
+        }
+    }
+</style>

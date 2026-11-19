@@ -60,20 +60,25 @@
     }
     .compact {
         flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 100%;
         margin: 0;
         * {
             margin: 0;
             padding: 0;
         }
         .email {
-            width: 70%;
+            flex: 1 1 auto;
+            min-width: 0;
+            width: auto;
             border-radius: var(--border-radius-s) 0 0 var(--border-radius-s);
             padding: 4px;
         }
         .button {
+            flex: 0 0 auto;
             width: auto;
+            max-width: none;
             border-radius: 0 var(--border-radius-s) var(--border-radius-s) 0;
             background-color: var(--color-accent-500);
             padding: 4px var(--space-s);
@@ -82,18 +87,6 @@
             &:hover {
                 color: var(--color-neutral-100);
                 background-color: var(--color-accent-800);
-            }
-        }
-    }
-    @media only screen and (max-width: 499px) {
-        .compact {
-            flex-direction: column;
-            .email {
-                border-radius: var(--border-radius-s)
-            }
-            .button {
-                margin-top: var(--space-2xs);
-                border-radius: var(--border-radius-s)
             }
         }
     }
