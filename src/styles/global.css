@@ -5,7 +5,7 @@ body {
 }
 
 :root {
-    font-size: var(--font-size-base);
+    font-size: 112.5%;
 }
 
 body {
