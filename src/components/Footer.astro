@@ -1,100 +1,285 @@
 ---
 import Icon from "./Icon.astro";
+import { Icons } from "./Icons";
 import socials from "../data/socials";
 interface Props {
     markdownHref?: string;
 }
 const { markdownHref } = Astro.props;
+
+const socialLinks = [
+    socials.instagram,
+    socials.threads,
+    socials.bluesky,
+    socials.mastodon,
+    socials.github,
+    { name: "RSS", href: "/rss.xml", icon: "rss" as const },
+];
+
+const linkGroups = [
+    {
+        id: "footer-group-content",
+        label: "Content",
+        links: [
+            { label: "Blog", href: "/blog" },
+            { label: "Projects", href: "/projects" },
+            { label: "Ideas", href: "/ideas" },
+        ],
+    },
+    {
+        id: "footer-group-me",
+        label: "Me",
+        links: [
+            { label: "About", href: "/about" },
+            { label: "Now", href: "/now" },
+            { label: "Portfolio", href: "/portfolio" },
+            { label: "Socials", href: "/socials" },
+            { label: "Follow", href: "/follow" },
+        ],
+    },
+];
+
+const utilityLinks = [
+    { label: "Privacy", href: "/privacy" },
+    { label: "Sitemap", href: "/sitemap-index.xml" },
+    { label: "RSS Feed", href: "/rss.xml" },
+];
 ---
 
-<footer class="set-base-layout-max-width">
-    <div class="flex-center flex-column">
-        <p class="text-align-center">A website by Bryan Hogan.</p><p class="text-align-center">
-            © 2023 - {String(new Date().getFullYear().toString())}
-        </p>
+<footer>
+    <div class="footer-content set-base-layout-max-width">
+        <div class="footer-grid">
+            <div class="footer-brand-container">
+                <a class="footer-brand-link" href="/">
+                    <svg
+                        class="footer-brand-logo"
+                        width="28"
+                        height="26"
+                        viewBox="1 2 14 13"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        set:html={Icons["logogrey"]}
+                    />
+                    <span>Bryan Hogan</span>
+                </a>
+                <p class="footer-brand-description">I'm Bryan Hogan, a web developer, designer, digital creator and blogger.</p>
+                <nav class="footer-social-navigation" aria-label="Social profiles">
+                    <ul role="list">
+                        {socialLinks.map((social) => (
+                            <li>
+                                <a href={social.href} title={social.name} target="_blank">
+                                    <span class="visually-hidden">{social.name} (opens in a new tab)</span>
+                                    <Icon name={social.icon} size="1.5rem" />
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                {markdownHref && (
+                    <p class="footer-markdown-link">
+                        <a href={markdownHref} data-astro-reload>View this page as Markdown</a>
+                    </p>
+                )}
+            </div>
+
+            <div class="footer-link-groups">
+                {linkGroups.map((group) => (
+                    <nav class="footer-link-group" aria-labelledby={group.id}>
+                        <h2 id={group.id}>{group.label}</h2>
+                        <ul role="list">
+                            {group.links.map((link) => (
+                                <li><a href={link.href}>{link.label}</a></li>
+                            ))}
+                        </ul>
+                    </nav>
+                ))}
+            </div>
+        </div>
+
+        <div class="footer-utility">
+            <p>&copy; 2023-{new Date().getFullYear()} Bryan Hogan.</p>
+            <nav aria-label="Footer utility navigation">
+                <ul role="list">
+                    {utilityLinks.map((link) => (
+                        <li><a href={link.href}>{link.label}</a></li>
+                    ))}
+                </ul>
+            </nav>
+        </div>
     </div>
-    <ul role="list" class="flex-center">
-        <li>
-            <a href={socials.instagram.href} title={socials.instagram.name} aria-label={"Go to Bryan's " + socials.instagram.name} target="_blank">
-                <Icon name="instagram" label="Instagram icon" size="1.5rem"/>
-            </a>
-        </li>
-        <li>
-            <a href={socials.threads.href} title={socials.threads.name} aria-label={"Go to Bryan's " + socials.threads.name} target="_blank">
-                <Icon name="threads" label="Threads icon" size="1.5rem"/>
-            </a>
-        </li>
-        <li>
-            <a href={socials.bluesky.href} title={socials.bluesky.name} aria-label={"Go to Bryan's " + socials.bluesky.name} target="_blank">
-                <Icon name="bluesky" label="BlueSky icon" size="1.5rem"/>
-            </a>
-        </li>
-        <li>
-            <a href={socials.mastodon.href} title={socials.mastodon.name} aria-label={"Go to Bryan's " + socials.mastodon.name} target="_blank">
-                <Icon name="mastodon" label="Mastodon icon" size="1.5rem"/>
-            </a>
-        </li>
-        <li>
-            <a href={socials.github.href} title={socials.github.name} aria-label={"Go to Bryan's " + socials.github.name} target="_blank">
-                <Icon name="github" label="GitHub icon" size="1.5rem"/>
-            </a>
-        </li>
-        <li>
-            <a href="/rss.xml" target="_blank" title="RSS" aria-label="Go to Bryan's RSS feed">
-                <Icon name="rss" label="RSS icon" size="1.5rem"/>
-            </a>
-        </li>
-    </ul>
-    <ul role="list" class="flex-center navigation-container">
-        <li><p><a href="/">Home</a></p></li>
-        <li><p><a href="/blog">Blog</a></p></li>
-        <li><p><a href="/follow">Mailing-List</a></p></li>
-        <li><p><a href="/projects">Projects</a></p></li>
-        <li><p><a href="/about">About</a></p></li>
-        <li><p><a href="/now">Now</a></p></li>
-        <li><p><a href="/ideas">Ideas</a></p></li>
-        <li><p><a href="/socials">Socials</a></p></li>
-        <li><p><a href="/portfolio">Portfolio</a></p></li>
-        <li><p><a href="/privacy">Privacy</a></p></li>
-        <li><p><a href="/sitemap-index.xml">Sitemap</a></p></li>
-        {markdownHref && <li><p><a href={markdownHref} data-astro-reload>View as Markdown</a></p></li>}
-    </ul>
 </footer>
 
 <style>
     footer {
         display: grid;
-        grid-template-columns: 1fr;
         min-height: var(--footer-height);
-        align-items: center;
+        align-content: end;
+        border-top: var(--border-width-s) solid var(--color-neutral-700);
+    }
+
+    .footer-content {
+        width: 100%;
         margin-inline: auto;
-        border-top: 1px solid var(--color-neutral-700);
-        >* {
-            height: max-content;
-            margin-block: var(--space-s);
-        }
+        padding-block: var(--space-xl) var(--space-m);
     }
-    ul {
-        gap: var(--space-s);
-    }
-    .navigation-container {
-        max-width: 75%;
-        margin-inline: auto;
-        & a {
-            font-size: var(--font-size-small);
-        }
-    }
-    p, li, img, a {
+
+    p, li, a {
         color: var(--color-neutral-300);
+        font-size: var(--font-size-small);
+    }
+
+    a {
+        text-decoration: none;
         transition: color var(--transition-normal);
     }
-    a:hover, a:focus-within {
+
+    a:hover, a:focus-visible {
         color: var(--a-hover-color);
     }
 
-    @media only screen and (min-width: 48rem) {
-        footer {
-            grid-template-columns: 1fr 1fr 1fr;
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-l);
+        text-align: center;
+    }
+
+    .footer-link-groups {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+        gap: var(--space-l);
+    }
+
+    .footer-brand-container,
+    .footer-link-groups,
+    .footer-link-group {
+        min-width: 0;
+    }
+
+    .footer-brand-link {
+        display: inline-flex;
+        align-items: baseline;
+        gap: var(--space-s);
+        font-size: var(--font-size-large);
+        font-weight: var(--font-weight-bold);
+    }
+
+    /* viewBox is cropped to the drawn pixels. The logo's bottom sits on the text baseline,
+       then the translate centres it on the capital letters, whatever the system font. */
+    .footer-brand-logo {
+        flex: 0 0 auto;
+        width: auto;
+        height: 1em;
+        translate: 0 calc((1em - 1cap) / 2);
+    }
+
+    .footer-brand-description {
+        max-width: 32rem;
+        margin: var(--space-s) auto 0;
+    }
+
+    .footer-markdown-link {
+        margin-top: var(--space-m);
+    }
+
+    .footer-markdown-link a {
+        text-decoration: underline;
+    }
+
+    .footer-social-navigation {
+        margin-top: var(--space-m);
+    }
+
+    .footer-social-navigation ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-s);
+    }
+
+    .footer-social-navigation a {
+        display: grid;
+        width: 2.75rem;
+        height: 2.75rem;
+        place-items: center;
+        border-radius: 50%;
+        background-color: var(--color-neutral-800);
+        transition:
+            color var(--transition-normal),
+            background-color var(--transition-normal);
+    }
+
+    .footer-social-navigation a:hover,
+    .footer-social-navigation a:focus-visible {
+        background-color: var(--color-neutral-700);
+    }
+
+    /* Size and weight of the end-of-post box headings (MdBlogLayout), in the footer's muted colour.
+       Footer hierarchy comes from size and weight only; everything shares --color-neutral-300. */
+    .footer-link-group h2 {
+        color: var(--color-neutral-300);
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-semi-bold);
+    }
+
+    .footer-link-group ul {
+        display: grid;
+        gap: var(--space-xs);
+        margin-top: var(--space-s);
+    }
+
+    .footer-utility {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-s);
+        margin-top: var(--space-xl);
+        padding-top: var(--space-m);
+        border-top: var(--border-width-s) solid var(--color-neutral-700);
+        text-align: center;
+    }
+
+    .footer-utility ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-xs) var(--space-s);
+    }
+
+    .footer-utility li:not(:first-child)::before {
+        content: "|";
+        color: var(--color-neutral-500);
+        padding-right: var(--space-s);
+    }
+
+    @media (min-width: 48rem) {
+        .footer-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            text-align: left;
+        }
+
+        .footer-link-group h2 {
+            display: flex;
+            min-height: 2rem;
+            align-items: center;
+        }
+
+        .footer-brand-description {
+            margin-inline: 0;
+        }
+
+        .footer-social-navigation ul {
+            justify-content: flex-start;
+        }
+
+        .footer-utility {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .footer-utility ul {
+            justify-content: flex-end;
         }
     }
 </style>
