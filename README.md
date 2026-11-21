@@ -21,7 +21,7 @@ Read more about me on my [about page](https://bryanhogan.com/about).
 The projects I'm working on:
 
 - [DailySelfTrack](https://dailyselftrack.com/) - A customizable self-tracking app combining elements from habit trackers, health logging and journal apps.
-- [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template) - A simple scalable bloat-free web starter using the Astro frame build upon the teachings from my Clean Web Development Guide.
+- [StarStarter](https://github.com/BryanHogan/astro-starter-template) - A simple scalable bloat-free web starter using the Astro frame build upon the teachings from my Clean Web Development Guide.
 - [UV Todo](https://todo.bryanhogan.com/) - A simple to do web app sorting tasks based on urgency and value estimations.
 - [ToLearnKorean](https://tolearnkorean.com/) - A guide teaching the Korean language.
 - [GameToLearnKorean](https://game.tolearnkorean.com/) - Gamified app to practice and learn Korean words.

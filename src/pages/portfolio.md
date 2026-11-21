@@ -35,7 +35,7 @@ Find more details on [LinkedIn](https://www.linkedin.com/in/bryanhoganme/).
 - [DailySelfTrack](https://dailyselftrack.com/)
 - [Clean Web Dev Guide](https://webdev.bryanhogan.com/)
 - [ToLearnKorean](https://tolearnkorean.com/) & [Game.ToLearnKorean](https://game.tolearnkorean.com/)
-- [Astro Starter Template](https://github.com/BryanHogan/astro-starter-template)
+- [StarStarter for Astro](https://github.com/BryanHogan/astro-starter-template)
 - [See all projects](/projects)
 
 </details>
