@@ -33,7 +33,7 @@ The nine blocks of the Business Model Canvas:
 <details>
 <summary>The complete Business Model Canvas:</summary>
 
-```
+```plain
 
 ## 1. Customer Segments
 
@@ -153,7 +153,7 @@ The nine blocks of the Lean Canvas:
 <details>
 <summary>The complete Lean Canvas:</summary>
 
-```
+```plain
 
 ## 1. Problem
 
@@ -235,7 +235,7 @@ The 10 blocks of the Clear Business Idea Canvas:
 <details>
 <summary>The complete Clear Business Idea Canvas:</summary>
 
-```
+```plain
 ## 1. Problem
 
 - List your top problems.
@@ -290,12 +290,9 @@ The 10 blocks of the Clear Business Idea Canvas:
 
 </details>
 
----
-
-Links to relevant TED talks and other content:
+***
 
 Some videos you might also be interested in if you found this blog post interesting, these videos are not made by me:
 
 - [The Single Biggest Reason Why Start-Ups Succeed | Bill Gross | TED](https://youtu.be/bNpx7gpSqbY)
 - [How to Get and Evaluate Startup Ideas | Startup School](https://youtu.be/Th8JoIan4dg)
-
