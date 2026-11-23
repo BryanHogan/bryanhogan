@@ -149,7 +149,7 @@ const lastUpdate = await (post.data.lastUpdate || getLastModifiedDate(`src/conte
                             <ul role="list" class="tag-list">
                                 {post.data.tags.map((tag) => {
                                     const slug = tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
-                                    return <li><Button href={`/tags/${slug}`} text={tag} buttonStyle="line small" style="color: var(--color-neutral-200)" /></li>;
+                                    return <li><Button href={`/tags/${slug}`} variant="outline" size="small" style="color: var(--color-neutral-200)">{tag}</Button></li>;
                                 })}
                             </ul>
                         </DescriptionListItem>

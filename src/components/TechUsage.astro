@@ -1,0 +1,147 @@
+---
+// Grouped tech and methods. Selecting one shows a sentence on how it was used.
+// Works without JS: the first item of each group is shown as selected.
+import { Image } from "astro:assets";
+import { techGroups } from "../data/portfolio-tech";
+---
+
+<div class="tech-groups">
+    {techGroups.map((group, groupIndex) => (
+        <section class="tech-group" data-tech-group>
+            <h3>{group.title}</h3>
+            <div class="options">
+                {group.techs.map((tech, techIndex) => (
+                    <button
+                        type="button"
+                        aria-pressed={techIndex === 0 ? "true" : "false"}
+                        aria-controls={`tech-usage-${groupIndex}`}
+                        data-tech-index={techIndex}
+                    >
+                        {tech.name}
+                    </button>
+                ))}
+            </div>
+            <div class="usage" id={`tech-usage-${groupIndex}`} aria-live="polite">
+                {group.techs.map((tech, techIndex) => (
+                    <div data-usage-index={techIndex} hidden={techIndex !== 0}>
+                        <p set:html={tech.usage} />
+                        {tech.images && (
+                            <div class="images">
+                                {tech.images.map((image) => (
+                                    <figure class:list={[{ wide: image.wide }]}>
+                                        <Image src={image.src} alt={image.alt} widths={image.wide ? [640, 960, 1280] : [320, 640, 960]} sizes={image.wide ? "(min-width: 48rem) 560px, 90vw" : "(min-width: 48rem) 280px, 45vw"} />
+                                        <figcaption>{image.caption}</figcaption>
+                                    </figure>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </section>
+    ))}
+</div>
+
+<script>
+    function initTechUsage() {
+        document.querySelectorAll<HTMLElement>("[data-tech-group]").forEach((group) => {
+            const buttons = group.querySelectorAll<HTMLButtonElement>("button[data-tech-index]");
+            const usages = group.querySelectorAll<HTMLElement>("[data-usage-index]");
+            buttons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const index = button.dataset.techIndex;
+                    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+                    usages.forEach((u) => (u.hidden = u.dataset.usageIndex !== index));
+                });
+            });
+            // Links like <a data-select-tech="JavaScript"> select another item in the same group.
+            group.querySelectorAll<HTMLAnchorElement>("[data-select-tech]").forEach((link) => {
+                link.addEventListener("click", (event) => {
+                    const target = [...buttons].find((b) => b.textContent?.trim() === link.dataset.selectTech);
+                    if (!target) return;
+                    event.preventDefault();
+                    target.click();
+                    target.focus();
+                });
+            });
+        });
+    }
+    document.addEventListener("astro:page-load", initTechUsage);
+</script>
+
+<style>
+    .tech-groups {
+        display: grid;
+        gap: var(--space-l);
+        grid-template-columns: 1fr;
+    }
+    .tech-group {
+        display: flex;
+        flex-direction: column;
+        padding: var(--space-m);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-m);
+    }
+    h3 {
+        font-size: var(--font-size-large);
+        padding-bottom: var(--space-s);
+    }
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+    }
+    button {
+        font: inherit;
+        font-size: var(--font-size-small);
+        color: var(--color-neutral-100);
+        background-color: var(--color-neutral-900);
+        border: 1px solid var(--border-color);
+        padding: 0.15rem 0.5rem;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        &:hover {
+            background-color: var(--color-neutral-700);
+        }
+        &[aria-pressed="true"] {
+            color: var(--color-neutral-900);
+            background-color: var(--color-neutral-100);
+        }
+    }
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-s);
+        margin-top: var(--space-s);
+        & img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-s);
+        }
+        & .wide {
+            grid-column: 1 / -1;
+        }
+        & figcaption {
+            margin-top: var(--space-2xs);
+            font-size: var(--font-size-small);
+            color: var(--color-neutral-300);
+        }
+    }
+    .usage {
+        margin-top: var(--space-m);
+        & p {
+            color: var(--color-neutral-100);
+        }
+        & :global(a) {
+            color: var(--a-hover-color);
+            &:hover {
+                color: var(--color-accent-200);
+            }
+        }
+    }
+    @media only screen and (min-width: 48rem) {
+        .tech-groups {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>

@@ -14,7 +14,7 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort((a, 
 
 <BaseLayout title="Bryan's Blog" description="Bryan Hogan's blog. All about learning, creating and finding balance.">
     <Hero heading="Bryan's Blog" headingDetail="About learning, creating and exploring" height="40svh">
-        <Button text="Get Updates" href="/follow" buttonStyle="transparent margin-inline-auto margin-top-s"/>
+        <Button href="/follow" variant="transparent" size="medium" class="margin-inline-auto margin-top-s">Get Updates</Button>
     </Hero>
     <nav class="sub-nav-container">
         <ul role="list">

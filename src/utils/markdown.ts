@@ -1,6 +1,6 @@
 // Pages in src/pages/ that get a /<page>.md version and a "View as Markdown" link.
 // Each needs `heading` and `headingDetail` frontmatter; the build fails without them.
-export const markdownPages = ["about", "now", "portfolio"];
+export const markdownPages = ["about", "now"];
 
 interface MarkdownPage {
     title: string;

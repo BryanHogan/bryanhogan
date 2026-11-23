@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    caseStudyHref: string;
+    liveHref?: string;
+    liveText?: string;
+    image?: ImageMetadata;
+    imageAlt?: string;
+}
+
+const {
+    title,
+    description,
+    caseStudyHref,
+    liveHref,
+    liveText = "Live site",
+    image,
+    imageAlt = "",
+} = Astro.props;
+---
+
+<article class="case-study-card">
+    <div class="text">
+        <h3><a href={caseStudyHref}>{title}</a></h3>
+        <p>{description}</p>
+        <div class="actions">
+            <Button href={caseStudyHref} size="medium" iconLeft="rightarrow">Case study</Button>
+            {liveHref && <Button href={liveHref} variant="secondary" size="medium" target="_blank">{liveText}</Button>}
+        </div>
+    </div>
+    <div class="visual">
+        {image ? (
+            <Image src={image} alt={imageAlt} widths={[640, 960, 1280, 1920]} sizes="(min-width: 56rem) 560px, 100vw" quality={85} />
+        ) : (
+            <slot name="visual" />
+        )}
+    </div>
+</article>
+
+<style>
+    .case-study-card {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: var(--space-l);
+        padding: var(--space-m);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-m);
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+    h3 {
+        font-size: var(--text-size-2xl);
+        line-height: var(--font-line-height-heading);
+        padding-bottom: var(--space-s);
+        text-wrap: balance;
+        & a {
+            font-size: inherit;
+            color: var(--color-neutral-100);
+            text-decoration: none;
+            transition: color var(--transition-normal);
+            &:hover {
+                color: var(--a-hover-color);
+            }
+        }
+    }
+    p {
+        color: var(--color-neutral-100);
+    }
+    .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-s);
+        margin-top: var(--space-m);
+    }
+    .visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & :global(img) {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-s);
+        }
+        & :global(svg) {
+            width: min(100%, 16rem);
+            height: auto;
+        }
+    }
+    @media only screen and (min-width: 56rem) {
+        .case-study-card {
+            flex-direction: row;
+            align-items: center;
+            gap: var(--space-l);
+        }
+        .text,
+        .visual {
+            flex: 1 1 0;
+        }
+    }
+</style>
