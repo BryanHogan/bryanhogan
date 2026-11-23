@@ -32,9 +32,9 @@ const featuredBlogPosts = featuredPosts
 				<p>I build useful digital experiences. Combining design and development.</p>
 				<p> Creator of <a href="https://dailyselftrack.com/">DailySelfTrack</a>, <a href="https://starter.bryanhogan.com/">StarStarter for Astro</a> and <a href="/projects">more</a>.</p>
 				<div class="intro-button-navigation">
-					<Button text="Blog" href="/blog" buttonStyle="gradient set-size"/>
-					<Button text="Follow" href="/follow" buttonStyle="neutral-strong set-size"/>
-					<Button text="Projects" href="/projects" buttonStyle="neutral-strong set-size"/>
+					<Button href="/blog" variant="gradient" size="large">Blog</Button>
+					<Button href="/follow" size="large">Follow</Button>
+					<Button href="/projects" size="large">Projects</Button>
 				</div>
 			</div>
 			<Image
@@ -61,7 +61,7 @@ const featuredBlogPosts = featuredPosts
 		<section class="content-cards-container">
 			<div class="first-row">
 				<h2>Projects</h2>
-				<Button text="All projects" href="/projects" buttonStyle="line icon-left" icon="rightarrow"/>
+				<Button href="/projects" variant="outline" size="medium" iconLeft="rightarrow">All projects</Button>
 			</div>
 			<div class="projects-content-cards">
 				<Card title="DailySelfTrack App" href="https://dailyselftrack.com" >
@@ -81,8 +81,8 @@ const featuredBlogPosts = featuredPosts
 		<section class="content-cards-container">
 			<div class="first-row">
 				<h2>Blog</h2>
-				<Button text="All blog posts" href="/blog" buttonStyle="line gradient-underline icon-left" icon="rightarrow"/>
-				<Button text="Blog introduction" href="/blog/introduction" buttonStyle="line icon-left" icon="rightarrow"/>
+				<Button href="/blog" variant="outline" size="medium" iconLeft="rightarrow">All blog posts</Button>
+				<Button href="/blog/introduction" variant="outline" size="medium" iconLeft="rightarrow">Blog introduction</Button>
 			</div>
 			<p class="margin-bottom-s" style="color: var(--color-neutral-200)"><strong>Latest posts</strong></p>
 			<div class="blog-content-cards">
@@ -104,7 +104,7 @@ const featuredBlogPosts = featuredPosts
 		<section class="content-cards-container">
 			<div class="first-row">
 				<h2>Socials</h2>
-				<Button text="All my socials" href="/socials" buttonStyle="line icon-left" icon="rightarrow"/>
+				<Button href="/socials" variant="outline" size="medium" iconLeft="rightarrow">All my socials</Button>
 			</div>
 			<div class="some-content-row">
 				<CardMin href={socials.threads.href} title={socials.threads.name}><Icon name="threads" label="Threads icon" size="2.5rem"/></CardMin>
@@ -153,6 +153,10 @@ const featuredBlogPosts = featuredPosts
 		justify-content: center;
 		margin-block-start: var(--space-l);
 		gap: var(--space-m) var(--space-l);
+		/* Equal-width hero buttons */
+		& :global(.button) {
+			inline-size: 7rem;
+		}
 	}
 	.all-pages-nav-section {
 		ul {

@@ -1,129 +1,201 @@
 ---
+// Same approach as the Button in StarStarter for Astro: a variant for color, a size for padding and type, and states for hover, focus, active and disabled.
 import Icon from "./Icon.astro";
-import { Icons } from "../components/Icons";
+import { Icons } from "./Icons";
+
+type IconName = keyof typeof Icons;
 
 interface Props {
-    buttonStyle?: string;
-    href: string;
-    text: string;
-    targetBlank?: boolean;
-    icon?: keyof typeof Icons;
-    style?: string;
+    /** Link mode: renders an <a> with this href. Omit for action mode: renders a <button>. */
+    href?: string;
+    /** Disabled links keep their accessible role and tab stop, but omit href. */
+    disabled?: boolean;
+    /** Action mode only. */
+    type?: "button" | "submit" | "reset";
+    variant?: "primary" | "secondary" | "outline" | "gradient" | "transparent";
+    /** Explicit sizes use intrinsic width. Omit to allow the parent layout to stretch the button. */
+    size?: "small" | "medium" | "large";
+    iconLeft?: IconName;
+    iconRight?: IconName;
+    class?: string;
+    [key: string]: any;
 }
 
 const {
-    buttonStyle = "neutral",
     href,
-    text,
-    targetBlank = false,
-    icon,
-    style,
+    disabled = false,
+    "aria-disabled": ariaDisabled,
+    type = "button",
+    variant = "primary",
+    size,
+    iconLeft,
+    iconRight,
+    class: className,
+    ...rest
 } = Astro.props;
+
+const Tag = href ? "a" : "button";
+const isDisabled = disabled || ariaDisabled === true || ariaDisabled === "true";
+// An omitted size may stretch with its parent layout, an explicit size uses intrinsic width.
+const visualSize = size ?? "medium";
 ---
 
-<a href={href} class={buttonStyle} target={targetBlank ? "_blank" : "_self"} style={style}>
-    {
-        icon && (
-            <Icon
-                name={icon}
-                label="lightbulb icon"
-                size="1.5rem"
-                class="icon"
-            />
-        )
-    }
-    {text}
-</a>
+<Tag
+    {...rest}
+    class:list={[
+        "button",
+        `button-${variant}`,
+        `button-${visualSize}`,
+        { "button-explicit-size": size !== undefined, "button-icon-left": iconLeft, "button-icon-right": iconRight },
+        className,
+    ]}
+    href={isDisabled ? undefined : href}
+    type={href ? undefined : type}
+    disabled={!href && isDisabled ? true : undefined}
+    aria-disabled={isDisabled ? "true" : ariaDisabled}
+    role={href && isDisabled ? "link" : rest.role}
+    tabindex={href && isDisabled ? (rest.tabindex ?? 0) : rest.tabindex}
+>
+    {iconLeft && <Icon name={iconLeft} size="1.5em" />}
+    <slot />
+    {iconRight && <Icon name={iconRight} size="1.5em" />}
+</Tag>
 
 <style>
-    a {
-        transition: all var(--transition-normal);
-        display: flex;
-        justify-content: center;
+    .button {
+        display: inline-flex;
         align-items: center;
-        text-decoration: none;
+        justify-content: center;
+        border: var(--border-width-s) solid transparent;
         border-radius: var(--border-radius-m);
-        max-width: fit-content;
-        padding: var(--space-xs) var(--space-m);
-        & :global(svg) {
-            margin-right: var(--space-xs);
-            background-image: var(--color-gradient);
-            background-clip: text;
-        }
-    }
-
-    /* =========== Using Icons =========== */
-    .icon-left {
-        padding-left: var(--space-xs);
-    }
-
-    /* =========== Color Styles =========== */
-    .neutral {
-        color: var(--color-neutral-100);
-        background-color: var(--color-neutral-700);
-        &:hover {
-            background-color: var(--color-neutral-600);
-        }
-    }
-    .neutral-strong {
-        color: var(--color-neutral-900);
-        background-color: var(--color-neutral-100);
-        &:hover {
-            background-color: var(--color-neutral-300);
-        }
-    }
-    .line {
-        border: 1px solid var(--border-color);
-        background-color: var(--color-neutral-900);
-        border-radius: 0;
-        &:hover {
-            color: var(--color-neutral-100);
-            background-color: var(--color-neutral-700);
-        }
-    }
-    .accent {
-        color: var(--color-neutral-100);
-        background-color: var(--color-accent-800);
-        &:hover {
-            background-color: var(--color-accent-500);
-        }
-    }
-    .gradient {
-        background-image: var(--color-gradient);
-        color: var(--color-neutral-50);
-        &:hover {
-            color: var(--color-neutral-200);
-        }
-    }
-    .transparent {
-        color: var(--color-neutral-50);
+        font: inherit;
+        font-weight: var(--font-weight-semi-bold);
+        text-decoration: none;
+        cursor: pointer;
         background-color: transparent;
-        border: 1px solid var(--color-neutral-200);
-        text-shadow: var(--text-shadow-m);
-        &:hover {
-            background-color: var(--color-accent-500);
-            background-color: color-mix(
-                in srgb,
-                var(--color-accent-500) 30%,
-                transparent);
+        transition:
+            var(--transition-normal) background-color,
+            var(--transition-normal) color,
+            var(--transition-normal) border-color;
+        &:disabled,
+        &[aria-disabled="true"] {
+            opacity: var(--opacity-strong);
+            cursor: not-allowed;
         }
     }
 
-    /* =========== Size Styles =========== */
+    .button-explicit-size {
+        inline-size: fit-content;
+        max-inline-size: 100%;
+    }
 
-    .grow {
-        max-width: none;
-        width: 100%;
-    }
-    .set-size {
-        max-width: none;
-        padding: var(--space-s) var(--space-m);
-        width: 7rem;
-        font-size: var(--font-size-large);
-        font-weight: var(--font-weight-bold);
-    }
-    .small {
+    .button-small {
         padding: 0.15rem 0.5rem;
         font-size: var(--font-size-small);
+        gap: var(--space-2xs);
+        font-weight: var(--font-weight-regular);
+    }
+    .button-medium {
+        padding: var(--space-xs) var(--space-m);
+        font-size: var(--font-size-base);
+        gap: var(--space-xs);
+    }
+    .button-large {
+        padding: var(--space-s) var(--space-m);
+        font-size: var(--font-size-large);
+        gap: var(--space-xs);
+    }
+    /* Icons have built-in whitespace, so the icon side gets less padding to look balanced. */
+    .button-icon-left {
+        padding-inline-start: var(--space-s);
+    }
+    .button-icon-right {
+        padding-inline-end: var(--space-s);
+    }
+
+    /* Two classes keep variant colors above global and prose link styles. */
+    .button.button-primary {
+        background-color: var(--color-neutral-100);
+        color: var(--color-neutral-900);
+        @media (hover: hover) {
+            &:not(:disabled, [aria-disabled="true"]):hover {
+                background-color: var(--color-neutral-300);
+                color: var(--color-neutral-900);
+            }
+        }
+        &:not(:disabled, [aria-disabled="true"]):focus-visible,
+        &:not(:disabled, [aria-disabled="true"]):active {
+            background-color: var(--color-neutral-300);
+            color: var(--color-neutral-900);
+        }
+    }
+    .button.button-secondary {
+        background-color: var(--color-neutral-700);
+        color: var(--color-neutral-100);
+        @media (hover: hover) {
+            &:not(:disabled, [aria-disabled="true"]):hover {
+                background-color: var(--color-neutral-600);
+                color: var(--color-neutral-100);
+            }
+        }
+        &:not(:disabled, [aria-disabled="true"]):focus-visible,
+        &:not(:disabled, [aria-disabled="true"]):active {
+            background-color: var(--color-neutral-600);
+            color: var(--color-neutral-100);
+        }
+    }
+    .button.button-outline {
+        font-weight: var(--font-weight-regular);
+        border-color: var(--border-color);
+        border-radius: 0;
+        background-color: var(--color-neutral-900);
+        color: var(--color-neutral-100);
+        @media (hover: hover) {
+            &:not(:disabled, [aria-disabled="true"]):hover {
+                background-color: var(--color-neutral-700);
+                color: var(--color-neutral-100);
+            }
+        }
+        &:not(:disabled, [aria-disabled="true"]):focus-visible,
+        &:not(:disabled, [aria-disabled="true"]):active {
+            background-color: var(--color-neutral-700);
+            color: var(--color-neutral-100);
+        }
+    }
+    .button.button-gradient {
+        background-image: var(--color-gradient);
+        /* Draw the gradient under the transparent border too, so it doesn't repeat at the edges. */
+        background-origin: border-box;
+        color: var(--color-neutral-50);
+        /* States darken the gradient instead of dimming the text, so contrast goes up, not down. */
+        --gradient-shade: linear-gradient(rgb(0 0 0 / 0.15), rgb(0 0 0 / 0.15));
+        @media (hover: hover) {
+            &:not(:disabled, [aria-disabled="true"]):hover {
+                background-image: var(--gradient-shade), var(--color-gradient);
+                color: var(--color-neutral-50);
+            }
+        }
+        &:not(:disabled, [aria-disabled="true"]):focus-visible,
+        &:not(:disabled, [aria-disabled="true"]):active {
+            background-image: var(--gradient-shade), var(--color-gradient);
+            color: var(--color-neutral-50);
+        }
+    }
+    /* For buttons on top of images and gradients, like the blog hero. */
+    .button.button-transparent {
+        border-color: var(--color-neutral-200);
+        color: var(--color-neutral-50);
+        text-shadow: var(--text-shadow-m);
+        @media (hover: hover) {
+            &:not(:disabled, [aria-disabled="true"]):hover {
+                background-color: color-mix(in srgb, var(--color-accent-500) 30%, transparent);
+                color: var(--color-neutral-50);
+            }
+        }
+        &:not(:disabled, [aria-disabled="true"]):focus-visible,
+        &:not(:disabled, [aria-disabled="true"]):active {
+            background-color: color-mix(in srgb, var(--color-accent-500) 30%, transparent);
+            color: var(--color-neutral-50);
+        }
     }
 </style>
