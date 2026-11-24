@@ -10,13 +10,13 @@ tags:
 
 I've been exploring a better canvas to evaluate business / start-up ideas.
 
-So I've made the Clear Business Idea Canvas which builds upon the Business Model Canvas and the Lean Canvas.
+So I've made the Clear Business Idea Canvas, which builds upon the Business Model Canvas and the Lean Canvas.
 
 You can <a href="/documents/Clear-Business-Idea-Canvas.md" download="Clear-Business-Idea-Canvas.md">download the Clear Business Idea Canvas as a markdown file by clicking here</a>.
 
 ## Business Model Canvas
 
-There are many ways to plan a business, one of the most well-known ways when starting is the Business Model Canvas (BMC). It describes 9 areas in which you describe your future business. This helps you get a clear overview of how your business will look like and operate. Using such a canvas should help you make better business decisions. It's much faster than writing a whole business plan, it can thus also faster adapt to any changes.
+There are many ways to plan a business. One of the most well-known ways when starting is the Business Model Canvas (BMC). It describes 9 areas in which you describe your future business. This helps you get a clear overview of what your business will look like and how it will operate. Using such a canvas should help you make better business decisions. It's much faster than writing a whole business plan, and can thus also adapt to any changes faster.
 
 The nine blocks of the Business Model Canvas:
 
@@ -136,7 +136,7 @@ What will it cost to operate the business?
 
 ## Lean Canvas
 
-The Lean Canvas is an adaptation of the BMC, it also has nine blocks, but instead focuses more on early-stage startups.
+The Lean Canvas is an adaptation of the BMC. It also has nine blocks, but instead focuses more on early-stage start-ups.
 
 The nine blocks of the Lean Canvas:
 
@@ -209,15 +209,15 @@ I adjusted two blocks, removed one, and added two new ones compared to the Lean 
 - Unfair Advantage → Founder Fit
 - Added: Timing
 
-I prefer focusing on the value proposition like done in the BMC, what values / features are provided to the customer? Another section already goes into the different customer segments and their problems and needs. So here we can map the connections between pain and need within the customer and the value proposition and features of the product.
+I prefer focusing on the value proposition, as done in the BMC: what values / features are provided to the customer? Another section already goes into the different customer segments and their problems and needs. So here we can map the connections between pain and need within the customer and the value proposition and features of the product.
 
-With that background we do not need to focus on just the unique value proposition, but instead on the unique selling point, what makes the product different from other offers and processes.
+With that background we do not need to focus on just the unique value proposition, but instead on the unique selling point: what makes the product different from other offers and processes.
 
-These two areas already explore which potential advantages there are, especially the unique selling point, going into unfair advantages felt meaningless, especially the "unfair" part I found to be the weakest part of the Lean Canvas, it doesn't matter if an advantage is unfair or not.
+These two areas already explore which potential advantages there are, especially the unique selling point. Going into unfair advantages felt meaningless. I found especially the "unfair" part to be the weakest part of the Lean Canvas, as it doesn't matter if an advantage is unfair or not.
 
-One major factor for every start-up that became successful was its timing, when did it enter the market. This may look at trends and changes in the potential users, the potential customers, but also how processes have changed and will change in the future to create such a product.
+One major factor for many successful start-ups was their timing: when did they enter the market? This may look at trends and changes in the potential users and potential customers, but also at how processes have changed and will change in the future to create such a product.
 
-The final tenth block is Founder Fit, the founders are the core of the start-up and every decision in the beginning, so including them seems right.
+The final, tenth block is Founder Fit. The founders are the core of the start-up and of every decision in the beginning, so including them seems right.
 
 The 10 blocks of the Clear Business Idea Canvas:
 
@@ -294,7 +294,7 @@ The 10 blocks of the Clear Business Idea Canvas:
 
 Links to relevant TED talks and other content:
 
-Some videos you might also be interested in if you found this blog post interesting, these videos are not made by me:
+Some videos you might also be interested in if you found this blog post interesting (these videos are not made by me):
 
 - [The Single Biggest Reason Why Start-Ups Succeed | Bill Gross | TED](https://youtu.be/bNpx7gpSqbY)
 - [How to Get and Evaluate Startup Ideas | Startup School](https://youtu.be/Th8JoIan4dg)
