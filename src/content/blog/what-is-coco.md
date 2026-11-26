@@ -3,7 +3,7 @@ title: What Is Code & Context? The Modern Way To Study
 description: Code & Context shows how studying at university should be done. A B.Sc. program combining Computer Science, Design and Entrepreneurship.
 coverImage: ../blog-assets/covers/What-Is-Code-And-Context-Cover.svg
 pubDate: 2023-11-07
-lastUpdate: 2024-04-23T21:45:13Z
+lastUpdate: 2026-11-25
 tags: ["learning", "productivity", "design", "development", "university"]
 ---
 
@@ -19,7 +19,7 @@ The study is all about creating innovative products & services to combat real wo
 
 This B.Sc. study is conducted fully in German, with some parts in English. It takes 6 semesters to complete, or 7 if you do an additional optional semester.
 
-I am a student at Code & Context. I have finished all courses, did two semesters abroad in South Korea (optional) and am only missing my bachelor thesis semester to complete my studies.
+I studied Code & Context from 2020 to 2025, including two semesters abroad in South Korea.
 
 ## What Makes CoCo Special & Effective
 
