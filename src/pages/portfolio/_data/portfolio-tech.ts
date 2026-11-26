@@ -94,7 +94,7 @@ export interface TechGroup {
 
 export const techGroups: TechGroup[] = [
     {
-        title: "Web",
+        title: "Web development",
         techs: [
             {
                 name: "JavaScript",
@@ -172,7 +172,7 @@ export const techGroups: TechGroup[] = [
         ],
     },
     {
-        title: "Design and research",
+        title: "UX, UI and research",
         techs: [
             {
                 name: "Usability testing",
@@ -248,7 +248,7 @@ export const techGroups: TechGroup[] = [
         ],
     },
     {
-        title: "Product",
+        title: "Product and strategy",
         techs: [
             {
                 name: "Market research",
@@ -264,7 +264,7 @@ export const techGroups: TechGroup[] = [
             },
             {
                 name: "Requirements analysis",
-                usage: `For ${link.sorbit} I turned the founder's idea into a contract, with clear goals, scope and technical and organizational requirements. In the iterative design process that followed, the user tests showed us which requirements to adjust.`,
+                usage: `For ${link.sorbit} I turned the founder's idea into a written scope with clear goals and technical and organizational requirements. In the iterative design process that followed, the user tests showed us which requirements to adjust.`,
             },
             {
                 name: "Roadmap and feature prioritization",
@@ -285,7 +285,7 @@ export const techGroups: TechGroup[] = [
         ],
     },
     {
-        title: "Marketing",
+        title: "Marketing and content",
         techs: [
             {
                 name: "SEO",
