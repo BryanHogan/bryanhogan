@@ -8,7 +8,7 @@ headingDetail: "Freelance case study: a relationship-care app"
 
 Sorbit is an app that helps you keep up your closest relationships. You place people on an orbit map based on how close they are to you, set how often you want to be in touch, get reminders, and write short reflections after you've met or talked.
 
-- Role: freelance developer, and I did part of the UX. I worked with the founder, a social psychologist with a PhD.
+- Role: freelance developer, plus part of the UX. I worked with the founder, a social psychologist with a PhD.
 - Timeline: 2025 to 2026
 - Stack: SvelteKit, Capacitor, Dexie.js
 - Status: tested with users, with an average SUS score above 90. Not released yet.

@@ -8,7 +8,7 @@ headingDetail: "Case study: a customizable self-tracking app"
 
 ![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../../assets/images/portfolio/DailySelfTrack-Main-Screenshots.png)
 
-DailySelfTrack is an app for self-tracking. It combines features from habit trackers, health logs and journals into one app. You decide what you want to track, e.g. habits, sleep, mood, symptoms or a gratitude journal, and you can change that whenever your needs change. I use it every day myself.
+DailySelfTrack is an app for self-tracking. It combines features from habit trackers, health logs and journals into one app. You decide what you want to track, e.g. habits, sleep, mood, symptoms or a gratitude journal, and you can change that whenever your needs change. I also use it every day.
 
 - Role: solo. I did the research, UX and visual design, development, testing and product decisions.
 - Timeline: 2024 to now. It started as my bachelor project and thesis.
@@ -39,9 +39,9 @@ The clickable wireframe in Figma. The links between the screens made it possible
 
 ## What testing showed
 
-More customization does work, as long as the extra complexity stays hidden until someone wants it. Progressive disclosure, sensible defaults and help where it's needed were the main ways to get there. Participants also wanted a tool they can keep adjusting when their needs change.
+More customization works, as long as the extra complexity stays hidden until someone needs it. Progressive disclosure, sensible defaults and contextual help were the main ways to get there. Participants also wanted a tool they can keep adjusting when their needs change.
 
-The market analysis and the interviews showed a gap between rigid self-tracking apps and spreadsheet tools. An app that keeps your data private, doesn't force you into a subscription and is aimed at moderately technical users could fill that gap.
+The market analysis and the interviews showed a gap between rigid self-tracking apps and spreadsheet tools. A privacy-first app without a mandatory subscription, aimed at moderately technical users, could fill that gap.
 
 ## Features
 
@@ -52,7 +52,7 @@ The market analysis and the interviews showed a gap between rigid self-tracking 
 
 ## Implementation
 
-I rebuilt the app twice before I settled on a stack. The first version used React Native with Expo, the second Ionic React with Capacitor. Now it's SvelteKit with Capacitor and Dexie.js. With SvelteKit there's little overhead for styling, changes show up fast while developing, and routing is built in. The data is stored in IndexedDB through Dexie. From one codebase the app runs on the web as a PWA and on Android through Capacitor.
+I rebuilt the app twice before I settled on a stack. The first version used React Native with Expo, the second Ionic React with Capacitor. Now it's SvelteKit with Capacitor and Dexie.js. SvelteKit has little styling overhead, a fast development loop and built-in routing. The data is stored in IndexedDB through Dexie. From one codebase the app runs on the web as a PWA and on Android through Capacitor.
 
 <video width="100%" height="400" aria-label="DailySelfTrack app demo" controls muted>
   <source src="/videos/DailySelfTrack-App-Demo-Video-Portfolio-Bryan-Hogan.mp4" type="video/mp4">
@@ -61,8 +61,8 @@ I rebuilt the app twice before I settled on a stack. The first version used Reac
 
 ## Looking back
 
-I feel like I could keep doing more rounds of planning, building and user testing forever. But at some point the app has to get into people's hands, so the next step is publishing it in the app stores.
+I could keep going through rounds of planning, building and user testing forever. At some point the app has to be in people's hands, so the next step is publishing it in the app stores.
 
-If you want to read the full thesis with the test results, just ask me.
+The full thesis with the test results is available on request.
 
 [Back to portfolio](/portfolio)
