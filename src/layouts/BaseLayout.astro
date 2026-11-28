@@ -74,7 +74,7 @@ const markdownHref = Astro.props.markdownHref ??
         {markdownHref && <link rel="alternate" type="text/markdown" href={markdownHref} />}
         <meta name="theme-color" content="#A594D3">
         <link rel="alternate" type="application/rss+xml" title="Blog posts by Bryan Hogan" href={new URL("rss.xml", Astro.site)} />
-        <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="88cecc6c-ebbb-4b08-a5d1-b07a8f7383df"></script>
+        <script is:inline defer src="https://stats.bryanhogan.me/script.js" data-website-id="cdeb4dc4-f18c-4075-b157-bef3c25bb407" data-domains="bryanhogan.com"></script>
         <ClientRouter />
         <slot name="head"/>
       </head>
