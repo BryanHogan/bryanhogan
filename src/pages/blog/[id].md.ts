@@ -1,7 +1,7 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
 import { getBlogPaths } from "../../utils/blog-paths";
 import { getLastModifiedDate } from "../../utils/last-update";
-import { markdownResponse } from "../../utils/markdown";
+import { markdownResponse, resolvePageUrls } from "../../utils/markdown";
 
 export const getStaticPaths = getBlogPaths;
 
@@ -14,6 +14,6 @@ export const GET: APIRoute<InferGetStaticPropsType<typeof getStaticPaths>> = asy
         canonical: new URL(`/blog/${post.id}`, site),
         published: post.data.pubDate,
         updated: post.data.lastUpdate ?? await getLastModifiedDate(`src/content/blog/${post.id}.md`),
-        body: post.body,
+        body: await resolvePageUrls(post.body, site),
     });
 };

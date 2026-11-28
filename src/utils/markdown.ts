@@ -59,12 +59,14 @@ export async function resolvePageUrls(body: string, site: URL | undefined) {
         const end = token.end.offset;
         let url = body.slice(start, end);
         const [path] = url.split(/[?#]/, 1);
-        const match = path.match(/^(?:\.\.\/)+((?:assets\/images|content\/blog-assets\/images)\/.*)$/);
+        // Pages link to ../assets/images/ or ../content/blog-assets/images/, blog posts to ../blog-assets/images/.
+        const match = path.match(/^(?:\.\.\/)+((?:assets\/images|(?:content\/)?blog-assets\/images)\/.*)$/);
         if (match) {
             const srcPath = match[1];
             let publicPath: string;
-            if (srcPath.startsWith("content/")) {
-                publicPath = srcPath.slice("content".length);
+            if (srcPath.includes("blog-assets/")) {
+                // Copied as-is to /blog-assets/ by the blog-assets integration in astro.config.mjs.
+                publicPath = `/${srcPath.replace(/^content\//, "")}`;
             } else {
                 const loadImage = images[decodeURI(`../${srcPath}`)];
                 if (!loadImage) throw new Error(`Missing Markdown image: ${path}`);
