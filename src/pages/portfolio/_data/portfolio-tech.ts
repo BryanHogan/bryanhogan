@@ -359,7 +359,7 @@ export const techGroups: TechGroup[] = [
             },
             {
                 name: "REST APIs",
-                usage: "Worked with REST APIs a lot as a software developer at Digital Solution Group.",
+                usage: "Worked with REST APIs as a software developer at Digital Solution Group.",
             },
             {
                 name: "SvelteKit server",
