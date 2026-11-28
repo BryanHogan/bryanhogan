@@ -8,51 +8,51 @@ headingDetail: "Case study: a customizable self-tracking app"
 
 ![DailySelfTrack screenshots showing three different views on a vibrant gradient background](../../assets/images/portfolio/DailySelfTrack-Main-Screenshots.png)
 
-DailySelfTrack is a self-tracking app that combines a habit tracker, a health log and a journal. You decide what to track, such as habits, sleep, mood, symptoms or a gratitude journal, and change it when your needs change. I also use it every day.
+DailySelfTrack is an app for self-tracking. It combines features from habit trackers, health logs and journals into one app. You decide what you want to track, e.g. habits, sleep, mood, symptoms or a gratitude journal, and you can change that whenever your needs change. I use it every day myself.
 
-- Role: solo. Research, UX and visual design, development, testing and product decisions.
-- Timeline: 2024 to now. Started as my bachelor project and thesis.
+- Role: solo. I did the research, UX and visual design, development, testing and product decisions.
+- Timeline: 2024 to now. It started as my bachelor project and thesis.
 - Stack: SvelteKit, Capacitor, Dexie.js
 - Status: runs as a web app, PWA and native Android app. A closed beta is running.
 - Links: [app.dailyselftrack.com](https://app.dailyselftrack.com/), [dailyselftrack.com](https://dailyselftrack.com/), [roadmap](https://dailyselftrack.com/roadmap/)
 
 ## Problem
 
-Most self-tracking apps are rigid. Habit trackers, mood trackers and health logs come with fixed metrics and workflows. Spreadsheets, Notion or Obsidian let you track anything, but they're built for notes, so daily entry is slow.
+I wanted an app I could adjust to what I need to track, and I couldn't find one. Most self-tracking apps are rigid. Habit trackers, mood trackers and health logs come with fixed metrics and fixed workflows. Spreadsheets, Notion or Obsidian let you track anything, but they're made for notes, so entering something every day is slow.
 
-My bachelor thesis asked whether greater customization in a self-tracking app improves usability and market fit, and looked at the trade-off between flexibility and ease of use.
+My bachelor thesis was about this. It asked whether more customization in a self-tracking app improves usability and market fit, and how to balance flexibility with ease of use.
 
 ## Process
 
-1. Looked at market trends and analyzed 29 self-tracking apps to see which needs they cover and where there's a gap.
-2. Ran a survey on how people self-track today and what they care about, to check the gaps from the market analysis.
-3. Defined the problem: most apps lock you into predefined metrics, and the flexible tools aren't made for daily entry. There's room in between.
-4. Created two personas to guide design decisions.
-5. Went from sketches to a flowchart to a clickable Figma wireframe, and tested the wireframe with users.
-6. Built the MVP with SvelteKit, Capacitor and custom CSS. Users define their own trackers, advanced options stay hidden until needed, defaults are sensible, and all data stays on the device.
-7. Tested usability and market fit with task-based observation, the SUS questionnaire and follow-up questions.
-8. Worked out a Business Model Canvas and evaluated market fit with Dan Olsen's Product-Market Fit Pyramid, based on the competitor analysis and the user tests.
+1. I looked at market trends and analyzed 29 self-tracking apps, to see which needs they cover and where there's a gap.
+2. I ran a survey on how people self-track today and what matters to them, to check the gaps I found in the market analysis.
+3. From that I defined the problem: most apps lock you into fixed metrics, and the flexible tools aren't made for daily entries.
+4. I created two personas to guide design decisions.
+5. I went from sketches to a flowchart to a clickable wireframe in Figma, and tested the wireframe with users.
+6. I built the MVP with SvelteKit, Capacitor and custom CSS. You create your own trackers, advanced options stay hidden until you need them, the defaults make the first steps easy, and all data stays on your device.
+7. I tested usability and market fit with task-based tests, the SUS questionnaire and follow-up questions.
+8. I worked out a Business Model Canvas and evaluated market fit with Dan Olsen's Product-Market Fit Pyramid, based on the competitor analysis and the user tests.
 
 ![Figma board with transition links between wireframe pages](../../content/blog-assets/images/Bryan-Hogan-CoCo-Final-Dev-Diary-Wireframe-Links.png)
 
-The clickable Figma wireframe, with the links between screens that made it testable.
+The clickable wireframe in Figma. The links between the screens made it possible to test it with users.
 
 ## What testing showed
 
-Greater customization works if the extra complexity stays out of the way until someone wants it. Progressive disclosure, sensible defaults and contextual help were the main ways to get there. Participants also wanted a tool they could keep adjusting as their needs change.
+More customization does work, as long as the extra complexity stays hidden until someone wants it. Progressive disclosure, sensible defaults and help where it's needed were the main ways to get there. Participants also wanted a tool they can keep adjusting when their needs change.
 
-The market analysis and the interviews showed a gap between rigid self-tracking apps and spreadsheet tools. A privacy-first app without a mandatory subscription, aimed at moderately technical users, could fill it.
+The market analysis and the interviews showed a gap between rigid self-tracking apps and spreadsheet tools. An app that keeps your data private, doesn't force you into a subscription and is aimed at moderately technical users could fill that gap.
 
 ## Features
 
 - Tracker types for text, numbers, checkboxes, time, single and multiple choice, sliders and media.
-- Trackers can be grouped, e.g. into a "Morning routine", each group with its own reminder.
+- Trackers can be grouped, e.g. into a "Morning routine", and each group can have its own reminder.
 - History as a calendar, chart or heatmap, with streaks and summaries.
-- Export to CSV, TSV or JSON. No account needed, works offline, and data never leaves the device.
+- Export to CSV, TSV or JSON. No account needed, it works offline, and your data never leaves your device.
 
 ## Implementation
 
-I rebuilt the app twice before settling on a stack: first React Native with Expo, then Ionic React with Capacitor, now SvelteKit with Capacitor and Dexie.js. SvelteKit has little styling overhead, a fast dev loop and built-in routing. Data lives in IndexedDB through Dexie. One codebase ships to the web as a PWA and to Android through Capacitor.
+I rebuilt the app twice before I settled on a stack. The first version used React Native with Expo, the second Ionic React with Capacitor. Now it's SvelteKit with Capacitor and Dexie.js. With SvelteKit there's little overhead for styling, changes show up fast while developing, and routing is built in. The data is stored in IndexedDB through Dexie. From one codebase the app runs on the web as a PWA and on Android through Capacitor.
 
 <video width="100%" height="400" aria-label="DailySelfTrack app demo" controls muted>
   <source src="/videos/DailySelfTrack-App-Demo-Video-Portfolio-Bryan-Hogan.mp4" type="video/mp4">
@@ -61,8 +61,8 @@ I rebuilt the app twice before settling on a stack: first React Native with Expo
 
 ## Looking back
 
-I could keep going through rounds of planning, building and user testing forever. At some point the app has to be in people's hands, so the next step is publishing it in the stores.
+I feel like I could keep doing more rounds of planning, building and user testing forever. But at some point the app has to get into people's hands, so the next step is publishing it in the app stores.
 
-The full thesis with the test results is available on request.
+If you want to read the full thesis with the test results, just ask me.
 
 [Back to portfolio](/portfolio)
