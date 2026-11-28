@@ -42,6 +42,7 @@ const link = {
     cssSetup: '<a href="https://webdev.bryanhogan.com/css/css-setup/">CSS setup</a>',
     colors: '<a href="https://webdev.bryanhogan.com/visual-design/colors/">picking colors for a website</a>',
     checklist: '<a href="https://webdev.bryanhogan.com/start/checklist/">website launch checklist</a>',
+    letterAi: '<a href="https://bryanhogan.github.io/projects/AAI/index.html">AI that recognizes letters and numbers</a>',
 };
 
 export interface TechImage {
@@ -139,6 +140,10 @@ export const techGroups: TechGroup[] = [
             {
                 name: "Tailwind CSS",
                 usage: "Used together with Next.js for SocialView.",
+            },
+            {
+                name: "Sveltia CMS",
+                usage: `Set up Sveltia CMS for ${link.blog} for web based writing in a nicer interface. Customized it with fixes for editing on mobile. Wrote about it in <a href="/blog/sveltia-cms-astro-blog">Setting up Sveltia CMS for an Astro Markdown Blog</a>.`,
             },
         ],
     },
@@ -245,6 +250,10 @@ export const techGroups: TechGroup[] = [
                 name: "Self-hosted AI tooling",
                 usage: `I run Hermes Agent, a self-hosted, self-managing AI assistant, on my own VPS. It's part of a social media automation pipeline I use, together with <a href="#" data-select-tech="n8n">n8n</a>, NocoDB and Postiz. I interact with Hermes Agent directly through the desktop app with an SSH gateway, or through Telegram.`,
             },
+            {
+                name: "PyTorch",
+                usage: `In a Code & Context course I used PyTorch to build an ${link.letterAi}.`,
+            },
         ],
     },
     {
@@ -280,7 +289,15 @@ export const techGroups: TechGroup[] = [
             },
             {
                 name: "Notion",
-                usage: `Used Notion for project management and knowledge work. Set up multiple systems in Notion, including the ticket system for ${link.sorbit}. For Sorbit we also used an OKR (Objectives and Key Results) board. Also wrote an <a href="/blog/notion-obsidian-comparison">analysis comparing Notion and Obsidian</a>.`,
+                usage: `Used Notion for project management and knowledge work. For ${link.sorbit} I set up a ticket system with a Kanban board, a timeline and an overview of who needs to do what. For Sorbit we also used an OKR (Objectives and Key Results) board. Also wrote an <a href="/blog/notion-obsidian-comparison">analysis comparing Notion and Obsidian</a>.`,
+            },
+            {
+                name: "Microsoft 365",
+                usage: "At Handon dressed to sell I used Microsoft 365 in my daily work. Used at client projects as well.",
+            },
+            {
+                name: "Google Workspace",
+                usage: "used the Google Workspace for freelance projects. Google Sheets for visualizing data, e.g. competitor research during DailySelfTrack, analysing data from web analytics and social media, and project planning. Built client automation between data in Google Sheets and Wordpress API using n8n. Explored MCP connections into Google ecosystem, e.g. Google Drive through an MCP server.",
             },
         ],
     },
@@ -312,6 +329,14 @@ export const techGroups: TechGroup[] = [
                 usage: "For Volt Deutschland I managed the social media channels of the party's two lead candidates in the 2021 German federal election. I planned the content, designed posts in Figma, wrote the copy and published on Instagram, Twitter, Facebook and LinkedIn.",
             },
             {
+                name: "Photoshop and Affinity",
+                usage: `I use Photoshop or Affinity for more detailed image editing when Figma is not enough.`,
+            },
+            {
+                name: "DaVinci Resolve and Edits",
+                usage: "I edit videos with DaVinci Resolve. Simple videos I've also edited using Edits.",
+            },
+            {
                 name: "Website management",
                 usage: "At Handon dressed to sell, an international B2B business fashion company, I maintained and optimized the company websites and e-commerce content in the CMS.",
             },
@@ -329,12 +354,20 @@ export const techGroups: TechGroup[] = [
                 usage: `Java was the main language in my programming classes, both in high school and during my Code & Context studies. Outside of class I also used it for Minecraft modding.`,
             },
             {
+                name: "Node.js",
+                usage: `Used Node.js in ${link.forms} to create new forms and export responses.`,
+            },
+            {
+                name: "REST APIs",
+                usage: "Worked with REST APIs a lot as a software developer at Digital Solution Group.",
+            },
+            {
                 name: "SvelteKit server",
                 usage: `Server routes and form actions, e.g. in ${link.forms}, my service that collects feedback for my projects, products and blog posts.`,
             },
             {
                 name: "Python",
-                usage: `I use Python for automations on my PC. At Digital Solution Group I sometimes used it for tasks like working with large translation files.`,
+                usage: `I use Python for automations on my PC. At Digital Solution Group I sometimes used it for tasks like working with large translation files. In a Code & Context course I used it with PyTorch to build an ${link.letterAi} (built before AI coding / ChatGPT came out).`,
             },
             {
                 name: "SQL",

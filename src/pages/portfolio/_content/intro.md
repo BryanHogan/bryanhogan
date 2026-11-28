@@ -1,0 +1,7 @@
+I start from what people need and work backwards to the design and the technology that gets them there. I research the problem to understand which aspects to address and how. From there I design, build, test and iterate, both before and during development.
+
+I studied [Code & Context](/blog/what-is-coco) at TH Köln, a degree that combines **computer science**, **design** and **entrepreneurship**. I've worked as a software developer, in online marketing and in social media management. So I also think about the business side of a product, like market fit, marketing and the journey from first interaction to long-term use.
+
+My largest freelance project was Sorbit, an app for a psychology start-up. For other clients I've built business automations and company websites, such as [FCH Dachdecker](https://www.fch-dachdecker.de/). My own products include [DailySelfTrack](https://dailyselftrack.com/), a self-tracking app that started as my bachelor thesis, [StarStarter for Astro](https://starter.bryanhogan.com/), the [Clean Web Development Guide](https://webdev.bryanhogan.com/) and [more](/projects).
+
+A good solution needs a strong design foundation (based on e.g. user interviews, surveys and online data), a thought-out business strategy and a clean, scalable implementation. I can do that.
